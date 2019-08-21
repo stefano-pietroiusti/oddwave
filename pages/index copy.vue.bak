@@ -1,0 +1,68 @@
+<template>
+  <section class="container">
+    <div>
+      <div class="links">
+        <nuxt-link
+          v-for="service in services"
+          :key="service.id"
+          :to="{name: 'services-id', params: {id: service.id}}"
+          class="button--grey"
+        >
+          {{ service.title }}
+        </nuxt-link>
+      </div>
+      <Cards />
+    </div>
+  </section>
+</template>
+
+<script>
+import Cards from '@/components/Cards'
+export default {
+  components: {
+    Cards
+  },
+  head () {
+    return {
+      title: 'The Odd Wave digital and web design services',
+      meta: [
+        { name: 'twitter:title', content: 'The Odd Wave' },
+        { name: 'twitter:description', content: 'Nuxt + Vue School = 🍕' },
+        { name: 'twitter:image', content: 'https://i.imgur.com/UYP2umJ.png' },
+        { name: 'twitter:card', content: 'summary_large_image' }
+      ]
+    }
+  },
+  computed: {
+    services () {
+      return this.$store.state.services.all
+    }
+  }
+}
+</script>
+
+<style scoped>
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.title {
+  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  display: block;
+  font-weight: 300;
+  font-size: 100px;
+  letter-spacing: 1px;
+}
+.subtitle {
+  font-weight: 300;
+  font-size: 42px;
+  color: #526488;
+  word-spacing: 5px;
+}
+.links {
+  padding-top: 15px;
+}
+</style>

@@ -11,6 +11,9 @@ export default {
     ]
   },
   head: {
+    // script: [
+    //   { src: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"' }
+    // ],
     title: process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
@@ -31,18 +34,17 @@ export default {
    ** Global CSS
    */
   css: [
-    // Load a Node.js module directly (here it's a Sass file)
-    // 'now-ui-kit'
-    // '@/assets/demo/demo.css',
-    // '@/assets/scss/now-ui-kit.scss'
-    // '@/assets/css/grayscale/grayscale.css',
-    // '@/assets/css/grayscale/grayscale.min.css',
-    '@/assets/scss/grayscale/grayscale.scss'
+    '@fortawesome/fontawesome-svg-core/styles.css',
+    '@/assets/scss/custom.scss',
+    '@/assets/css/custom.css'
+
   ],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    '~/plugins/fontawesome.js'
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -56,6 +58,16 @@ export default {
   modules: [
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt'
+    // 'nuxt-fontawesome'
+    // ['nuxt-fontawesome', {
+    //   component: 'fa',
+    //   imports: [
+    //     {
+    //       set: '@fortawesome/free-solid-svg-icons',
+    //       icons: ['faDollarSign']
+    //     }
+    //   ]
+    // }]
   ],
   /*
    ** Build configuration
@@ -63,9 +75,10 @@ export default {
   build: {
     /*
      ** You can extend webpack config here
-     */
+    */
     extend (config, ctx) {
-      if (ctx.dev && ctx.isClient) {
+      // Run ESLint on save
+      if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
@@ -77,5 +90,22 @@ export default {
         })
       }
     }
+    // build: {
+    //   /*
+    //    ** You can extend webpack config here
+    //    */
+    //   extend (config, ctx) {
+    //     if (ctx.dev && ctx.isClient) {
+    //       config.module.rules.push({
+    //         enforce: 'pre',
+    //         test: /\.(js|vue)$/,
+    //         loader: 'eslint-loader',
+    //         exclude: /(node_modules)/,
+    //         options: {
+    //           fix: true
+    //         }
+    //       })
+    //     }
+    //   }
   }
 }

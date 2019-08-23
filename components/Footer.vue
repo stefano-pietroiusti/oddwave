@@ -1,43 +1,23 @@
 <template>
-  <div>
-    <h3>Footer</h3>
+  <div class="container-fluid shadow p-3 mb-0 rounded footer">
+    <footer>
+      © 2019 Copyright The Odd Wave | Powered by The Odd Wave ~
+      <!-- <font-awesome-icon :icon="['fab', 'linkedin']" />
+      <font-awesome-icon :icon="['fab', 'github']" />
+      <font-awesome-icon :icon="['fab', 'facebook']" />
+      <font-awesome-icon :icon="['fas', 'coffee']" /> -->
+      <!-- <font-awesome-icon far icon="spinner" mask="circle" /> -->
+    </footer>
   </div>
 </template>
-
 <script>
 export default {}
 </script>
-
 <style scoped>
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 70px;
-  font-weight: lighter;
-  letter-spacing: 0.5px;
-}
-.nav .logo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.nav .logo .subheader {
-  opacity: 0.7;
-  font-size: 0.9rem;
-  color: white;
-}
-.nav .nav-content {
-  font-size: 1rem;
-}
-.nav-content ul {
-  display: flex;
-  list-style: none;
-}
-.nav-content ul li {
-  padding: 2px 10px;
-}
-.nav-content ul li:not(:first-of-type) {
-  border-left: 1px solid rgb(255, 255, 255, 0.2);
+.footer {
+  background-color: #f1f5f8;
+  color: rgb(76, 76, 76);
+  margin: 0;
+  text-align: center;
 }
 </style>

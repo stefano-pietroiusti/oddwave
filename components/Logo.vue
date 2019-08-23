@@ -1,16 +1,9 @@
 <template>
-  <div class="logocontainer">
-    <!-- <div class="card">
-      <img class="card-img-top" src="~/assets/odd_wave_logo.png" alt="Card image cap">
-      <div class="card-body">
-        <p
-          class="card-text"
-        >
-        </p>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <nuxt-link :src="image" tag="img" to="/" />
       </div>
-    </div> -->
-    <div class="card">
-      <nuxt-link :src="image" tag="img" to="/" />
     </div>
   </div>
 </template>
@@ -27,7 +20,6 @@ export default {
 </script>
 
 <style scoped>
-
 .logocontainer {
   height: 400px;
   background: black;

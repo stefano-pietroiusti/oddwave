@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid">
-    <b-navbar toggleable="lg" fixed="top" class="navbar navbar-dark" style="background-color: #025492;">
+    <b-navbar toggleable="lg" fixed="top" class="navbar navbar-dark">
       <b-navbar-brand href="/">
         {{ title }}
       </b-navbar-brand>

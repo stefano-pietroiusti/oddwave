@@ -1,26 +1,57 @@
 :root {
-  --blue: #007bff;
+  --blue: #0087ff;
   --indigo: #6610f2;
   --purple: #6f42c1;
-  --pink: #e83e8c;
-  --red: #dc3545;
-  --orange: #fd7e14;
-  --yellow: #ffc107;
-  --green: #28a745;
+  --pink: #ff55a3;
+  --red: #e51a4c;
+  --orange: #ff5030;
+  --yellow: #ffff33;
+  --yellowHover: #ffffe1;
+  --yellowgreen: #92f200;
+  --green: #0bda51;
   --teal: #20c997;
   --cyan: #17a2b8;
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #378dce;
-  --secondary: #6c757d;
+  --primary: #225c7b;
+  --primaryTint1: #4c7590;
+  --primaryTint2: #708fa5;
+  --primaryTint3: #93aabb;
+  --primaryTint4: #b7c5d1;
+  --primaryTint5: #dbe2e8;
+  --secondary: #7cfc00;
+  --secondaryTint1: #9afd4f;
+  --secondaryTint2: #b3fe77;
+  --secondaryTint3: #c9ff9b;
+  --secondaryTint4: #ddffbd;
+  --secondaryTint5: #eeffde;  
+  --tertiary: #e51a4c;
+  --tertiaryTint1: #f05467;
+  --tertiaryTint2: #f87b83;
+  --tertiaryTint3: #fe9da1;
+  --tertiaryTint4: #ffbebf;
+  --tertiaryTint5: #ffdfdf;
+  --hawai: #00c3e3;
+  --hawaiTint1: #5ccde8;
+  --hawaiTint2: #86d7ec;
+  --hawaiTint3: #a8e1f1;
+  --hawaiTint4: #c6ebf6;
+  --hawaiTint5: #e3f5fa;
+  --card: #ffffe1;
+  --cardTint: #5ccde8;
+  --hawaiTint2: #86d7ec;
+  --hawaiTint3: #a8e1f1;
+  --hawaiTint4: #c6ebf6;
+  --hawaiTint5: #e3f5fa;
+
+  
   --success: #28a745;
   --info: #17a2b8;
   --warning: #ffc107;
   --danger: #dc3545;
   --light: #ddebf8;
   --dark: #343a40;
-  --yellowgreen: yellowgreen;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -30,8 +61,114 @@
     Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
     'Courier New', monospace;
+  --font-family-lucida: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+  --font-family-arial: Arial, Helvetica, sans-serif;
 }
-.fa {
+
+body {
+  font-family: var(--font-family-arial);
+}
+
+.rounded {
+  border-radius: 20%;
+  -webkit-filter: grayscale(100%) opacity(30%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%) opacity(30%);
+}
+
+.card-img-overlay {
+  background-color: rgba(#000, 0.4);
+}
+
+.navbar {
+  background-color: var(--primary);
+  box-shadow: 0 3px 6px var(--primaryTint5), 0 3px 6px var(--primaryTint5);
+  opacity: 1;
+}
+
+header {
+  margin: 50px; margin-top: 100px; text-align: center;
+}
+
+section {
+ margin: 50px; text-align: center;
+}
+
+p {
+  /* padding-top: 10px; margin: 10px; text-align: center; display: block; */
+  margin: 10px;
+  line-height: 1.5;
+}
+
+/* .container {
+  padding-top: 50px; margin-top: 5px; text-align: center;
+} */
+
+
+
+.footer {
+  background-color: var(--primaryTint5);
+  color: var(--primary);
+  margin: 0;
+  text-align: center;
+}
+.contact-bg-image {
+  background: url(./img/contact-bg.jpg) no-repeat;
+}
+
+/* Position text in the middle of the page/image */
+
+.icon {
   font-size: 3em;
   opacity: 0.7;
+  color: var(--primary);
+}
+
+.icon .contact {
+  font-size: 3em;
+  opacity: 0.7;
+}
+
+.icon .text {
+  font-size: 3em;
+  opacity: 0.7;
+}
+
+.cardBAK {
+  display: inline-block;
+  height: 200px;
+  margin: 1rem;
+  width: 300px;
+  font-weight: 600;
+}
+
+/* .container {
+  color: var(--white);
+  background-color:var(--primaryTint5);
+} */
+
+
+.card:hover {
+  box-shadow: 0 3px 6px var(--primaryTint5), 0 3px 6px var(--primaryTint5);
+}
+
+.shaddow {
+  box-shadow: 0 1px 3px var(--primaryTint5), 0 1px 2px rvar(--primaryTint5);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+
+.shaddow-2 {
+  box-shadow: 0 3px 6px var(--primaryTint5), 0 3px 6px var(--primaryTint5);
+}
+
+.shaddow-3 {
+  box-shadow: 0 10px 20px var(--primaryTint5), 0 6px 6px var(--primaryTint5);
+}
+
+.shaddow-4 {
+  box-shadow: 0 14px 28px var(--primaryTint5), 0 10px 10px var(--primaryTint5);
+}
+
+.shaddow-5 {
+  box-shadow: 0 19px 38px var(--primaryTint5), 0 15px 12px var(--primaryTint5);
 }

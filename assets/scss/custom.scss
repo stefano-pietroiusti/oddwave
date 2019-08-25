@@ -1,0 +1,16 @@
+// File: custom.scss
+// Bootstrap and its default variables
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+// Define your variable overrides here
+
+@import "now-ui-kit.scss";
+
+// $body-bg: #000;
+// $body-color: #111;
+$enable-shadows: true; 
+$enable-rounded: true;
+
+// $body-bg: #000;
+// $body-color: #111;
+@import '../../node_modules/bootstrap/scss/bootstrap';

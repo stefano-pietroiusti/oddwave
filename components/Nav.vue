@@ -2,15 +2,15 @@
   <div class="container-fluid">
     <b-navbar toggleable="lg" fixed="top" class="navbar navbar-dark">
       <b-navbar-brand href="/">
+        <b-img :src="image" fluid alt="the odd wave logo" class="logo" />
         {{ title }}
+        <!-- <nuxt-link :src="image" tag="the odd wave logo" to="/" />{{ title }} -->
+        <!-- <b-img src="~/assets/imgs/odd-wave-logo-s.png" fluid alt="the odd wave logo" /> -->
       </b-navbar-brand>
       <b-navbar-toggle target="nav-collapse" />
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item href="#">
-            {{ navCategories.cat1 }}
-          </b-nav-item>
-          <b-nav-item-dropdown :text="navCategories.cat2" right>
+          <b-nav-item-dropdown :text="navCategories.cat1" right>
             <b-dropdown-item
               v-for="service in services"
               :key="service.id"
@@ -20,7 +20,10 @@
             </b-dropdown-item>
           </b-nav-item-dropdown>
           <b-nav-item href="#">
-            {{ navCategories.cat3 }} us
+            {{ navCategories.cat2 }}
+          </b-nav-item>
+          <b-nav-item href="#">
+            {{ navCategories.cat3 }}
           </b-nav-item>
         </b-navbar-nav>
       </b-collapse>
@@ -29,14 +32,17 @@
 </template>
 
 <script>
+import image from '~/assets/imgs/odd-wave-logo-s.png'
+
 export default {
   components: {},
   data () {
     return {
-      title: 'The Odd Wave',
+      image,
+      title: 'THE ODD WAVE',
       navCategories: {
-        cat1: 'Pricing',
-        cat2: 'Services',
+        cat1: 'Services',
+        cat2: 'Pricing',
         cat3: 'Contact'
       }
     }

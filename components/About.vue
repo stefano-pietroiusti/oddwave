@@ -1,17 +1,13 @@
 <template>
-  <section class="about">
+  <section>
     <div class="row">
-      <div class="col text-center">
-        <h3 class="title">
+      <div class="col">
+        <h3>
           Who we are?
         </h3>
-        <h4 class="description">
+        <h4>
           According to the National Oceanic and Atmospheric Administration,
-          Ted, Scambos, NSIDClead scentist, puts the potentially record low
-          maximum sea ice extent tihs year down to low ice extent in the
-          Pacific and a late drop in ice extent in the Barents Sea.
         </h4>
-
         <p>
           According to the National Oceanic and Atmospheric Administration,
           Ted, Scambos, NSIDClead scentist, puts the potentially record low

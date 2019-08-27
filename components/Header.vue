@@ -1,11 +1,9 @@
 <template>
   <header>
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col">
-          <a name="header">
-            <h1>Digital marketing and web design services</h1>
-          </a>
+          <h1>Digital marketing and web design services</h1>
         </div>
       </div>
       <div class="row">

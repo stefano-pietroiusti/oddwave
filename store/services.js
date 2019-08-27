@@ -3,25 +3,43 @@ export const state = () => ({
     {
       id: 'photography',
       title: 'Photography services',
-      content: 'Product, commercial and landscape photography for branding'
+      description: 'Product, commercial and landscape photography for branding',
+      header: 'Photography services header',
+      subheader: 'Photography services subHeader',
+      content:
+        [
+          'body1, commercial and landscape photography for branding',
+          'body2, commercial and landscape photography for branding',
+          'body3, commercial and landscape photography for branding',
+          'body4, commercial and landscape photography for branding',
+          'body5, commercial and landscape photography for branding',
+          'body6, commercial and landscape photography for branding',
+          'body7, commercial and landscape photography for branding',
+          'body8, commercial and landscape photography for branding',
+          'body9, commercial and landscape photography for branding'
+        ],
+      cloud: ['creative', 'website', 'commercial', 'partner'],
+      tags: ['packaged', 'direct']
     },
     {
       id: 'seo',
       title: 'Search Engine Optimisation services',
-      content:
-        'Search Engine Optimisation content Search Engine Optimisation contentSearch Engine Optimisation content Search Engine Optimisation content'
-    },
-    {
-      id: 'internetbranding',
-      title: 'Internet Branding services',
-      content:
-        'Internet Branding content Internet Branding content Internet Branding content Internet Branding content Internet Branding content '
-    },
-    {
-      id: 'internetadvertising',
-      title: 'Internet Advertising services',
-      content:
-        'Internet Branding content Internet Branding content Internet Branding content Internet Branding content Internet Branding content'
+      description: 'Product, commercial and landscape photography for branding',
+      header: 'SEO services',
+      subheader: 'SEO services',
+      content: [
+        'body1, commercial and landscape photography for branding',
+        'body2, commercial and landscape photography for branding',
+        'body3, commercial and landscape photography for branding',
+        'body4, commercial and landscape photography for branding',
+        'body5, commercial and landscape photography for branding',
+        'body6, commercial and landscape photography for branding',
+        'body7, commercial and landscape photography for branding',
+        'body8, commercial and landscape photography for branding',
+        'body9, commercial and landscape photography for branding'
+      ],
+      cloud: ['creative', 'website', 'commercial', 'partner'],
+      tags: ['creative', 'commercial', 'product']
     }
   ]
 })

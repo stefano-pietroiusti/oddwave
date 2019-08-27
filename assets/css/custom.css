@@ -7,6 +7,7 @@
   --orange: #ff5030;
   --yellow: #ffff33;
   --yellowHover: #ffffe1;
+  --yellowLight: #ffffe1;
   --yellowgreen: #92f200;
   --green: #0bda51;
   --teal: #20c997;
@@ -63,10 +64,11 @@
     'Courier New', monospace;
   --font-family-lucida: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
   --font-family-arial: Arial, Helvetica, sans-serif;
+  --font-family-optima: 'Optima', 'Trebuchet MS', 'Noto Sans', sans-serif;
 }
 
 body {
-  font-family: var(--font-family-arial);
+  font-family: var(--font-family-optima);
 }
 
 .rounded {
@@ -86,39 +88,82 @@ body {
 }
 
 header {
-  margin: 50px; margin-top: 100px; text-align: center;
+  margin: 50px; margin-top: 0px; text-align: center;
+}
+
+header h1 {
+  color: var(--primary);
+}
+
+header h2 {
+  color: var(--teal);
 }
 
 section {
  margin: 50px; text-align: center;
 }
 
-p {
-  /* padding-top: 10px; margin: 10px; text-align: center; display: block; */
-  margin: 10px;
+section h3 {
+  color: var(--primary);
+}
+
+section h4 {
+  color: var(--teal);
+}
+
+section p {
+  color: var(--gray-dark); 
+  margin: 30px;
+  padding-left: 5%;
+  padding-right: 5%;
   line-height: 1.5;
 }
 
-/* .container {
-  padding-top: 50px; margin-top: 5px; text-align: center;
-} */
-
-
-
-.footer {
-  background-color: var(--primaryTint5);
+font-awesome-icon {
+  font-size: 3em;
+  opacity: 0.7;
   color: var(--primary);
-  margin: 0;
-  text-align: center;
 }
+
+.contact {
+  width: 50%;
+}
+.contact .col {
+  text-align: center; width: 50%;
+}
+.footer {
+  background-color: var(--secondaryTint5);
+  color: var(--primary);
+  margin: 0px;
+  padding: 10px;
+  text-align: center;
+  font-weight: 400;
+  border: #000;
+  bottom: 0px;
+  position: fixed;
+}
+
+.servicesCloud {
+  background-color: #fff; width:1800px; height:450; text-align:centre; margin-top: 80px;
+}
+
+.servicesHeader {
+ margin-top: 80px;
+}
+
 .contact-bg-image {
   background: url(./img/contact-bg.jpg) no-repeat;
 }
 
 /* Position text in the middle of the page/image */
 
+.logo{
+  width: 80px;
+  padding-right: 10px
+}
+
 .icon {
-  font-size: 3em;
+  font-size: 2em;
   opacity: 0.7;
   color: var(--primary);
 }
@@ -172,3 +217,4 @@ p {
 .shaddow-5 {
   box-shadow: 0 19px 38px var(--primaryTint5), 0 15px 12px var(--primaryTint5);
 }
+

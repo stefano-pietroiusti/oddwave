@@ -1,8 +1,12 @@
 <template>
   <div class="container-fluid">
     <b-navbar toggleable="lg" fixed="top" class="navbar navbar-dark">
-      <b-navbar-brand href="/">
-        <b-img :src="image" fluid alt="the odd wave logo" class="logo" />
+      <b-navbar-brand to="/">
+        <!-- <b-img :src="image" fluid alt="the odd wave logo" class="logo" /> -->
+        <font-awesome-icon
+          :icon="{ prefix: 'fab', iconName: 'servicestack' }"
+          class="fa-1x primary"
+        />
         {{ title }}
         <!-- <nuxt-link :src="image" tag="the odd wave logo" to="/" />{{ title }} -->
         <!-- <b-img src="~/assets/imgs/odd-wave-logo-s.png" fluid alt="the odd wave logo" /> -->
@@ -10,21 +14,23 @@
       <b-navbar-toggle target="nav-collapse" />
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item-dropdown :text="navCategories.cat1" right>
+          <b-nav-item v-for="item in standardNav" :key="item.value" :to="item.value">
+            {{ item.text }}
+          </b-nav-item>
+          <b-nav-item-dropdown text="Services" right variant="primary" toggle-class="text-decoration-none">
+            <!-- <template slot="button-content">
+              &#x1f50d;<span class="sr-only">Search</span>
+            </template> -->
             <b-dropdown-item
               v-for="service in services"
               :key="service.id"
+              variant="primary"
               :to="{name: 'services-id', params: {id: service.id}}"
             >
-              {{ service.title }}
+              <b-icon icon="comments" />
+              &nbsp;{{ service.title }}
             </b-dropdown-item>
           </b-nav-item-dropdown>
-          <b-nav-item href="#">
-            {{ navCategories.cat2 }}
-          </b-nav-item>
-          <b-nav-item href="#">
-            {{ navCategories.cat3 }}
-          </b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -40,11 +46,11 @@ export default {
     return {
       image,
       title: 'THE ODD WAVE',
-      navCategories: {
-        cat1: 'Services',
-        cat2: 'Pricing',
-        cat3: 'Contact'
-      }
+      standardNav: [
+        { value: '/', text: 'Home' },
+        { value: '/about', text: 'What we do' },
+        { value: '/contact', text: 'Contact us' }
+      ]
     }
   },
   computed: {

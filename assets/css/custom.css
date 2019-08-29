@@ -71,8 +71,9 @@
 
 body {
   font-family: var(--font-family-optima);
-  
-
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .btn-secondary {
@@ -94,12 +95,6 @@ body {
 .layout-enter, .layout-leave-active {
   opacity: 0
 }
-
-
-.demos {
-  background-color:  #000;
-}
-
 .navbar {
   background-color: var(--primary);
   box-shadow: 0 3px 6px var(--primaryTint5), 0 3px 6px var(--primaryTint5);
@@ -256,6 +251,18 @@ font-awesome-icon {
   box-shadow: 0 19px 38px var(--primaryTint5), 0 15px 12px var(--primaryTint5);
 }
 
+.parallax {
+  /* The image used */
+  background-image: url("../imgs/odd-wave-bg-1.jpg");
+  /* Set a specific height */
+  min-height: 500px; 
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 @media screen and (min-width: 601px) {
   div.example {
     font-size: 80px;
@@ -268,3 +275,45 @@ font-awesome-icon {
     font-size: 30px;
   }
 }
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
+
+/* DEMOS */
+.demo {
+  background-color:  #fff;
+}
+
+.demoLogoAnimation {
+  background-color:  #000;
+  margin: 5vh;
+}
+
+.demoAnimeAnimation {
+  background-color:  #000;
+  margin: 5vh;
+}
+.demoParticles {
+  background-color:  #000;
+  color: #fff;
+  margin: 5vh;
+}
+
+.demoParallaxImage {
+  background-color:  #000;
+  color: #fff;
+  margin: 5vh;
+}
+.demoVueParallaxyImage {
+  background-color:  #000;
+  color: #fff;
+  margin: 5vh;
+  width: 50vw
+}
+
+
+
+/* END OF DEMOS */

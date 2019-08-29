@@ -1,13 +1,13 @@
-import anime from "animejs";
+import anime from 'animejs'
 
-export function logoAnimation(element) {
+export function logoAnimation (element) {
   anime({
     targets: element,
     strokeDashoffset: [anime.setDashoffset, 0],
-    easing: "easeInOutSine",
+    easing: 'easeInOutSine',
     duration: 2000,
-    delay(el, i) {
-      return i * 250;
+    delay (el, i) {
+      return i * 250
     }
-  });
+  })
 }

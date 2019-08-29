@@ -7,7 +7,7 @@ export default {
     name: 'page',
     mode: 'out-in',
     beforeEnter (el) {
-      console.log('Before enter...');
+      console.log('Before enter...')
     }
   },
   mode: 'universal',
@@ -54,8 +54,11 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    '~/plugins/animations.js',
-    '~/plugins/fontawesome.js'
+    '~/plugins/anime.js',
+    '~/plugins/fontawesome.js',
+    '~/plugins/vue-inject.js',
+    { src: '~plugins/vue-particles.js', mode: 'client' },
+    { src: '~plugins/vue-parallaxy.js', mode: 'client' }
   ],
   /*
    ** Nuxt.js dev-modules
@@ -92,6 +95,6 @@ export default {
         })
       }
     }
-  
+
   }
 }

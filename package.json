@@ -29,6 +29,8 @@
     "ramda": "^0.26.1",
     "vue-animejs": "^2.1.1",
     "vue-d3-cloud": "^0.2.0",
+    "vue-parallaxy": "^1.1.1",
+    "vue-particles": "^1.0.9",
     "vue-tag-cloud": "0.0.1"
   },
   "devDependencies": {

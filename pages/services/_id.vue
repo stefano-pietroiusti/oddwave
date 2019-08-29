@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-v-html -->
 <template>
   <section>
     <!-- <ServicesHeader :header="service.header" subheader:="service.subheader" /> -->
@@ -22,10 +23,13 @@
       <h3>Other services</h3>
       <ul>
         <li v:for="item in relatedServices">
-          <nuxt-link :to="{name: 'services-id', params: {id: related.id}}">{{ related.title }}</nuxt-link>
+          {{ item }}
+         <nuxt-link :to="{name: 'services-id', params: {id: item.id}}">
+            {{ item.header }}
+          </nuxt-link>
         </li>
       </ul>
-    </aside>-->
+    </aside> -->
     </div>
     </div>
   </section>
@@ -65,14 +69,15 @@ export default {
       return this.$store.state.services.all.find(
         service => service.id === this.id
       )
-      // return this.$store.state.services.all.find(service => service.id === this.id)
-    },
-    relatedServices () {
-      return this.$store.state.services.all.filter(function (item) {
-        // return item.id.match(this.id)
-        return item.id !== this.id
-      })
     }
+    // relatedServices () {
+    //   return this.$store.state.services.all.filter(function (item) {
+    //     return item.id !== this.id
+    //   })
+    // return this.$store.state.services.all.filter(function (item) {
+    //   return item.id !== this.id
+    // })
+    // }
     // ,
     // relatedServices () {
     //   return this.services.filter(other => other.id != this.id)

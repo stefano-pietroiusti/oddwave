@@ -1,41 +1,48 @@
 <template>
   <div>
-    <!-- <div class="parallax">
-      <parallax class="page-header-image" style="background-image: url('img/bg6.jpg')" />
-    </div>-->
     <div>
+      <HeaderComponent :pheader="pheader" :psubheader="psubheader" />
+    </div>
+    <!-- <div>
       <ServicesCloud />
-    </div>
-    <div>
-      <Header />
-    </div>
-    <div>
-      <About />
-    </div>
-    <!--
-    <div class="text-center mb-5">
-      <Contact />
+    </div>-->
+    <!-- <div>
+      <Intro />
     </div> -->
     <div>
-      <ServiceHeatmap />
+      <ServicesTags />
+    </div>
+    <div>
+      <ImageComponent :pimage="pimage" :pimagedesc="pimagedesc" :pimagecontent="pimagecontent" />
+    </div>
+    <div>
+      <ImageComponentRight :pimage="pimage" :pimagedesc="pimagedesc" :pimagecontent="pimagecontent" />
+    </div>
+    <div>
+      <!-- <About /> -->
     </div>
   </div>
 </template>
 
 <script>
-import Header from '@/components/Header'
-import About from '@/components/About'
+import HeaderComponent from '@/components/HeaderComponent'
+import ImageComponent from '@/components/ImageComponent'
+import ImageComponentRight from '@/components/ImageComponentRight'
+// import Intro from '@/components/Intro'
+// import About from '@/components/About'
 // import Contact from '@/components/Contact'
-import ServiceHeatmap from '@/components/ServiceHeatmap'
-import ServicesCloud from '@/components/ServicesCloud'
+import ServicesTags from '@/components/ServicesTags'
+// import ServicesCloud from '@/components/ServicesCloud'
 
 export default {
   components: {
-    Header,
-    About,
-    // Contact,
-    ServiceHeatmap,
-    ServicesCloud
+    HeaderComponent,
+    // Intro,
+    ImageComponent,
+    ImageComponentRight,
+    // About
+    ServicesTags
+    // ServicesCloud
   },
   head () {
     return {
@@ -48,15 +55,31 @@ export default {
       ]
     }
   },
-  data () {
+  data (context) {
     return {
-      form: {
-        firstName: '',
-        email: '',
-        message: ''
-      }
+      pheader: 'Digital marketing and web design services',
+      psubheader:
+        'helping businesses of all sizes work smarter in the most efficient ways possible',
+      pimage:
+        'https://www.quackit.com/pix/samples/22l.jpg',
+      pimagedesc:
+        'https://www.quackit.com/pix/samples/22l.jpg',
+      pimagecontent:
+        '<p>this is text alongside imagesffdsfds<p><p>this is text alongside imagesffdsfds<p>'
     }
+    //  return apicall.getData(id)
+    //  .then((res) => {
+    //      return { myres: res.data }
+    //  })
   }
+  // data () {
+  //   return {
+  //     form: {
+  //       email: ''
+  //     },
+  //     titletext: 'testing'
+  //   }
+  // }
 }
 </script>
 <style scoped>

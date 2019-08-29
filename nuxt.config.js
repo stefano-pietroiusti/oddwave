@@ -1,4 +1,15 @@
 export default {
+  layoutTransition: {
+    name: 'layout',
+    mode: 'out-in'
+  },
+  pageTransition: {
+    name: 'page',
+    mode: 'out-in',
+    beforeEnter (el) {
+      console.log('Before enter...')
+    }
+  },
   mode: 'universal',
   /*
    ** Headers of the page
@@ -43,7 +54,11 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    '~/plugins/fontawesome.js'
+    '~/plugins/anime.js',
+    '~/plugins/fontawesome.js',
+    '~/plugins/vue-inject.js',
+    { src: '~plugins/vue-particles.js', mode: 'client' },
+    { src: '~plugins/vue-parallaxy.js', mode: 'client' }
   ],
   /*
    ** Nuxt.js dev-modules
@@ -58,16 +73,6 @@ export default {
   modules: [
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt'
-    // 'nuxt-fontawesome'
-    // ['nuxt-fontawesome', {
-    //   component: 'fa',
-    //   imports: [
-    //     {
-    //       set: '@fortawesome/free-solid-svg-icons',
-    //       icons: ['faDollarSign']
-    //     }
-    //   ]
-    // }]
   ],
   /*
    ** Build configuration
@@ -90,22 +95,6 @@ export default {
         })
       }
     }
-    // build: {
-    //   /*
-    //    ** You can extend webpack config here
-    //    */
-    //   extend (config, ctx) {
-    //     if (ctx.dev && ctx.isClient) {
-    //       config.module.rules.push({
-    //         enforce: 'pre',
-    //         test: /\.(js|vue)$/,
-    //         loader: 'eslint-loader',
-    //         exclude: /(node_modules)/,
-    //         options: {
-    //           fix: true
-    //         }
-    //       })
-    //     }
-    //   }
+
   }
 }

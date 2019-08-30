@@ -3,9 +3,10 @@
     <div>
       <HeaderComponent :pheader="pheader" :psubheader="psubheader" />
     </div>
-    <!-- <div>
-      <ServicesCloud />
-    </div>-->
+    <div>
+      <!-- https://stackoverflow.com/questions/27672989/dynamically-sized-word-cloud-using-d3-cloud -->
+      <!-- <ServicesCloud /> -->
+    </div>
     <!-- <div>
       <Intro />
     </div> -->

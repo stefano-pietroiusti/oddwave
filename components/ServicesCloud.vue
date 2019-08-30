@@ -1,5 +1,5 @@
 <template>
-  <div id="Wordcloud" class="servicesCloud">
+  <div id="Wordcloud" class="servicesCloud container-fluid">
     <Cloud
       :data="words"
       :font-size-mapper="fontSizeMapper"
@@ -47,3 +47,8 @@ export default {
   }
 }
 </script>
+<style scoped>
+.servicesCloud {
+  background-color: #fff; width:1900px; height:450; text-align:centre; margin-top: 80px; opacity: 0.6;
+}
+</style>

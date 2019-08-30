@@ -2,17 +2,20 @@
   <div>
     <Nav />
     <nuxt />
-    <Footer />
+    <FooterResponsive />
+    <!-- <FooterFixed /> -->
   </div>
 </template>
 
 <script>
 import Nav from '@/components/Nav'
-import Footer from '@/components/Footer'
+import FooterResponsive from '@/components/FooterResponsive'
+// import FooterFixed from '@/components/FooterFixed'
 export default {
   components: {
     Nav,
-    Footer
+    FooterResponsive
+    // FooterFixed
   }
 }
 </script>

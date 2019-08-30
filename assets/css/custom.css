@@ -46,14 +46,13 @@
   --hawaiTint2: #86d7ec;
   --hawaiTint3: #a8e1f1;
   --hawaiTint4: #c6ebf6;
-  --hawaiTint5: #e3f5fa;
-
-  
+  --hawaiTint5: #e3f5fa; 
   --success: #28a745;
   --info: #17a2b8;
   --warning: #ffc107;
   --danger: #dc3545;
   --light: #ddebf8;
+  --lighthover: #e1eaf3;
   --dark: #343a40;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
@@ -95,11 +94,30 @@ body {
 .layout-enter, .layout-leave-active {
   opacity: 0
 }
+
+/*NAVBAR*/
+
 .navbar {
   background-color: var(--primary);
   box-shadow: 0 3px 6px var(--primaryTint5), 0 3px 6px var(--primaryTint5);
   opacity: 1;
 }
+
+.navbar-dark .navbar-nav .nav-link  {
+    color: #fff;
+}
+
+.dropdown-menu-right  {
+  background-color: var(--light);
+
+}
+
+.dropdown-menu-right a:hover  {
+  background-color: var(--lighthover);
+}
+
+/*END NAVBAR*/
+
 .servicesTags{
   text-align: center;
 

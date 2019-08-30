@@ -6,7 +6,7 @@ export default {
   pageTransition: {
     name: 'page',
     mode: 'out-in',
-    beforeEnter (el) {
+    beforeEnter(el) {
       console.log('Before enter...')
     }
   },
@@ -22,9 +22,6 @@ export default {
     ]
   },
   head: {
-    // script: [
-    //   { src: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"' }
-    // ],
     title: process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
@@ -35,7 +32,11 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap' },
+      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' }
+    ]
   },
   /*
    ** Customize the progress-bar color
@@ -46,6 +47,7 @@ export default {
    */
   css: [
     '@fortawesome/fontawesome-svg-core/styles.css',
+
     // '@/assets/scss/custom.scss',
     '@/assets/css/custom.css'
 
@@ -81,7 +83,7 @@ export default {
     /*
      ** You can extend webpack config here
     */
-    extend (config, ctx) {
+    extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({

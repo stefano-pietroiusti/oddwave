@@ -74,10 +74,12 @@ export default {
    */
   modules: [
     // Doc: https://bootstrap-vue.js.org/docs/
-    'bootstrap-vue/nuxt'
+    'bootstrap-vue/nuxt',
+    '@nuxtjs/axios'
   ], 
   serverMiddleware: [
     { path: '/api/logger', handler: '~/api/logger.js' },
+    { path: '/api/contact', handler: '~/serverMiddleware/contact' } //or just '~/serverMiddleware/contact' because handler is inside code
   ],
   /*
    ** Build configuration

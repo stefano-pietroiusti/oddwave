@@ -15,7 +15,7 @@ nodemailer.createTestAccount((err, account, form) => {
     let mailOptions = {
         from: '"The Odd Wave Web" <theoddwavecontact@gmail.com>',
         to: 'theoddwavecontact@gmail.com',
-        subject: 'Welcome Email',
+        subject: 'Website enquiry',
         text: form
     };
  

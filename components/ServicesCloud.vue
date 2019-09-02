@@ -1,5 +1,5 @@
 <template>
-  <div id="Wordcloud" class="servicesCloud container-fluid">
+  <div class="container-fluid">
     <Cloud
       :data="words"
       :font-size-mapper="fontSizeMapper"
@@ -21,7 +21,7 @@ import { serviceCloud } from '../utils/serviceCloud.js'
 // import R from 'ramda'
 
 export default {
-  name: 'Wordcloud',
+  name: 'Servicescloud',
   components: {
     Cloud
   },
@@ -33,11 +33,11 @@ export default {
         // window.alert(`go to service ${word.text}`)
         return false
       },
-      width: '1400',
-      height: '450',
+      width: '800',
+      height: '250',
       font: 'impact',
       rotate: '-30',
-      padding: 2
+      padding: 1
     }
   },
   computed: {
@@ -48,7 +48,7 @@ export default {
 }
 </script>
 <style scoped>
-.servicesCloud {
+#Servicescloud {
   background-color: #fff; width:1900px; height:450; text-align:centre; margin-top: 80px; opacity: 0.6;
 }
 </style>

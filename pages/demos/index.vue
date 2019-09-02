@@ -10,7 +10,7 @@
       <!-- <VueParallaxyComponent /> -->
     </div>
     <div>
-      <ParticlesComponent />
+      <!-- <ParticlesComponent /> -->
     </div>
     <div>
       <LogoAnimation :pheader="pheader" :psubheader="psubheader" />
@@ -28,7 +28,7 @@
 import LogoAnimation from '@/components/Demos/LogoAnimation'
 import HeaderComponent from '@/components/HeaderComponent'
 import ServicesTags from '@/components/Demos/ServicesTags'
-import ParticlesComponent from '@/components/Demos/ParticlesComponent'
+// import ParticlesComponent from '@/components/Demos/ParticlesComponent'
 // import VueParallaxyComponent from '@/components/Demos/VueParallaxyComponent'
 
 // import ParallaxComponent from '@/components/Demos/ParallaxComponent'
@@ -39,8 +39,8 @@ export default {
   components: {
     HeaderComponent,
     LogoAnimation,
-    ServicesTags,
-    ParticlesComponent
+    ServicesTags
+    // ParticlesComponent
     // VueParallaxyComponent
     // AnimePlugin,
     // SvgComponent
@@ -52,11 +52,6 @@ export default {
   },
   data (context) {
     return {
-      form: {
-        firstName: '',
-        email: '',
-        message: ''
-      },
       headerText: 'testing',
       pheader: 'Digital marketing and web design services',
       psubheader:

@@ -1,4 +1,14 @@
 export default {
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000',
+    contactHost: 'smtp.googlemail.com',
+    contactPort: 465,
+    contactUser: 'theoddwavecontact@gmail.com',
+    contactPwd: 'ix06KC7WA31K',
+    contactFrom: '"The Odd Wave Web" <theoddwavecontact@gmail.com>',
+    contactTo: 'theoddwavecontact@gmail.com,stefano.pietroiusti@gmail.com,jalinevandyk@gmail.com',
+    contactSubject: 'Website enquiry',
+  },
   layoutTransition: {
     name: 'layout',
     mode: 'out-in'
@@ -74,7 +84,12 @@ export default {
    */
   modules: [
     // Doc: https://bootstrap-vue.js.org/docs/
-    'bootstrap-vue/nuxt'
+    'bootstrap-vue/nuxt',
+    '@nuxtjs/axios'
+  ], 
+  serverMiddleware: [
+    { path: '/api/logger', handler: '~/api/logger.js' },
+    { path: '/api/contact', handler: '~/serverMiddleware/contact' } //or just '~/serverMiddleware/contact' because handler is inside code
   ],
   /*
    ** Build configuration

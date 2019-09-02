@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <header>
     <b-navbar toggleable="lg" fixed="top" class="navbar-dark" variant="info">
       <b-navbar-brand to="/">
         <!-- <b-img :src="image" fluid alt="the odd wave logo" class="logo" /> -->
@@ -24,14 +24,13 @@
               variant="tertiary"
               :to="{name: 'services-id', params: {id: service.id}}"
             >
-              <b-icon icon="comments" />
-              &nbsp;{{ service.title }}
+              {{ service.title }}
             </b-dropdown-item>
           </b-nav-item-dropdown>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
-  </section>
+  </header>
 </template>
 
 <script>

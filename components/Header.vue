@@ -13,7 +13,7 @@
       </div>
     </div>
   </header>
-</template>
+</template> 
 <script>
 /* eslint-disable */
 export default {

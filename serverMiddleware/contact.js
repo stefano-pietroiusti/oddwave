@@ -48,7 +48,7 @@ app.post('/', (req, res) => {
   try {
     Joi.validate(req.body, payloadschema)
     sendMail(req.body)
-    res.status(200).json({ message: 'We have received your message and look forward to chatting with you soon.' })
+    res.status(200).json({ statusCode: 200, message: 'We have received your message and look forward to chatting with you soon.' })
     res.end()
   } catch (err) {
     Console.log(err)

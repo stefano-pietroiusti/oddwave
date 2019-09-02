@@ -52,7 +52,7 @@
     </b-form>
     <!-- <b-card class="mt-3" header="Form Data Result">
       <pre class="m-0">{{ form }}</pre>
-    </b-card> -->
+    </b-card>-->
   </div>
 </template>
 
@@ -76,90 +76,35 @@ export default {
       show: true
     }
   },
-  // asyncData (context, callback) {
-  //   if (process.client) {
-  //     console.log('contextClient')
-  //   }
-  //   callback(null, {
-  //     emailProvider: {
-  //       service: context.store.contact.state.emailProvider.service,
-  //       username: context.store.contact.state.emailProvider.username,
-  //       password: context.store.contact.state.emailProvider.password
-  //     }
-  //   })
-  // },
   methods: {
     onSubmit (evt) {
       evt.preventDefault()
-      alert(JSON.stringify(this.form))
-      // this.submitForm()
-      this.fetchSomething()
-      // this.submitForm()
-      // const response = this.$axios.$post('/api/contact', { data: this.form })
-      // this.$store.dispatch('sendEmail', this.form)
-      this.name = ''
-      this.email = ''
-      this.message = ''
-    },
-    async fetchSomething () {
-      alert(JSON.stringify(this.form))
-      const response = await this.$axios.$post(
-        'http://localhost:3000/api/contact',
-        { data: this.form }
-      )
-      alert(JSON.stringify(response))
-      this.enquiry = JSON.stringify(response)
-
-      // this.ip = ip
+      this.submitForm()
     },
     async submitForm () {
-      alert(JSON.stringify(this.form))
       const response = await this.$axios.$post(
-        'http://localhost:3000/api/contact',
+        `${process.env.baseUrl}/api/contact`,
         { data: this.form }
       )
-      alert(JSON.stringify(response))
+      if (response.statusCode === 200) {
+        this.clearForm()
+        alert(JSON.stringify(response.message))
+      } else {
+        alert(
+          'Something went wrong with the email service, please call us directly.'
+        )
+      }
     },
-
-    // async submitForm() {
-    //   this.submitting = true
-    //   this.$ga.event('submit', 'form', this.$i18n.locale)
-    //   this.error = false
-    //   try {
-    //     await this.$axios.$post('contact', {
-    //       name: this.name,
-    //       email: this.email,
-    //       msg: this.msg
-    //     })
-    //     this.submitting = false
-    //     this.isSubmitted = true
-    //     await new Promise((resolve) => setTimeout(resolve, 2500))
-    //     this.$emit('close')
-    //   } catch (e) {
-    //     this.submitting = false
-    //     this.error = true
-    //     // eslint-disable-next-line no-console
-    //     console.error(e)
-    //   }
-    // },
-    // sendEmail() {
-    //   const emailData = {
-    //     email: this.email,
-    //     name: this.name,
-    //     message: this.message
-    //   }
-    //   this.$store.dispatch('sendEmail', emailData)
-    //   this.name = ''
-    //   this.email = ''
-    //   this.message = ''
-    // },
     onReset (evt) {
       evt.preventDefault()
+      this.clearForm()
+    },
+    clearForm () {
       this.form.email = ''
       this.form.name = ''
       this.form.location = null
       this.form.service = []
-      // Trick to reset/clear native browser form validation state
+      this.form.enquiry = ''
       this.show = false
       this.$nextTick(() => {
         this.show = true

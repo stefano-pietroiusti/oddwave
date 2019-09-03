@@ -69,8 +69,11 @@ export default {
     '~/plugins/anime.js',
     '~/plugins/fontawesome.js',
     '~/plugins/vue-inject.js',
-    { src: '~plugins/vue-particles.js', mode: 'client' },
-    { src: '~plugins/vue-parallaxy.js', mode: 'client' }
+    { src: '~plugins/vue-particles', mode: 'client' },
+    { src: '~plugins/vue-parallaxy', mode: 'client' },
+    { src: '~/plugins/vue-fb-customer-chat', mode: 'client' },
+    { src: '~/plugins/vue-notifications', mode: 'client' },
+    { src: '~/plugins/vue-resize-directive', mode: 'client' }
   ],
   /*
    ** Nuxt.js dev-modules
@@ -95,6 +98,8 @@ export default {
    ** Build configuration
    */
   build: {
+    vendor: ['vue-fb-customer-chat'],
+
     /*
      ** You can extend webpack config here
     */

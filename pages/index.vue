@@ -1,34 +1,48 @@
 <template>
   <div>
     <div>
-      <HeaderComponent :pheader="pheader" :psubheader="psubheader" />
+      <HeaderComponent :pheader="pheader" :psubheader="psubheader" :psubtitle="psubtitle" />
     </div>
+    <div>
+      <ButtonComponent :btext="btext" :blink="blink" />
+    </div>
+    <div>
+      <ImageBannerComponent
+        pimage="https://picsum.photos/1024/400/?image=41"
+        pimagedesc="The Odd Wave banner"
+        :pimagecontent="pimagecontent"
+      />
+    </div>
+
     <div>
       <!-- https://stackoverflow.com/questions/27672989/dynamically-sized-word-cloud-using-d3-cloud -->
       <!-- <ServicesCloud /> -->
     </div>
     <!-- <div>
       <Intro />
-    </div> -->
+    </div>-->
     <div>
-      <ServicesTags />
+      <ImageComponentBootstrap :pimage="pimage" :pimagedesc="pimagedesc" :pimagecontent="pimagecontent" />
     </div>
     <div>
-      <ImageComponent :pimage="pimage" :pimagedesc="pimagedesc" :pimagecontent="pimagecontent" />
-    </div>
-    <div>
-      <ImageComponentRight :pimage="pimage" :pimagedesc="pimagedesc" :pimagecontent="pimagecontent" />
+      <ImageRightComponent :pimage="pimage" :pimagedesc="pimagedesc" :pimagecontent="pimagecontent" />
     </div>
     <div>
       <!-- <About /> -->
+    </div>
+    <div>
+      <ServicesTags />
     </div>
   </div>
 </template>
 
 <script>
 import HeaderComponent from '@/components/HeaderComponent'
-import ImageComponent from '@/components/ImageComponent'
-import ImageComponentRight from '@/components/ImageComponentRight'
+import ButtonComponent from '@/components/ButtonComponent'
+import ImageBannerComponent from '@/components/ImageBannerComponent'
+import ImageComponentBootstrap from '@/components/ImageComponentBootstrap'
+// import ImageComponent from '@/components/ImageComponent'
+import ImageRightComponent from '@/components/ImageRightComponent'
 // import Intro from '@/components/Intro'
 // import About from '@/components/About'
 // import Contact from '@/components/Contact'
@@ -38,9 +52,13 @@ import ServicesTags from '@/components/ServicesTags'
 export default {
   components: {
     HeaderComponent,
+    ButtonComponent,
     // Intro,
-    ImageComponent,
-    ImageComponentRight,
+    ImageBannerComponent,
+    ImageComponentBootstrap,
+    ImageRightComponent,
+
+    // ImageComponentRight,
     // About
     ServicesTags
     // ServicesCloud
@@ -58,13 +76,14 @@ export default {
   },
   data (context) {
     return {
-      pheader: 'Digital marketing and web design services',
-      psubheader:
-        'helping businesses of all sizes work smarter in the most efficient ways possible',
-      pimage:
-        'https://www.quackit.com/pix/samples/22l.jpg',
-      pimagedesc:
-        'https://www.quackit.com/pix/samples/22l.jpg',
+      pheader: 'Digital marketing and website development services',
+      psubheader: 'be where the world is going',
+      psubtitle:
+        "Our goal is to assist start-ups grow their business with an impactful online presence using latest proven web technologies and digital marketing solutions that won't break the bank. We believe that every business should be a success.",
+      btext: 'Get in touch',
+      blink: '/contact',
+      pimage: 'https://www.quackit.com/pix/samples/22l.jpg',
+      pimagedesc: 'Image description',
       pimagecontent:
         '<p>this is text alongside imagesffdsfds<p><p>this is text alongside imagesffdsfds<p>'
     }
@@ -73,14 +92,6 @@ export default {
     //      return { myres: res.data }
     //  })
   }
-  // data () {
-  //   return {
-  //     form: {
-  //       email: ''
-  //     },
-  //     titletext: 'testing'
-  //   }
-  // }
 }
 </script>
 <style scoped>

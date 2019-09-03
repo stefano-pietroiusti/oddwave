@@ -1,5 +1,5 @@
 <template>
-  <header class="text-center">
+  <header class="text-center" :style="{ backgroundImage: `url(${backgroundUrl})` }">
     <div class="container-fluid">
       <div class="row m-4">
         <div class="col">
@@ -20,8 +20,22 @@
   </header>
 </template>
 <script>
+import backgroundUrl from '~/assets/imgs/odd-wave-bg-1.jpg'
+
 /* eslint-disable */
 export default {
-  props: ['pheader', 'psubheader', 'psubtitle', 'backgroundUrl']
+  props: ['pheader', 'psubheader', 'psubtitle'],
+  data() {
+    return { backgroundUrl }
+  }
 }
+// export default {
+//   props: {
+//     titletext: {
+//       type: String,
+//       required: false,
+//       default: '1 Digital marketing and web design services'
+//     }
+//   }
+// }
 </script>

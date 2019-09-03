@@ -76,6 +76,20 @@ export default {
       show: true
     }
   },
+  notifications: {
+    showSubmitError: {
+      // You can have any name you want instead of 'showLoginError'
+      title: 'Submit Failed',
+      message: 'Failed to submit',
+      type: 'error' // You also can use 'VueNotifications.types.error' instead of 'error'
+    },
+    showSubmit: {
+      // You can have any name you want instead of 'showLoginError'
+      title: 'Enquiry submitted',
+      message: 'Form submitted',
+      type: 'success' // You also can use 'VueNotifications.types.error' instead of 'error'
+    }
+  },
   methods: {
     onSubmit (evt) {
       evt.preventDefault()
@@ -88,16 +102,15 @@ export default {
       )
       if (response.statusCode === 200) {
         this.clearForm()
-        alert(JSON.stringify(response.message))
+        this.showSubmit()
       } else {
-        alert(
-          'Something went wrong with the email service, please call us directly.'
-        )
+        this.showSubmitError()
       }
     },
     onReset (evt) {
       evt.preventDefault()
       this.clearForm()
+      this.showSubmit()
     },
     clearForm () {
       this.form.email = ''

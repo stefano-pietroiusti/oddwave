@@ -1,18 +1,16 @@
 <template>
   <div class="container-fluid servicesTags">
     <div class="row">
-      <div class="col">
-        <!-- <div class="btn-group" role="group"> -->
-        <nuxt-link
-          v-for="service in services"
-          :key="service.id"
-          :to="{name: 'services-id', params: {id: service.id}}"
-          class="btn btn-secondary"
-        >
+      <nuxt-link
+        v-for="service in services"
+        :key="service.id"
+        :to="{name: 'services-id', params: {id: service.id}}"
+        class="btn btn-success"
+      >
+        <div class="col">
           {{ service.title }}
-        </nuxt-link>
-        <!-- </div> -->
-      </div>
+        </div>
+      </nuxt-link>
     </div>
   </div>
 </template>

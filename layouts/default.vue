@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="main">
     <Nav />
     <nuxt />
     <FooterResponsive />
@@ -10,10 +10,13 @@
 import Nav from '@/components/Nav'
 import FooterResponsive from '@/components/FooterResponsive'
 export default {
+  name: 'Main',
+
   components: {
     Nav,
     FooterResponsive
   }
 }
 </script>
-<style scoped />
+<style scoped>
+</style>

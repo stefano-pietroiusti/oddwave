@@ -41,6 +41,8 @@ export default {
   margin: auto;
   padding: 0.2vw;
   height: auto;
+  line-height: 1.8;
+  text-align: left
 }
 
 .shadow {

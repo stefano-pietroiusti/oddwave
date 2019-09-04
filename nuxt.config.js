@@ -71,9 +71,13 @@ export default {
     '~/plugins/vue-inject.js',
     { src: '~plugins/vue-particles', mode: 'client' },
     { src: '~plugins/vue-parallaxy', mode: 'client' },
-    { src: '~/plugins/vue-fb-customer-chat', mode: 'client' },
+    // { src: '~/plugins/vue-fb-customer-chat', mode: 'client' },
     { src: '~/plugins/vue-notifications', mode: 'client' },
-    { src: '~/plugins/vue-resize-directive', mode: 'client' }
+    // { src: '~/plugins/vue-resize-directive', mode: 'client' },
+    { src: '~/plugins/vuewordcloud.js', mode: 'client' }, //https://github.com/SeregPie/VueWordCloud/
+    { src: '~/plugins/vue-chartjs.js', mode: 'client' },
+    { src: '~/plugins/hchs-vue-charts', mode: 'client' } //https://www.yasminzy.com/nuxt/chart.html#steps
+    // { src: '~/plugins/helper.js' }
   ],
   /*
    ** Nuxt.js dev-modules
@@ -88,7 +92,8 @@ export default {
   modules: [
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    'nuxt-simple-line-icons'
   ], 
   serverMiddleware: [
     { path: '/api/logger', handler: '~/api/logger.js' },

@@ -44,7 +44,8 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto|Black+Han+Sans|Bowlby+One+SC|Syncopate&display=swap' },
+      { rel: 'stylesheet', href: 'https://db.onlinewebfonts.com/c/6c79f7fd645c0d39b4ca10428237984a?family=Azo+Sans|AzoSansUberW01-Regular' },
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' }
     ]
   },
@@ -57,8 +58,7 @@ export default {
    */
   css: [
     '@fortawesome/fontawesome-svg-core/styles.css',
-
-    // '@/assets/scss/custom.scss',
+    // '@/assets/scss/custom.scss'
     '@/assets/css/custom.css'
 
   ],
@@ -69,8 +69,15 @@ export default {
     '~/plugins/anime.js',
     '~/plugins/fontawesome.js',
     '~/plugins/vue-inject.js',
-    { src: '~plugins/vue-particles.js', mode: 'client' },
-    { src: '~plugins/vue-parallaxy.js', mode: 'client' }
+    { src: '~plugins/vue-particles', mode: 'client' },
+    { src: '~plugins/vue-parallaxy', mode: 'client' },
+    // { src: '~/plugins/vue-fb-customer-chat', mode: 'client' },
+    { src: '~/plugins/vue-notifications', mode: 'client' },
+    // { src: '~/plugins/vue-resize-directive', mode: 'client' },
+    { src: '~/plugins/vuewordcloud.js', mode: 'client' }, //https://github.com/SeregPie/VueWordCloud/
+    { src: '~/plugins/vue-chartjs.js', mode: 'client' },
+    { src: '~/plugins/hchs-vue-charts', mode: 'client' } //https://www.yasminzy.com/nuxt/chart.html#steps
+    // { src: '~/plugins/helper.js' }
   ],
   /*
    ** Nuxt.js dev-modules
@@ -85,8 +92,25 @@ export default {
   modules: [
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
-    '@nuxtjs/axios'
-  ], 
+    '@nuxtjs/axios',
+    'nuxt-simple-line-icons'
+  ]
+  // , bootstrapVue: {
+    // bootstrapCSS: false, // Or `css: false`
+    // bootstrapVueCSS: false, // Or `bvCSS: false`
+    // componentPlugins: [
+    //   'LayoutPlugin',
+    //   'FormPlugin',
+    //   'FormCheckboxPlugin',
+    //   'FormInputPlugin',
+    //   'FormRadioPlugin',
+    //   'ToastPlugin',
+    //   'ModalPlugin'
+    // ],
+    // directivePlugins: ['VBPopoverPlugin', 'VBTooltipPlugin', 'VBScrollspyPlugin']
+
+    // }
+  ,
   serverMiddleware: [
     { path: '/api/logger', handler: '~/api/logger.js' },
     { path: '/api/contact', handler: '~/serverMiddleware/contact' } //or just '~/serverMiddleware/contact' because handler is inside code
@@ -95,6 +119,8 @@ export default {
    ** Build configuration
    */
   build: {
+    vendor: ['vue-fb-customer-chat'],
+
     /*
      ** You can extend webpack config here
     */

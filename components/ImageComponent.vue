@@ -1,20 +1,33 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
-  <div class="container-fluid imageComponent">
-    <div class="row">
-      <div class="col-6">
-        <b-img :src="pimage" class="rounded-circle img-fluid imageComponentImage" :alt="pimagedesc" />
-      </div>
-      <div class="col imageComponentText">
+  <b-container fluid class="text-light text-center imageComponent">
+    <b-row class="mb-3 m-0">
+      <b-col md="6" class="p-3 m-0 p-0">
+        <b-img
+          :src="pimage"
+          class="img-fluid imageComponentImage"
+          :alt="pimagedesc"
+        />
+      </b-col>
+      <b-col md="6" class="ml-auto p-3 imageComponentText" rounded="top" style="border-radius: 10px 30px 10px">
         <span v-html="pimagecontent" />
-      </div>
-    </div>
-  </div>
+      </b-col>
+    </b-row>
+  </b-container>
 </template>
 <script>
 /* eslint-disable */
 export default {
+  // head () {
+  //   return {
+  //     link: [
+  //       { rel: 'stylesheet', href: '/static/imageComponent.css' }
+  //     ]
+  //   }
+  // },
   props: ['pimage', 'pimagedesc', 'pimagecontent']
 }
-</script>
 
+</script>
+<style scoped>
+</style>

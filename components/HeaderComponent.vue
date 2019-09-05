@@ -1,31 +1,27 @@
 <template>
-  <header>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col">
+  <header class="text-center">
+    <b-container fluid class="text-center">
+      <b-row class="m-4">
+        <b-col md="12">
           <h1>{{ pheader }}</h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
+        </b-col>
+      </b-row>
+      <b-row v-if="psubheader" class="row">
+        <b-col>
           <h2>{{ psubheader }}</h2>
-        </div>
-      </div>
-    </div>
+        </b-col>
+      </b-row>
+      <b-row v-if="psubtitle" class="row m-3">
+        <b-col>
+          <h3>{{ psubtitle }}</h3>
+        </b-col>
+      </b-row>
+    </b-container>
   </header>
 </template>
 <script>
 /* eslint-disable */
 export default {
-  props: ['pheader', 'psubheader']
+  props: ['pheader', 'psubheader', 'psubtitle', 'backgroundUrl']
 }
-// export default {
-//   props: {
-//     titletext: {
-//       type: String,
-//       required: false,
-//       default: '1 Digital marketing and web design services'
-//     }
-//   }
-// }
 </script>

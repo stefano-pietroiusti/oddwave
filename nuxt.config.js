@@ -58,8 +58,7 @@ export default {
    */
   css: [
     '@fortawesome/fontawesome-svg-core/styles.css',
-
-    // '@/assets/scss/custom.scss',
+    // '@/assets/scss/custom.scss'
     '@/assets/css/custom.css'
 
   ],
@@ -95,7 +94,23 @@ export default {
     'bootstrap-vue/nuxt',
     '@nuxtjs/axios',
     'nuxt-simple-line-icons'
-  ], 
+  ]
+  // , bootstrapVue: {
+    // bootstrapCSS: false, // Or `css: false`
+    // bootstrapVueCSS: false, // Or `bvCSS: false`
+    // componentPlugins: [
+    //   'LayoutPlugin',
+    //   'FormPlugin',
+    //   'FormCheckboxPlugin',
+    //   'FormInputPlugin',
+    //   'FormRadioPlugin',
+    //   'ToastPlugin',
+    //   'ModalPlugin'
+    // ],
+    // directivePlugins: ['VBPopoverPlugin', 'VBTooltipPlugin', 'VBScrollspyPlugin']
+
+    // }
+  ,
   serverMiddleware: [
     { path: '/api/logger', handler: '~/api/logger.js' },
     { path: '/api/contact', handler: '~/serverMiddleware/contact' } //or just '~/serverMiddleware/contact' because handler is inside code

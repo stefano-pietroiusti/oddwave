@@ -1,5 +1,6 @@
 <template>
   <div class="container-fluid wave">
+    <span class="top-left">Left text to see if this works</span>
     <div class="wrap">
       <div v-for="n in 500" :key="n" class="c" />
     </div>
@@ -10,15 +11,25 @@
 </script>
 <style scoped lang="scss">
 // best in chrome
-$total: 500; // total particles
-$orb-size: 200px;
-$particle-size: 2px;
+$total: 600; // total particles
+$orb-size: 300px;
+$particle-size: 4px;
 $time: 14s;
 $base-hue: 180; // change for diff colors (180 is nice)
+.top-left {
+  top: 0px;
+  left: 16px;
+  display: block;
+  color: white;
+  width: 100%;
+  font-size: 30px;
+}
 
 .wave {
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  height: 50vh;  width: 100vw;
+  // background: radial-gradient(ellipse at bottom, #fff 0%, #fff 100%);
+  height: 50vh;
+  width: 100%;
   overflow: hidden;
   display: flex;
   font-family: 'Anton', sans-serif;
@@ -30,7 +41,7 @@ $base-hue: 180; // change for diff colors (180 is nice)
   position: relative;
   top: 0%;
   left: 0%;
-  width: 100vw;
+  width: 100%;
   height: 0;
   transform-style: preserve-3d;
   perspective: 1000px;

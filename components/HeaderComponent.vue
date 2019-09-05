@@ -1,22 +1,22 @@
 <template>
   <header class="text-center">
-    <div class="container-fluid">
-      <div class="row m-4">
-        <div class="col">
+    <b-container fluid class="text-center">
+      <b-row class="m-4">
+        <b-col md="12">
           <h1>{{ pheader }}</h1>
-        </div>
-      </div>
-      <div v-if="psubheader" class="row">
-        <div class="col">
+        </b-col>
+      </b-row>
+      <b-row v-if="psubheader" class="row">
+        <b-col>
           <h2>{{ psubheader }}</h2>
-        </div>
-      </div>
-      <div v-if="psubtitle" class="row m-3">
-        <div class="col">
+        </b-col>
+      </b-row>
+      <b-row v-if="psubtitle" class="row m-3">
+        <b-col>
           <h3>{{ psubtitle }}</h3>
-        </div>
-      </div>
-    </div>
+        </b-col>
+      </b-row>
+    </b-container>
   </header>
 </template>
 <script>

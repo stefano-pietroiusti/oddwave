@@ -1,119 +1,84 @@
 <template>
-  <div class="footerresponsive">
+  <b-container fluid class="text-light text-left bg-primary p-1 footerresponsive">
+    <!-- <div class="footerresponsive"> -->
     <div class="contain">
       <div class="col">
-        <h1>Company</h1>
+        <h1>The Odd Wave</h1>
         <ul>
-          <li>About</li>
-          <li>Mission</li>
-          <li>Services</li>
-          <li>Social</li>
-          <li>Get in touch</li>
+          <nuxt-link v-for="item in standardNav" :key="item.value" :to="item.value">
+            <li>{{ item.text }}</li>
+          </nuxt-link>
         </ul>
       </div>
-      <div class="col">
+      <!-- <div class="col">
         <h1>Products</h1>
         <ul>
-          <li>About</li>
-          <li>Mission</li>
-          <li>Services</li>
-          <li>Social</li>
-          <li>Get in touch</li>
+          <li>Hosting packages</li>
+          <li>Website packages</li>
         </ul>
-      </div>
+      </div>-->
       <div class="col">
-        <h1>Accounts</h1>
+        <h1>Services</h1>
         <ul>
-          <li>About</li>
-          <li>Mission</li>
-          <li>Services</li>
-          <li>Social</li>
-          <li>Get in touch</li>
-        </ul>
-      </div>
-      <div class="col">
-        <h1>Resources</h1>
-        <ul>
-          <li>Webmail</li>
-          <li>Redeem code</li>
-          <li>WHOIS lookup</li>
-          <li>Site map</li>
-          <li>Web templates</li>
-          <li>Email templates</li>
-        </ul>
-      </div>
-      <div class="col">
-        <h1>Support</h1>
-        <ul>
-          <li>Contact us</li>
-          <li>Web chat</li>
-          <li>Open ticket</li>
+          <nuxt-link
+            v-for="service in services"
+            :key="service.id"
+            :to="{name: 'services-id', params: {id: service.id}}"
+          >
+            <li>{{ service.title }}</li>
+          </nuxt-link>
         </ul>
       </div>
       <div class="col social">
         <h1>Social</h1>
         <ul>
           <li>
-            <a href="#" class="fa fa-facebook" /> <a href="#" class="fa fa-linkedin" />
+            <a href="#" class="fa fa-facebook" />
+            <a href="#" class="fa fa-linkedin" />
           </li>
         </ul>
       </div>
+      <div class="col social">
+        <h1>+64 210 88 23769</h1>
+        <h1>team@theoddwave.co.nz</h1>
+      </div>
       <div class="clearfix" />
     </div>
-  </div>
+  </b-container>
+  <!-- </div> -->
 </template>
 <script>
 export default {
+  data() {
+    return {
+      standardNav: [
+        { value: '/', text: 'Home' },
+        { value: '/about', text: 'What we do' },
+        { value: '/contact', text: 'Contact us' }
+      ]
+    }
+  },
+  computed: {
+    services() {
+      return this.$store.state.services.all
+    }
+  }
 }
 </script>
 <style scoped>
 .footerresponsive {
-  height: 400px;
+  height: 200px;
   width: 100%;
-  background-color: #f0f0f0;
-  text-align: center;
-  box-sizing: border-box;
-  padding: 60px 0px;
-    margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, Sans-serif;
-  background-color: #070617;
 }
 
 .footerresponsive .col {
-  width: 190px;
+  width: 300px;
   height: auto;
   float: left;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  padding: 0px 20px 20px 20px;
-}
-
-.fa {
-  padding: 1.5vmin;
-  font-size: 4vmin;
-  width: 9vmin;
-  text-align: center;
-  text-decoration: none;
-  margin: 1vmin .5vmin;;
-  text-decoration: none;
-  border-radius: 50%;
-  opacity: 0.8;
-}
-
-.fa:hover {
-  opacity: 0.7;
-}
-
-.fa-facebook {
-  background: #3b5998;
-  color: white;
-}
-
-.fa-linkedin {
-  background: #007bb5;
-  color: white;
+  /* padding: 0px 20px 20px 20px; */
 }
 
 .footerresponsive .col h1 {
@@ -123,10 +88,10 @@ export default {
   font-size: 12px;
   line-height: 17px;
   padding: 20px 0px 5px 0px;
-  color: rgba(255,255,255,0.2);
+  color: rgba(255, 255, 255, 0.2);
   font-weight: normal;
   text-transform: uppercase;
-  letter-spacing: 0.250em;
+  letter-spacing: 0.25em;
 }
 .footerresponsive .col ul {
   list-style-type: none;
@@ -140,10 +105,15 @@ export default {
   font-weight: bold;
   padding: 5px 0px 5px 0px;
   cursor: pointer;
-  transition: .2s;
-  -webkit-transition: .2s;
-  -moz-transition: .2s;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  text-decoration: none;
 }
+.footerresponsive .col ul a:hover {
+  text-decoration: none;
+}
+
 .social ul li {
   display: inline-block;
   padding-right: 5px !important;
@@ -151,13 +121,14 @@ export default {
 
 .footerresponsive .col ul li:hover {
   color: #ffffff;
-  transition: .1s;
-  -webkit-transition: .1s;
-  -moz-transition: .1s;
+  transition: 0.1s;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
 }
 .clearfix {
   clear: both;
 }
+
 @media only screen and (min-width: 1280px) {
   .contain {
     width: 1200px;
@@ -185,15 +156,15 @@ export default {
   }
 }
 @media only screen and (max-width: 500px) {
-    .footerresponsive .col {
-      width: 50%;
-    }
-    .footerresponsive .col h1 {
-      font-size: 14px;
-    }
-    .footerresponsive .col ul li {
-      font-size: 13px;
-    }
+  .footerresponsive .col {
+    width: 50%;
+  }
+  .footerresponsive .col h1 {
+    font-size: 14px;
+  }
+  .footerresponsive .col ul li {
+    font-size: 13px;
+  }
 }
 @media only screen and (max-width: 340px) {
   .footerresponsive .col {

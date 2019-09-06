@@ -1,12 +1,12 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
-  <b-container fluid class="text-light text-center imageComponent">
-    <b-row class="mb-3 m-0">
-      <b-col md="6" class="ml-auto p-3 imageComponentText">
-        <span class v-html="pimagecontent" />
+  <b-container fluid class="text-light text-center bg-primary p-1">
+    <b-row>
+      <b-col md="6" sm="12">
+        <span class="componenttext" v-html="pimagecontent" />
       </b-col>
-      <b-col md="6" class="p-3 m-0 p-0">
-        <b-img :src="pimage" class="img-fluid imageComponentImage" :alt="pimagedesc" />
+      <b-col md="6">
+        <b-img :src="pimage" class="img-fluid" :alt="pimagedesc" />
       </b-col>
     </b-row>
   </b-container>
@@ -18,5 +18,4 @@ export default {
 }
 </script>
 <style scoped>
-
 </style>

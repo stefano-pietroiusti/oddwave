@@ -1,8 +1,6 @@
 <template>
-  <div>
-    <div>
-      <HeaderComponent :pheader="pheader" :psubheader="psubheader" />
-    </div>
+  <div class="text-center mt-header w-100">
+    <HeaderComponent :pheader="pheader" :psubheader="psubheader" />
   </div>
 </template>
 

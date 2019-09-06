@@ -1,5 +1,5 @@
 <template>
-  <div style="text-align: center; margin-top: 80px">
+  <div class="text-center mt-header w-100">
     <AnimeBannerComponent :pheader="panimheader" />
     <HeaderComponent :pheader="pheader" :psubheader="psubheader" :psubtitle="psubtitle" />
     <LinkComponent :btext="btext" :blink="blink" /><br>
@@ -16,11 +16,6 @@
       :pimage="pimage2"
       :pimagedesc="pimagedesc2"
       :pimagecontent="pimagecontent2"
-    />
-    <ImageRightComponent
-      :pimage="pimage3"
-      :pimagedesc="pimagedesc3"
-      :pimagecontent="pimagecontent3"
     />
     <TextComponent :pcontent="ptextcomponent3" />
     <!-- <ServicesTags /> -->

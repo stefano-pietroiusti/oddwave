@@ -1,10 +1,8 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
-  <!-- <b-container fluid class="imageBannerComponent text-center" :style="{ backgroundImage: `url(@/assets/imgs/${pimage})` }"> -->
   <b-container fluid class="imageBannerComponent text-center" :style="{ backgroundImage: `url(${pimage})` }">
-    <!-- <b-container fluid class="imageBannerComponent text-center" :style="{'background-image':`url(@/assets/imgs/${pimage})`}"> -->
     <b-row>
-      <b-col>
+      <b-col class="componenttext">
         {{ pimagecontent }}
       </b-col>
     </b-row>
@@ -12,11 +10,7 @@
 </template>
 <script>
 /* eslint-disable */
-// import backgroundUrl from 'sample.jpg'
 export default {
-  // data() {
-  //   return { backgroundUrl }
-  // },
   props: ['pimage', 'pimagedesc', 'pimagecontent']
 }
 

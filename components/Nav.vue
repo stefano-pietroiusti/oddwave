@@ -1,5 +1,5 @@
 <template>
-  <b-navbar toggleable="lg" fixed="top" type="dark">
+  <b-navbar toggleable="lg" fixed="top" type="dark" variant="primary" class="">
     <b-navbar-brand to="/">
       <!-- <b-img :src="image" fluid alt="the odd wave logo" class="logo" /> -->
       <font-awesome-icon

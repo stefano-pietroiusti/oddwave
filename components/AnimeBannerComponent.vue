@@ -15,11 +15,11 @@ export default {
 </script>
 <style scoped lang="scss">
 // best in chrome
-$total: 400; // total particles
+$total: 800; // total particles
 $orb-size: 300px;
 $particle-size: 4px;
 $time: 14s;
-$base-hue: 180; // change for diff colors (180 is nice)
+$base-hue: 71; // change for diff colors (180 is nice) 49 yellow 350 red
 .top-left {
   top: 0px;
   left: 16px;
@@ -37,8 +37,8 @@ $base-hue: 180; // change for diff colors (180 is nice)
 .wave {
   // background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   // background: radial-gradient(ellipse at bottom, #fff 0%, #fff 100%);
-  background: radial-gradient(ellipse at bottom, #DB3096 0%, #da659c 100%);
-  // background: radial-gradient(ellipse at bottom, #091540 0%, #5a597b 100%);
+  // background: radial-gradient(ellipse at bottom, #DB3096 0%, #da659c 100%);
+  background: radial-gradient(ellipse at bottom, #091540 0%, #5a597b 100%);
   height: 50vh;
   width: 100%;
   overflow: hidden;

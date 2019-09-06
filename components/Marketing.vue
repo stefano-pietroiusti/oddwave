@@ -1,32 +1,31 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
   <b-jumbotron
-    bg-variant="primary"
-    text-variant="light"
+    bg-variant="warning"
+    text-variant="primary"
     border-variant="primary"
-    class="mt-50 w-50"
+    class="text-break text-center"
   >
-    <template slot="header">
+    <template
+      slot="header"
+      text-variant="primary"
+    >
       BootstrapVue
     </template>
-
     <template slot="lead">
-      This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
-      featured content or information.
+      <h3>
+        This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+        featured content or information.
+      </h3>
     </template>
-
-    <hr class="my-4">
-
-    <p>
+    <hr class="my-4 primary">
+    <h4>
       It uses utility classes for typography and spacing to space content out within the larger
       container.
-    </p>
-
-    <b-button variant="primary" href="#">
-      Do Something
-    </b-button>
-    <b-button variant="success" href="#">
-      Do Something Else
+    </h4>
+    <hr class="my-4 primary">
+    <b-button variant="info" to="/contact" class="btn-lg">
+      Enquire about this service
     </b-button>
   </b-jumbotron>
 </template>
@@ -37,7 +36,4 @@ export default {
 }
 </script>
 <style scoped>
-/* .marketing {
-  -webkit-box-shadow: 5px 5px 5px var(--primary);
-} */
 </style>

@@ -1,32 +1,55 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
-  <section class="text-center mt-header w-100">
+  <div class="text-center mt-header w-100">
     <HeaderComponent :pheader="service.header" :psubheader="service.subheader" />
-    <span v-for="(value, index) in service.content" :key="index">
-      <p>{{ value }}</p>
-    </span>
-    <!-- <aside>
-      <h3>Other services</h3>
-      <ul>
-        <li v:for="item in relatedServices">
-          {{ item }}
-         <nuxt-link :to="{name: 'services-id', params: {id: item.id}}">
-            {{ item.header }}
+    <b-container fluid class="text-center w-100">
+      <b-row>
+        <b-col w="50">
+          <Marketing
+            :pheader="service.marketing.header"
+            :plead="service.marketing.subheader"
+            :ptext="service.marketing.content"
+            :penquire="service.title"
+            :pbgvariant="service.marketing.bgvariant"
+            :ptextvariant="service.marketing.textvariant"
+            :pbuttonvariant="service.marketing.buttonvariant"
+          />
+        </b-col>
+        <b-col w="50">
+          <D3Cloud :pwordcloud="service.cloud" />
+        </b-col>
+      </b-row>
+    </b-container>
+    <b-container fluid class="text-center w-100">
+      <p v-for="(value, index) in service.content" :key="index">
+        {{ value }}
+      </p>
+      <!-- <AnimeBannerParticleComponent :pheader="service.header" /> -->
+      <!-- <h3>Other services</h3>
+      <span v-for="(value, index) in relatedservices" :key="index">
+        <p>{{ value.title }}</p>
+      </span>-->
+      <!-- <ul>
+        <li :key="item.id" v:for="item in relatedServices">
+          <nuxt-link :to="{name: 'services-id', params: {id: item.id}}">
+            {{ item.title }}
           </nuxt-link>
         </li>
-      </ul>
-    </aside> -->
-    </div>
-    </div>
-  </section>
+      </ul>-->
+    </b-container>
+  </div>
 </template>
 
 <script>
 import HeaderComponent from '@/components/HeaderComponent'
+import D3Cloud from '@/components/Clouds/D3Cloud'
+import Marketing from '@/components/Marketing'
 // import Contact from '@/components/Contact'
 export default {
   components: {
-    HeaderComponent
+    HeaderComponent,
+    D3Cloud,
+    Marketing
     // Contact
   },
   head () {
@@ -42,9 +65,7 @@ export default {
   data () {
     return {
       id: this.$route.params.id,
-      header: 'header',
-      subHeader: 'subHeader',
-      items: ['item', 'item']
+      panimheader: 'be where the world is going'
     }
   },
   computed: {
@@ -52,19 +73,14 @@ export default {
       return this.$store.state.services.all.find(
         service => service.id === this.id
       )
+    },
+    relatedservices () {
+      const related = this.$store.state.services.all.filter(
+        service => service.id !== this.id
+      )
+      return related
+      // return { id: related.id, header: related.header, title: related.title }
     }
-    // relatedServices () {
-    //   return this.$store.state.services.all.filter(function (item) {
-    //     return item.id !== this.id
-    //   })
-    // return this.$store.state.services.all.filter(function (item) {
-    //   return item.id !== this.id
-    // })
-    // }
-    // ,
-    // relatedServices () {
-    //   return this.services.filter(other => other.id != this.id)
-    // }
   }
 }
 </script>

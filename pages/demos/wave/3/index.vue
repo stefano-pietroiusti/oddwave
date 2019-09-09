@@ -1,13 +1,14 @@
+
 <template>
-  <WordCloud />
+  <LinesShow />
 </template>
 
 <script>
-import WordCloud from '@/components/WordCloud'
+import LinesShow from '@/components/Waves/LinesShow'
 
 export default {
   components: {
-    WordCloud
+    LinesShow
   }
 }
 </script>

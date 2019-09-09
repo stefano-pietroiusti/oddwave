@@ -75,21 +75,23 @@ $enable-gradients: true;
 $enable-transitions: true;
 $enable-responsive-font-sizes: true;
 $enable-validation-icons: true;
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
-Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
-'Courier New', monospace;
-$font-family-lucida: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
-$font-family-verdana: Verdana, Helvetica, sans-serif;
-$font-family-helvetica: Helvetica, sans-serif;
-$font-family-trebuchet: sans-serif;
-$font-family-optima: 'Optima', 'Trebuchet MS', 'Noto Sans', sans-serif;
-$font-family-syncopate: 'Syncopate', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-$font-family-bowlby: 'Bowlby One SC', cursive;
-$font-family-blacksans: 'Black Han Sans', sans-serif;
+// $font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+// Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+// $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+// 'Courier New', monospace;
+// $font-family-lucida: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+// $font-family-verdana: Verdana, Helvetica, sans-serif;
+// $font-family-helvetica: Helvetica, sans-serif;
+// $font-family-trebuchet: sans-serif;
+// $font-family-optima: 'Optima', 'Trebuchet MS', 'Noto Sans', sans-serif;
+// $font-family-syncopate: 'Syncopate', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+// $font-family-bowlby: 'Bowlby One SC', cursive;
+// $font-family-blacksans: 'Black Han Sans', sans-serif;
+$font-family-nunitosans: 'Nunito Sans', sans-serif;
+// $font-family-azosans: 'Azo Sans', 'AzoSansUberW01-Regular', 'Black Han Sans', sans-serif;
 $body-bg: $white;
 $body-color: $gunmetal;
-$font-family-base: $font-family-trebuchet;
+$font-family-base: $font-family-nunitosans;
 
 $font-size-base: 0.8rem;
 // Then include the following
@@ -109,14 +111,38 @@ $font-size-base: 0.8rem;
 
 
 body {
-  // font-family: var(--font-family-syncopate);
-  /* font-family: "Avenir", Helvetica, Arial, sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height:1.2;
   font-weight:300;
   font-size:21px;
 }
+
+h1 {
+  font-size: 5em;
+  white-space:normal;
+  // word-break: break-all;
+  width:100%;
+  text-transform: capitalize;
+  font-weight: 600;
+  }
+  h2 {
+    font-size: 3.5em;
+    white-space:normal;
+    // word-break: break-all;
+    width:100%;
+    text-transform: capitalize;
+    font-weight: 600;
+    }
+
+    h3 {
+      font-size: 1.5em;
+      white-space:normal;
+      // word-break: break-all;
+      width:100%;
+      text-transform: capitalize;
+      font-weight: 600;
+      }
 
 p {
   line-height:1.2
@@ -317,6 +343,9 @@ hr {
     .footer .col ul li {
       font-size: 13px;
     }
+    h1 {
+      font-size: 2em;
+    }
   }
   @media only screen and (max-width: 500px) {
     .footer .col {
@@ -328,10 +357,16 @@ hr {
     .footer .col ul li {
       font-size: 13px;
     }
+    h1 {
+      font-size: 2em;
+    }
   }
   @media only screen and (max-width: 340px) {
     .footer .col {
       width: 100%;
+    }
+    h1 {
+      font-size: 2em;
     }
   }
 

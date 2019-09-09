@@ -2,23 +2,31 @@
   <div class="container-fluid wave">
     <span class="top-left">{{ pheader }}</span>
     <div class="wrap">
-      <div v-for="n in 500" :key="n" class="c" />
+      <div v-for="i in words" :key="i.text" class="c">
+        {{ i.text }}
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import { serviceCloud } from '../utils/serviceCloud.js'
 /* eslint-disable */
 export default {
-  props: ['pheader']
+  props: ['pheader'],
+  data() {
+    return {
+      words: serviceCloud
+    }
+  }
 }
 </script>
 <style scoped lang="scss">
 // best in chrome
-$total: 1000; // total particles
-$orb-size: 500px;
-$particle-size: 6px;
-$time: 20s;
+$total: 20; // total particles
+$orb-size: 300px;
+$particle-size: 4px;
+$time: 14s;
 $base-hue: 71; // change for diff colors (180 is nice) 49 yellow 350 red
 .top-left {
   top: 0px;
@@ -26,9 +34,11 @@ $base-hue: 71; // change for diff colors (180 is nice) 49 yellow 350 red
   display: block;
   color: white;
   width: 100%;
-  font-size: 3em;
-  font-family: 'Azo Sans', 'Black Han Sans', sans-serif;
-  // font-family:inherit;
+  font-size: 60px;
+  font-family: 'Azo Sans', 'AzoSansUberW01-Regular', 'Black Han Sans',
+    sans-serif;
+  // font-family: 'Azo Sans', 'Black Han Sans', sans-serif;
+
   line-height: 1.5;
   text-transform: uppercase;
 }
@@ -42,7 +52,7 @@ $base-hue: 71; // change for diff colors (180 is nice) 49 yellow 350 red
   width: 100%;
   overflow: hidden;
   display: flex;
-  font-family: inherit;
+  font-family: 'Anton', sans-serif;
   justify-content: center;
   align-items: center;
 }
@@ -65,6 +75,7 @@ $base-hue: 71; // change for diff colors (180 is nice) 49 yellow 350 red
 }
 
 .c {
+  color:turquoise;
   position: absolute;
   width: $particle-size;
   height: $particle-size;

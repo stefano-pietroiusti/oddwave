@@ -1,5 +1,5 @@
 <template>
-  <b-container fluid class="text-light text-left bg-primary p-1 footer">
+  <b-container fluid class="text-light text-left bg-primary footer">
     <div class="row">
       <div class="col">
         <h2>The Odd Wave</h2>

@@ -44,10 +44,13 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto|Black+Han+Sans|Bowlby+One+SC|Syncopate&display=swap' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Nunito+Sans|Roboto|Black+Han+Sans|Bowlby+One+SC|Syncopate|Abril+Fatface|Exo|Righteous&display=swap' },
       { rel: 'stylesheet', href: 'https://db.onlinewebfonts.com/c/6c79f7fd645c0d39b4ca10428237984a?family=Azo+Sans|AzoSansUberW01-Regular' },
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' }
     ]
+    // , script: [
+    //   { src: 'https://d3js.org/d3.v3.min.js' }, { src: 'https://rawgit.com/jasondavies/d3-cloud/master/build/d3.layout.cloud.js' }
+    // ]
   },
   /*
    ** Customize the progress-bar color
@@ -73,10 +76,11 @@ export default {
     // { src: '~/plugins/vue-fb-customer-chat', mode: 'client' },
     { src: '~/plugins/vue-notifications', mode: 'client' },
     // { src: '~/plugins/vue-resize-directive', mode: 'client' },
-    { src: '~/plugins/vuewordcloud.js', mode: 'client' }, //https://github.com/SeregPie/VueWordCloud/
     { src: '~/plugins/vue-chartjs.js', mode: 'client' },
-    { src: '~/plugins/hchs-vue-charts', mode: 'client' } //https://www.yasminzy.com/nuxt/chart.html#steps
+    { src: '~/plugins/hchs-vue-charts', mode: 'client' }, //https://www.yasminzy.com/nuxt/chart.html#steps
     // { src: '~/plugins/helper.js' }
+    { src: '~/plugins/vue-d3-cloud.js', mode: 'client' } //https://www.yasminzy.com/nuxt/chart.html#steps
+
   ],
   /*
    ** Nuxt.js dev-modules
@@ -95,20 +99,20 @@ export default {
     'nuxt-simple-line-icons'
   ]
   // , bootstrapVue: {
-    // bootstrapCSS: false, // Or `css: false`
-    // bootstrapVueCSS: false, // Or `bvCSS: false`
-    // componentPlugins: [
-    //   'LayoutPlugin',
-    //   'FormPlugin',
-    //   'FormCheckboxPlugin',
-    //   'FormInputPlugin',
-    //   'FormRadioPlugin',
-    //   'ToastPlugin',
-    //   'ModalPlugin'
-    // ],
-    // directivePlugins: ['VBPopoverPlugin', 'VBTooltipPlugin', 'VBScrollspyPlugin']
+  // bootstrapCSS: false, // Or `css: false`
+  // bootstrapVueCSS: false, // Or `bvCSS: false`
+  // componentPlugins: [
+  //   'LayoutPlugin',
+  //   'FormPlugin',
+  //   'FormCheckboxPlugin',
+  //   'FormInputPlugin',
+  //   'FormRadioPlugin',
+  //   'ToastPlugin',
+  //   'ModalPlugin'
+  // ],
+  // directivePlugins: ['VBPopoverPlugin', 'VBTooltipPlugin', 'VBScrollspyPlugin']
 
-    // }
+  // }
   ,
   serverMiddleware: [
     { path: '/api/logger', handler: '~/api/logger.js' },

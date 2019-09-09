@@ -17,7 +17,7 @@
 
 <script>
 import Cloud from 'vue-d3-cloud'
-import { serviceCloud } from '../utils/serviceCloud.js'
+import { serviceCloud } from '../../utils/serviceCloud.js'
 // import R from 'ramda'
 
 export default {

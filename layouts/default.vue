@@ -2,19 +2,19 @@
   <div>
     <Nav />
     <nuxt />
-    <FooterResponsive />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Nav from '@/components/Nav'
-import FooterResponsive from '@/components/FooterResponsive'
+import Footer from '@/components/Footer'
 export default {
   name: 'Main',
 
   components: {
     Nav,
-    FooterResponsive
+    Footer
   }
 }
 </script>

@@ -1,38 +1,60 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
   <b-jumbotron
-    bg-variant="warning"
-    text-variant="primary"
+    :bg-variant="pbgvariant"
+    :text-variant="ptextvariant"
     border-variant="primary"
     class="text-break text-center"
   >
-    <template
-      slot="header"
-      text-variant="primary"
-    >
-      BootstrapVue
+    <template slot="header" text-variant="primary">
+      {{ pheader }}
     </template>
     <template slot="lead">
-      <h3>
-        This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
-        featured content or information.
-      </h3>
+      <h3>{{ plead }}</h3>
     </template>
     <hr class="my-4 primary">
-    <h4>
-      It uses utility classes for typography and spacing to space content out within the larger
-      container.
-    </h4>
+    <h4>{{ ptext }}</h4>
     <hr class="my-4 primary">
-    <b-button variant="info" to="/contact" class="btn-lg">
-      Enquire about this service
+    <b-button :variant="pbuttonvariant" to="/contact" class="btn-lg">
+      Enquire about {{ penquire }}
     </b-button>
   </b-jumbotron>
 </template>
 <script>
 /* eslint-disable */
 export default {
-  props: ['pcontent']
+  props: {
+    pbgvariant: {
+      type: String,
+      default: 'primary'
+    },
+    ptextvariant: {
+      type: String,
+      default: 'light'
+    },
+    pbuttonvariant: {
+      type: String,
+      default: 'info'
+    },
+    pheader: {
+      type: String,
+      default: 'Marketing'
+    },
+    plead: {
+      type: String,
+      default:
+        'Marketing lead text  lead text  lead text  lead text  lead text  lead text  lead text '
+    },
+    ptext: {
+      type: String,
+      default:
+        'Marketing text Marketing text Marketing text Marketing text Marketing text Marketing text'
+    },
+    penquire: {
+      type: String,
+      default: 'Service'
+    }
+  }
 }
 </script>
 <style scoped>

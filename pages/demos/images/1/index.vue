@@ -4,7 +4,6 @@
     <HeaderComponent :pheader="pheader" :psubheader="psubheader" :psubtitle="psubtitle" />
     <ImageOverlayComponent
       :pimage="require('~/static/workingtogether.jpg')"
-      :pimagedesc="pbannerimagedesc"
       :pimagecontent="pbannercontent"
     />
     <TextComponent :pcontent="ptextcomponent1" />

@@ -1,15 +1,16 @@
 <template>
   <div class="text-center mt-header w-100">
     <HeaderComponent :pheader="pheader" :psubheader="psubheader" />
+    <ContactForm />
   </div>
 </template>
-
 <script>
 import HeaderComponent from '@/components/HeaderComponent'
-
+import ContactForm from '@/components/ContactForm'
 export default {
   components: {
-    HeaderComponent
+    HeaderComponent,
+    ContactForm
   },
   head () {
     return {

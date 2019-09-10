@@ -11,7 +11,7 @@
   </b-container>
 </template>
 <script>
-import pimage from '~/static/workingtogether.jpg'
+import pimage from '~/static/marketingstrategy.jpg'
 
 /* eslint-disable */
 export default {
@@ -19,17 +19,17 @@ export default {
     return { pimage }
   },
   props: {
-    pimage: {
-      type: String,
-      default: '~/static/workingtogether.jpg'
-    },
+    // pimage: {
+    //   type: String,
+    //   default: '~/static/workingtogether.jpg'
+    // },
     pbgcolor: {
       type: String,
-      default: 'rgb(144, 216, 29)'
+      default: 'rgb(202, 69, 69)'
     },
     pbgcolorimage: {
       type: String,
-      default: 'rgb(144, 216, 29)'
+      default: ' rgb(202, 69, 69)'
     },
     pcontent: {
       type: String,
@@ -65,10 +65,10 @@ export default {
 }
 .imageContainerImage {
   position: relative;
-  background-attachment: fixed;
-  background-position: center;
+  background-attachment:local;
+  background-position: left;
   background-repeat: no-repeat;
-  background-size: 120vw 120vh;
+  background-size: 100%;
   top: -35vw;
   left: 6vw;
   width: 44vw;
@@ -93,5 +93,6 @@ export default {
   z-index: 5;
   overflow: visible;
   text-align: left;
+  line-height: 3vw
 }
 </style>

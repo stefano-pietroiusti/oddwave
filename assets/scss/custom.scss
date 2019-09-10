@@ -117,7 +117,7 @@ $font-size-base: 0.8rem;
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height:1.2;
+  line-height: 3vw;
   font-weight:300;
   font-size:1.5vw;
 }
@@ -167,6 +167,8 @@ hr {
     font-size: inherit;
   }
   .dropdown-item {
+  margin-top: 0.5vw; 
+  vertical-align: middle;
   background-color: var(--primary);
   color: var(--secondary);
   font-size: inherit;
@@ -231,12 +233,12 @@ hr {
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
-    padding: 0;
-    padding-top: 6vh;
+    padding: 1vw;
     color: white;
     width: 100%;
     height:20vh;
     font-size: inherit;
+    line-height: inherit;
     // font-family: 'Azo Sans', 'Black Han Sans', sans-serif;
   }
 
@@ -310,6 +312,7 @@ hr {
   .footer {
     height: 100%;
     width: 100%;
+    padding: 1vw;
   }
 
   .footer .col {
@@ -319,7 +322,6 @@ hr {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    padding: 0px 20px 20px 20px;
   }
   .footer .row {
     padding: 0px 20px 20px 20px;
@@ -329,7 +331,6 @@ hr {
     padding: 0;
     font-family: inherit;
     font-size: 1.2vw;
-    line-height: 17px;
     padding: 20px 0px 5px 0px;
     color: rgba(255, 255, 255, 0.6);
     font-weight: normal;
@@ -338,15 +339,14 @@ hr {
   }
   .footer .col h4 {
     margin: 0;
-    margin-top: 1.5vw;
+    margin-top: 2vw;
     padding: 0;
     font-family: inherit;
     font-size: 1vw;
-    line-height: 17px;
     padding: 20px 0px 5px 0px;
     /* color: rgba(255, 255, 255, 0.2); */
-    color: rgb(243, 243, 16);
-    font-weight: 600;
+    color: #ff0;
+    // font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.25em;
   }
@@ -361,7 +361,7 @@ hr {
     font-size: 0.9vw;
     font-family: inherit;
     margin-top: 1vw;
-    padding: 5px 0px 5px 0px;
+    // padding: 5px 0px 5px 0px;
     cursor: pointer;
     transition: 0.2s;
     -webkit-transition: 0.2s;

@@ -1,7 +1,7 @@
 <template>
   <div class="text-center mt-header w-100">
-    <HeaderComponent :pheader="pheader" :psubheader="psubheader" />
-    <ContactForm />
+    <HeaderComponent :pheader="pheader" :psubheader="subheader" />
+    <ContactForm :pservices="services" />
   </div>
 </template>
 <script>
@@ -25,9 +25,20 @@ export default {
   },
   data (context) {
     return {
-      pheader: 'Contact',
-      psubheader:
-        'Contact form subheader'
+      pheader: 'Get in touch',
+      psubheader: 'Contact form subheader',
+      email: 'team@theoddwave.co.nz',
+      phone: '+64 210 8823 769'
+    }
+  },
+  computed: {
+    subheader () {
+      return ' ' + this.email + ' ' + this.phone
+    },
+    services () {
+      return this.$store.state.services.all.map((item) => {
+        return { value: item.id, text: item.title, selected: true }
+      })
     }
   }
 }

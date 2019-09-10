@@ -18,7 +18,7 @@
       <b-form-group id="input-group-3" label="Location:" label-for="input-3">
         <b-form-select id="input-3" v-model="form.location" :options="locations" required />
       </b-form-group>
-
+      <!--
       <b-form-group id="input-group-4" label="Services of interest:">
         <b-form-checkbox-group id="checkboxes-4" v-model="form.service">
           <b-form-checkbox value="photography">
@@ -31,6 +31,16 @@
             Website
           </b-form-checkbox>
         </b-form-checkbox-group>
+      </b-form-group> -->
+
+      <b-form-group id="input-group-4" label="Services of interest:">
+        <b-form-checkbox-group
+          id="Services-selection"
+          v-model="form.service"
+          :options="pservices"
+          stacked
+          buttons
+        />
       </b-form-group>
 
       <b-form-group id="input-group-5" label="Enquiry:" label-for="input-5">
@@ -58,6 +68,14 @@
 
 <script>
 export default {
+  props: {
+    pservices: {
+      type: Array,
+      default () {
+        return [{ value: 'SEO', text: 'SEO' }]
+      }
+    }
+  },
   data () {
     return {
       form: {

@@ -48,7 +48,7 @@ $theme-colors: map-merge(
     'secondary': $secondary,
     'tertiary': $tertiary,
     'cyan': $cyan,
-    
+
     'success': $success,
     'info': $info,
     'warning': $warning,
@@ -70,7 +70,7 @@ $grid-breakpoints: (
 );
 
 $enable-rounded: true;
-$enable-shadows: true; 
+$enable-shadows: true;
 $enable-gradients: true;
 $enable-transitions: true;
 $enable-responsive-font-sizes: true;
@@ -109,17 +109,21 @@ $font-size-base: 0.8rem;
   margin-top: 100px !important;
 }
 
+.headerComponent {
+  padding-left: 2em;
+  padding-right: 2em;
+}
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height:1.2;
   font-weight:300;
-  font-size:21px;
+  font-size:1.5vw;
 }
 
 h1 {
-  font-size: 5em;
+  font-size: 5vw;
   white-space:normal;
   // word-break: break-all;
   width:100%;
@@ -127,25 +131,27 @@ h1 {
   font-weight: 600;
   }
   h2 {
-    font-size: 3.5em;
+    font-size: 3vw;
     white-space:normal;
     // word-break: break-all;
     width:100%;
-    text-transform: capitalize;
+    text-transform: uppercase;
     font-weight: 600;
     }
 
     h3 {
-      font-size: 1.5em;
+      font-size: 2vw;
       white-space:normal;
       // word-break: break-all;
       width:100%;
-      text-transform: capitalize;
-      font-weight: 600;
+      text-transform: unset;
+      text-align:justify;
+      font-weight: 300;
+      line-height: 1.5
       }
 
 p {
-  line-height:1.2
+  line-height:1.8
 }
 
 hr {
@@ -158,29 +164,34 @@ hr {
   .dropdown-menu {
     background-color: var(--primary);
     color: var(--secondary);
+    font-size: inherit;
   }
   .dropdown-item {
   background-color: var(--primary);
   color: var(--secondary);
+  font-size: inherit;
   }
   .dropdown-item:hover{
     background-color: var(--secondary);
     color: var(--primary);
   }
 
-.navbar {
-  min-height: 80px;
-}
+// .navbar {
+//   min-height: 4.5vw;
+// }
 
+.nav-item {
+ margin-left: 2vw;
+}
 .navbar-brand {
   padding: 0 15px;
-  height: 80px;
-  line-height: 80px;
+  height:  4.5vw;
+  line-height:  4.5vw;
 }
 
 .dropdown-item  {
   padding: 0 15px;
-  height: 50px;
+  height:  4.5vw;
   line-height: 50px;
 }
 .navbar-toggle {
@@ -206,9 +217,67 @@ hr {
   a:hover{
     color: var(--info);
     }
+
   .componenttext {
-    line-height: 1.8
+    line-height: 2;
+    padding: 2em;
+    text-align: left;
   }
+
+  .imageBannerComponent {
+    min-height: 20vw;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    padding-top: 6vh;
+    color: white;
+    width: 100%;
+    height:20vh;
+    font-size: inherit;
+    // font-family: 'Azo Sans', 'Black Han Sans', sans-serif;
+  }
+
+  .linkComponent {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 300;
+    line-height: 1.5
+    }
+    .imageComponentImage {
+      padding: 2em;
+      z-index:1;
+      }
+      .imageComponentText {
+        line-height: 2;
+        padding: 2em;
+        text-align: left;
+        }
+        .overlayImage{
+            min-height: 20vw;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          // position: relative;
+          // top: 0;
+          // left: 0;
+          // width: 400px;
+          // height: 400px;
+          // z-index: 20;
+          background-color: rgba(244, 255, 31, 0.2); /*dim the background*/
+        }        
+        .overlay{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 400px;
+        height: 400px;
+        z-index: 20;
+        background-color: rgba(244, 255, 31, 0.2); /*dim the background*/
+      }      
 
   /*SOCIAL*/
   .fa {
@@ -221,28 +290,28 @@ hr {
     text-decoration: none;
     opacity: 0.8;
   }
-  
+
   .fa:hover {
     color: white;
     opacity: 1;
   }
-  
+
   .fa-facebook {
     background: #3b5998;
     color: white;
   }
-  
+
   .fa-linkedin {
     background: #007bb5;
     color: white;
   }
- 
+
   /* FOOTER */
   .footer {
     height: 100%;
     width: 100%;
   }
-  
+
   .footer .col {
     width: 300px;
     height: auto;
@@ -259,7 +328,7 @@ hr {
     margin: 0;
     padding: 0;
     font-family: inherit;
-    font-size: 12px;
+    font-size: 1.2vw;
     line-height: 17px;
     padding: 20px 0px 5px 0px;
     color: rgba(255, 255, 255, 0.6);
@@ -269,17 +338,19 @@ hr {
   }
   .footer .col h4 {
     margin: 0;
+    margin-top: 1.5vw;
     padding: 0;
     font-family: inherit;
-    font-size: 12px;
+    font-size: 1vw;
     line-height: 17px;
     padding: 20px 0px 5px 0px;
     /* color: rgba(255, 255, 255, 0.2); */
-    font-weight: normal;
+    color: rgb(243, 243, 16);
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.25em;
   }
-  
+
   .footer .col ul {
     list-style-type: none;
     margin: 0;
@@ -287,8 +358,9 @@ hr {
   }
   .footer .col ul li {
     color: rgba(255, 255, 255, 0.7);
-    font-size: 14px;
+    font-size: 0.9vw;
     font-family: inherit;
+    margin-top: 1vw;
     padding: 5px 0px 5px 0px;
     cursor: pointer;
     transition: 0.2s;
@@ -299,13 +371,13 @@ hr {
   .footer .col ul a:hover {
     text-decoration: none;
   }
-  
+
   .social ul li {
     display: inline-block;
     padding-right: 5px !important;
     color: #000;
   }
-  
+
   .footer .col ul li:hover {
     color: #ffffff;
     transition: 0.1s;
@@ -317,7 +389,7 @@ hr {
   }
 
   /*SCREENS*/
-  
+
   @media only screen and (min-width: 1280px) {
     .contain {
       width: 1200px;
@@ -371,6 +443,24 @@ hr {
   }
 
 
+  @media screen and ( max-width: 320px ) and ( max-height: 768px )
+  {
+    .imageBannerComponent {
+       min-height: 40vw; 
+       height:40vh;
+       font-size: 20px;
+      }
+  }
+  
+  @media screen and ( max-width: 768px )
+  {
+    .imageBannerComponent {
+       min-height: 40vw; 
+       height:40vh;
+       font-size: 30px;
+      }
+  }
+  
 
 /*
     .imageComponent {
@@ -381,7 +471,7 @@ hr {
       background-attachment: fixed;
 
     }
-    
+
     .imageComponentImage {
       opacity: 1;
       margin: auto;

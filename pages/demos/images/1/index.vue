@@ -2,76 +2,32 @@
   <div class="text-center mt-header w-100">
     <AnimeBannerComponent :pheader="panimheader" />
     <HeaderComponent :pheader="pheader" :psubheader="psubheader" :psubtitle="psubtitle" />
-    <LinkComponent :btext="btext" :blink="blink" /><br>
-    <!-- <ButtonComponent :btext="btext" :blink="blink" /><br> -->
-    <ImageBannerComponent
-      :pimage="require('~/static/sample2.jpg')"
-      :pimagedesc="pbannerimagedesc"
-      :pimagecontent="pbannercontent"
-    />
-    <TextComponent :pcontent="ptextcomponent1" />
     <ImageOverlayComponent
       :pimage="require('~/static/workingtogether.jpg')"
       :pimagedesc="pbannerimagedesc"
       :pimagecontent="pbannercontent"
     />
-
     <TextComponent :pcontent="ptextcomponent1" />
-    <ImageComponent :pimage="require('~/static/workingtogether.jpg')" :pimagedesc="pimagedesc1" :pimagecontent="pimagecontent1" />
-    <TextComponent :pcontent="ptextcomponent2" />
-    <ImageRightComponent
+    <!-- <ImageOverlayRightComponent
       :pimage="pimage2"
       :pimagedesc="pimagedesc2"
       :pimagecontent="pimagecontent2"
-    />
+    /> -->
     <TextComponent :pcontent="ptextcomponent3" />
     <!-- <ServicesTags /> -->
   </div>
 </template>
-
 <script>
 import AnimeBannerComponent from '@/components/AnimeBannerComponent'
 import HeaderComponent from '@/components/HeaderComponent'
-import LinkComponent from '@/components/LinkComponent'
-// import ButtonComponent from '@/components/ButtonComponent'
-import ImageBannerComponent from '@/components/ImageBannerComponent'
-import ImageComponent from '@/components/ImageComponent'
-import ImageRightComponent from '@/components/ImageRightComponent'
 import TextComponent from '@/components/TextComponent'
 import ImageOverlayComponent from '@/components/ImageOverlayComponent'
-
-// import ServicesTags from '@/components/ServicesTags'
-// import Intro from '@/components/Intro'
-// import About from '@/components/About'
-// import Contact from '@/components/Contact'
-// import ServicesCloud from '@/components/ServicesCloud'
-
 export default {
   components: {
     AnimeBannerComponent,
     HeaderComponent,
-    LinkComponent,
-    // ButtonComponent,
-    ImageBannerComponent,
-    ImageComponent,
-    ImageRightComponent,
     TextComponent,
     ImageOverlayComponent
-    // ImageComponentRight,
-    // About
-    // ServicesTags
-    // ServicesCloud
-  },
-  head () {
-    return {
-      title: 'The Odd Wave digital and web design services',
-      meta: [
-        { name: 'twitter:title', content: 'The Odd Wave' },
-        { name: 'twitter:description', content: 'Nuxt + Vue School = 🍕' },
-        { name: 'twitter:image', content: 'https://i.imgur.com/UYP2umJ.png' },
-        { name: 'twitter:card', content: 'summary_large_image' }
-      ]
-    }
   },
   data (context) {
     return {
@@ -106,4 +62,12 @@ export default {
 }
 </script>
 <style scoped>
+.container {
+   background-color: rgb(0, 0, 0);
+  position: relative;
+  overflow: hidden;
+  width: 600px;
+    height: 600px;
+}
+
 </style>

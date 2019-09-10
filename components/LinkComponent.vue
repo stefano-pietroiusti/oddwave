@@ -1,18 +1,13 @@
 <template>
-  <div class="container-fluid text-center">
-    <div class="row">
-      <div class="col">
-        <h3>
-          <nuxt-link
-            :to="blink"
-            class="linkComponent"
-          >
-            {{ btext }}
-          </nuxt-link>
-        </h3>
-      </div>
-    </div>
-  </div>
+  <b-container fluid class="text-center">
+    <b-row>
+      <b-col md="12">
+        <nuxt-link :to="blink" class="linkComponent">
+          {{ btext }}
+        </nuxt-link>
+      </b-col>
+    </b-row>
+  </b-container>
 </template>
 <script>
 /* eslint-disable */
@@ -21,6 +16,4 @@ export default {
 }
 </script>
 <style scoped>
-
-
 </style>

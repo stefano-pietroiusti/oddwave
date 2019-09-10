@@ -22,15 +22,6 @@
         </h1>
       </b-col>
     </b-row>
-    <h1>Canvas animation</h1>
-    <!-- <div
-      v-anime="{ rotate: '1turn', backgroundColor: '#FFF', duration: 2000, loop: true }"
-
-    >
-      testing animation
-    </div>-->
-    <canvas id="canvas" />
-    <canvas id="fireworks" ref="fireworks" class="fireworks">testing fireworks</canvas>
   </b-container>
 </template>
 

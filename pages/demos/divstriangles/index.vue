@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container mt-header">
     <div class="square">
       <div class="overlay" />
     </div>
@@ -12,16 +12,19 @@ export default {
 </script>
 <style scoped>
 .container {
+   background-color: rgb(0, 0, 0);
   position: relative;
   overflow: hidden;
   width: 600px;
     height: 600px;
 }
 .square {
-  width: 600px;
-  height: 500px;
+  width: 800px;
+  height: 800px;
+    overflow: hidden;
   background-color: rgb(202, 69, 69);
 }
+
 .overlay {
   width: 1027px;
   height: 425px;

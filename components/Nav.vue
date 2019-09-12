@@ -13,8 +13,11 @@
     <b-navbar-toggle target="nav-collapse" />
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
-        <b-nav-item v-for="item in standardNav" :key="item.value" :to="item.value">
+        <!-- <b-nav-item v-for="item in standardNav" :key="item.value" :to="item.value">
           {{ item.text }}
+        </b-nav-item> -->
+        <b-nav-item to="/">
+          Home
         </b-nav-item>
         <b-nav-item-dropdown text="Services" toggle-class="text-decoration-none">
           <b-dropdown-item
@@ -25,6 +28,9 @@
             {{ service.title }}
           </b-dropdown-item>
         </b-nav-item-dropdown>
+        <b-nav-item to="/contact">
+          Contact us
+        </b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -41,7 +47,6 @@ export default {
       title: 'THE ODD WAVE',
       standardNav: [
         { value: '/', text: 'Home' },
-        { value: '/about', text: 'What we do' },
         { value: '/contact', text: 'Contact us' }
       ]
     }

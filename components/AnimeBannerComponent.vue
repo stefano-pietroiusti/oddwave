@@ -15,10 +15,10 @@ export default {
 </script>
 <style scoped lang="scss">
 // best in chrome
-$total: 800; // total particles
-$orb-size: 300px;
-$particle-size: 4px;
-$time: 14s;
+$total: 1000; // total particles
+$orb-size: 500px;
+$particle-size: 6px;
+$time: 20s;
 $base-hue: 71; // change for diff colors (180 is nice) 49 yellow 350 red
 .top-left {
   top: 0px;
@@ -26,10 +26,9 @@ $base-hue: 71; // change for diff colors (180 is nice) 49 yellow 350 red
   display: block;
   color: white;
   width: 100%;
-  font-size: 60px;
-  font-family: 'Azo Sans', 'AzoSansUberW01-Regular', 'Black Han Sans', sans-serif;
-    // font-family: 'Azo Sans', 'Black Han Sans', sans-serif;
-
+  font-size: 3em;
+  font-family: 'Azo Sans', 'Black Han Sans', sans-serif;
+  // font-family:inherit;
   line-height: 1.5;
   text-transform: uppercase;
 }
@@ -43,7 +42,7 @@ $base-hue: 71; // change for diff colors (180 is nice) 49 yellow 350 red
   width: 100%;
   overflow: hidden;
   display: flex;
-  font-family: 'Anton', sans-serif;
+  font-family: inherit;
   justify-content: center;
   align-items: center;
 }

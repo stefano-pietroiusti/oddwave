@@ -1,15 +1,17 @@
 <template>
-  <div class="text-center mt-header w-100">
-    <HeaderComponent :pheader="pheader" :psubheader="psubheader" />
-  </div>
+  <b-container fluid class="imageContainerImage text-center mt-header w-100 " :style="{ backgroundImage: `url(${pimage})` }">
+    <!-- <HeaderComponent :pheader="email" :psubheader="phone" /> -->
+    <ContactForm :pservices="services" />
+  </b-container>
 </template>
-
 <script>
-import HeaderComponent from '@/components/HeaderComponent'
-
+// import pimage from '~/static/color-spectrum-3.jpg'
+// import HeaderComponent from '@/components/HeaderComponent'
+import ContactForm from '@/components/ContactForm'
 export default {
   components: {
-    HeaderComponent
+    // HeaderComponent,
+    ContactForm
   },
   head () {
     return {
@@ -24,12 +26,38 @@ export default {
   },
   data (context) {
     return {
-      pheader: 'Contact',
-      psubheader:
-        'Contact form subheader'
+      // pimage,
+      pimage: 'none',
+      pheader: 'Get in touch',
+      psubheader: 'Contact form subheader',
+      email: 'team@theoddwave.co.nz',
+      phone: '+64 210 8823 769'
+    }
+  },
+  computed: {
+    subheader () {
+      return ' ' + this.email + ' ' + this.phone
+    },
+    services () {
+      return this.$store.state.services.all.map((item) => {
+        return { value: item.id, text: item.title, selected: true }
+      })
     }
   }
 }
 </script>
 <style scoped>
+.imageContainerImage {
+  position: relative;
+  background-attachment:fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+  .my-buttons .active {
+    color: #fff !important;
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+  }
 </style>

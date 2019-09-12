@@ -1,6 +1,12 @@
 <template>
-  <div id="contact-form" class="container-fluid contact-form">
-    <b-form v-if="show" small @submit="onSubmit" @reset="onReset">
+  <b-container fluid class="contactForm text-center bg-primary text-secondary p-3 rounded w-75 h-75 d-inline-block">
+    <b-form
+      v-if="show"
+      small
+      class="bg-secondary text-primary p-3 rounded"
+      @submit="onSubmit"
+      @reset="onReset"
+    >
       <b-form-group id="input-group-1" label="Email address:" label-for="input-1">
         <b-form-input
           id="input-1"
@@ -10,29 +16,22 @@
           placeholder="Enter email"
         />
       </b-form-group>
-
       <b-form-group id="input-group-2" label="Your Name:" label-for="input-2">
         <b-form-input id="input-2" v-model="form.name" required placeholder="Enter name" />
       </b-form-group>
-
       <b-form-group id="input-group-3" label="Location:" label-for="input-3">
         <b-form-select id="input-3" v-model="form.location" :options="locations" required />
       </b-form-group>
-
-      <b-form-group id="input-group-4" label="Services of interest:">
-        <b-form-checkbox-group id="checkboxes-4" v-model="form.service">
-          <b-form-checkbox value="photography">
-            Photography
-          </b-form-checkbox>
-          <b-form-checkbox value="seo">
-            SEO
-          </b-form-checkbox>
-          <b-form-checkbox value="website">
-            Website
-          </b-form-checkbox>
-        </b-form-checkbox-group>
+      <b-form-group id="input-group-4" label="Services of interest:" class="bg-secondary text-primary mt-5">
+        <b-form-checkbox-group
+          id="Services-selection"
+          v-model="form.service"
+          :options="pservices"
+          stacked
+          buttons
+          button-variant="outline-success"
+        />
       </b-form-group>
-
       <b-form-group id="input-group-5" label="Enquiry:" label-for="input-5">
         <b-form-textarea
           id="input-5"
@@ -43,7 +42,7 @@
         />
       </b-form-group>
 
-      <b-button type="submit" variant="primary">
+      <b-button type="submit" variant="success">
         Submit
       </b-button>
       <b-button type="reset" variant="danger">
@@ -53,11 +52,19 @@
     <!-- <b-card class="mt-3" header="Form Data Result">
       <pre class="m-0">{{ form }}</pre>
     </b-card>-->
-  </div>
+  </b-container>
 </template>
 
 <script>
 export default {
+  props: {
+    pservices: {
+      type: Array,
+      default () {
+        return [{ value: 'SEO', text: 'SEO', selected: true }]
+      }
+    }
+  },
   data () {
     return {
       form: {
@@ -127,6 +134,12 @@ export default {
 }
 </script>
 <style scoped>
+/* .my-buttons .active {
+  color: #fff !important;
+  background-color: #28a745 !important;
+  border-color: #28a745 !important;
+} */
+
 /* https://www.w3schools.com/css/css3_gradients.asp
 #grad {
   background-image: linear-gradient(to right, red , yellow);
@@ -148,13 +161,12 @@ export default {
   background-image: repeating-radial-gradient(red, yellow 10%, green 15%);
 }
 */
-.contact-form {
-  background: #f1f1f1;
-  font-family: 'Roboto', sans-serif, 16px;
-  /* font-family: 16px; */
+/* .contact-form {
+
   margin: 0 auto;
   max-width: 600px;
   width: 100%;
+
 }
 
 .contact-form .separator {
@@ -209,5 +221,5 @@ export default {
 .contact-form .button {
   font-size: 15px;
   border-radius: 3px;
-}
+} */
 </style>

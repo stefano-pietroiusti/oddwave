@@ -24,8 +24,8 @@ export default {
   },
   data (context) {
     return {
-      pheader: 'About',
-      psubheader: 'About subheader'
+      pheader: 'We are everything you have ever dreamed of',
+      psubheader: 'We will help you live better by playing tennis with you every day'
     }
   }
 }

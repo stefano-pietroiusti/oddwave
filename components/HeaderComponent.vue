@@ -1,6 +1,6 @@
 <template>
   <header class="text-center">
-    <b-container fluid class="text-center">
+    <b-container fluid class="text-center headerComponent">
       <b-row class="m-4">
         <b-col md="12">
           <h1>{{ pheader }}</h1>
@@ -13,7 +13,9 @@
       </b-row>
       <b-row v-if="psubtitle" class="row m-3">
         <b-col>
-          <h3>{{ psubtitle }}</h3>
+          <h3>
+            {{ psubtitle }}
+          </h3>
         </b-col>
       </b-row>
     </b-container>

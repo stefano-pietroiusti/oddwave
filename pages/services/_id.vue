@@ -1,8 +1,38 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
-  <div class="text-center mt-header w-100">
-    <HeaderComponent :pheader="service.header" :psubheader="service.subheader" />
-    <b-container fluid class="text-center w-100">
+  <b-container fluid class="text-center mt-header">
+    <b-row>
+      <b-col>
+        <HeaderComponent :pheader="service.header" :psubheader="service.subheader" />
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col>
+        <TextComponent v-for="(item,i) in service.content" :key="i" :pcontent="item.text" :pimage="item.image" />
+        <!-- <TextImageComponent v-for="(item,i) in service.content" :key="i" :pcontent="item.text" /> -->
+      </b-col>
+    </b-row>
+    <b-row class="w-50">
+      <b-col class="w-50 text-left">
+        <Marketing
+          :pheader="service.marketing.header"
+          :plead="service.marketing.subheader"
+          :ptext="service.marketing.content"
+          :penquire="service.enquire"
+        />
+      </b-col>
+    </b-row>
+    <!-- <b-row class="w-100 text-left">
+      <b-col text-left>
+        <MarketingOverlayComponent
+          :pheader="service.marketing.header"
+          :plead="service.marketing.subheader"
+          :ptext="service.marketing.content"
+          :penquire="service.enquire"
+        />
+      </b-col>
+    </b-row> -->
+    <!-- <b-container fluid class="text-center  mt-header w-100">
       <b-row>
         <b-col w="50">
           <Marketing
@@ -10,47 +40,40 @@
             :plead="service.marketing.subheader"
             :ptext="service.marketing.content"
             :penquire="service.title"
-            :pbgvariant="service.marketing.bgvariant"
-            :ptextvariant="service.marketing.textvariant"
-            :pbuttonvariant="service.marketing.buttonvariant"
           />
         </b-col>
         <b-col w="50">
           <D3Cloud :pwordcloud="service.cloud" />
         </b-col>
       </b-row>
-    </b-container>
-    <b-container fluid class="text-center w-100">
-      <p v-for="(value, index) in service.content" :key="index">
-        {{ value }}
-      </p>
-      <!-- <AnimeBannerParticleComponent :pheader="service.header" /> -->
-      <!-- <h3>Other services</h3>
+    </b-container>-->
+    <!-- <AnimeBannerParticleComponent :pheader="service.header" /> -->
+    <!-- <h3>Other services</h3>
       <span v-for="(value, index) in relatedservices" :key="index">
         <p>{{ value.title }}</p>
-      </span>-->
-      <!-- <ul>
+    </span>-->
+    <!-- <ul>
         <li :key="item.id" v:for="item in relatedServices">
           <nuxt-link :to="{name: 'services-id', params: {id: item.id}}">
             {{ item.title }}
           </nuxt-link>
         </li>
-      </ul>-->
-    </b-container>
-  </div>
+    </ul>-->
+  </b-container>
 </template>
 
 <script>
 import HeaderComponent from '@/components/HeaderComponent'
-import D3Cloud from '@/components/Clouds/D3Cloud'
 import Marketing from '@/components/Marketing'
-// import Contact from '@/components/Contact'
+// import TextImageComponent from '@/components/TextImageComponent'
+import TextComponent from '@/components/TextComponent'
+
 export default {
   components: {
     HeaderComponent,
-    D3Cloud,
-    Marketing
-    // Contact
+    Marketing,
+    // TextImageComponent,
+    TextComponent
   },
   head () {
     return {
@@ -70,9 +93,11 @@ export default {
   },
   computed: {
     service () {
-      return this.$store.state.services.all.find(
+      const service = this.$store.state.services.all.find(
         service => service.id === this.id
       )
+      service.enquire = service.title + ' from $' + service.price.value + ' per ' + service.price.unit
+      return service
     },
     relatedservices () {
       const related = this.$store.state.services.all.filter(

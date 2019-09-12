@@ -54,7 +54,7 @@ export default {
   left: 3vw;
   width: 42vw;
   height: 30vw;
-  background-color: rgb(144, 216, 29);
+  /* background-color: rgb(144, 216, 29); */
   z-index: 10;
   overflow: visible;
   border-radius: 0.5vw;
@@ -73,7 +73,7 @@ export default {
   left: 6vw;
   width: 44vw;
   height: 31vw;
-  background-color: rgb(202, 69, 69);
+  /* background-color: rgb(202, 69, 69); */
   z-index: 20;
   overflow: visible;
   border-radius: 0.5vw;

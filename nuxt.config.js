@@ -26,9 +26,11 @@ export default {
    */
   generate: {
     routes: [
-      '/posts/balut',
-      '/posts/whereIsIt',
-      '/posts/how'
+      '/services/seo',
+      '/services/ppc',
+      '/services/webdesign',
+      '/services/hosting',
+      '/services/photography'
     ]
   },
   head: {

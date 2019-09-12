@@ -31,7 +31,7 @@
         <h6>{{ poweredBy }}</h6>
       </div>
       <div class="col social text-light text-center">
-        <h2>Share us</h2>
+        <h2>Join us</h2>
         <ul>
           <li>
             <a href="#" class="fa fa-facebook" />

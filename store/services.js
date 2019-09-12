@@ -4,36 +4,26 @@ export const state = () => ({
       id: 'seo',
       title: 'Search Engine Optimisation services',
       description: 'SEO - Search Engine Optimisation Services',
-      header: 'Drive traffic to your website with the latest SEO practices',
-      subheader: 'We can cost-effectively increase your ranking and drive organic traffic to your site.',
+      header: 'Drive organic traffic to your website with the latest SEO practices',
+      subheader: 'Increase your ranking cost effectively',
       content: [
-        'An essential part of a digital marketing strategy is SEO. SEO (Search engine optimization) assists in driving customers to your business via online platforms. ',
-        'SEO assists in making the website rank higher in the SERP (search engine result page) so that your business website is found by customers searching for your product and services online.',
-        'Advertising your business is of utmost importance. When any company goes online, pay per click advertising (PPC) works best to generate a considerable amount of web traffic. SEO allows a great deal of free advertising. ',
-        'Proper optimization makes a website rank on the first page of SERP. The common belief is that people generally check the first two pages of search engine results. Approximately 94% of online users use search engines to find products and services.',
-        'Keyword research and the proper use of keywords (including avoiding keyword stuffing) directly influence the complexity and readability of the content. Keyword-rich page content makes a substantial difference in your Google rankings and search engine results. ',
-        'Optimized content increases organic traffic to your website resulting in lead generation, increased sales, and improve ROI.',
-        'Some search engine optimization practices are Technical SEO and On-Page SEO. Technical SEO determines the quality of a website based on factors like speed and code. Optimizing the technical aspects of the website enables search engines to crawl and index the site, which is beneficial to obtain a higher search engine rank in Google.',
-        'Some steps to take in the direction of technical search engine optimization include fixing broken links. , removing duplicate pages, testing, and improving website speed. also, ensuring the website is mobile-friendly.',
-        'Page load speed is another crucial aspect to consider when working to improve SEO rankings and avoid high bounce rates.  ',
-        'Are you ready to tackle this on your own?',
-        'We have various SEO packages to choose from with secure monthly payments and no fixed contract, and you can cancel anytime.',
-        'Monthly SEO packages starting from $599 + GST.',
-        'Get in touch for more information.(link to contact'
+        { text: 'An essential part of a digital marketing strategy is SEO. SEO (Search engine optimization) assists in driving customers to your business via online platforms. SEO assists in making the website rank higher in the SERP (search engine result page) so that your business website is found by customers searching for your product and services online.' },
+        { text: 'Advertising your business is of utmost importance. When any company goes online, pay per click advertising (PPC) works best to generate a considerable amount of web traffic. SEO allows a great deal of free advertising. Proper optimization makes a website rank on the first page of SERP. The common belief is that people generally check the first two pages of search engine results. Approximately 94% of online users use search engines to find products and services.' },
+        { text: 'Keyword-rich page content makes a substantial difference in your Google rankings and search engine results. Optimized content increases organic traffic to your website resulting in lead generation, increased sales, and improve ROI.' },
+        { text: 'Technical SEO and On-Page SEO are two examples of search engine optimization practices. Technical SEO determines the quality of a website based on factors like speed and and the website has been developed. Optimizing the technical aspects of a website enables search engines to crawl and index the site correctly, which is beneficial to obtain a higher search engine rank in Google. Page load speed is another crucial aspect to consider to avoid high bounce rates and therefore improve your SEO ranking.' },
+        { text: 'We have various SEO packages to choose from with secure monthly payments and no fixed contract, and you can cancel anytime.' }
       ],
+      price: { value: 599, unit: 'month' },
       marketing: {
-        header: 'Drive traffic to your website',
-        subheader: 'Using the latest SEO standards and practices',
-        content: 'Increase your ranking and drive organic traffic to your site',
-        bgvariant: 'danger',
-        textvariant: 'light',
-        buttonvariant: 'info'
+        header: 'Search Engine Optimisation Services',
+        subheader: 'Drive traffic to your website with the latest SEO standards and practices',
+        content: 'Increase your ranking and revenue potential'
       },
-      services:
-        [
-          { header: 'On Page SEO', content: ['Google Ads', 'Google Ads'], price: 10 },
-          { header: 'SEO Site Audit', content: ['Display Advertising', 'Display Advertising'], price: 10 }
-        ],
+      // services:
+      //   [
+      //     { header: 'On Page SEO', content: ['Google Ads', 'Google Ads'], price: 10 },
+      //     { header: 'SEO Site Audit', content: ['Display Advertising', 'Display Advertising'], price: 10 }
+      //   ],
       cloud: [
         { text: 'SEO', value: 10000 },
         { text: 'Photography', value: 1900 },
@@ -59,38 +49,32 @@ export const state = () => ({
         { text: 'CMS', value: 80 },
         { text: 'Product', value: 70 }
       ],
-      tags: ['creative', 'commercial', 'product']
+      searchtags: ['creative', 'commercial', 'product']
     },
     {
       id: 'ppc',
-      title: 'Pay per Click Advertising',
+      title: 'Pay per Click Advertising services',
       description: 'Grow your business using PPC (Pay Per Click) or CPC (Cost per Click) Advertising. ',
-      header: 'Pay per Click Advertising (PPC))',
+      header: 'Pay per Click Advertising (PPC)',
       subheader: 'Get more calls and website inquiries by advertising your products and services.  ',
       content:
         [
-          'PPC Advertising is paid advertising generating leads to your site, rather than earning visits organically. Search engine advertising is one of the most popular forms of PPC.',
-          'Pay per click or search engine marketing is one of the most potent advertising channels available, to businesses of every size.',
-          'The largest online advertising platform is Google Ads targeted at users using Google Search Engine. ',
-          'Google drives 95% of all paid search on mobile phones. Bing Ads is the second-largest platform used for PPC advertising.',
-          'Google drives 95% of all paid search on mobile phones. Bing Ads is the second-largest platform used for PPC advertising.',
-          'We are here to help you.',
-          'The Odd Wave provides professionally managed Search Engine Marketing services for small to medium-sized businesses throughout NZ from our North Shore, Auckland office. We have over eight years experience in successfully managing Google advertising campaigns.',
-          'Our skilled team will create a custom digital marketing strategy that will help you achieve your company goals. We will carefully help you select the correct online marketing channels. Some of these channels include Search Engine Marketing (paid) and Search Engine Optimization (earned).',
-          'PPC ads can be in any form of text, a photo, a video, and slides. ',
-          'Some interesting PPC statistics (Editor\'s Choice)',
-          'In 2017, 7 million advertisers spent $10.1 billion on PPC ads. High commercial intent queries on Google AdWords get 65% of the clicks. Businesses typically earn $2 for every $1 spent on Google Ads.',
-          'PPC visitors are 50% more likely to purchase something than organic visitors. 41% of clicks go to the top three paid ads in search results; .63 % of online searches are Google searches. Google AdWords reaches 80% of global internet users.',
-          'In 2019, the average number of Google searches is over 191 billion per month. Paid search can raise brand awareness by up to 80%.62% of marketers plan to increase their PPC budgets in 2019.',
-          'Here\'s what you can expect from the odd wave:',
-          'Keyword research and audience targeting ensuring you attract the right customer',
-          'Professionally created Ad\'s creation based on keywords researched and comply with google policies.',
-          'We make sure your campaign is running optimally. The checks include search terms, negative keywords, location targeting, and budgets to mention a few.',
-          'CTR (Click Through Rate) represents the percentage of people who click on your ad and visit the landing page on your website. So, if 100 people see your advertisement and 10 of them click on it, the CTR is 10 percent.',
-          'It is essential to have as many of the right customer type clicking on your ad as possible, which means having a good CTR.',
-          'A high CTR means users are visiting your website. More visits to your site mean more customers. The reward from Google is a lower cost per click for your Ad\'s campaign'
+          { text: 'PPC Advertising is paid advertising generating leads to your site, rather than earning visits organically. Search engine advertising is one of the most popular forms of PPC. Pay per click or search engine marketing is one of the most potent advertising channels available, to businesses of every size. The largest online advertising platform is Google Ads targeted at users using Google Search Engine. Google drives 95% of all paid search on mobile phones. Bing Ads is the second-largest platform used for PPC advertising.' },
+          { text: 'PPC ads can be in any form of text, a photo, a video, and slides. Some interesting PPC statistics (Editor\'s Choice). In 2017, 7 million advertisers spent $10.1 billion on PPC ads. High commercial intent queries on Google AdWords get 65% of the clicks. Businesses typically earn $2 for every $1 spent on Google Ads.' },
+          { text: 'PPC visitors are 50% more likely to purchase something than organic visitors. 41% of clicks go to the top three paid ads in search results; .63 % of online searches are Google searches. Google AdWords reaches 80% of global internet users. In 2019, the average number of Google searches is over 191 billion per month. Paid search can raise brand awareness by up to 80%.62% of marketers plan to increase their PPC budgets in 2019.' },
+          { text: 'CTR (Click Through Rate) represents the percentage of people who click on your ad and visit the landing page on your website. So, if 100 people see your advertisement and 10 of them click on it, the CTR is 10 percent. It is essential to have as many of the right customer type clicking on your ad as possible, which means having a good CTR. A high CTR means users are visiting your website. More visits to your site mean more customers. The reward from Google is a lower cost per click for your Ad\'s campaign' },
+          { text: 'The Odd Wave provides professionally managed Search Engine Marketing services for small to medium-sized businesses throughout NZ from our North Shore, Auckland office. We have over eight years experience in successfully managing Google advertising campaigns.' },
+          { text: 'Our skilled team will create a custom digital marketing strategy that will help you achieve your company goals. We will carefully help you select the correct online marketing channels. Some of these channels include Search Engine Marketing (paid) and Search Engine Optimization (earned).' },
+          { text: 'Here\'s what you can expect from the odd wave: Keyword research and audience targeting ensuring you attract the right customer and professionally created Ad\'s creation based on keywords researched and comply with google policies.We make sure your campaign is running optimally. The checks include search terms, negative keywords, location targeting, and budgets to mention a few.' }
 
         ],
+      price: { value: 249, unit: 'package per month' },
+      marketing: {
+        header: 'PPC search engine advertising',
+        subheader: 'Generate more visits to your site',
+        content: 'Increase your ranking and drive organic traffic to your site'
+
+      },
       services:
         [
           { header: 'Google Ads', content: ['Google Ads', 'Google Ads'], price: 10 },
@@ -130,108 +114,21 @@ export const state = () => ({
       subheader: 'Putting your business out there.',
       content:
         [
-          'Here at The Odd Wave, we design and develop robust, cutting edge websites using the latest web development frameworks. ',
-          'We take time to understand your business and requirements so we can develop a website to help you stand out and grow your business.',
-          'The world wide web is vast, with billions of websites worldwide competing for consideration. It can be overwhelming when you are thinking about launching a website, but that\'s why we are here to help.',
-          'With our extensive industry experience, we can help you realize your business dream.',
-          'The Odd Wave provides web design and development from our offices in Torbay Auckland to clients all over New Zealand.',
-          'With a range of web design services on offer, we will create the perfect website to suit your budget. We custom build websites for every client and don\'t do templates.',
-          'Our websites are fully responsive and will look great on any device (desktop, laptop, tablet, mobile phone) ',
-          'We can help you with a redesign if your website is looking a little dated. We can review your existing web design and provide recommendations on ways to improve its visual look and feel.',
-          'All our websites are search engine optimized, ensuring our sites are visible to search engines once published.',
-          'If you are looking to launch an online store , we can design and develop an eCommerce website fully integrated into a payment gateway. ',
-          'With a the range of other services we offer , we really do give you a turnkey business solution.',
-          'Contact us for  free quotation'
+          { text: 'Here at The Odd Wave, we design and develop robust, cutting edge websites using the latest web development frameworks. We take time to understand your business and requirements so we can develop a website to help you stand out and grow your business. The world wide web is vast, with billions of websites worldwide competing for consideration. It can be overwhelming when you are thinking about launching a website, but that\'s why we are here to help. With our extensive industry experience, we can help you realize your business dream. The Odd Wave provides web design and development from our offices in Torbay Auckland to clients all over New Zealand.' },
+          { text: 'With a range of web design services on offer, we will create the perfect website to suit your budget. We custom build web applications for every client, using the latest progressive web application frameworks. We avoid the standard template technologies out there and strive towards creativeness and performance. Our websites are fully responsive and will look great on any digital device (desktop, laptop, tablet, mobile phone, TV screens)' },
+          { text: 'We can also help you with a refresh and redesign if your website is looking a little dated. We can review your existing web design and provide recommendations on ways to improve its visual look and feel and performance. All our websites are search engine optimized, ensuring our sites are visible to search engines once published.' },
+          { text: 'If you are looking to launch an online store , we can design and develop an eCommerce website fully integrated into a payment gateway. With a the range of other services we offer , we really do give you a turnkey business solution.' }
         ],
-      services:
-        [
-          { header: 'Website Development', content: ['content', 'content'], price: 10 },
-          { header: 'Landing and promotional design ', content: ['content', 'content'], price: 10 }
-        ],
-      cloud: [{ text: 'Website', value: 2000 },
-        { text: 'Design', value: 1900 },
-        { text: 'Optimisation', value: 1800 },
-        { text: 'Websites', value: 1700 },
-        { text: 'Workshops', value: 1600 },
-        { text: 'Advertising', value: 1500 },
-        { text: 'Branding', value: 1400 },
-        { text: 'Partner', value: 1300 },
-        { text: 'Animation', value: 1200 },
-        { text: 'Content', value: 1100 },
-        { text: 'CMS', value: 1000 },
-        { text: 'SEO', value: 900 },
-        { text: 'Photography', value: 800 },
-        { text: 'Optimisation', value: 700 },
-        { text: 'Websites', value: 600 },
-        { text: 'Workshops', value: 500 },
-        { text: 'Advertising', value: 400 },
-        { text: 'Branding', value: 300 },
-        { text: 'Partner', value: 200 },
-        { text: 'Animation', value: 100 },
-        { text: 'Content', value: 90 },
-        { text: 'CMS', value: 80 },
-        { text: 'Product', value: 70 }],
-      tags: ['packaged', 'direct']
-    },
-    {
-      id: 'softwaredev',
-      title: 'Software Development',
-      description: 'Software Development description',
-      header: 'Software Development header',
-      subheader: 'Pay per Click Advertising subHeader',
-      content:
-        [
-          'body1, commercial and landscape photography for branding',
-          'body2, commercial and landscape photography for branding'
-        ],
-      services:
-        [
-          { header: 'Front End Development', content: ['content', 'content'], price: 10 },
-          { header: 'Back End Development ', content: ['content', 'content'], price: 10 },
-          { header: 'Consulting ', content: ['content', 'content'], price: 10 }
-        ],
-      cloud: [{ text: 'Website', value: 2000 },
-        { text: 'Design', value: 1900 },
-        { text: 'Optimisation', value: 1800 },
-        { text: 'Websites', value: 1700 },
-        { text: 'Workshops', value: 1600 },
-        { text: 'Advertising', value: 1500 },
-        { text: 'Branding', value: 1400 },
-        { text: 'Partner', value: 1300 },
-        { text: 'Animation', value: 1200 },
-        { text: 'Content', value: 1100 },
-        { text: 'CMS', value: 1000 },
-        { text: 'SEO', value: 900 },
-        { text: 'Photography', value: 800 },
-        { text: 'Optimisation', value: 700 },
-        { text: 'Websites', value: 600 },
-        { text: 'Workshops', value: 500 },
-        { text: 'Advertising', value: 400 },
-        { text: 'Branding', value: 300 },
-        { text: 'Partner', value: 200 },
-        { text: 'Animation', value: 100 },
-        { text: 'Content', value: 90 },
-        { text: 'CMS', value: 80 },
-        { text: 'Product', value: 70 }],
-      tags: ['packaged', 'direct']
-    },
-    {
-      id: 'dataanalytics',
-      title: 'Data and Analytics',
-      description: 'Data and Analytics description',
-      header: 'Data and Analytics header',
-      subheader: 'Data and Analytics subHeader',
-      content:
-        [
-          'body1, commercial and landscape photography for branding',
-          'body2, commercial and landscape photography for branding'
-        ],
-      services:
-        [
-          { header: 'Google Analytics', content: ['content', 'content'], price: 10 },
-          { header: 'Conversion Rate Optimisation ', content: ['content', 'content'], price: 10 },
-          { header: 'Reporting and Dashboards ', content: ['content', 'content'], price: 10 }
-        ],
+      price: { value: 120, unit: 'hour' },
+      rate: 'hour',
+      marketing: {
+        header: 'Drive traffic to your website',
+        subheader: 'Using the latest SEO standards and practices',
+        content: 'Increase your ranking and drive organic traffic to your site',
+        bgvariant: 'danger',
+        textvariant: 'light',
+        buttonvariant: 'info'
+      },
       cloud: [{ text: 'Website', value: 2000 },
         { text: 'Design', value: 1900 },
         { text: 'Optimisation', value: 1800 },
@@ -265,15 +162,18 @@ export const state = () => ({
       subheader: 'Hosting subHeader',
       content:
         [
-          'body1, commercial and landscape photography for branding',
-          'body2, commercial and landscape photography for branding'
+          { text: 'body1, commercial and landscape photography for branding' },
+          { text: 'body2, commercial and landscape photography for branding' }
         ],
-      services:
-        [
-          { header: 'Domain Registration', content: ['content', 'content'], price: 10 },
-          { header: 'Website Hosting ', content: ['content', 'content'], price: 10 },
-          { header: 'Email Hosting ', content: ['content', 'content'], price: 10 }
-        ],
+      marketing: {
+        header: 'Drive traffic to your website',
+        subheader: 'Using the latest SEO standards and practices',
+        content: 'Increase your ranking and drive organic traffic to your site',
+        bgvariant: 'danger',
+        textvariant: 'light',
+        buttonvariant: 'info'
+      },
+      price: { value: 150, unit: 'year' },
       cloud: [{ text: 'Website', value: 2000 },
         { text: 'Design', value: 1900 },
         { text: 'Optimisation', value: 1800 },
@@ -304,22 +204,27 @@ export const state = () => ({
       title: 'Website Photography',
       description: 'Product, commercial and landscape photography for branding',
       header: 'Digital Photography for your website',
-      subheader: 'Grab the attention of potential customers with photography',
+      subheader: 'Grab the attention of potential customers with creative photography',
       content:
         [
-          'Visual communication has reached new heights with digital and social media marketing resulting in digital photography, becoming an essential part of product or service promotion.',
-          'Digital photography is widely used in website design and is a great way to make a website more attractive and eye-catching.',
-          'Companies need to grab the attention of their target audience. An online presence, such as a website is necessary for showing your product or brand to the world and reaching potential clients. We will help you support this purpose with our website design capabilities and beautiful website photography.',
-          'Visual elements increase users\' willingness to read the content. The human brain processes a limited amount of information at any given time; an eye-catching photograph can be processed faster and will take precedence.',
-          'Combining written text with visual content is an excellent way of grabbing a target audience\'s attention. Captivating digital photography drives emotional responses about a brand.',
-          'Digital photos help users visualize the product or service they want to use and imagine how it will help improve their lives.',
-          'Our experienced in house photographer will assist you in showcasing your product or services online with eye-catching, high-quality digital photography.',
-          'Contact us with your requirements.'
+          { text: 'Visual communication has reached new heights with digital and social media marketing resulting in digital photography, becoming an essential part of product or service promotion.' },
+          { text: 'Digital photography is widely used in website design and is a great way to make a website more attractive and eye-catching.' },
+          { text: 'Companies need to grab the attention of their target audience. An online presence, such as a website is necessary for showing your product or brand to the world and reaching potential clients. We will help you support this purpose with our website design capabilities and beautiful website photography.' },
+          { text: 'Visual elements increase users\' willingness to read the content. The human brain processes a limited amount of information at any given time; an eye-catching photograph can be processed faster and will take precedence.' },
+          { text: 'Combining written text with visual content is an excellent way of grabbing a target audience\'s attention. Captivating digital photography drives emotional responses about a brand.' },
+          { text: 'Digital photos help users visualize the product or service they want to use and imagine how it will help improve their lives.' },
+          { text: 'Our experienced in house photographer will assist you in showcasing your product or services online with eye-catching, high-quality digital photography.' },
+          { text: 'Contact us with your requirements.' }
         ],
-      services:
-        [
-          { header: 'Commercial and product photography', content: ['Google Ads', 'Google Ads'], price: 800 }
-        ],
+      marketing: {
+        header: 'Drive traffic to your website',
+        subheader: 'Using the latest SEO standards and practices',
+        content: 'Increase your ranking and drive organic traffic to your site',
+        bgvariant: 'danger',
+        textvariant: 'light',
+        buttonvariant: 'info'
+      },
+      price: { value: 950, unit: 'package' },
       cloud: [{ text: 'Website', value: 2000 },
         { text: 'Design', value: 1900 },
         { text: 'Optimisation', value: 1800 },

@@ -1,15 +1,15 @@
 <template>
   <b-container fluid class="text-center mt-header w-100">
-    <ServicesCloud />
+    <D3Cloud />
   </b-container>
 </template>
 
 <script>
-import ServicesCloud from '@/components/Clouds/ServicesCloud'
+import D3Cloud from '@/components/Clouds/D3Cloud'
 
 export default {
   components: {
-    ServicesCloud
+    D3Cloud
   }
 }
 </script>

@@ -22,7 +22,7 @@
         </ul>
       </div>
 
-      <div class="col text-light text-center">
+      <div class="col text-center">
         <h2>Work with us</h2>
         <h4>{{ phone }}</h4>
         <h4>{{ email }}</h4>
@@ -30,7 +30,7 @@
         <h6>{{ copyright }}</h6>
         <h6>{{ poweredBy }}</h6>
       </div>
-      <div class="col social text-light text-center">
+      <div class="col social text-center">
         <h2>Join us</h2>
         <ul>
           <li>

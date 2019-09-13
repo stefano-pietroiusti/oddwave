@@ -1,24 +1,29 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
-  <b-container fluid class="imageBannerComponent text-center" :style="{ backgroundImage: `url(${pimage})` }">
+  <b-container
+    fluid
+    class="imageBannerComponent text-center"
+    :style="{ backgroundImage: `url(${pimage})` }"
+  >
     <b-row>
-      <b-col>
-        {{ pimagecontent }}
-      </b-col>
+      <b-col>{{ pcontent }}</b-col>
     </b-row>
   </b-container>
 </template>
 <script>
-/* eslint-disable */
 export default {
-  props: ['pimage', 'pimagedesc', 'pimagecontent']
+  props: {
+    pimage: {
+      type: String,
+      default: '/workingtogether.jpg'
+    },
+    pcontent: {
+      type: String,
+      default:
+        'testing content testing content testing content testing content testing content testing content testing content testing content testing content'
+    }
+  }
 }
-// export default {
-//   data(){
-//          return { backgroundUrl:'~assets/imgs/sample.jpg' }
-// },
-//   props: ['pimage', 'pimagedesc', 'pimagecontent']
-// }
 </script>
 <style scoped>
 </style>

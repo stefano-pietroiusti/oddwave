@@ -8,6 +8,7 @@ export default {
     contactFrom: '"The Odd Wave Web" <theoddwavecontact@gmail.com>',
     contactTo: 'theoddwavecontact@gmail.com,stefano.pietroiusti@gmail.com,jalinevandyk@gmail.com',
     contactSubject: 'Website enquiry',
+    DEPLOY_ENV: 'STATIC'
   },
   layoutTransition: {
     name: 'layout',
@@ -24,14 +25,24 @@ export default {
   /*
    ** Headers of the page
    */
-  generate: {
+   generate: {
+    subFolders: true,
     routes: [
+      '/',
       '/services/seo',
       '/services/ppc',
       '/services/webdesign',
       '/services/hosting',
       '/services/photography'
     ]
+  }
+  ,
+  /*
+  ** Router 
+  */
+  router: {
+    // base: process.env.DEPLOY_ENV === 'STATIC' ? '/nuxt-example/' : '/'
+    // base: '/nuxt-static/'
   },
   head: {
     title: process.env.npm_package_name || '',
@@ -45,7 +56,7 @@ export default {
       // }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: 'imgs/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Nunito+Sans|Roboto|Black+Han+Sans|Bowlby+One+SC|Syncopate|Abril+Fatface|Exo|Righteous&display=swap' },
       { rel: 'stylesheet', href: 'https://db.onlinewebfonts.com/c/6c79f7fd645c0d39b4ca10428237984a?family=Azo+Sans|AzoSansUberW01-Regular' },
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' }

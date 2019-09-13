@@ -11,18 +11,13 @@
   </b-container>
 </template>
 <script>
-import pimage from '~/static/marketingstrategy.jpg'
-
 /* eslint-disable */
 export default {
-  data() {
-    return { pimage }
-  },
   props: {
-    // pimage: {
-    //   type: String,
-    //   default: '~/static/workingtogether.jpg'
-    // },
+    pimage: {
+      type: String,
+      default: '/workingtogether.jpg'
+    },
     pbgcolor: {
       type: String,
       default: 'rgb(202, 69, 69)'

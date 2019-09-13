@@ -8,14 +8,13 @@
     <br>
     <TextComponent :pcontent="content[0]" />
 
-    <ImageOverlayComponent :pimage="require('~/static/marketingstrategy.jpg')" :pcontent="content[1]" />
+    <ImageOverlayComponent :pimage="pimageoverlay" :pcontent="content[1]" />
 
     <TextComponent :pcontent="content[2]" />
 
     <ImageBannerComponent
-      :pimage="require('~/static/color-spectrum-2.jpg')"
-      :pimagedesc="pbannerimagedesc"
-      :pimagecontent="content[3]"
+      :pimage="pimagebanner"
+      :pcontent="content[3]"
     />
 
     <TextComponent :pcontent="content[4]" />
@@ -29,14 +28,6 @@ import LinkComponent from '@/components/LinkComponent'
 import ImageBannerComponent from '@/components/ImageBannerComponent'
 import TextComponent from '@/components/TextComponent'
 import ImageOverlayComponent from '@/components/ImageOverlayComponent'
-// import ButtonComponent from '@/components/ButtonComponent'
-// import ImageComponent from '@/components/ImageComponent'
-// import ImageRightComponent from '@/components/ImageRightComponent'
-// import ServicesTags from '@/components/ServicesTags'
-// import Intro from '@/components/Intro'
-// import About from '@/components/About'
-// import Contact from '@/components/Contact'
-// import ServicesCloud from '@/components/ServicesCloud'
 
 export default {
   components: {
@@ -63,15 +54,12 @@ export default {
       pheader: 'Digital marketing and website development services',
       panimheader: 'be where the world is going',
       psubheader: 'to help your business grow',
+      pimageoverlay: 'imgs/marketingstrategy.jpg',
+      pimagebanner: 'imgs/colorspectrum.jpg',
       psubtitle:
         "Our goal is to assist start-ups grow their business with an impactful online presence using latest proven web technologies and digital marketing solutions that won't break the bank. We believe that every business should be a success.",
       btext: 'Get in touch',
       blink: '/contact',
-      // pbannerimage: 'https://picsum.photos/1024/400/?image=41',
-      // pbannerimage: 'marketing.jpg',
-      pbannerimagedesc: 'The Odd Wave banner',
-      pbannercontent:
-        'helping businesses of all sizes work smarter in the most efficient ways possible',
       content: [
         'We are a creative digital marketing and web design agency, passionate about modern technology that we use to propel small to medium size businesses to success. We offer a range of services to get your business off the ground. We provide services across and New Zealand. We are based on the North Shore, Auckland and can talk to you anywhere in New Zealand using various digital channels.',
         "We believe that every business should be successful. Our goal is to assist start-ups in digitizing their businesses by delivering an impactful online presence and custom digital marketing solutions that won't break the bank while being environmentally friendly.",

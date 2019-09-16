@@ -1,11 +1,7 @@
 <template>
-  <b-container fluid class="imageContainer bg-primary text-secondary">
-    <div class="imageContainerBackground" :style="{ backgroundColor: pbgcolor}" />
-    <div
-      class="imageContainerImage"
-      :style="{ backgroundImage: `url(${pimage})`, backgroundColor: pbgcolor}"
-    />
-    <div class="imageContainerContent bg-primary">
+  <b-container fluid class="imageContainer bg-lightgray text-secondary">
+    <div class="imageContainerImage" :style="{ backgroundImage: `url(${pimage})`, backgroundColor: pbgcolor}" />
+    <div class="imageContainerContent text-primary">
       {{ pcontent }}
     </div>
   </b-container>
@@ -20,7 +16,7 @@ export default {
     },
     pbgcolor: {
       type: String,
-      default: 'teal'
+      default: '#fff'
     },
     pcontent: {
       type: String,
@@ -38,36 +34,21 @@ export default {
   overflow: visible;
   z-index: 1;
 }
-.imageContainerBackground {
+.imageContainerImage {
   margin-top: 5vw;
   position: relative;
   top: -2vw;
   left: 3vw;
-  width: 43vw;
+  width: 42vw;
   height: 26vw;
   /* background-color: rgb(144, 216, 29); */
   z-index: 10;
   overflow: visible;
   /* border-radius: 0.5vw; */
-  /* -webkit-transform: rotate(225deg);
-  -moz-transform: rotate(225deg);
-  -ms-transform: rotate(225deg);
-  transform: rotate(225deg); */
-}
-.imageContainerImage {
-  position: relative;
   background-attachment:local;
   background-position: left;
   background-repeat: no-repeat;
   background-size: 100%;
-  top: -29vw;
-  left: 5vw;
-  width: 43vw;
-  height: 26vw;
-  /* background-color: rgb(202, 69, 69); */
-  z-index: 20;
-  overflow: visible;
-  /* border-radius: 0.5vw; */
 }
 
 .imageContainerContent {
@@ -78,7 +59,7 @@ export default {
   position: relative;
   width: 40vw;
   height: 20vw;
-  top: -50vw;
+  top: -23vw;
   left: 55vw;
   /* color: #fff; */
   z-index: 5;

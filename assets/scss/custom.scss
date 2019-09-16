@@ -55,7 +55,9 @@ $theme-colors: map-merge(
     'warning': $warning,
     'danger': $danger,
     'light': $light,
-    'dark': $dark
+    'dark': $dark,
+    'lightgray': $gray-400,
+    'gunmetal': $gunmetal
   ),
   $theme-colors
 );

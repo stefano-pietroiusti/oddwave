@@ -9,21 +9,16 @@ export const state = () => ({
       content: [
         { text: 'An essential part of a digital marketing strategy is SEO. SEO (Search engine optimization) assists in driving customers to your business via online platforms. SEO assists in making the website rank higher in the SERP (search engine result page) so that your business website is found by customers searching for your product and services online.' },
         { text: 'Advertising your business is of utmost importance. When any company goes online, pay per click advertising (PPC) works best to generate a considerable amount of web traffic. SEO allows a great deal of free advertising. Proper optimization makes a website rank on the first page of SERP. The common belief is that people generally check the first two pages of search engine results. Approximately 94% of online users use search engines to find products and services.' },
-        { text: 'Keyword-rich page content makes a substantial difference in your Google rankings and search engine results. Optimized content increases organic traffic to your website resulting in lead generation, increased sales, and improve ROI.' },
+        { text: 'Keyword-rich page content makes a substantial difference in your Google rankings and search engine results. Optimized content increases organic traffic to your website resulting in lead generation, increased sales, and improve ROI.', image: '/imgs/analytics.jpg' },
         { text: 'Technical SEO and On-Page SEO are two examples of search engine optimization practices. Technical SEO determines the quality of a website based on factors like speed and and the website has been developed. Optimizing the technical aspects of a website enables search engines to crawl and index the site correctly, which is beneficial to obtain a higher search engine rank in Google. Page load speed is another crucial aspect to consider to avoid high bounce rates and therefore improve your SEO ranking.' },
         { text: 'We have various SEO packages to choose from with secure monthly payments and no fixed contract, and you can cancel anytime.' }
       ],
       price: { value: 599, unit: 'month' },
       marketing: {
-        header: 'Search Engine Optimisation Services',
-        subheader: 'Drive traffic to your website with the latest SEO standards and practices',
+        header: 'SEO Services',
+        subheader: 'Drive traffic to your website with latest SEO practices',
         content: 'Increase your ranking and revenue potential'
       },
-      // services:
-      //   [
-      //     { header: 'On Page SEO', content: ['Google Ads', 'Google Ads'], price: 10 },
-      //     { header: 'SEO Site Audit', content: ['Display Advertising', 'Display Advertising'], price: 10 }
-      //   ],
       cloud: [
         { text: 'SEO', value: 10000 },
         { text: 'Photography', value: 1900 },
@@ -124,56 +119,26 @@ export const state = () => ({
       marketing: {
         header: 'Drive traffic to your website',
         subheader: 'Using the latest SEO standards and practices',
-        content: 'Increase your ranking and drive organic traffic to your site',
-        bgvariant: 'danger',
-        textvariant: 'light',
-        buttonvariant: 'info'
+        content: 'Increase your ranking and drive organic traffic to your site'
       },
-      cloud: [{ text: 'Website', value: 2000 },
-        { text: 'Design', value: 1900 },
-        { text: 'Optimisation', value: 1800 },
-        { text: 'Websites', value: 1700 },
-        { text: 'Workshops', value: 1600 },
-        { text: 'Advertising', value: 1500 },
-        { text: 'Branding', value: 1400 },
-        { text: 'Partner', value: 1300 },
-        { text: 'Animation', value: 1200 },
-        { text: 'Content', value: 1100 },
-        { text: 'CMS', value: 1000 },
-        { text: 'SEO', value: 900 },
-        { text: 'Photography', value: 800 },
-        { text: 'Optimisation', value: 700 },
-        { text: 'Websites', value: 600 },
-        { text: 'Workshops', value: 500 },
-        { text: 'Advertising', value: 400 },
-        { text: 'Branding', value: 300 },
-        { text: 'Partner', value: 200 },
-        { text: 'Animation', value: 100 },
-        { text: 'Content', value: 90 },
-        { text: 'CMS', value: 80 },
-        { text: 'Product', value: 70 }],
-      tags: ['packaged', 'direct']
-    },
-    {
-      id: 'hosting',
-      title: 'Hosting',
-      description: 'Hosting description',
-      header: 'Hosting header',
-      subheader: 'Hosting subHeader',
-      content:
-        [
-          { text: 'body1, commercial and landscape photography for branding' },
-          { text: 'body2, commercial and landscape photography for branding' }
-        ],
-      marketing: {
-        header: 'Drive traffic to your website',
-        subheader: 'Using the latest SEO standards and practices',
-        content: 'Increase your ranking and drive organic traffic to your site',
-        bgvariant: 'danger',
-        textvariant: 'light',
-        buttonvariant: 'info'
-      },
-      price: { value: 150, unit: 'year' },
+      slides: [
+        {
+          image: '/imgs/analytics.jpg',
+          caption: 'Analytics'
+        },
+        {
+          image: '/imgs/design.jpg',
+          caption: 'Design'
+        },
+        {
+          image: '/imgs/collaboration.jpg',
+          caption: 'Collaboration'
+        },
+        {
+          image: '/imgs/hosting.jpg',
+          caption: 'Hosting'
+        }
+      ],
       cloud: [{ text: 'Website', value: 2000 },
         { text: 'Design', value: 1900 },
         { text: 'Optimisation', value: 1800 },
@@ -219,11 +184,26 @@ export const state = () => ({
       marketing: {
         header: 'Drive traffic to your website',
         subheader: 'Using the latest SEO standards and practices',
-        content: 'Increase your ranking and drive organic traffic to your site',
-        bgvariant: 'danger',
-        textvariant: 'light',
-        buttonvariant: 'info'
+        content: 'Increase your ranking and drive organic traffic to your site'
       },
+      slides: [
+        {
+          image: '/imgs/analytics.jpg',
+          caption: 'Analytics'
+        },
+        {
+          image: '/imgs/design.jpg',
+          caption: 'Design'
+        },
+        {
+          image: '/imgs/collaboration.jpg',
+          caption: 'Collaboration'
+        },
+        {
+          image: '/imgs/hosting.jpg',
+          caption: 'Hosting'
+        }
+      ],
       price: { value: 950, unit: 'package' },
       cloud: [{ text: 'Website', value: 2000 },
         { text: 'Design', value: 1900 },
@@ -253,3 +233,9 @@ export const state = () => ({
 
   ]
 })
+
+// export const getters = {
+//   totalServices: (state) => {
+//     return state.all.length
+//   }
+// }

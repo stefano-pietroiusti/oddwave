@@ -2,23 +2,33 @@
 <template>
   <b-container
     fluid
-    class="imageBannerComponent text-center"
+    class="imageBannerComponent componenttext text-primary"
     :style="{ backgroundImage: `url(${pcontent.image})` }"
   >
     <b-row>
-      <b-col>{{ pcontent.text }}</b-col>
+      <b-col v-if="isImage" class="text-secondary">
+        {{ pcontent.text }} {{ isImage }}
+      </b-col>
+      <b-col v-else class="text-primary">
+        {{ pcontent.text }}
+      </b-col>
     </b-row>
   </b-container>
 </template>
+
 <script>
-/* eslint-disable */
 export default {
   props: {
     pcontent: {
       type: Object,
-      default: function() {
-        return { text: 'sample text', image: '~assets/imgs/sample.jpg' }
+      default () {
+        return { text: 'sample text', image: 'imgs/sample.jpg' }
       }
+    }
+  },
+  computed: {
+    isImage () {
+      return !!this.pcontent.image
     }
   }
 }

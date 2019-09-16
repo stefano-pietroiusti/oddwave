@@ -3,25 +3,32 @@
     <b-row>
       <b-col>
         <h1 class="anim1">
-          <span class="letters word-1">Search</span>
-          <span class="letters word-2">Web</span>
-          <span class="letters word-3">Data</span>
-          <span class="letters word-4">Cloud</span>
+          <span class="letters word-1">Optimized search and content</span>
+          <span class="letters word-2">Zero clunk, zero overkill</span>
+          <span class="letters word-3">Efficient screen loading</span>
+          <span class="letters word-4">Super quick content-loading</span>
+          <span class="letters word-5">Flexible</span>
+          <span class="letters word-6">Compatible</span>
+          <span class="letters word-7">Secure</span>
+          <span class="letters word-8">Scalable</span>
+          <span class="letters word-9">Self-controlled</span>
         </h1>
-        <h3 class="anim2">
-          using proven lightweight digital technologies
-        </h3>
+        <h2 class="anim2">
+          Using proven modern,lightweight digital technologies
+        </h2>
         <h3 class="anim3">
+          <span class="word">Modern Web</span>
+          <span class="word">Animation</span>
+          <span class="word">Data Engineering</span>
           <span class="word">SEO</span>
-          <span class="word">PPC</span>
-          <span class="word">Websites</span>
-          <span class="word">Signage</span>
-          <span class="word">Hosting</span>
-          <span class="word">Photography</span>
+          <span class="word">Creative Photography</span>
+          <span class="word">Workshops</span>
         </h3>
         <h3 class="anim4 text-center">
           <span class="anim4-wrapper text-center">
-            <span class="letters text-center">Increase traffic and revenue potential</span>
+            <span
+              class="letters text-center"
+            >Increasing revenue potential through modern web and search solutions</span>
             <span class="line text-center" />
           </span>
         </h3>
@@ -132,6 +139,20 @@ export default {
         delay: anim1.delay
       })
       .add({
+        targets: '.anim1 .word-5',
+        opacity: anim1.opacityIn,
+        scale: anim1.scaleIn,
+        duration: anim1.durationIn
+      })
+      .add({
+        targets: '.anim1 .word-5',
+        opacity: 0,
+        scale: anim1.scaleOut,
+        duration: anim1.durationOut,
+        easing: 'easeInExpo',
+        delay: anim1.delay
+      })
+      .add({
         targets: '.anim1',
         opacity: 0,
         duration: 500,
@@ -200,22 +221,17 @@ export default {
       // Your scrhandleResizeling here
       // console.log(window.scrollY)
     }
-
   }
 }
 </script>
 <style scoped>
 #animationBanner {
-  /* background: linear-gradient(45deg, rgba(255,0,255,1) 0%, rgba(0,255,255,1) 100%);  */
-
-  background: linear-gradient(
-    45deg,
-    rgba(255, 0, 255, 1) 0%,
-    rgba(0, 189, 189, 1) 100%
-  );
+  background: url('/Banner.png'),
+    linear-gradient(45deg, rgba(255, 0, 255, 1) 0%, rgba(0, 255, 255, 1) 100%);
+  background-size: 100% auto;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
-
-
 
 .anim1 {
   position: relative;
@@ -248,16 +264,16 @@ export default {
 .anim2 {
   position: relative;
   text-transform: uppercase;
-  letter-spacing: 0.5em;
+  letter-spacing: 0.3em;
   /* left: 0;
   top: 0vw;
   opacity: 0;  */
-    left: 0;
+  left: 0;
   top: 2em;
 }
 
 .anim2 .letter {
-    position: relative;
+  position: relative;
   display: inline-block;
   line-height: 1em;
   margin: auto;
@@ -316,12 +332,12 @@ export default {
 
 .anim4 .letter {
   /* display: inline-block; */
-    display: inline-block;
+  display: inline-block;
   line-height: 1em;
   margin: auto;
   left: 0;
   top: 1em;
   line-height: 1em;
   text-align: center;
-}  
+}
 </style>

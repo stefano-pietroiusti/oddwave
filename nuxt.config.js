@@ -33,7 +33,8 @@ export default {
       '/services/ppc',
       '/services/webdesign',
       '/services/hosting',
-      '/services/photography'
+      '/services/photography',
+      '/contact'
     ]
   }
   ,
@@ -56,10 +57,11 @@ export default {
       // }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: 'imgs/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Nunito+Sans|Roboto|Black+Han+Sans|Bowlby+One+SC|Syncopate|Abril+Fatface|Exo|Righteous&display=swap' },
       { rel: 'stylesheet', href: 'https://db.onlinewebfonts.com/c/6c79f7fd645c0d39b4ca10428237984a?family=Azo+Sans|AzoSansUberW01-Regular' },
-      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' }
+      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' },
+      { rel: 'stylesheet', href: 'https://www.w3schools.com/w3css/4/w3.css' }
     ]
     // , script: [
     //   { src: 'https://d3js.org/d3.v3.min.js' }, { src: 'https://rawgit.com/jasondavies/d3-cloud/master/build/d3.layout.cloud.js' }

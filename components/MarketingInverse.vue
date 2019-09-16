@@ -1,12 +1,12 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
   <no-ssr>
-    <b-container fluid class="bg-white">
+    <b-container fluid class="bg-white text-left w-100">
       <b-jumbotron
         bg-variant="secondary"
         text-variant="primary"
         border-variant="primary"
-        class="text-break text-center"
+        class="text-center w-100"
       >
         <template slot="header">
           {{ pheader }}
@@ -18,7 +18,7 @@
         <h4>{{ ptext }}</h4>
         <hr class="my-4 hrprimary">
         <b-button variant="info" to="/contact" class="btn-lg">
-          Enquire about {{ penquire }}
+          {{ penquire }}
         </b-button>
       </b-jumbotron>
     </b-container>

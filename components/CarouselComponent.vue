@@ -3,12 +3,11 @@
     <b-carousel
       :id="carouselId"
       v-model="slide"
-      :interval="3000"
+      :interval="1500"
       controls
       indicators
       :img-width="imgwidth"
       :img-height="imgheight"
-      :style="carouselStyle"
       fade
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
@@ -86,7 +85,7 @@ export default {
 }
 </script>
 <style scoped>
-.carouselStyle {
+/* .carouselStyle {
   text-shadow: 1px 1px 2px #333;
-}
+} */
 </style>

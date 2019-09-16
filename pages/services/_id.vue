@@ -1,15 +1,39 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
-  <b-container fluid class="text-center mt-header">
+  <div id="servicesContainer" class="text-center mt-header w-100">
+    <AnimeBannerWordsHeaderComponent :pheader="service.header" />
+    <HeaderComponent :psubheader="service.subheader" />
+    <h1>{{ service.isCarousel }}</h1>
+    <TextComponent
+      v-for="(item,i) in service.content"
+      :key="i"
+      :pcontent="item.text"
+      :pimage="item.image"
+    />
+    <!-- <TextImageComponent v-for="(item,i) in service.content" :key="i" :pcontent="item.text" /> -->
+    <Marketing
+      :pheader="service.marketing.header"
+      :plead="service.marketing.subheader"
+      :ptext="service.marketing.content"
+      :penquire="service.enquire"
+    />
+    <!-- <D3Cloud :pwordcloud="service.cloud" />-->
+  </div>
+  <!-- <b-container fluid class="text-center mt-header">
     <b-row>
       <b-col>
-        <HeaderComponent :pheader="service.header" :psubheader="service.subheader" />
+        <AnimeBannerWordsHeaderComponent :pheader="service.header" />
+        <HeaderComponent :psubheader="service.subheader" />
       </b-col>
     </b-row>
     <b-row>
       <b-col>
-        <TextComponent v-for="(item,i) in service.content" :key="i" :pcontent="item.text" :pimage="item.image" />
-        <!-- <TextImageComponent v-for="(item,i) in service.content" :key="i" :pcontent="item.text" /> -->
+        <TextComponent
+          v-for="(item,i) in service.content"
+          :key="i"
+          :pcontent="item.text"
+          :pimage="item.image"
+        />
       </b-col>
     </b-row>
     <b-row class="w-50">
@@ -22,7 +46,7 @@
         />
       </b-col>
     </b-row>
-    <!-- <b-row class="w-100 text-left">
+    <b-row class="w-100 text-left">
       <b-col text-left>
         <MarketingOverlayComponent
           :pheader="service.marketing.header"
@@ -31,8 +55,8 @@
           :penquire="service.enquire"
         />
       </b-col>
-    </b-row> -->
-    <!-- <b-container fluid class="text-center  mt-header w-100">
+  </b-row>-->
+  <!-- <b-container fluid class="text-center  mt-header w-100">
       <b-row>
         <b-col w="50">
           <Marketing
@@ -46,34 +70,38 @@
           <D3Cloud :pwordcloud="service.cloud" />
         </b-col>
       </b-row>
-    </b-container>-->
-    <!-- <AnimeBannerParticleComponent :pheader="service.header" /> -->
-    <!-- <h3>Other services</h3>
+  </b-container>-->
+  <!-- <AnimeBannerParticleComponent :pheader="service.header" /> -->
+  <!-- <h3>Other services</h3>
       <span v-for="(value, index) in relatedservices" :key="index">
         <p>{{ value.title }}</p>
-    </span>-->
-    <!-- <ul>
+  </span>-->
+  <!-- <ul>
         <li :key="item.id" v:for="item in relatedServices">
           <nuxt-link :to="{name: 'services-id', params: {id: item.id}}">
             {{ item.title }}
           </nuxt-link>
         </li>
-    </ul>-->
-  </b-container>
+  </ul>-->
 </template>
 
 <script>
+// import R from 'ramda'
 import HeaderComponent from '@/components/HeaderComponent'
 import Marketing from '@/components/Marketing'
 // import TextImageComponent from '@/components/TextImageComponent'
 import TextComponent from '@/components/TextComponent'
+import AnimeBannerWordsHeaderComponent from '@/components/AnimeBannerWordsHeaderComponent'
+// import CarouselComponent from '@/components/CarouselComponent'
+const R = require('ramda')
 
 export default {
   components: {
     HeaderComponent,
     Marketing,
-    // TextImageComponent,
-    TextComponent
+    TextComponent,
+    AnimeBannerWordsHeaderComponent
+    // CarouselComponent
   },
   head () {
     return {
@@ -96,7 +124,12 @@ export default {
       const service = this.$store.state.services.all.find(
         service => service.id === this.id
       )
-      service.enquire = service.title + ' from $' + service.price.value + ' per ' + service.price.unit
+      service.enquire =
+        'Get this now from $' +
+        service.price.value +
+        ' per ' +
+        service.price.unit
+      service.isCarousel = !!R.prop('slides', service)
       return service
     },
     relatedservices () {
@@ -106,6 +139,9 @@ export default {
       return related
       // return { id: related.id, header: related.header, title: related.title }
     }
+    // totalServices () {
+    //   return this.$store.state.services.totalServices()
+    // }
   }
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
-  <b-container id="CloudApp" fluid bg-variant="danger">
+  <div id="CloudApp">
     <Cloud
-      :data="pwordcloud"
+      :data="words"
       :font-size-mapper="fontSizeMapper"
       :on-word-click="onWordClick"
       :width="width"
@@ -10,12 +10,12 @@
       :padding="padding"
       :rotate="rotate"
     />
-  </b-container>
+  </div>
 </template>
 
 <script>
 import Cloud from 'vue-d3-cloud'
-// import { serviceCloud } from '../../utils/serviceCloud.js'
+import { serviceCloud } from '../../utils/serviceCloud.js'
 
 export default {
   name: 'CloudApp',
@@ -62,17 +62,24 @@ export default {
         // window.alert(`go to service ${word.text}`)
         return false
       },
-      width: '700',
-      height: '600',
+      width: '1200',
+      height: '300',
       font: 'impact',
-      rotate: '-30',
+      rotate: '-5',
       padding: 0
+    }
+  },
+  computed: {
+    words () {
+      // return this.pwordcloud ? this.pwordcloud : serviceCloud
+      return serviceCloud.concat(this.pwordcloud)
     }
   }
 }
 </script>
 
 <style scoped lang="scss">
+
 svg g text {
   opacity: 0;
 }
@@ -103,6 +110,10 @@ text {
   }
 }
 
+// #CloudApp {
+//   background-color: #000;
+
+// }
 // @keyframes blink {
 //   0% {
 //     text-shadow: 0 0 20px rgba(226, 25, 45, 0);

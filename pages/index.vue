@@ -1,14 +1,16 @@
 <template>
   <div class="text-center mt-header w-100">
-    <AnimeBannerComponent :pheader="panimheader" />
+    <AnimeBannerWordsComponent />
 
     <HeaderComponent :pheader="pheader" :psubheader="psubheader" :psubtitle="psubtitle" />
 
     <LinkComponent :btext="btext" :blink="blink" />
-    <br>
+
     <TextComponent :pcontent="content[0]" />
 
     <ImageOverlayComponent :pimage="pimageoverlay" :pcontent="content[1]" />
+    <br>
+    <ImageOverlayPlainComponent :pimage="pimageoverlay" :pcontent="content[1]" />
 
     <TextComponent :pcontent="content[2]" />
 
@@ -22,21 +24,23 @@
 </template>
 
 <script>
-import AnimeBannerComponent from '@/components/AnimeBannerComponent'
 import HeaderComponent from '@/components/HeaderComponent'
 import LinkComponent from '@/components/LinkComponent'
 import ImageBannerComponent from '@/components/ImageBannerComponent'
 import TextComponent from '@/components/TextComponent'
 import ImageOverlayComponent from '@/components/ImageOverlayComponent'
-
+import ImageOverlayPlainComponent from '@/components/ImageOverlayPlainComponent'
+import AnimeBannerWordsComponent from '@/components/AnimeBannerWordsComponent'
 export default {
   components: {
-    AnimeBannerComponent,
+    // AnimeBannerComponent,
     HeaderComponent,
     LinkComponent,
     ImageBannerComponent,
     TextComponent,
-    ImageOverlayComponent
+    ImageOverlayComponent,
+    ImageOverlayPlainComponent,
+    AnimeBannerWordsComponent
   },
   head () {
     return {

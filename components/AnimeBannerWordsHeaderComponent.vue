@@ -1,5 +1,5 @@
 <template>
-  <b-container id="animationBanner" fluid class="text-white py-3">
+  <b-container id="animationBanner" fluid :style="gradient" :class="pstyle.bgStyle">
     <b-row>
       <b-col>
         <h1 class="animHeader">
@@ -13,53 +13,72 @@
 <script>
 /* eslint-disable */
 export default {
- props: {
+  props: {
     pheader: {
       type: String,
       default: 'Services'
+    },
+    pbgimage: {
+      type: Object,
+      default() {
+        return {
+          color1: 'rgba(85, 255, 0, 0.2)',
+          color2: 'rgba(0, 255, 255, 0.5)',
+          url: '/imgs/seodigital.jpg',
+          height: 100
+        }
+      }
+    },
+    pstyle: {
+      type: Object,
+      default() {
+        return { bgStyle: 'parralaxNormal text-primary  text-left p-5 vh-100' }
+      }
+    }
+  },
+  computed: {
+    gradient() {
+      return {
+        backgroundImage: `linear-gradient(45deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.5) 100%), url(${this.pbgimage.url})`,
+        width: '100%',
+        height: `${this.pbgimage.height}vh`,
+        backgroundAttachment: 'fixed',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        textTransform: 'uppercase'
+      }
     }
   },
   mounted() {
-    // const anim1 = {}
-    // anim1.opacityIn = [0, 1]
-    // anim1.scaleIn = [0.2, 1]
-    // anim1.scaleOut = 3
-    // anim1.durationIn = 800
-    // anim1.durationOut = 600
-    // anim1.delay = 500
-
-    let textWrapper = document.querySelector('.animHeader')
+   let textWrapper = document.querySelector('.animHeader')
     textWrapper.innerHTML = textWrapper.textContent.replace(
       /\S/g,
       "<span class='letter'>$&</span>"
     )
     const anims = []
-    // const targets = this.$el
-    this.$anime
-      .timeline({ loop: true })
-      .add({
-        targets: '.animHeader .letter',
-        translateY: [100, 0],
-        translateZ: 0,
-        opacity: [0, 1],
-        easing: 'easeOutExpo',
-        duration: 1400,
-        delay: (el, i) => 300 + 30 * i
-      })
-      .add({
-        targets: '.animHeader .letter',
-        translateY: [0, -100],
-        opacity: [1, 0],
-        easing: 'easeInExpo',
-        duration: 1200,
-        delay: (el, i) => 100 + 30 * i
-      })
+    this.$anime.timeline({ loop: false }).add({
+      targets: '.animHeader .letter',
+      translateY: [100, 0],
+      translateZ: 0,
+      opacity: [0, 1],
+      easing: 'easeOutExpo',
+      duration: 1400,
+      delay: (el, i) => 300 + 30 * i
+    })
+    // .add({
+    //   targets: '.animHeader .letter',
+    //   translateY: [0, -100],
+    //   opacity: [1, 0],
+    //   easing: 'easeInExpo',
+    //   duration: 1200,
+    //   delay: (el, i) => 100 + 30 * i
+    // })
   }
 }
 </script>
 <style scoped>
-#animationBanner {
-  /* background: linear-gradient(45deg, rgba(255,0,255,1) 0%, rgba(0,255,255,1) 100%);  */
+.animationBanner1 {
   background: linear-gradient(
     45deg,
     rgba(255, 0, 255, 1) 0%,
@@ -86,5 +105,4 @@ export default {
   left: 0;
   top: 0em;
 }
-
 </style>

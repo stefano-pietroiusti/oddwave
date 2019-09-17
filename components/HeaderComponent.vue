@@ -1,6 +1,6 @@
 <template>
   <header class="text-center">
-    <b-container fluid class="text-center headerComponent">
+    <b-container fluid :class="fontcolor">
       <b-row class="m-4">
         <b-col md="12">
           <h1>{{ pheader }}</h1>
@@ -24,6 +24,40 @@
 <script>
 /* eslint-disable */
 export default {
-  props: ['pheader', 'psubheader', 'psubtitle', 'backgroundUrl']
+ props: {
+    pheader: {
+      type: String,
+      default: ''
+    },
+        psubheader: {
+      type: String,
+      default: ''
+    },
+        psubtitle: {
+      type: String,
+      default: ''
+    },
+    pbgimage: {
+      type: Object,
+      default() {
+        return {
+          color1: 'rgba(85, 255, 0, 0.2)',
+          color2: 'rgba(0, 255, 255, 0.5)',
+          url: '/imgs/seodigital.jpg'
+        }
+      }
+    },
+    pstyle: {
+      type: Object,
+      default() {
+        return { color: 'text-primary', buttonVariant: 'info' }
+      }
+    }
+  },
+  computed: {
+    fontcolor() {
+      return this.pstyle.color
+    }
+  }
 }
 </script>

@@ -1,13 +1,10 @@
 <template>
-  <b-container fluid class="contactForm text-center bg-primary text-secondary p-3 rounded w-75 h-75 d-inline-block">
-    <b-form
-      v-if="show"
-      small
-      class="bg-secondary text-primary p-3 rounded"
-      @submit="onSubmit"
-      @reset="onReset"
-    >
-      <b-form-group id="input-group-1" label="Email address:" label-for="input-1">
+  <b-container id="contactForm" fluid :style="gradient" :class="pstyle.bgStyle">
+    <b-form v-if="show" small class="text-primary text-left text-lowercase w-50 " @submit="onSubmit" @reset="onReset">
+      <b-form-group id="input-group-2" label="hi, my name is:" label-for="input-2">
+        <b-form-input id="input-2" v-model="form.name" required placeholder="Enter name" />
+      </b-form-group>
+      <b-form-group id="input-group-1" label="you may contact me on:" label-for="input-1">
         <b-form-input
           id="input-1"
           v-model="form.email"
@@ -16,13 +13,14 @@
           placeholder="Enter email"
         />
       </b-form-group>
-      <b-form-group id="input-group-2" label="Your Name:" label-for="input-2">
-        <b-form-input id="input-2" v-model="form.name" required placeholder="Enter name" />
-      </b-form-group>
-      <b-form-group id="input-group-3" label="Location:" label-for="input-3">
+      <b-form-group id="input-group-3" label="i am based here:" label-for="input-3">
         <b-form-select id="input-3" v-model="form.location" :options="locations" required />
       </b-form-group>
-      <b-form-group id="input-group-4" label="Services of interest:" class="bg-secondary text-primary mt-5">
+      <b-form-group
+        id="input-group-4"
+        label="I require help with the following:"
+        class="bg-secondary text-primary mt-5"
+      >
         <b-form-checkbox-group
           id="Services-selection"
           v-model="form.service"
@@ -32,7 +30,7 @@
           button-variant="outline-success"
         />
       </b-form-group>
-      <b-form-group id="input-group-5" label="Enquiry:" label-for="input-5">
+      <b-form-group id="input-group-5" label="I also need:" label-for="input-5">
         <b-form-textarea
           id="input-5"
           v-model="form.enquiry"
@@ -63,6 +61,22 @@ export default {
       default () {
         return [{ value: 'SEO', text: 'SEO', selected: true }]
       }
+    },
+    pbgimage: {
+      type: Object,
+      default () {
+        return {
+          color1: 'rgba(85, 255, 0, 0.2)',
+          color2: 'rgba(0, 255, 255, 0.5)',
+          url: '/imgs/seodigital.jpg'
+        }
+      }
+    },
+    pstyle: {
+      type: Object,
+      default () {
+        return { bgStyle: 'parralaxNormal text-primary bg-primary  text-left p-5  vh-50' }
+      }
     }
   },
   data () {
@@ -81,6 +95,22 @@ export default {
         'Other - international'
       ],
       show: true
+    }
+  },
+  computed: {
+    gradient () {
+      return {
+        backgroundImage: `linear-gradient(45deg, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0.2) 100%), url(${this.pbgimage.url})`,
+        backgroundColor: 'white',
+        height: '100%',
+        width: '100%',
+        top: 0,
+        backgroundAttachment: 'fixed',
+        backgroundPosition: 'top',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        textTransform: 'uppercase'
+      }
     }
   },
   notifications: {

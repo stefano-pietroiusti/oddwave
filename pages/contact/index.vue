@@ -1,16 +1,15 @@
 <template>
-  <b-container fluid class="imageContainerImage text-center mt-header w-100 " :style="{ backgroundImage: `url(${pimage})` }">
-    <!-- <HeaderComponent :pheader="email" :psubheader="phone" /> -->
-    <ContactForm :pservices="services" />
-  </b-container>
+  <div id="contactContainer" class="text-left mt-header w-100 h-100">
+    <AnimeBannerWordsHeaderComponent :pheader="pheader" :pbgimage="pheaderImage" :pstyle="pstyle" />
+    <ContactForm :pservices="services" :pbgimage="pheaderImage" :pstyle="pstyle" />
+  </div>
 </template>
 <script>
-// import pimage from '~/static/color-spectrum-3.jpg'
-// import HeaderComponent from '@/components/HeaderComponent'
+import AnimeBannerWordsHeaderComponent from '@/components/AnimeBannerWordsHeaderComponent'
 import ContactForm from '@/components/ContactForm'
 export default {
   components: {
-    // HeaderComponent,
+    AnimeBannerWordsHeaderComponent,
     ContactForm
   },
   head () {
@@ -28,7 +27,9 @@ export default {
     return {
       // pimage,
       pimage: 'none',
-      pheader: 'Get in touch',
+      pheader: "LET'S CREATE SOME AWESOMENESS",
+      pheaderImage: { color1: 'rgba(255, 255, 255, 0.2)', color2: 'rgba(0, 255, 255, 0.5)', url: '/test/contact.jpg', height: 50 },
+      pstyle: { bgStyle: 'parralaxNormal text-primary  text-left p-5' },
       psubheader: 'Contact form subheader',
       email: 'team@theoddwave.co.nz',
       phone: '+64 210 8823 769'
@@ -47,17 +48,11 @@ export default {
 }
 </script>
 <style scoped>
-.imageContainerImage {
+#contactContainer {
+  display: inline-block;
   position: relative;
-  background-attachment:fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  width: 50%;
+  bottom: 0;
+  margin: auto;
 }
-
-  .my-buttons .active {
-    color: #fff !important;
-    background-color: #28a745 !important;
-    border-color: #28a745 !important;
-  }
 </style>

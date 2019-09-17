@@ -16,7 +16,7 @@
         v-for="item in slides"
         :key="item.image"
         :img-src="item.image"
-        :caption="item.imageCaption"
+        :caption="item.caption"
         :text="item.imageText"
         :img-width="imgwidth"
         :img-height="imgheight"
@@ -44,25 +44,25 @@ export default {
       type: String,
       default: '240'
     },
-    slides: {
+    pslides: {
       type: Array,
       default () {
         return [
           {
             image: '/imgs/analytics.jpg',
-            imageCaption: 'Analytics'
+            caption: 'Analytics'
           },
           {
             image: '/imgs/design.jpg',
-            imageCaption: 'Design'
+            caption: 'Design'
           },
           {
             image: '/imgs/collaboration.jpg',
-            imageCaption: 'Collaboration'
+            caption: 'Collaboration'
           },
           {
             image: '/imgs/hosting.jpg',
-            imageCaption: 'Hosting'
+            caption: 'Hosting'
           }
         ]
       }
@@ -72,6 +72,11 @@ export default {
     return {
       slide: 0,
       sliding: null
+    }
+  },
+  computed: {
+    slides () {
+      return this.pslides
     }
   },
   methods: {
@@ -88,4 +93,8 @@ export default {
 /* .carouselStyle {
   text-shadow: 1px 1px 2px #333;
 } */
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    width: 100%;
+}
 </style>

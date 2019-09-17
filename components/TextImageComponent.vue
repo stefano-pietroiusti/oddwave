@@ -2,15 +2,16 @@
 <template>
   <b-container
     fluid
-    class="imageBannerComponent componenttext text-primary"
-    :style="{ backgroundImage: `url(${pcontent.image})` }"
+    :class="pstyle.bgStyle"
+    :style="{ backgroundImage: `url(${pcontent.bgImage})` }"
   >
     <b-row>
-      <b-col v-if="isImage" class="text-secondary">
-        {{ pcontent.text }} {{ isImage }}
+      <b-col v-if="isInlineImage">
+        <img :src="pcontent.inlineImage" :class="pstyle.inlineImageStyle">
+        <p v-html="pcontent.text" />
       </b-col>
-      <b-col v-else class="text-primary">
-        {{ pcontent.text }}
+      <b-col v-else>
+        <p v-html="pcontent.text" />
       </b-col>
     </b-row>
   </b-container>
@@ -22,13 +23,19 @@ export default {
     pcontent: {
       type: Object,
       default () {
-        return { text: 'sample text', image: 'imgs/sample.jpg' }
+        return { text: 'sample text', bgImage: '/test/Clouds1.webp', inlineImage: '/test/Clouds1.webp' }
+      }
+    },
+    pstyle: {
+      type: Object,
+      default () {
+        return { bgStyle: 'parralaxNormal text-primary  text-left p-5', inlineImageStyle: 'inlineImage20 inlineImageLeft' }
       }
     }
   },
   computed: {
-    isImage () {
-      return !!this.pcontent.image
+    isInlineImage () {
+      return !!this.pcontent.inlineImage
     }
   }
 }

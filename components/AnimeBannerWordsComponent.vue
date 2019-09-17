@@ -1,35 +1,35 @@
 <template>
-  <b-container id="animationBanner" fluid class="mt-header text-white">
+  <b-container
+    id="animationBanner"
+    fluid
+    class="mt-header text-secondary parralaxHome parralaxEffect"
+  >
     <b-row>
       <b-col>
         <h1 class="anim1">
           <span class="letters word-1">Optimized search and content</span>
           <span class="letters word-2">Zero clunk, zero overkill</span>
-          <span class="letters word-3">Efficient screen loading</span>
-          <span class="letters word-4">Super quick content-loading</span>
-          <span class="letters word-5">Flexible</span>
-          <span class="letters word-6">Compatible</span>
-          <span class="letters word-7">Secure</span>
-          <span class="letters word-8">Scalable</span>
-          <span class="letters word-9">Self-controlled</span>
+          <span class="letters word-3">Keeping things simple</span>
         </h1>
         <h2 class="anim2">
-          Using proven modern,lightweight digital technologies
+          Using proven modern and lightweight digital technologies
         </h2>
         <h3 class="anim3">
-          <span class="word">Modern Web</span>
-          <span class="word">Animation</span>
-          <span class="word">Data Engineering</span>
-          <span class="word">SEO</span>
-          <span class="word">Creative Photography</span>
-          <span class="word">Workshops</span>
+          <span class="word">Web</span>
+          <span class="word">Data</span>
+          <span class="word">Search</span>
+          <span class="word">Simple</span>
+          <span class="word">Flexible</span>
+          <span class="word">Compatible</span>
+          <span class="word">Secure</span>
+          <span class="word">Scalable</span>
         </h3>
         <h3 class="anim4 text-center">
           <span class="anim4-wrapper text-center">
             <span
               class="letters text-center"
             >Increasing revenue potential through modern web and search solutions</span>
-            <span class="line text-center" />
+            <span class="line text-center bg-secondary" />
           </span>
         </h3>
       </b-col>
@@ -124,34 +124,90 @@ export default {
         easing: 'easeInExpo',
         delay: anim1.delay
       })
-      .add({
-        targets: '.anim1 .word-4',
-        opacity: anim1.opacityIn,
-        scale: anim1.scaleIn,
-        duration: anim1.durationIn
-      })
-      .add({
-        targets: '.anim1 .word-4',
-        opacity: 0,
-        scale: anim1.scaleOut,
-        duration: anim1.durationOut,
-        easing: 'easeInExpo',
-        delay: anim1.delay
-      })
-      .add({
-        targets: '.anim1 .word-5',
-        opacity: anim1.opacityIn,
-        scale: anim1.scaleIn,
-        duration: anim1.durationIn
-      })
-      .add({
-        targets: '.anim1 .word-5',
-        opacity: 0,
-        scale: anim1.scaleOut,
-        duration: anim1.durationOut,
-        easing: 'easeInExpo',
-        delay: anim1.delay
-      })
+      // .add({
+      //   targets: '.anim1 .word-4',
+      //   opacity: anim1.opacityIn,
+      //   scale: anim1.scaleIn,
+      //   duration: anim1.durationIn
+      // })
+      // .add({
+      //   targets: '.anim1 .word-4',
+      //   opacity: 0,
+      //   scale: anim1.scaleOut,
+      //   duration: anim1.durationOut,
+      //   easing: 'easeInExpo',
+      //   delay: anim1.delay
+      // })
+      // .add({
+      //   targets: '.anim1 .word-5',
+      //   opacity: anim1.opacityIn,
+      //   scale: anim1.scaleIn,
+      //   duration: anim1.durationIn
+      // })
+      // .add({
+      //   targets: '.anim1 .word-5',
+      //   opacity: 0,
+      //   scale: anim1.scaleOut,
+      //   duration: anim1.durationOut,
+      //   easing: 'easeInExpo',
+      //   delay: anim1.delay
+      // })
+      // .add({
+      //   targets: '.anim1 .word-6',
+      //   opacity: anim1.opacityIn,
+      //   scale: anim1.scaleIn,
+      //   duration: anim1.durationIn
+      // })
+      // .add({
+      //   targets: '.anim1 .word-6',
+      //   opacity: 0,
+      //   scale: anim1.scaleOut,
+      //   duration: anim1.durationOut,
+      //   easing: 'easeInExpo',
+      //   delay: anim1.delay
+      // })
+      // .add({
+      //   targets: '.anim1 .word-7',
+      //   opacity: anim1.opacityIn,
+      //   scale: anim1.scaleIn,
+      //   duration: anim1.durationIn
+      // })
+      // .add({
+      //   targets: '.anim1 .word-7',
+      //   opacity: 0,
+      //   scale: anim1.scaleOut,
+      //   duration: anim1.durationOut,
+      //   easing: 'easeInExpo',
+      //   delay: anim1.delay
+      // })
+      // .add({
+      //   targets: '.anim1 .word-8',
+      //   opacity: anim1.opacityIn,
+      //   scale: anim1.scaleIn,
+      //   duration: anim1.durationIn
+      // })
+      // .add({
+      //   targets: '.anim1 .word-8',
+      //   opacity: 0,
+      //   scale: anim1.scaleOut,
+      //   duration: anim1.durationOut,
+      //   easing: 'easeInExpo',
+      //   delay: anim1.delay
+      // })
+      // .add({
+      //   targets: '.anim1 .word-9',
+      //   opacity: anim1.opacityIn,
+      //   scale: anim1.scaleIn,
+      //   duration: anim1.durationIn
+      // })
+      // .add({
+      //   targets: '.anim1 .word-9',
+      //   opacity: 0,
+      //   scale: anim1.scaleOut,
+      //   duration: anim1.durationOut,
+      //   easing: 'easeInExpo',
+      //   delay: anim1.delay
+      // })
       .add({
         targets: '.anim1',
         opacity: 0,
@@ -226,8 +282,7 @@ export default {
 </script>
 <style scoped>
 #animationBanner {
-  background: url('/Banner.png'),
-    linear-gradient(45deg, rgba(255, 0, 255, 1) 0%, rgba(0, 255, 255, 1) 100%);
+  /* background: linear-gradient(45deg, rgba(255, 0, 255, 1) 0%, rgba(0, 255, 255, 1) 100%); */
   background-size: 100% auto;
   background-position: center center;
   background-repeat: no-repeat;
@@ -324,7 +379,6 @@ export default {
   left: 0;
   height: 2px;
   width: 100%;
-  background-color: #fff;
   transform-origin: 100% 100%;
   bottom: 0;
   text-align: center;

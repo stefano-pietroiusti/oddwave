@@ -3,7 +3,7 @@
   <b-container
     fluid
     :class="pstyle.bgStyle"
-    :style="{ backgroundImage: `url(${pcontent.bgImage})` }"
+    :style="background"
   >
     <b-row>
       <b-col v-if="isInlineImage">
@@ -23,19 +23,40 @@ export default {
     pcontent: {
       type: Object,
       default () {
-        return { text: 'sample text', bgImage: '/test/Clouds1.webp', inlineImage: '/test/Clouds1.webp' }
+        return {
+          text: 'sample text',
+          bgImage: '/imgs/Clouds1.webp',
+          inlineImage: '/imgs/Clouds1.webp'
+        }
       }
     },
     pstyle: {
       type: Object,
       default () {
-        return { bgStyle: 'parralaxNormal text-primary  text-left p-5', inlineImageStyle: 'inlineImage20 inlineImageLeft' }
+        return {
+          bgStyle: 'parralaxNormal text-primary  text-left p-5',
+          inlineImageStyle: 'inlineImage20 inlineImageLeft'
+        }
       }
     }
   },
   computed: {
     isInlineImage () {
       return !!this.pcontent.inlineImage
+    },
+    background () {
+      const backgroundImageProp = this.pcontent.bgImage || undefined
+      const backgroundImage = (backgroundImageProp) ? `url(${backgroundImageProp})` : undefined
+      // console.log('============backgroundImage===============', JSON.stringify(backgroundImage))
+      return {
+        backgroundImage,
+        // width: '100%',
+        // height: `${this.pbgimage.height}vh`,
+        backgroundAttachment: 'fixed',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover'
+      }
     }
   }
 }

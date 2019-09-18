@@ -1,36 +1,38 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
   <div id="servicesContainer" class="text-center mt-header w-100">
-    <AnimeBannerWordsHeaderComponent :pheader="service.header" :pbgimage="service.headerImage" :pstyle="service.headerStyle" />
-    <span id="marketing">
-      <HeaderComponent :psubheader="service.subheader" :pstyle="service.subheaderStyle" />
-      <MarketingButton
-        :penquire="service.enquire"
-        :pstyle="service.subheaderStyle"
+    <no-ssr>
+      <AnimeBannerWordsHeaderComponent :pheader="service.header" :pbgimage="service.headerImage" :pstyle="service.headerStyle" />
+      <span id="marketing">
+        <HeaderComponent :psubheader="service.subheader" :pstyle="service.subheaderStyle" />
+        <MarketingButton
+          :penquire="service.enquire"
+          :pstyle="service.subheaderStyle"
+        />
+      </span>
+      <TextImageComponent
+        :pcontent="{ bgImage: service.bannerImage}"
+        :pstyle="{ bgStyle: 'parralaxEffect w-100 text-primary text-left p-10'}"
       />
-    </span>
-    <TextImageComponent
-      :pcontent="{ bgImage: service.bannerImage}"
-      :pstyle="{ bgStyle: 'parralaxEffect w-100 text-primary text-left p-10'}"
-    />
-    <span v-if="service.slides" id="carousel">
-      <CarouselComponent :slides="service.slides" />
-    </span>
-    <TextImageComponent
-      v-for="(item,i) in service.content"
-      :key="i"
-      :pcontent="{ text: item.text, bgImage: item.image }"
-      :pstyle="(item.dark) ? { bgStyle: 'parralaxNormal w-100 text-secondary text-left p-5 px-10', inlineImageStyle: 'inlineImage20 inlineImageLeft'} : { bgStyle: 'parralaxNormal w-100 text-primary text-left p-5 px-10', inlineImageStyle: 'inlineImage20 inlineImageLeft'}"
-    />
+      <span v-if="service.slides" id="carousel">
+        <CarouselComponent :slides="service.slides" />
+      </span>
+      <TextImageComponent
+        v-for="(item,i) in service.content"
+        :key="i"
+        :pcontent="{ text: item.text, bgImage: item.image }"
+        :pstyle="(item.dark) ? { bgStyle: 'parralaxNormal w-100 text-secondary text-left p-5 px-10', inlineImageStyle: 'inlineImage20 inlineImageLeft'} : { bgStyle: 'parralaxNormal w-100 text-primary text-left p-5 px-10', inlineImageStyle: 'inlineImage20 inlineImageLeft'}"
+      />
 
-    <Marketing
-      :pheader="service.marketing.header"
-      :plead="service.marketing.subheader"
-      :ptext="service.marketing.content"
-      :penquire="service.enquire"
-    />
+      <Marketing
+        :pheader="service.marketing.header"
+        :plead="service.marketing.subheader"
+        :ptext="service.marketing.content"
+        :penquire="service.enquire"
+      />
 
     <!--    <CarouselComponent :slides="service.slides" /> <D3Cloud :pwordcloud="service.cloud" />-->
+    </no-ssr>
   </div>
 </template>
 

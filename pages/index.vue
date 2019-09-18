@@ -1,25 +1,18 @@
 <template>
   <div class="text-center mt-header w-100">
-    <AnimeBannerWordsComponent />
+    <!-- <AnimeBannerWordsComponent /> -->
 
     <HeaderComponent :pheader="pheader" :psubheader="psubheader" :psubtitle="psubtitle" />
 
     <LinkComponent :btext="btext" :blink="blink" />
-
     <TextImageComponent
       :pcontent="{ text: content[0] }"
       :pstyle="{ bgStyle: 'w-100 text-primary text-left p-5'}"
     />
-
     <TextImageComponent
       :pcontent="{ bgImage: '/imgs/collaboration.jpg'}"
       :pstyle="{ bgStyle: 'parralaxNormal w-100 text-primary text-left p-10'}"
     />
-
-    <!-- <TextImageComponent
-      :pcontent="{ text: content[0], bgImage: '/imgs/collaboration.jpg'}"
-      :pstyle="{ bgStyle: 'w-100 text-secondary text-left p-5'}"
-    />-->
 
     <TextImageComponent
       :pcontent="{ text: content[1] }"
@@ -33,32 +26,20 @@
       :pcontent="{ text: content[3] }"
       :pstyle="{ bgStyle: 'w-100 text-primary text-left px-5 pt-5'}"
     />
-
-    <!-- <TextImageComponent
-      :pcontent="{ text: content[3], bgImage: '/imgs/collaboration.jpg', inlineImage: ''}"
-      :pstyle="{ bgStyle: 'parralaxNormal text-secondary  text-left p-5', inlineImageStyle: 'inlineImage20 inlineImageLeft'}"
-    />-->
-
-    <!-- <ImageBannerComponent :pimage="pimagebanner" :pcontent="content[4]" /> -->
-    <!-- <TextImageComponent
-      :pcontent="{ text: content[3], bgImage: '/test/Clouds1.webp', inlineImage: '/test/Clouds1.webp'}"
-      :pstyle="{ bgStyle: 'parralaxNormal text-primary  text-left p-5', inlineImageStyle: 'inlineImage20 inlineImageLeft'}"
-    />-->
     <TextImageComponent
       :pcontent="{ text: content[4] }"
       :pstyle="{ bgStyle: 'w-100 text-primary text-left p-5'}"
     />
-
-    <ImageOverlayCloudsComponent />
   </div>
 </template>
 
 <script>
-import AnimeBannerWordsComponent from '@/components/AnimeBannerWordsComponent'
+// import AnimeBannerWordsComponent from '@/components/AnimeBannerWordsComponent'
 import HeaderComponent from '@/components/HeaderComponent'
 import LinkComponent from '@/components/LinkComponent'
 import TextImageComponent from '@/components/TextImageComponent'
-import ImageOverlayCloudsComponent from '@/components/ImageOverlayCloudsComponent'
+// import ImageOverlayCloudsComponent from '@/components/ImageOverlayCloudsComponent'
+
 // import ImageBannerComponent from '@/components/ImageBannerComponent'
 // import TextComponent from '@/components/TextComponent'
 // import ImageOverlayComponent from '@/components/ImageOverlayComponent'
@@ -66,11 +47,10 @@ import ImageOverlayCloudsComponent from '@/components/ImageOverlayCloudsComponen
 
 export default {
   components: {
-    AnimeBannerWordsComponent,
+    // AnimeBannerWordsComponent,
     HeaderComponent,
     LinkComponent,
-    TextImageComponent,
-    ImageOverlayCloudsComponent
+    TextImageComponent
   },
   head () {
     return {

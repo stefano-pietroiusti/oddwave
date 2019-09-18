@@ -28,8 +28,8 @@ export default {
       // pimage,
       pimage: 'none',
       pheader: "LET'S CREATE SOME AWESOMENESS",
-      pheaderImage: { color1: 'rgba(255, 255, 255, 0.2)', color2: 'rgba(0, 255, 255, 0.5)', url: '/test/contact.jpg', height: 50 },
-      pstyle: { bgStyle: 'parralaxNormal text-primary  text-left p-5' },
+      pheaderImage: { color1: 'rgba(255, 255, 255, 0.2)', color2: 'rgba(0, 255, 255, 0.5)', url: '/imgs/contact.jpg', height: 50 },
+      pstyle: { bgStyle: 'parralaxNormal text-primary text-left p-5' },
       psubheader: 'Contact form subheader',
       email: 'team@theoddwave.co.nz',
       phone: '+64 210 8823 769'

@@ -172,28 +172,28 @@ $font-size-base: 0.8rem;
       rgba(255, 0, 255, 0.8) 0%,
       rgba(0, 255, 255, 0.7) 100%
     ),
-    /* bottom, image */ url("/test/background40.jpg");
+    /* bottom, image */ url("/imgs/oddwave.jpg");
   width: 100%;
   height: 50vh;
 }
 
-.parralax1 {
-  background: linear-gradient(45deg, rgba(85, 255, 0, 0.2) 0%, rgba(0, 255, 255, 0.5) 100%), url(/imgs/seodigital.jpg);
-  width: 100%;
-  height: 50vh;
-}
+// .parralax1 {
+//   background: linear-gradient(45deg, rgba(85, 255, 0, 0.2) 0%, rgba(0, 255, 255, 0.5) 100%), url(/imgs/seodigital.jpg);
+//   width: 100%;
+//   height: 50vh;
+// }
 
-.parralax2 {
-  background: 
-      /* top, transparent red, faked with gradient */ linear-gradient(
-      45deg,
-      rgba(255, 0, 255, 0.8) 0%,
-      rgba(0, 255, 255, 0.7) 100%
-    ),
-    /* bottom, image */ url("/imgs/seodigital.jpg");
-  width: 100%;
-  height: 50vh;
-}
+// .parralax2 {
+//   background: 
+//       /* top, transparent red, faked with gradient */ linear-gradient(
+//       45deg,
+//       rgba(255, 0, 255, 0.8) 0%,
+//       rgba(0, 255, 255, 0.7) 100%
+//     ),
+//     /* bottom, image */ url("/imgs/seodigital.jpg");
+//   width: 100%;
+//   height: 50vh;
+// }
 
 .parralaxImageOverlay {
   background: 
@@ -202,7 +202,7 @@ $font-size-base: 0.8rem;
       rgba(255, 0, 255, 0.45) 0%,
       rgba(0, 255, 255, 0.45) 100%
     ),
-    /* bottom, image */ url("/test/background4.jpg");
+    /* bottom, image */ url("/imgs/oddwave.jpg");
   width: 100%;
   height: 50%;
 }
@@ -329,10 +329,10 @@ hr {
   color: var(--secondary);
   font-size: inherit;
 }
-.dropdown-item:hover {
-  background-color: var(--secondary);
-  color: var(--primary);
-}
+// .dropdown-item:hover {
+//   background-color: var(--secondary);
+//   color: var(--primary);
+// }
 
 // .navbar {
 //   min-height: 4.5vw;
@@ -481,23 +481,29 @@ a:hover {
   padding: 0px 20px 20px 20px;
 }
 .footer .col h2 {
-  margin: 0;
-  padding: 0;
+  margin-top: 1vw;
+  padding: unset;
   font-family: inherit;
   font-size: 1.2vw;
-  padding: 20px 0px 5px 0px;
+  // padding: 20px 0px 5px 0px;
   // color: rgba(255, 255, 255, 0.6);
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: 0.25em;
 }
 .footer .col h4 {
-  margin: 0;
-  margin-top: 2vw;
-  padding: 0;
+  margin-top: 1vw;
+  padding: unset;
   font-family: inherit;
-  font-size: 1vw;
-  padding: 20px 0px 5px 0px;
+  font-size: 0.8vw;
+  text-transform: lowercase;
+  letter-spacing: 0.25em;
+}
+
+.footer .col h6 {
+  margin-top: 1vw;
+  font-family: inherit;
+  font-size: 0.5vw;
   text-transform: uppercase;
   letter-spacing: 0.25em;
 }
@@ -511,7 +517,7 @@ a:hover {
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.9vw;
   font-family: inherit;
-  margin-top: 1vw;
+  margin: 0vw;
   // padding: 5px 0px 5px 0px;
   cursor: pointer;
   transition: 0.2s;
@@ -519,14 +525,12 @@ a:hover {
   -moz-transition: 0.2s;
   text-decoration: none;
 }
+
+.footer .col ul a {
+  padding: unset;
+}
 .footer .col ul a:hover {
   text-decoration: none;
-}
-
-.social ul li {
-  display: inline-block;
-  padding-right: 5px !important;
-  color: #000;
 }
 
 .footer .col ul li:hover {
@@ -535,6 +539,13 @@ a:hover {
   -webkit-transition: 0.1s;
   -moz-transition: 0.1s;
 }
+.social ul li {
+  display: inline-block;
+  padding-right: 5px !important;
+  color: #000;
+}
+
+
 .clearfix {
   clear: both;
 }

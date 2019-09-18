@@ -25,14 +25,13 @@ export default {
   /*
    ** Headers of the page
    */
-   generate: {
+  generate: {
     subFolders: true,
     routes: [
       '/',
       '/services/seo',
       '/services/ppc',
       '/services/webdesign',
-      '/services/hosting',
       '/services/photography',
       '/contact'
     ]
@@ -63,9 +62,6 @@ export default {
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' },
       { rel: 'stylesheet', href: 'https://www.w3schools.com/w3css/4/w3.css' }
     ]
-    // , script: [
-    //   { src: 'https://d3js.org/d3.v3.min.js' }, { src: 'https://rawgit.com/jasondavies/d3-cloud/master/build/d3.layout.cloud.js' }
-    // ]
   },
   /*
    ** Customize the progress-bar color
@@ -85,17 +81,10 @@ export default {
   plugins: [
     '~/plugins/anime.js',
     '~/plugins/fontawesome.js',
-    '~/plugins/vue-inject.js',
-    { src: '~plugins/vue-particles', mode: 'client' },
-    { src: '~plugins/vue-parallaxy', mode: 'client' },
+    // { src: '~plugins/vue-parallaxy', mode: 'client' },
     // { src: '~/plugins/vue-fb-customer-chat', mode: 'client' },
     { src: '~/plugins/vue-notifications', mode: 'client' },
-    // { src: '~/plugins/vue-resize-directive', mode: 'client' },
-    { src: '~/plugins/vue-chartjs.js', mode: 'client' },
-    { src: '~/plugins/hchs-vue-charts', mode: 'client' }, //https://www.yasminzy.com/nuxt/chart.html#steps
-    // { src: '~/plugins/helper.js' }
-    { src: '~/plugins/vue-d3-cloud.js', mode: 'client' } //https://www.yasminzy.com/nuxt/chart.html#steps
-
+    { src: '~/plugins/vue-chartjs.js', mode: 'client' }
   ],
   /*
    ** Nuxt.js dev-modules
@@ -130,14 +119,14 @@ export default {
   // }
   ,
   serverMiddleware: [
-    { path: '/api/logger', handler: '~/api/logger.js' },
-    { path: '/api/contact', handler: '~/serverMiddleware/contact' } //or just '~/serverMiddleware/contact' because handler is inside code
+    // { path: '/api/logger', handler: '~/api/logger.js' },
+    { path: '/api/contact', handler: '~/serverMiddleware/contact' }
   ],
   /*
    ** Build configuration
    */
   build: {
-    vendor: ['vue-fb-customer-chat'],
+    // vendor: ['vue-fb-customer-chat'],
 
     /*
      ** You can extend webpack config here

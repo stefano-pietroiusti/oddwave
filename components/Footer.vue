@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-v-html -->
 <template>
   <b-container fluid class="text-light text-left bg-primary footer">
     <div class="row">
@@ -7,6 +8,9 @@
           <nuxt-link v-for="item in standardNav" :key="item.value" :to="item.value">
             <li>{{ item.text }}</li>
           </nuxt-link>
+          <h4 v-html="phone1" />
+          <h4 v-html="phone2" />
+          <h4 v-html="email" />
         </ul>
       </div>
       <div class="col">
@@ -22,13 +26,13 @@
         </ul>
       </div>
 
-      <div class="col text-center">
+      <div class="col">
         <h2>Work with us</h2>
-        <h4>{{ phone }}</h4>
-        <h4>{{ email }}</h4>
+        <h4 v-html="phone1" />
+        <h4 v-html="phone2" />
+        <h4 v-html="email" />
         <br>
         <h6>{{ copyright }}</h6>
-        <h6>{{ poweredBy }}</h6>
       </div>
       <div class="col social text-center">
         <h2>Join us</h2>
@@ -48,12 +52,12 @@ export default {
   data () {
     return {
       copyright: '© 2019 Copyright The Odd Wave',
-      email: 'team@theoddwave.co.nz',
-      phone: '+64 210 8823 769',
-      poweredBy: 'powered by The Odd Wave',
+      email: '<a href="mailto:&#116;&#101;&#097;&#109;&#064;&#116;&#104;&#101;&#111;&#100;&#100;&#119;&#097;&#118;&#101;&#046;&#099;&#111;&#046;&#110;&#122;">&#116;&#101;&#097;&#109;&#064;&#116;&#104;&#101;&#111;&#100;&#100;&#119;&#097;&#118;&#101;&#046;&#099;&#111;&#046;&#110;&#122;</a>',
+      phone1: '<a href="tel:+64 210 8658 172">+64 210 8658 172</a>',
+      phone2: '<a href="tel:+64 210 8823 769">+64 210 8823 769</a>',
+      poweredBy: 'powered by The Odd Wave suite of technologies',
       standardNav: [
         { value: '/', text: 'Home' },
-        { value: '/about', text: 'What we do' },
         { value: '/contact', text: 'Contact us' }
       ]
     }

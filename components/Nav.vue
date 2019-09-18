@@ -1,21 +1,13 @@
 <template>
-  <b-navbar toggleable="lg" fixed="top" type="dark" variant="primary" class="">
+  <b-navbar toggleable="lg" fixed="top" type="dark" variant="primary" class>
     <b-navbar-brand to="/">
-      <!-- <b-img :src="image" fluid alt="the odd wave logo" class="logo" /> -->
-      <font-awesome-icon
-        :icon="{ prefix: 'fab', iconName: 'servicestack' }"
-        class="fa-1x white"
-      />
-      {{ title }}
-      <!-- <nuxt-link :src="image" tag="the odd wave logo" to="/" />{{ title }} -->
-      <!-- <b-img src="~/assets/imgs/odd-wave-logo-s.png" fluid alt="the odd wave logo" /> -->
+      <b-img src="/logos/oddwave.png" fluid alt="the odd wave" class="logo" />
+      <img :src="require('~/assets/logos/oddwave.png?size=400')" :srcset="require('~/assets/logos/oddwave.png').srcSet">
+      <!-- <Logo /> {{ title }} -->
     </b-navbar-brand>
     <b-navbar-toggle target="nav-collapse" />
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
-        <!-- <b-nav-item v-for="item in standardNav" :key="item.value" :to="item.value">
-          {{ item.text }}
-        </b-nav-item> -->
         <b-nav-item to="/">
           Home
         </b-nav-item>
@@ -37,13 +29,14 @@
 </template>
 
 <script>
-import image from '~/assets/imgs/odd-wave-logo-s.png'
-
+// import Logo from '@/components/Logo'
+// import logo from 'logos/oddwave.png'
 export default {
-  components: {},
+  components: {
+    // Logo
+  },
   data () {
     return {
-      image,
       title: 'THE ODD WAVE',
       standardNav: [
         { value: '/', text: 'Home' },
@@ -59,5 +52,8 @@ export default {
 }
 </script>
 <style scoped>
-
+.logo {
+  width: 10vw;
+  height: auto;
+}
 </style>

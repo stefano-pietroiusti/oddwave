@@ -34,7 +34,7 @@
         <br>
         <h6>{{ copyright }}</h6>
       </div>
-      <div class="col social text-center">
+      <div class="col text-center">
         <h2>Join us</h2>
         <ul>
           <li>

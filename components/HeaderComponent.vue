@@ -1,8 +1,8 @@
 <template>
-  <header class="text-center">
+  <header class="text-center p-3">
     <b-container fluid :class="fontcolor">
-      <b-row class="m-4">
-        <b-col md="12">
+      <b-row>
+        <b-col class="p-3">
           <h1>{{ pheader }}</h1>
         </b-col>
       </b-row>

@@ -1,6 +1,6 @@
 <template>
-  <div class="text-center mt-header w-100">
-    <!-- <AnimeBannerWordsComponent /> -->
+  <b-container fluid class="text-light text-left mt-header p-0">
+    <AnimeBannerWordsComponent />
 
     <HeaderComponent :pheader="pheader" :psubheader="psubheader" :psubtitle="psubtitle" />
 
@@ -23,6 +23,10 @@
       :pstyle="{ bgStyle: 'w-100 text-primary text-left px-5 pt-5'}"
     />
     <TextImageComponent
+      :pcontent="{ bgImage: '/imgs/collaboration.jpg'}"
+      :pstyle="{ bgStyle: 'parralaxNormal w-100 text-primary text-left p-10'}"
+    />
+    <TextImageComponent
       :pcontent="{ text: content[3] }"
       :pstyle="{ bgStyle: 'w-100 text-primary text-left px-5 pt-5'}"
     />
@@ -30,11 +34,11 @@
       :pcontent="{ text: content[4] }"
       :pstyle="{ bgStyle: 'w-100 text-primary text-left p-5'}"
     />
-  </div>
+  </b-container>
 </template>
 
 <script>
-// import AnimeBannerWordsComponent from '@/components/AnimeBannerWordsComponent'
+import AnimeBannerWordsComponent from '@/components/AnimeBannerWordsComponent'
 import HeaderComponent from '@/components/HeaderComponent'
 import LinkComponent from '@/components/LinkComponent'
 import TextImageComponent from '@/components/TextImageComponent'
@@ -47,7 +51,7 @@ import TextImageComponent from '@/components/TextImageComponent'
 
 export default {
   components: {
-    // AnimeBannerWordsComponent,
+    AnimeBannerWordsComponent,
     HeaderComponent,
     LinkComponent,
     TextImageComponent

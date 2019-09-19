@@ -2,27 +2,22 @@
   <b-container
     id="animationBanner"
     fluid
-    class="mt-header text-secondary parralaxHome parralaxEffect"
+    class="text-center text-secondary parralaxHome"
   >
     <b-row>
-      <b-col>
+      <b-col cols="2" /> <b-col cols="8">
         <h1 class="anim1">
-          <span class="letters word-1">Optimized search and content</span>
-          <span class="letters word-2">Zero clunk, zero overkill</span>
-          <span class="letters word-3">Keeping things simple</span>
+          <span class="letters word-1">Modern</span>
+          <span class="letters word-2">Lightweight</span>
+          <span class="letters word-3">Simple</span>
         </h1>
         <h2 class="anim2">
-          Using proven modern and lightweight digital technologies
+          Optimized web, content and search
         </h2>
         <h3 class="anim3">
-          <span class="word">Web</span>
-          <span class="word">Data</span>
-          <span class="word">Search</span>
-          <span class="word">Simple</span>
-          <span class="word">Flexible</span>
-          <span class="word">Compatible</span>
-          <span class="word">Secure</span>
-          <span class="word">Scalable</span>
+          <span class="word">Website</span>
+          <span class="word">Optimized content</span>
+          <span class="word">SEO</span>
         </h3>
         <h3 class="anim4 text-center">
           <span class="anim4-wrapper text-center">
@@ -32,7 +27,7 @@
             <span class="line text-center bg-secondary" />
           </span>
         </h3>
-      </b-col>
+      </b-col> <b-col cols="2" />
     </b-row>
   </b-container>
 </template>
@@ -40,28 +35,11 @@
 <script>
 /* eslint-disable */
 export default {
-  data() {
-    return {
-      anim1: {
-        words: ['Search', 'Web', 'Data', 'Cloud'],
-        text: 'Search Web Data Cloud'
-      },
-      anim2: {
-        text: 'by the Odd Wave'
-      },
-      anim3: {
-        text: 'Using proven, high performing web technologies'
-      },
-      anim4: {
-        text: 'Increase your web traffic now'
-      }
-    }
-  },
-  mounted() {
+    mounted() {
     const anim1 = {}
     anim1.opacityIn = [0, 1]
     anim1.scaleIn = [0.2, 1]
-    anim1.scaleOut = 3
+    anim1.scaleOut = 1
     anim1.durationIn = 800
     anim1.durationOut = 600
     anim1.delay = 500
@@ -208,12 +186,12 @@ export default {
       //   easing: 'easeInExpo',
       //   delay: anim1.delay
       // })
-      .add({
-        targets: '.anim1',
-        opacity: 0,
-        duration: 500,
-        delay: 500
-      })
+      // .add({
+      //   targets: '.anim1',
+      //   opacity: 0,
+      //   duration: 500,
+      //   delay: 500
+      // })
       .add({
         targets: '.anim2 .letter',
         translateY: [100, 0],
@@ -233,7 +211,7 @@ export default {
       })
       .add({
         targets: '.anim3 .word',
-        scale: [14, 1],
+        scale: [1.5, 1],
         opacity: [0, 1],
         easing: 'easeOutCirc',
         duration: 800,
@@ -282,12 +260,11 @@ export default {
 </script>
 <style scoped>
 #animationBanner {
-  /* background: linear-gradient(45deg, rgba(255, 0, 255, 1) 0%, rgba(0, 255, 255, 1) 100%); */
-  background-size: 100% auto;
-  background-position: center center;
+  background-attachment: fixed;
+  background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
-
 .anim1 {
   position: relative;
   font-weight: 900;

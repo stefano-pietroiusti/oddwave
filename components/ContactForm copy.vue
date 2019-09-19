@@ -1,26 +1,24 @@
 <template>
   <b-container id="contactForm" fluid :style="gradient" :class="pstyle.bgStyle">
-    <b-form v-if="show" small class="text-primary text-left w-50" @submit="onSubmit" @reset="onReset">
-      <b-form-group id="input-group-2" label="My name is:" label-for="input-2" label-size="lg">
-        <b-form-input id="input-2" v-model="form.name" required placeholder="Enter name" size="lg" />
+    <b-form v-if="show" small class="text-primary text-left text-lowercase w-50 " @submit="onSubmit" @reset="onReset">
+      <b-form-group id="input-group-2" label="My name is:" label-for="input-2">
+        <b-form-input id="input-2" v-model="form.name" required placeholder="Enter name" />
       </b-form-group>
-      <b-form-group id="input-group-1" label="you may contact me on:" label-for="input-1" label-size="lg">
+      <b-form-group id="input-group-1" label="you may contact me on:" label-for="input-1">
         <b-form-input
           id="input-1"
           v-model="form.email"
           type="email"
           required
           placeholder="Enter email"
-          size="lg"
         />
       </b-form-group>
-      <b-form-group id="input-group-3" label="i am based here:" label-for="input-3" label-size="lg">
-        <b-form-select id="input-3" v-model="form.location" :options="locations" required size="lg" />
+      <b-form-group id="input-group-3" label="i am based here:" label-for="input-3">
+        <b-form-select id="input-3" v-model="form.location" :options="locations" required />
       </b-form-group>
       <b-form-group
         id="input-group-4"
         label="I require help with the following:"
-        label-size="lg"
         class="bg-secondary text-primary mt-5"
       >
         <b-form-checkbox-group
@@ -30,10 +28,9 @@
           stacked
           buttons
           button-variant="outline-success"
-          size="lg"
         />
       </b-form-group>
-      <b-form-group id="input-group-5" label="I also need:" label-for="input-5" label-size="lg">
+      <b-form-group id="input-group-5" label="I also need:" label-for="input-5">
         <b-form-textarea
           id="input-5"
           v-model="form.enquiry"
@@ -78,7 +75,7 @@ export default {
     pstyle: {
       type: Object,
       default () {
-        return { bgStyle: 'parralaxNormal text-primary text-left p-5  vh-100' }
+        return { bgStyle: 'parralaxNormal text-primary bg-primary  text-left p-5  vh-100' }
       }
     }
   },
@@ -103,12 +100,13 @@ export default {
   computed: {
     gradient () {
       return {
-        backgroundImage: `linear-gradient(45deg, rgba(255, 255, 255, 1) 2%, rgba(255, 255, 255, 0) 100%), url(${this.pbgimage.url})`,
+        // backgroundImage: `linear-gradient(45deg, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0.2) 100%), url(${this.pbgimage.url})`,
+        backgroundImage: `linear-gradient(45deg, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0.2) 100%)`,
         height: '100%',
         width: '100%',
-        bottom: 0,
+        top: 0,
         backgroundAttachment: 'fixed',
-        backgroundPosition: 'center',
+        backgroundPosition: 'top',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         textTransform: 'uppercase'
@@ -166,7 +164,4 @@ export default {
 }
 </script>
 <style scoped>
-#contactForm {
-  text-transform: none
-}
 </style>

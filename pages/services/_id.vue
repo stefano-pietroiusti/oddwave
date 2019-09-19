@@ -21,7 +21,7 @@
         v-for="(item,i) in service.content"
         :key="i"
         :pcontent="{ text: item.text, bgImage: item.image }"
-        :pstyle="(item.dark) ? { bgStyle: 'parralaxNormal w-100 text-secondary text-left p-5 px-10', inlineImageStyle: 'inlineImage20 inlineImageLeft'} : { bgStyle: 'parralaxNormal w-100 text-primary text-left p-5 px-10', inlineImageStyle: 'inlineImage20 inlineImageLeft'}"
+        :pstyle="(item.dark) ? { bgStyle: 'parralaxNormal w-100 text-secondary text-left', inlineImageStyle: 'inlineImage20 inlineImageLeft'} : { bgStyle: 'parralaxNormal w-100 text-primary text-left', inlineImageStyle: 'inlineImage20 inlineImageLeft'}"
       />
 
       <Marketing
@@ -112,6 +112,7 @@ export default {
 #marketing{
  position: absolute;
  width: 50%;
+ height: 60%;
   bottom: 0;
   margin: auto;
 }

@@ -28,7 +28,7 @@ export default {
       // pimage,
       pimage: 'none',
       pheader: "LET'S CREATE SOME AWESOMENESS",
-      pheaderImage: { color1: 'rgba(255, 255, 255, 0.2)', color2: 'rgba(0, 255, 255, 0.5)', url: '/imgs/contact.jpg', height: 50 },
+      pheaderImage: { color1: 'rgba(255, 255, 255, 0.2)', color2: 'rgba(0, 255, 255, 0.5)', url: '/imgs/contact.jpg', height: 40 },
       pstyle: { bgStyle: 'parralaxNormal text-primary text-left p-5' },
       psubheader: 'Contact form subheader',
       email: 'team@theoddwave.co.nz',

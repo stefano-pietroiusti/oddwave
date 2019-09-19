@@ -91,3 +91,6 @@ sw.*
 *.swp
 
 static/
+
+assets/scss/bootstrap/
+assets/scss/bootstrap-vue/

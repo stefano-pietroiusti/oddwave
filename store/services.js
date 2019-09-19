@@ -4,7 +4,7 @@ export const state = () => ({
       id: 'seo',
       title: 'Search Engine Optimisation services',
       description: 'SEO - Search Engine Optimisation Services',
-      header: 'Drive organic traffic to your website with the latest SEO practices',
+      header: 'Drive organic traffic to your website with SEO',
       headerImage: { color1: 'rgba(255, 255, 255, 0.2)', color2: 'rgba(0, 255, 255, 0.5)', url: '/imgs/seodigital.jpg', height: 50 },
       headerStyle: { bgStyle: 'text-primary parralaxEffect' },
       bannerImage: '/imgs/seodigital.jpg',
@@ -58,8 +58,8 @@ export const state = () => ({
       headerImage: { color1: 'rgba(255, 255, 255, 0.2)', color2: 'rgba(0, 255, 255, 0.5)', url: '/imgs/ppc.jpg', height: 50 },
       headerStyle: { bgStyle: 'text-primary parralaxEffect' },
       bannerImage: '/imgs/ppc.jpg',
-      subheader: 'Get more calls and website inquiries by advertising your products and services.  ',
-      subheaderStyle: { color: 'text-secondary', buttonVariant: 'info' },
+      subheader: 'Advertise your products and services',
+      subheaderStyle: { color: 'text-info', buttonVariant: 'info' },
       content:
         [
           { text: 'PPC Advertising is paid advertising generating leads to your site, rather than earning visits organically. Search engine advertising is one of the most popular forms of PPC. Pay per click or search engine marketing is one of the most potent advertising channels available, to businesses of every size. The largest online advertising platform is Google Ads targeted at users using Google Search Engine. Google drives 95% of all paid search on mobile phones. Bing Ads is the second-largest platform used for PPC advertising.' },
@@ -72,7 +72,7 @@ export const state = () => ({
           { text: 'Here\'s what you can expect from the odd wave: Keyword research and audience targeting ensuring you attract the right customer and professionally created Ad\'s creation based on keywords researched and comply with google policies.We make sure your campaign is running optimally. The checks include search terms, negative keywords, location targeting, and budgets to mention a few.' }
 
         ],
-      price: { value: 249, unit: 'package per month' },
+      price: { value: 249, unit: 'per month' },
       marketing: {
         header: 'PPC search engine advertising',
         subheader: 'Generate more visits to your site',
@@ -112,14 +112,14 @@ export const state = () => ({
     },
     {
       id: 'webdesign',
-      title: 'Website Design and Development',
-      description: 'Custom Web Design Services',
-      header: 'Custom Web design and Development Services',
-      headerImage: { color1: 'rgba(255, 255, 255, 0.2)', color2: 'rgba(0, 255, 255, 0.5)', url: '/imgs/webdesign.png', height: 50 },
+      title: 'Progressive Web Application Design and Development',
+      description: 'Progressive Web Application Design and Development',
+      header: 'Progressive Web Application Design and Development',
+      headerImage: { color1: 'rgba(255, 255, 255, 0.2)', color2: 'rgba(0, 255, 255, 0.5)', url: '/imgs/webdesign.jpg', height: 50 },
       headerStyle: { bgStyle: 'text-primary parralaxEffect' },
-      bannerImage: '/imgs/webdesign.png',
-      subheader: 'Putting your business out there.',
-      subheaderStyle: { color: 'text-primary', buttonVariant: 'primary' },
+      bannerImage: '/imgs/webdesign.jpg',
+      subheader: 'Putting your business out there',
+      subheaderStyle: { color: 'text-black', buttonVariant: 'info' },
       content:
         [
           { text: 'Here at The Odd Wave, we design and develop robust, cutting edge websites using the latest web development frameworks. We take time to understand your business and requirements so we can develop a website to help you stand out and grow your business. The world wide web is vast, with billions of websites worldwide competing for consideration. It can be overwhelming when you are thinking about launching a website, but that\'s why we are here to help. With our extensive industry experience, we can help you realize your business dream. The Odd Wave provides web design and development from our offices in Torbay Auckland to clients all over New Zealand.' },
@@ -167,8 +167,8 @@ export const state = () => ({
       headerImage: { color1: 'rgba(255, 255, 255, 0.2)', color2: 'rgba(0, 255, 255, 0.5)', url: '/imgs/photography.jpg', height: 50 },
       headerStyle: { bgStyle: 'text-primary parralaxEffect' },
       bannerImage: '/imgs/photography.jpg',
-      subheader: 'Grab the attention of potential customers with creative photography',
-      subheaderStyle: { color: 'text-secondary', buttonVariant: 'primary' },
+      subheader: 'Grab the attention of potential customers',
+      subheaderStyle: { color: 'text-info', buttonVariant: 'info' },
       content:
         [
           { text: 'Visual communication has reached new heights with digital and social media marketing resulting in digital photography, becoming an essential part of product or service promotion.' },

@@ -5,7 +5,7 @@ export const state = () => ({
       title: 'Search Engine Optimisation services',
       description: 'SEO - Search Engine Optimisation Services',
       header: 'Drive organic traffic to your website with SEO',
-      headerImage: { color1: 'rgba(255, 255, 255, 0.2)', color2: 'rgba(0, 255, 255, 0.5)', url: '/imgs/seodigital.jpg', height: 50 },
+      headerImage: { color1: 'rgba(255, 255, 255, 0.2)', color2: 'rgba(0, 255, 255, 0.5)', url: '/imgs/seodigital.jpg', height: 60 },
       headerStyle: { bgStyle: 'text-primary parralaxEffect' },
       bannerImage: '/imgs/seodigital.jpg',
       subheader: 'Increase your ranking cost effectively',
@@ -13,7 +13,8 @@ export const state = () => ({
       content: [
         { text: 'An essential part of a digital marketing strategy is SEO. SEO (Search engine optimization) assists in driving customers to your business via online platforms. SEO assists in making the website rank higher in the SERP (search engine result page) so that your business website is found by customers searching for your product and services online.' },
         { text: 'Advertising your business is of utmost importance. When any company goes online, pay per click advertising (PPC) works best to generate a considerable amount of web traffic. SEO allows a great deal of free advertising. Proper optimization makes a website rank on the first page of SERP. The common belief is that people generally check the first two pages of search engine results. Approximately 94% of online users use search engines to find products and services.' },
-        { text: 'Keyword-rich page content makes a substantial difference in your Google rankings and search engine results. Optimized content increases organic traffic to your website resulting in lead generation, increased sales, and improve ROI.', image: '/imgs/seodigital.jpg', dark: false },
+        { text: '<p><br/><p/><p><br/><p/><p><br/><p/>', image: '/imgs/seodigital.jpg', dark: false },
+        { text: 'Keyword-rich page content makes a substantial difference in your Google rankings and search engine results. Optimized content increases organic traffic to your website resulting in lead generation, increased sales, and improve ROI.' },
         { text: 'Technical SEO and On-Page SEO are two examples of search engine optimization practices. Technical SEO determines the quality of a website based on factors like speed and and the website has been developed. Optimizing the technical aspects of a website enables search engines to crawl and index the site correctly, which is beneficial to obtain a higher search engine rank in Google. Page load speed is another crucial aspect to consider to avoid high bounce rates and therefore improve your SEO ranking.' },
         { text: 'We have various SEO packages to choose from with secure monthly payments and no fixed contract, and you can cancel anytime.' }
       ],
@@ -55,7 +56,7 @@ export const state = () => ({
       title: 'Pay per Click Advertising services',
       description: 'Grow your business using PPC (Pay Per Click) or CPC (Cost per Click) Advertising. ',
       header: 'Pay per Click Advertising (PPC)',
-      headerImage: { color1: 'rgba(255, 255, 255, 0.2)', color2: 'rgba(0, 255, 255, 0.5)', url: '/imgs/ppc.jpg', height: 50 },
+      headerImage: { color1: 'rgba(255, 255, 255, 0.2)', color2: 'rgba(0, 255, 255, 0.5)', url: '/imgs/ppc.jpg', height: 60 },
       headerStyle: { bgStyle: 'text-primary parralaxEffect' },
       bannerImage: '/imgs/ppc.jpg',
       subheader: 'Advertise your products and services',
@@ -64,10 +65,11 @@ export const state = () => ({
         [
           { text: 'PPC Advertising is paid advertising generating leads to your site, rather than earning visits organically. Search engine advertising is one of the most popular forms of PPC. Pay per click or search engine marketing is one of the most potent advertising channels available, to businesses of every size. The largest online advertising platform is Google Ads targeted at users using Google Search Engine. Google drives 95% of all paid search on mobile phones. Bing Ads is the second-largest platform used for PPC advertising.' },
           { text: 'PPC ads can be in any form of text, a photo, a video, and slides. Some interesting PPC statistics (Editor\'s Choice). In 2017, 7 million advertisers spent $10.1 billion on PPC ads. High commercial intent queries on Google AdWords get 65% of the clicks. Businesses typically earn $2 for every $1 spent on Google Ads.' },
-          { text: '<br/><br/>', image: '/imgs/ppc.jpg', dark: false },
+          { text: '<p><br/><p/><p><br/><p/><p><br/><p/>', image: '/imgs/ppc.jpg', dark: false },
           { text: 'PPC visitors are 50% more likely to purchase something than organic visitors. 41% of clicks go to the top three paid ads in search results; .63 % of online searches are Google searches. Google AdWords reaches 80% of global internet users. In 2019, the average number of Google searches is over 191 billion per month. Paid search can raise brand awareness by up to 80%.62% of marketers plan to increase their PPC budgets in 2019.' },
           { text: 'CTR (Click Through Rate) represents the percentage of people who click on your ad and visit the landing page on your website. So, if 100 people see your advertisement and 10 of them click on it, the CTR is 10 percent. It is essential to have as many of the right customer type clicking on your ad as possible, which means having a good CTR. A high CTR means users are visiting your website. More visits to your site mean more customers. The reward from Google is a lower cost per click for your Ad\'s campaign' },
           { text: 'The Odd Wave provides professionally managed Search Engine Marketing services for small to medium-sized businesses throughout NZ from our North Shore, Auckland office. We have over eight years experience in successfully managing Google advertising campaigns.' },
+          { text: '<p><br/><p/><p><br/><p/><p><br/><p/>', image: '/imgs/ppc.jpg', dark: false },
           { text: 'Our skilled team will create a custom digital marketing strategy that will help you achieve your company goals. We will carefully help you select the correct online marketing channels. Some of these channels include Search Engine Marketing (paid) and Search Engine Optimization (earned).' },
           { text: 'Here\'s what you can expect from the odd wave: Keyword research and audience targeting ensuring you attract the right customer and professionally created Ad\'s creation based on keywords researched and comply with google policies.We make sure your campaign is running optimally. The checks include search terms, negative keywords, location targeting, and budgets to mention a few.' }
 
@@ -115,7 +117,7 @@ export const state = () => ({
       title: 'Progressive Web Application Design and Development',
       description: 'Progressive Web Application Design and Development',
       header: 'Progressive Web Application Design and Development',
-      headerImage: { color1: 'rgba(255, 255, 255, 0.2)', color2: 'rgba(0, 255, 255, 0.5)', url: '/imgs/webdesign.jpg', height: 50 },
+      headerImage: { color1: 'rgba(255, 255, 255, 0.2)', color2: 'rgba(0, 255, 255, 0.5)', url: '/imgs/webdesign.jpg', height: 60 },
       headerStyle: { bgStyle: 'text-primary parralaxEffect' },
       bannerImage: '/imgs/webdesign.jpg',
       subheader: 'Putting your business out there',
@@ -164,11 +166,11 @@ export const state = () => ({
       title: 'Website Photography',
       description: 'Product, commercial and landscape photography for branding',
       header: 'Digital Photography for your website',
-      headerImage: { color1: 'rgba(255, 255, 255, 0.2)', color2: 'rgba(0, 255, 255, 0.5)', url: '/imgs/photography.jpg', height: 50 },
+      headerImage: { color1: 'rgba(255, 255, 255, 0.2)', color2: 'rgba(0, 255, 255, 0.5)', url: '/imgs/photography.jpg', height: 60 },
       headerStyle: { bgStyle: 'text-primary parralaxEffect' },
       bannerImage: '/imgs/photography.jpg',
       subheader: 'Grab the attention of potential customers',
-      subheaderStyle: { color: 'text-info', buttonVariant: 'info' },
+      subheaderStyle: { color: 'text-primary', buttonVariant: 'info' },
       content:
         [
           { text: 'Visual communication has reached new heights with digital and social media marketing resulting in digital photography, becoming an essential part of product or service promotion.' },

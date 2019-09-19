@@ -21,7 +21,7 @@
         v-for="(item,i) in service.content"
         :key="i"
         :pcontent="{ text: item.text, bgImage: item.image }"
-        :pstyle="(item.dark) ? { bgStyle: 'parralaxNormal w-100 text-secondary text-left', inlineImageStyle: 'inlineImage20 inlineImageLeft'} : { bgStyle: 'parralaxNormal w-100 text-primary text-left', inlineImageStyle: 'inlineImage20 inlineImageLeft'}"
+        :pstyle="(item.dark) ? { bgStyle: 'parralaxNormal w-100 text-secondary text-left px-5 pt-3', inlineImageStyle: 'inlineImage20 inlineImageLeft'} : { bgStyle: 'parralaxNormal w-100 text-primary text-left px-5 pt-3', inlineImageStyle: 'inlineImage20 inlineImageLeft'}"
       />
 
       <Marketing

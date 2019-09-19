@@ -8,9 +8,6 @@
           <nuxt-link v-for="item in standardNav" :key="item.value" :to="item.value">
             <li>{{ item.text }}</li>
           </nuxt-link>
-          <h4 v-html="phone1" />
-          <h4 v-html="phone2" />
-          <h4 v-html="email" />
         </ul>
       </div>
       <div class="col">

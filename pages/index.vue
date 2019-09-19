@@ -7,7 +7,7 @@
     <LinkComponent :btext="btext" :blink="blink" />
     <TextImageComponent
       :pcontent="{ text: content[0] }"
-      :pstyle="{ bgStyle: 'w-100 text-primary text-left p-5'}"
+      :pstyle="{ bgStyle: 'w-100 text-primary text-left  px-5 p-3'}"
     />
     <TextImageComponent
       :pcontent="{ bgImage: '/imgs/collaboration.jpg'}"
@@ -16,23 +16,24 @@
 
     <TextImageComponent
       :pcontent="{ text: content[1] }"
-      :pstyle="{ bgStyle: 'w-100 text-primary text-left px-5 pt-5'}"
+      :pstyle="{ bgStyle: 'w-100 text-primary text-left px-5 pt-3'}"
     />
     <TextImageComponent
       :pcontent="{ text: content[2] }"
-      :pstyle="{ bgStyle: 'w-100 text-primary text-left px-5 pt-5'}"
+      :pstyle="{ bgStyle: 'w-100 text-primary text-left px-5 pt-3'}"
+    />
+
+    <TextImageComponent
+      :pcontent="{ text: content[3] }"
+      :pstyle="{ bgStyle: 'w-100 text-primary text-left px-5 pt-3'}"
     />
     <TextImageComponent
       :pcontent="{ bgImage: '/imgs/collaboration.jpg'}"
-      :pstyle="{ bgStyle: 'parralaxNormal w-100 text-primary text-left p-10'}"
-    />
-    <TextImageComponent
-      :pcontent="{ text: content[3] }"
-      :pstyle="{ bgStyle: 'w-100 text-primary text-left px-5 pt-5'}"
+      :pstyle="{ bgStyle: 'parralaxNormal w-100 text-primary text-left p-7'}"
     />
     <TextImageComponent
       :pcontent="{ text: content[4] }"
-      :pstyle="{ bgStyle: 'w-100 text-primary text-left p-5'}"
+      :pstyle="{ bgStyle: 'w-100 text-primary text-left px-5 p-5'}"
     />
   </b-container>
 </template>

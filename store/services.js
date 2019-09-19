@@ -18,7 +18,7 @@ export const state = () => ({
         { text: 'Technical SEO and On-Page SEO are two examples of search engine optimization practices. Technical SEO determines the quality of a website based on factors like speed and and the website has been developed. Optimizing the technical aspects of a website enables search engines to crawl and index the site correctly, which is beneficial to obtain a higher search engine rank in Google. Page load speed is another crucial aspect to consider to avoid high bounce rates and therefore improve your SEO ranking.' },
         { text: 'We have various SEO packages to choose from with secure monthly payments and no fixed contract, and you can cancel anytime.' }
       ],
-      price: { value: 599, unit: 'month' },
+      price: { value: 560, unit: 'month' },
       marketing: {
         header: 'SEO Services',
         subheader: 'Drive traffic to your website with latest SEO practices',
@@ -49,17 +49,17 @@ export const state = () => ({
         { text: 'CMS', value: 80 },
         { text: 'Product', value: 70 }
       ],
-      searchtags: ['creative', 'commercial', 'product']
+      keywords: ['seo', 'search engine optimization', 'search', 'serp', 'search engine ranking']
     },
     {
       id: 'ppc',
       title: 'Pay per Click Advertising services',
-      description: 'Grow your business using PPC (Pay Per Click) or CPC (Cost per Click) Advertising. ',
-      header: 'Pay per Click Advertising (PPC)',
+      description: 'Grow your business using PPC (Pay Per Click) or CPC (Cost per Click) Advertising',
+      header: 'Pay per Click  Advertising',
       headerImage: { color1: 'rgba(255, 255, 255, 0.2)', color2: 'rgba(0, 255, 255, 0.5)', url: '/imgs/ppc.jpg', height: 60 },
       headerStyle: { bgStyle: 'text-primary parralaxEffect' },
       bannerImage: '/imgs/ppc.jpg',
-      subheader: 'Advertise your products and services',
+      subheader: 'Accelerate market penetration with Google Ads',
       subheaderStyle: { color: 'text-info', buttonVariant: 'info' },
       content:
         [
@@ -74,7 +74,7 @@ export const state = () => ({
           { text: 'Here\'s what you can expect from the odd wave: Keyword research and audience targeting ensuring you attract the right customer and professionally created Ad\'s creation based on keywords researched and comply with google policies.We make sure your campaign is running optimally. The checks include search terms, negative keywords, location targeting, and budgets to mention a few.' }
 
         ],
-      price: { value: 249, unit: 'per month' },
+      price: { value: 240, unit: 'per month' },
       marketing: {
         header: 'PPC search engine advertising',
         subheader: 'Generate more visits to your site',
@@ -110,17 +110,17 @@ export const state = () => ({
         { text: 'Content', value: 90 },
         { text: 'CMS', value: 80 },
         { text: 'Product', value: 70 }],
-      tags: ['packaged', 'direct']
+      keywords: ['pay per click', 'google ads', 'bing ads', 'microsoft advertising', 'advertising', 'workshops']
     },
     {
       id: 'webdesign',
-      title: 'Progressive Web Application Design and Development',
-      description: 'Progressive Web Application Design and Development',
-      header: 'Progressive Web Application Design and Development',
+      title: 'Website Design and Application Development',
+      description: 'Website Design and Application Development',
+      header: 'Website Design and Application Development',
       headerImage: { color1: 'rgba(255, 255, 255, 0.2)', color2: 'rgba(0, 255, 255, 0.5)', url: '/imgs/webdesign.jpg', height: 60 },
       headerStyle: { bgStyle: 'text-primary parralaxEffect' },
       bannerImage: '/imgs/webdesign.jpg',
-      subheader: 'Putting your business out there',
+      subheader: 'Be where the world is going',
       subheaderStyle: { color: 'text-black', buttonVariant: 'info' },
       content:
         [
@@ -129,12 +129,12 @@ export const state = () => ({
           { text: 'We can also help you with a refresh and redesign if your website is looking a little dated. We can review your existing web design and provide recommendations on ways to improve its visual look and feel and performance. All our websites are search engine optimized, ensuring our sites are visible to search engines once published.' },
           { text: 'If you are looking to launch an online store , we can design and develop an eCommerce website fully integrated into a payment gateway. With a the range of other services we offer , we really do give you a turnkey business solution.' }
         ],
-      price: { value: 120, unit: 'hour' },
+      price: { value: 95, unit: 'hour' },
       rate: 'hour',
       marketing: {
-        header: 'Drive traffic to your website',
-        subheader: 'Using the latest SEO standards and practices',
-        content: 'Increase your ranking and drive organic traffic to your site'
+        header: 'Be where the world is going',
+        subheader: 'with the latest tech in web design and development',
+        content: 'Using proven vanilla lightweight and super-fast web technologies'
       },
       cloud: [{ text: 'Website', value: 2000 },
         { text: 'Design', value: 1900 },
@@ -159,13 +159,13 @@ export const state = () => ({
         { text: 'Content', value: 90 },
         { text: 'CMS', value: 80 },
         { text: 'Product', value: 70 }],
-      tags: ['packaged', 'direct']
+      keywords: ['website', 'design', 'development', 'html', 'css', 'java', 'javascript', 'VanillaJS', 'data', 'engineering', 'mentoring', 'workshops']
     },
     {
       id: 'photography',
-      title: 'Website Photography',
-      description: 'Product, commercial and landscape photography for branding',
-      header: 'Digital Photography for your website',
+      title: 'Creative Digital Photography',
+      description: 'Digital photography for branding and websites',
+      header: 'Creative Digital Photography',
       headerImage: { color1: 'rgba(255, 255, 255, 0.2)', color2: 'rgba(0, 255, 255, 0.5)', url: '/imgs/photography.jpg', height: 60 },
       headerStyle: { bgStyle: 'text-primary parralaxEffect' },
       bannerImage: '/imgs/photography.jpg',
@@ -183,9 +183,9 @@ export const state = () => ({
           { text: 'Contact us with your requirements.' }
         ],
       marketing: {
-        header: 'Drive traffic to your website',
-        subheader: 'Using the latest SEO standards and practices',
-        content: 'Increase your ranking and drive organic traffic to your site'
+        header: 'Enhance your website visuals',
+        subheader: 'Compliment your branding',
+        content: 'Using creative digital photography techniques'
       },
       slides: [
         {
@@ -205,7 +205,7 @@ export const state = () => ({
           caption: 'Hosting'
         }
       ],
-      price: { value: 950, unit: 'package' },
+      price: { value: 920, unit: 'package' },
       cloud: [{ text: 'Website', value: 2000 },
         { text: 'Design', value: 1900 },
         { text: 'Optimisation', value: 1800 },
@@ -229,7 +229,7 @@ export const state = () => ({
         { text: 'Content', value: 90 },
         { text: 'CMS', value: 80 },
         { text: 'Product', value: 70 }],
-      tags: ['packaged', 'direct']
+      keywords: ['digital photography', 'creative photography', 'product photography', 'portrait photography', 'workshops']
     }
 
   ]

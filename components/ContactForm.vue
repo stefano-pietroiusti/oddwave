@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-v-html -->
 <template>
   <b-container id="contactForm" fluid class="bg-primary text-secondary w-75 m-5">
     <b-row>
@@ -84,10 +85,12 @@
       <pre class="m-0">{{ form }}</pre>
         </b-card>-->
       </b-col>
-      <b-col w="25" class="mt-10">
-        <h4 v-html="companyphone1" /><br>
-        <h4 v-html="companyphone2" /><br>
-        <h4 v-html="companyemail" />
+      <b-col w="30" class="mt-5 text-left">
+        <h3>
+          Contact the Odd Wave team directly:
+        </h3>
+        <h4 v-html="companyphone1" /><h4 v-html="companyphone2" /><h4 v-html="companyemail" />
+        </h3>
       </b-col>
     </b-row>
   </b-container>
@@ -122,9 +125,9 @@ export default {
   data () {
     return {
       companyemail:
-        '<a href="mailto:&#116;&#101;&#097;&#109;&#064;&#116;&#104;&#101;&#111;&#100;&#100;&#119;&#097;&#118;&#101;&#046;&#099;&#111;&#046;&#110;&#122;">&#116;&#101;&#097;&#109;&#064;&#116;&#104;&#101;&#111;&#100;&#100;&#119;&#097;&#118;&#101;&#046;&#099;&#111;&#046;&#110;&#122;</a>',
-      companyphone1: '<a href="tel:+64 210 8658 172">+64 210 8658 172</a>',
-      companyphone2: '<a href="tel:+64 210 8823 769">+64 210 8823 769</a>',
+        '<a href="mailto:&#116;&#101;&#097;&#109;&#064;&#116;&#104;&#101;&#111;&#100;&#100;&#119;&#097;&#118;&#101;&#046;&#099;&#111;&#046;&#110;&#122;">e: &#116;&#101;&#097;&#109;&#064;&#116;&#104;&#101;&#111;&#100;&#100;&#119;&#097;&#118;&#101;&#046;&#099;&#111;&#046;&#110;&#122;</a>',
+      companyphone1: '<a href="tel:+64 210 8658 172">m: +64 210 8658 172</a>',
+      companyphone2: '<a href="tel:+64 210 8823 769">m: +64 210 8823 769</a>',
       form: {
         email: '',
         name: '',

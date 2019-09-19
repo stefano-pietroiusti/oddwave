@@ -14,18 +14,24 @@ export default {
   },
   head () {
     return {
-      title: 'The Odd Wave digital and web design services',
+      title: this.title,
       meta: [
-        { name: 'twitter:title', content: 'The Odd Wave' },
-        { name: 'twitter:description', content: 'Nuxt + Vue School = 🍕' },
-        { name: 'twitter:image', content: 'https://i.imgur.com/UYP2umJ.png' },
-        { name: 'twitter:card', content: 'summary_large_image' }
+        {
+          hid: 'oddwave-contact',
+          name: this.title,
+          content: this.title + ' and ' + this.pheader
+        },
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content: this.keywords
+        }
       ]
     }
   },
   data (context) {
     return {
-      // pimage,
+      title: 'Contact the Odd Wave of website, search and data services',
       pimage: 'none',
       pheader: "LET'S CREATE SOME AWESOMENESS",
       pheaderImage: {
@@ -35,9 +41,7 @@ export default {
         height: 30
       },
       pstyle: { bgStyle: 'parralaxNormal text-primary text-left' },
-      psubheader: 'Contact form subheader',
-      email: 'team@theoddwave.co.nz',
-      phone: '+64 210 8823 769'
+      keywords: ['contact', 'websites', 'seo', 'vanillajs', 'data engineering', 'workshops']
     }
   },
   computed: {

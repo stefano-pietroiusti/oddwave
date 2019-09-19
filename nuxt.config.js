@@ -25,14 +25,13 @@ export default {
   /*
    ** Headers of the page
    */
-   generate: {
+  generate: {
     subFolders: true,
     routes: [
       '/',
       '/services/seo',
       '/services/ppc',
       '/services/webdesign',
-      '/services/hosting',
       '/services/photography',
       '/contact'
     ]
@@ -59,13 +58,10 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Nunito+Sans|Roboto|Black+Han+Sans|Bowlby+One+SC|Syncopate|Abril+Fatface|Exo|Righteous&display=swap' },
-      { rel: 'stylesheet', href: 'https://db.onlinewebfonts.com/c/6c79f7fd645c0d39b4ca10428237984a?family=Azo+Sans|AzoSansUberW01-Regular' },
+      // { rel: 'stylesheet', href: 'https://db.onlinewebfonts.com/c/6c79f7fd645c0d39b4ca10428237984a?family=Azo+Sans|AzoSansUberW01-Regular' },
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' },
-      { rel: 'stylesheet', href: 'https://www.w3schools.com/w3css/4/w3.css' }
+      // { rel: 'stylesheet', href: 'https://www.w3schools.com/w3css/4/w3.css' }
     ]
-    // , script: [
-    //   { src: 'https://d3js.org/d3.v3.min.js' }, { src: 'https://rawgit.com/jasondavies/d3-cloud/master/build/d3.layout.cloud.js' }
-    // ]
   },
   /*
    ** Customize the progress-bar color
@@ -75,9 +71,9 @@ export default {
    ** Global CSS
    */
   css: [
-    '@fortawesome/fontawesome-svg-core/styles.css',
+    // '@fortawesome/fontawesome-svg-core/styles.css',
     '@/assets/scss/custom.scss',
-    '@/assets/css/bootstrap-social.css'
+    // '@/assets/css/bootstrap-social.css'
   ],
   /*
    ** Plugins to load before mounting the App
@@ -85,17 +81,10 @@ export default {
   plugins: [
     '~/plugins/anime.js',
     '~/plugins/fontawesome.js',
-    '~/plugins/vue-inject.js',
-    { src: '~plugins/vue-particles', mode: 'client' },
-    { src: '~plugins/vue-parallaxy', mode: 'client' },
+    // { src: '~plugins/vue-parallaxy', mode: 'client' },
     // { src: '~/plugins/vue-fb-customer-chat', mode: 'client' },
     { src: '~/plugins/vue-notifications', mode: 'client' },
-    // { src: '~/plugins/vue-resize-directive', mode: 'client' },
-    { src: '~/plugins/vue-chartjs.js', mode: 'client' },
-    { src: '~/plugins/hchs-vue-charts', mode: 'client' }, //https://www.yasminzy.com/nuxt/chart.html#steps
-    // { src: '~/plugins/helper.js' }
-    { src: '~/plugins/vue-d3-cloud.js', mode: 'client' } //https://www.yasminzy.com/nuxt/chart.html#steps
-
+    { src: '~/plugins/vue-chartjs.js', mode: 'client' }
   ],
   /*
    ** Nuxt.js dev-modules
@@ -111,11 +100,14 @@ export default {
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
     '@nuxtjs/axios',
-    'nuxt-simple-line-icons'
+    'nuxt-simple-line-icons', 
+    'nuxt-svg-loader',
+    'nuxt-responsive-loader'
   ]
-  // , bootstrapVue: {
-  // bootstrapCSS: false, // Or `css: false`
-  // bootstrapVueCSS: false, // Or `bvCSS: false`
+  // bootstrapVue: {
+  //   bootstrapCSS: false, // Or `css: false`
+  //   bootstrapVueCSS: false // Or `bvCSS: false`
+  // }
   // componentPlugins: [
   //   'LayoutPlugin',
   //   'FormPlugin',
@@ -126,18 +118,26 @@ export default {
   //   'ModalPlugin'
   // ],
   // directivePlugins: ['VBPopoverPlugin', 'VBTooltipPlugin', 'VBScrollspyPlugin']
-
   // }
-  ,
+  ,responsiveLoader: {
+    name: 'img/[hash:7]-[width].[ext]',
+    quality: 65 // choose a lower value if you want to reduce filesize further
+    // name: 'img/[hash:7]-[width].[ext]'
+    // min: 640 // minimum image width generated
+    // max: 1080 // maximum image width generated
+    // steps: 5 // five sizes per image will be generated
+    // placeholder: false // no placeholder will be generated
+    // quality: 65 // images are compressed with medium quality    
+  },
   serverMiddleware: [
-    { path: '/api/logger', handler: '~/api/logger.js' },
-    { path: '/api/contact', handler: '~/serverMiddleware/contact' } //or just '~/serverMiddleware/contact' because handler is inside code
+    // { path: '/api/logger', handler: '~/api/logger.js' },
+    { path: '/api/contact', handler: '~/serverMiddleware/contact' }
   ],
   /*
    ** Build configuration
    */
   build: {
-    vendor: ['vue-fb-customer-chat'],
+    // vendor: ['vue-fb-customer-chat'],
 
     /*
      ** You can extend webpack config here

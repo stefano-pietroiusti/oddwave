@@ -1,28 +1,28 @@
 <template>
-  <b-container fluid class="contactForm text-center bg-primary text-secondary p-3 rounded w-75 h-75 d-inline-block">
-    <b-form
-      v-if="show"
-      small
-      class="bg-secondary text-primary p-3 rounded"
-      @submit="onSubmit"
-      @reset="onReset"
-    >
-      <b-form-group id="input-group-1" label="Email address:" label-for="input-1">
+  <b-container id="contactForm" fluid :style="gradient" :class="pstyle.bgStyle">
+    <b-form v-if="show" small class="text-primary text-left w-50" @submit="onSubmit" @reset="onReset">
+      <b-form-group id="input-group-2" label="My name is:" label-for="input-2" label-size="lg">
+        <b-form-input id="input-2" v-model="form.name" required placeholder="Enter name" size="lg" />
+      </b-form-group>
+      <b-form-group id="input-group-1" label="you may contact me on:" label-for="input-1" label-size="lg">
         <b-form-input
           id="input-1"
           v-model="form.email"
           type="email"
           required
           placeholder="Enter email"
+          size="lg"
         />
       </b-form-group>
-      <b-form-group id="input-group-2" label="Your Name:" label-for="input-2">
-        <b-form-input id="input-2" v-model="form.name" required placeholder="Enter name" />
+      <b-form-group id="input-group-3" label="i am based here:" label-for="input-3" label-size="lg">
+        <b-form-select id="input-3" v-model="form.location" :options="locations" required size="lg" />
       </b-form-group>
-      <b-form-group id="input-group-3" label="Location:" label-for="input-3">
-        <b-form-select id="input-3" v-model="form.location" :options="locations" required />
-      </b-form-group>
-      <b-form-group id="input-group-4" label="Services of interest:" class="bg-secondary text-primary mt-5">
+      <b-form-group
+        id="input-group-4"
+        label="I require help with the following:"
+        label-size="lg"
+        class="bg-secondary text-primary mt-5"
+      >
         <b-form-checkbox-group
           id="Services-selection"
           v-model="form.service"
@@ -30,9 +30,10 @@
           stacked
           buttons
           button-variant="outline-success"
+          size="lg"
         />
       </b-form-group>
-      <b-form-group id="input-group-5" label="Enquiry:" label-for="input-5">
+      <b-form-group id="input-group-5" label="I also need:" label-for="input-5" label-size="lg">
         <b-form-textarea
           id="input-5"
           v-model="form.enquiry"
@@ -63,6 +64,22 @@ export default {
       default () {
         return [{ value: 'SEO', text: 'SEO', selected: true }]
       }
+    },
+    pbgimage: {
+      type: Object,
+      default () {
+        return {
+          color1: 'rgba(85, 255, 0, 0.2)',
+          color2: 'rgba(0, 255, 255, 0.5)',
+          url: '/imgs/seodigital.jpg'
+        }
+      }
+    },
+    pstyle: {
+      type: Object,
+      default () {
+        return { bgStyle: 'parralaxNormal text-primary text-left p-5  vh-100' }
+      }
     }
   },
   data () {
@@ -81,6 +98,21 @@ export default {
         'Other - international'
       ],
       show: true
+    }
+  },
+  computed: {
+    gradient () {
+      return {
+        backgroundImage: `linear-gradient(45deg, rgba(255, 255, 255, 1) 2%, rgba(255, 255, 255, 0) 100%), url(${this.pbgimage.url})`,
+        height: '100%',
+        width: '100%',
+        bottom: 0,
+        backgroundAttachment: 'fixed',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        textTransform: 'uppercase'
+      }
     }
   },
   notifications: {
@@ -134,92 +166,7 @@ export default {
 }
 </script>
 <style scoped>
-/* .my-buttons .active {
-  color: #fff !important;
-  background-color: #28a745 !important;
-  border-color: #28a745 !important;
-} */
-
-/* https://www.w3schools.com/css/css3_gradients.asp
-#grad {
-  background-image: linear-gradient(to right, red , yellow);
+#contactForm {
+  text-transform: none
 }
-#grad1 {
-  background-image: linear-gradient(-90deg, red, yellow);
-}
-
-#grad2 {
-  background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
-}
-#grad3 {
-  background-image: radial-gradient(red 5%, yellow 15%, green 60%);
-}
-#grad4 {
-  background-image: radial-gradient(circle, red, yellow, green);
-}
-#grad5 {
-  background-image: repeating-radial-gradient(red, yellow 10%, green 15%);
-}
-*/
-/* .contact-form {
-
-  margin: 0 auto;
-  max-width: 600px;
-  width: 100%;
-
-}
-
-.contact-form .separator {
-  border-bottom: solid 1px #ccc;
-  margin-bottom: 15px;
-}
-
-.contact-form .form {
-  display: flex;
-  flex-direction: column;
-  font-size: 16px;
-}
-
-.contact-form_title {
-  color: #333;
-  text-align: left;
-  font-size: 28px;
-}
-
-.contact-form input[type='email'],
-.contact-form input[type='text'],
-.contact-form textarea {
-  border: solid 1px #e8e8e8;
-  font-family: 'Roboto', sans-serif;
-  padding: 10px 7px;
-  margin-bottom: 15px;
-  outline: none;
-}
-
-.contact-form textarea {
-  resize: none;
-}
-
-.contact-form .button {
-  background: #da552f;
-  border: solid 1px #da552f;
-  color: white;
-  cursor: pointer;
-  padding: 10px 50px;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.contact-form .button:hover {
-  background: #ea532a;
-  border: solid 1px #ea532a;
-}
-
-.contact-form input[type='email'],
-.contact-form input[type='text'],
-.contact-form textarea,
-.contact-form .button {
-  font-size: 15px;
-  border-radius: 3px;
-} */
 </style>

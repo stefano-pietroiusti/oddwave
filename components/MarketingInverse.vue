@@ -1,28 +1,32 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
-  <no-ssr>
-    <b-container fluid class="bg-white text-left w-100">
-      <b-jumbotron
-        bg-variant="secondary"
-        text-variant="primary"
-        border-variant="primary"
-        class="text-center w-100"
-      >
-        <template slot="header">
-          {{ pheader }}
-        </template>
-        <template slot="lead">
-          <h3>{{ plead }}</h3>
-        </template>
-        <hr class="my-4 hrprimary">
-        <h4>{{ ptext }}</h4>
-        <hr class="my-4 hrprimary">
-        <b-button variant="info" to="/contact" class="btn-lg">
-          {{ penquire }}
-        </b-button>
-      </b-jumbotron>
-    </b-container>
-  </no-ssr>
+  <b-jumbotron
+    bg-variant="secondary"
+    text-variant="primary"
+    fluid
+    class="text-left m-0"
+  >
+    <template slot="header">
+      <h3>
+        {{ pheader }}
+      </h3>
+    </template>
+    <template slot="lead">
+      <h4>
+        {{ plead }}
+      </h4>
+    </template>
+    <hr class="my-4 hrprimary">
+    <h4>
+      {{ ptext }}
+    </h4>
+    <hr class="my-4 hrprimary">
+    <b-button variant="info" to="/contact" class="btn-lg">
+      <h3>
+        {{ penquire }}
+      </h3>
+    </b-button>
+  </b-jumbotron>
 </template>
 <script>
 /* eslint-disable */

@@ -1,107 +1,58 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
   <div id="servicesContainer" class="text-center mt-header w-100">
-    <AnimeBannerWordsHeaderComponent :pheader="service.header" />
-    <HeaderComponent :psubheader="service.subheader" />
-    <h1>{{ service.isCarousel }}</h1>
-    <TextComponent
-      v-for="(item,i) in service.content"
-      :key="i"
-      :pcontent="item.text"
-      :pimage="item.image"
-    />
-    <!-- <TextImageComponent v-for="(item,i) in service.content" :key="i" :pcontent="item.text" /> -->
-    <Marketing
-      :pheader="service.marketing.header"
-      :plead="service.marketing.subheader"
-      :ptext="service.marketing.content"
-      :penquire="service.enquire"
-    />
-    <!-- <D3Cloud :pwordcloud="service.cloud" />-->
+    <no-ssr>
+      <AnimeBannerWordsHeaderComponent :pheader="service.header" :pbgimage="service.headerImage" :pstyle="service.headerStyle" />
+      <span id="marketing">
+        <HeaderComponent :psubheader="service.subheader" :pstyle="service.subheaderStyle" />
+        <MarketingButton
+          :penquire="service.enquire"
+          :pstyle="service.subheaderStyle"
+        />
+      </span>
+      <TextImageComponent
+        :pcontent="{ bgImage: service.bannerImage}"
+        :pstyle="{ bgStyle: 'parralaxEffect w-100 text-primary text-left p-10'}"
+      />
+      <span v-if="service.slides" id="carousel">
+        <CarouselComponent :slides="service.slides" />
+      </span>
+      <TextImageComponent
+        v-for="(item,i) in service.content"
+        :key="i"
+        :pcontent="{ text: item.text, bgImage: item.image }"
+        :pstyle="(item.dark) ? { bgStyle: 'parralaxNormal w-100 text-secondary text-left', inlineImageStyle: 'inlineImage20 inlineImageLeft'} : { bgStyle: 'parralaxNormal w-100 text-primary text-left', inlineImageStyle: 'inlineImage20 inlineImageLeft'}"
+      />
+
+      <Marketing
+        :pheader="service.marketing.header"
+        :plead="service.marketing.subheader"
+        :ptext="service.marketing.content"
+        :penquire="service.enquire"
+      />
+
+    <!--    <CarouselComponent :slides="service.slides" /> <D3Cloud :pwordcloud="service.cloud" />-->
+    </no-ssr>
   </div>
-  <!-- <b-container fluid class="text-center mt-header">
-    <b-row>
-      <b-col>
-        <AnimeBannerWordsHeaderComponent :pheader="service.header" />
-        <HeaderComponent :psubheader="service.subheader" />
-      </b-col>
-    </b-row>
-    <b-row>
-      <b-col>
-        <TextComponent
-          v-for="(item,i) in service.content"
-          :key="i"
-          :pcontent="item.text"
-          :pimage="item.image"
-        />
-      </b-col>
-    </b-row>
-    <b-row class="w-50">
-      <b-col class="w-50 text-left">
-        <Marketing
-          :pheader="service.marketing.header"
-          :plead="service.marketing.subheader"
-          :ptext="service.marketing.content"
-          :penquire="service.enquire"
-        />
-      </b-col>
-    </b-row>
-    <b-row class="w-100 text-left">
-      <b-col text-left>
-        <MarketingOverlayComponent
-          :pheader="service.marketing.header"
-          :plead="service.marketing.subheader"
-          :ptext="service.marketing.content"
-          :penquire="service.enquire"
-        />
-      </b-col>
-  </b-row>-->
-  <!-- <b-container fluid class="text-center  mt-header w-100">
-      <b-row>
-        <b-col w="50">
-          <Marketing
-            :pheader="service.marketing.header"
-            :plead="service.marketing.subheader"
-            :ptext="service.marketing.content"
-            :penquire="service.title"
-          />
-        </b-col>
-        <b-col w="50">
-          <D3Cloud :pwordcloud="service.cloud" />
-        </b-col>
-      </b-row>
-  </b-container>-->
-  <!-- <AnimeBannerParticleComponent :pheader="service.header" /> -->
-  <!-- <h3>Other services</h3>
-      <span v-for="(value, index) in relatedservices" :key="index">
-        <p>{{ value.title }}</p>
-  </span>-->
-  <!-- <ul>
-        <li :key="item.id" v:for="item in relatedServices">
-          <nuxt-link :to="{name: 'services-id', params: {id: item.id}}">
-            {{ item.title }}
-          </nuxt-link>
-        </li>
-  </ul>-->
 </template>
 
 <script>
-// import R from 'ramda'
 import HeaderComponent from '@/components/HeaderComponent'
 import Marketing from '@/components/Marketing'
-// import TextImageComponent from '@/components/TextImageComponent'
-import TextComponent from '@/components/TextComponent'
+import MarketingButton from '@/components/MarketingButton'
+import TextImageComponent from '@/components/TextImageComponent'
 import AnimeBannerWordsHeaderComponent from '@/components/AnimeBannerWordsHeaderComponent'
-// import CarouselComponent from '@/components/CarouselComponent'
-const R = require('ramda')
+import CarouselComponent from '@/components/CarouselComponent'
 
+const R = require('ramda')
 export default {
   components: {
     HeaderComponent,
     Marketing,
-    TextComponent,
-    AnimeBannerWordsHeaderComponent
-    // CarouselComponent
+    MarketingButton,
+    TextImageComponent,
+    AnimeBannerWordsHeaderComponent,
+    CarouselComponent
   },
   head () {
     return {
@@ -137,8 +88,19 @@ export default {
         service => service.id !== this.id
       )
       return related
-      // return { id: related.id, header: related.header, title: related.title }
+    },
+    gradientStart () {
+      return {
+        backgroundImage: `linear-gradient(45deg, rgba(85, 255, 0, 0.2) 0%, rgba(0, 255, 255, 0.5) 100%), url(/imgs/seodigital.jpg)`,
+        color: 'red'
+      }
     }
+  // gradientEnd() {
+  //   return {
+  //     backgroundImage: `linear-gradient(to left, ${this.colorEnd}, ${this.colorStart})`,
+  //     color: "red"
+  //   }
+  // }
     // totalServices () {
     //   return this.$store.state.services.totalServices()
     // }
@@ -147,4 +109,11 @@ export default {
 </script>
 
 <style scoped>
+#marketing{
+ position: absolute;
+ width: 50%;
+ height: 60%;
+  bottom: 0;
+  margin: auto;
+}
 </style>

@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 export default {
   buildDir: 'nuxt-dist',
   env: {
@@ -9,7 +11,6 @@ export default {
     // contactFrom: '"The Odd Wave Web" <theoddwavecontact@gmail.com>',
     // contactTo: 'theoddwavecontact@gmail.com,stefano.pietroiusti@gmail.com,jalinevandyk@gmail.com',
     // contactSubject: 'Website enquiry',
-    DEPLOY_ENV: 'STATIC'
   },
   layoutTransition: {
     name: 'layout',
@@ -42,8 +43,8 @@ export default {
   */
   router: {
     // base: process.env.DEPLOY_ENV === 'STATIC' ? '/nuxt-example/' : '/'
-    base: '/oddwave/'
-    // base: '/'
+    // base: '/oddwave/'
+    base: ''
   },
   head: {
     title: process.env.npm_package_name || 'The Odd Wave digital and web design services',
@@ -98,7 +99,8 @@ export default {
     '@nuxtjs/axios',
     'nuxt-simple-line-icons',
     'nuxt-svg-loader',
-    'nuxt-responsive-loader'
+    'nuxt-responsive-loader',
+    ['@nuxtjs/dotenv', { only: ['BASE_URL']  }]
   ],
   // bootstrapVue: {
   //   bootstrapCSS: false, // Or `css: false`

@@ -87,7 +87,7 @@
       </b-col>
       <b-col w="30" class="mt-5 text-left">
         <h3>Contact the Odd Wave team directly:</h3>
-        <!-- <h3>Contact the Odd Wave team directly: {{ getBase }}</h3> -->
+        <h3>getBase: {{ getBase }}</h3>
         <h4 v-html="companyphone1" />
         <h4 v-html="companyphone2" />
         <h4 v-html="companyemail" />

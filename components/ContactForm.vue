@@ -86,11 +86,11 @@
         </b-card>-->
       </b-col>
       <b-col w="30" class="mt-5 text-left">
-        <h3>
-          Contact the Odd Wave team directly:
-        </h3>
-        <h4 v-html="companyphone1" /><h4 v-html="companyphone2" /><h4 v-html="companyemail" />
-        </h3>
+        <h3>Contact the Odd Wave team directly:</h3>
+        <!-- <h3>Contact the Odd Wave team directly: {{ getBase }}</h3> -->
+        <h4 v-html="companyphone1" />
+        <h4 v-html="companyphone2" />
+        <h4 v-html="companyemail" />
       </b-col>
     </b-row>
   </b-container>
@@ -157,6 +157,9 @@ export default {
         backgroundSize: 'cover',
         textTransform: 'uppercase'
       }
+    },
+    getBase () {
+      return this.$router.options.base.toLowerCase() ? `${process.env.baseUrl}${this.$router.options.base.toLowerCase()}api/contact` : `${process.env.baseUrl}/api/contact`
     }
   },
   notifications: {
@@ -180,7 +183,8 @@ export default {
     },
     async submitForm () {
       const response = await this.$axios.$post(
-        `${process.env.baseUrl}/api/contact`,
+        // `${process.env.baseUrl}/api/contact`,
+        this.getBase,
         { data: this.form }
       )
       if (response.statusCode === 200) {

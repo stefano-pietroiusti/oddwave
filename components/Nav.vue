@@ -4,7 +4,7 @@
       <b-col>
         <b-navbar toggleable="lg" fixed="top" type="dark" variant="primary">
           <b-navbar-brand to="/" class="logo">
-            <b-img src="/logos/oddwave.png" fluid alt="the odd wave" class="logo" />{{ title }}
+            <b-img src="logos/oddwave.png" fluid alt="the odd wave" class="logo" />{{ title }}
             <!-- <img :src="require('~/assets/logos/oddwave.png?size=400')" :srcset="require('~/assets/logos/oddwave.png').srcSet"> -->
             <!-- <Logo /> {{ title }} -->
           </b-navbar-brand>

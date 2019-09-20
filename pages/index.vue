@@ -10,7 +10,7 @@
       :pstyle="{ bgStyle: 'w-100 text-primary text-left  px-5 p-3'}"
     />
     <TextImageComponent
-      :pcontent="{ bgImage: '/imgs/collaboration.jpg'}"
+      :pcontent="{ bgImage: 'imgs/collaboration.jpg'}"
       :pstyle="{ bgStyle: 'parralaxNormal w-100 text-primary text-left p-10'}"
     />
 
@@ -28,7 +28,7 @@
       :pstyle="{ bgStyle: 'w-100 text-primary text-left px-5 pt-3'}"
     />
     <TextImageComponent
-      :pcontent="{ bgImage: '/imgs/collaboration.jpg'}"
+      :pcontent="{ bgImage: 'imgs/collaboration.jpg'}"
       :pstyle="{ bgStyle: 'parralaxNormal w-100 text-primary text-left p-7'}"
     />
     <TextImageComponent

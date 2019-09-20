@@ -1,13 +1,14 @@
 export default {
+  buildDir: 'nuxt-dist',
   env: {
-    baseUrl: process.env.BASE_URL || '',
-    contactHost: 'smtp.googlemail.com',
-    contactPort: 465,
-    contactUser: 'theoddwavecontact@gmail.com',
-    contactPwd: 'ix06KC7WA31K',
-    contactFrom: '"The Odd Wave Web" <theoddwavecontact@gmail.com>',
-    contactTo: 'theoddwavecontact@gmail.com,stefano.pietroiusti@gmail.com,jalinevandyk@gmail.com',
-    contactSubject: 'Website enquiry',
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000',
+    // contactHost: 'smtp.googlemail.com',
+    // contactPort: 465,
+    // contactUser: 'theoddwavecontact@gmail.com',
+    // contactPwd: 'ix06KC7WA31K',
+    // contactFrom: '"The Odd Wave Web" <theoddwavecontact@gmail.com>',
+    // contactTo: 'theoddwavecontact@gmail.com,stefano.pietroiusti@gmail.com,jalinevandyk@gmail.com',
+    // contactSubject: 'Website enquiry',
     DEPLOY_ENV: 'STATIC'
   },
   layoutTransition: {
@@ -41,7 +42,8 @@ export default {
   */
   router: {
     // base: process.env.DEPLOY_ENV === 'STATIC' ? '/nuxt-example/' : '/'
-    // base: '/nuxt-static/'
+    base: '/oddwave/'
+    // base: '/'
   },
   head: {
     title: process.env.npm_package_name || 'The Odd Wave digital and web design services',

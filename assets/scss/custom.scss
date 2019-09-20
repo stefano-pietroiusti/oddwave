@@ -172,15 +172,15 @@ $font-size-base: 0.8rem;
       45deg,
       rgba(255, 0, 255, 0.8) 0%,
       rgba(0, 255, 255, 0.7) 100%
-    ),
+    );
     /* bottom, image */ 
-    url("/imgs/oddwave.jpg");
+    // url("~imgs/oddwave.jpg");
   width: 100%;
   height: 40vh;
 }
 
 // .parralax1 {
-//   background: linear-gradient(45deg, rgba(85, 255, 0, 0.2) 0%, rgba(0, 255, 255, 0.5) 100%), url(/imgs/seodigital.jpg);
+//   background: linear-gradient(45deg, rgba(85, 255, 0, 0.2) 0%, rgba(0, 255, 255, 0.5) 100%), url(imgs/seodigital.jpg);
 //   width: 100%;
 //   height: 50vh;
 // }
@@ -192,22 +192,22 @@ $font-size-base: 0.8rem;
 //       rgba(255, 0, 255, 0.8) 0%,
 //       rgba(0, 255, 255, 0.7) 100%
 //     ),
-//     /* bottom, image */ url("/imgs/seodigital.jpg");
+//     /* bottom, image */ url("imgs/seodigital.jpg");
 //   width: 100%;
 //   height: 50vh;
 // }
 
-.parralaxImageOverlay {
-  background: 
-    /* top, transparent red, faked with gradient */ linear-gradient(
-      45deg,
-      rgba(255, 0, 255, 0.45) 0%,
-      rgba(0, 255, 255, 0.45) 100%
-    ),
-    /* bottom, image */ url("/imgs/oddwave.jpg");
-  width: 100%;
-  height: 50%;
-}
+// .parralaxImageOverlay {
+//   background: 
+//     /* top, transparent red, faked with gradient */ linear-gradient(
+//       45deg,
+//       rgba(255, 0, 255, 0.45) 0%,
+//       rgba(0, 255, 255, 0.45) 100%
+//     ),
+//     /* bottom, image */ url("imgs/oddwave.jpg");
+//   width: 100%;
+//   height: 50%;
+// }
 .parralaxEffect {
   background-attachment: fixed;
   background-position: center;

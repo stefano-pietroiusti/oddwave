@@ -37,7 +37,7 @@ export default {
       pheaderImage: {
         color1: 'rgba(255, 255, 255, 0)',
         color2: 'rgba(255, 255, 255, 0.5)',
-        url: '/imgs/contact.jpg',
+        url: 'imgs/contact.jpg',
         height: 30
       },
       pstyle: { bgStyle: 'parralaxNormal text-primary text-left' },

@@ -132,14 +132,9 @@ $body-color: $gunmetal;
 $font-family-base: $font-family-nunitosans;
 
 $font-size-base: 0.8rem;
-// Then include the following
-// @import 'bootstrap/scss/bootstrap.scss';
-// @import 'bootstrap-vue/src/index.scss';
+
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "../../node_modules/bootstrap-vue/src/index.scss";
-// @import 'bootstrap/scss/bootstrap.scss';
-// @import 'bootstrap-vue/src/index.scss';
-// @import '../../node_modules/bootstrap/scss/bootstrap';
 
 // And define any of your custom or additional CSS/SCSS here,
 // or via an @import

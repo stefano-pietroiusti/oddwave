@@ -1,11 +1,8 @@
 <template>
-  <b-container
-    id="animationBanner"
-    fluid
-    class="text-center text-secondary parralaxHome"
-  >
+  <b-container id="animationBanner" fluid class="text-center text-secondary" :style="gradient">
     <b-row>
-      <b-col cols="2" /> <b-col cols="8">
+      <b-col cols="2" />
+      <b-col cols="8">
         <h1 class="anim1">
           <span class="letters word-1">Modern</span>
           <span class="letters word-2">Lightweight</span>
@@ -27,7 +24,8 @@
             <span class="line text-center bg-secondary" />
           </span>
         </h3>
-      </b-col> <b-col cols="2" />
+      </b-col>
+      <b-col cols="2" />
     </b-row>
   </b-container>
 </template>
@@ -35,7 +33,7 @@
 <script>
 /* eslint-disable */
 export default {
-    mounted() {
+  mounted() {
     const anim1 = {}
     anim1.opacityIn = [0, 1]
     anim1.scaleIn = [0.2, 1]
@@ -254,6 +252,33 @@ export default {
     handleScroll() {
       // Your scrhandleResizeling here
       // console.log(window.scrollY)
+    }
+  },
+  props: {
+    pbgimage: {
+      type: Object,
+      default() {
+        return {
+          color1: 'rgba(85, 255, 0, 0.2)',
+          color2: 'rgba(0, 255, 255, 0.5)',
+          url: '/imgs/seodigital.jpg',
+          height: 100
+        }
+      }
+    }
+  },
+  computed: {
+    gradient() {
+      return {
+        backgroundImage: `linear-gradient(45deg,  ${this.pbgimage.color1}, ${this.pbgimage.color2}), url(${this.pbgimage.url})`,
+        width: '100%',
+        height: `${this.pbgimage.height}vh`,
+        backgroundAttachment: 'fixed',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        textTransform: 'uppercase'
+      }
     }
   }
 }

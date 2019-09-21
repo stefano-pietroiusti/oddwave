@@ -19,7 +19,7 @@ export default {
   pageTransition: {
     name: 'page',
     mode: 'out-in',
-    beforeEnter (el) {
+    beforeEnter(el) {
       console.log('Before enter...')
     }
   },
@@ -82,6 +82,7 @@ export default {
     // { src: '~/plugins/vue-fb-customer-chat', mode: 'client' },
     { src: '~/plugins/vue-notifications', mode: 'client' },
     { src: '~/plugins/vue-chartjs.js', mode: 'client' }
+    // { src: '~/plugins/bootstrap-vue', mode: 'client' }
   ],
   /*
    ** Nuxt.js dev-modules
@@ -100,23 +101,14 @@ export default {
     'nuxt-simple-line-icons',
     'nuxt-svg-loader',
     'nuxt-responsive-loader',
-    ['@nuxtjs/dotenv', { only: ['BASE_URL']  }]
+    ['@nuxtjs/dotenv', { only: ['BASE_URL'] }]
   ],
-  // bootstrapVue: {
-  //   bootstrapCSS: false, // Or `css: false`
-  //   bootstrapVueCSS: false // Or `bvCSS: false`
-  // }
-  // componentPlugins: [
-  //   'LayoutPlugin',
-  //   'FormPlugin',
-  //   'FormCheckboxPlugin',
-  //   'FormInputPlugin',
-  //   'FormRadioPlugin',
-  //   'ToastPlugin',
-  //   'ModalPlugin'
-  // ],
-  // directivePlugins: ['VBPopoverPlugin', 'VBTooltipPlugin', 'VBScrollspyPlugin']
-  // }
+  bootstrapVue: {
+    bootstrapCSS: false, // Or `css: false`
+    bootstrapVueCSS: false, // Or `bvCSS: false`,
+    // components: ['BContainer', 'BRow', 'BCol', 'BFormInput', 'BButton', 'BTable', 'BModal', 'BNavBar', 'BNav'],
+    // directives: ['VBModal', 'VBPopover', 'VBTooltip', 'VBScrollspy']
+  },
   responsiveLoader: {
     name: 'img/[hash:7]-[width].[ext]',
     quality: 65 // choose a lower value if you want to reduce filesize further
@@ -140,7 +132,7 @@ export default {
     /*
      ** You can extend webpack config here
     */
-    extend (config, ctx) {
+    extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({

@@ -58,7 +58,7 @@ export default {
   },
   head () {
     return {
-      title: 'The Odd Wave digital and web design services',
+      title: 'The Odd Wave Digital and Web Design services',
       meta: [
         { name: 'twitter:title', content: 'The Odd Wave' },
         { name: 'twitter:description', content: 'Nuxt + Vue School = 🍕' },
@@ -69,9 +69,9 @@ export default {
   },
   data (context) {
     return {
-      pheader: 'Digital marketing and website development services',
-      panimheader: 'be where the world is going',
-      psubheader: 'to help your business grow',
+      pheader: 'Digital Marketing and Web Design Services',
+      panimheader: 'Be where the world is going',
+      psubheader: 'Helping your business grow',
       pimageoverlay: 'imgs/marketingstrategy.jpg',
       pimagebanner: 'imgs/analytics.jpg',
       psubtitle:

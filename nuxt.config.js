@@ -1,7 +1,13 @@
 require('dotenv').config()
 
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/oddwave/'
+  }
+} : {}
+
 export default {
-  buildDir: 'nuxt-dist',
+  buildDir: 'dist',
   env: {
     baseUrl: process.env.BASE_URL || 'http://localhost:3000',
     // contactHost: 'smtp.googlemail.com',
@@ -34,8 +40,7 @@ export default {
       '/services/seo',
       '/services/ppc',
       '/services/webdesign',
-      '/services/photography',
-      '/contact'
+      '/services/photography'
     ]
   },
   /*

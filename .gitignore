@@ -93,4 +93,4 @@ sw.*
 assets/scss/bootstrap/
 assets/scss/bootstrap-vue/
 
-nuxt-dist/
+dist/

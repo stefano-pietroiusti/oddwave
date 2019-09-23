@@ -189,21 +189,38 @@ export const state = () => ({
       },
       slides: [
         {
-          image: 'imgs/analytics.jpg',
-          caption: 'Analytics'
+          image: 'imgs/carousel/art.jpg',
+          caption: 'Art'
         },
         {
-          image: 'imgs/design.jpg',
+          image: 'imgs/carousel/bee.jpg',
           caption: 'Design'
         },
         {
-          image: 'imgs/collaboration.jpg',
-          caption: 'Collaboration'
+          image: 'imgs/carousel/colluseum.jpg',
+          caption: 'Lamdmarks'
         },
         {
-          image: 'imgs/hosting.jpg',
-          caption: 'Hosting'
+          image: 'imgs/carousel/flower.jpg',
+          caption: 'Nature'
+        },
+        {
+          image: 'imgs/carousel/kitten.jpg',
+          caption: 'Pets'
+        },
+        {
+          image: 'imgs/carousel/food.jpg',
+          caption: 'Food'
+        },
+        {
+          image: 'imgs/carousel/soupbowl.jpg',
+          caption: 'Food'
+        },
+        {
+          image: 'imgs/carousel/silhoette.jpg',
+          caption: 'Silhoette'
         }
+
       ],
       price: { value: 920, unit: 'package' },
       cloud: [{ text: 'Website', value: 2000 },

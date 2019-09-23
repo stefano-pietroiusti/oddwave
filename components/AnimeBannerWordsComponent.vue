@@ -1,8 +1,8 @@
 <template>
   <b-container id="animationBanner" fluid class="text-center text-secondary" :style="gradient">
     <b-row>
-      <b-col cols="2" />
-      <b-col cols="8">
+      <b-col cols="4" />
+      <b-col cols="10">
         <h1 class="anim1">
           <span class="letters word-1">Modern</span>
           <span class="letters word-2">Lightweight</span>
@@ -25,7 +25,7 @@
           </span>
         </h3>
       </b-col>
-      <b-col cols="2" />
+      <b-col cols="4" />
     </b-row>
   </b-container>
 </template>
@@ -325,8 +325,8 @@ export default {
   /* left: 0;
   top: 0vw;
   opacity: 0;  */
-  left: 0;
-  top: 2em;
+  left: 10;
+  top: 6em;
 }
 
 .anim2 .letter {
@@ -334,8 +334,8 @@ export default {
   display: inline-block;
   line-height: 1em;
   margin: auto;
-  left: 0;
-  top: 2em;
+  left: 10;
+  top: 6em;
   /* position: absolute;
   margin: auto;
   left: 0;
@@ -357,8 +357,8 @@ export default {
   /* position: relative; */
   line-height: 1em;
   margin: auto;
-  left: 0;
-  top: 0.3em;
+  left: 10;
+  top: 8em;
   /* top: 0.3em; */
 }
 

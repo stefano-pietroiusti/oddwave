@@ -80,7 +80,7 @@ export default {
       psubheader: 'to help your business grow',
       pimageoverlay: 'imgs/marketingstrategy.jpg',
       pimagebanner: 'imgs/analytics.jpg',
-      pHeaderImage: { color1: 'rgba(255, 0, 255, 0.8) 0%', color2: 'rgba(0, 255, 255, 0.7) 100%', url: 'imgs/oddwave.jpg', height: 40 },
+      pHeaderImage: { color1: 'rgba(255, 0, 255, 0) 0%', color2: 'rgba(0, 255, 255, 0) 0%', url: 'imgs/oddwave.jpg', height: 70 },
       psubtitle:
         "Our goal is to assist start-ups grow their business with an impactful online presence using latest proven web technologies and digital marketing solutions that won't break the bank. We believe that every business should be a success.",
       btext: 'Get in touch',

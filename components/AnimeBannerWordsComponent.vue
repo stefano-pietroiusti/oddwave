@@ -278,7 +278,7 @@ export default {
         return
       }
       const fileName = this.pbgimage.url
-      return require(`~/assets/${fileName}?size=1200`)
+      return require(`~/assets/imgs/banner/${fileName}?size=1080`)
     },
     bannerImage() {
       if (!this.pbgimage.url) {

@@ -12,6 +12,7 @@ export default {
   env: {
     // baseUrl: process.env.BASE_URL || 'http://localhost:3000',
     baseUrl
+    // maxImageSize: 1080
     // contactHost: 'smtp.googlemail.com',
     // contactPort: 465,
     // contactUser: 'theoddwavecontact@gmail.com',
@@ -124,9 +125,9 @@ export default {
   responsiveLoader: {
     name: 'img/oddwave-[hash:7]-[width].[ext]',
     quality: 100, 
-    min: 800, 
-    max: 1800,
-    steps: 6,
+    min: 640, 
+    max: 1080,
+    steps: 5,
     // sizes: [350, 500, 800, 1200, 1500, 1800], 
     // format: 'png',
     adapter: require('responsive-loader/sharp'),

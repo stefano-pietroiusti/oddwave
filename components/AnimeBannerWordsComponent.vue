@@ -25,7 +25,12 @@
           </span>
         </h3>
       </b-col>
-      <b-col cols="4" />
+      <b-col cols="4">
+        <!-- <img :src="bannerImage"> -->
+        <!-- <img :src="require('~/assets/images/Foo.jpg?size=400')" :srcset="require('~/assets/images/Foo.jpg').srcSet"> -->
+        <!-- {{ bannerImage }} and  {{ bannerImagePath }}
+        <img :srcset="require(`~/assets/${bannerImage}`).srcSet">-->
+      </b-col>
     </b-row>
   </b-container>
 </template>
@@ -268,9 +273,27 @@ export default {
     }
   },
   computed: {
+    bannerImagePath() {
+      if (!this.bannerImage) {
+        return
+      }
+      const fileName = this.pbgimage.url
+      return require(`~/assets/${fileName}?size=1200`)
+    },
+    bannerImage() {
+      if (!this.pbgimage.url) {
+        return
+      }
+      const fileName = this.pbgimage.url
+      // console.log('==========bannerImage===========', `${fileName}`)
+      return fileName
+    },
     gradient() {
       return {
-        backgroundImage: `linear-gradient(45deg,  ${this.pbgimage.color1}, ${this.pbgimage.color2}), url(${this.pbgimage.url})`,
+        // https://developer.mozilla.org/en-US/docs/Web/CSS/image-set
+        // backgroundImage: `linear-gradient(45deg,  ${this.pbgimage.color1}, ${this.pbgimage.color2}), url(${this.pbgimage.url})`,
+        // , image-set(require(~/assets/${this.bannerImage} 2x))
+        backgroundImage: `linear-gradient(45deg,  ${this.pbgimage.color1}, ${this.pbgimage.color2}), url(${this.bannerImagePath})`,
         width: '100%',
         height: `${this.pbgimage.height}vh`,
         backgroundAttachment: 'fixed',

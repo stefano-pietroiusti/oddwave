@@ -6,9 +6,12 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   }
 } : {}
 
+const baseUrl = process.env.BASE_URL || 'http://localhost:3000'
+
 export default {
   env: {
-    baseUrl: process.env.BASE_URL || 'http://localhost:3000',
+    // baseUrl: process.env.BASE_URL || 'http://localhost:3000',
+    baseUrl
     // contactHost: 'smtp.googlemail.com',
     // contactPort: 465,
     // contactUser: 'theoddwavecontact@gmail.com',
@@ -41,6 +44,7 @@ export default {
       '/services/photography'
     ]
   },
+
   ...routerBase,
   head: {
     title: process.env.npm_package_name || 'The Odd Wave digital and web design services',
@@ -97,7 +101,19 @@ export default {
     'nuxt-simple-line-icons',
     'nuxt-svg-loader',
     'nuxt-responsive-loader',
-    ['@nuxtjs/dotenv', { only: ['BASE_URL'] }]
+    ['@nuxtjs/dotenv', { only: ['BASE_URL'] }],
+    // https://npmjs.com/package/@nuxtjs/robots
+    ['@nuxtjs/robots', {
+      robots: [
+        {
+          UserAgent: '*',
+          Disallow: null
+        }
+      ]
+    }],
+    // https://www.npmjs.com/package/@nuxtjs/sitemap
+    '@nuxtjs/sitemap'
+    // '@nuxtjs/recaptcha'
   ],
   bootstrapVue: {
     bootstrapCSS: false, // Or `css: false`
@@ -106,15 +122,40 @@ export default {
     // directives: ['VBModal', 'VBPopover', 'VBTooltip', 'VBScrollspy']
   },
   responsiveLoader: {
-    name: 'img/[hash:7]-[width].[ext]',
-    quality: 65 // choose a lower value if you want to reduce filesize further
-    // name: 'img/[hash:7]-[width].[ext]'
-    // min: 640 // minimum image width generated
-    // max: 1080 // maximum image width generated
-    // steps: 5 // five sizes per image will be generated
-    // placeholder: false // no placeholder will be generated
-    // quality: 65 // images are compressed with medium quality
+    name: 'img/oddwave-[hash:7]-[width].[ext]',
+    quality: 100, 
+    min: 800, 
+    max: 1800,
+    steps: 6,
+    // sizes: [350, 500, 800, 1200, 1500, 1800], 
+    // format: 'png',
+    adapter: require('responsive-loader/sharp'),
+    placeholder: false,
+
   },
+  sitemap: {
+    hostname: baseUrl,
+    gzip: true,
+    // exclude: [
+    //   '/secret',
+    //   '/admin/**'
+    // ],
+    // routes: [
+    //   '/page/1',
+    //   {
+    //     url: '/page/2',
+    //     changefreq: 'daily',
+    //     priority: 1,
+    //     lastmodISO: '2017-06-30T13:30:00.000Z'
+    //   }
+    // ]
+  },
+  // recaptcha: {
+  //   hideBadge: Boolean, // Hide badge element (v3)
+  //   language: String,   // Recaptcha language (v2)
+  //   siteKey: String,    // Site key for requests
+  //   version: Number     // Version
+  // },
   serverMiddleware: [
     // { path: '/api/logger', handler: '~/api/logger.js' },
     { path: '/api/contact', handler: '~/serverMiddleware/contact' }
@@ -128,9 +169,9 @@ export default {
     /*
      ** You can extend webpack config here
     */
-    extend(config, ctx) {
+    extend(config, { isDev, isClient }) {
       // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
+      if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
@@ -141,7 +182,52 @@ export default {
           }
         })
       }
-    }
 
+      // https://stackoverflow.com/questions/48606325/how-to-resize-images-for-different-responsive-views
+      // tell webpack not to include jpgs and pngs
+      // config.module.rules.find(
+      //   rule => rule.loader === "url-loader"
+      // ).exclude = /\.(jpe?g|png)$/;
+
+      // //configure the responsive-loader
+      // config.module.rules.push({
+      //   test: /\.(jpe?g|png)$/i,
+      //   loader: 'responsive-loader',
+      //   options: {
+      //     min: 575,
+      //     max: 1140,
+      // //     min: 350,
+      // //     max: 2800,          
+      //     steps: 7,
+      //     placeholder: false,
+      //     quality: 60,
+      //     adapter: require("responsive-loader/sharp")
+      //   }
+      // })
+      // https://www.ahus1.de/post/nuxt-optimize-for-speed#optimise-raster-images-with-the-responsive-loader
+      // config.module.rules.unshift({
+      //   test: /\.(png|jpe?g|gif)$/,
+      //   use: {
+      //     loader: 'responsive-loader',
+      //     options: {
+      //       // disable: isDev,
+      //       placeholder: true,
+      //       quality: 85,
+      //       placeholderSize: 30,
+      //       name: 'img/[name].[hash:hex:7].[width].[ext]',
+      //       adapter: require('responsive-loader/sharp')
+      //     }
+      //   }
+      // })
+
+      // // remove old pattern from the older loader
+      // config.module.rules.forEach(value => {
+      //   if (String(value.test) === String(/\.(png|jpe?g|gif|svg|webp)$/)) {
+      //     // reduce to svg and webp, as other images are handled above
+      //     value.test = /\.(svg|webp)$/
+      //     // keep the configuration from image-webpack-loader here unchanged
+      //   }
+      // })
+    }
   }
 }

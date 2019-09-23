@@ -21,7 +21,7 @@
         v-for="(item,i) in service.content"
         :key="i"
         :pcontent="{ text: item.text, bgImage: item.image }"
-        :pstyle="(item.dark) ? { bgStyle: 'parralaxNormal w-100 text-secondary text-left', inlineImageStyle: 'inlineImage20 inlineImageLeft'} : { bgStyle: 'parralaxNormal w-100 text-primary text-left', inlineImageStyle: 'inlineImage20 inlineImageLeft'}"
+        :pstyle="(item.dark) ? { bgStyle: 'parralaxNormal w-100 text-secondary text-left px-5 pt-3', inlineImageStyle: 'inlineImage20 inlineImageLeft'} : { bgStyle: 'parralaxNormal w-100 text-primary text-left px-5 pt-3', inlineImageStyle: 'inlineImage20 inlineImageLeft'}"
       />
 
       <Marketing
@@ -30,7 +30,6 @@
         :ptext="service.marketing.content"
         :penquire="service.enquire"
       />
-
     <!--    <CarouselComponent :slides="service.slides" /> <D3Cloud :pwordcloud="service.cloud" />-->
     </no-ssr>
   </div>
@@ -58,9 +57,16 @@ export default {
     return {
       title: this.service.title,
       meta: [
-        { name: 'twitter:title', content: this.service.title },
-        { name: 'twitter:description', content: this.service.content },
-        { name: 'twitter:image', content: this.service.image }
+        {
+          hid: 'oddwave-services-' + this.service.id,
+          name: this.service.title,
+          content: this.service.header + ' and ' + this.service.subheader
+        },
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content: this.service.keywords
+        }
       ]
     }
   },
@@ -88,21 +94,12 @@ export default {
         service => service.id !== this.id
       )
       return related
-    },
-    gradientStart () {
-      return {
-        backgroundImage: `linear-gradient(45deg, rgba(85, 255, 0, 0.2) 0%, rgba(0, 255, 255, 0.5) 100%), url(/imgs/seodigital.jpg)`,
-        color: 'red'
-      }
     }
-  // gradientEnd() {
-  //   return {
-  //     backgroundImage: `linear-gradient(to left, ${this.colorEnd}, ${this.colorStart})`,
-  //     color: "red"
-  //   }
-  // }
-    // totalServices () {
-    //   return this.$store.state.services.totalServices()
+    // gradientStart () {
+    //   return {
+    //     backgroundImage: `linear-gradient(45deg, rgba(85, 255, 0, 0.2) 0%, rgba(0, 255, 255, 0.5) 100%), url(/imgs/seodigital.jpg)`,
+    //     color: 'red'
+    //   }
     // }
   }
 }

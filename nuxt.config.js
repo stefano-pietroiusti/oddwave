@@ -1,14 +1,16 @@
+require('dotenv').config()
+
 export default {
+  buildDir: 'nuxt-dist',
   env: {
     baseUrl: process.env.BASE_URL || 'http://localhost:3000',
-    contactHost: 'smtp.googlemail.com',
-    contactPort: 465,
-    contactUser: 'theoddwavecontact@gmail.com',
-    contactPwd: 'ix06KC7WA31K',
-    contactFrom: '"The Odd Wave Web" <theoddwavecontact@gmail.com>',
-    contactTo: 'theoddwavecontact@gmail.com,stefano.pietroiusti@gmail.com,jalinevandyk@gmail.com',
-    contactSubject: 'Website enquiry',
-    DEPLOY_ENV: 'STATIC'
+    // contactHost: 'smtp.googlemail.com',
+    // contactPort: 465,
+    // contactUser: 'theoddwavecontact@gmail.com',
+    // contactPwd: 'ix06KC7WA31K',
+    // contactFrom: '"The Odd Wave Web" <theoddwavecontact@gmail.com>',
+    // contactTo: 'theoddwavecontact@gmail.com,stefano.pietroiusti@gmail.com,jalinevandyk@gmail.com',
+    // contactSubject: 'Website enquiry',
   },
   layoutTransition: {
     name: 'layout',
@@ -35,25 +37,20 @@ export default {
       '/services/photography',
       '/contact'
     ]
-  }
-  ,
+  },
   /*
-  ** Router 
+  ** Router
   */
   router: {
     // base: process.env.DEPLOY_ENV === 'STATIC' ? '/nuxt-example/' : '/'
-    // base: '/nuxt-static/'
+    // base: '/oddwave/'
+    base: ''
   },
   head: {
-    title: process.env.npm_package_name || '',
+    title: process.env.npm_package_name || 'The Odd Wave digital and web design services',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
-      // {
-      //   hid: 'description',
-      //   name: 'description',
-      //   content: process.env.npm_package_description || ''
-      // }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -72,7 +69,7 @@ export default {
    */
   css: [
     // '@fortawesome/fontawesome-svg-core/styles.css',
-    '@/assets/scss/custom.scss',
+    '@/assets/scss/custom.scss'
     // '@/assets/css/bootstrap-social.css'
   ],
   /*
@@ -85,6 +82,7 @@ export default {
     // { src: '~/plugins/vue-fb-customer-chat', mode: 'client' },
     { src: '~/plugins/vue-notifications', mode: 'client' },
     { src: '~/plugins/vue-chartjs.js', mode: 'client' }
+    // { src: '~/plugins/bootstrap-vue', mode: 'client' }
   ],
   /*
    ** Nuxt.js dev-modules
@@ -100,26 +98,18 @@ export default {
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
     '@nuxtjs/axios',
-    'nuxt-simple-line-icons', 
+    'nuxt-simple-line-icons',
     'nuxt-svg-loader',
-    'nuxt-responsive-loader'
-  ]
-  // bootstrapVue: {
-  //   bootstrapCSS: false, // Or `css: false`
-  //   bootstrapVueCSS: false // Or `bvCSS: false`
-  // }
-  // componentPlugins: [
-  //   'LayoutPlugin',
-  //   'FormPlugin',
-  //   'FormCheckboxPlugin',
-  //   'FormInputPlugin',
-  //   'FormRadioPlugin',
-  //   'ToastPlugin',
-  //   'ModalPlugin'
-  // ],
-  // directivePlugins: ['VBPopoverPlugin', 'VBTooltipPlugin', 'VBScrollspyPlugin']
-  // }
-  ,responsiveLoader: {
+    'nuxt-responsive-loader',
+    ['@nuxtjs/dotenv', { only: ['BASE_URL'] }]
+  ],
+  bootstrapVue: {
+    bootstrapCSS: false, // Or `css: false`
+    bootstrapVueCSS: false, // Or `bvCSS: false`,
+    // components: ['BContainer', 'BRow', 'BCol', 'BFormInput', 'BButton', 'BTable', 'BModal', 'BNavBar', 'BNav'],
+    // directives: ['VBModal', 'VBPopover', 'VBTooltip', 'VBScrollspy']
+  },
+  responsiveLoader: {
     name: 'img/[hash:7]-[width].[ext]',
     quality: 65 // choose a lower value if you want to reduce filesize further
     // name: 'img/[hash:7]-[width].[ext]'
@@ -127,7 +117,7 @@ export default {
     // max: 1080 // maximum image width generated
     // steps: 5 // five sizes per image will be generated
     // placeholder: false // no placeholder will be generated
-    // quality: 65 // images are compressed with medium quality    
+    // quality: 65 // images are compressed with medium quality
   },
   serverMiddleware: [
     // { path: '/api/logger', handler: '~/api/logger.js' },

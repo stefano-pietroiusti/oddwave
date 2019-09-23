@@ -14,28 +14,31 @@ const app = express()
 app.use(express.json())
 
 const sendMail = (form) => {
-  let transporter = nodemailer.createTransport({
+  const transporter = nodemailer.createTransport({
     host: 'smtp.googlemail.com',
+    // host: 'mail.theoddwave.co.nz',
     port: 465,
     secure: true,
     auth: {
       user: 'theoddwavecontact@gmail.com',
-      pass: 'ix06KC7WA31K'
+            pass: 'ix06KC7WA31K'
+      // user: 'team@theoddwave.co.nz',
+      // pass: '0-txE81lj9oD'
     }
-  });
-  let mailOptions = {
+  })
+  const mailOptions = {
     from: '"The Odd Wave Web" <theoddwavecontact@gmail.com>',
-    to: 'theoddwavecontact@gmail.com,stefano.pietroiusti@gmail.com,jalinevandyk@gmail.com',
+    to: 'stefano.pietroiusti@gmail.com,jalinevandyk@gmail.com,theoddwavecontact@gmail.com,team@theoddwave.co.nz',
     subject: 'Website enquiry',
     text: JSON.stringify(form)
-  };
+  }
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       return console.log(error)
     }
-    console.log('Message sent: %s', info.messageId)
-  });
+    // console.log('Message sent: %s', info.messageId)
+  })
 }
 
 app.get('/', (req, res) => {

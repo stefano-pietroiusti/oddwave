@@ -12,7 +12,7 @@ import _a422e882 from '..\\layouts\\MainNavbar.vue'
 const layouts = { "_default": _6f6c098b,"_MainNavbar": _a422e882 }
 
 export default {
-  head: {"title":"oddwave","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1.0"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Nunito+Sans|Roboto|Valera+Round|Black+Han+Sans|Bowlby+One+SC|Syncopate|Abril+Fatface|Exo|Righteous&display=swap"},{"rel":"stylesheet","href":"https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Ffont-awesome\u002F4.7.0\u002Fcss\u002Ffont-awesome.min.css"}],"style":[],"script":[]},
+  head: {"title":"oddwave","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1.0"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Nunito+Sans|Roboto|Varela Round|Ubuntu|Abril Fatface|Black+Han+Sans|Bowlby+One+SC|Syncopate|Abril+Fatface|Exo|Righteous&display=swap"},{"rel":"stylesheet","href":"https:\u002F\u002Fdb.onlinewebfonts.com\u002Fc\u002F6c79f7fd645c0d39b4ca10428237984a?family=Azo+Sans|AzoSansUberW01-Regular"},{"rel":"stylesheet","href":"https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Ffont-awesome\u002F4.7.0\u002Fcss\u002Ffont-awesome.min.css"}],"style":[],"script":[]},
 
   render(h, props) {
     const loadingEl = h('NuxtLoading', { ref: 'loading' })

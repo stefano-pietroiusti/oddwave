@@ -1,5 +1,5 @@
 <template>
-  <div id="contactContainer" class="text-left mt-header w-100 h-100">
+  <div id="contactContainer" class="text-left mt-header w-100 h-100" :style="computedStyle">
     <AnimeBannerWordsHeaderComponent :pheader="pheader" :pbgimage="pheaderImage" :pstyle="pstyle" />
     <ContactForm :pservices="services" :pbgimage="pheaderImage" :pstyle="pstyle" />
   </div>
@@ -14,25 +14,34 @@ export default {
   },
   head () {
     return {
-      title: 'The Odd Wave digital and web design services',
+      title: this.title,
       meta: [
-        { name: 'twitter:title', content: 'The Odd Wave' },
-        { name: 'twitter:description', content: 'Nuxt + Vue School = 🍕' },
-        { name: 'twitter:image', content: 'https://i.imgur.com/UYP2umJ.png' },
-        { name: 'twitter:card', content: 'summary_large_image' }
+        {
+          hid: 'oddwave-contact',
+          name: this.title,
+          content: this.title + ' and ' + this.pheader
+        },
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content: this.keywords
+        }
       ]
     }
   },
   data (context) {
     return {
-      // pimage,
+      title: 'Contact the Odd Wave of website, search and data services',
       pimage: 'none',
       pheader: "LET'S CREATE SOME AWESOMENESS",
-      pheaderImage: { color1: 'rgba(255, 255, 255, 0.2)', color2: 'rgba(0, 255, 255, 0.5)', url: '/imgs/contact.jpg', height: 40 },
-      pstyle: { bgStyle: 'parralaxNormal text-primary text-left p-5' },
-      psubheader: 'Contact form subheader',
-      email: 'team@theoddwave.co.nz',
-      phone: '+64 210 8823 769'
+      pheaderImage: {
+        color1: 'rgba(255, 255, 255, 0)',
+        color2: 'rgba(255, 255, 255, 0.5)',
+        url: 'imgs/contact.jpg',
+        height: 30
+      },
+      pstyle: { bgStyle: 'parralaxNormal text-primary text-left' },
+      keywords: ['contact', 'websites', 'seo', 'vanillajs', 'data engineering', 'workshops']
     }
   },
   computed: {
@@ -43,6 +52,19 @@ export default {
       return this.$store.state.services.all.map((item) => {
         return { value: item.id, text: item.title, selected: true }
       })
+    },
+    computedStyle () {
+      return {
+        backgroundImage: `linear-gradient(45deg, ${this.pheaderImage.color1} 80%, ${this.pheaderImage.color2} 2%), url(${this.pheaderImage.url})`,
+        height: '100%',
+        width: '100%',
+        bottom: 0,
+        backgroundAttachment: 'fixed',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        textTransform: 'uppercase'
+      }
     }
   }
 }
@@ -54,5 +76,10 @@ export default {
   width: 50%;
   bottom: 0;
   margin: auto;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 1) 2%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
 </style>

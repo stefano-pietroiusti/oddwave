@@ -1,7 +1,12 @@
 require('dotenv').config()
 
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/oddwave/'
+  }
+} : {}
+
 export default {
-  buildDir: 'nuxt-dist',
   env: {
     baseUrl: process.env.BASE_URL || 'http://localhost:3000',
     // contactHost: 'smtp.googlemail.com',
@@ -18,34 +23,25 @@ export default {
   },
   pageTransition: {
     name: 'page',
-    mode: 'out-in',
-    beforeEnter(el) {
-      console.log('Before enter...')
-    }
+    mode: 'out-in'
+    // beforeEnter(el) {
+    //   console.log('Before enter...')
+    // }
   },
   mode: 'universal',
   /*
    ** Headers of the page
    */
   generate: {
-    subFolders: true,
     routes: [
       '/',
       '/services/seo',
       '/services/ppc',
       '/services/webdesign',
-      '/services/photography',
-      '/contact'
+      '/services/photography'
     ]
   },
-  /*
-  ** Router
-  */
-  router: {
-    // base: process.env.DEPLOY_ENV === 'STATIC' ? '/nuxt-example/' : '/'
-    // base: '/oddwave/'
-    base: ''
-  },
+  ...routerBase,
   head: {
     title: process.env.npm_package_name || 'The Odd Wave digital and web design services',
     meta: [

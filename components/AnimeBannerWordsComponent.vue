@@ -1,5 +1,5 @@
 <template>
-  <b-container id="animationBanner" fluid class="text-center text-secondary" :style="gradient">
+  <b-container id="animationBanner" fluid class="text-center text-secondary bg-primary" :style="gradient">
     <b-row>
       <b-col cols="4" />
       <b-col cols="10">
@@ -279,11 +279,12 @@ export default {
         // , image-set(require(~/assets/${this.bannerImage} 2x))
         backgroundImage: `linear-gradient(45deg,  ${this.pbgimage.color1}, ${this.pbgimage.color2}), url(${this.bannerImagePath})`,
         width: '100%',
-        height: `${this.pbgimage.height}vh`,
+        height: '100%',
+        // height: `${this.pbgimage.height}vh`,
         backgroundAttachment: 'fixed',
-        backgroundPosition: 'center',
+        backgroundPosition: 'left top',
         backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
+        backgroundSize: 'contain',
         textTransform: 'uppercase'
       }
     }

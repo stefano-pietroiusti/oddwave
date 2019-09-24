@@ -390,9 +390,15 @@ hr {
 /*NAVBAR*/
 .logo {
   /* height: 0.5em; */
-  width: 2em;
+  width: 3.5em;
   font-weight: bold;
 }
+.navbar-brand {
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
 .navbar {
   min-height: 80px;
 }
@@ -400,6 +406,7 @@ hr {
 .nav-item {
   margin-left: 2vw;
   font-size: 0.8em;
+  text-transform: uppercase;
 }
 
 .navbar-toggler {
@@ -560,7 +567,7 @@ a:hover {
   margin-top: 1vw;
   padding: unset;
   font-family: inherit;
-  font-size: 0.5em;
+  font-size: 0.8em;
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: 0.25em;
@@ -569,7 +576,7 @@ a:hover {
   margin-top: 1vw;
   padding: unset;
   font-family: inherit;
-  font-size: 0.6em;
+  font-size: 0.8em;
   text-transform: lowercase;
   letter-spacing: 0.25em;
 }
@@ -588,7 +595,7 @@ a:hover {
 }
 .footer ul li {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 0.6em;
+  font-size: 0.7em;
   font-family: inherit;
   margin: 0vw;
   // padding: 5px 0px 5px 0px;

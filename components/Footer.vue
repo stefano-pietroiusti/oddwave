@@ -2,7 +2,7 @@
 <template>
   <b-container fluid class="text-light text-left bg-primary footer">
     <b-row>
-      <b-col cols="12" md="6" lg="3" class="mt-3 p-2">
+      <b-col cols="12" md="6" lg="6" xl="3" class="mt-3 p-2">
         <h2>The Odd Wave</h2>
         <ul>
           <nuxt-link v-for="item in standardNav" :key="item.value" :to="item.value">
@@ -18,7 +18,7 @@
           </li>
         </ul> -->
       </b-col>
-      <b-col cols="12" md="6" lg="3" class="mt-3 p-2">
+      <b-col cols="12" md="6" lg="6" xl="3" class="mt-3 p-2">
         <h2>Services</h2>
         <ul>
           <nuxt-link
@@ -31,13 +31,13 @@
         </ul>
       </b-col>
 
-      <b-col cols="12" md="6" lg="3" class="mt-3 p-2">
+      <b-col cols="12" md="6" lg="6" xl="3" class="mt-3 p-2">
         <h2>Work with us</h2>
         <h4 v-html="phone1" />
         <h4 v-html="phone2" />
         <h4 v-html="email" />
       </b-col>
-      <b-col cols="12" md="6" lg="3" class="mt-3 p-2">
+      <b-col cols="12" md="6" lg="6" xl="3" class="mt-3 p-2">
         <h2>Join us</h2>
         <ul>
           <li>

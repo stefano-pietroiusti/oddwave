@@ -163,6 +163,7 @@ $font-size-base: 0.8rem;
 
 .inlineImageLeft {
   float: left;
+  padding-right: 1em;
 }
 
 .inlineImageRight {
@@ -485,7 +486,10 @@ a:hover {
 .fa-linkedin {
   color: white;
 }
+.fa-whatsapp {
 
+  color: white;
+}
 .fa:hover {
   color: white;
   opacity: 1;

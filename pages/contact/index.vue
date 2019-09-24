@@ -1,5 +1,5 @@
 <template>
-  <div id="contactContainer" class="text-left mt-header w-100 h-100" :style="computedStyle">
+  <div id="contactContainer" class="text-left mt-header w-100 h-100">
     <AnimeBannerWordsHeaderComponent :pheader="pheader" :pbgimage="pheaderImage" :pstyle="pstyle" />
     <ContactForm :pservices="services" :pbgimage="pheaderImage" :pstyle="pstyle" />
   </div>
@@ -37,10 +37,10 @@ export default {
       pheaderImage: {
         color1: 'rgba(255, 255, 255, 0)',
         color2: 'rgba(255, 255, 255, 0.5)',
-        url: 'imgs/contact.jpg',
-        height: 30
+        url: 'contact.jpg',
+        height: 40
       },
-      pstyle: { bgStyle: 'parralaxNormal text-primary text-left' },
+      pstyle: { bgStyle: 'text-primary text-left' },
       keywords: ['contact', 'websites', 'seo', 'vanillajs', 'data engineering', 'workshops']
     }
   },
@@ -55,7 +55,7 @@ export default {
     },
     computedStyle () {
       return {
-        backgroundImage: `linear-gradient(45deg, ${this.pheaderImage.color1} 80%, ${this.pheaderImage.color2} 2%), url(${this.pheaderImage.url})`,
+        // backgroundImage: `linear-gradient(45deg, ${this.pheaderImage.color1} 80%, ${this.pheaderImage.color2} 2%), url(${this.pheaderImage.url})`,
         height: '100%',
         width: '100%',
         bottom: 0,

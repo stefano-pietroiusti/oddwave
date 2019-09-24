@@ -2,42 +2,40 @@
 <template>
   <div id="servicesContainer" class="text-center mt-header w-100">
     <no-ssr>
-      <AnimeBannerWordsHeaderComponent :pheader="service.header" :pbgimage="service.headerImage" :pstyle="service.headerStyle" />
+      <AnimeBannerWordsHeaderComponent
+        :pheader="service.header"
+        :pbgimage="service.headerImage"
+        :pstyle="service.headerStyle"
+      />
+
       <span id="marketing">
         <HeaderComponent :psubheader="service.subheader" :pstyle="service.subheaderStyle" />
-        <MarketingButton
-          :penquire="service.enquire"
-          :pstyle="service.subheaderStyle"
-        />
+        <MarketingButton :penquire="service.enquire" :pstyle="service.subheaderStyle" />
       </span>
-      <TextImageComponent
-        :pcontent="{ bgImage: service.bannerImage}"
-        :pstyle="{ bgStyle: 'parralaxEffect w-100 text-primary text-left p-10'}"
-      />
+
       <span v-if="service.slides" id="carousel">
-        <CarouselComponent :slides="service.slides" />
+        <CarouselComponent :carousel-id="service.id" :pslides="service.slides" />
       </span>
+
       <TextImageComponent
         v-for="(item,i) in service.content"
         :key="i"
-        :pcontent="{ text: item.text, bgImage: item.image }"
-        :pstyle="(item.dark) ? { bgStyle: 'parralaxNormal w-100 text-secondary text-left px-5 pt-3', inlineImageStyle: 'inlineImage20 inlineImageLeft'} : { bgStyle: 'parralaxNormal w-100 text-primary text-left px-5 pt-3', inlineImageStyle: 'inlineImage20 inlineImageLeft'}"
+        :pcontent="{ text: item.text, bgImage: item.bgImage, inlineImage: item.inlineImage }"
+        :pstyle="(item.dark) ? { bgStyle: 'parralaxNormal w-100 text-secondary text-left px-5 pt-3', inlineImageStyle: 'inlineImage10 inlineImageLeft'} : { bgStyle: 'parralaxNormal w-100 text-primary text-left px-5 pt-3', inlineImageStyle: 'inlineImage10 inlineImageLeft'}"
       />
 
-      <Marketing
-        :pheader="service.marketing.header"
-        :plead="service.marketing.subheader"
-        :ptext="service.marketing.content"
-        :penquire="service.enquire"
-      />
-    <!--    <CarouselComponent :slides="service.slides" /> <D3Cloud :pwordcloud="service.cloud" />-->
+      <span id="marketing">
+        <HeaderComponent :psubheader="service.marketing.header + ' TO ' + service.marketing.subheader" :pstyle="service.subheaderStyle" />
+        <MarketingButton :penquire="service.enquire" :pstyle="service.subheaderStyle" />
+      </span>
+
+      <!--  <D3Cloud :pwordcloud="service.cloud" />-->
     </no-ssr>
   </div>
 </template>
 
 <script>
 import HeaderComponent from '@/components/HeaderComponent'
-import Marketing from '@/components/Marketing'
 import MarketingButton from '@/components/MarketingButton'
 import TextImageComponent from '@/components/TextImageComponent'
 import AnimeBannerWordsHeaderComponent from '@/components/AnimeBannerWordsHeaderComponent'
@@ -47,7 +45,6 @@ const R = require('ramda')
 export default {
   components: {
     HeaderComponent,
-    Marketing,
     MarketingButton,
     TextImageComponent,
     AnimeBannerWordsHeaderComponent,
@@ -95,22 +92,19 @@ export default {
       )
       return related
     }
-    // gradientStart () {
-    //   return {
-    //     backgroundImage: `linear-gradient(45deg, rgba(85, 255, 0, 0.2) 0%, rgba(0, 255, 255, 0.5) 100%), url(/imgs/seodigital.jpg)`,
-    //     color: 'red'
-    //   }
-    // }
   }
 }
 </script>
 
 <style scoped>
-#marketing{
- position: absolute;
- width: 50%;
- height: 60%;
+#marketing {
+  position: relative;
+  width: 50%;
+  height: 50%;
   bottom: 0;
   margin: auto;
+}
+#carousel {
+background-color: black
 }
 </style>

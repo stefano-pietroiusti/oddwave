@@ -1,8 +1,8 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
-  <b-container id="contactForm" fluid class="bg-primary text-secondary w-75 m-5">
+  <b-container id="contactForm" fluid class="bg-primary text-secondary w-50 m-5">
     <b-row>
-      <b-col w="75">
+      <b-col w="50">
         <b-form
           v-if="show"
           small
@@ -82,8 +82,8 @@
           </b-button>
         </b-form>
       </b-col>
-      <b-col w="30" class="mt-5 text-left">
-        <h3>Contact the Odd Wave team directly:</h3>
+      <b-col w="50" class="mt-0 p-4 text-left">
+        <h4>Contact the Odd Wave team directly:</h4>
         <!-- <h3>getBase: {{ getBase }}</h3> -->
         <h4 v-html="companyphone1" />
         <h4 v-html="companyphone2" />

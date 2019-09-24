@@ -1,13 +1,10 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
-  <b-container
-    fluid
-    :class="pstyle.bgStyle"
-    :style="background"
-  >
+  <b-container fluid :class="pstyle.bgStyle" :style="background">
     <b-row>
-      <b-col v-if="isInlineImage">
-        <img :src="pcontent.inlineImage" :class="pstyle.inlineImageStyle">
+      <b-col v-if="pcontent.inlineImage">
+        <img :src="`${inlineImage}?size=100`" :srcset="inlineImage.srcSet" :class="pstyle.inlineImageStyle">
+        <!-- <img :src="require(`~/assets/imgs/inline/${pcontent.inlineImage}?size=100`)" :srcset="require(`~/assets/imgs/inline/${pcontent.inlineImage}`).srcSet" :class="pstyle.inlineImageStyle"> -->
         <p v-html="pcontent.text" />
       </b-col>
       <b-col v-else>
@@ -41,13 +38,19 @@ export default {
     }
   },
   computed: {
-    isInlineImage () {
-      return !!this.pcontent.inlineImage
+    inlineImage () {
+      if (!this.pcontent.inlineImage) {
+        return
+      }
+      const fileName = this.pcontent.inlineImage
+      return require(`~/assets/imgs/inline/${fileName}`)
     },
     background () {
-      const backgroundImageProp = this.pcontent.bgImage || undefined
-      const backgroundImage = (backgroundImageProp) ? `url(${backgroundImageProp})` : undefined
-      // console.log('============backgroundImage===============', JSON.stringify(backgroundImage))
+      if (!this.pcontent.bgImage) {
+        return
+      }
+      const fileName = require(`~/assets/imgs/banner/${this.pcontent.bgImage}`)
+      const backgroundImage = fileName ? `url(${fileName})` : undefined
       return {
         backgroundImage,
         // width: '100%',

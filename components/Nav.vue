@@ -3,13 +3,12 @@
     <b-row>
       <b-col>
         <b-navbar toggleable="lg" fixed="top" type="dark" variant="primary">
-          <b-navbar-brand to="/" class="logo">
+          <b-navbar-brand to="/">
             <!-- <b-img src="~/assets/logos/oddwave.png" fluid alt="the odd wave" class="logo" />{{ title }} -->
-            <img :src="require('~/assets/logos/oddwave.png')" fluid alt="the odd wave" class="logo">
+            <img :src="require('~/assets/logos/oddwave.png?size=200')" fluid alt="the odd wave" class="logo">
             {{ title }}
             <!-- <img :src="require('~/assets/logos/oddwave.png?size=400')" :srcset="require('~/assets/logos/oddwave.png').srcSet"> -->
             <!-- <Logo /> {{ title }} -->
-            </b-img>
           </b-navbar-brand>
           <b-navbar-toggle target="nav-collapse" />
           <b-collapse id="nav-collapse" is-nav>
@@ -61,13 +60,5 @@ export default {
 }
 </script>
 <style scoped>
-.logo {
-  height: 3.5vw;
-  width: auto;
-  font-weight: bold;
-}
-.navbar {
-  min-height: 80px;
-  /* height:80px; */
-}
+
 </style>

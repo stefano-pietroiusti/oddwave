@@ -20,6 +20,17 @@
         :img-width="imgwidth"
         :img-height="imgheight"
       />
+      <!-- https://stackoverflow.com/questions/56004640/cannot-display-images-in-vuejs
+      https://github.com/geeogi/nuxt-responsive-loader
+      -->
+      <!-- <img
+          slot="img"
+          class="d-block img-fluid w-100"
+          width="1024"
+          height="480"
+          src="https://xxxxxx"
+          alt="image slot"
+        > -->
     </b-carousel>
   </b-container>
 </template>

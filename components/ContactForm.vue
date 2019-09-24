@@ -1,8 +1,8 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
-  <b-container id="contactForm" fluid class="bg-primary text-secondary w-50 m-5">
+  <b-container id="contactForm" fluid class="bg-primary text-secondary w-75 m-5">
     <b-row>
-      <b-col w="50">
+      <b-col w="75">
         <b-form
           v-if="show"
           small

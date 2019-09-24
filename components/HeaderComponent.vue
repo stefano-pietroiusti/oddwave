@@ -2,16 +2,16 @@
   <header class="text-center p-3">
     <b-container fluid :class="fontcolor">
       <b-row>
-        <b-col class="p-3">
+        <b-col class="py-4">
           <h1>{{ pheader }}</h1>
         </b-col>
       </b-row>
-      <b-row v-if="psubheader" class="row">
+      <b-row v-if="psubheader" class="row py-4">
         <b-col>
           <h2>{{ psubheader }}</h2>
         </b-col>
       </b-row>
-      <b-row v-if="psubtitle" class="row m-3">
+      <b-row v-if="psubtitle" class="row py-4">
         <b-col>
           <h3>
             {{ psubtitle }}

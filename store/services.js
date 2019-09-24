@@ -2,7 +2,7 @@ export const state = () => ({
   all: [
     {
       id: 'seo',
-      title: 'Search Engine Optimisation services',
+      title: 'Search Engine Optimisation',
       description: 'SEO - Search Engine Optimisation Services',
       header: 'Drive organic traffic to your website with SEO',
       headerImage: { color1: 'rgba(255, 255, 255, 0.2)', color2: 'rgba(0, 255, 255, 0.5)', url: 'seo.jpg', height: 40 },
@@ -53,7 +53,7 @@ export const state = () => ({
     },
     {
       id: 'ppc',
-      title: 'Pay per Click Advertising services',
+      title: 'Pay per Click Advertising',
       description: 'Grow your business using PPC (Pay Per Click) or CPC (Cost per Click) Advertising',
       header: 'Pay per Click  Advertising',
       headerImage: { color1: 'rgba(255, 255, 255, 0.2)', color2: 'rgba(0, 255, 255, 0.5)', url: 'ppc.jpg', height: 40 },
@@ -111,7 +111,7 @@ export const state = () => ({
     },
     {
       id: 'webdesign',
-      title: 'Website Design and Application Development',
+      title: 'Website Design',
       description: 'Website Design and Application Development',
       header: 'Website Design and Application Development',
       headerImage: { color1: 'rgba(255, 255, 255, 0.2)', color2: 'rgba(0, 255, 255, 0.5)', url: 'webdesign.jpg', height: 40 },

@@ -97,14 +97,5 @@ export default {
 </script>
 
 <style scoped>
-#marketing {
-  position: relative;
-  width: 50%;
-  height: 50%;
-  bottom: 0;
-  margin: auto;
-}
-#carousel {
-background-color: black
-}
+
 </style>

@@ -1,16 +1,24 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
   <b-container fluid class="text-light text-left bg-primary footer">
-    <div class="row">
-      <div class="col">
+    <b-row>
+      <b-col cols="12" md="6" lg="3" class="mt-3 p-2">
         <h2>The Odd Wave</h2>
         <ul>
           <nuxt-link v-for="item in standardNav" :key="item.value" :to="item.value">
             <li>{{ item.text }}</li>
           </nuxt-link>
         </ul>
-      </div>
-      <div class="col">
+        <!--
+        <ul>
+          <li>
+            <a :href="social.fb" class="fa fa-facebook" />
+            <a :href="social.linkedin" class="fa fa-linkedin" />
+            <a :href="social.whatsapp" class="fa fa-whatsapp" />
+          </li>
+        </ul> -->
+      </b-col>
+      <b-col cols="12" md="6" lg="3" class="mt-3 p-2">
         <h2>Services</h2>
         <ul>
           <nuxt-link
@@ -21,17 +29,15 @@
             <li>{{ service.title }}</li>
           </nuxt-link>
         </ul>
-      </div>
+      </b-col>
 
-      <div class="col">
+      <b-col cols="12" md="6" lg="3" class="mt-3 p-2">
         <h2>Work with us</h2>
         <h4 v-html="phone1" />
         <h4 v-html="phone2" />
         <h4 v-html="email" />
-        <br>
-        <h6>{{ copyright }}</h6>
-      </div>
-      <div class="col text-center">
+      </b-col>
+      <b-col cols="12" md="6" lg="3" class="mt-3 p-2">
         <h2>Join us</h2>
         <ul>
           <li>
@@ -40,9 +46,9 @@
             <a :href="social.whatsapp" class="fa fa-whatsapp" />
           </li>
         </ul>
-      </div>
-      <div class="clearfix" />
-    </div>
+      </b-col>
+      <!-- <b-col class="clearfix" /> -->
+    </b-row>
   </b-container>
 </template>
 <script>

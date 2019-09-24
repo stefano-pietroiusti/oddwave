@@ -48,7 +48,7 @@ export default {
       return {
         backgroundImage: `linear-gradient(45deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.5) 100%), url(${this.bannerImagePath})`,
         width: '100%',
-        // height: `${this.pbgimage.height}vh`,
+        height: `${this.pbgimage.height}vh`,
         backgroundAttachment: 'fixed',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',

@@ -1,14 +1,11 @@
 <template>
-  <b-container fluid>
+  <b-container fluid class="bg-primary m-0 p-0">
     <b-row>
       <b-col>
-        <b-navbar toggleable="lg" fixed="top" type="dark" variant="primary">
+        <b-navbar sticky fixed="top" toggleable="lg" type="dark" variant="primary">
           <b-navbar-brand to="/">
-            <!-- <b-img src="~/assets/logos/oddwave.png" fluid alt="the odd wave" class="logo" />{{ title }} -->
             <img :src="require('~/assets/logos/oddwave.png?size=200')" fluid alt="the odd wave" class="logo">
             {{ title }}
-            <!-- <img :src="require('~/assets/logos/oddwave.png?size=400')" :srcset="require('~/assets/logos/oddwave.png').srcSet"> -->
-            <!-- <Logo /> {{ title }} -->
           </b-navbar-brand>
           <b-navbar-toggle target="nav-collapse" />
           <b-collapse id="nav-collapse" is-nav>

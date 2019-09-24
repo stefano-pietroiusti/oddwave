@@ -16,8 +16,6 @@ $black: #000;
 
 // Base colors definitions
 $blue: #091540;
-//$blue: #0473aa;
-//$blue: #0d47a1;
 $bluelight: #1446a0;
 $indigo: #1e1d1e;
 $purple: #6f42c1;
@@ -131,7 +129,7 @@ $enable-validation-icons: true;
 //$font-family-azosans: 'Azo Sans', 'AzoSansUberW01-Regular', 'Black Han Sans', sans-serif;
 $font-family-ubuntu: "Ubuntu", sans-serif;
 $font-family-roboto: "Roboto", sans-serif;
-$font-family-varelaround: "Varela Round",sans-serif;
+$font-family-varelaround: "Varela Round", sans-serif;
 $body-bg: $white;
 $body-color: $gunmetal;
 //$font-family-base: $font-family-roboto;
@@ -139,7 +137,6 @@ $font-family-base: $font-family-varelaround;
 $font-family-secondary: $font-family-ubuntu;
 
 $font-size-base: 0.8rem;
-
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "../../node_modules/bootstrap-vue/src/index.scss";
@@ -159,10 +156,12 @@ $font-size-base: 0.8rem;
 
   @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
     & {
-
       font-size: $min-font-size;
       @media screen and (min-width: $min-vw) {
-        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+        font-size: calc(
+          #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
+            ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+        );
       }
 
       @media screen and (min-width: $max-vw) {
@@ -180,7 +179,7 @@ $max_width: 100%;
 // $max_font: 15vmin;
 $min_font: 16px;
 $max_font: 22px;
-$calc_font: calc(1vw + 1vh + .8vmin);
+$calc_font: calc(1vw + 1vh + 0.8vmin);
 $calc_h1: calc(1vw + 1vh + 5vmin);
 $calc_h2: calc(1vw + 1vh + 3.5vmin);
 $calc_h3: calc(1vw + 1vh + 2vmin);
@@ -197,16 +196,40 @@ body {
   -moz-osx-font-smoothing: grayscale;
   max-width: $max_width;
   padding: 0rem;
-  margin: 0 auto;
-  // font-size: calc(16px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  margin: 0;
+  font-size: calc(16px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   font-size: $calc_font;
-  line-height: 2
-  // line-height: 1.5em;
-
+  line-height: 2;
 }
+
+// .mt-header {
+//   // margin-top: 6vw !important;
+//   // margin-top: 80px !important;
+//   margin-top: 4.5em !important;
+// }
+
+// /*SCREENS*/
+
+// @media (max-width: 320px) {
+//   .mt-header {
+//     margin-top:6.2em !important;
+//   }
+// }
+
+// @media (min-width: px) {
+//   .mt-header {
+//     margin-top:6.2em !important;
+//   }
+// }
+
+// @media (min-width: 2400px) {
+//   .mt-header {
+//     margin-top: 4em !important;
+//   }
+// }
+
 $mod_1: 1.2; // mobile
 $mod_2: 3; // desktop
-
 
 h1 {
   // font-size: calc(1rem + 5vmin);
@@ -239,59 +262,48 @@ h6 {
   font-size: $calc_h6;
 }
 
-p {
-  // line-height: 1.8;
+// @media (max-width: 1440px) {
+//   .mt-header {
+//     // margin-top: 6vw !important;
+//     margin-top: 6vw !important;
+//   }
+// }
+// @media (max-width: 1280px) {
+//   .mt-header {
+//     margin-top: 5vh !important;
+//   }
+// }
+// @media (max-width: 1024px) {
+//   .mt-header {
+//     margin-top: 8vw !important;
+//   }
+// }
+
+// @media (max-width: 768px) {
+//   .mt-header {
+//     margin-top: 10vw !important;
+//   }
+// }
+
+// @media (max-width: 425px) {
+//   .mt-header {
+//     margin-top: 23vw !important;
+//   }
+// }
+// @media (max-width: 375px) {
+//   .mt-header {
+//     margin-top: 26vw !important;
+//   }
+// }
+// @media (max-width: 320px) {
+//   .mt-header {
+//     margin-top: 30vw !important;
+//   }
+// }
+
+.vh-50 {
+  height: 50vh;
 }
-
-// h1 {  
-//   font-size: $mod_1*$mod_1*$mod_1*$mod_1 *2rem; 
-//   @include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font);
-// }
-// h2 {  
-//   font-size: $mod_1*$mod_1*$mod_1 *1.5rem; 
-//   @include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font);
-// }
-// h3 { 
-//   font-size: $mod_1*$mod_1 *1.2rem; 
-//   @include fluid-type($min_width, $max_width, $mod_1*$mod_1 *$min_font, $mod_2*$mod_2 *$min_font);
-// }
-
-// end of fluid font
-
-// body {
-//   -webkit-font-smoothing: antialiased;
-//   -moz-osx-font-smoothing: grayscale;
-//   line-height: 3vw;
-//   font-weight: 200;
-//   font-size: 1.3vw;
-// }
-
-// h2 {
-//   // font-size: 2.0vw;
-//   white-space: normal;
-//   // word-break: break-all;
-//   width: 100%;
-//   text-transform: uppercase;
-//   font-weight: 600;
-// }
-
-// h3 {
-//   // font-size: 1.5vw;
-//   white-space: normal;
-//   // word-break: break-all;
-//   width: 100%;
-//   text-transform: unset;
-//   text-align: left;
-//   font-weight: 300;
-//   line-height: 1.5;
-// }
-
-.mt-header {
-  // margin-top: 6vw !important;
-  margin-top: 80px !important;
-}
-
-.vh-50 { height: 50vh; } 
 
 .inlineImage10 {
   width: 10%;
@@ -312,13 +324,11 @@ p {
   float: right;
 }
 
-
 .parralaxEffect {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  
 }
 .parralaxEffectGrayscale {
   width: 100%;
@@ -367,9 +377,6 @@ p {
   padding-right: 2em;
 }
 
-
-
-
 hr {
   border: 0;
   height: 1px;
@@ -389,29 +396,33 @@ hr {
 
 /*NAVBAR*/
 .logo {
-  /* height: 0.5em; */
-  width: 3.5em;
+  margin: 0;
+  padding: 0;
+  width: 3em;
   font-weight: bold;
+  margin-right: 0.05em;
 }
 .navbar-brand {
   font-size: 1em;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 .navbar {
-  min-height: 80px;
+  width: 100%;
 }
 
 .nav-item {
   margin-left: 2vw;
+  // padding: 1em !important;
   font-size: 0.8em;
   text-transform: uppercase;
 }
 
 .navbar-toggler {
-  margin-top: 0px;
-  padding: 20px !important;
+  margin: 0 1em 0 1em;
+  padding: 1em !important;
 }
 
 .dropdown-menu {
@@ -421,6 +432,7 @@ hr {
 }
 
 .dropdown-item {
+  padding: 0.5em !important;
   background-color: var(--primary);
   color: var(--secondary);
   margin-top: 0.5vw;
@@ -430,8 +442,6 @@ hr {
   background-color: var(--secondary);
   color: var(--info);
 }
-
-
 /*END NAVBAR*/
 
 /*LINKS*/
@@ -502,12 +512,10 @@ a:hover {
 
 /*SOCIAL*/
 .fa {
-  // padding: 2vmin;
-  font-size: 2em;
+  font-size: 2.5em;
   width: 1em;
   text-align: center;
   text-decoration: none;
-  // margin: 1vmin 0.5vmin;
   margin: 0.1em;
   text-decoration: none;
   opacity: 0.8;
@@ -518,18 +526,7 @@ a:hover {
   opacity: 1;
 }
 
-// .fa-facebook {
-//   background: #3b5998;
-//   color: white;
-// }
-
-// .fa-linkedin {
-//   background: #007bb5;
-//   color: white;
-// }
-
 .fa-facebook {
-
   color: white;
 }
 
@@ -537,7 +534,6 @@ a:hover {
   color: white;
 }
 .fa-whatsapp {
-
   color: white;
 }
 .fa:hover {
@@ -549,7 +545,7 @@ a:hover {
 .footer {
   height: 100%;
   width: 100%;
-  bottom:0;
+  bottom: 0;
 }
 
 .footer .col {
@@ -595,7 +591,7 @@ a:hover {
 }
 .footer ul li {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 0.7em;
+  font-size: 0.8em;
   font-family: inherit;
   margin: 0vw;
   // padding: 5px 0px 5px 0px;
@@ -624,57 +620,6 @@ a:hover {
   padding-right: 5px !important;
   color: #000;
 }
-
-
 .clearfix {
   clear: both;
 }
-
-/*SCREENS*/
-/*
-@media (max-width: 2400px) {
-  .mt-header {
-    margin-top: 5vw !important;
-    // margin-top: 75px !important;
-  }
-}
-@media (max-width: 1440px) {
-  .mt-header {
-    // margin-top: 6vw !important;
-    margin-top: 6vw !important;
-  }
-}
-@media (max-width: 1280px) {
-  .mt-header {
-    margin-top: 5vh !important;
-  }
-}
-@media (max-width: 1024px) {
-  .mt-header {
-    margin-top: 8vw !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .mt-header {
-    margin-top: 10vw !important;
-  }
-}
-
-@media (max-width: 425px) {
-  .mt-header {
-    margin-top: 23vw !important;
-  }
-}
-@media (max-width: 375px) {
-  .mt-header {
-    margin-top: 26vw !important;
-  }
-}
-@media (max-width: 320px) {
-  .mt-header {
-    margin-top: 30vw !important;
-  }
-}
-*/
-

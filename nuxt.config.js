@@ -11,7 +11,7 @@ const baseUrl = process.env.BASE_URL || 'http://localhost:3000'
 export default {
   env: {
     // baseUrl: process.env.BASE_URL || 'http://localhost:3000',
-    baseUrl
+    baseUrl,
     // maxImageSize: 1080
     // contactHost: 'smtp.googlemail.com',
     // contactPort: 465,
@@ -28,14 +28,8 @@ export default {
   pageTransition: {
     name: 'page',
     mode: 'out-in'
-    // beforeEnter(el) {
-    //   console.log('Before enter...')
-    // }
   },
   mode: 'universal',
-  /*
-   ** Headers of the page
-   */
   generate: {
     routes: [
       '/',
@@ -69,9 +63,7 @@ export default {
    ** Global CSS
    */
   css: [
-    // '@fortawesome/fontawesome-svg-core/styles.css',
     '@/assets/scss/custom.scss'
-    // '@/assets/css/bootstrap-social.css'
   ],
   /*
    ** Plugins to load before mounting the App
@@ -79,10 +71,10 @@ export default {
   plugins: [
     '~/plugins/anime.js',
     '~/plugins/fontawesome.js',
-    // { src: '~plugins/vue-parallaxy', mode: 'client' },
-    // { src: '~/plugins/vue-fb-customer-chat', mode: 'client' },
     { src: '~/plugins/vue-notifications', mode: 'client' },
     { src: '~/plugins/vue-chartjs.js', mode: 'client' }
+    // { src: '~plugins/vue-parallaxy', mode: 'client' },
+    // { src: '~/plugins/vue-fb-customer-chat', mode: 'client' },
     // { src: '~/plugins/bootstrap-vue', mode: 'client' }
   ],
   /*
@@ -124,8 +116,8 @@ export default {
   },
   responsiveLoader: {
     name: 'img/oddwave-[hash:7]-[width].[ext]',
-    quality: 100, 
-    min: 640, 
+    quality: 100,
+    min: 640,
     max: 1080,
     steps: 5,
     // sizes: [350, 500, 800, 1200, 1500, 1800], 
@@ -172,6 +164,24 @@ export default {
     */
     extend(config, { isDev, isClient }) {
       // Run ESLint on save
+
+      const vueLoader = config.module.rules.find(rule => rule.loader === 'vue-loader')
+      vueLoader.options.transformAssetUrls = {
+        video: ['src', 'poster'],
+        source: 'src',
+        img: 'src',
+        image: 'xlink:href',
+        'b-img': 'src',
+        'b-img-lazy': ['src', 'blank-src'],
+        'b-card': 'img-src',
+        'b-card-img': 'src',
+        'b-card-img-lazy': ['src', 'blank-src'],
+        'b-carousel-slide': 'img-src',
+        'b-embed': 'src'
+      }
+
+
+
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
@@ -182,7 +192,23 @@ export default {
             fix: true
           }
         })
+
       }
+
+      // const vueLoader = config.module.rules.find(rule => rule.loader === 'vue-loader')
+      // vueLoader.options.transformAssetUrls = {
+      //   video: ['src', 'poster'],
+      //   source: 'src',
+      //   img: 'src',
+      //   image: 'xlink:href',
+      //   'b-img': 'src',
+      //   'b-img-lazy': ['src', 'blank-src'],
+      //   'b-card': 'img-src',
+      //   'b-card-img': 'src',
+      //   'b-card-img-lazy': ['src', 'blank-src'],
+      //   'b-carousel-slide': 'img-src',
+      //   'b-embed': 'src'
+      // }
 
       // https://stackoverflow.com/questions/48606325/how-to-resize-images-for-different-responsive-views
       // tell webpack not to include jpgs and pngs

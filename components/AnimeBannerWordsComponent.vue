@@ -26,7 +26,6 @@
         </h3>
       </b-col>
       <b-col cols="4">
-        <!-- <img :src="bannerImage"> -->
         <!-- <img :src="require('~/assets/images/Foo.jpg?size=400')" :srcset="require('~/assets/images/Foo.jpg').srcSet"> -->
         <!-- {{ bannerImage }} and  {{ bannerImagePath }}
         <img :srcset="require(`~/assets/${bannerImage}`).srcSet">-->
@@ -253,12 +252,6 @@ export default {
         delay: 1000
       })
   },
-  methods: {
-    handleScroll() {
-      // Your scrhandleResizeling here
-      // console.log(window.scrollY)
-    }
-  },
   props: {
     pbgimage: {
       type: Object,
@@ -274,24 +267,15 @@ export default {
   },
   computed: {
     bannerImagePath() {
-      if (!this.bannerImage) {
+      if (!this.pbgimage.url) {
         return
       }
       const fileName = this.pbgimage.url
       return require(`~/assets/imgs/banner/${fileName}?size=1080`)
     },
-    bannerImage() {
-      if (!this.pbgimage.url) {
-        return
-      }
-      const fileName = this.pbgimage.url
-      // console.log('==========bannerImage===========', `${fileName}`)
-      return fileName
-    },
     gradient() {
       return {
         // https://developer.mozilla.org/en-US/docs/Web/CSS/image-set
-        // backgroundImage: `linear-gradient(45deg,  ${this.pbgimage.color1}, ${this.pbgimage.color2}), url(${this.pbgimage.url})`,
         // , image-set(require(~/assets/${this.bannerImage} 2x))
         backgroundImage: `linear-gradient(45deg,  ${this.pbgimage.color1}, ${this.pbgimage.color2}), url(${this.bannerImagePath})`,
         width: '100%',

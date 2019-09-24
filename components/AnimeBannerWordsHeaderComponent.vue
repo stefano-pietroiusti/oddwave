@@ -24,7 +24,7 @@ export default {
         return {
           color1: 'rgba(85, 255, 0, 0.2)',
           color2: 'rgba(0, 255, 255, 0.5)',
-          url: '/imgs/seodigital.jpg',
+          url: 'seodigital.jpg',
           height: 100
         }
       }
@@ -37,9 +37,16 @@ export default {
     }
   },
   computed: {
+    bannerImagePath() {
+      if (!this.pbgimage.url) {
+        return
+      }
+      const fileName = this.pbgimage.url
+      return require(`~/assets/imgs/banner/${fileName}?size=1080`)
+    },
     gradient() {
       return {
-        backgroundImage: `linear-gradient(45deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.5) 100%), url(${this.pbgimage.url})`,
+        backgroundImage: `linear-gradient(45deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.5) 100%), url(${this.bannerImagePath})`,
         width: '100%',
         height: `${this.pbgimage.height}vh`,
         backgroundAttachment: 'fixed',
@@ -51,13 +58,13 @@ export default {
     }
   },
   mounted() {
-   let textWrapper = document.querySelector('.animHeader')
+    let textWrapper = document.querySelector('.animHeader')
     textWrapper.innerHTML = textWrapper.textContent.replace(
       /\S/g,
       "<span class='letter'>$&</span>"
     )
     const anims = []
-    this.$anime.timeline({ loop: false }).add({
+    this.$anime.timeline({ loop: true }).add({
       targets: '.animHeader .letter',
       translateY: [100, 0],
       translateZ: 0,
@@ -66,14 +73,14 @@ export default {
       duration: 1400,
       delay: (el, i) => 300 + 30 * i
     })
-    // .add({
-    //   targets: '.animHeader .letter',
-    //   translateY: [0, -100],
-    //   opacity: [1, 0],
-    //   easing: 'easeInExpo',
-    //   duration: 1200,
-    //   delay: (el, i) => 100 + 30 * i
-    // })
+    .add({
+      targets: '.animHeader .letter',
+      translateY: [0, -100],
+      opacity: [1, 0],
+      easing: 'easeInExpo',
+      duration: 1200,
+      delay: (el, i) => 100 + 30 * i
+    })
   }
 }
 </script>

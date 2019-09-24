@@ -35,8 +35,9 @@
         <h2>Join us</h2>
         <ul>
           <li>
-            <a href="#" class="fa fa-facebook" />
-            <a href="#" class="fa fa-linkedin" />
+            <a :href="social.fb" class="fa fa-facebook" />
+            <a :href="social.linkedin" class="fa fa-linkedin" />
+            <a :href="social.whatsapp" class="fa fa-whatsapp" />
           </li>
         </ul>
       </div>
@@ -49,10 +50,16 @@ export default {
   data () {
     return {
       copyright: '© 2019 Copyright The Odd Wave',
-      email: '<a href="mailto:&#116;&#101;&#097;&#109;&#064;&#116;&#104;&#101;&#111;&#100;&#100;&#119;&#097;&#118;&#101;&#046;&#099;&#111;&#046;&#110;&#122;">&#116;&#101;&#097;&#109;&#064;&#116;&#104;&#101;&#111;&#100;&#100;&#119;&#097;&#118;&#101;&#046;&#099;&#111;&#046;&#110;&#122;</a>',
+      email:
+        '<a href="mailto:&#116;&#101;&#097;&#109;&#064;&#116;&#104;&#101;&#111;&#100;&#100;&#119;&#097;&#118;&#101;&#046;&#099;&#111;&#046;&#110;&#122;">&#116;&#101;&#097;&#109;&#064;&#116;&#104;&#101;&#111;&#100;&#100;&#119;&#097;&#118;&#101;&#046;&#099;&#111;&#046;&#110;&#122;</a>',
       phone1: '<a href="tel:+64 210 8658 172">+64 210 8658 172</a>',
       phone2: '<a href="tel:+64 210 8823 769">+64 210 8823 769</a>',
       poweredBy: 'powered by The Odd Wave suite of technologies',
+      social: {
+        fb: 'https://www.facebook.com/theoddwave',
+        linkedin: '#',
+        whatsapp: 'https://chat.whatsapp.com/DT09gv1r4fR7iD05jl7ing'
+      },
       standardNav: [
         { value: '/', text: 'Home' },
         { value: '/contact', text: 'Contact us' }
@@ -67,5 +74,4 @@ export default {
 }
 </script>
 <style scoped>
-
 </style>

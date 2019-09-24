@@ -15,9 +15,8 @@
       <b-carousel-slide
         v-for="item in slides"
         :key="item.image"
-        :img-src="item.image"
+        :img-src="item.processedImage"
         :caption="item.caption"
-        :text="item.imageText"
         :img-width="imgwidth"
         :img-height="imgheight"
       />
@@ -30,7 +29,7 @@ export default {
   props: {
     carouselId: {
       type: String,
-      default: 'carousel-1'
+      default: 'default'
     },
     interval: {
       type: String,
@@ -49,19 +48,19 @@ export default {
       default () {
         return [
           {
-            image: '/imgs/analytics.jpg',
+            image: 'analytics.jpg',
             caption: 'Analytics'
           },
           {
-            image: '/imgs/design.jpg',
+            image: 'design.jpg',
             caption: 'Design'
           },
           {
-            image: '/imgs/collaboration.jpg',
+            image: 'collaboration.jpg',
             caption: 'Collaboration'
           },
           {
-            image: '/imgs/hosting.jpg',
+            image: 'hosting.jpg',
             caption: 'Hosting'
           }
         ]
@@ -76,7 +75,12 @@ export default {
   },
   computed: {
     slides () {
-      return this.pslides
+      const result = this.pslides.map(i => ({ image: i.image,
+        caption: i.caption,
+        // processedImage: require(`~/assets/imgs/carousel/${this.carouselId}/${i.image}?size=640`)
+        processedImage: `/imgs/carousel/${this.carouselId}/${i.image}`
+      }))
+      return result
     }
   },
   methods: {

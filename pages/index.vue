@@ -7,8 +7,8 @@
     <LinkComponent :btext="btext" :blink="blink" />
 
     <TextImageComponent
-      :pcontent="{ text: content[0] }"
-      :pstyle="{ bgStyle: 'w-100 text-primary text-left  px-5 p-3'}"
+      :pcontent="{ text: content[0], inlineImage: 'graph.png'}"
+      :pstyle="{ bgStyle: 'w-100 text-primary text-left px-5 pt-3', inlineImageStyle: 'inlineImage10 inlineImageLeft'}"
     />
 
     <!-- <TextImageComponent
@@ -17,7 +17,7 @@
     /> -->
 
     <TextImageComponent
-      :pcontent="{ text: content[1], inlineImage: 'graph.png' }"
+      :pcontent="{ text: content[1] }"
       :pstyle="{ bgStyle: 'w-100 text-primary text-left px-5 pt-3', inlineImageStyle: 'inlineImage10 inlineImageLeft'}"
     />
 
@@ -27,8 +27,8 @@
     />
 
     <TextImageComponent
-      :pcontent="{ text: content[3] }"
-      :pstyle="{ bgStyle: 'w-100 text-primary text-left px-5 pt-3'}"
+      :pcontent="{ text: content[3], inlineImage: 'seo.png' }"
+      :pstyle="{ bgStyle: 'w-100 text-primary text-left px-5 pt-3', inlineImageStyle: 'inlineImage10 inlineImageLeft'}"
     />
 
     <!-- <TextImageComponent

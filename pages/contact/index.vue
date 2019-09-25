@@ -1,5 +1,5 @@
 <template>
-  <div id="contactContainer" class="text-left mt-header w-100 h-100">
+  <div id="contactContainer" class="text-left mt-header w-100 h-100 bg-light">
     <AnimeBannerWordsHeaderComponent :pheader="pheader" :pbgimage="pheaderImage" :pstyle="pstyle" />
     <ContactForm :pservices="services" :pbgimage="pheaderImage" :pstyle="pstyle" />
   </div>

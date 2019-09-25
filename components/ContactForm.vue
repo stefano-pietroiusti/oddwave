@@ -1,12 +1,12 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
-  <b-container id="contactForm" fluid class="bg-primary text-secondary w-75 m-5">
+  <b-container id="contactForm" fluid class="bg-light text-primary w-100 text-left">
     <b-row>
-      <b-col w="75">
+      <b-col cols="12" lg="6">
         <b-form
           v-if="show"
           small
-          class="text-secondary bg-primary text-left w-75 m-3"
+          class="text-primary bg-light text-left m-3"
           @submit="onSubmit"
           @reset="onReset"
         >
@@ -52,7 +52,7 @@
             id="input-group-4"
             label="I require help with the following:"
             label-size="lg"
-            class="bg-primary text-secondary mt-5"
+            class="bg-light text-primary mt-5"
           >
             <b-form-checkbox-group
               id="Services-selection"
@@ -82,9 +82,9 @@
           </b-button>
         </b-form>
       </b-col>
-      <b-col w="50" class="mt-0 p-4 text-left">
-        <h4>Contact the Odd Wave team directly:</h4>
-        <!-- <h3>getBase: {{ getBase }}</h3> -->
+      <b-col class="mt-0 pl-4 text-left pl-2">
+        <h4>The Odd Wave team direct:</h4>
+        <h6>{{ getBase }}</h6>
         <h4 v-html="companyphone1" />
         <h4 v-html="companyphone2" />
         <h4 v-html="companyemail" />
@@ -94,6 +94,9 @@
 </template>
 
 <script>
+// const path = require('path')
+const R = require('ramda')
+
 export default {
   props: {
     pservices: {
@@ -156,7 +159,9 @@ export default {
       }
     },
     getBase () {
-      return this.$router.options.base.toLowerCase() ? `${process.env.baseUrl}${this.$router.options.base.toLowerCase()}api/contact` : `${process.env.baseUrl}/api/contact`
+      // path.join
+      const url = !R.isEmpty(this.$router.options.base) && this.$router.options.base !== '/' ? `${process.env.baseUrl}${this.$router.options.base.toLowerCase()}${process.env.contactUrl}` : `${process.env.baseUrl}${process.env.contactUrl}`
+      return url
     }
   },
   notifications: {
@@ -213,6 +218,6 @@ export default {
 </script>
 <style scoped>
 #contactForm {
-  text-transform: none;
+  text-transform: unset;
 }
 </style>

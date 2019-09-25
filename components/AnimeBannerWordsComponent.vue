@@ -14,30 +14,23 @@
       </h1>
     </span>
     <span id="anim2">
-      <h2 class="anim2">Vanilla Web, Search & Integration</h2>
+      <h2 class="anim2">Powerful Vanilla Websites Marketing Search and Integration solutions</h2>
     </span>
-    <!-- <span id="anim6">
-      <h2 class="anim6">Website design and digital marketing</h2>
-    </span>-->
-    <!-- <span id="anim7">
-      <h2 class="anim7">Continuous delivery</h2>
-    </span>-->
     <span id="anim3">
       <h3 class="anim3">
-        <span class="word">Open source</span>
-        <span class="word">Headless CMS</span>
-        <span class="word">VanillaJS</span>
-        <!-- <span class="word">HTML</span>
-        <span class="word">SCSS</span>-->
+        <span class="word">Headless Open Source CMS</span>
+        <span class="word">VanillaJS Web</span>
+        <span class="word">Vanilla SEO</span>
       </h3>
     </span>
     <span id="anim8">
       <h3 class="anim8">
         <span class="word">Website design</span>
+        <span class="word">Animation</span>
         <span class="word">Content writing</span>
-        <span class="word">Animations</span>
         <span class="word">Digital marketing</span>
-        <span class="word">Data engineering</span>
+        <span class="word">Data Integration</span>
+        <span class="word">Visualisation</span>
         <span class="word">Automation</span>
       </h3>
     </span>
@@ -50,11 +43,11 @@ export default {
   mounted() {
     const anim1 = {}
     anim1.opacityIn = [0, 1]
-    anim1.scaleIn = [0.1, 0.8]
-    anim1.scaleOut = 0.8
+    anim1.scaleIn = [0.2, 1]
+    anim1.scaleOut = 3
     anim1.durationIn = 800
     anim1.durationOut = 600
-    anim1.delay = 200
+    anim1.delay = 500
     let textWrapper = document.querySelector('.anim2')
     textWrapper.innerHTML = textWrapper.textContent.replace(
       /\S/g,
@@ -168,31 +161,6 @@ export default {
         easing: 'easeInExpo',
         delay: anim1.delay
       })
-    // .add({
-    //   targets: '.anim4 .line',
-    //   scaleX: [0, 1],
-    //   opacity: [0.5, 1],
-    //   easing: 'easeInOutExpo',
-    //   duration: 900
-    // })
-    // .add({
-    //   targets: '.anim4 .letter',
-    //   opacity: [0, 1],
-    //   translateX: [40, 0],
-    //   translateZ: 0,
-    //   scaleX: [0.3, 1],
-    //   easing: 'easeOutExpo',
-    //   duration: 800,
-    //   offset: '-=600',
-    //   delay: (el, i) => 150 + 25 * i
-    // })
-    // .add({
-    //   targets: '.anim4',
-    //   opacity: 0,
-    //   duration: 1000,
-    //   easing: 'easeOutExpo',
-    //   delay: 1000
-    // })
   },
   props: {
     pbgimage: {
@@ -240,15 +208,14 @@ export default {
 #anim1 {
   position: absolute;
   left: 2em;
-  /* display: block; */
   width: 50%;
 }
 .anim1 {
-  position: relative;
+  position: absolute;
   font-weight: 900;
   text-align: left;
-  left: 2em;
-  top: 2em;
+  left: 1em;
+  top: 1em;
 }
 .anim1 .letters {
   position: absolute;
@@ -257,46 +224,53 @@ export default {
   top: 0;
   opacity: 0;
   text-align: left;
-  font-size: 1.3em;
+  font-weight: 900;
+  font-size: 1.8em;
 }
 
 #anim2 {
-  position: relative;
-  left: 0;
-  top: 1em;
+  position: absolute;
+  /* left: 0;
+  top: 1em; */
 }
 
 .anim2 {
-  position: relative;
+  position: absolute;
   letter-spacing: 0.3em;
   text-transform: unset;
-}
-
-.anim2 .letter {
-  position: relative;
-  display: inline-block;
-  line-height: 1em;
-  margin: auto;
-  text-transform: unset;
-}
-#anim6 {
-  position: relative;
-  left: 0;
+    left: 1em;
   top: 1em;
 }
 
-.anim6 {
-  position: relative;
-  letter-spacing: 0.3em;
-  text-transform: unset;
-}
-
-.anim6 .letter {
-  position: relative;
+.anim2 .letter {
+  position: absolute;
   display: inline-block;
   line-height: 1em;
   margin: auto;
   text-transform: unset;
+  opacity: 0;
+}
+#anim6 {
+  position: absolute;
+  /* left: 0;
+  top: 1em; */
+}
+
+.anim6 {
+  position: absolute;
+  letter-spacing: 0.3em;
+  text-transform: unset;
+  left: 1em;
+  top: 1em;
+}
+
+.anim6 .letter {
+  position: absolute;
+  display: inline-block;
+  line-height: 1em;
+  margin: auto;
+  text-transform: unset;
+  opacity: 0;
 }
 #anim7 {
   position: relative;
@@ -306,7 +280,6 @@ export default {
 
 .anim7 {
   position: relative;
-  letter-spacing: 0.3em;
   text-transform: unset;
 }
 
@@ -316,6 +289,7 @@ export default {
   line-height: 1em;
   margin: auto;
   text-transform: unset;
+  opacity: 0;
 }
 #anim3 {
   position: relative;
@@ -324,64 +298,28 @@ export default {
 }
 .anim3 {
   font-weight: 800;
-  letter-spacing: 0.5em;
 }
 
 .anim3 .word {
   display: inline-block;
-  /* position: relative; */
   line-height: 1em;
   margin: auto;
+  opacity: 0;
 }
 
 #anim8 {
-  position: relative;
-  left: 0;
-  top: -3em;
+  position: absolute;
 }
 
 .anim8 {
   font-weight: 800;
-  letter-spacing: 0.5em;
 }
 
 .anim8 .word {
   display: inline-block;
-  /* position: relative; */
   line-height: 1em;
   margin: auto;
-}
-
-/* .anim4 {
-  font-weight: 200;
-}
-
-.anim4 .anim4-wrapper {
-  position: relative;
-  display: inline-block;
-  left: 0;
-  top: -0.3em;
-  text-align: center;
-} */
-
-/* .anim4 .line {
   opacity: 0;
-  position: absolute;
-  left: 0;
-  height: 2px;
-  width: 100%;
-  transform-origin: 100% 100%;
-  bottom: 0;
-  text-align: center;
 }
 
-.anim4 .letter {
-  display: inline-block;
-  line-height: 1em;
-  margin: auto;
-  left: 0;
-  top: 1em;
-  line-height: 1em;
-  text-align: center;
-} */
 </style>

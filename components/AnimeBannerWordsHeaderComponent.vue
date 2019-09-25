@@ -1,7 +1,7 @@
 <template>
   <b-container id="animationBanner" fluid :style="gradient" :class="pstyle.bgStyle">
     <b-row>
-      <b-col>
+      <b-col class="text-left">
         <h1 class="animHeader">
           {{ pheader }}
         </h1>
@@ -32,7 +32,7 @@ export default {
     pstyle: {
       type: Object,
       default() {
-        return { bgStyle: 'parralaxNormal text-primary  text-left p-5 vh-100' }
+        return { bgStyle: 'parralaxEffect text-primary  text-left p-5 vh-100' }
       }
     }
   },
@@ -94,22 +94,17 @@ export default {
 }
 
 .animHeader {
-  position: relative;
-  /* text-transform: uppercase; */
+  position:relative;
   letter-spacing: 0.1em;
-  /* left: 0;
-  top: 0vw;
-  opacity: 0;  */
-  left: 0;
-  top: 0em;
+  left: 0.2em;
+  top: 1em;
 }
 
 .animHeader .letter {
   position: relative;
   display: inline-block;
-  line-height: 1em;
+  /* line-height: 1em; */
   margin: auto;
-  left: 0;
-  top: 0em;
+  opacity: 0; 
 }
 </style>

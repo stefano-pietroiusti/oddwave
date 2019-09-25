@@ -189,6 +189,10 @@ $calc_h6: calc(1vw + 1vh + 0.6vmin);
 
 html {
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  background-size: cover;
+  width: 100%;
+  overflow-x: hidden;
+
 }
 
 body {

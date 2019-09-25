@@ -92,3 +92,4 @@ assets/scss/bootstrap-vue/
 
 # Nuxt generate
 dist
+nuxt-dist

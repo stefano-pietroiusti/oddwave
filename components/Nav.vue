@@ -2,7 +2,13 @@
   <b-container fluid class="bg-primary m-0 p-0">
     <b-row>
       <b-col>
-        <b-navbar sticky fixed="top" toggleable="lg" type="dark" variant="primary">
+        <b-navbar
+          sticky
+          fixed="top"
+          toggleable="lg"
+          type="dark"
+          variant="primary"
+        >
           <b-navbar-brand to="/">
             <img :src="require('~/assets/logos/oddwave.png?size=200')" fluid alt="the odd wave" class="logo">
             {{ title }}

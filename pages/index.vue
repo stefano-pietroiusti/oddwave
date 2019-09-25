@@ -1,5 +1,5 @@
 <template>
-  <b-container fluid class="text-light text-left mt-header p-0">
+  <b-container fluid class="text-light text-left p-0">
     <AnimeBannerWordsComponent :pbgimage="pHeaderImage" />
 
     <HeaderComponent :pheader="pheader" :psubheader="psubheader" :psubtitle="psubtitle" />
@@ -86,7 +86,7 @@ export default {
       psubheader: 'to help your business grow',
       pimageoverlay: 'imgs/marketingstrategy.jpg',
       pimagebanner: 'imgs/analytics.jpg',
-      pHeaderImage: { color1: 'rgba(255, 0, 255, 0) 0%', color2: 'rgba(0, 255, 255, 0) 0%', url: 'oddwave.jpg', height: 70 },
+      pHeaderImage: { color1: 'rgba(255, 0, 255, 0) 0%', color2: 'rgba(0, 255, 255, 0) 0%', url: 'oddwave.jpg', height: 40 },
       psubtitle:
         "Our goal is to assist start-ups grow their business with an impactful online presence using latest proven web technologies and digital marketing solutions that won't break the bank. We believe that every business should be a success.",
       btext: 'Get in touch',

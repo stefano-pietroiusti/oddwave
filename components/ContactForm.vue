@@ -180,6 +180,7 @@ export default {
     },
     async submitForm () {
       const response = await this.$axios.$post(
+        // absolute url of new forms processor
         // `${process.env.baseUrl}/api/contact`,
         this.getBase,
         { data: this.form }

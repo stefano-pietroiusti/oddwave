@@ -24,11 +24,11 @@
     </span>-->
     <span id="anim3">
       <h3 class="anim3">
-        <span class="word">Google</span>
-        <span class="word">Bing</span>
+        <span class="word">Open source</span>
+        <span class="word">Headless CMS</span>
         <span class="word">VanillaJS</span>
-        <span class="word">HTML</span>
-        <span class="word">SCSS</span>
+        <!-- <span class="word">HTML</span>
+        <span class="word">SCSS</span>-->
       </h3>
     </span>
     <span id="anim8">
@@ -37,6 +37,8 @@
         <span class="word">Content writing</span>
         <span class="word">Animations</span>
         <span class="word">Digital marketing</span>
+        <span class="word">Data engineering</span>
+        <span class="word">Automation</span>
       </h3>
     </span>
   </b-container>
@@ -223,7 +225,7 @@ export default {
         backgroundAttachment: 'fixed',
         backgroundPosition: 'top',
         backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
+        backgroundSize: 'cover'
       }
     }
   }
@@ -237,7 +239,7 @@ export default {
 }
 #anim1 {
   position: absolute;
-  left: 0;
+  left: 2em;
   /* display: block; */
   width: 50%;
 }
@@ -245,8 +247,8 @@ export default {
   position: relative;
   font-weight: 900;
   text-align: left;
-    left: 0;
-  top: 0;
+  left: 2em;
+  top: 2em;
 }
 .anim1 .letters {
   position: absolute;
@@ -263,30 +265,6 @@ export default {
   left: 0;
   top: 1em;
 }
-#anim6 {
-  position: relative;
-  left: 0;
-  top: 1em;
-}
-#anim7 {
-  position: relative;
-  left: 0;
-  top: 1em;
-}
-
-#anim3 {
-  position: relative;
-  left: 0;
-  top: 1em;
-}
-
-#anim8 {
-  position: relative;
-  left: 0;
-  top: 1em;
-}
-
-
 
 .anim2 {
   position: relative;
@@ -300,6 +278,11 @@ export default {
   line-height: 1em;
   margin: auto;
   text-transform: unset;
+}
+#anim6 {
+  position: relative;
+  left: 0;
+  top: 1em;
 }
 
 .anim6 {
@@ -315,6 +298,12 @@ export default {
   margin: auto;
   text-transform: unset;
 }
+#anim7 {
+  position: relative;
+  left: 0;
+  top: 1em;
+}
+
 .anim7 {
   position: relative;
   letter-spacing: 0.3em;
@@ -328,6 +317,11 @@ export default {
   margin: auto;
   text-transform: unset;
 }
+#anim3 {
+  position: relative;
+  left: 0;
+  top: 1em;
+}
 .anim3 {
   font-weight: 800;
   letter-spacing: 0.5em;
@@ -338,6 +332,12 @@ export default {
   /* position: relative; */
   line-height: 1em;
   margin: auto;
+}
+
+#anim8 {
+  position: relative;
+  left: 0;
+  top: -3em;
 }
 
 .anim8 {

@@ -15,8 +15,9 @@
     "build:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt build",
     "generate:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt generate",
     "deploy:gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup",
-    "build:a2": "cross-env DEPLOY_ENV=STATIC BASE_URL=https://theoddwave.co.nz CONTACT_URL=/oddwaveforms/api/contact nuxt build",
-    "generate:a2": "cross-env DEPLOY_ENV=STATIC BASE_URL=https://theoddwave.co.nz CONTACT_URL=/oddwaveforms/api/contact nuxt generate"
+    "dev:a2": "cross-env DEPLOY_ENV=a2 BASE_URL=https://theoddwave.co.nz CONTACT_URL=/oddwaveforms/api/contact nuxt",
+    "build:a2": "cross-env DEPLOY_ENV=a2 BASE_URL=https://theoddwave.co.nz CONTACT_URL=/oddwaveforms/api/contact nuxt build",
+    "generate:a2": "cross-env DEPLOY_ENV=a2 BASE_URL=https://theoddwave.co.nz CONTACT_URL=/oddwaveforms/api/contact nuxt generate"
   },
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",

@@ -21,10 +21,6 @@
         <span class="word">Headless Open Source CMS</span>
         <span class="word">VanillaJS Web</span>
         <span class="word">Vanilla SEO</span>
-      </h3>
-    </span>
-    <span id="anim8">
-      <h3 class="anim8">
         <span class="word">Website design</span>
         <span class="word">Animation</span>
         <span class="word">Content writing</span>
@@ -83,28 +79,30 @@ export default {
         duration: 800,
         delay: (el, i) => 800 * i
       })
-      .add({
+                  .add({
         targets: '.anim3',
         opacity: 0,
-        duration: 1000,
+        duration: 500,
         easing: 'easeOutExpo',
-        delay: 1000
+        delay: 500
       })
-      .add({
-        targets: '.anim8 .word',
-        scale: [1.5, 1],
-        opacity: [0, 1],
-        easing: 'easeOutCirc',
-        duration: 800,
-        delay: (el, i) => 800 * i
-      })
-      .add({
-        targets: '.anim8',
-        opacity: 0,
-        duration: 1000,
-        easing: 'easeOutExpo',
-        delay: 1000
-      })
+      // .add({
+      //   targets: '.anim8 .word',
+      //   scale: [1.5, 1],
+      //   opacity: [0, 1],
+      //   easing: 'easeOutCirc',
+      //   duration: 800,
+      //   delay: (el, i) => 800 * i
+      // })
+
+      // .add({
+      //   targets: '.anim8',
+      //   opacity: 0,
+      //   duration: 500,
+      //   easing: 'easeOutExpo',
+      //   delay: 500
+      // })
+
       .add({
         targets: '.anim1 .word-1',
         opacity: anim1.opacityIn,
@@ -225,26 +223,27 @@ export default {
   opacity: 0;
   text-align: left;
   font-weight: 900;
-  font-size: 1.8em;
+  font-size: 1.5em;
 }
 
 #anim2 {
   position: absolute;
-  /* left: 0;
-  top: 1em; */
+  width: 100%;
 }
 
 .anim2 {
   position: absolute;
+  display: inline-block;
   letter-spacing: 0.3em;
   text-transform: unset;
-    left: 1em;
-  top: 1em;
+  left: 1em;
+  top: 0.2em;
 }
 
 .anim2 .letter {
   position: absolute;
-  display: inline-block;
+
+  width: 100%;
   line-height: 1em;
   margin: auto;
   text-transform: unset;
@@ -321,5 +320,4 @@ export default {
   margin: auto;
   opacity: 0;
 }
-
 </style>

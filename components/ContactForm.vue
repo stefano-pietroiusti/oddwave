@@ -84,7 +84,7 @@
       </b-col>
       <b-col class="mt-0 pl-4 text-left pl-2">
         <h4>The Odd Wave team direct:</h4>
-        <h6>{{ getBase }}</h6>
+        <!-- <h6>{{ getBase }}</h6> -->
         <h4 v-html="companyphone1" />
         <h4 v-html="companyphone2" />
         <h4 v-html="companyemail" />
@@ -190,11 +190,9 @@ export default {
       this.submitForm()
     },
     async submitForm () {
-      console.log(this.getBase)
-      console.log({ data: this.form })
+      // console.log(this.getBase)
+      // console.log({ data: this.form })
       const response = await this.$axios.$post(
-        // absolute url of new forms processor
-        // `${process.env.baseUrl}/api/contact`,
         this.getBase,
         { data: this.form }
       )

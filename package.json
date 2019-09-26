@@ -18,7 +18,8 @@
     "dev:localforms": "cross-env DEPLOY_ENV=local BASE_URL=http://localhost:30100 CONTACT_URL=/oddwaveforms/api/contact nuxt",
     "dev:a2": "cross-env DEPLOY_ENV=a2 BASE_URL=https://theoddwave.co.nz CONTACT_URL=/oddwaveforms/api/contact nuxt",
     "build:a2": "cross-env DEPLOY_ENV=a2 BASE_URL=https://theoddwave.co.nz CONTACT_URL=/oddwaveforms/api/contact nuxt build",
-    "generate:a2": "cross-env DEPLOY_ENV=a2 BASE_URL=https://theoddwave.co.nz CONTACT_URL=/oddwaveforms/api/contact nuxt generate"
+    "generate:a2": "cross-env DEPLOY_ENV=a2 BASE_URL=https://theoddwave.co.nz CONTACT_URL=/oddwaveforms/api/contact nuxt generate",
+    "bg:a2": "cross-env DEPLOY_ENV=a2 BASE_URL=https://theoddwave.co.nz CONTACT_URL=/oddwaveforms/api/contact nuxt build && nuxt generate"
   },
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",

@@ -84,7 +84,7 @@
       </b-col>
       <b-col class="mt-0 pl-4 text-left pl-2">
         <h4>The Odd Wave team direct:</h4>
-        <h6>{{ getBase }}</h6>
+        <!-- <h6>{{ getBase }}</h6> -->
         <h4 v-html="companyphone1" />
         <h4 v-html="companyphone2" />
         <h4 v-html="companyemail" />
@@ -160,7 +160,13 @@ export default {
     },
     getBase () {
       // path.join
-      const url = !R.isEmpty(this.$router.options.base) && this.$router.options.base !== '/' ? `${process.env.baseUrl}${this.$router.options.base.toLowerCase()}${process.env.contactUrl}` : `${process.env.baseUrl}${process.env.contactUrl}`
+      const url =
+        !R.isEmpty(this.$router.options.base) &&
+        this.$router.options.base !== '/'
+          ? `${process.env.baseUrl}${this.$router.options.base.toLowerCase()}${
+            process.env.contactUrl
+          }`
+          : `${process.env.baseUrl}${process.env.contactUrl}`
       return url
     }
   },
@@ -184,6 +190,8 @@ export default {
       this.submitForm()
     },
     async submitForm () {
+      console.log(this.getBase)
+      console.log({ data: this.form })
       const response = await this.$axios.$post(
         // absolute url of new forms processor
         // `${process.env.baseUrl}/api/contact`,

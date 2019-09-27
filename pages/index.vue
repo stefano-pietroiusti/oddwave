@@ -68,7 +68,12 @@ export default {
         {
           hid: 'oddwave-home',
           name: this.title,
-          content: this.pheader + ' and ' + this.panimheader
+          content: this.pheader + ' and ' + this.psubheader
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.psubtitle
         },
         {
           hid: 'keywords',

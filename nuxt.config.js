@@ -78,21 +78,9 @@ export default {
     'nuxt-simple-line-icons',
     'nuxt-svg-loader',
     'nuxt-responsive-loader',
-    ['@nuxtjs/dotenv', { only: ['BASE_URL'] }],
-    ['@nuxtjs/robots', {
-      robots: [
-        {
-          useragent: '*',
-          allow: '/',
-          crawldelay: 0
-        }
-      ]
-    }],
-    // https://www.npmjs.com/package/@nuxtjs/sitemap
+    '@nuxtjs/dotenv',
+    '@nuxtjs/robots',
     '@nuxtjs/sitemap',
-    // https://github.com/nuxt-community/recaptcha-module/blob/master/example/v3/pages/index.vue
-    // https://www.npmjs.com/package/vue-recaptcha
-    // https://itnext.io/how-to-use-google-recaptcha-with-vuejs-7756244400da
     '@nuxtjs/recaptcha'
   ],
   bootstrapVue: {
@@ -112,6 +100,11 @@ export default {
     adapter: require('responsive-loader/sharp'),
     placeholder: false,
 
+  },
+  robots: {
+    UserAgent: '*',
+    Allow: '/',
+    CrawlDelay: 0
   },
   sitemap: {
     hostname: baseUrl,

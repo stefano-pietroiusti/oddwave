@@ -73,11 +73,7 @@
               max-rows="6"
             />
           </b-form-group>
-          <recaptcha
-            @error="onError"
-            @success="onSuccess"
-            @expired="onExpired"
-          />
+          <recaptcha @error="onError" @success="onSuccess" @expired="onExpired" />
           <b-button id="submit" type="submit" variant="success">
             Submit
           </b-button>
@@ -87,12 +83,8 @@
         </b-form>
       </b-col>
       <b-col class="mt-0 pl-4 text-left pl-2">
-        <h6>
-          The Odd Wave team direct:
-        </h6>
-        <!-- <h6>
-          {{ getBase }}
-        </h6> -->
+        <h6>The Odd Wave team direct:</h6>
+        <h6>{{ getBase }}</h6>
         <h6 v-html="companyphone1" />
         <h6 v-html="companyphone2" />
         <h6 v-html="companyemail" />
@@ -190,7 +182,7 @@ export default {
       type: 'error'
     },
     showRecaptchaSuccess: {
-      title: 'Glad you\'re human',
+      title: "Glad you're human",
       message: 'Please go ahead and submit',
       type: 'success'
     },
@@ -202,8 +194,7 @@ export default {
     },
     showReset: {
       title: 'Form reset',
-      message:
-        '',
+      message: '',
       type: 'error'
     }
   },
@@ -227,20 +218,24 @@ export default {
       this.showRecaptchaError()
       await this.$recaptcha.init()
     },
-    onSuccess (token) {
-    },
+    onSuccess (token) {},
     onExpired () {
       this.showRecaptchaError()
     },
     async submitForm (recaptchaToken) {
-      const response = await this.$axios.$post(this.getBase, {
-        data: { ...this.form, recaptchaToken }
-      })
-      if (response.statusCode === 200) {
-        this.clearForm()
-        this.showSubmit()
-      } else {
+      try {
+        const response = await this.$axios.$post(this.getBase, {
+          data: { ...this.form, recaptchaToken }
+        })
+        if (response.statusCode === 200) {
+          this.clearForm()
+          this.showSubmit()
+        } else {
+          this.showSubmitError()
+        }
+      } catch (error) {
         this.showSubmitError()
+        console.log(error)
       }
     },
     async onReset (evt) {

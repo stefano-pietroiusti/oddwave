@@ -8,11 +8,13 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
 
 const baseUrl = process.env.BASE_URL || 'http://localhost:3000'
 const contactUrl = process.env.CONTACT_URL || '/api/contact'
+const recaptchaSiteKey = process.env.SITE_KEY || '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
 
 export default {
   env: {
     baseUrl,
-    contactUrl
+    contactUrl,
+    recaptchaSiteKey
   },
   layoutTransition: {
     name: 'layout',
@@ -37,7 +39,12 @@ export default {
     title: process.env.npm_package_name || 'The Odd Wave digital and web design services',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
+      { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'The Odd Wave digital and web design services'
+      }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -53,7 +60,9 @@ export default {
     '~/plugins/anime.js',
     '~/plugins/fontawesome.js',
     { src: '~/plugins/vue-notifications', mode: 'client' },
-    { src: '~/plugins/vue-chartjs.js', mode: 'client' }
+    { src: '~/plugins/vue-chartjs.js', mode: 'client' },
+    { src: '~/plugins/ga.js', mode: 'client' }
+
     // { src: '~plugins/vue-parallaxy', mode: 'client' },
     // { src: '~/plugins/vue-fb-customer-chat', mode: 'client' },
     // { src: '~/plugins/bootstrap-vue', mode: 'client' }
@@ -70,18 +79,21 @@ export default {
     'nuxt-svg-loader',
     'nuxt-responsive-loader',
     ['@nuxtjs/dotenv', { only: ['BASE_URL'] }],
-    // https://npmjs.com/package/@nuxtjs/robots
     ['@nuxtjs/robots', {
       robots: [
         {
-          UserAgent: '*',
-          Disallow: null
+          useragent: '*',
+          allow: '/',
+          crawldelay: 0
         }
       ]
     }],
     // https://www.npmjs.com/package/@nuxtjs/sitemap
-    '@nuxtjs/sitemap'
-    // '@nuxtjs/recaptcha'
+    '@nuxtjs/sitemap',
+    // https://github.com/nuxt-community/recaptcha-module/blob/master/example/v3/pages/index.vue
+    // https://www.npmjs.com/package/vue-recaptcha
+    // https://itnext.io/how-to-use-google-recaptcha-with-vuejs-7756244400da
+    '@nuxtjs/recaptcha'
   ],
   bootstrapVue: {
     bootstrapCSS: false, // Or `css: false`
@@ -105,12 +117,11 @@ export default {
     hostname: baseUrl,
     gzip: true,
   },
-  // recaptcha: {
-  //   hideBadge: Boolean, // Hide badge element (v3)
-  //   language: String,   // Recaptcha language (v2)
-  //   siteKey: String,    // Site key for requests
-  //   version: Number     // Version
-  // },
+  recaptcha: {
+    // hideBadge: false,
+    siteKey: recaptchaSiteKey,
+    version: 2
+  },
   serverMiddleware: [
     // { path: '/api/logger', handler: '~/api/logger.js' },
     { path: contactUrl, handler: '~/serverMiddleware/contact' }

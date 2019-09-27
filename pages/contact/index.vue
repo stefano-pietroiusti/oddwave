@@ -22,6 +22,11 @@ export default {
           content: this.title + ' and ' + this.pheader
         },
         {
+          hid: 'description',
+          name: 'description',
+          content: this.title + ' and ' + this.pheader
+        },
+        {
           hid: 'keywords',
           name: 'keywords',
           content: this.keywords

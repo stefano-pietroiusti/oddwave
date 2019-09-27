@@ -73,21 +73,29 @@
               max-rows="6"
             />
           </b-form-group>
-
-          <b-button type="submit" variant="success">
+          <recaptcha
+            @error="onError"
+            @success="onSuccess"
+            @expired="onExpired"
+          />
+          <b-button id="submit" type="submit" variant="success">
             Submit
           </b-button>
-          <b-button type="reset" variant="danger">
+          <b-button id="reset" type="reset" variant="danger">
             Reset
           </b-button>
         </b-form>
       </b-col>
       <b-col class="mt-0 pl-4 text-left pl-2">
-        <h4>The Odd Wave team direct:</h4>
-        <!-- <h6>{{ getBase }}</h6> -->
-        <h4 v-html="companyphone1" />
-        <h4 v-html="companyphone2" />
-        <h4 v-html="companyemail" />
+        <h6>
+          The Odd Wave team direct:
+        </h6>
+        <!-- <h6>
+          {{ getBase }}
+        </h6> -->
+        <h6 v-html="companyphone1" />
+        <h6 v-html="companyphone2" />
+        <h6 v-html="companyemail" />
       </b-col>
     </b-row>
   </b-container>
@@ -111,7 +119,7 @@ export default {
         return {
           color1: 'rgba(85, 255, 0, 0.2)',
           color2: 'rgba(0, 255, 255, 0.5)',
-          url: '/imgs/seodigital.jpg'
+          url: 'seodigital.jpg'
         }
       }
     },
@@ -172,30 +180,62 @@ export default {
   },
   notifications: {
     showSubmitError: {
-      // You can have any name you want instead of 'showLoginError'
       title: 'Submit Failed',
-      message: 'Failed to submit',
-      type: 'error' // You also can use 'VueNotifications.types.error' instead of 'error'
+      message: 'Please try again or call us directly',
+      type: 'error'
+    },
+    showRecaptchaError: {
+      title: 'Robot Failed',
+      message: 'Please try again or call us directly',
+      type: 'error'
+    },
+    showRecaptchaSuccess: {
+      title: 'Glad you\'re human',
+      message: 'Please go ahead and submit',
+      type: 'success'
     },
     showSubmit: {
-      // You can have any name you want instead of 'showLoginError'
       title: 'Enquiry submitted',
-      message: 'Form submitted',
-      type: 'success' // You also can use 'VueNotifications.types.error' instead of 'error'
+      message:
+        'We have received your message and look forward to chatting with you soon.',
+      type: 'success'
+    },
+    showReset: {
+      title: 'Form reset',
+      message:
+        '',
+      type: 'error'
     }
   },
+  async mounted () {
+    await this.$recaptcha.init()
+  },
   methods: {
-    onSubmit (evt) {
-      evt.preventDefault()
-      this.submitForm()
+    async onSubmit (evt) {
+      try {
+        evt.preventDefault()
+        const recaptchaToken = await this.$recaptcha.getResponse()
+        if (recaptchaToken) {
+          this.submitForm(recaptchaToken)
+        }
+      } catch (error) {
+        console.log(error)
+      }
     },
-    async submitForm () {
-      // console.log(this.getBase)
-      // console.log({ data: this.form })
-      const response = await this.$axios.$post(
-        this.getBase,
-        { data: this.form }
-      )
+    async onError (error) {
+      console.log(error)
+      this.showRecaptchaError()
+      await this.$recaptcha.init()
+    },
+    onSuccess (token) {
+    },
+    onExpired () {
+      this.showRecaptchaError()
+    },
+    async submitForm (recaptchaToken) {
+      const response = await this.$axios.$post(this.getBase, {
+        data: { ...this.form, recaptchaToken }
+      })
       if (response.statusCode === 200) {
         this.clearForm()
         this.showSubmit()
@@ -203,10 +243,11 @@ export default {
         this.showSubmitError()
       }
     },
-    onReset (evt) {
+    async onReset (evt) {
       evt.preventDefault()
       this.clearForm()
-      this.showSubmit()
+      this.showReset()
+      await this.$recaptcha.init()
     },
     clearForm () {
       this.form.email = ''

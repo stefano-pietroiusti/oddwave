@@ -60,6 +60,11 @@ export default {
           content: this.service.header + ' and ' + this.service.subheader
         },
         {
+          hid: 'description',
+          name: 'description',
+          content: this.service.header + ' and ' + this.service.subheader
+        },
+        {
           hid: 'keywords',
           name: 'keywords',
           content: this.service.keywords

@@ -1,7 +1,12 @@
 <template>
-  <b-container id="animationBanner" fluid :style="gradient" :class="pstyle.bgStyle">
+  <b-container
+    id="animationBanner"
+    fluid
+    :style="gradient"
+    :class="pstyle.bgStyle"
+  >
     <b-row>
-      <b-col class="text-left">
+      <b-col class="p-5">
         <h1 class="animHeader">
           {{ pheader }}
         </h1>
@@ -46,9 +51,10 @@ export default {
     },
     gradient() {
       return {
-        backgroundImage: `linear-gradient(45deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.5) 100%), url(${this.bannerImagePath})`,
+        // backgroundImage: `linear-gradient(45deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.5) 100%), url(${this.bannerImagePath})`,
+        backgroundImage: `linear-gradient(45deg, ${this.pbgimage.color1} 0%, ${this.pbgimage.color1} 100%)`,
         width: '100%',
-        height: `${this.pbgimage.height}vh`,
+        height: `${this.pbgimage.height}`,
         backgroundAttachment: 'fixed',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -96,8 +102,8 @@ export default {
 .animHeader {
   position:relative;
   letter-spacing: 0.1em;
-  left: 0.2em;
-  top: 1em;
+  /* left: 0.2em;
+  top:  0.2em; */
 }
 
 .animHeader .letter {

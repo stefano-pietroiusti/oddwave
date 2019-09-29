@@ -40,8 +40,8 @@ export default {
       pimage: 'none',
       pheader: "LET'S CREATE SOME AWESOMENESS",
       pheaderImage: {
-        color1: 'rgba(255, 255, 255, 0)',
-        color2: 'rgba(255, 255, 255, 0.5)',
+        color1: 'rgba(200, 232, 84, 1)',
+        color2: 'rgba(200, 232, 84, 0.2)',
         url: 'contact.jpg',
         height: 40
       },

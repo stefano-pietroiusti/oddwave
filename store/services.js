@@ -1,3 +1,12 @@
+// const colors = {
+//   rwcblue: 'rgba(84, 200, 232, 1)',
+//   rwcpurple: 'rgba(153, 61, 187, 1)',
+//   rwcteal: 'rgba(46, 217, 195, 1)',
+//   rwcred: 'rgba(244, 67, 108, 1)',
+//   rwcyellow: 'rgba(245, 168, 0, 1)',
+//   rwclime: 'rgba(200, 232, 84, 1)'
+// }
+
 export const state = () => ({
   all: [
     {
@@ -5,8 +14,8 @@ export const state = () => ({
       title: 'Search Engine Optimisation',
       description: 'Search Engine Optimization (SEO) by the Odd Wave Wave, Increase your Google ranking and drive organic traffic to your website visit theoddwave.co.nz',
       header: 'Drive organic traffic to your website with SEO',
-      headerImage: { color1: 'rgba(255, 255, 255, 0.2)', color2: 'rgba(0, 255, 255, 0.5)', url: 'seo.jpg', height: 80 },
-      headerStyle: { bgStyle: 'text-primary parralaxEffect' },
+      headerImage: { color1: 'rgba(84, 200, 232, 1)', color2: 'rgba(84, 200, 232, 1)', url: 'seo.jpg', height: 'auto' },
+      headerStyle: { bgStyle: 'text-secondary text-center' },
       subheader: 'Increase your ranking cost effectively',
       subheaderStyle: { color: 'text-primary', buttonVariant: 'info' },
       content: [
@@ -55,8 +64,8 @@ export const state = () => ({
       title: 'Pay per Click Advertising',
       description: 'Boost your sales with search advertising using Google Ads and Bing Ads, contact the Odd Wave online advertising team to get you started.',
       header: 'Pay per Click  Advertising',
-      headerImage: { color1: 'rgba(255, 255, 255, 0.2)', color2: 'rgba(0, 255, 255, 0.5)', url: 'ppc.jpg', height: 80 },
-      headerStyle: { bgStyle: 'text-primary parralaxEffect' },
+      headerImage: { color1: 'rgba(153, 61, 187, 1)', color2: 'rgba(153, 61, 187, 1)', url: 'ppc.jpg', height: 'auto' },
+      headerStyle: { bgStyle: 'text-secondary text-center' },
       subheader: 'Accelerate market penetration with Google Ads',
       subheaderStyle: { color: 'text-info', buttonVariant: 'info' },
       content:
@@ -113,8 +122,8 @@ export const state = () => ({
       title: 'Custom Website Design and Development',
       description: 'Boost your sales with search advertising using Google Ads and Bing Ads, contact the Odd Wave online advertising team to get you started.',
       header: 'Custom Website Design and Development',
-      headerImage: { color1: 'rgba(255, 255, 255, 0.2)', color2: 'rgba(0, 255, 255, 0.5)', url: 'webdesign.jpg', height: 80 },
-      headerStyle: { bgStyle: 'text-primary parralaxEffect' },
+      headerImage: { color1: 'rgba(46, 217, 195, 1)', color2: 'rgba(46, 217, 195, 1)', url: 'webdesign.jpg', height: 'auto' },
+      headerStyle: { bgStyle: 'text-secondary text-center' },
       subheader: 'Innovative, Responsive, High- Speed Modern Website Design',
       subheaderStyle: { color: 'text-black', buttonVariant: 'info' },
       content:
@@ -161,8 +170,8 @@ export const state = () => ({
       title: 'Creative Digital Photography',
       description: 'Show off your products and services with captiviating digital photography services by The Odd Wave call us for more info 02108823769',
       header: 'Creative Digital Photography',
-      headerImage: { color1: 'rgba(255, 255, 255, 0.2)', color2: 'rgba(0, 255, 255, 0.5)', url: 'photography.jpg', height: 80 },
-      headerStyle: { bgStyle: 'text-primary parralaxEffect' },
+      headerImage: { color1: 'rgba(244, 67, 108, 1)', color2: 'rgba(244, 67, 108, 1)', url: 'photography.jpg', height: 'auto' },
+      headerStyle: { bgStyle: 'text-secondary text-center' },
       subheader: 'Attract potential customers with creative photography',
       subheaderStyle: { color: 'text-primary', buttonVariant: 'info' },
       content:

@@ -26,9 +26,12 @@ $yellow: #f5d547;
 $green: #28a745;
 $teal: #20c997;
 $cyan: #17a2b8;
-
-// Theme color default definitions
-
+$rwcblue: #54c8e8;      // rgba(84, 200, 232, 1)
+$rwcpurple: #993dbb;    // rgba(153, 61, 187, 1)
+$rwcteal: #2ed9c3;      // rgba(46, 217, 195, 1)
+$rwcred: #f4436c;       // rgba(244, 67, 108, 1)
+$rwcyellow: #f5a800;    // rgba(245, 168, 0, 1)
+$rwclime: #c8e854;      // rgba(200, 232, 84, 1)
 $success: $green;
 $info: $pink;
 $warning: $yellow;
@@ -57,7 +60,13 @@ $theme-colors: map-merge(
     "light": $light,
     "dark": $dark,
     "lightgray": $gray-400,
-    "gunmetal": $gunmetal
+    "gunmetal": $gunmetal,
+    "rwcblue": $rwcblue,
+    "rwcpurple": $rwcpurple,
+    "rwcteal": $rwcteal,
+    "rwcred": $rwcred,
+    "rwcyellow": $rwcyellow,
+    "rwclime": $rwclime
   ),
   $theme-colors
 );
@@ -192,7 +201,6 @@ html {
   background-size: cover;
   width: 100%;
   overflow-x: hidden;
-
 }
 
 body {

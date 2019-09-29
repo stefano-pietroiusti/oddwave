@@ -84,7 +84,7 @@ export default {
         service => service.id === this.id
       )
       service.enquire =
-        'Get this now from $' +
+        'from $' +
         service.price.value +
         ' per ' +
         service.price.unit

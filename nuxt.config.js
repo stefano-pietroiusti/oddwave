@@ -36,14 +36,17 @@ export default {
   },
   ...routerBase,
   head: {
-    title: process.env.npm_package_name || 'The Odd Wave digital and web design services',
+    htmlAttrs: {
+      lang: 'en'
+    },
+    title: process.env.npm_package_name || 'The Odd Wave digital marketing and website design services',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
       {
         hid: 'description',
         name: 'description',
-        content: 'The Odd Wave digital and web design services'
+        content: 'The Odd Wave Website Design and Digital marketing agency based on the North Shore Auckland servicing New Zealand'
       }
     ],
     link: [

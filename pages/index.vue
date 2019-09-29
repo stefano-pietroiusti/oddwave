@@ -14,7 +14,7 @@
     <!-- <TextImageComponent
       :pcontent="{ bgImage: 'imgs/collaboration.jpg'}"
       :pstyle="{ bgStyle: 'parralaxNormal w-100 text-primary text-left p-10'}"
-    /> -->
+    />-->
 
     <TextImageComponent
       :pcontent="{ text: content[2] }"
@@ -34,7 +34,7 @@
     <!-- <TextImageComponent
       :pcontent="{ bgImage: 'imgs/collaboration.jpg'}"
       :pstyle="{ bgStyle: 'parralaxNormal w-100 text-primary text-left p-7'}"
-    /> -->
+    />-->
 
     <TextImageComponent
       :pcontent="{ text: content[5] }"
@@ -49,7 +49,7 @@
     <TextImageComponent
       :pcontent="{ inlineImage: 'bing.png'}"
       :pstyle="{ bgStyle: 'w-100 text-primary text-left px-5 pt-3', inlineImageStyle: 'inlineImage10 inlineImageLeft'}"
-    /> -->
+    />-->
     <b-container fluid class="text-center p-1 w-50">
       <b-row>
         <b-col>
@@ -114,20 +114,32 @@ export default {
       psubheader: 'to help your business grow',
       pimageoverlay: 'imgs/marketingstrategy.jpg',
       pimagebanner: 'imgs/analytics.jpg',
-      pHeaderImage: { color1: 'rgba(255, 0, 255, 0) 0%', color2: 'rgba(0, 255, 255, 0) 0%', url: 'oddwave.jpg', height: 40 },
+      pHeaderImage: {
+        color1: 'rgba(255, 0, 255, 0) 0%',
+        color2: 'rgba(0, 255, 255, 0) 0%',
+        url: 'oddwave.jpg',
+        height: 40
+      },
       psubtitle:
-        "Our goal is to assist start-ups grow their business with an impactful online presence using latest proven web technologies and digital marketing solutions that won't break the bank. We believe that every business should be a success.",
+        'The Odd Wave website design and digital marketing agency operating from the North Shore of Auckland for New Zealand business',
       btext: 'Get in touch',
       blink: '/contact',
       content: [
         'We are a creative digital marketing and web design agency, passionate about modern technology that we use to propel small to medium size businesses to success. We offer a range of services to get your business off the ground. We are based on the North Shore, Auckland servicing all of New Zealand.',
-        "We believe that every business should be successful. Our goal is to assist start-ups in digitizing their businesses by delivering an impactful online presence and custom digital marketing solutions that won't break the bank.",
+        "Our goal is to assist start-ups grow their business with an impactful online presence using latest proven web technologies and digital marketing solutions that won't break the bank. ",
+        "We believe that every business should be successful. We help start-ups in digitizing their businesses by delivering an impactful online presence and custom digital marketing solutions that won't break the bank.",
         'Did you know 97% of consumers use the Internet to find local businesses, does your business rank on search engines with essential keyword searches?',
-        'We offer Website Design , Search Engine Optimization , Digital marketing services or cost per click services (Google Ads, Bing) as an added benefit to your business. Pay per click advertising gives you the ability to reach a global marketplace. The most popular platform is Google Ads, previously known as Adwords.',
+        'We offer Website Design , Search Engine Optimization , Digital marketing services or cost per click services (Google Ads, Bing). Pay per click advertising gives you the ability to reach a global marketplace. The most popular platform is Google Ads, previously known as Adwords.',
         "We will give you the ability to track your marketing efforts with regular reporting and assist with ad's management on your behalf and to your specified budget. We will save you money and reach a considerably more significant customer base than traditional marketing methods. We will help you get to know your audience, which creates brand loyalty.",
         "If you own a business and you’re looking for someone to take your website and online marketing to the next level, you've come to the right place."
       ],
-      keywords: ['websites', 'seo', 'vanillajs', 'data engineering', 'workshops']
+      keywords: [
+        'websites',
+        'seo',
+        'vanillajs',
+        'data engineering',
+        'workshops'
+      ]
     }
   }
 }

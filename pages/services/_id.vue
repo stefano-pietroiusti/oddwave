@@ -57,12 +57,12 @@ export default {
         {
           hid: 'oddwave-services-' + this.service.id,
           name: this.service.title,
-          content: this.service.header + ' and ' + this.service.subheader
+          content: this.service.header
         },
         {
           hid: 'description',
           name: 'description',
-          content: this.service.header + ' and ' + this.service.subheader
+          content: this.service.description
         },
         {
           hid: 'keywords',

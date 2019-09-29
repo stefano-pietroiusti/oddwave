@@ -3,7 +3,7 @@ export const state = () => ({
     {
       id: 'seo',
       title: 'Search Engine Optimisation',
-      description: 'SEO - Search Engine Optimisation Services',
+      description: 'Search Engine Optimization (SEO) by the Odd Wave Wave, Increase your Google ranking and drive organic traffic to your website visit theoddwave.co.nz',
       header: 'Drive organic traffic to your website with SEO',
       headerImage: { color1: 'rgba(255, 255, 255, 0.2)', color2: 'rgba(0, 255, 255, 0.5)', url: 'seo.jpg', height: 80 },
       headerStyle: { bgStyle: 'text-primary parralaxEffect' },
@@ -53,7 +53,7 @@ export const state = () => ({
     {
       id: 'ppc',
       title: 'Pay per Click Advertising',
-      description: 'Grow your business using PPC (Pay Per Click) or CPC (Cost per Click) Advertising',
+      description: 'Boost your sales with search advertising using Google Ads and Bing Ads, contact the Odd Wave online advertising team to get you started.',
       header: 'Pay per Click  Advertising',
       headerImage: { color1: 'rgba(255, 255, 255, 0.2)', color2: 'rgba(0, 255, 255, 0.5)', url: 'ppc.jpg', height: 80 },
       headerStyle: { bgStyle: 'text-primary parralaxEffect' },
@@ -110,9 +110,9 @@ export const state = () => ({
     },
     {
       id: 'webdesign',
-      title: 'Website Design and Development',
-      description: 'From creative web design to marketing strategies, our team will work for your company\'s success',
-      header: 'Website Design and Development',
+      title: 'Custom Website Design and Development',
+      description: 'Boost your sales with search advertising using Google Ads and Bing Ads, contact the Odd Wave online advertising team to get you started.',
+      header: 'Custom Website Design and Development',
       headerImage: { color1: 'rgba(255, 255, 255, 0.2)', color2: 'rgba(0, 255, 255, 0.5)', url: 'webdesign.jpg', height: 80 },
       headerStyle: { bgStyle: 'text-primary parralaxEffect' },
       subheader: 'Innovative, Responsive, High- Speed Modern Website Design',
@@ -159,7 +159,7 @@ export const state = () => ({
     {
       id: 'photography',
       title: 'Creative Digital Photography',
-      description: 'Digital photography for branding and websites',
+      description: 'Show off your products and services with captiviating digital photography services by The Odd Wave call us for more info 02108823769',
       header: 'Creative Digital Photography',
       headerImage: { color1: 'rgba(255, 255, 255, 0.2)', color2: 'rgba(0, 255, 255, 0.5)', url: 'photography.jpg', height: 80 },
       headerStyle: { bgStyle: 'text-primary parralaxEffect' },

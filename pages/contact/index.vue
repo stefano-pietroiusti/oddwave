@@ -36,7 +36,7 @@ export default {
   },
   data (context) {
     return {
-      title: 'Contact the Odd Wave of website, search and data services',
+      title: 'Contact the Team at the Odd Wave',
       pimage: 'none',
       pheader: "LET'S CREATE SOME AWESOMENESS",
       pheaderImage: {

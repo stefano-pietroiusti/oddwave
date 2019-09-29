@@ -21,7 +21,7 @@
         v-for="(item,i) in service.content"
         :key="i"
         :pcontent="{ text: item.text, bgImage: item.bgImage, inlineImage: item.inlineImage }"
-        :pstyle="(item.dark) ? { bgStyle: 'parralaxNormal w-100 text-secondary text-left px-5 pt-3', inlineImageStyle: 'inlineImage10 inlineImageLeft'} : { bgStyle: 'parralaxNormal w-100 text-primary text-left px-5 pt-3', inlineImageStyle: 'inlineImage10 inlineImageLeft'}"
+        :pstyle="(item.dark) ? { bgStyle: 'parralaxNormal w-100 text-secondary text-left px-5 pt-3', inlineImageStyle: item.inlineImageStyle} : { bgStyle: 'parralaxNormal w-100 text-primary text-left px-5 pt-3', inlineImageStyle: item.inlineImageStyle}"
       />
 
       <span id="marketing">
@@ -57,12 +57,12 @@ export default {
         {
           hid: 'oddwave-services-' + this.service.id,
           name: this.service.title,
-          content: this.service.header + ' and ' + this.service.subheader
+          content: this.service.header
         },
         {
           hid: 'description',
           name: 'description',
-          content: this.service.header + ' and ' + this.service.subheader
+          content: this.service.description
         },
         {
           hid: 'keywords',

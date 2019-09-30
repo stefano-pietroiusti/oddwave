@@ -533,23 +533,31 @@ a:hover {
   opacity: 0.8;
 }
 
-.fa:hover {
-  color: white;
-  opacity: 1;
-}
 
 .fa-facebook {
-  color: white;
+  color: var(--secondary);
 }
 
 .fa-linkedin {
-  color: white;
+  color: var(--secondary);
 }
 .fa-whatsapp {
-  color: white;
+  color: var(--secondary);
 }
 .fa:hover {
-  color: white;
+  color: var(--secondary);
+  opacity: 1;
+}
+
+.fa-contact  {
+  font-size: 1.2em;
+  line-height: 2em;
+  text-decoration: none;
+  opacity: 1;
+}
+
+.fa-contact:hover {
+  color: var(--info);
   opacity: 1;
 }
 

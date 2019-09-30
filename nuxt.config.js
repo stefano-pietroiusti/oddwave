@@ -28,10 +28,11 @@ export default {
   generate: {
     routes: [
       '/',
-      '/services/seo',
-      '/services/ppc',
-      '/services/webdesign',
-      '/services/photography'
+      '/services/seo/',
+      '/services/ppc/',
+      '/services/webdesign/',
+      '/services/photography/',
+      '/contact/'
     ]
   },
   ...routerBase,
@@ -39,14 +40,25 @@ export default {
     htmlAttrs: {
       lang: 'en'
     },
-    title: process.env.npm_package_name || 'The Odd Wave digital marketing and website design services',
+    title: process.env.npm_package_name || 'The Odd Wave of digital marketing & website design in Auckland, New Zealand',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
+      { hid: 'viewport', name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
+      { hid: 'robots', name: 'robots', content: 'index, follow' },    
+      { hid: 'author', name: 'author', content: 'The Odd Wave Limited' },   
+      { hid: 'og:type', property: 'og:type', content: 'website' }, 
+      { hid: 'og:site_name', property: 'og:site_name', content: 'The Odd Wave Limited' },     
+      { hid: 'og:image', property: 'og:image', content: `${baseUrl}/theoddwave.jpg` },   
+      { hid: 'og:url', property: 'og:url', content: baseUrl },   
+      {
+        hid: 'og:description',
+        name: 'og:description',
+        content: 'The Odd Wave of Website Design and Digital marketing services based in Auckland, New Zealand'
+      },   
       {
         hid: 'description',
         name: 'description',
-        content: 'The Odd Wave Website Design and Digital marketing agency based on the North Shore Auckland servicing New Zealand'
+        content: 'The Odd Wave of Website Design and Digital marketing services based in Auckland, New Zealand'
       }
     ],
     link: [

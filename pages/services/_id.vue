@@ -55,19 +55,19 @@ export default {
       title: this.service.title,
       meta: [
         {
-          hid: 'oddwave-services-' + this.service.id,
-          name: this.service.title,
-          content: this.service.header
+          hid: 'og:url',
+          property: 'og:url',
+          content: `${process.env.baseUrl}${this.$route.path}`
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.service.description
         },
         {
           hid: 'description',
           name: 'description',
           content: this.service.description
-        },
-        {
-          hid: 'keywords',
-          name: 'keywords',
-          content: this.service.keywords
         }
       ]
     }
@@ -84,7 +84,7 @@ export default {
         service => service.id === this.id
       )
       service.enquire =
-        'from $' +
+        'From $' +
         service.price.value +
         ' per ' +
         service.price.unit

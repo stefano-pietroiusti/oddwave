@@ -2,32 +2,33 @@
   <b-container
     id="animationBanner"
     fluid
-    class="text-left text-secondary bg-primary"
     :style="gradient"
+    class="text-left text-secondary bg-primary bgImage"
   >
     <span id="anim1">
       <h1 class="anim1">
         <span class="letters word-1">Creative</span>
         <span class="letters word-2">Innovative</span>
-        <span class="letters word-3">Rapid</span>
-        <span class="letters word-4">Lightweight</span>
+        <span class="letters word-3">Lightweight</span>
+        <span class="letters word-4">Streamlined</span>
+        <!-- <span class="letters word-4">Web</span>
+                <span class="letters word-4">Data</span>
+        <span class="letters word-4">Cloud</span>-->
       </h1>
     </span>
     <span id="anim2">
-      <h2 class="anim2">Powerful Vanilla Websites Marketing Search and Integration solutions</h2>
+      <h2 class="anim2">Work with us to create a fast and impactful online presence</h2>
     </span>
     <span id="anim3">
       <h3 class="anim3">
-        <span class="word">Headless Open Source CMS</span>
-        <span class="word">VanillaJS Web</span>
-        <span class="word">Vanilla SEO</span>
-        <span class="word">Website design</span>
-        <span class="word">Animation</span>
-        <span class="word">Content writing</span>
-        <span class="word">Digital marketing</span>
-        <span class="word">Data Integration</span>
-        <span class="word">Visualisation</span>
-        <span class="word">Automation</span>
+        <span class="word">Proven</span>
+        <span class="word">Progressive</span>
+        <span class="word">Responsive</span>
+        <span class="word">Vanilla</span>
+        <span class="word">SEO</span>
+        <span class="word">Web</span>
+        <span class="word">Data</span>
+        <span class="word">Cloud</span>
       </h3>
     </span>
   </b-container>
@@ -79,30 +80,13 @@ export default {
         duration: 800,
         delay: (el, i) => 800 * i
       })
-                  .add({
+      .add({
         targets: '.anim3',
         opacity: 0,
         duration: 500,
         easing: 'easeOutExpo',
         delay: 500
       })
-      // .add({
-      //   targets: '.anim8 .word',
-      //   scale: [1.5, 1],
-      //   opacity: [0, 1],
-      //   easing: 'easeOutCirc',
-      //   duration: 800,
-      //   delay: (el, i) => 800 * i
-      // })
-
-      // .add({
-      //   targets: '.anim8',
-      //   opacity: 0,
-      //   duration: 500,
-      //   easing: 'easeOutExpo',
-      //   delay: 500
-      // })
-
       .add({
         targets: '.anim1 .word-1',
         opacity: anim1.opacityIn,
@@ -179,19 +163,21 @@ export default {
         return
       }
       const fileName = this.pbgimage.url
-      return require(`~/assets/imgs/banner/${fileName}?size=1080`)
+      return {
+        '1': require(`~/assets/imgs/banner/${fileName}?size=640`),
+        '2': require(`~/assets/imgs/banner/${fileName}?size=1080`)
+      }
     },
     gradient() {
+      const image1x = this.bannerImagePath['1']
+      const image2x = this.bannerImagePath['2']
       return {
-        // https://developer.mozilla.org/en-US/docs/Web/CSS/image-set
-        // , image-set(require(~/assets/${this.bannerImage} 2x))
-        backgroundImage: `linear-gradient(45deg,  ${this.pbgimage.color1}, ${this.pbgimage.color2}), url(${this.bannerImagePath})`,
-        // height: '100%',
-        height: `${this.pbgimage.height}vh`,
-        backgroundAttachment: 'fixed',
-        backgroundPosition: 'top',
+        backgroundImage: `linear-gradient(45deg,  ${this.pbgimage.color1}, ${this.pbgimage.color2}), url(${image1x}), -webkit-image-set(url(${image1x}) 1x, url(${image2x}) 2x)`,
+        width: '100%',
+        height: `${this.pbgimage.height}`,
+        backgroundPosition: 'top left',
         backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover'
+        backgroundSize: '100% 100%'
       }
     }
   }
@@ -202,7 +188,11 @@ export default {
   display: block;
   opacity: 1;
   line-height: 1em;
+  background-position: 'top left';
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
+
 #anim1 {
   position: absolute;
   left: 2em;
@@ -301,6 +291,7 @@ export default {
 
 .anim3 .word {
   display: inline-block;
+  letter-spacing: 0.3em;
   line-height: 1em;
   margin: auto;
   opacity: 0;

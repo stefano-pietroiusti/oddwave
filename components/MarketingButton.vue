@@ -2,7 +2,7 @@
 <template>
   <b-container id="marketingButton" class="bg-transparent p-5" container>
     <b-button :variant="variant" to="/contact" class="btn-lg">
-      <h3 class="text-left">
+      <h3 class="text-center">
         {{ penquire }}
       </h3>
     </b-button>

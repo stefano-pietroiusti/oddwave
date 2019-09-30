@@ -82,12 +82,11 @@
           </b-button>
         </b-form>
       </b-col>
-      <b-col class="mt-0 pl-4 text-left pl-2">
-        <h6>The Odd Wave team direct:</h6>
+      <b-col class="p-3 text-left">
         <!-- <h6>{{ getBase }}</h6> -->
-        <h6 v-html="companyphone1" />
-        <h6 v-html="companyphone2" />
-        <h6 v-html="companyemail" />
+        <span v-html="companyphone1" /><br>
+        <span v-html="companyphone2" /><br>
+        <span v-html="companyemail" />
       </b-col>
     </b-row>
   </b-container>
@@ -125,9 +124,9 @@ export default {
   data () {
     return {
       companyemail:
-        '<a href="mailto:&#116;&#101;&#097;&#109;&#064;&#116;&#104;&#101;&#111;&#100;&#100;&#119;&#097;&#118;&#101;&#046;&#099;&#111;&#046;&#110;&#122;">e: &#116;&#101;&#097;&#109;&#064;&#116;&#104;&#101;&#111;&#100;&#100;&#119;&#097;&#118;&#101;&#046;&#099;&#111;&#046;&#110;&#122;</a>',
-      companyphone1: '<a href="tel:+64 210 8658 172">m: +64 210 8658 172</a>',
-      companyphone2: '<a href="tel:+64 210 8823 769">m: +64 210 8823 769</a>',
+        '<a class="fa-contact" href="mailto:&#116;&#101;&#097;&#109;&#064;&#116;&#104;&#101;&#111;&#100;&#100;&#119;&#097;&#118;&#101;&#046;&#099;&#111;&#046;&#110;&#122;"><i class="fa fa-envelope fa-contact">&nbsp;</i>&nbsp;&#116;&#101;&#097;&#109;&#064;&#116;&#104;&#101;&#111;&#100;&#100;&#119;&#097;&#118;&#101;&#046;&#099;&#111;&#046;&#110;&#122;</a>',
+      companyphone1: '<a href="tel:+642108658172" class="fa-contact"><i class="fa fa-phone fa-contact">&nbsp;</i>&nbsp;+64&nbsp;210&nbsp;8658&nbsp;172</a>',
+      companyphone2: '<a href="tel:+642108823769" class="fa-contact"><i class="fa fa-phone fa-contact">&nbsp;</i>&nbsp;+64&nbsp;210&nbsp;8823&nbsp;769</a>',
       form: {
         email: '',
         name: '',
@@ -260,6 +259,7 @@ export default {
 </script>
 <style scoped>
 #contactForm {
-  text-transform: unset;
+  text-transform: uppercase;
 }
+
 </style>

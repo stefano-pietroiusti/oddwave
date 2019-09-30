@@ -26,7 +26,7 @@ export const state = () => ({
         { inlineImage: 'onpageseo.png', inlineImageStyle: 'inlineImage10 inlineImageRight', text: 'Technical SEO and On-Page SEO are two examples of search engine optimization practices. Technical SEO determines the quality of a website based on factors like speed and and the website has been developed. Optimizing the technical aspects of a website enables search engines to crawl and index the site correctly, which is beneficial to obtain a higher search engine rank in Google. Page load speed is another crucial aspect to consider to avoid high bounce rates and therefore improve your SEO ranking.' },
         { text: 'We have various SEO packages to choose from with secure monthly payments and no fixed contract, and you can cancel anytime.' }
       ],
-      price: { value: 560, unit: 'month' },
+      price: { value: 600, unit: 'month' },
       marketing: {
         header: 'SEO Services',
         subheader: 'Drive traffic to your website with latest SEO practices',
@@ -124,7 +124,7 @@ export const state = () => ({
       header: 'Custom Website Design and Development',
       headerImage: { color1: 'rgba(46, 217, 195, 1)', color2: 'rgba(46, 217, 195, 1)', url: 'webdesign.jpg', height: 'auto' },
       headerStyle: { bgStyle: 'text-secondary text-center' },
-      subheader: 'Innovative, Responsive, High- Speed Modern Website Design',
+      subheader: 'Innovative, Responsive, High- Speed and Modern Website Design',
       subheaderStyle: { color: 'text-black', buttonVariant: 'info' },
       content:
         [
@@ -133,7 +133,7 @@ export const state = () => ({
           { text: 'We can also help you with a refresh and redesign if your website is looking a little dated. We can review your existing web design and provide recommendations on ways to improve its visual look and feel and performance. All our websites are search engine optimized, ensuring our sites are visible to search engines once published.' },
           { inlineImage: 'ecommerce.jpg', inlineImageStyle: 'inlineImage20 inlineImageRight', text: 'If you are looking to launch an online store , we can design and develop an eCommerce website fully integrated into a payment gateway. With a the range of other services we offer , we really do give you a turnkey business solution.' }
         ],
-      price: { value: 95, unit: 'hour' },
+      price: { value: 2200, unit: 'package' },
       rate: 'hour',
       marketing: {
         header: 'Adopt latest web technologies',
@@ -217,7 +217,7 @@ export const state = () => ({
         }
 
       ],
-      price: { value: 920, unit: 'package' },
+      price: { value: 1100, unit: 'package' },
       cloud: [{ text: 'Website', value: 2000 },
         { text: 'Design', value: 1900 },
         { text: 'Optimisation', value: 1800 },

@@ -1,5 +1,5 @@
 <template>
-  <div id="contactContainer" class="text-left mt-header w-100 h-100 bg-light">
+  <div id="contactContainer" class="w-100 h-100 bg-light">
     <AnimeBannerWordsHeaderComponent :pheader="pheader" :pbgimage="pheaderImage" :pstyle="pstyle" />
     <ContactForm :pservices="services" :pbgimage="pheaderImage" :pstyle="pstyle" />
   </div>
@@ -17,36 +17,49 @@ export default {
       title: this.title,
       meta: [
         {
-          hid: 'oddwave-contact',
-          name: this.title,
-          content: this.title + ' and ' + this.pheader
+          hid: 'og:url',
+          property: 'og:url',
+          content: `${process.env.baseUrl}${this.$route.path}`
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.description
         },
         {
           hid: 'description',
           name: 'description',
-          content: this.title + ' and ' + this.pheader
-        },
-        {
-          hid: 'keywords',
-          name: 'keywords',
-          content: this.keywords
+          content: this.description
         }
       ]
     }
   },
   data (context) {
     return {
-      title: 'Contact the Team at the Odd Wave',
+      title: 'Contact the team at the Odd Wave',
+      description: 'Contact the Odd Wave team in the north shore, Auckland, New Zealand',
       pimage: 'none',
       pheader: "LET'S CREATE SOME AWESOMENESS",
       pheaderImage: {
-        color1: 'rgba(200, 232, 84, 1)',
-        color2: 'rgba(200, 232, 84, 0.2)',
+        color1: 'rgba(102, 126, 234, 1)',
+        color2: 'rgba(118, 75, 162, 1)',
+        // rgba(147, 165, 207, 1)
+        // rgba(228, 239, 233, 1)
+        // rgba(255, 126, 179, 1)
+        // rgba(102, 126, 234, 1)
+        // rgba(118, 75, 162, 1)
         url: 'contact.jpg',
         height: 40
       },
-      pstyle: { bgStyle: 'text-primary text-left' },
-      keywords: ['contact', 'websites', 'seo', 'vanillajs', 'data engineering', 'workshops']
+      pstyle: { bgStyle: 'text-secondary text-left' },
+      keywords: [
+        'contact',
+        'websites',
+        'seo',
+        'vanillajs',
+        'data engineering',
+        'workshops'
+      ]
     }
   },
   computed: {

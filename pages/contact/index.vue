@@ -1,15 +1,18 @@
 <template>
   <div id="contactContainer" class="w-100 h-100 bg-light">
     <AnimeBannerWordsHeaderComponent :pheader="pheader" :pbgimage="pheaderImage" :pstyle="pstyle" />
+    <HeaderComponent :pheader="psubheader" />
     <ContactForm :pservices="services" :pbgimage="pheaderImage" :pstyle="pstyle" />
   </div>
 </template>
 <script>
 import AnimeBannerWordsHeaderComponent from '@/components/AnimeBannerWordsHeaderComponent'
+import HeaderComponent from '@/components/HeaderComponent'
 import ContactForm from '@/components/ContactForm'
 export default {
   components: {
     AnimeBannerWordsHeaderComponent,
+    HeaderComponent,
     ContactForm
   },
   head () {
@@ -37,9 +40,11 @@ export default {
   data (context) {
     return {
       title: 'Contact the team at the Odd Wave',
-      description: 'Contact the Odd Wave team in the north shore, Auckland, New Zealand',
+      description:
+        'Contact the Odd Wave team in the north shore, Auckland, New Zealand',
       pimage: 'none',
       pheader: "LET'S CREATE SOME AWESOMENESS",
+      psubheader: 'Get in touch to start a new project together',
       pheaderImage: {
         color1: 'rgba(102, 126, 234, 1)',
         color2: 'rgba(118, 75, 162, 1)',

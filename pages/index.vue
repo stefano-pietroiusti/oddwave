@@ -10,7 +10,7 @@
     />-->
 
     <TextImageComponent
-      :pcontent="{ text: content[0], inlineImage: 'creative.png'}"
+      :pcontent="{ text: content[0], inlineImage: 'creative.png', inlineImageText: 'Developing cost-effective and impactful websites and marketing strategies'}"
       :pstyle="{ bgStyle: 'w-100 text-primary text-left px-5 pt-3', inlineImageStyle: 'inlineImage30 inlineImageLeft'}"
     />
 
@@ -54,21 +54,21 @@
           <img
             :src="require('~/assets/imgs/partner/googleads.png?size=300')"
             class="img-fluid"
-            alt="Google Ads"
+            alt="Google Ads to raise competitiveness"
           >
         </b-col>
         <b-col>
           <img
             :src="require('~/assets/imgs/partner/bing.png?size=95')"
             class="img-fluid"
-            alt="Bing Ads"
+            alt="Bing Ads to maximise your market reach"
           >
         </b-col>
         <b-col>
           <img
             :src="require('~/assets/imgs/partner/analytics.png?size=300')"
             class="img-fluid"
-            alt="Google Analytics"
+            alt="Google Analytics to track your digital marketing"
           >
         </b-col>
       </b-row>

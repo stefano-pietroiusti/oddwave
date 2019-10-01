@@ -19,6 +19,7 @@
         :caption="item.caption"
         :img-width="imgwidth"
         :img-height="imgheight"
+        :img-alt="item.imageText"
       />
       <!-- https://stackoverflow.com/questions/56004640/cannot-display-images-in-vuejs
       https://github.com/geeogi/nuxt-responsive-loader
@@ -30,7 +31,7 @@
           height="480"
           src="https://xxxxxx"
           alt="image slot"
-        > -->
+      >-->
     </b-carousel>
   </b-container>
 </template>
@@ -86,7 +87,9 @@ export default {
   },
   computed: {
     slides () {
-      const result = this.pslides.map(i => ({ image: i.image,
+      const result = this.pslides.map(i => ({
+        image: i.image,
+        imageText: i.imageText,
         caption: i.caption,
         // processedImage: require(`~/assets/imgs/carousel/${this.carouselId}/${i.image}?size=640`)
         processedImage: `/imgs/carousel/${this.carouselId}/${i.image}`
@@ -109,7 +112,8 @@ export default {
   text-shadow: 1px 1px 2px #333;
 } */
 
-.carousel-inner > .item > img, .carousel-inner > .item > a > img {
-    width: 100%;
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 100%;
 }
 </style>

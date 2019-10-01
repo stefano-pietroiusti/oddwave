@@ -21,10 +21,7 @@ export default {
       link: [
         {
           rel: 'canonical',
-          href: `https://theoddwave.co.nz${this.$route.path}`
-        },
-        {
-          rel: 'alternate', hreflang: 'en', href: `https://theoddwave.co.nz${this.$route.path}`
+          href: `${process.env.baseUrl}${this.$route.path}`
         }
       ]
     }

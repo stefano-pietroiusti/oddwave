@@ -9,12 +9,14 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
 const baseUrl = process.env.BASE_URL || 'http://localhost:3000'
 const contactUrl = process.env.CONTACT_URL || '/api/contact'
 const recaptchaSiteKey = process.env.SITE_KEY || '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
+const author = process.env.AUTHOR || 'https://www.linkedin.com/in/scpietro/'
 
 export default {
   env: {
     baseUrl,
     contactUrl,
-    recaptchaSiteKey
+    recaptchaSiteKey,
+    author
   },
   layoutTransition: {
     name: 'layout',
@@ -27,12 +29,10 @@ export default {
   mode: 'universal',
   generate: {
     routes: [
-      '/',
-      '/services/seo/',
-      '/services/ppc/',
-      '/services/webdesign/',
-      '/services/photography/',
-      '/contact/'
+      '/services/seo',
+      '/services/ppc',
+      '/services/webdesign',
+      '/services/photography'
     ]
   },
   ...routerBase,
@@ -44,17 +44,17 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { hid: 'viewport', name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-      { hid: 'robots', name: 'robots', content: 'index, follow' },    
-      { hid: 'author', name: 'author', content: 'The Odd Wave Limited' },   
-      { hid: 'og:type', property: 'og:type', content: 'website' }, 
-      { hid: 'og:site_name', property: 'og:site_name', content: 'The Odd Wave Limited' },     
-      { hid: 'og:image', property: 'og:image', content: `${baseUrl}/theoddwave.jpg` },   
-      { hid: 'og:url', property: 'og:url', content: baseUrl },   
+      { hid: 'robots', name: 'robots', content: 'index, follow' },
+      { hid: 'author', name: 'author', content: 'The Odd Wave Limited' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:site_name', property: 'og:site_name', content: 'The Odd Wave Limited' },
+      { hid: 'og:image', property: 'og:image', content: `${baseUrl}/theoddwave.jpg` },
+      { hid: 'og:url', property: 'og:url', content: baseUrl },
       {
         hid: 'og:description',
         name: 'og:description',
         content: 'The Odd Wave of Website Design and Digital marketing services based in Auckland, New Zealand'
-      },   
+      },
       {
         hid: 'description',
         name: 'description',
@@ -63,6 +63,7 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'author', href: `${author}` },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Nunito+Sans|Roboto|Varela Round|Ubuntu|Abril Fatface|Black+Han+Sans|Bowlby+One+SC|Syncopate|Abril+Fatface|Exo|Righteous&display=swap' },
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' }
     ]
@@ -94,7 +95,7 @@ export default {
     'nuxt-svg-loader',
     'nuxt-responsive-loader',
     '@nuxtjs/dotenv',
-    '@nuxtjs/robots',
+    ['@nuxtjs/robots', { UserAgent: '*', Disallow: '' }],
     '@nuxtjs/sitemap',
     '@nuxtjs/recaptcha'
   ],
@@ -118,15 +119,13 @@ export default {
   },
   robots: {
     UserAgent: '*',
-    Allow: '/',
-    CrawlDelay: 0
+    Disallow: ''
   },
   sitemap: {
     hostname: baseUrl,
     gzip: true,
   },
   recaptcha: {
-    // hideBadge: false,
     siteKey: recaptchaSiteKey,
     version: 2
   },

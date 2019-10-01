@@ -6,15 +6,12 @@
     class="text-left text-secondary bg-primary bgImage"
   >
     <span id="anim1">
-      <h1 class="anim1">
+      <h2 class="anim1">
         <span class="letters word-1">Creative</span>
         <span class="letters word-2">Innovative</span>
         <span class="letters word-3">Lightweight</span>
         <span class="letters word-4">Streamlined</span>
-        <!-- <span class="letters word-4">Web</span>
-                <span class="letters word-4">Data</span>
-        <span class="letters word-4">Cloud</span>-->
-      </h1>
+      </h2>
     </span>
     <span id="anim2">
       <h2 class="anim2">Work with us to create a fast and impactful online presence</h2>
@@ -25,10 +22,6 @@
         <span class="word">Progressive</span>
         <span class="word">Responsive</span>
         <span class="word">Vanilla</span>
-        <span class="word">SEO</span>
-        <span class="word">Web</span>
-        <span class="word">Data</span>
-        <span class="word">Cloud</span>
       </h3>
     </span>
   </b-container>
@@ -239,47 +232,7 @@ export default {
   text-transform: unset;
   opacity: 0;
 }
-#anim6 {
-  position: absolute;
-  /* left: 0;
-  top: 1em; */
-}
 
-.anim6 {
-  position: absolute;
-  letter-spacing: 0.3em;
-  text-transform: unset;
-  left: 1em;
-  top: 1em;
-}
-
-.anim6 .letter {
-  position: absolute;
-  display: inline-block;
-  line-height: 1em;
-  margin: auto;
-  text-transform: unset;
-  opacity: 0;
-}
-#anim7 {
-  position: relative;
-  left: 0;
-  top: 1em;
-}
-
-.anim7 {
-  position: relative;
-  text-transform: unset;
-}
-
-.anim7 .letter {
-  position: relative;
-  display: inline-block;
-  line-height: 1em;
-  margin: auto;
-  text-transform: unset;
-  opacity: 0;
-}
 #anim3 {
   position: relative;
   left: 0;
@@ -297,18 +250,4 @@ export default {
   opacity: 0;
 }
 
-#anim8 {
-  position: absolute;
-}
-
-.anim8 {
-  font-weight: 800;
-}
-
-.anim8 .word {
-  display: inline-block;
-  line-height: 1em;
-  margin: auto;
-  opacity: 0;
-}
 </style>

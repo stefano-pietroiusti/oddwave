@@ -3,8 +3,12 @@
   <b-container fluid :class="pstyle.bgStyle" :style="background">
     <b-row>
       <b-col v-if="pcontent.inlineImage">
-        <img :src="`${inlineImage}?size=100`" :srcset="inlineImage.srcSet" :class="pstyle.inlineImageStyle">
-        <!-- <img :src="require(`~/assets/imgs/inline/${pcontent.inlineImage}?size=100`)" :srcset="require(`~/assets/imgs/inline/${pcontent.inlineImage}`).srcSet" :class="pstyle.inlineImageStyle"> -->
+        <img
+          :src="`${inlineImage}?size=100`"
+          :srcset="inlineImage.srcSet"
+          :class="pstyle.inlineImageStyle"
+          :alt="inlineImageText"
+        >
         <p v-html="pcontent.text" />
       </b-col>
       <b-col v-else>
@@ -23,7 +27,8 @@ export default {
         return {
           text: 'sample text',
           bgImage: '/imgs/Clouds1.webp',
-          inlineImage: '/imgs/Clouds1.webp'
+          inlineImage: '/imgs/Clouds1.webp',
+          inlineImageText: 'Developing a quick and impactful online presence'
         }
       }
     },
@@ -45,6 +50,12 @@ export default {
       const fileName = this.pcontent.inlineImage
       return require(`~/assets/imgs/inline/${fileName}`)
     },
+    inlineImageText () {
+      if (!this.pcontent.inlineImageText) {
+        return
+      }
+      return this.pcontent.inlineImageText
+    },
     background () {
       if (!this.pcontent.bgImage) {
         return
@@ -53,7 +64,6 @@ export default {
       const backgroundImage = fileName ? `url(${fileName})` : undefined
       return {
         backgroundImage,
-        // width: '100%',
         // height: `${this.pbgimage.height}vh`,
         backgroundAttachment: 'fixed',
         backgroundPosition: 'center',

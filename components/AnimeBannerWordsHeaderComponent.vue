@@ -7,9 +7,9 @@
   >
     <b-row>
       <b-col class="p-5">
-        <h1 class="animHeader">
+        <h2 class="animHeader">
           {{ pheader }}
-        </h1>
+        </h2>
       </b-col>
     </b-row>
   </b-container>
@@ -91,25 +91,15 @@ export default {
 }
 </script>
 <style scoped>
-.animationBanner1 {
-  background: linear-gradient(
-    45deg,
-    rgba(255, 0, 255, 1) 0%,
-    rgba(0, 189, 189, 1) 100%
-  );
-}
 
 .animHeader {
   position:relative;
   letter-spacing: 0.1em;
-  /* left: 0.2em;
-  top:  0.2em; */
 }
 
 .animHeader .letter {
   position: relative;
   display: inline-block;
-  /* line-height: 1em; */
   margin: auto;
   opacity: 0; 
 }

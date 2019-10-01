@@ -1,7 +1,7 @@
 <template>
   <header class="text-center p-3">
     <b-container fluid :class="fontcolor">
-      <b-row>
+      <b-row v-if="pheader">
         <b-col class="py-4">
           <h1>{{ pheader }}</h1>
         </b-col>

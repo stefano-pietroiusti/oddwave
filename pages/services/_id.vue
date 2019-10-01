@@ -9,7 +9,7 @@
       />
 
       <span id="marketing">
-        <HeaderComponent :psubheader="service.subheader" :pstyle="service.subheaderStyle" />
+        <HeaderComponent :pheader="service.subheader" :pstyle="service.subheaderStyle" />
         <MarketingButton :penquire="service.enquire" :pstyle="service.subheaderStyle" />
       </span>
 
@@ -20,12 +20,15 @@
       <TextImageComponent
         v-for="(item,i) in service.content"
         :key="i"
-        :pcontent="{ text: item.text, bgImage: item.bgImage, inlineImage: item.inlineImage }"
+        :pcontent="{ text: item.text, bgImage: item.bgImage, inlineImage: item.inlineImage, inlineImageText: item.inlineImageText }"
         :pstyle="(item.dark) ? { bgStyle: 'parralaxNormal w-100 text-secondary text-left px-5 pt-3', inlineImageStyle: item.inlineImageStyle} : { bgStyle: 'parralaxNormal w-100 text-primary text-left px-5 pt-3', inlineImageStyle: item.inlineImageStyle}"
       />
 
       <span id="marketing">
-        <HeaderComponent :psubheader="service.marketing.header + ' TO ' + service.marketing.subheader" :pstyle="service.subheaderStyle" />
+        <HeaderComponent
+          :psubheader="service.marketing.header + ' TO ' + service.marketing.subheader"
+          :pstyle="service.subheaderStyle"
+        />
         <MarketingButton :penquire="service.enquire" :pstyle="service.subheaderStyle" />
       </span>
 
@@ -83,11 +86,8 @@ export default {
       const service = this.$store.state.services.all.find(
         service => service.id === this.id
       )
-      service.enquire =
-        'From $' +
-        service.price.value +
-        ' per ' +
-        service.price.unit
+      service.enquire = 'Get in touch'
+      // 'From $' + service.price.value + ' per ' + service.price.unit
       service.isCarousel = !!R.prop('slides', service)
       return service
     },
@@ -102,5 +102,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

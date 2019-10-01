@@ -243,6 +243,28 @@ body {
 $mod_1: 1.2; // mobile
 $mod_2: 3; // desktop
 
+/* ANIMATIONS */
+// .animHeader {
+//   position:relative;
+//   letter-spacing: 0.1em;
+//   font-size: $calc_h1;
+//   text-transform: capitalize;
+//   font-weight: 600;
+//   overflow-wrap: normal;
+//   word-wrap: normal;
+//   hyphens: auto;
+// }
+
+// .animHeader .letter {
+//   position: relative;
+//   display: inline-block;
+//   line-height: 1em; 
+//   margin: auto;
+//   opacity: 0; 
+// }
+
+/* END ANIMATIONS */
+
 h1 {
   // font-size: calc(1rem + 5vmin);
   font-size: $calc_h1;

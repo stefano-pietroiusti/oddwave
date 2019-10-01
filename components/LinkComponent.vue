@@ -1,5 +1,5 @@
 <template>
-  <b-container fluid class="text-center">
+  <b-container fluid class="text-center p-5">
     <b-row>
       <b-col md="12">
         <nuxt-link :to="blink" class="linkComponent">

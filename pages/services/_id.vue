@@ -1,7 +1,6 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
   <div id="servicesContainer" class="text-center mt-header w-100">
-    <no-ssr>
       <HeaderComponent :pheader="service.header" :pstyle="service.headerStyle" />
       <AnimeBannerWordsHeaderComponent
         :pheader="service.subheader"
@@ -31,7 +30,6 @@
       </span>
 
       <!--  <D3Cloud :pwordcloud="service.cloud" />-->
-    </no-ssr>
   </div>
 </template>
 

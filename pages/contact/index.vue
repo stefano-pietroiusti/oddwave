@@ -1,8 +1,8 @@
 <template>
   <div id="contactContainer" class="w-100 h-100 bg-light">
-    <AnimeBannerWordsHeaderComponent :pheader="pheader" :pbgimage="pheaderImage" :pstyle="pstyle" />
-    <HeaderComponent :pheader="psubheader" />
-    <ContactForm :pservices="services" :pbgimage="pheaderImage" :pstyle="pstyle" />
+    <HeaderComponent :pheader="header" />
+    <AnimeBannerWordsHeaderComponent :pheader="subheader" :pbgimage="backgroundImage" :pstyle="style" />
+    <ContactForm :pservices="services" :pbgimage="backgroundImage" :pstyle="style" />
   </div>
 </template>
 <script>
@@ -42,10 +42,9 @@ export default {
       title: 'Contact the team at the Odd Wave',
       description:
         'Contact the Odd Wave team in the north shore, Auckland, New Zealand',
-      pimage: 'none',
-      pheader: "LET'S CREATE SOME AWESOMENESS",
-      psubheader: 'Get in touch to start a new project together',
-      pheaderImage: {
+      subheader: "LET'S CREATE SOME AWESOMENESS",
+      header: 'Get in touch to start a new project together',
+      backgroundImage: {
         color1: 'rgba(102, 126, 234, 1)',
         color2: 'rgba(118, 75, 162, 1)',
         // rgba(147, 165, 207, 1)
@@ -56,7 +55,7 @@ export default {
         url: 'contact.jpg',
         height: 40
       },
-      pstyle: { bgStyle: 'text-secondary text-left' },
+      style: { bgStyle: 'text-secondary text-center' },
       keywords: [
         'contact',
         'websites',
@@ -68,26 +67,10 @@ export default {
     }
   },
   computed: {
-    subheader () {
-      return ' ' + this.email + ' ' + this.phone
-    },
     services () {
       return this.$store.state.services.all.map((item) => {
         return { value: item.id, text: item.title, selected: true }
       })
-    },
-    computedStyle () {
-      return {
-        // backgroundImage: `linear-gradient(45deg, ${this.pheaderImage.color1} 80%, ${this.pheaderImage.color2} 2%), url(${this.pheaderImage.url})`,
-        height: '100%',
-        width: '100%',
-        bottom: 0,
-        backgroundAttachment: 'fixed',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        textTransform: 'uppercase'
-      }
     }
   }
 }

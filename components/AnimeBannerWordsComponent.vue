@@ -7,21 +7,22 @@
   >
     <span id="anim1">
       <h2 class="anim1">
-        <span class="letters word-1">Creative</span>
-        <span class="letters word-2">Innovative</span>
-        <span class="letters word-3">Lightweight</span>
-        <span class="letters word-4">Streamlined</span>
+        <span class="letters word-1">Online advertising</span>
+        <span class="letters word-2">Content management</span>
+        <span class="letters word-3">Website design</span>
+        <span class="letters word-4">SEO</span>
+        <span class="letters word-5">Photography</span>
+        <span class="letters word-6">Animation</span>
       </h2>
     </span>
     <span id="anim2">
-      <h2 class="anim2">Work with us to create a fast and impactful online presence</h2>
+      <h2 class="anim2">Boost your sales</h2>
     </span>
     <span id="anim3">
       <h3 class="anim3">
-        <span class="word">Proven</span>
-        <span class="word">Progressive</span>
-        <span class="word">Responsive</span>
-        <span class="word">Vanilla</span>
+        <span class="word">Grow</span>
+        <span class="word">your</span>
+        <span class="word">business</span>
       </h3>
     </span>
   </b-container>
@@ -180,7 +181,7 @@ export default {
 #animationBanner {
   display: block;
   opacity: 1;
-  line-height: 1em;
+  padding: 1em;
   background-position: 'top left';
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -188,23 +189,18 @@ export default {
 
 #anim1 {
   position: absolute;
-  left: 2em;
-  width: 50%;
+  width: 100%;
 }
 .anim1 {
-  position: absolute;
-  font-weight: 900;
+  position: inherit;
   text-align: left;
+  width: 75%;
   left: 1em;
   top: 1em;
 }
 .anim1 .letters {
-  position: absolute;
-  /* margin: auto; */
-  left: 0;
-  top: 0;
+  position: inherit;
   opacity: 0;
-  text-align: left;
   font-weight: 900;
   font-size: 1.5em;
 }
@@ -212,42 +208,41 @@ export default {
 #anim2 {
   position: absolute;
   width: 100%;
+  left: 1em;
+  top: 6em;
 }
 
 .anim2 {
-  position: absolute;
-  display: inline-block;
+  /* font-size: 3em; */
+  position: inherit;
   letter-spacing: 0.3em;
   text-transform: unset;
-  left: 1em;
-  top: 0.2em;
+  font-size: 2em;
 }
 
 .anim2 .letter {
-  position: absolute;
-
-  width: 100%;
-  line-height: 1em;
+  position: inherit;
+  /* opacity: 0; */
   margin: auto;
-  text-transform: unset;
-  opacity: 0;
+  font-weight: 900;
 }
 
 #anim3 {
-  position: relative;
-  left: 0;
-  top: 1em;
-}
-.anim3 {
-  font-weight: 800;
+  position: absolute;
+  width: 100%;
+  left: 1em;
+  top: 6em;
 }
 
-.anim3 .word {
-  display: inline-block;
+.anim3 {
   letter-spacing: 0.3em;
-  line-height: 1em;
+  text-transform: unset;
+  font-size: 2em;
+}
+.anim3 .word {
   margin: auto;
   opacity: 0;
+  font-weight: 900;
+  /* font-size: 1.5em; */
 }
-
 </style>

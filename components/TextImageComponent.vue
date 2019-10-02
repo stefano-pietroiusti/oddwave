@@ -1,17 +1,34 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
   <b-container fluid :class="pstyle.bgStyle" :style="background">
-    <b-row>
-      <b-col v-if="pcontent.inlineImage">
+    <b-row v-if="pcontent.inlineImage && !pcontent.inlineImageRight">
+      <b-col md="12" lg="4" class="text-center">
         <img
           :src="`${inlineImage}?size=100`"
           :srcset="inlineImage.srcSet"
           :class="pstyle.inlineImageStyle"
           :alt="inlineImageText"
         >
+      </b-col>
+      <b-col md="12" lg="8">
         <p v-html="pcontent.text" />
       </b-col>
-      <b-col v-else>
+    </b-row>
+    <b-row v-else-if="pcontent.inlineImage && pcontent.inlineImageRight">
+      <b-col md="12" lg="8">
+        <p v-html="pcontent.text" />
+      </b-col>
+      <b-col md="12" lg="4" class="text-center">
+        <img
+          :src="`${inlineImage}?size=100`"
+          :srcset="inlineImage.srcSet"
+          :class="pstyle.inlineImageStyle"
+          :alt="inlineImageText"
+        >
+      </b-col>
+    </b-row>
+    <b-row v-else>
+      <b-col sm="12">
         <p v-html="pcontent.text" />
       </b-col>
     </b-row>
@@ -28,7 +45,8 @@ export default {
           text: 'sample text',
           bgImage: '/imgs/Clouds1.webp',
           inlineImage: '/imgs/Clouds1.webp',
-          inlineImageText: 'Developing a quick and impactful online presence'
+          inlineImageText: 'Developing a quick and impactful online presence',
+          inlineImagePosition: 'right'
         }
       }
     },
@@ -37,7 +55,7 @@ export default {
       default () {
         return {
           bgStyle: 'parralaxNormal text-primary  text-left p-5',
-          inlineImageStyle: 'inlineImage20 inlineImageLeft'
+          inlineImageStyle: 'inlineImage30 inlineImageLeft'
         }
       }
     }
@@ -55,6 +73,12 @@ export default {
         return
       }
       return this.pcontent.inlineImageText
+    },
+    inlineImageRight () {
+      if (!this.pcontent.inlineImagePosition) {
+        return
+      }
+      return this.pcontent.inlineImagePosition === 'right'
     },
     background () {
       if (!this.pcontent.bgImage) {

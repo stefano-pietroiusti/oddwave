@@ -3,7 +3,7 @@
     id="animationBanner"
     fluid
     :style="gradient"
-    :class="pstyle.bgStyle"
+    class="text-secondary text-center"
   >
     <b-row>
       <b-col class="p-5">

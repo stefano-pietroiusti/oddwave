@@ -28,6 +28,11 @@
         <h4 class="pl-2" v-html="phone1" />
         <h4 class="pl-2" v-html="phone2" />
         <h4 class="pl-2" v-html="email" />
+      </b-col>
+      <b-col class="clearfix" />
+    </b-row>
+    <b-row>
+      <b-col class="pl-3 pt-0">
         <h2 class="pt-3">
           Join us
         </h2>
@@ -40,22 +45,9 @@
       </b-col>
       <b-col class="clearfix" />
     </b-row>
-    <!-- <b-row>
-      <b-col class="pl-3 pt-3">
-        <i class="fa fa-phone" v-html="phone1" />
-      </b-col>
-      <b-col class="pl-3 pt-3">
-        <i class="fa fa-phone" v-html="phone2" />
-      </b-col>
-      <b-col class="pl-3 pt-3">
-        <i class="fa fa-at" v-html="email" />
-      </b-col>
-    </b-row> -->
-
     <b-row>
       <b-col cols="12" class="p-1 m-1" />
     </b-row>
-    </b-col>
   </b-container>
 </template>
 <script>

@@ -1,35 +1,35 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
   <div id="servicesContainer" class="text-center mt-header w-100">
-      <HeaderComponent :pheader="service.header" :pstyle="service.headerStyle" />
-      <AnimeBannerWordsHeaderComponent
-        :pheader="service.subheader"
-        :pbgimage="service.backgroundImage"
+    <HeaderComponent :pheader="service.header" :pstyle="service.headerStyle" />
+    <AnimeBannerWordsHeaderComponent
+      :pheader="service.subheader"
+      :pbgimage="service.backgroundImage"
+    />
+    <span id="marketing">
+      <MarketingButton :penquire="service.enquire" :pstyle="service.subheaderStyle" />
+    </span>
+
+    <span v-if="service.slides" id="carousel">
+      <CarouselComponent :carousel-id="service.id" :pslides="service.slides" />
+    </span>
+
+    <TextImageComponent
+      v-for="(item,i) in service.content"
+      :key="i"
+      :pcontent="{ text: item.text, bgImage: item.bgImage, inlineImage: item.inlineImage, inlineImageText: item.inlineImageText, inlineImageRight: item.inlineImageRight }"
+      :pstyle="(item.dark) ? { bgStyle: 'parralaxNormal w-100 text-secondary text-left px-5 pt-3', inlineImageStyle: item.inlineImageStyle} : { bgStyle: 'parralaxNormal w-100 text-primary text-left px-5 pt-3', inlineImageStyle: item.inlineImageStyle}"
+    />
+
+    <span id="marketing">
+      <HeaderComponent
+        :psubheader="service.marketing.header + ' TO ' + service.marketing.subheader"
+        :pstyle="service.subheaderStyle"
       />
-      <span id="marketing">
-        <MarketingButton :penquire="service.enquire" :pstyle="service.subheaderStyle" />
-      </span>
+      <MarketingButton :penquire="service.enquire" :pstyle="service.subheaderStyle" />
+    </span>
 
-      <span v-if="service.slides" id="carousel">
-        <CarouselComponent :carousel-id="service.id" :pslides="service.slides" />
-      </span>
-
-      <TextImageComponent
-        v-for="(item,i) in service.content"
-        :key="i"
-        :pcontent="{ text: item.text, bgImage: item.bgImage, inlineImage: item.inlineImage, inlineImageText: item.inlineImageText, inlineImageRight: item.inlineImageRight }"
-        :pstyle="(item.dark) ? { bgStyle: 'parralaxNormal w-100 text-secondary text-left px-5 pt-3', inlineImageStyle: item.inlineImageStyle} : { bgStyle: 'parralaxNormal w-100 text-primary text-left px-5 pt-3', inlineImageStyle: item.inlineImageStyle}"
-      />
-
-      <span id="marketing">
-        <HeaderComponent
-          :psubheader="service.marketing.header + ' TO ' + service.marketing.subheader"
-          :pstyle="service.subheaderStyle"
-        />
-        <MarketingButton :penquire="service.enquire" :pstyle="service.subheaderStyle" />
-      </span>
-
-      <!--  <D3Cloud :pwordcloud="service.cloud" />-->
+    <!--  <D3Cloud :pwordcloud="service.cloud" />-->
   </div>
 </template>
 
@@ -50,13 +50,16 @@ export default {
     CarouselComponent
   },
   head () {
+    let content = `${process.env.baseUrl}${this.$route.path}`
+    content = (content.slice(-1) !== '/') ? content + '/' : content
     return {
       title: this.service.title,
       meta: [
         {
           hid: 'og:url',
           property: 'og:url',
-          content: `${process.env.baseUrl}${this.$route.path}`
+          // content: `${process.env.baseUrl}${this.$route.path}`
+          content
         },
         {
           hid: 'og:description',

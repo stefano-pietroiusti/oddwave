@@ -16,13 +16,15 @@ export default {
     ContactForm
   },
   head () {
+    let content = `${process.env.baseUrl}${this.$route.path}`
+    content = content.slice(-1) !== '/' ? content + '/' : content
     return {
       title: this.title,
       meta: [
         {
           hid: 'og:url',
           property: 'og:url',
-          content: `${process.env.baseUrl}${this.$route.path}`
+          content
         },
         {
           hid: 'og:description',

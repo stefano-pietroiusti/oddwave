@@ -55,13 +55,15 @@ export default {
     PartnersComponent
   },
   head () {
+    let content = `${process.env.baseUrl}${this.$route.path}`
+    content = content.slice(-1) !== '/' ? content + '/' : content
     return {
       title: this.title,
       meta: [
         {
           hid: 'og:url',
           property: 'og:url',
-          content: `${process.env.baseUrl}${this.$route.path}`
+          content
         },
         {
           hid: 'og:description',
@@ -78,8 +80,10 @@ export default {
   },
   data (context) {
     return {
-      title: 'Web development, data engineering and search optimization services New Zealand',
-      description: 'Work with the Odd Wave of online services and web technologies to manage your digital marketing, grow your kiwi business and achieve your marketing goals.',
+      title:
+        'Web development, data engineering and search optimization services New Zealand',
+      description:
+        'Work with the Odd Wave of online services and web technologies to manage your digital marketing, grow your kiwi business and achieve your marketing goals.',
       header: 'Website Design & Online Marketing Services Auckland, NZ',
       subheader: 'Be where the world is going',
       headerImage: {

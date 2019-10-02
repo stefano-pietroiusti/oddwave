@@ -35,7 +35,8 @@ export default {
   },
   mode: 'universal',
   generate: {
-    routes
+    routes,
+    fallback: true
   },
   ...routerBase,
   head: {
@@ -128,6 +129,7 @@ export default {
     hostname: baseUrl,
     gzip: false,
     xmlns: "http://www.sitemaps.org/schemas/sitemap/0.9",
+    trailingSlash: true,
     defaults: {
       changefreq: 'daily',
       lastmod: new Date(),

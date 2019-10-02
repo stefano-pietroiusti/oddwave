@@ -260,12 +260,20 @@ h6 {
 .inlineImage30 {
   width: 30%;
 }
+.inlineImage50 {
+  width: 50%;
 
+}
+.inlineImage75 {
+  width: 75%;
+}
+.inlineImage100 {
+  width: 100%;
+}
 .inlineImageLeft {
   float: left;
   padding-right: 1em;
 }
-
 .inlineImageRight {
   float: right;
 }
@@ -521,7 +529,7 @@ a:hover {
 .footer h4 {
   padding: unset;
   font-family: inherit;
-  font-size: 0.8em;
+  font-size: 0.7em;
   text-transform: lowercase;
   letter-spacing: 0.25em;
   font-weight: bold;

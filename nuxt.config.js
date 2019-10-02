@@ -6,6 +6,13 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   }
 } : {}
 
+const routes = [
+  '/services/seo',
+  '/services/ppc',
+  '/services/webdesign',
+  '/services/photography',
+]
+
 const baseUrl = process.env.BASE_URL || 'http://localhost:3000'
 const contactUrl = process.env.CONTACT_URL || '/api/contact'
 const recaptchaSiteKey = process.env.SITE_KEY || '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
@@ -28,12 +35,7 @@ export default {
   },
   mode: 'universal',
   generate: {
-    routes: [
-      '/services/seo',
-      '/services/ppc',
-      '/services/webdesign',
-      '/services/photography'
-    ]
+    routes
   },
   ...routerBase,
   head: {
@@ -119,11 +121,18 @@ export default {
   },
   robots: {
     UserAgent: '*',
-    Disallow: ''
+    Disallow: '',
+    Sitemap: baseUrl + '/sitemap.xml'
   },
   sitemap: {
     hostname: baseUrl,
-    gzip: true,
+    gzip: false,
+    xmlns: "http://www.sitemaps.org/schemas/sitemap/0.9",
+    defaults: {
+      changefreq: 'daily',
+      lastmod: new Date(),
+      lastmodrealtime: true
+    }
   },
   recaptcha: {
     siteKey: recaptchaSiteKey,

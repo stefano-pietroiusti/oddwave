@@ -2,14 +2,12 @@
 <template>
   <div id="servicesContainer" class="text-center mt-header w-100">
     <no-ssr>
+      <HeaderComponent :pheader="service.header" :pstyle="service.headerStyle" />
       <AnimeBannerWordsHeaderComponent
-        :pheader="service.header"
-        :pbgimage="service.headerImage"
-        :pstyle="service.headerStyle"
+        :pheader="service.subheader"
+        :pbgimage="service.backgroundImage"
       />
-
       <span id="marketing">
-        <HeaderComponent :pheader="service.subheader" :pstyle="service.subheaderStyle" />
         <MarketingButton :penquire="service.enquire" :pstyle="service.subheaderStyle" />
       </span>
 
@@ -20,7 +18,7 @@
       <TextImageComponent
         v-for="(item,i) in service.content"
         :key="i"
-        :pcontent="{ text: item.text, bgImage: item.bgImage, inlineImage: item.inlineImage, inlineImageText: item.inlineImageText }"
+        :pcontent="{ text: item.text, bgImage: item.bgImage, inlineImage: item.inlineImage, inlineImageText: item.inlineImageText, inlineImageRight: item.inlineImageRight }"
         :pstyle="(item.dark) ? { bgStyle: 'parralaxNormal w-100 text-secondary text-left px-5 pt-3', inlineImageStyle: item.inlineImageStyle} : { bgStyle: 'parralaxNormal w-100 text-primary text-left px-5 pt-3', inlineImageStyle: item.inlineImageStyle}"
       />
 

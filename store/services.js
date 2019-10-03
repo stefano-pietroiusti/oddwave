@@ -132,30 +132,47 @@ export const state = () => ({
     },
     {
       id: 'webdesign',
-      title: 'Custom Website Design and Development',
-      description: 'Boost your sales with search advertising using Google Ads and Bing Ads, contact the Odd Wave online advertising team to get you started.',
-      header: 'Custom Website Design and Development',
+      title: 'Website Design & PWA Development New Zealand',
+      description: 'The Odd Wave’s responsive website design and progressive web application development makes it easy to distribute relevant content anywhere and quickly with an awesome look',
+      header: 'Website design and progressive website development, New Zealand',
       backgroundImage: { color1: 'rgba(46, 217, 195, 1)', color2: 'rgba(46, 217, 195, 1)', url: 'webdesign.jpg', height: 'auto' },
       headerStyle: { bgStyle: 'text-secondary text-center' },
-      subheader: 'Innovative, Responsive, High- Speed and Modern Website Design',
+      subheader: 'Design, manage and distribute your content anywhere, starting with the web',
       subheaderStyle: { color: 'text-primary', buttonVariant: 'info' },
       content:
         [
           {
-            inlineImage: 'websitedesign.jpg',
-            inlineImageText: 'We develop websites that are efficient, search-engine friendly using proven, innovative, open source technologies',
+            inlineImage: 'kiss.png',
+            inlineImageRight: true,
+            inlineImageText: 'We develop websites that are efficient and search-engine friendly using proven, innovative, open source technologies',
             inlineImageStyle: 'inlineImage100',
-            text: 'Here at The Odd Wave, we design and develop robust, cutting edge websites using the latest web development frameworks. We take time to understand your business and requirements so we can develop a website to help you stand out and grow your business. <br/><br/> The world wide web is vast, with billions of websites worldwide competing for consideration. It can be overwhelming when you are thinking about launching a website, but that\'s why we are here to help.'
+            text: 'Our approach is simple. We will manage your data and content in a way that it can be distributed and used anywhere. We will design and develop a website that is fast and responsive and look great anywhere. We do this using the latest frameworks and future-proof standards in the world of web, data, search and cloud.<br/>We use plugins and custom built components to custom build progressive web applications for every client, using latest stable frameworks and supporting processes. We avoid the standard template technologies out there and strive towards creativeness and performance.<br/>We take the time to understand your business and requirements so we can develop a website to help you stand out and grow your business further. With a range of web design and web development services on offer, we will create the perfect website to suit your budget. With our extensive industry experience, we can help you realize your kiwi business dream.'
           },
-          { text: 'With our extensive industry experience, we can help you realize your business dream. The Odd Wave provides web design and development from our offices in Torbay Auckland to clients all over New Zealand.' },
-          { text: 'With a range of web design services on offer, we will create the perfect website to suit your budget. We custom build web applications for every client, using the latest progressive web application frameworks. We avoid the standard template technologies out there and strive towards creativeness and performance. Our websites are fully responsive and will look great on any digital device (desktop, laptop, tablet, mobile phone, TV screens)' },
-          { text: 'We can also help you with a refresh and redesign if your website is looking a little dated. We can review your existing web design and provide recommendations on ways to improve its visual look and feel and performance. All our websites are search engine optimized, ensuring our sites are visible to search engines once published.' },
+          { text: 'We can also help you with a refresh and redesign if your website is looking a little dated. In so doing, you will move onto the latest tech and be where the world is going in terms of the web and data.  We can review your existing web design and provide recommendations on ways to improve its visual look and feel and performance. All our websites are search engine optimized, ensuring our sites are visible to search engines once published.' },
+          { text: 'If you are looking to launch an online store , we can design and develop an eCommerce website fully integrated into a payment gateway. With a the range of other services we offer , we really do give you a turnkey business solution.' },
           {
-            inlineImage: 'ecommerce.jpg',
+            inlineImage: 'pwa3.png',
+            inlineImageRight: true,
+            inlineImageText: 'Web application designed to provide the best user experience on mobile devices',
+            inlineImageStyle: 'inlineImage100',
+            header: 'Website design with a clear WOW factor',
+            text: 'Website features and functions such as page and graphics design, site navigation, shopping cart, checkout and social media need to be fast, crisp, clear, simple and consistent throughout. Your whole online web and data package should be fun and enjoyable to use, from anywhere and anything.<br /><br />Great website design starts with a clear purpose in mind.Web pages need to look great and visually appealing.Good website design and content must be original and relevant to target audiences. <br /> <br />We will help you be a first- class version of yourself, not of others.Your website will also be fully responsive and will look great on any digital device.'
+          },
+          {
+            // inlineImage: 'pwa.jpg',
+            // inlineImageRight: true,
+            // inlineImageText: 'Our flexible web platform provides a variety of ecommerce and digital signage possibilites',
+            // inlineImageStyle: 'inlineImage100',
+            header: 'Website services fit for purpose',
+            text: 'We don’t fancy complex processes, overkill and clunk that usually arises from templates based design and development. We are passionate about technologies that are proven, modern and future-proof.<br />We keep things quick, simple, easy to support and integrate with.<br />Our platform and processes empower us to design and manage your content and distribute it anywhere as required, starting with the web.'
+          },
+          {
+            inlineImage: 'awesome-development.png',
             inlineImageRight: true,
             inlineImageText: 'Our flexible web platform provides a variety of ecommerce and digital signage possibilites',
-            inlineImageStyle: 'inlineImage100',
-            text: 'If you are looking to launch an online store , we can design and develop an eCommerce website fully integrated into a payment gateway. With a the range of other services we offer , we really do give you a turnkey business solution.'
+            inlineImageStyle: 'inlineImage50',
+            header: 'More about the Odd Wave',
+            text: 'The Odd Wave team are a small, tightly knit team that take pride in what they do to help others succeed.  We have 20 years experience behind us in the world of Web and Data. We are good at building websites and promoting businesses with search engine optimization, google adwords, social media and digital marketing.  We believe we have what it takes to achieve your personal and business goals. We are based in Auckland but are able to serve traders, shops, small business and medium enterprises across New Zealand.<br/>We will help you manage your online initiatives by covering everything it takes to do so:<br/>Suitable domain name registration<br/>Choosing a reliable hosts in terms Speed, Security, Location and Affordability<br/>Structuring and optimizing your content for search and social media<br/>Managing your content in a way so that it can be used anywhere very easily<br/>Designing according to your brand, features, products and services<br/>Managing your online presence going forward so you can focus more on your business<br/>'
           }
         ],
       price: { value: 2200, unit: 'package' },
@@ -193,35 +210,35 @@ export const state = () => ({
     {
       id: 'photography',
       title: 'Creative Digital Photography',
-      description: 'Show off your products and services with captiviating digital photography services by The Odd Wave call us for more info 02108823769',
+      description: 'Show off your products and services with captivating digital photography services by The Odd Wave.',
       header: 'Creative Digital Photography',
       backgroundImage: { color1: 'rgba(244, 67, 108, 1)', color2: 'rgba(244, 67, 108, 1)', url: 'photography.jpg', height: 'auto' },
       headerStyle: { bgStyle: 'text-secondary text-center' },
       subheader: 'Attract potential customers with creative photography',
       subheaderStyle: { color: 'text-primary', buttonVariant: 'info' },
       content:
-        [
-          {
+      [
+        {
 
-            text: 'Visual communication has reached new heights with digital and social media marketing resulting in digital photography, becoming an essential part of product or service promotion. Digital photography is widely used in website design and is a great way to make a website more attractive and eye-catching.'
-          },
-          {
-            text: 'Companies need to grab the attention of their target audience. An online presence, such as a website is necessary for showing your product or brand to the world and reaching potential clients.<br/><br/>We will help you support this purpose with our website design capabilities and beautiful website photography. Visual elements increase users\' willingness to read the content. The human brain processes a limited amount of information at any given time; an eye-catching photograph can be processed faster and will take precedence.',
-            inlineImage: 'photography.jpg',
-            inlineImageText: 'We compliment our designs with our own creative photography inspired by the wonders of New Zealand',
-            inlineImageStyle: 'inlineImage75'
-          },
-          {
-            text: 'Combining written text with visual content is an excellent way of grabbing a target audience\'s attention. Captivating digital photography drives emotional responses about a brand.Digital photos help users visualize the product or service they want to use and imagine how it will help improve their lives.'
-          },
-          {
-            inlineImage: 'crew.jpg',
-            inlineImageRight: true,
-            inlineImageText: 'We love creating partnerships wherever possible to offer the best New Zealand can offer in terms of creativeness and business success',
-            inlineImageStyle: 'inlineImage50',
-            text: 'Our experienced in house photographer will assist you in showcasing your product or services online with eye-catching, high-quality digital photography.<br/> <br/> Contact us with your requirements.'
-          }
-        ],
+          text: 'Visual communication has reached new heights with digital and social media marketing resulting in digital photography, becoming an essential part of product or service promotion. Digital photography is widely used in website design and is a great way to make a website more attractive and eye-catching.'
+        },
+        {
+          text: 'Companies need to grab the attention of their target audience. An online presence, such as a website is necessary for showing your product or brand to the world and reaching potential clients.<br/><br/>We will help you support this purpose with our website design capabilities and beautiful website photography. Visual elements increase users\' willingness to read the content. The human brain processes a limited amount of information at any given time; an eye-catching photograph can be processed faster and will take precedence.',
+          inlineImage: 'photography.jpg',
+          inlineImageText: 'We compliment our designs with our own creative photography inspired by the wonders of New Zealand',
+          inlineImageStyle: 'inlineImage75'
+        },
+        {
+          text: 'Combining written text with visual content is an excellent way of grabbing a target audience\'s attention. Captivating digital photography drives emotional responses about a brand.Digital photos help users visualize the product or service they want to use and imagine how it will help improve their lives.'
+        },
+        {
+          inlineImage: 'crew.jpg',
+          inlineImageRight: true,
+          inlineImageText: 'We love creating partnerships wherever possible to offer the best New Zealand can offer in terms of creativeness and business success',
+          inlineImageStyle: 'inlineImage50',
+          text: 'Our experienced in house photographer will assist you in showcasing your product or services online with eye-catching, high-quality digital photography.<br/> <br/> Contact us with your requirements.'
+        }
+      ],
       marketing: {
         header: 'Enhance your website visuals',
         subheader: 'Compliment your branding',

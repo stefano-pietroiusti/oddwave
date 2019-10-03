@@ -47,6 +47,8 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { hid: 'viewport', name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
+      { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
+      {'http-equiv':'content-type', content:'text/html; charset=UTF-8'},
       { hid: 'robots', name: 'robots', content: 'index, follow' },
       { hid: 'author', name: 'author', content: 'The Odd Wave Limited' },
       { hid: 'og:type', property: 'og:type', content: 'website' },

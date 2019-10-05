@@ -1,4 +1,4 @@
-<!-- eslint-disable vue/no-v-html -->
+<!-- eslint-disable vue/no-v-html vue/require-v-for-key -->
 <template>
   <b-container fluid :class="pstyle.bgStyle" :style="background">
     <b-row v-if="pcontent.inlineImage && !pcontent.inlineImageRight">
@@ -11,12 +11,24 @@
         >
       </b-col>
       <b-col md="12" lg="8">
+        <h3 v-if="pcontent.header" v-html="pcontent.header" />
         <p v-html="pcontent.text" />
+        <ul v-if="pcontent.list">
+          <li v-for="item in pcontent.list">
+            {{ item }}
+          </li>
+        </ul>
       </b-col>
     </b-row>
     <b-row v-else-if="pcontent.inlineImage && pcontent.inlineImageRight">
       <b-col md="12" lg="8">
+        <h3 v-if="pcontent.header" v-html="pcontent.header" />
         <p v-html="pcontent.text" />
+        <ul v-if="pcontent.list">
+          <li v-for="item in pcontent.list">
+            {{ item }}
+          </li>
+        </ul>
       </b-col>
       <b-col md="12" lg="4" class="text-center">
         <img
@@ -29,7 +41,13 @@
     </b-row>
     <b-row v-else>
       <b-col sm="12">
+        <h3 v-if="pcontent.header" v-html="pcontent.header" />
         <p v-html="pcontent.text" />
+        <ul v-if="pcontent.list">
+          <li v-for="item in pcontent.list">
+            {{ item }}
+          </li>
+        </ul>
       </b-col>
     </b-row>
   </b-container>
@@ -42,6 +60,7 @@ export default {
       type: Object,
       default () {
         return {
+          header: 'header',
           text: 'sample text',
           bgImage: '/imgs/Clouds1.webp',
           inlineImage: '/imgs/Clouds1.webp',

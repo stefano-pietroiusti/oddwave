@@ -90,7 +90,9 @@ export const state = () => ({
             inlineImageText: 'We research and monitor the right keywords for your pay-per-click marketing campaigns',
             inlineImageStyle: 'inlineImage75',
             text: 'Our skilled team will create a custom digital marketing strategy that will help you achieve your company goals. We will carefully help you select the correct online marketing channels. Some of these channels include Search Engine Marketing (paid) and Search Engine Optimization (earned). <br/>Here\'s what you can expect from the odd wave: Keyword research and audience targeting ensuring you attract the right customer and professionally created Ad\'s creation based on keywords researched and comply with google policies.We make sure your campaign is running optimally. The checks include search terms, negative keywords, location targeting, and budgets to mention a few.'
-          }
+          },
+          { text: 'The Odd Wave provides professionally managed Search Engine Marketing services for small to medium-sized businesses throughout NZ from our North Shore, Auckland office. We have over eight years experience in successfully managing Google advertising campaigns.' }
+
         ],
       price: { value: 240, unit: 'per month' },
       marketing: {
@@ -132,7 +134,7 @@ export const state = () => ({
     },
     {
       id: 'webdesign',
-      title: 'Website Design & PWA Development New Zealand',
+      title: 'Website Design & PWA Development',
       description: 'The Odd Wave’s responsive website design and progressive web application development makes it easy to distribute relevant content anywhere and quickly with an awesome look',
       header: 'Website design and progressive website development, New Zealand',
       backgroundImage: { color1: 'rgba(46, 217, 195, 1)', color2: 'rgba(46, 217, 195, 1)', url: 'webdesign.jpg', height: 'auto' },
@@ -172,7 +174,17 @@ export const state = () => ({
             inlineImageText: 'Our flexible web platform provides a variety of ecommerce and digital signage possibilites',
             inlineImageStyle: 'inlineImage50',
             header: 'More about the Odd Wave',
-            text: 'The Odd Wave team are a small, tightly knit team that take pride in what they do to help others succeed.  We have 20 years experience behind us in the world of Web and Data. We are good at building websites and promoting businesses with search engine optimization, google adwords, social media and digital marketing.  We believe we have what it takes to achieve your personal and business goals. We are based in Auckland but are able to serve traders, shops, small business and medium enterprises across New Zealand.<br/>We will help you manage your online initiatives by covering everything it takes to do so:<br/>Suitable domain name registration<br/>Choosing a reliable hosts in terms Speed, Security, Location and Affordability<br/>Structuring and optimizing your content for search and social media<br/>Managing your content in a way so that it can be used anywhere very easily<br/>Designing according to your brand, features, products and services<br/>Managing your online presence going forward so you can focus more on your business<br/>'
+            text: 'The Odd Wave team are a small, tightly knit team that take pride in what they do to help others succeed.  We have 20 years experience behind us in the world of Web and Data. We are good at building websites and promoting businesses with search engine optimization, google adwords, social media and digital marketing.  We believe we have what it takes to achieve your personal and business goals. We are based in Auckland but are able to serve traders, shops, small business and medium enterprises across New Zealand.'
+          },
+          {
+            text: 'We will help you manage your online initiatives by covering everything it takes to do so:',
+            list: [
+              'Suitable domain name registration',
+              'Choosing a reliable hosts in terms Speed, Security, Location and Affordability',
+              'Structuring and optimizing your content for search and social media',
+              'Managing your content in a way so that it can be used anywhere very easily',
+              'Designing according to your brand, features, products and services',
+              'Managing your online presence going forward so you can focus more on your business']
           }
         ],
       price: { value: 2200, unit: 'package' },
@@ -217,28 +229,28 @@ export const state = () => ({
       subheader: 'Attract potential customers with creative photography',
       subheaderStyle: { color: 'text-primary', buttonVariant: 'info' },
       content:
-      [
-        {
+        [
+          {
 
-          text: 'Visual communication has reached new heights with digital and social media marketing resulting in digital photography, becoming an essential part of product or service promotion. Digital photography is widely used in website design and is a great way to make a website more attractive and eye-catching.'
-        },
-        {
-          text: 'Companies need to grab the attention of their target audience. An online presence, such as a website is necessary for showing your product or brand to the world and reaching potential clients.<br/><br/>We will help you support this purpose with our website design capabilities and beautiful website photography. Visual elements increase users\' willingness to read the content. The human brain processes a limited amount of information at any given time; an eye-catching photograph can be processed faster and will take precedence.',
-          inlineImage: 'photography.jpg',
-          inlineImageText: 'We compliment our designs with our own creative photography inspired by the wonders of New Zealand',
-          inlineImageStyle: 'inlineImage75'
-        },
-        {
-          text: 'Combining written text with visual content is an excellent way of grabbing a target audience\'s attention. Captivating digital photography drives emotional responses about a brand.Digital photos help users visualize the product or service they want to use and imagine how it will help improve their lives.'
-        },
-        {
-          inlineImage: 'crew.jpg',
-          inlineImageRight: true,
-          inlineImageText: 'We love creating partnerships wherever possible to offer the best New Zealand can offer in terms of creativeness and business success',
-          inlineImageStyle: 'inlineImage50',
-          text: 'Our experienced in house photographer will assist you in showcasing your product or services online with eye-catching, high-quality digital photography.<br/> <br/> Contact us with your requirements.'
-        }
-      ],
+            text: 'Visual communication has reached new heights with digital and social media marketing resulting in digital photography, becoming an essential part of product or service promotion. Digital photography is widely used in website design and is a great way to make a website more attractive and eye-catching.'
+          },
+          {
+            text: 'Companies need to grab the attention of their target audience. An online presence, such as a website is necessary for showing your product or brand to the world and reaching potential clients.<br/><br/>We will help you support this purpose with our website design capabilities and beautiful website photography. Visual elements increase users\' willingness to read the content. The human brain processes a limited amount of information at any given time; an eye-catching photograph can be processed faster and will take precedence.',
+            inlineImage: 'photography.jpg',
+            inlineImageText: 'We compliment our designs with our own creative photography inspired by the wonders of New Zealand',
+            inlineImageStyle: 'inlineImage75'
+          },
+          {
+            text: 'Combining written text with visual content is an excellent way of grabbing a target audience\'s attention. Captivating digital photography drives emotional responses about a brand.Digital photos help users visualize the product or service they want to use and imagine how it will help improve their lives.'
+          },
+          {
+            inlineImage: 'crew.jpg',
+            inlineImageRight: true,
+            inlineImageText: 'We love creating partnerships wherever possible to offer the best New Zealand can offer in terms of creativeness and business success',
+            inlineImageStyle: 'inlineImage50',
+            text: 'Our experienced in house photographer will assist you in showcasing your product or services online with eye-catching, high-quality digital photography.<br/> <br/> Contact us with your requirements.'
+          }
+        ],
       marketing: {
         header: 'Enhance your website visuals',
         subheader: 'Compliment your branding',

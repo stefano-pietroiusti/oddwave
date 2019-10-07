@@ -1,5 +1,4 @@
 // File: custom.scss
-
 $white: #fff;
 $gray-100: #f8f9fa;
 $gray-200: #e9ecef;
@@ -14,7 +13,6 @@ $gunmetal: #292f36;
 $nickel: #747572;
 $black: #000;
 
-// Base colors definitions
 $blue: #091540;
 $bluelight: #1446a0;
 $indigo: #1e1d1e;
@@ -26,12 +24,12 @@ $yellow: #f5d547;
 $green: #28a745;
 $teal: #20c997;
 $cyan: #17a2b8;
-$rwcblue: #54c8e8;      // rgba(84, 200, 232, 1)
-$rwcpurple: #993dbb;    // rgba(153, 61, 187, 1)
-$rwcteal: #2ed9c3;      // rgba(46, 217, 195, 1)
-$rwcred: #f4436c;       // rgba(244, 67, 108, 1)
-$rwcyellow: #f5a800;    // rgba(245, 168, 0, 1)
-$rwclime: #c8e854;      // rgba(200, 232, 84, 1)
+$rwcblue: #54c8e8; // rgba(84, 200, 232, 1)
+$rwcpurple: #993dbb; // rgba(153, 61, 187, 1)
+$rwcteal: #2ed9c3; // rgba(46, 217, 195, 1)
+$rwcred: #f4436c; // rgba(244, 67, 108, 1)
+$rwcyellow: #f5a800; // rgba(245, 168, 0, 1)
+$rwclime: #c8e854; // rgba(200, 232, 84, 1)
 $success: $green;
 $info: $pink;
 $warning: $yellow;
@@ -44,7 +42,6 @@ $primaryLight: $blue;
 $secondary: $white;
 $tertiary: $pink;
 $theme-colors: ();
-// This table defines the theme colors (variant names)
 $theme-colors: map-merge(
   (
     "primary": $primary,
@@ -116,6 +113,8 @@ $spacers: map-merge(
   $spacers
 );
 
+
+
 $enable-rounded: true;
 $enable-shadows: true;
 $enable-gradients: true;
@@ -124,37 +123,18 @@ $enable-responsive-font-sizes: true !important;
 $enable-validation-icons: true;
 // $font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
 // Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-// $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
-// 'Courier New', monospace;
-// $font-family-lucida: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
-// $font-family-verdana: Verdana, Helvetica, sans-serif;
-// $font-family-helvetica: Helvetica, sans-serif;
-// $font-family-trebuchet: sans-serif;
-// $font-family-optima: 'Optima', 'Trebuchet MS', 'Noto Sans', sans-serif;
-// $font-family-syncopate: 'Syncopate', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-// $font-family-bowlby: 'Bowlby One SC', cursive;
-// $font-family-blacksans: 'Black Han Sans', sans-serif;
-//$font-family-nunitosans: "Nunito Sans", sans-serif;
-//$font-family-azosans: 'Azo Sans', 'AzoSansUberW01-Regular', 'Black Han Sans', sans-serif;
 $font-family-ubuntu: "Ubuntu", sans-serif;
-$font-family-roboto: "Roboto", sans-serif;
+// $font-family-roboto: "Roboto", sans-serif;
 $font-family-varelaround: "Varela Round", sans-serif;
 $body-bg: $white;
 $body-color: $gunmetal;
-//$font-family-base: $font-family-roboto;
 $font-family-base: $font-family-varelaround;
 $font-family-secondary: $font-family-ubuntu;
-
 $font-size-base: 0.8rem;
-
-
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "../../node_modules/bootstrap-vue/src/index.scss";
 
-// And define any of your custom or additional CSS/SCSS here,
-// or via an @import
-// fluid font
 @function strip-unit($value) {
   @return $value / ($value * 0 + 1);
 }
@@ -198,6 +178,14 @@ $calc_h4: calc(1.275rem + 0.3vw);
 $calc_h5: calc(1.275rem + 0.3vw);
 $calc_h6: calc(1.275rem + 0.3vw);
 
+// @font-face {
+//   font-family: "Open Sans Regular";
+//   font-weight: 400;
+//   font-style: normal;
+//   src: url("fonts/OpenSans-Regular-BasicLatin.woff2") format("woff2");
+//   font-display: swap;
+// }
+
 html {
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
   background-size: cover;
@@ -211,7 +199,6 @@ body {
   max-width: $max_width;
   padding: 0rem;
   margin: 0;
-  // font-size: calc(18px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   font-size: 1.2rem;
   line-height: 2;
 }
@@ -219,6 +206,7 @@ $mod_1: 1.2; // mobile
 $mod_2: 3; // desktop
 
 h1 {
+  display: block;
   font-size: $calc_h1;
   text-transform: capitalize;
   font-weight: 600;
@@ -262,7 +250,6 @@ h6 {
 }
 .inlineImage50 {
   width: 50%;
-
 }
 .inlineImage75 {
   width: 75%;
@@ -369,7 +356,6 @@ hr {
 
 .nav-item {
   margin-left: 2vw;
-  // padding: 1em !important;
   font-size: 0.8em;
   text-transform: uppercase;
 }
@@ -413,7 +399,6 @@ a:hover {
 }
 
 .imageBannerComponent {
-  // min-height: 20vw;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -425,12 +410,28 @@ a:hover {
   line-height: inherit;
 }
 
+.align-items-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .linkComponent {
   font-size: 1.5em;
   text-transform: uppercase;
   font-weight: 300;
   line-height: 1.5;
 }
+
+.buttonComponent {
+  font-size: 1.5em;
+  text-transform: none;
+  font-weight: 300;
+  line-height: 1.5;
+  padding: 5;
+  width:100%;
+}
+
 .imageComponentImage {
   padding: 2em;
   z-index: 1;
@@ -446,12 +447,6 @@ a:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  // position: relative;
-  // top: 0;
-  // left: 0;
-  // width: 400px;
-  // height: 400px;
-  // z-index: 20;
   background-color: rgba(244, 255, 31, 0.2); /*dim the background*/
 }
 .overlay {
@@ -475,7 +470,6 @@ a:hover {
   opacity: 0.8;
 }
 
-
 .fa-facebook {
   color: var(--secondary);
 }
@@ -491,7 +485,7 @@ a:hover {
   opacity: 1;
 }
 
-.fa-contact  {
+.fa-contact {
   font-size: 1.2em;
   line-height: 2em;
   text-decoration: none;
@@ -552,8 +546,6 @@ a:hover {
   font-size: 0.8em;
   font-family: inherit;
   margin: 0vw;
-  // padding: 5px 0px 5px 0px;
-  cursor: pointer;
   transition: 0.2s;
   -webkit-transition: 0.2s;
   -moz-transition: 0.2s;

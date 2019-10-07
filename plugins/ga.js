@@ -25,5 +25,6 @@ export default ({ app }) => {
     */
     ga('set', 'page', to.fullPath)
     ga('send', 'pageview')
+    ga('send', 'event', 'page', to.fullPath, JSON.stringify(to))
   })
 }

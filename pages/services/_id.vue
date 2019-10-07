@@ -6,9 +6,9 @@
       :pheader="service.subheader"
       :pbgimage="service.backgroundImage"
     />
-    <span id="marketing">
-      <MarketingButton :penquire="service.enquire" :pstyle="service.subheaderStyle" />
-    </span>
+    <div class="p-5">
+      <ButtonComponent btext="Get started" blink="/contact/" :pstyle="service.subheaderStyle" />
+    </div>
 
     <span v-if="service.slides" id="carousel">
       <CarouselComponent :carousel-id="service.id" :pslides="service.slides" />
@@ -21,21 +21,21 @@
       :pstyle="(item.dark) ? { bgStyle: 'parralaxNormal w-100 text-secondary text-left px-5 pt-3', inlineImageStyle: item.inlineImageStyle} : { bgStyle: 'parralaxNormal w-100 text-primary text-left px-5 pt-3', inlineImageStyle: item.inlineImageStyle}"
     />
 
-    <span id="marketing">
-      <HeaderComponent
-        :psubheader="service.marketing.header + ' TO ' + service.marketing.subheader"
-        :pstyle="service.subheaderStyle"
-      />
-      <MarketingButton :penquire="service.enquire" :pstyle="service.subheaderStyle" />
-    </span>
+    <HeaderComponent
+      :psubheader="service.marketing.header + ' TO ' + service.marketing.subheader"
+      :pstyle="service.subheaderStyle"
+    />
 
+    <div class="pb-5">
+      <ButtonComponent btext="Get started" blink="/contact/" :pstyle="service.subheaderStyle" />
+    </div>
     <!--  <D3Cloud :pwordcloud="service.cloud" />-->
   </div>
 </template>
 
 <script>
 import HeaderComponent from '@/components/HeaderComponent'
-import MarketingButton from '@/components/MarketingButton'
+import ButtonComponent from '@/components/ButtonComponent'
 import TextImageComponent from '@/components/TextImageComponent'
 import AnimeBannerWordsHeaderComponent from '@/components/AnimeBannerWordsHeaderComponent'
 import CarouselComponent from '@/components/CarouselComponent'
@@ -44,7 +44,7 @@ const R = require('ramda')
 export default {
   components: {
     HeaderComponent,
-    MarketingButton,
+    ButtonComponent,
     TextImageComponent,
     AnimeBannerWordsHeaderComponent,
     CarouselComponent

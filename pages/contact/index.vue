@@ -1,7 +1,7 @@
 <template>
   <div id="contactContainer" class="w-100 h-100 bg-light">
-    <HeaderComponent :pheader="header" />
-    <AnimeBannerWordsHeaderComponent :pheader="subheader" :pbgimage="backgroundImage" :pstyle="style" />
+    <HeaderComponent :pheader="header" :psubheader="subheader" />
+    <AnimeBannerWordsHeaderComponent :pheader="animeheader" :pbgimage="backgroundImage" :pstyle="style" />
     <ContactForm :pservices="services" :pbgimage="backgroundImage" :pstyle="style" />
   </div>
 </template>
@@ -41,11 +41,12 @@ export default {
   },
   data (context) {
     return {
-      title: 'Contact the team at the Odd Wave',
+      title: 'Start a new website, pwa or seo project with the Odd Wave team',
       description:
-        'Contact the Odd Wave team in the north shore, Auckland, New Zealand',
-      subheader: "LET'S CREATE SOME AWESOMENESS",
-      header: 'Get in touch to start a new project together',
+        'Start an agile website design, seo or mobile-first PWA progressive web apps project with the Odd Wave team. Serving all businesses across New Zealand',
+      animeheader: "LET'S CREATE SOME AWESOMENESS",
+      header: 'Get in touch to start a website design, seo or PWA web app project',
+      subheader: 'Serving all New Zealand from Auckland, North Shore',
       backgroundImage: {
         color1: 'rgba(102, 126, 234, 1)',
         color2: 'rgba(118, 75, 162, 1)',
@@ -74,7 +75,19 @@ export default {
         return { value: item.id, text: item.title, selected: true }
       })
     }
+    // nodeEnv () {
+    //   return process.env.nodeEnv
+    // }
   }
+  // mounted () {
+  //   if (process.env.NODE_ENV !== 'production') {}
+  //   // this.$ga.event({
+  //   //   eventCategory: 'nav',
+  //   //   eventAction: 'init',
+  //   //   eventLabel: 'home',
+  //   //   eventValue: 1
+  //   // })
+  // }
 }
 </script>
 <style scoped>

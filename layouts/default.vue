@@ -19,7 +19,7 @@ export default {
   head () {
     const canonical = `${process.env.baseUrl}${this.$route.path}`
     const link = [
-      { rel: 'canonical', href: canonical }
+      { hid: 'canonical', rel: 'canonical', href: canonical }
       // { rel: 'alternate', hreflang: 'en', href: `https://nuxtjs.org${this.$route.path}` },
     ]
     link.forEach((l) => {

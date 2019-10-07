@@ -17,13 +17,14 @@ const baseUrl = process.env.BASE_URL || 'http://localhost:3000'
 const contactUrl = process.env.CONTACT_URL || '/api/contact'
 const recaptchaSiteKey = process.env.SITE_KEY || '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
 const author = process.env.AUTHOR || 'https://www.linkedin.com/in/scpietro/'
-
+const nodeEnv = process.env.NODE_ENV || 'development'
 export default {
   env: {
     baseUrl,
     contactUrl,
     recaptchaSiteKey,
-    author
+    author,
+    nodeEnv
   },
   layoutTransition: {
     name: 'layout',
@@ -47,7 +48,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { hid: 'viewport', name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-      { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
+      {'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
       {'http-equiv':'content-type', content:'text/html; charset=UTF-8'},
       { hid: 'robots', name: 'robots', content: 'index, follow' },
       { hid: 'author', name: 'author', content: 'The Odd Wave Limited' },
@@ -83,21 +84,14 @@ export default {
     { src: '~/plugins/vue-notifications', mode: 'client' },
     { src: '~/plugins/vue-chartjs.js', mode: 'client' },
     { src: '~/plugins/ga.js', mode: 'client' }
-
-    // { src: '~plugins/vue-parallaxy', mode: 'client' },
-    // { src: '~/plugins/vue-fb-customer-chat', mode: 'client' },
-    // { src: '~/plugins/bootstrap-vue', mode: 'client' }
   ],
   devModules: [
-    // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module'
   ],
   modules: [
-    // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
     '@nuxtjs/axios',
-    'nuxt-simple-line-icons',
-    'nuxt-svg-loader',
+    // 'nuxt-svg-loader',
     'nuxt-responsive-loader',
     '@nuxtjs/dotenv',
     ['@nuxtjs/robots', { UserAgent: '*', Disallow: '' }],
@@ -113,9 +107,9 @@ export default {
   responsiveLoader: {
     name: 'img/oddwave-[hash:7]-[width].[ext]',
     quality: 100,
-    min: 640,
+    min: 320,
     max: 1080,
-    steps: 5,
+    steps: 8,
     // sizes: [350, 500, 800, 1200, 1500, 1800], 
     // format: 'png',
     adapter: require('responsive-loader/sharp'),
@@ -148,9 +142,6 @@ export default {
   ],
   build: {
     // vendor: ['vue-fb-customer-chat'],
-    /*
-     ** You can extend webpack config here
-    */
     extend(config, { isDev, isClient }) {
       // Run ESLint on save
       if (isDev && isClient) {

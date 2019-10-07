@@ -29,7 +29,7 @@ export default {
         return [
           { text: 'SEO', value: 2000 },
           { text: 'Photography', value: 1900 },
-          { text: 'Optimisation', value: 1800 },
+          { text: 'Optimization', value: 1800 },
           { text: 'Websites', value: 1700 },
           { text: 'Workshops', value: 1600 },
           { text: 'Advertising', value: 1500 },
@@ -40,7 +40,7 @@ export default {
           { text: 'CMS', value: 1000 },
           { text: 'SEO', value: 900 },
           { text: 'Photography', value: 800 },
-          { text: 'Optimisation', value: 700 },
+          { text: 'Optimization', value: 700 },
           { text: 'Websites', value: 600 },
           { text: 'Workshops', value: 500 },
           { text: 'Advertising', value: 400 },

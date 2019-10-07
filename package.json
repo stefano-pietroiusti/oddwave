@@ -17,8 +17,9 @@
     "deploy:gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup",
     "dev:localforms": "cross-env DEPLOY_ENV=local BASE_URL=http://localhost:30100 CONTACT_URL=/oddwaveforms/api/contact SITE_KEY= nuxt",
     "dev:a2": "cross-env DEPLOY_ENV=a2 BASE_URL=https://theoddwave.co.nz CONTACT_URL=/oddwaveforms/api/contact SITE_KEY=6LeGo7oUAAAAAEGr7R3EafQoCg3j9MQtBIvepD2c nuxt",
-    "build:a2": "cross-env DEPLOY_ENV=a2 BASE_URL=https://theoddwave.co.nz CONTACT_URL=/oddwaveforms/api/contact SITE_KEY=6LeGo7oUAAAAAEGr7R3EafQoCg3j9MQtBIvepD2c nuxt build",
-    "generate:a2": "cross-env DEPLOY_ENV=a2 BASE_URL=https://theoddwave.co.nz CONTACT_URL=/oddwaveforms/api/contact SITE_KEY=6LeGo7oUAAAAAEGr7R3EafQoCg3j9MQtBIvepD2c nuxt generate"
+    "dev:a2prod": "cross-env NODE_ENV=production DEPLOY_ENV=a2 BASE_URL=https://theoddwave.co.nz CONTACT_URL=/oddwaveforms/api/contact SITE_KEY=6LeGo7oUAAAAAEGr7R3EafQoCg3j9MQtBIvepD2c nuxt",
+    "build:a2": "cross-env NODE_ENV=production DEPLOY_ENV=a2 BASE_URL=https://theoddwave.co.nz CONTACT_URL=/oddwaveforms/api/contact SITE_KEY=6LeGo7oUAAAAAEGr7R3EafQoCg3j9MQtBIvepD2c nuxt build",
+    "generate:a2": "cross-env NODE_ENV=production DEPLOY_ENV=a2 BASE_URL=https://theoddwave.co.nz CONTACT_URL=/oddwaveforms/api/contact SITE_KEY=6LeGo7oUAAAAAEGr7R3EafQoCg3j9MQtBIvepD2c nuxt generate"
   },
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",

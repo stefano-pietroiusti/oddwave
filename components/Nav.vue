@@ -23,12 +23,15 @@
                 <b-dropdown-item
                   v-for="service in services"
                   :key="service.id"
-                  :to="{name: 'services-id', params: {id: service.id}}"
+                  :to="'/services/' + service.id + '/'"
                 >
                   {{ service.title }}
+                  <!-- <nuxt-link :to="'/services/' + service.id + '/'">
+                    {{ service.title }}
+                  </nuxt-link> -->
                 </b-dropdown-item>
               </b-nav-item-dropdown>
-              <b-nav-item to="/contact">
+              <b-nav-item to="/contact/">
                 Contact us
               </b-nav-item>
             </b-navbar-nav>

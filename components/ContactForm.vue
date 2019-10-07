@@ -227,7 +227,8 @@ export default {
         this.clearForm()
         this.showSubmit()
       } catch (error) {
-        console.log(error)
+        // console.log(error)
+        this.showSubmitError()
       }
     },
     // async onError (error) {
@@ -249,7 +250,6 @@ export default {
         }
       } catch (error) {
         this.showSubmitError()
-        console.log(error)
       }
     },
     onReset (evt) {

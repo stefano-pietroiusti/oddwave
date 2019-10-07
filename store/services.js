@@ -12,22 +12,47 @@ export const state = () => ({
     {
       id: 'seo',
       title: 'Search Engine Optimization',
-      description: 'Search Engine Optimization (SEO) by the Odd Wave Wave, Increase your Google ranking and drive organic traffic to your website.',
+      description: 'Increase your Google ranking and drive organic traffic to your website with the latest SEO practices visit theoddwave.co.nz',
       landingSummary: 'Drive organic traffic to your website with SEO',
       header: 'Drive organic traffic to your website with SEO',
       backgroundImage: { color1: 'rgba(84, 200, 232, 1)', color2: 'rgba(84, 200, 232, 1)', url: 'seo.jpg', height: 'auto' },
       headerStyle: { bgStyle: 'text-secondary text-center' },
-      subheader: 'Increase your ranking cost effectively',
+      subheader: 'Drive organic traffic to your website with the latest SEO practices',
       subheaderStyle: { color: 'text-primary', buttonVariant: 'info' },
       // 'We offer Website Design and Management, Progressive Web Applications, Animations, Content Writing and Revising, Search Engine Optimization, Digital Marketing and Pay per Click (Google Ads, Bing) as our primary services.',
       // "We will help you get to know your audience and create brand loyalty, likeness and trust.
       content: [
         // Sample { text: 'content', inlineImage: 'imageName.png' , bgImage: 'imageName.png', dark: true/false },
         // Sample banner { text: '<p><br/><p/><p><br/><p/><p><br/><p/>', bgImage: 'seo.jpg', dark: false },
-        { inlineImage: 'seoinline.jpg', inlineImageText: 'Revise content and optimise your website for search engines to index your content efficiently', inlineImageStyle: 'inlineImage100', text: 'An essential part of a digital marketing strategy is SEO (Search engine optimization) . SEO helps drive customers to your business via online platforms. SEO assists in making the website rank higher in the SERP (search engine result page) so that your business website is found by customers searching for your product and services online.<br/><br/> SEO allows a great deal of free advertising. Proper optimization makes a website rank on the first page of SERP. The common belief is that people generally check the first two pages of search engine results. Approximately 94% of online users use search engines to find products and services.' },
-        { text: 'Keyword-rich page content makes a substantial difference in your Google rankings and search engine results. Optimized content increases organic traffic to your website resulting in lead generation, increased sales, and improve ROI.' },
-        { inlineImage: 'onpageseo.png', inlineImageRight: true, inlineImageText: 'Rank as high as possible using vanilla standards for search engine optimization', inlineImageStyle: 'inlineImage50', text: 'Technical SEO and On-Page SEO are two examples of search engine optimization practices. Technical SEO determines the quality of a website based on factors like speed and and the website has been developed. Optimizing the technical aspects of a website enables search engines to crawl and index the site correctly, which is beneficial to obtain a higher search engine rank in Google. Page load speed is another crucial aspect to consider to avoid high bounce rates and therefore improve your SEO ranking.' },
-        { text: 'We have various SEO packages to choose from with secure monthly payments and no fixed contract, and you can cancel anytime.' }
+        {
+          inlineImage: 'seoinline.jpg',
+          inlineImageText: 'Be found by more New Zealand customers searching services you offer.The Odd Wave will get your business on the first page of Google by increasing your website visibility on search engines. ',
+          inlineImageStyle: 'inlineImage100',
+          text: 'Be found by more New Zealand customers searching services you offer.The Odd Wave will get your business on the first page of Google by increasing your website visibility on search engines. <br/><br/>If you want long term, increased visibility in the organic search results, you\'ve come to the right place. We can cost-effectively increase your ranking and drive organic traffic to your site. If your New Zealand business isn\'t on page one, you might as well not exist. '
+        },
+        {
+          text: 'We make it easy for your customers to find you and outrank your competition.We target the right searches that will convert into leads and more revenue for your business. SEO leads have a 14.6% close rate compared to outbound leads which have a 1.4% close rate. <br/><br/>Want to be found by more New Zealand customers? Get in touch to find out how we can help.<br/><br/>Everything we do is with a custom strategy for your business to help you achieve your Auckland business goals delivering the best possible result. We report on the things that really matter to your business like leads and sales. You can quickly see how the SEO is performing and the return you are generating on every dollar invested. '
+        },
+        {
+          inlineImage: 'onpageseo.png',
+          inlineImageRight: true,
+          inlineImageText: 'Everything we do is with a custom strategy for your business to help you achieve your Auckland business goals delivering the best possible result. We report on the things that really matter to your business like leads and sales. You can quickly see how the SEO is performing and the return you are generating on every dollar invested. ',
+          inlineImageStyle: 'inlineImage50',
+          text: 'Search Engine Optimization is an essential part of a digital marketing strategy . SEO  assists in driving customers to your small business via online platforms.SEO assists in making the website rank higher in the SERP (search engine result page) so that your business website is found by customers searching for your product and services online. Advertising your business is of utmost importance. When any company goes online, pay per click advertising (PPC) works best to generate a considerable amount of web traffic. SEO allows a great deal of free advertising. '
+        },
+        {
+          text: 'Proper optimization makes a website rank on the first page of SERP. The common belief is that people generally check the first two pages of search engine results. Approximately 74% of online users use search engines to find products and services. Keyword research and the proper use of keywords (including avoiding keyword stuffing) directly influence the complexity and readability of the content. Keyword-rich page content makes a substantial difference in your Google rankings and search engine results. '
+        },
+        {
+          inlineImage: 'inline2.jpg',
+          inlineImageRight: true,
+          inlineImageText: 'Advertising your business is of utmost importance. When any company goes online, pay per click advertising (PPC) works best to generate a considerable amount of web traffic. SEO allows a great deal of free advertising. ',
+          inlineImageStyle: 'inlineImage50',
+          text: 'Optimized content increases organic traffic to your website resulting in lead generation, increased sales, and improve ROI.Some search engine optimization practices are Technical SEO and On-Page SEO. Technical SEO determines the quality of a website based on factors like speed and code. Optimizing the technical aspects of the website enables search engines to crawl and index the site, which is beneficial to obtain a higher search engine rank in Google.Some steps to take in the direction of technical search engine optimization include fixing broken links. , removing duplicate pages, testing, and improving website speed. also, ensuring the website is mobile-friendly.'
+        },
+        {
+          text: 'Get a serious  advantage over your competitors and be found by more of the right customer. Contact The Odd Wave team for a free quotation.<br/><br/>We have various SEO packages to choose from with secure monthly payments and no fixed contract, and you can cancel anytime. Monthly SEO packages starting from $599 + GST. '
+        }
       ],
       price: { value: 600, unit: 'month' },
       marketing: {

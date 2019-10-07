@@ -10,9 +10,9 @@
 export const state = () => ({
   all: [
     {
-      id: 'seo',
+      id: 'seo-auckland',
       title: 'Search Engine Optimization',
-      description: 'Increase your Google ranking and drive organic traffic to your website with the latest SEO practices visit theoddwave.co.nz',
+      description: 'Increase your Google ranking and drive organic traffic to your website with the latest SEO practices',
       landingSummary: 'Drive organic traffic to your website with SEO',
       header: 'Drive organic traffic to your website with SEO',
       backgroundImage: { color1: 'rgba(84, 200, 232, 1)', color2: 'rgba(84, 200, 232, 1)', url: 'seo.jpg', height: 'auto' },
@@ -88,7 +88,7 @@ export const state = () => ({
       keywords: ['seo', 'search engine optimization', 'search', 'serp', 'search engine ranking']
     },
     {
-      id: 'ppc',
+      id: 'ppc-auckland',
       title: 'Pay per Click Advertising',
       description: 'Boost your sales with search advertising using Google Ads and Bing Ads, contact the Odd Wave online advertising team to get you started.',
       landingSummary: 'Boost your sales with search advertising using Google Ads and Bing Ads',
@@ -162,7 +162,7 @@ export const state = () => ({
       keywords: ['pay per click', 'google ads', 'bing ads', 'microsoft advertising', 'advertising', 'workshops']
     },
     {
-      id: 'webdesign',
+      id: 'pwa-website-design-auckland',
       title: 'Website Design & PWA Development',
       description: 'The Odd Wave’s responsive website design and progressive web application development makes it easy to distribute relevant content anywhere and quickly with an awesome look. Mobie first development at it\'s best',
       landingSummary: 'Responsive mobile website design and progressive web application development',
@@ -251,7 +251,7 @@ export const state = () => ({
       keywords: ['website', 'design', 'development', 'html', 'css', 'java', 'javascript', 'VanillaJS', 'data', 'engineering', 'mentoring', 'workshops']
     },
     {
-      id: 'photography',
+      id: 'photography-auckland',
       title: 'Creative Digital Photography',
       description: 'Show off your products and services with captivating digital photography services by The Odd Wave.',
       landingSummary: 'Show off your products and services with captivating digital photography',

@@ -113,8 +113,6 @@ $spacers: map-merge(
   $spacers
 );
 
-
-
 $enable-rounded: true;
 $enable-shadows: true;
 $enable-gradients: true;
@@ -188,14 +186,19 @@ $calc_h6: calc(1.275rem + 0.3vw);
 
 html {
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
-  overflow-x: hidden;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   max-width: $max_width;
   padding: 0rem;
   margin: 0;
@@ -429,7 +432,7 @@ a:hover {
   font-weight: 300;
   line-height: 1.5;
   padding: 5;
-  width:100%;
+  width: 100%;
 }
 
 .imageComponentImage {
@@ -565,6 +568,16 @@ a:hover {
   -webkit-transition: 0.1s;
   -moz-transition: 0.1s;
 }
+
+.footer h4 a {
+  color: rgba(255, 255, 255, 0.8);
+  padding: unset;
+}
+.footer h4 a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
 .social ul li {
   display: inline-block;
   padding-right: 5px !important;

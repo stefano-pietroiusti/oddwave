@@ -4,6 +4,16 @@
 
     <HeaderComponent :pheader="header" :psubheader="subheader" :psubtitle="subtitle" />
 
+    <ServicesComponent
+      v-for="(item, index) in services"
+      :key="item.id"
+      :item="item"
+      :index="index"
+      :ptext="item.landing"
+      :pimage="{color: item.backgroundImage.color1, url: item.backgroundImage.url}"
+      :pid="item.id"
+    />
+
     <TextImageComponent
       :pcontent="{ text: content[0], inlineImage: 'creative.png', inlineImageText: 'Developing cost-effective and impactful websites and marketing strategies'}"
       :pstyle="{ bgStyle: 'w-100 text-primary text-left px-5 pt-3', inlineImageStyle: 'inlineImage75'}"
@@ -28,14 +38,14 @@
       :pcontent="{ text: content[4] }"
       :pstyle="{ bgStyle: 'w-100 text-primary text-left px-5 pt-3'}"
     />
+
     <TextImageComponent
       :pcontent="{ text: content[5] }"
       :pstyle="{ bgStyle: 'w-100 text-primary text-left px-5 pt-3'}"
     />
 
     <ButtonComponent btext="Get started" blink="/contact/" />
-
-    <PartnersComponent />
+    <!-- <PartnersComponent /> -->
   </b-container>
 </template>
 
@@ -44,7 +54,8 @@ import AnimeBannerWordsComponent from '@/components/AnimeBannerWordsComponent'
 import HeaderComponent from '@/components/HeaderComponent'
 import ButtonComponent from '@/components/ButtonComponent'
 import TextImageComponent from '@/components/TextImageComponent'
-import PartnersComponent from '@/components/PartnersComponent'
+// import PartnersComponent from '@/components/PartnersComponent'
+import ServicesComponent from '@/components/ServicesComponent'
 
 export default {
   components: {
@@ -52,7 +63,8 @@ export default {
     HeaderComponent,
     ButtonComponent,
     TextImageComponent,
-    PartnersComponent
+    // PartnersComponent,
+    ServicesComponent
   },
   head () {
     let content = `${process.env.baseUrl}${this.$route.path}`
@@ -103,6 +115,11 @@ export default {
         "We're here to help you save money while reaching a more significant customer base than traditional methods."
       ],
       keywords: 'Web Design, PWA, Web Apps Development, SEO, data engineering, SEO workshops'
+    }
+  },
+  computed: {
+    services () {
+      return this.$store.state.services.all
     }
   }
 }

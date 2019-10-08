@@ -6,9 +6,7 @@
       :pheader="service.subheader"
       :pbgimage="service.backgroundImage"
     />
-    <div class="p-5">
-      <ButtonComponent btext="Get started" blink="/contact/" :pstyle="service.subheaderStyle" />
-    </div>
+    <ButtonComponent btext="Get started" blink="/contact/" :pstyle="service.subheaderStyle" />
 
     <span v-if="service.slides" id="carousel">
       <CarouselComponent :carousel-id="service.id" :pslides="service.slides" />
@@ -26,9 +24,7 @@
       :pstyle="service.subheaderStyle"
     />
 
-    <div class="pb-5">
-      <ButtonComponent btext="Get started" blink="/contact/" :pstyle="service.subheaderStyle" />
-    </div>
+    <ButtonComponent btext="Get started" blink="/contact/" :pstyle="service.subheaderStyle" />
     <!--  <D3Cloud :pwordcloud="service.cloud" />-->
   </div>
 </template>

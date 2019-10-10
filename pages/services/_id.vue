@@ -8,7 +8,7 @@
     />
 
     <span v-if="service.slides" id="carousel">
-      <CarouselComponent :carousel-id="service.id" :pslides="service.slides" />
+      <CarouselComponent :carousel-id="carouselId" :pslides="service.slides" />
     </span>
 
     <TextImageComponent
@@ -45,7 +45,7 @@ export default {
   },
   head () {
     let content = `${process.env.baseUrl}${this.$route.path}`
-    content = (content.slice(-1) !== '/') ? content + '/' : content
+    content = content.slice(-1) !== '/' ? content + '/' : content
     return {
       title: this.service.title,
       meta: [
@@ -89,6 +89,9 @@ export default {
         service => service.id !== this.id
       )
       return related
+    },
+    carouselId () {
+      return `${this.id}-carousel`
     }
   }
 }

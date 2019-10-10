@@ -1,6 +1,6 @@
 <template>
   <nuxt-link :to="url" :style="gradient" class="text-secondary featurelink">
-    <b-container id="feature" fluid class="feature p-0 m-0" :style="gradient">
+    <b-container fluid class="feature p-0 m-0" :style="gradient">
       <b-row class="align-items-center">
         <b-col class="w-100 h-100 m-0 p-0" lg="6" md="12" sm="12">
           <img

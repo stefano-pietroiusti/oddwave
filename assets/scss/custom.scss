@@ -21,6 +21,7 @@ $pink: #db3069;
 $red: #9b1c31;
 $orange: #fd7e14;
 $yellow: #f5d547;
+$webyellow: #ffff00;
 $green: #28a745;
 $teal: #20c997;
 $cyan: #17a2b8;
@@ -63,7 +64,8 @@ $theme-colors: map-merge(
     "rwcteal": $rwcteal,
     "rwcred": $rwcred,
     "rwcyellow": $rwcyellow,
-    "rwclime": $rwclime
+    "rwclime": $rwclime,
+    "webyellow": $webyellow
   ),
   $theme-colors
 );
@@ -491,15 +493,26 @@ a:hover {
 }
 
 .fa-contact {
+  color: var(--primary);
+  font-size: 1.2em;
+  line-height: 2em;
+  text-decoration: none;
+}
+
+.fa-contact:hover {
+  color: var(--primary);
+}
+
+fa-contact-dark {  
+  color: var(--secondary);
   font-size: 1.2em;
   line-height: 2em;
   text-decoration: none;
   opacity: 1;
 }
 
-.fa-contact:hover {
-  color: var(--info);
-  opacity: 1;
+fa-contact-dark:hover {
+  color: var(--secondary);
 }
 
 /* FOOTER */
@@ -533,6 +546,14 @@ a:hover {
   font-weight: bold;
 }
 
+.footer a {
+  color: var(--secondary);
+}
+
+.footer a:hover {
+  color: var(--secondary);
+}
+
 .footer h6 {
   font-family: inherit;
   font-size: 0.4em;
@@ -559,6 +580,7 @@ a:hover {
 .footer ul a {
   padding: unset;
 }
+
 .footer ul a:hover {
   text-decoration: none;
 }

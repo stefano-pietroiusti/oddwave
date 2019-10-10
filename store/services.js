@@ -311,18 +311,6 @@ export const state = () => ({
           imageText: 'Natural beauty in every detail'
         },
         {
-          image: 'kitten.jpg',
-          imageText: 'Natural beauty in every detail'
-        },
-        {
-          image: 'food.jpg',
-          imageText: 'Delicious food in every detail'
-        },
-        {
-          image: 'soupbowl.jpg',
-          imageText: 'Delicious food in every detail'
-        },
-        {
           image: 'silhoette.jpg',
           imageText: 'Creative photography'
         }

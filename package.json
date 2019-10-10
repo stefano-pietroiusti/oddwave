@@ -2,7 +2,7 @@
   "name": "oddwave",
   "version": "1.0.0",
   "description": "My sweet Nuxt.js project",
-  "author": "Stefano Pietroiusti",
+  "author": "Stefano Pietroiusti - https://www.linkedin.com/in/scpietro/",
   "private": true,
   "scripts": {
     "dev": "cross-env SITE_KEY= nuxt",

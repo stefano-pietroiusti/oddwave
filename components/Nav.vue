@@ -15,17 +15,18 @@
           </b-navbar-brand>
           <b-navbar-toggle target="nav-collapse" />
           <b-collapse id="nav-collapse" is-nav>
-            <b-navbar-nav>
+            <b-navbar-nav role="navigation">
               <b-nav-item to="/">
                 Home
               </b-nav-item>
               <b-nav-item-dropdown text="Services" toggle-class="text-decoration-none">
                 <b-dropdown-item
                   v-for="item in services"
+                  :id="item.id"
                   :key="item.id"
                   :to="'/services/' + item.id + '/'"
                 >
-                  {{ item.title }}
+                  {{ item.linkTitle }}
                 </b-dropdown-item>
               </b-nav-item-dropdown>
               <b-nav-item to="/contact/">
@@ -33,6 +34,7 @@
               </b-nav-item>
             </b-navbar-nav>
           </b-collapse>
+          </b-navbar-brand>
         </b-navbar>
       </b-col>
     </b-row>
@@ -40,7 +42,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapState } from 'vuex'
 export default {
   components: {
   },
@@ -54,8 +56,8 @@ export default {
     }
   },
   computed: {
-    ...mapGetters({
-      services: 'services/links'
+    ...mapState({
+      services: state => state.services.all
     })
   }
 }

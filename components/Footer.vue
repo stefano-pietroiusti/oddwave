@@ -5,30 +5,38 @@
       <b-col md="6" lg="4" xl="4" class="pl-3 pt-3">
         <h2>{{ contactInfo.name }}</h2>
         <ul class="pl-2">
-          <nuxt-link v-for="item in standardNav" :key="item.value" :to="item.value">
-            <li>{{ item.text }}</li>
-          </nuxt-link>
+          <li v-for="item in standardNav" :key="item.value">
+            <nuxt-link :to="item.value" class="a-dark">
+              {{ item.text }}
+            </nuxt-link>
+          </li>
         </ul>
       </b-col>
       <b-col md="6" lg="4" xl="4" class="pl-3 pt-3">
         <h2>Services</h2>
         <ul class="pl-2">
-          <nuxt-link v-for="item in services" :key="item.id" :to="'/services/' + item.id + '/'">
-            <li>{{ item.title }}</li>
-          </nuxt-link>
+          <!-- <nuxt-link v-for="item in services" :key="item.id" :to="'/services/' + item.id + '/'">
+            <li>{{ item.linkTitle }}</li>
+          </nuxt-link>-->
+          <li v-for="item in services" :key="item.id">
+            <nuxt-link :to="'/services/' + item.id + '/'">
+              {{ item.linkTitle }}
+            </nuxt-link>
+          </li>
         </ul>
       </b-col>
       <b-col md="6" lg="4" xl="4" class="pl-3 pt-3">
         <h2>Work with us</h2>
         <h4 v-for="(item,i) in contactInfo.phone" :key="i" class="pl-2">
-          <a :href="`tel:${item}`">
-            <i class="fa fa-phone fa-contact">&nbsp;</i>
+          <a :href="`tel:${item}`" :title="item">
+            <i class="fa fa-phone fa-contact-dark">&nbsp;</i>
             {{ item }}
           </a>
         </h4>
         <h4 class="pl-2">
-          <a :href="`mailto:${contactInfo.email}`">
-            <i class="fa fa-envelope fa-contact">&nbsp;</i>&nbsp;Email us
+          <a :href="`mailto:${contactInfo.email}`" :title="contactInfo.email">
+            <!-- <i class="fa fa-envelope fa-contact"> Email us</i> -->
+            <i class="fa fa-envelope fa-contact-dark">&nbsp;</i>&nbsp;Email us
           </a>
         </h4>
       </b-col>
@@ -58,7 +66,7 @@
   </b-container>
 </template>
 <script>
-import { mapGetters } from 'vuex'
+import { mapState } from 'vuex'
 export default {
   data () {
     return {
@@ -69,10 +77,14 @@ export default {
     }
   },
   computed: {
-    ...mapGetters({
-      services: 'services/links',
-      contactInfo: 'client/contactInfo'
+    ...mapState({
+      services: state => state.services.all,
+      contactInfo: state => state.client.client
     })
+    // ...mapGetters({
+    //   services: 'services/links',
+    //   contactInfo: 'client/contactInfo'
+    // })
   }
 }
 </script>

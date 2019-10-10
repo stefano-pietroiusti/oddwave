@@ -59,6 +59,7 @@ export default {
       { hid: 'og:site_name', property: 'og:site_name', content: 'The Odd Wave Limited' },
       { hid: 'og:image', property: 'og:image', content: `${baseUrl}/theoddwave.png` },
       { hid: 'og:url', property: 'og:url', content: baseUrl },
+      // { hid: 'fb:page_id', property: 'fb:page_id', content: '43929265776' },      
       {
         hid: 'og:description',
         name: 'og:description',

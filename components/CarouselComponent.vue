@@ -1,5 +1,5 @@
 <template>
-  <b-container fluid class="w-75">
+  <b-container fluid class="w-100">
     <b-carousel
       :id="carouselId"
       v-model="slide"
@@ -49,11 +49,11 @@ export default {
     },
     imgwidth: {
       type: String,
-      default: '512'
+      default: '800'
     },
     imgheight: {
       type: String,
-      default: '240'
+      default: '450'
     },
     pslides: {
       type: Array,

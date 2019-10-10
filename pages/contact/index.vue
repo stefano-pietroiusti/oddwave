@@ -72,7 +72,7 @@ export default {
   computed: {
     services () {
       return this.$store.state.services.all.map((item) => {
-        return { value: item.id, text: item.title, selected: true }
+        return { value: item.id, text: item.linkTitle, selected: true }
       })
     }
     // nodeEnv () {

@@ -7,21 +7,20 @@
   >
     <span id="anim1">
       <h2 class="anim1">
-        <span class="letters word-1">Online advertising</span>
-        <span class="letters word-2">Content management</span>
-        <span class="letters word-3">Website design</span>
+        <span class="letters word-1">Website management</span>
+        <span class="letters word-2">PWA web apps</span>
+        <span class="letters word-3">Data engineering</span>
         <span class="letters word-4">SEO</span>
         <span class="letters word-5">Photography</span>
-        <span class="letters word-6">Animation</span>
+        <span class="letters word-6">Film & Digital</span>
       </h2>
     </span>
     <span id="anim2">
-      <h2 class="anim2">Boost your sales</h2>
+      <h2 class="anim2">Boosting sales</h2>
     </span>
     <span id="anim3">
       <h3 class="anim3">
-        <span class="word">Grow</span>
-        <span class="word">your</span>
+        <span class="word">Growing</span>
         <span class="word">business</span>
       </h3>
     </span>
@@ -137,6 +136,34 @@ export default {
         easing: 'easeInExpo',
         delay: anim1.delay
       })
+      .add({
+        targets: '.anim1 .word-5',
+        opacity: anim1.opacityIn,
+        scale: anim1.scaleIn,
+        duration: anim1.durationIn
+      })
+      .add({
+        targets: '.anim1 .word-5',
+        opacity: 0,
+        scale: anim1.scaleOut,
+        duration: anim1.durationOut,
+        easing: 'easeInExpo',
+        delay: anim1.delay
+      })
+        .add({
+        targets: '.anim1 .word-6',
+        opacity: anim1.opacityIn,
+        scale: anim1.scaleIn,
+        duration: anim1.durationIn
+      })
+      .add({
+        targets: '.anim1 .word-6',
+        opacity: 0,
+        scale: anim1.scaleOut,
+        duration: anim1.durationOut,
+        easing: 'easeInExpo',
+        delay: anim1.delay
+      })      
   },
   props: {
     pbgimage: {
@@ -158,8 +185,8 @@ export default {
       }
       const fileName = this.pbgimage.url
       return {
-        '1': require(`~/assets/imgs/banner/${fileName}?size=640`),
-        '2': require(`~/assets/imgs/banner/${fileName}?size=1080`)
+        '1': require(`~/assets/imgs/banner/${fileName}?size=1024`),
+        '2': require(`~/assets/imgs/banner/${fileName}?size=1024`)
       }
     },
     gradient() {

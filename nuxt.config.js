@@ -44,17 +44,20 @@ export default {
     htmlAttrs: {
       lang: 'en'
     },
-    title: process.env.npm_package_name || 'The Odd Wave of digital marketing & website design in Auckland, New Zealand',
+    title: process.env.npm_package_name || 'The Odd Wave of digital marketing, website design and PWA dev from Auckland, New Zealand',
     meta: [
       { charset: 'utf-8' },
       { hid: 'viewport', name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
       {'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
       {'http-equiv':'content-type', content:'text/html; charset=UTF-8'},
+      {'http-equiv':'Cache-Control', content:'no-cache, no-store, must-revalidate'},
+      {'http-equiv':'Pragma', content:'no-cache'},
+      {'http-equiv':'Expires', content:'0'},     
       { hid: 'robots', name: 'robots', content: 'index, follow' },
-      { hid: 'author', name: 'author', content: 'The Odd Wave Limited' },
+      { hid: 'author', name: 'author', content: author },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:site_name', property: 'og:site_name', content: 'The Odd Wave Limited' },
-      { hid: 'og:image', property: 'og:image', content: `${baseUrl}/theoddwave.jpg` },
+      { hid: 'og:image', property: 'og:image', content: `${baseUrl}/theoddwave.png` },
       { hid: 'og:url', property: 'og:url', content: baseUrl },
       {
         hid: 'og:description',
@@ -105,15 +108,15 @@ export default {
     // directives: ['VBModal', 'VBPopover', 'VBTooltip', 'VBScrollspy']
   },
   responsiveLoader: {
-    name: 'img/oddwave-[hash:7]-[width].[ext]',
-    quality: 100,
-    min: 320,
-    max: 1080,
-    steps: 8,
-    // sizes: [350, 500, 800, 1200, 1500, 1800], 
+    name: 'img/theoddwave-[hash:7]-[width].[ext]',
+    quality: 70,
+    // min: 320,
+    // max: 1440,
+    // steps: 6,
+    sizes: [320, 375, 425, 768, 1024, 1440], 
     // format: 'png',
     adapter: require('responsive-loader/sharp'),
-    placeholder: false,
+    placeholder: true,
 
   },
   robots: {

@@ -1,20 +1,12 @@
-// const colors = {
-//   rwcblue: 'rgba(84, 200, 232, 1)',
-//   rwcpurple: 'rgba(153, 61, 187, 1)',
-//   rwcteal: 'rgba(46, 217, 195, 1)',
-//   rwcred: 'rgba(244, 67, 108, 1)',
-//   rwcyellow: 'rgba(245, 168, 0, 1)',
-//   rwclime: 'rgba(200, 232, 84, 1)'
-// }
-
 export const state = () => ({
   all: [
     {
       id: 'seo-auckland',
-      title: 'Search Engine Optimization',
-      description: 'Increase your Google ranking and drive organic traffic to your website with the latest SEO practices',
-      landing: { header: 'Search Engine Optimization (SEO)', content: 'Drive organic traffic to your website with SEO' },
-      header: 'Drive organic traffic to your website with SEO',
+      title: 'SEO Auckland New Zealand - Search Engine Optimisation',
+      linkTitle: 'Search Engine Optimisation - SEO',
+      description: 'High quality Search Engine Optimisation to raise your Google ranking and drive organic traffic to your website, resulting in increased sales and ROI. ',
+      landing: { header: 'Search Engine Optimization (SEO)', content: 'Be found by more New Zealand customers searching for products and services you offer. The Odd Wave will get your business ranking on Google by increasing your website visibility on search engines through high quality SEO. See how we can help you' },
+      header: 'Search Engine Optimisation (SEO)',
       backgroundImage: { color1: 'rgba(84, 200, 232, 1)', color2: 'rgba(84, 200, 232, 1)', url: 'seo.jpg', height: 'auto' },
       headerStyle: { bgStyle: 'text-secondary text-center' },
       subheader: 'Drive organic traffic to your website with the latest SEO practices',
@@ -44,10 +36,10 @@ export const state = () => ({
           text: 'Proper optimization makes a website rank on the first page of SERP. The common belief is that people generally check the first two pages of search engine results. Approximately 74% of online users use search engines to find products and services. Keyword research and the proper use of keywords (including avoiding keyword stuffing) directly influence the complexity and readability of the content. Keyword-rich page content makes a substantial difference in your Google rankings and search engine results. '
         },
         {
-          inlineImage: 'seo.jpg',
-          inlineImageRight: true,
-          inlineImageText: 'Advertising your business is of utmost importance. When any company goes online, pay per click advertising (PPC) works best to generate a considerable amount of web traffic. SEO allows a great deal of free advertising. ',
-          inlineImageStyle: 'inlineImage75',
+          // inlineImage: 'seo.jpg',
+          // inlineImageRight: true,
+          // inlineImageText: 'Advertising your business is of utmost importance. When any company goes online, pay per click advertising (PPC) works best to generate a considerable amount of web traffic. SEO allows a great deal of free advertising. ',
+          // inlineImageStyle: 'inlineImage75',
           text: 'Optimized content increases organic traffic to your website resulting in lead generation, increased sales, and improve ROI.Some search engine optimization practices are Technical SEO and On-Page SEO. Technical SEO determines the quality of a website based on factors like speed and code. Optimizing the technical aspects of the website enables search engines to crawl and index the site, which is beneficial to obtain a higher search engine rank in Google.Some steps to take in the direction of technical search engine optimization include fixing broken links. , removing duplicate pages, testing, and improving website speed. also, ensuring the website is mobile-friendly.'
         },
         {
@@ -89,9 +81,10 @@ export const state = () => ({
     },
     {
       id: 'ppc-auckland',
-      title: 'Pay per Click Advertising',
-      description: 'Boost your sales with search advertising using Google Ads and Bing Ads, contact the Odd Wave online advertising team to get you started.',
-      landing: { header: 'Pay per Click Advertising (PPC)', content: 'Boost your sales with search advertising using Google Ads and Bing Ads' },
+      title: 'Google AdWords Management and PPC Advertising Services',
+      linkTitle: 'Pay per Click Advertising - PPC',
+      description: 'The Odd Wave offers AdWords management services to businesses all over NZ. Google Ads and pay-per-click advertising provide instant results.',
+      landing: { header: 'Pay per Click Advertising (PPC)', content: 'The Odd Wave provides professionally managed Pay per Click advertising services for small to medium-sized businesses throughout NZ. Stay ahead of the competition with Google AdWords pay-per-click, it is great for getting instant traffic.' },
       header: 'Pay per Click  Advertising',
       backgroundImage: { color1: 'rgba(153, 61, 187, 1)', color2: 'rgba(153, 61, 187, 1)', url: 'ppc.jpg', height: 'auto' },
       headerStyle: { bgStyle: 'text-secondary text-center' },
@@ -163,13 +156,14 @@ export const state = () => ({
     },
     {
       id: 'pwa-website-design-auckland',
-      title: 'Website Design & PWA Development',
-      description: 'The Odd Wave’s responsive website design and progressive web application development makes it easy to distribute relevant content anywhere and quickly with an awesome look. Mobie first development at it\'s best',
-      landing: { header: 'Website Design & Progressive Web App Development (PWA)', content: 'Responsive website design and progressive web application development' },
-      header: 'Website design and progressive website development, New Zealand',
+      title: 'Website Design & PWA Progressive Web Applications Dev',
+      linkTitle: 'Website Design & PWA web apps',
+      description: "All about our custom web design and progressive web applications with vanilla JS targeting web and mobile in one go. Mobile first development at it's best.",
+      landing: { header: 'Website Design & Progressive Web App Development (PWA)', content: 'Here at The Odd Wave, we design and develop robust, cutting edge websites using the latest web development frameworks. The worldwide web is vast, with billions of websites worldwide competing for consideration. With our extensive industry experience, we can help you with professional web design and progressive web application development.' },
+      header: 'Website design and progressive web apps development',
       backgroundImage: { color1: 'rgba(46, 217, 195, 1)', color2: 'rgba(46, 217, 195, 1)', url: 'webdesign.jpg', height: 'auto' },
       headerStyle: { bgStyle: 'text-secondary text-center' },
-      subheader: 'Design, manage and distribute your content anywhere, starting with mobile and web',
+      subheader: 'Designing and developing for mobile and web at once with no duplication',
       subheaderStyle: { color: 'text-primary', buttonVariant: 'info' },
       content:
         [
@@ -183,10 +177,10 @@ export const state = () => ({
           { text: 'We can also help you with a refresh and redesign if your website is looking a little dated. In so doing, you will move onto the latest tech and be where the world is going in terms of the web and data.  We can review your existing web design and provide recommendations on ways to improve its visual look and feel and performance. All our websites are search engine optimized, ensuring our sites are visible to search engines once published.' },
           { text: 'If you are looking to launch an online store , the Odd Wave can design and develop an eCommerce website fully integrated into a payment gateway. With a the range of other services we offer , we really do give you a turnkey business solution.' },
           {
-            inlineImage: 'pwa3.png',
-            inlineImageRight: true,
-            inlineImageText: 'Web application designed to provide the best user experience on mobile devices',
-            inlineImageStyle: 'inlineImage100',
+            // inlineImage: 'pwa3.png',
+            // inlineImageRight: true,
+            // inlineImageText: 'Web application designed to provide the best user experience on mobile devices',
+            // inlineImageStyle: 'inlineImage100',
             header: 'Website design with a clear WOW factor',
             text: 'Website features and functions such as page and graphics design, site navigation, shopping cart, checkout and social media need to be fast, crisp, clear, simple and consistent throughout. Your whole online web and data package should be fun and enjoyable to use, from anywhere and anything.<br /><br />Great website design starts with a clear purpose in mind. Web pages need to look great and visually appealing.Good website design and content must be original and relevant to target audiences. <br /> <br />We will help you be a first- class version of yourself, not of others.Your website will also be fully responsive and will look great on any digital device.'
           },
@@ -197,26 +191,33 @@ export const state = () => ({
             // inlineImageStyle: 'inlineImage100',
             header: 'Website services fit for purpose',
             text: 'We don’t fancy complex processes, overkill and clunk that usually arises from templates based design and development. We are passionate about technologies that are proven, modern and future-proof.<br />We keep things quick, simple, easy to support and integrate with.<br />Our platform and processes empower us to design and manage your content and distribute it anywhere as required, starting with mobile devices and the web.'
-          },
-          'All our development is based on Vanilla JS with minimal complexity and streamlined branching, continuous integration, and continuous deployment.',
-          {
-            inlineImage: 'awesome-development.png',
-            inlineImageRight: true,
-            inlineImageText: 'Our flexible web platform provides a variety of ecommerce and digital signage possibilites',
-            inlineImageStyle: 'inlineImage50',
-            header: 'More about the Odd Wave',
-            text: 'The Odd Wave team are a small, tightly knit team that take pride in what they do to help others succeed.  We have 20 years experience behind us in the world of Web and Data. We are good at building websites and promoting businesses with search engine optimization, google adwords, social media and digital marketing.  We believe we have what it takes to achieve your personal and business goals. We are based in Auckland but are able to serve traders, shops, small business and medium enterprises across New Zealand.'
-          },
-          {
-            text: 'We will help you manage your online initiatives by covering everything it takes to do so:',
-            list: [
-              'Suitable domain name registration',
-              'Choosing a reliable hosts in terms Speed, Security, Location and Affordability',
-              'Structuring and optimizing your content for search and social media',
-              'Managing your content in a way so that it can be used anywhere very easily',
-              'Designing according to your brand, features, products and services',
-              'Managing your online presence going forward so you can focus more on your business']
+          }, {
+            // inlineImage: 'pwa.jpg',
+            // inlineImageRight: true,
+            // inlineImageText: 'Our flexible web platform provides a variety of ecommerce and digital signage possibilites',
+            // inlineImageStyle: 'inlineImage100',
+            header: 'Vanilla and streamlined',
+            text: 'All our development is based on Vanilla JS with minimal complexity and streamlined branching, continuous integration, and continuous deployment.'
           }
+
+          // {
+          //   // inlineImage: 'awesome-development.png',
+          //   // inlineImageRight: true,
+          //   // inlineImageText: 'Our flexible web platform provides a variety of ecommerce and digital signage possibilites',
+          //   // inlineImageStyle: 'inlineImage50',
+          //   header: 'More about the Odd Wave',
+          //   text: 'The Odd Wave team are a small, tightly knit team that take pride in what they do to help others succeed.  We have 20 years experience behind us in the world of Web and Data. We are good at building websites and promoting businesses with search engine optimization, google adwords, social media and digital marketing.  We believe we have what it takes to achieve your personal and business goals. We are based in Auckland but are able to serve traders, shops, small business and medium enterprises across New Zealand.'
+          // },
+          // {
+          //   text: 'We will help you manage your online initiatives by covering everything it takes to do so:',
+          //   list: [
+          //     'Suitable domain name registration',
+          //     'Choosing a reliable hosts in terms Speed, Security, Location and Affordability',
+          //     'Structuring and optimizing your content for search and social media',
+          //     'Managing your content in a way so that it can be used anywhere very easily',
+          //     'Designing according to your brand, features, products and services',
+          //     'Managing your online presence going forward so you can focus more on your business']
+          // }
         ],
       price: { value: 2200, unit: 'package' },
       rate: 'hour',
@@ -252,10 +253,11 @@ export const state = () => ({
     },
     {
       id: 'photography-auckland',
-      title: 'Creative Digital Photography',
-      description: 'We can help with your still life photography, landscape photography, candid children photography and landscape photography needs. Enlighten your products and services with captivating digital photography services by The Odd Wave.',
-      landing: { header: 'Creative Digital Photography', content: 'Enhance your website visuals and compliment your branding Using creative digital photography techniques' },
-      header: 'Creative Digital Photography',
+      title: 'Creative Film and Digital Photography',
+      linkTitle: 'Creative Film & Digital Photography',
+      description: 'We can help with your still life photography, landscape photography, candid children photography and landscape photography needs. Enlighten your products, services, websites and digital signage with great photography by The Odd Wave.',
+      landing: { header: 'Creative Film & Digital Photography', content: 'Compliment your visuals for products, services, websites and digital signage with our creative film and digital photography.' },
+      header: 'Creative Photography',
       backgroundImage: { color1: 'rgba(244, 67, 108, 1)', color2: 'rgba(244, 67, 108, 1)', url: 'photography.jpg', height: 'auto' },
       headerStyle: { bgStyle: 'text-secondary text-center' },
       subheader: 'Attract potential customers with creative photography',
@@ -263,7 +265,6 @@ export const state = () => ({
       content:
         [
           {
-
             text: 'Visual communication has reached new heights with digital and social media marketing resulting in digital photography, becoming an essential part of product or service promotion. Digital photography is widely used in website design and is a great way to make a website more attractive and eye-catching.'
           },
           {
@@ -356,8 +357,29 @@ export const state = () => ({
   ]
 })
 
-// export const getters = {
-//   totalServices: (state) => {
-//     return state.all.length
-//   }
-// }
+export const getters = {
+  links: (state) => {
+    return state.all.map((item) => {
+      return {
+        id: item.id,
+        title: item.linkTitle
+      }
+    })
+  },
+  summaries: (state) => {
+    return state.all.map((item) => {
+      return {
+        id: item.id,
+        title: item.linkTitle,
+        landing: item.landing,
+        backgroundImage: item.backgroundImage
+      }
+    })
+  },
+  related: state => (id) => {
+    return state.all.filter(service => service.id !== id)
+  },
+  total: (state) => {
+    return state.all.length
+  }
+}

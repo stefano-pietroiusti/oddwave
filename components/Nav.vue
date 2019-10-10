@@ -21,14 +21,11 @@
               </b-nav-item>
               <b-nav-item-dropdown text="Services" toggle-class="text-decoration-none">
                 <b-dropdown-item
-                  v-for="service in services"
-                  :key="service.id"
-                  :to="'/services/' + service.id + '/'"
+                  v-for="item in services"
+                  :key="item.id"
+                  :to="'/services/' + item.id + '/'"
                 >
-                  {{ service.title }}
-                  <!-- <nuxt-link :to="'/services/' + service.id + '/'">
-                    {{ service.title }}
-                  </nuxt-link> -->
+                  {{ item.title }}
                 </b-dropdown-item>
               </b-nav-item-dropdown>
               <b-nav-item to="/contact/">
@@ -43,11 +40,9 @@
 </template>
 
 <script>
-// import Logo from '@/components/Logo'
-// import logo from 'logos/oddwave.png'
+import { mapGetters } from 'vuex'
 export default {
   components: {
-    // Logo
   },
   data () {
     return {
@@ -59,9 +54,9 @@ export default {
     }
   },
   computed: {
-    services () {
-      return this.$store.state.services.all
-    }
+    ...mapGetters({
+      services: 'services/links'
+    })
   }
 }
 </script>

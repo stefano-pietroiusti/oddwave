@@ -185,6 +185,8 @@ $calc_h6: calc(1.275rem + 0.3vw);
 // }
 
 html {
+  width: 100%;
+  overflow-x: hidden;
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
   background-attachment: fixed;
   background-position: center;
@@ -526,8 +528,7 @@ a:hover {
 .footer h4 {
   padding: unset;
   font-family: inherit;
-  font-size: 0.7em;
-  text-transform: lowercase;
+  font-size: 0.8em;
   letter-spacing: 0.25em;
   font-weight: bold;
 }
@@ -569,14 +570,14 @@ a:hover {
   -moz-transition: 0.1s;
 }
 
-.footer h4 a {
-  color: rgba(255, 255, 255, 0.8);
-  padding: unset;
-}
-.footer h4 a:hover {
-  color: #ffffff;
-  text-decoration: none;
-}
+// .footer h4 a {
+//   color: rgba(255, 255, 255, 0.8);
+//   padding: unset;
+// }
+// .footer h4 a:hover {
+//   color: #ffffff;
+//   text-decoration: none;
+// }
 
 .social ul li {
   display: inline-block;

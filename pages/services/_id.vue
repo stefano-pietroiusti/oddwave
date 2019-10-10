@@ -6,7 +6,6 @@
       :pheader="service.subheader"
       :pbgimage="service.backgroundImage"
     />
-    <ButtonComponent btext="Get started" blink="/contact/" :pstyle="service.subheaderStyle" />
 
     <span v-if="service.slides" id="carousel">
       <CarouselComponent :carousel-id="service.id" :pslides="service.slides" />
@@ -16,7 +15,7 @@
       v-for="(item,i) in service.content"
       :key="i"
       :pcontent="{header: item.header, text: item.text, list: item.list, bgImage: item.bgImage, inlineImage: item.inlineImage, inlineImageText: item.inlineImageText, inlineImageRight: item.inlineImageRight }"
-      :pstyle="(item.dark) ? { bgStyle: 'parralaxNormal w-100 text-secondary text-left px-5 pt-3', inlineImageStyle: item.inlineImageStyle} : { bgStyle: 'parralaxNormal w-100 text-primary text-left px-5 pt-3', inlineImageStyle: item.inlineImageStyle}"
+      :pstyle="(item.dark) ? { bgStyle: 'parralaxNormal w-100 text-secondary text-left  px-2 p-2', inlineImageStyle: item.inlineImageStyle} : { bgStyle: 'parralaxNormal w-100 text-primary text-left px-2 p-2', inlineImageStyle: item.inlineImageStyle}"
     />
 
     <HeaderComponent
@@ -36,7 +35,6 @@ import TextImageComponent from '@/components/TextImageComponent'
 import AnimeBannerWordsHeaderComponent from '@/components/AnimeBannerWordsHeaderComponent'
 import CarouselComponent from '@/components/CarouselComponent'
 
-const R = require('ramda')
 export default {
   components: {
     HeaderComponent,
@@ -54,7 +52,6 @@ export default {
         {
           hid: 'og:url',
           property: 'og:url',
-          // content: `${process.env.baseUrl}${this.$route.path}`
           content
         },
         {
@@ -83,7 +80,8 @@ export default {
       )
       service.enquire = 'Get in touch'
       // 'From $' + service.price.value + ' per ' + service.price.unit
-      service.isCarousel = !!R.prop('slides', service)
+      // service.isCarousel = !!R.prop('slides', service)
+      service.isCarousel = !!service.slides
       return service
     },
     relatedservices () {

@@ -123,14 +123,17 @@ $enable-responsive-font-sizes: true !important;
 $enable-validation-icons: true;
 // $font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
 // Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-$font-family-ubuntu: "Ubuntu", sans-serif;
+// $font-family-ubuntu: "Ubuntu", sans-serif;
 // $font-family-roboto: "Roboto", sans-serif;
-$font-family-varelaround: "Varela Round", sans-serif;
+// $font-family-varelaround: "Varela Round", sans-serif;
+$font-family-montserrat: "Montserrat", sans-serif;
+$font-family-lato: "Lato", sans-serif;
 $body-bg: $white;
 $body-color: $gunmetal;
-$font-family-base: $font-family-varelaround;
-$font-family-secondary: $font-family-ubuntu;
+$font-family-base: $font-family-lato;
+$font-family-secondary: $font-family-montserrat;
 $font-size-base: 0.8rem;
+
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "../../node_modules/bootstrap-vue/src/index.scss";
@@ -167,10 +170,6 @@ $max_width: 100%;
 $min_font: 18px;
 $max_font: 22px;
 $calc_font: calc(1vw + 1vh + 0.8vmin);
-// $calc_h1: calc(1vw + 1vh + 5vmin);
-// $calc_h2: calc(1vw + 1vh + 3.5vmin);
-// $calc_h3: calc(1vw + 1vh + 2vmin);
-// $calc_h4: calc(1vw + 1vh + 1.5vmin);
 $calc_h1: calc(1.375rem + 1.5vw);
 $calc_h2: calc(1.325rem + 0.9vw);
 $calc_h3: calc(1.3rem + 0.6vw);
@@ -179,12 +178,12 @@ $calc_h5: calc(1.275rem + 0.3vw);
 $calc_h6: calc(1.275rem + 0.3vw);
 
 // @font-face {
-//   font-family: "Open Sans Regular";
-//   font-weight: 400;
+//   font-family: 'Varela Round';
 //   font-style: normal;
-//   src: url("fonts/OpenSans-Regular-BasicLatin.woff2") format("woff2");
-//   font-display: swap;
+//   font-weight: 400;
+//   src: local('Varela Round Regular'), local('VarelaRound-Regular'), url(https://fonts.gstatic.com/s/varelaround/v12/w8gdH283Tvk__Lua32TysjIfp8uP.woff2) format('woff2');
 // }
+
 
 html {
   width: 100%;
@@ -203,14 +202,25 @@ html {
 }
 
 body {
+  font-family: $font-family-base;
   max-width: $max_width;
   padding: 0rem;
   margin: 0;
   font-size: 1.2rem;
   line-height: 2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 $mod_1: 1.2; // mobile
 $mod_2: 3; // desktop
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-secondary;
+  font-weight: 600;
+  line-height: 1.5;
+  color: inherit;
+}
+
 
 h1 {
   display: block;
@@ -242,6 +252,7 @@ h5 {
 h6 {
   font-size: $calc_h6;
 }
+
 .vh-50 {
   height: 50vh;
 }
@@ -436,7 +447,6 @@ a:hover {
   font-weight: 300;
   line-height: 1.5;
   padding: 5;
-  width: 100%;
 }
 
 .imageComponentImage {
@@ -520,6 +530,7 @@ fa-contact-dark:hover {
   height: 100%;
   width: 100%;
   bottom: 5em;
+  line-height: 2em;
 }
 
 .footer .col {
@@ -544,6 +555,7 @@ fa-contact-dark:hover {
   font-size: 0.8em;
   letter-spacing: 0.25em;
   font-weight: bold;
+  line-height: 3em;
 }
 
 .footer a {
@@ -592,14 +604,6 @@ fa-contact-dark:hover {
   -moz-transition: 0.1s;
 }
 
-// .footer h4 a {
-//   color: rgba(255, 255, 255, 0.8);
-//   padding: unset;
-// }
-// .footer h4 a:hover {
-//   color: #ffffff;
-//   text-decoration: none;
-// }
 
 .social ul li {
   display: inline-block;

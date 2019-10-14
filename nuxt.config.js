@@ -71,11 +71,13 @@ export default {
         content: 'The Odd Wave of Website Design and Digital marketing services based in Auckland, New Zealand'
       }
     ],
+    script: [
+      // { src: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', defer: true },
+    ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'author', href: `${author}` },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Nunito+Sans|Roboto|Varela Round|Ubuntu|Abril Fatface|Black+Han+Sans|Bowlby+One+SC|Syncopate|Abril+Fatface|Exo|Righteous&display=swap' },
-      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' }
+      // { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Varela Round|Ubuntu&display=swap' },
     ]
   },
   loading: { color: '#fff' },
@@ -100,11 +102,24 @@ export default {
     '@nuxtjs/dotenv',
     ['@nuxtjs/robots', { UserAgent: '*', Disallow: '' }],
     '@nuxtjs/sitemap',
-    '@nuxtjs/recaptcha'
+    '@nuxtjs/recaptcha',
+    'nuxt-webfontloader'
   ],
+  webfontloader: {
+    google: {
+      // families: ['Varela Round:400,700', 'Ubuntu:400,700']
+      families: ['Montserrat', 'Lato']
+
+    },
+    custom: {
+			families: ['FontAwesome'],
+		        urls: ['https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css']
+    },
+    timeout: 2000
+  },
   bootstrapVue: {
-    bootstrapCSS: false, // Or `css: false`
-    bootstrapVueCSS: false, // Or `bvCSS: false`,
+    bootstrapCSS: false,
+    bootstrapVueCSS: false,
     // components: ['BContainer', 'BRow', 'BCol', 'BFormInput', 'BButton', 'BTable', 'BModal', 'BNavBar', 'BNav'],
     // directives: ['VBModal', 'VBPopover', 'VBTooltip', 'VBScrollspy']
   },

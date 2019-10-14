@@ -172,8 +172,8 @@ export default {
         return {
           color1: 'rgba(85, 255, 0, 0.2)',
           color2: 'rgba(0, 255, 255, 0.5)',
-          url: '/imgs/seodigital.jpg',
-          height: 100
+          url: 'oddwave.jpg',
+          height: 50
         }
       }
     }
@@ -193,7 +193,8 @@ export default {
       const image1x = this.bannerImagePath['1']
       const image2x = this.bannerImagePath['2']
       return {
-        backgroundImage: `linear-gradient(45deg,  ${this.pbgimage.color1}, ${this.pbgimage.color2}), url(${image1x}), -webkit-image-set(url(${image1x}) 1x, url(${image2x}) 2x)`,
+        // backgroundImage: `linear-gradient(45deg,  ${this.pbgimage.color1}, ${this.pbgimage.color2}), url(${image1x}), -webkit-image-set(url(${image1x}) 1x, url(${image2x}) 2x)`,
+        backgroundImage: `linear-gradient(45deg,  ${this.pbgimage.color1}, ${this.pbgimage.color2})`,
         width: '100%',
         height: `${this.pbgimage.height}`,
         backgroundPosition: 'top left',

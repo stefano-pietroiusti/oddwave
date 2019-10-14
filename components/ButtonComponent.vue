@@ -1,5 +1,5 @@
 <template>
-  <b-container fluid class="text-center m-0 p-0">
+  <b-container fluid class="text-center m-0 p-5">
     <b-row>
       <b-button :variant="variant" :to="blink" class="buttonComponent">
         {{ btext }}

@@ -1,5 +1,5 @@
 <template>
-  <header class="text-center p-3 text-primary bg-secondary" :style="gradient">
+  <b-container fluid class="text-center p-3 text-primary bg-secondary" :style="gradient">
     <h1 v-if="pheader" class="p-2">
       {{ pheader }}
     </h1>
@@ -9,7 +9,7 @@
     <h3 v-if="psubtitle" class="p-2">
       {{ psubtitle }}
     </h3>
-  </header>
+  </b-container>
 </template>
 <script>
 /* eslint-disable */

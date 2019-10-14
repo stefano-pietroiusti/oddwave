@@ -1,7 +1,8 @@
 <template>
   <b-container fluid class="text-light text-left p-0">
-    <AnimeBannerWordsComponent :pbgimage="headerImage" />
+    <HeaderComponentLanding :pheader="subheader" />
 
+    <WavesComponent :header="true" />
     <HeaderComponent :pheader="header" :psubheader="subheader" :psubtitle="subtitle" />
     <TextImageComponent
       v-for="(item,i) in content"
@@ -10,6 +11,12 @@
       :pstyle="(item.dark) ? { bgStyle: 'parralaxNormal w-100 text-secondary text-left px-4 p-2', inlineImageStyle: item.inlineImageStyle} : { bgStyle: 'parralaxNormal w-100 text-primary text-left  px-4 p-2', inlineImageStyle: item.inlineImageStyle}"
     />
     <ButtonComponent btext="Get started" blink="/contact/" />
+    <PromoComponent
+      pheader="Get started"
+      ptext="Lorem ipsum dolor sit amet, eam ex probo tation tractatos. Ut vel hinc solet
+              tincidunt"
+    />
+
     <ServicesComponent
       v-for="(item, index) in summaries"
       :key="item.id"
@@ -22,26 +29,34 @@
 
     <ButtonComponent btext="Get started" blink="/contact/" />
     <!-- <PartnersComponent /> -->
+    <WavesComponent :footer="true" />
   </b-container>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-import AnimeBannerWordsComponent from '@/components/AnimeBannerWordsComponent'
+// import AnimeBannerWordsComponent from '@/components/AnimeBannerWordsComponent'
+import HeaderComponentLanding from '@/components/HeaderComponentLanding'
 import HeaderComponent from '@/components/HeaderComponent'
 import ButtonComponent from '@/components/ButtonComponent'
+import PromoComponent from '@/components/PromoComponent'
+
 import TextImageComponent from '@/components/TextImageComponent'
 // import PartnersComponent from '@/components/PartnersComponent'
 import ServicesComponent from '@/components/ServicesComponent'
+import WavesComponent from '@/components/WavesComponent'
 
 export default {
   components: {
-    AnimeBannerWordsComponent,
+    // AnimeBannerWordsComponent,
+    HeaderComponentLanding,
     HeaderComponent,
     ButtonComponent,
+    PromoComponent,
     TextImageComponent,
     // PartnersComponent,
-    ServicesComponent
+    ServicesComponent,
+    WavesComponent
   },
   head () {
     let content = `${process.env.baseUrl}${this.$route.path}`
@@ -80,7 +95,7 @@ export default {
         color1: 'rgba(255, 0, 255, 0) 0%',
         color2: 'rgba(0, 255, 255, 0) 0%',
         url: 'oddwave.jpg',
-        height: '40vh'
+        height: '20vh'
       },
       subtitle:
         "If you own a business and you're looking for someone to take your website and online marketing to the next level, you've come to the right place.",

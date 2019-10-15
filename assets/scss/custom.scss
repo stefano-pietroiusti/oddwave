@@ -184,7 +184,6 @@ $calc_h6: calc(1.275rem + 0.3vw);
 //   src: local('Varela Round Regular'), local('VarelaRound-Regular'), url(https://fonts.gstatic.com/s/varelaround/v12/w8gdH283Tvk__Lua32TysjIfp8uP.woff2) format('woff2');
 // }
 
-
 html {
   width: 100%;
   overflow-x: hidden;
@@ -227,6 +226,10 @@ h1 {
   font-size: $calc_h1;
   text-transform: capitalize;
   font-weight: 600;
+}
+.text-large {
+  font-size: $calc_h1;
+
 }
 
 h2 {
@@ -497,7 +500,7 @@ a:hover {
 .fa-whatsapp {
   color: var(--secondary);
 }
-.fa:hover {
+.fahover:hover {
   color: var(--secondary);
   opacity: 1;
 }

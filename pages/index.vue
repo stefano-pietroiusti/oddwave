@@ -12,12 +12,11 @@
     />
     <ButtonComponent btext="Get started" blink="/contact/" />
     <PromoComponent
-      pheader="Get started"
-      ptext="Lorem ipsum dolor sit amet, eam ex probo tation tractatos. Ut vel hinc solet
-              tincidunt"
+      :features="features"
     />
 
-    <ServicesComponent
+    <ServicesComponent :services="summaries" />
+    <!-- <ServicesComponent services=""
       v-for="(item, index) in summaries"
       :key="item.id"
       :item="item"
@@ -25,7 +24,7 @@
       :ptext="item.landing"
       :pimage="{color: item.backgroundImage.color1, url: item.backgroundImage.url}"
       :pid="item.id"
-    />
+    /> -->
 
     <ButtonComponent btext="Get started" blink="/contact/" />
     <!-- <PartnersComponent /> -->
@@ -101,6 +100,35 @@ export default {
         "If you own a business and you're looking for someone to take your website and online marketing to the next level, you've come to the right place.",
       linkText: 'Get started',
       link: '/contact/',
+      features: [
+        {
+          header: 'Optimised',
+          text: 'Optimise your content with us to ensure it ranks and remains searchable in response to trending keywords. Optimise your ROI from SEO by setting up conversion tracking.',
+          icon: ['fas', 'chart-line']
+        },
+        {
+          header: 'Distributable',
+          text: 'Manage your content with us to keep it optimised, accessible, searchable and distributable',
+          icon: ['fas', 'tv']
+        },
+        {
+          header: 'Continuous',
+          text:
+            'Continuous testing and auditing for an A+ grade in Performance, Accessibility, Best Practices and SEO',
+          icon: ['fas', 'users']
+        },
+        {
+          header: 'Vanilla',
+          text: 'Take advantage of thoroughly tested, vanilla technologies to guuarantee a quick, lightweight website for all devices',
+
+          icon: ['fab', 'servicestack']
+        },
+        {
+          header: 'Mobile-First',
+          text: 'Mobile-first design, development and testing for websites and web applications that perform on mobile devices and then naturally work on other devices.',
+          icon: ['fas', 'mobile-alt']
+        }
+      ],
       content: [
         {
           // header: 'Our approach is simple and flexible',

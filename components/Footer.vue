@@ -29,14 +29,14 @@
         <h2>Work with us</h2>
         <h4 v-for="(item,i) in contactInfo.phone" :key="i" class="pl-2">
           <a :href="`tel:${item}`" :title="item">
-            <i class="fa fa-phone fa-contact-dark">&nbsp;</i>
+            <i class="fa fa-phone fa-contact-dark fahover">&nbsp;</i>
             {{ item }}
           </a>
         </h4>
         <h4 class="pl-2">
           <a :href="`mailto:${contactInfo.email}`" :title="contactInfo.email">
             <!-- <i class="fa fa-envelope fa-contact"> Email us</i> -->
-            <i class="fa fa-envelope fa-contact-dark">&nbsp;</i>&nbsp;Email us
+            <i class="fa fa-envelope fa-contact-dark fahover">&nbsp;</i>&nbsp;Email us
           </a>
         </h4>
       </b-col>
@@ -49,10 +49,10 @@
         </h2>
         <ul>
           <li>
-            <a :href="contactInfo.fb" class="fa fa-facebook" title="Connect with us via facebook" />&nbsp;&nbsp;
+            <a :href="contactInfo.fb" class="fa fa-facebook fahover" title="Connect with us via facebook" />&nbsp;&nbsp;
             <a
               :href="contactInfo.whatsapp"
-              class="fa fa-whatsapp"
+              class="fa fa-whatsapp fahover"
               title="Connect with us via whatsapp"
             />
           </li>

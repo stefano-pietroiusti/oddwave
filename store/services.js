@@ -360,7 +360,8 @@ export const getters = {
         id: item.id,
         title: item.linkTitle,
         landing: item.landing,
-        backgroundImage: item.backgroundImage
+        backgroundImage: item.backgroundImage,
+        icon: ['fas', 'users']
       }
     })
   },

@@ -57,7 +57,7 @@ export default {
       { hid: 'author', name: 'author', content: author },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:site_name', property: 'og:site_name', content: 'The Odd Wave Limited' },
-      { hid: 'og:image', property: 'og:image', content: `${baseUrl}/theoddwave.png` },
+      { hid: 'og:image', property: 'og:image', content: `${baseUrl}/theoddwave.jpg` },
       { hid: 'og:url', property: 'og:url', content: baseUrl },
       // { hid: 'fb:page_id', property: 'fb:page_id', content: '43929265776' },      
       {
@@ -88,7 +88,6 @@ export default {
     '~/plugins/anime.js',
     '~/plugins/fontawesome.js',
     { src: '~/plugins/vue-notifications', mode: 'client' },
-    { src: '~/plugins/vue-chartjs.js', mode: 'client' },
     { src: '~/plugins/ga.js', mode: 'client' }
   ],
   devModules: [

@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-v-html -->
 <template>
   <b-container fluid class="text-left p-3 text-secondary bg-primary">
     <b-row>
@@ -9,9 +10,7 @@
           <h2 v-if="psubheader" class="p-3">
             {{ psubheader }}
           </h2>
-          <h3 v-if="psubtitle" class="p-2">
-            {{ psubtitle }}
-          </h3>
+          <h3 v-if="psubtitle" class="p-2" v-html="psubtitle" />
           <b-button variant="info" to="/contact/" class="buttonComponent m-2">
             Get Started
           </b-button>
@@ -19,7 +18,7 @@
       </b-col>
       <!-- <b-col sm="12" md="12" lg="4" xl="4">
         <div class="hero-product-img">
-          <div class="offer-badge bg-success">
+          <div class="offer-badge bg-danger">
             <p>
               <strong>Business starter </strong>
               <br>
@@ -31,7 +30,13 @@
         </div>
       </b-col> -->
       <b-col sm="12" md="12" lg="4" xl="4" class="text-center">
-        <div class="hero-img-1 w-100 h-100">
+        <img
+          :src="require(`~/assets/imgs/banner/responsivedevices.png`)"
+          :srcSet="require(`~/assets/imgs/banner/responsivedevices.png`)"
+          alt="bg-img"
+          class="bg-img"
+        >
+        <div class="hero-img-1 w-100 h-100 ">
           <img
             :src="require(`~/assets/imgs/banner/pwa.png?size=1024`)"
             :srcSet="require(`~/assets/imgs/banner/pwa.png`)"
@@ -215,9 +220,16 @@ export default {
       0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0);
   }
 }
+
+.bg-img {
+  position: absolute;
+  left:-30%;
+  width: 80%;
+  z-index:  1;
+}
 .hero-img-1 {
   position: relative;
-  left:0%;
+  left:5%;
   z-index: 100;
   animation-name: hero-img-animation;
   animation-duration: 2s;

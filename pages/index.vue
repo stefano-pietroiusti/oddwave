@@ -1,9 +1,13 @@
 <template>
   <b-container fluid class="text-light text-left p-0">
-    <HeaderComponentLanding :pheader="subheader" />
+    <HeaderComponentLanding :pheader="subheader" :psubtitle="subtitle" />
 
     <WavesComponent :header="true" />
-    <HeaderComponent :pheader="header" :psubheader="subheader" :psubtitle="subtitle" />
+
+    <HeaderComponent :psubheader="headerLanding" :psubtitle="subheaderLanding" />
+
+    <HeaderComponent :pheader="header" />
+
     <TextImageComponent
       v-for="(item,i) in content"
       :key="i"
@@ -90,7 +94,10 @@ export default {
         'Custom web design, pwa web apps development, search engine optimization, google ads manager services by the Odd Wave team for New Zealand businesses',
       header:
         'Website Design & PWA Progressive Web Application Development & SEO',
-      subheader: 'Simple. Smart. Super-Fast. Responsive.',
+      subheader: 'Grow your business online',
+      headerLanding:
+        'MOBILE-FIRST. SIMPLE. SMART. SUPER-FAST. ',
+      subheaderLanding: 'We change the business life of our clients for good. The Odd Wave provides mobile-first web solutions , Optimised content and online marketing solutions to take your business to the next level.',
       headerImage: {
         color1: 'rgba(255, 0, 255, 0) 0%',
         color2: 'rgba(0, 255, 255, 0) 0%',
@@ -98,8 +105,8 @@ export default {
         height: '20vh'
       },
       subtitle:
-        "If you own a business and you're looking for someone to take your website and online marketing to the next level, you've come to the right place.",
-      linkText: 'Get started',
+        'We create custom designed mobile first websites <br/> using the latest web technologies & digital marketing solutions.',
+      linkText: 'GET STARTED',
       link: '/contact/',
       content: [
         {

@@ -13,7 +13,12 @@ $gunmetal: #292f36;
 $nickel: #747572;
 $black: #000;
 
-$blue: #091540;
+//$blue: #091540;
+//$blue: #224870;
+//$blue: #7FD1B9;
+//$blue: #AECFDF;
+//$blue:#6C91BF;
+$blue: #355691;
 $bluelight: #1446a0;
 $indigo: #1e1d1e;
 $purple: #6f42c1;
@@ -172,7 +177,7 @@ $max_font: 22px;
 $calc_font: calc(1vw + 1vh + 0.8vmin);
 $calc_h1: calc(1.375rem + 1.5vw);
 $calc_h2: calc(1.325rem + 0.9vw);
-$calc_h3: calc(1.3rem + 0.6vw);
+$calc_h3: calc(1.3rem + 0.1vw);
 $calc_h4: calc(1.275rem + 0.3vw);
 $calc_h5: calc(1.275rem + 0.3vw);
 $calc_h6: calc(1.275rem + 0.3vw);
@@ -213,10 +218,10 @@ body {
 $mod_1: 1.2; // mobile
 $mod_2: 3; // desktop
 
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-  font-family: $font-family-secondary;
-  font-weight: 600;
-  line-height: 1.5;
+h1, h2, h3, h4, h5, h6 {
+  // font-family: $font-family-secondary;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;  line-height: 1.5;
   color: inherit;
 }
 
@@ -225,7 +230,6 @@ h1 {
   display: block;
   font-size: $calc_h1;
   text-transform: capitalize;
-  font-weight: 600;
 }
 .text-large {
   font-size: $calc_h1;
@@ -233,9 +237,10 @@ h1 {
 }
 
 h2 {
-  font-size: $calc_h2;
+  // font-size: $calc_h2;
+  font-size: 30px;
+  line-height: 35px;
   text-transform: uppercase;
-  font-weight: 600;
 }
 
 h3 {

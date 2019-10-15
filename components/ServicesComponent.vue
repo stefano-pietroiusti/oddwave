@@ -1,54 +1,25 @@
 <template>
-  <!-- <div role="tablist">
-    <b-card no-body class="mb-1">
-      <b-card-header header-tag="header" class="p-1" role="tab">
-        <b-button v-b-toggle.accordion-1 block href="#" variant="info">
-          Accordion 1
-        </b-button>
-      </b-card-header>
-      <b-collapse id="accordion-1" visible accordion="my-accordion" role="tabpanel">
-        <b-card-body>
-          <b-card-text>I start opened because <code>visible</code> is <code>true</code></b-card-text>
-          <b-card-text>{{ text }}</b-card-text>
-        </b-card-body>
-      </b-collapse>
-    </b-card>
-
-    <b-card no-body class="mb-1">
-      <b-card-header header-tag="header" class="p-1" role="tab">
-        <b-button v-b-toggle.accordion-2 block href="#" variant="info">
-          Accordion 2
-        </b-button>
-      </b-card-header>
-      <b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
-        <b-card-body>
-          <b-card-text>{{ text }}</b-card-text>
-        </b-card-body>
-      </b-collapse>
-    </b-card>
-  </div> -->
   <div role="tablist" class="p-10 w-100 text-primary gradient">
-    <b-card v-for="(item, i) in services" :key="i" no-body class="mb-1">
+    <b-card v-for="(item, i) in services" :key="i" no-body class="mb-1 m-5">
       <b-card-header header-tag="header" class="p-1" role="tab">
-        <!-- <b-button v-b-toggle.accordion-1 block href="#" variant="info"> -->
-        <b-button v-b-toggle="`accordion-${item.id}`" block href="#" variant="primary">
+        <!-- <b-button v-b-toggle="`accordion-${item.id}`" block href="#" variant="primary"> -->
+        <b-button block href="#" :to="`/services/${item.id}/`" variant="outline-primary" class="text-medium">
           {{ item.landing.header }}
         </b-button>
       </b-card-header>
-      <!-- <b-collapse id="accordion-1" visible accordion="my-accordion" role="tabpanel"> -->
-      <b-collapse :id="`accordion-${item.id}`" visible accordion="my-accordion" role="tabpanel">
-        <b-card-body>
-          <b-card-text>
-            <font-awesome-icon :icon="item.icon" class="fa text-primary text-large m-2 fa-fw" />
-          </b-card-text>
-          <b-card-text>{{ item.landing.content }}</b-card-text>
-          <b-card-text>
-            <!-- <nuxt-link :to="url" class="text-secondary featurelink">
-              Find out more
-            </nuxt-link> -->
-          </b-card-text>
-        </b-card-body>
-      </b-collapse>
+      <!-- <b-collapse :id="`accordion-${item.id}`" visible accordion="my-accordion" role="tabpanel"> -->
+      <b-card-body>
+        <b-card-text>
+          <font-awesome-icon :icon="item.icon" class="fa text-primary text-large m-2 fa-fw" />
+        </b-card-text>
+        <b-card-text>{{ item.landing.content }}</b-card-text>
+        <b-card-text>
+          <nuxt-link :to="`/services/${item.id}/`" class="text-info featurelink" variant="info">
+            Find out more
+          </nuxt-link>
+        </b-card-text>
+      </b-card-body>
+      <!-- </b-collapse> -->
     </b-card>
   </div>
 </template>
@@ -84,61 +55,16 @@ export default {
         ]
       }
     }
-    // pheader: {
-    //   type: String,
-    //   default: 'Services'
-    // },
-    // pid: {
-    //   type: String,
-    //   default: 'seo'
-    // },
-    // pcontent: {
-    //   type: String,
-    //   default: 'seo'
-    // },
-    // ptext: {
-    //   type: Object,
-    //   default() {
-    //     return {
-    //       header: 'header',
-    //       content: 'text'
-    //     }
-    //   }
-    // },
-    // pimage: {
-    //   type: Object,
-    //   default() {
-    //     return {
-    //       color: 'rgba(39,62,84,0.82)',
-    //       url: 'ppc.jpg'
-    //     }
-    //   }
-    // }
-  },
-  computed: {
-    //   serviceImagePath() {
-    //     if (!this.pimage.url) {
-    //       return
-    //     }
-    //     const fileName = this.pimage.url
-    //     return require(`~/assets/imgs/banner/${fileName}`)
-    //   },
-    // header() {
-    //   return this.ptext.header
-    // },
-    // content() {
-    //   return this.ptext.content
-    // },
-    url () {
-      return `/services/${this.pid}/`
-    },
-    gradient () {
-      return {
-        background: 'none'
-        // background: `linear-gradient(${this.pimage.color} 0%, ${this.pimage.color} 100%)`
-      }
-    }
+
   }
+  // computed: {
+  //   gradient () {
+  //     return {
+  //       background: 'none'
+  //       // background: `linear-gradient(${this.pimage.color} 0%, ${this.pimage.color} 100%)`
+  //     }
+  //   }
+  // }
 }
 </script>
 <style scoped>

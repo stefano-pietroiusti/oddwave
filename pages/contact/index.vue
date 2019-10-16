@@ -1,7 +1,7 @@
 <template>
   <div id="contactContainer" class="w-100 h-100 bg-light">
-    <HeaderComponent :pheader="header" :psubheader="subheader" />
     <AnimeBannerWordsHeaderComponent :pheader="animeheader" :pbgimage="backgroundImage" :pstyle="style" />
+    <HeaderComponent :pheader="header" :psubheader="subheader" />
     <ContactForm :pservices="services" :pbgimage="backgroundImage" :pstyle="style" />
   </div>
 </template>
@@ -45,7 +45,7 @@ export default {
       description:
         'Start an agile website design, seo or mobile-first PWA progressive web apps project with the Odd Wave team. Serving all businesses across New Zealand',
       animeheader: "LET'S CREATE SOME AWESOMENESS",
-      header: 'Get in touch to start a website design, seo or PWA web app project',
+      header: 'Get in touch to start your next website design, web app & SEO project',
       subheader: 'Serving all New Zealand from Auckland, North Shore',
       backgroundImage: {
         color1: 'rgba(102, 126, 234, 1)',

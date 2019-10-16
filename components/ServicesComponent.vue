@@ -1,26 +1,38 @@
 <template>
-  <div role="tablist" class="p-10 w-100 text-primary gradient">
-    <b-card v-for="(item, i) in services" :key="i" no-body class="mb-1 m-5">
-      <b-card-header header-tag="header" class="p-1" role="tab">
-        <!-- <b-button v-b-toggle="`accordion-${item.id}`" block href="#" variant="primary"> -->
-        <b-button block href="#" :to="`/services/${item.id}/`" variant="outline-primary" class="text-medium">
-          {{ item.landing.header }}
-        </b-button>
-      </b-card-header>
-      <!-- <b-collapse :id="`accordion-${item.id}`" visible accordion="my-accordion" role="tabpanel"> -->
-      <b-card-body>
-        <b-card-text>
-          <font-awesome-icon :icon="item.icon" class="fa text-primary text-large m-2 fa-fw" />
-        </b-card-text>
-        <b-card-text>{{ item.landing.content }}</b-card-text>
-        <b-card-text>
-          <nuxt-link :to="`/services/${item.id}/`" class="text-info featurelink" variant="info">
-            Find out more
-          </nuxt-link>
-        </b-card-text>
-      </b-card-body>
-      <!-- </b-collapse> -->
-    </b-card>
+  <div role="tablist" class="p-5 w-100 text-primary gradient">
+    <b-row>
+      <b-col
+        v-for="(item, i) in services"
+        :key="i"
+        sm="12"
+        md="6"
+        lg="4"
+        xl="3"
+        class="p-2  h-100"
+      >
+        <b-card no-body class="my-5 w-100 h-100">
+          <b-card-header header-tag="header" class="p-1" role="tab">
+            <!-- <b-button v-b-toggle="`accordion-${item.id}`" block href="#" variant="primary"> -->
+            <b-button block href="#" :to="`/services/${item.id}/`" variant="info" class="text-medium">
+              {{ item.landing.header }}
+            </b-button>
+          </b-card-header>
+          <!-- <b-collapse :id="`accordion-${item.id}`" visible accordion="my-accordion" role="tabpanel"> -->
+          <b-card-body>
+            <b-card-text class="text-center text-large">
+              <font-awesome-icon :icon="item.icon" class="fa text-primary" />
+            </b-card-text>
+            <b-card-text>{{ item.landing.content }}</b-card-text>
+            <b-card-text>
+              <nuxt-link :to="`/services/${item.id}/`" class="text-info featurelink" variant="info">
+                Find out more
+              </nuxt-link>
+            </b-card-text>
+          </b-card-body>
+          <!-- </b-collapse> -->
+        </b-card>
+      </b-col>
+    </b-row>
   </div>
 </template>
 <script>

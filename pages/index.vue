@@ -6,6 +6,8 @@
 
     <HeaderComponent :psubheader="headerLanding" :psubtitle="subheaderLanding" />
 
+    <PromoComponent :features="features" />
+
     <HeaderComponent :pheader="header" />
 
     <TextImageComponent
@@ -15,9 +17,6 @@
       :pstyle="(item.dark) ? { bgStyle: 'parralaxNormal w-100 text-secondary text-left px-4 p-2', inlineImageStyle: item.inlineImageStyle} : { bgStyle: 'parralaxNormal w-100 text-primary text-left  px-4 p-2', inlineImageStyle: item.inlineImageStyle}"
     />
     <ButtonComponent btext="Get started" blink="/contact/" />
-    <PromoComponent
-      :features="features"
-    />
 
     <ServicesComponent :services="summaries" />
     <!-- <ServicesComponent services=""
@@ -28,7 +27,7 @@
       :ptext="item.landing"
       :pimage="{color: item.backgroundImage.color1, url: item.backgroundImage.url}"
       :pid="item.id"
-    /> -->
+    />-->
 
     <ButtonComponent btext="Get started" blink="/contact/" />
     <!-- <PartnersComponent /> -->
@@ -88,15 +87,14 @@ export default {
   data (context) {
     return {
       title:
-        'Web Design & PWA web apps development & SEO services, Auckland, New Zealand',
+        'Mobile first web design, SEO and online marketing services - Auckland, New Zealand',
       description:
-        'Custom web design, pwa web apps development, search engine optimization, google ads manager services by the Odd Wave team for New Zealand businesses',
-      header:
-        'Website Design & PWA Progressive Web Application Development & SEO',
+        'Custom mobile first web design and web apps development, search engine optimization, google ads management services for New Zealand',
+      header: 'Custom Website Design & SEO services',
       subheader: 'Grow your business online',
-      headerLanding:
-        'MOBILE-FIRST. SIMPLE. SMART. SUPER-FAST. ',
-      subheaderLanding: 'We change the business life of our clients for good. The Odd Wave provides mobile-first web solutions , Optimised content and online marketing solutions to take your business to the next level.',
+      headerLanding: 'MOBILE-FIRST. SIMPLE. SMART. FAST. FUTURE-PROOF.',
+      subheaderLanding:
+        'We change the business life of our clients for good. The Odd Wave provides mobile-first web solutions , optimised content and online marketing solutions to take your business to the next level.',
       headerImage: {
         color1: 'rgba(255, 0, 255, 0) 0%',
         color2: 'rgba(0, 255, 255, 0) 0%',
@@ -104,76 +102,65 @@ export default {
         height: '20vh'
       },
       subtitle:
-        'We create custom designed mobile first websites <br/> using the latest web technologies & digital marketing solutions.',
+        'Create a custom mobile first website <br/> using lightweight web technologies & digital marketing solutions.',
+      // subtitle:
+      //   'Create a mobile first website with us <br/> using web technologies that are lightweight, fast and trustworthy. Design and optimise your content with us to make it useful   this with content & digital marketing solutions.',
+
       linkText: 'GET STARTED',
       link: '/contact/',
       features: [
+
         {
-          header: 'Optimised',
-          text: 'Optimise your content with us to ensure it ranks and remains searchable in response to trending keywords. Optimise your ROI from SEO by setting up conversion tracking.',
-          icon: ['fas', 'chart-line']
+          header: 'Mobile-First',
+          text:
+            'Mobile-first web design, development and testing for websites and web applications that perform for everyone.',
+          icon: ['fas', 'mobile-alt']
         },
         {
-          header: 'Distributable',
-          text: 'Manage your content with us to keep it optimised, accessible, searchable and distributable',
-          icon: ['fas', 'tv']
+          header: 'Vanilla',
+          text:
+            'Take advantage of thoroughly tested, vanilla technologies for a quick, lightweight and flexible website that will help you grow your brand image, loyalty and sales.',
+          icon: ['fab', 'servicestack']
         },
         {
           header: 'Continuous',
           text:
-            'Continuous testing and auditing for an A+ grade in Performance, Accessibility, Best Practices and SEO',
+            'Websites from continuous testing and auditing for an A+ grade in performance, accessibility, best practices and SEO.',
           icon: ['fas', 'users']
         },
         {
-          header: 'Vanilla',
-          text: 'Take advantage of thoroughly tested, vanilla technologies to guuarantee a quick, lightweight website for all devices',
-
-          icon: ['fab', 'servicestack']
-        },
-        {
-          header: 'Mobile-First',
-          text: 'Mobile-first design, development and testing for websites and web applications that perform on mobile devices and then naturally work on other devices.',
-          icon: ['fas', 'mobile-alt']
+          header: 'Optimised',
+          text:
+            'We write content that ranks and remains searchable using SEO. Optimise your ROI from SEO with our conversion tracking and reporting.',
+          icon: ['fas', 'chart-line']
         }
+        // {
+        //   header: 'Distributable',
+        //   text: 'Manage your content with us to keep it optimised, accessible, searchable and distributable',
+        //   icon: ['fas', 'tv']
+        // },
       ],
       content: [
         {
-          // header: 'Our approach is simple and flexible',
           text:
-            'We help small businesses grow by creating an impactful website using the latest proven web technologies and digital marketing solutions that will not break the bank.'
-        },
-        {
-          text:
-            "The Odd Wave offers a range of services to help launch your business and get it off the ground. We're here to help you save money while reaching a more significant customer base than traditional methods."
-        },
-        {
-          text:
-            'Our company is located on the North Shore, Auckland, and we service all of New Zealand, on-site and/or remotely.'
-        },
-        {
-          text:
-            'The Odd Wave team is a small, tightly-knit team that takes pride in what they do to help others succeed. We have 20 years of experience behind us in the world of Web and Data. Our expertise in building websites and promoting businesses with search engine optimization, Google AdWords, social media, and digital marketing.'
-        },
-        {
-          text:
-            'We believe we have what it takes to achieve your personal and business goals. We are based in Auckland but can serve traders, shops, small businesses, and medium enterprises across New Zealand.'
-        },
-        {
-          text:
-            'We will help you manage your online initiatives by covering everything it takes to do so:',
+            'The Odd Wave Limited offers a range of digital services to benefit your business and increase sales:',
           list: [
-            'Suitable domain name registration',
-            'Choosing a reliable hosts in terms Speed, Security, Location and Affordability',
-            'Structuring and optimizing your content for search and social media',
-            'Managing your content in a way so that it can be used anywhere very easily',
             'Designing according to your brand, features, products and services',
-            'Managing your online presence going forward so you can focus more on your business'
+            'Managing, structuring and optimising content for search and social media',
+            'Managing your online presence going forward so you can focus more on your business',
+            'Suitable domain name registration',
+            'Choosing reliable hosts in terms of Speed, Security, Location and Affordability'
+            // 'Managing content in a way so that it can be used anywhere very easily',
           ]
         },
         {
           text:
-            "Do you have a responsive website, and does your business rank on all search engines with trending keyword searches?  It is estimated that 97% of consumers use the Internet to find local businesses, don't miss out on being found by customers."
+            'We have 20 years of experience in the world of Web, Data and Search. Everything we do is aimed at producing the result our clients want for their businesses. Our company is located on the North Shore, Auckland, and we service all of New Zealand.'
         }
+        // {
+        //   text:
+        //     "Do you have a responsive website, and does your business rank on all search engines with trending keyword searches?  It is estimated that 97% of consumers use the Internet to find local businesses, don't miss out on being found by customers."
+        // }
       ],
       footerContent: [
         {

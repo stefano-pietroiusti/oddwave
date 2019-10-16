@@ -1,11 +1,15 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
-  <div id="servicesContainer" class="text-center mt-header w-100">
-    <HeaderComponent :pheader="service.header" :pstyle="service.headerStyle" />
+  <div id="servicesContainer" class="text-center w-100">
     <AnimeBannerWordsHeaderComponent
       :pheader="service.subheader"
       :pbgimage="service.backgroundImage"
     />
+
+    <span v-if="service.features">
+      <PromoComponent :features="service.features" />
+    </span>
+    <HeaderComponent :pheader="service.header" :pstyle="service.headerStyle" />
 
     <span v-if="service.slides" id="carousel">
       <CarouselComponent :carousel-id="carouselId" :pslides="service.slides" />
@@ -34,6 +38,7 @@ import ButtonComponent from '@/components/ButtonComponent'
 import TextImageComponent from '@/components/TextImageComponent'
 import AnimeBannerWordsHeaderComponent from '@/components/AnimeBannerWordsHeaderComponent'
 import CarouselComponent from '@/components/CarouselComponent'
+import PromoComponent from '@/components/PromoComponent'
 
 export default {
   components: {
@@ -41,7 +46,8 @@ export default {
     ButtonComponent,
     TextImageComponent,
     AnimeBannerWordsHeaderComponent,
-    CarouselComponent
+    CarouselComponent,
+    PromoComponent
   },
   head () {
     let content = `${process.env.baseUrl}${this.$route.path}`

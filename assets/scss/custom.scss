@@ -139,7 +139,6 @@ $font-family-base: $font-family-lato;
 $font-family-secondary: $font-family-montserrat;
 $font-size-base: 0.8rem;
 
-
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "../../node_modules/bootstrap-vue/src/index.scss";
 
@@ -218,28 +217,37 @@ body {
 $mod_1: 1.2; // mobile
 $mod_2: 3; // desktop
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   // font-family: $font-family-secondary;
   font-family: "Montserrat", sans-serif;
-  font-weight: 900;  line-height: 1.5;
+  font-weight: 900;
+  line-height: 1.5;
   color: inherit;
 }
-
 
 h1 {
   display: block;
   font-size: $calc_h1;
   text-transform: capitalize;
 }
+
 .text-large {
   font-size: $calc_h1;
+}
 
+.text-medium {
+  font-size: $calc_h3;
 }
 
 h2 {
-  // font-size: $calc_h2;
-  font-size: 30px;
-  line-height: 35px;
+  font-size: $calc_h2;
+  // font-size: 30px;
+  // line-height: 35px;
   text-transform: uppercase;
 }
 
@@ -309,17 +317,6 @@ h6 {
   display: flex;
 }
 
-.parralaxEffectBlurred {
-  width: 100%;
-  height: 100%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: grayscale(0%) saturate(50%) brightness(90%) contrast(50%);
-  flex: 1;
-  display: flex;
-}
 .parralaxNormal {
   width: 100%;
   height: 100%;
@@ -418,6 +415,45 @@ a:hover {
   color: var(--info);
 }
 
+.buttonComponent {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: 200;
+  line-height: 1.5;
+  padding: 5;
+}
+
+.btn-ripple {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  transition: all ease-in-out 0.2s;
+}
+
+.btn-ripple::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 25%;
+  height: 100%;
+  width: 50%;
+  background-color: #000;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all ease-in-out 0.5s;
+  transform: scale(5, 5);
+}
+
+.btn-ripple:active::after {
+  padding: 0;
+  margin: 0;
+  opacity: 0.2;
+  transition: 0s;
+  transform: scale(0, 0);
+}
+
 .componenttext {
   line-height: 2;
   padding: 2em;
@@ -513,7 +549,7 @@ a:hover {
   color: var(--primary);
 }
 
-fa-contact-dark {  
+fa-contact-dark {
   color: var(--secondary);
   font-size: 1.2em;
   line-height: 2em;
@@ -603,7 +639,6 @@ fa-contact-dark:hover {
   -webkit-transition: 0.1s;
   -moz-transition: 0.1s;
 }
-
 
 .social ul li {
   display: inline-block;

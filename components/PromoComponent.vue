@@ -8,16 +8,16 @@
         md="6"
         lg="4"
         xl="3"
-        class="m-3 p-3"
+        class="p-2"
       >
         <div
-          class="bg-light text-center bg-feature h-100 p-3"
+          class="bg-light text-center bg-feature h-100 "
         >
           <h4>
             <font-awesome-icon
               :icon="
                 item.icon"
-              class="fa text-info text-large m-2 fa-fw"
+              class="fa text-info text-large my-2 fa-fw"
             />
           </h4>
           <div class="container text-primary bg-feature">

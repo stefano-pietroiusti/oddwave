@@ -5,8 +5,9 @@ export const state = () => ({
       title: 'SEO Auckland New Zealand - Search Engine Optimisation',
       linkTitle: 'Search Engine Optimisation - SEO',
       description: 'High quality Search Engine Optimisation to raise your Google ranking and drive organic traffic to your website, resulting in increased sales and ROI. ',
-      landing: { header: 'Search Engine Optimization (SEO)', content: 'Be found by more New Zealand customers searching for products and services you offer. The Odd Wave will get your business ranking on Google by increasing your website visibility on search engines through high quality SEO. See how we can help you' },
+      landing: { header: 'Search Engine Optimization (SEO)', content: 'Be found by more New Zealand customers searching for products and services you offer. The Odd Wave will get your business ranking on search engines such as Google and Bing by increasing your website visibility through high quality SEO.' },
       header: 'Search Engine Optimisation (SEO)',
+      icon: ['fas', 'search'],
       backgroundImage: { color1: 'rgba(84, 200, 232, 1)', color2: 'rgba(84, 200, 232, 1)', url: 'seo.jpg', height: 'auto' },
       headerStyle: { bgStyle: 'text-secondary text-center' },
       subheader: 'Drive organic traffic to your website with the latest SEO practices',
@@ -84,8 +85,9 @@ export const state = () => ({
       title: 'Google AdWords Management and PPC Advertising Services',
       linkTitle: 'Pay per Click Advertising - PPC',
       description: 'The Odd Wave offers AdWords management services to businesses all over NZ. Google Ads and pay-per-click advertising provide instant results.',
-      landing: { header: 'Pay per Click Advertising (PPC)', content: 'The Odd Wave provides professionally managed Pay per Click advertising services for small to medium-sized businesses throughout NZ. Stay ahead of the competition with Google AdWords pay-per-click, it is great for getting instant traffic.' },
+      landing: { header: 'Pay per Click Advertising (PPC)', content: 'The Odd Wave provides professionally managed service for Pay per Click advertising. Stay ahead of your competition with Google AdWords pay-per-click.' },
       header: 'Pay per Click  Advertising',
+      icon: ['fas', 'search-dollar'],
       backgroundImage: { color1: 'rgba(153, 61, 187, 1)', color2: 'rgba(153, 61, 187, 1)', url: 'ppc.jpg', height: 'auto' },
       headerStyle: { bgStyle: 'text-secondary text-center' },
       subheader: 'Accelerate market penetration with Google Ads',
@@ -155,50 +157,40 @@ export const state = () => ({
       keywords: ['pay per click', 'google ads', 'bing ads', 'microsoft advertising', 'advertising', 'workshops']
     },
     {
-      id: 'pwa-website-design-auckland',
-      title: 'Website Design & PWA Progressive Web Applications Dev',
-      linkTitle: 'Website Design & PWA web apps',
-      description: "All about our custom web design and progressive web applications with vanilla JS targeting web and mobile in one go. Mobile first development at it's best.",
-      landing: { header: 'Website Design & Progressive Web App Development (PWA)', content: 'Here at The Odd Wave, we design and develop robust, cutting edge websites using the latest web development frameworks. The worldwide web is vast, with billions of websites worldwide competing for consideration. With our extensive industry experience, we can help you with professional web design and progressive web application development.' },
-      header: 'Website design and progressive web apps development',
+      id: 'website-design-dev-auckland',
+      title: 'Mobile-First Website Design & Website Apps Development',
+      linkTitle: 'Website Design & Development',
+      description: 'Use our custom mobile-first web design and web application dev to target mobile & web in one go. Made with passion to grow brand loyalty, trust & sales.',
+      landing: { header: 'Website Design & Web Apps Development', content: 'Here at The Odd Wave, we design and develop robust, cutting edge websites using latest, stable and lightweight frameworks built to last. We avoid clunk and love simplicity and performance. We continuously test and audit code and content for performance, accessibility and best practices to give you excellent quality and ROI.' },
+      header: 'Custom Mobile First Web Design & Web Apps Development',
+      icon: ['fab', 'dev'],
       backgroundImage: { color1: 'rgba(46, 217, 195, 1)', color2: 'rgba(46, 217, 195, 1)', url: 'webdesign.jpg', height: 'auto' },
       headerStyle: { bgStyle: 'text-secondary text-center' },
-      subheader: 'Designing and developing for mobile and web at once with no duplication',
+      subheader: 'Designing and developing for quality, performance and trust',
       subheaderStyle: { color: 'text-primary', buttonVariant: 'info' },
       content:
         [
           {
-            inlineImage: 'kiss.png',
-            inlineImageRight: true,
-            inlineImageText: 'The Odd Wave develop websites that are efficient and search-engine friendly using proven, innovative, open source technologies',
-            inlineImageStyle: 'inlineImage100',
-            text: 'Our approach is simple. We will manage your data and content in a way that it can be distributed and used anywhere. We will design and develop a website that is fast and responsive and look great anywhere. We do this using the latest frameworks and future-proof standards in the world of web, data, search and cloud.<br/>We use plugins and custom built components to custom build progressive web applications for every client, using latest stable frameworks and supporting processes. We avoid the standard template technologies out there and strive towards creativeness and performance.<br/>We take the time to understand your business and requirements so we can develop a website to help you stand out and grow your business further. With a range of web design and web development services on offer, we will create the perfect website to suit your budget. With our extensive industry experience, we can help you realize your kiwi business dream.'
-          },
-          { text: 'We can also help you with a refresh and redesign if your website is looking a little dated. In so doing, you will move onto the latest tech and be where the world is going in terms of the web and data.  We can review your existing web design and provide recommendations on ways to improve its visual look and feel and performance. All our websites are search engine optimized, ensuring our sites are visible to search engines once published.' },
-          { text: 'If you are looking to launch an online store , the Odd Wave can design and develop an eCommerce website fully integrated into a payment gateway. With a the range of other services we offer , we really do give you a turnkey business solution.' },
-          {
-            // inlineImage: 'pwa3.png',
+            // inlineImage: 'kiss.png',
             // inlineImageRight: true,
-            // inlineImageText: 'Web application designed to provide the best user experience on mobile devices',
+            // inlineImageText: 'The Odd Wave develop websites that are efficient and search-engine friendly using proven, innovative, open source and vanilla like technologies.',
             // inlineImageStyle: 'inlineImage100',
-            header: 'Website design with a clear WOW factor',
-            text: 'Website features and functions such as page and graphics design, site navigation, shopping cart, checkout and social media need to be fast, crisp, clear, simple and consistent throughout. Your whole online web and data package should be fun and enjoyable to use, from anywhere and anything.<br /><br />Great website design starts with a clear purpose in mind. Web pages need to look great and visually appealing.Good website design and content must be original and relevant to target audiences. <br /> <br />We will help you be a first- class version of yourself, not of others.Your website will also be fully responsive and will look great on any digital device.'
+            text: 'We will design and develop a website that is fast, looks great and conforms to standards and best practices. We avoid clunk, overkill, template-based technologies and strive towards creativeness with quality, performance and trust.<br/>We take the time to understand your business and requirements so we can develop a website to help you stand out and grow your business further. With our range of web design and web development skills, we can create the perfect website for you.'
           },
           {
-            // inlineImage: 'pwa.jpg',
-            // inlineImageRight: true,
-            // inlineImageText: 'Our flexible web platform provides a variety of ecommerce and digital signage possibilites',
-            // inlineImageStyle: 'inlineImage100',
-            header: 'Website services fit for purpose',
-            text: 'We don’t fancy complex processes, overkill and clunk that usually arises from templates based design and development. We are passionate about technologies that are proven, modern and future-proof.<br />We keep things quick, simple, easy to support and integrate with.<br />Our platform and processes empower us to design and manage your content and distribute it anywhere as required, starting with mobile devices and the web.'
-          }, {
-            // inlineImage: 'pwa.jpg',
-            // inlineImageRight: true,
-            // inlineImageText: 'Our flexible web platform provides a variety of ecommerce and digital signage possibilites',
-            // inlineImageStyle: 'inlineImage100',
-            header: 'Vanilla and streamlined',
-            text: 'All our development is based on Vanilla JS with minimal complexity and streamlined branching, continuous integration, and continuous deployment.'
+            text: "We're not about developing and reinventing the wheel. We're passionate about using technology to solve problems so will even use open-source tools, frameworks and plugins to keep things simple and efficient without comprising quality."
           }
+          // and  It's not all aboutWe can also help you with a refresh and redesign if your website is looking a little dated. In so doing, you will move onto the latest tech and be where the world is going in terms of the web and data.  We can review your existing web design and provide recommendations on ways to improve its visual look and feel and performance. All our websites are search engine optimized, ensuring our sites are visible to search engines once published." },
+          // { text: 'If you are looking to launch an online store , the Odd Wave can design and develop an eCommerce website fully integrated into a payment gateway. With a the range of other services we offer , we really do give you a turnkey business solution.' },
+
+          // {
+          //   // inlineImage: 'pwa3.png',
+          //   // inlineImageRight: true,
+          //   // inlineImageText: 'Web application designed to provide the best user experience on mobile devices',
+          //   // inlineImageStyle: 'inlineImage100',
+          //   header: 'Website design with a clear WOW factor',
+          //   text: 'Website features and functions such as page and graphics design, site navigation, shopping cart, checkout and social media need to be fast, crisp, clear, simple and consistent throughout. Your whole online web and data package should be fun and enjoyable to use, from anywhere and anything.<br /><br />Great website design starts with a clear purpose in mind. Web pages need to look great and visually appealing.Good website design and content must be original and relevant to target audiences. <br /> <br />We will help you be a first- class version of yourself, not of others.Your website will also be fully responsive and will look great on any digital device.'
+          // },
 
           // {
           //   // inlineImage: 'awesome-development.png',
@@ -219,10 +211,42 @@ export const state = () => ({
           //     'Managing your online presence going forward so you can focus more on your business']
           // }
         ],
+      features: [
+        {
+          header: 'Webmastering',
+          text:
+            'Webmaster services to manage your online presence. Affordable, ongoing and trustworthy.',
+          icon: ['fas', 'mobile-alt']
+        },
+        {
+          header: 'Mobile-First',
+          text:
+            'Mobile-first web design, development and testing for websites and web applications that perform for everyone.',
+          icon: ['fas', 'mobile-alt']
+        },
+        {
+          header: 'Vanilla',
+          text:
+            'Development from Vanilla HTML, CSS, Javascript and NodeJs with minimal complexity and continuous improvement.',
+          icon: ['fab', 'servicestack']
+        },
+        {
+          header: 'Modern',
+          text: 'We don’t fancy overkill and clunk that usually comes with templates based design and development. Our chosen technologies are modern, lightweight, efficient and future-proof resulting in websites that are quick, easy to support and scale.',
+          // Our platform and processes empower us to design and manage your content and distribute it anywhere as required, starting with mobile devices and the web.'
+          icon: ['fas', 'mobile-alt']
+        }
+        // {
+        //   header: 'A+ testing and auditing',
+        //   text:
+        //       'Our websites are  testing and auditing for an A+ grade in performance, accessibility, best practices and SEO.',
+        //   icon: ['fas', 'users']
+        // }
+      ],
       price: { value: 2200, unit: 'package' },
       rate: 'hour',
       marketing: {
-        header: 'Adopt latest web technologies',
+        header: 'Join us',
         subheader: 'Remain competitive and be where the world is going',
         content: 'Using proven vanilla lightweight and super-fast web technologies'
       },
@@ -258,6 +282,7 @@ export const state = () => ({
       description: 'We can help with your still life photography, landscape photography, candid children photography and landscape photography needs. Enlighten your products, services, websites and digital signage with great photography by The Odd Wave.',
       landing: { header: 'Creative Film & Digital Photography', content: 'Compliment your visuals for products, services, websites and digital signage with our creative film and digital photography.' },
       header: 'Creative Photography',
+      icon: ['fas', 'camera-retro'],
       backgroundImage: { color1: 'rgba(244, 67, 108, 1)', color2: 'rgba(244, 67, 108, 1)', url: 'photography.jpg', height: 'auto' },
       headerStyle: { bgStyle: 'text-secondary text-center' },
       subheader: 'Attract potential customers with creative photography',
@@ -361,7 +386,7 @@ export const getters = {
         title: item.linkTitle,
         landing: item.landing,
         backgroundImage: item.backgroundImage,
-        icon: ['fas', 'users']
+        icon: item.icon
       }
     })
   },

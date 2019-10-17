@@ -1,9 +1,11 @@
 <template>
-  <b-container fluid class="text-center m-0 p-5">
+  <b-container fluid class="m-0 p-5">
     <b-row>
-      <b-button :variant="variant" :to="blink" class="buttonComponent btn-ripple">
-        {{ btext }}
-      </b-button>
+      <b-col>
+        <b-button :variant="variant" :to="blink" class="text-medium btn-ripple">
+          {{ btext }}
+        </b-button>
+      </b-col>
     </b-row>
   </b-container>
 </template>

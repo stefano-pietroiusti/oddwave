@@ -8,7 +8,9 @@ config.autoAddCss = false
 
 library.add(fab.faServicestack)
 library.add(fas.faEnvelope)
+library.add(fas.faGreaterThanEqual)
 library.add(fas.faSearch)
+library.add(fas.faAward)
 library.add(fas.faSearchDollar)
 library.add(fab.faDev)
 library.add(fas.faTv)

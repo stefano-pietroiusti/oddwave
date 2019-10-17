@@ -27,18 +27,28 @@
       :pstyle="service.subheaderStyle"
     />
 
-    <ButtonComponent btext="Get started" blink="/contact/" :pstyle="service.subheaderStyle" />
+    <ButtonComponent
+      btext="Get started"
+      blink="/contact/"
+      :pstyle="service.subheaderStyle"
+      class="text-center"
+    />
+
+    <ServicesRelatedComponent v-if="otherServices" :services="otherServices" />
+
     <!--  <D3Cloud :pwordcloud="service.cloud" />-->
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import HeaderComponent from '@/components/HeaderComponent'
 import ButtonComponent from '@/components/ButtonComponent'
 import TextImageComponent from '@/components/TextImageComponent'
 import AnimeBannerWordsHeaderComponent from '@/components/AnimeBannerWordsHeaderComponent'
 import CarouselComponent from '@/components/CarouselComponent'
 import PromoComponent from '@/components/PromoComponent'
+import ServicesRelatedComponent from '@/components/ServicesRelatedComponent'
 
 export default {
   components: {
@@ -47,7 +57,8 @@ export default {
     TextImageComponent,
     AnimeBannerWordsHeaderComponent,
     CarouselComponent,
-    PromoComponent
+    PromoComponent,
+    ServicesRelatedComponent
   },
   head () {
     let content = `${process.env.baseUrl}${this.$route.path}`
@@ -69,6 +80,11 @@ export default {
           hid: 'description',
           name: 'description',
           content: this.service.description
+        },
+        {
+          hid: 'keywords',
+          name: 'description',
+          content: this.service.keywords.join()
         }
       ]
     }
@@ -81,20 +97,21 @@ export default {
   },
   computed: {
     service () {
-      const service = this.$store.state.services.all.find(
-        service => service.id === this.id
-      )
+      // const service = this.$store.state.services.all.find(
+      //   service => service.id === this.id
+      // )
+      const service = this.getServiceById(this.id)
       service.enquire = 'Get in touch'
       // 'From $' + service.price.value + ' per ' + service.price.unit
-      // service.isCarousel = !!R.prop('slides', service)
       service.isCarousel = !!service.slides
       return service
     },
-    relatedservices () {
-      const related = this.$store.state.services.all.filter(
-        service => service.id !== this.id
-      )
-      return related
+    related () {
+      return this.relatedServices
+    },
+    ...mapGetters('services', ['getRelatedSummaries', 'getServiceById']),
+    otherServices () {
+      return this.getRelatedSummaries(this.id)
     },
     carouselId () {
       return `${this.id}-carousel`

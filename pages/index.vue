@@ -111,9 +111,9 @@ export default {
       features: [
 
         {
-          header: 'Mobile-First',
+          header: 'Content-First Mobile-First',
           text:
-            'Mobile-first web design, development and testing for websites and web applications that perform for everyone.',
+            'Content-First Mobile-First web design, development and testing for websites and web applications that help everyone.',
           icon: ['fas', 'mobile-alt']
         },
         {

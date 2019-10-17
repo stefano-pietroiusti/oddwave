@@ -9,8 +9,8 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
 const routes = [
   '/services/seo-auckland',
   '/services/ppc-auckland',
-  '/services/pwa-website-design-auckland',
-  '/services/photography-auckland'
+  '/services/website-design-build-auckland',
+  '/services/creative-photographer-auckland'
 ]
 
 const baseUrl = process.env.BASE_URL || 'http://localhost:3000'

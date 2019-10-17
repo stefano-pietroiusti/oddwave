@@ -1,3 +1,5 @@
+const commonKeywords = ['professional', 'workshops', 'auckland', 'rotorua', 'new zealand', 'NZ']
+
 export const state = () => ({
   all: [
     {
@@ -48,6 +50,7 @@ export const state = () => ({
         }
       ],
       price: { value: 600, unit: 'month' },
+      relatedServices: ['ppc-auckland'],
       marketing: {
         header: 'SEO Services',
         subheader: 'Drive traffic to your website with latest SEO practices',
@@ -119,6 +122,7 @@ export const state = () => ({
 
         ],
       price: { value: 240, unit: 'per month' },
+      relatedServices: ['seo-auckland'],
       marketing: {
         header: 'PPC search engine advertising',
         subheader: 'Generate more visits to your site',
@@ -157,158 +161,111 @@ export const state = () => ({
       keywords: ['pay per click', 'google ads', 'bing ads', 'microsoft advertising', 'advertising', 'workshops']
     },
     {
-      id: 'website-design-dev-auckland',
-      title: 'Mobile-First Website Design & Website Apps Development',
-      linkTitle: 'Website Design & Development',
-      description: 'Use our custom mobile-first web design and web application dev to target mobile & web in one go. Made with passion to grow brand loyalty, trust & sales.',
-      landing: { header: 'Website Design & Web Apps Development', content: 'Here at The Odd Wave, we design and develop robust, cutting edge websites using latest, stable and lightweight frameworks built to last. We avoid clunk and love simplicity and performance. We continuously test and audit code and content for performance, accessibility and best practices to give you excellent quality and ROI.' },
+      id: 'website-design-build-auckland',
+      title: 'Website Design & Web Development',
+      linkTitle: 'Website Design & Web Development',
+      description: 'Affordable custom mobile-first web design and web application development from good practises and standards to target mobile & web in one go. Made with passion to grow brand loyalty, trust & sales.',
+      landing: { header: 'Website Design & Web Development', content: 'Here at The Odd Wave, we design and develop robust, cutting edge websites using stable and lightweight frameworks built to last. We avoid clunk and overkill and love keeping things simple even when developing to solve the most complex problems. We continuously test and audit code and content for performance, accessibility, best practices and SEO to give you excellent quality and ROI.' },
       header: 'Custom Mobile First Web Design & Web Apps Development',
       icon: ['fab', 'dev'],
       backgroundImage: { color1: 'rgba(46, 217, 195, 1)', color2: 'rgba(46, 217, 195, 1)', url: 'webdesign.jpg', height: 'auto' },
       headerStyle: { bgStyle: 'text-secondary text-center' },
-      subheader: 'Designing and developing for quality, performance and trust',
+      subheader: 'Designing and developing for quality, loyalty, performance and trust',
       subheaderStyle: { color: 'text-primary', buttonVariant: 'info' },
       content:
         [
           {
-            // inlineImage: 'kiss.png',
-            // inlineImageRight: true,
-            // inlineImageText: 'The Odd Wave develop websites that are efficient and search-engine friendly using proven, innovative, open source and vanilla like technologies.',
-            // inlineImageStyle: 'inlineImage100',
-            text: 'We will design and develop a website that is fast, looks great and conforms to standards and best practices. We avoid clunk, overkill, template-based technologies and strive towards creativeness with quality, performance and trust.<br/>We take the time to understand your business and requirements so we can develop a website to help you stand out and grow your business further. With our range of web design and web development skills, we can create the perfect website for you.'
+            text: 'We will design and develop a website that performs, looks great and continuously conforms to standards and best practices. We avoid clunk, overkill, quick template-based technologies and strive towards creativeness with quality, performance and trust. <br/>We take the time to understand your business and requirements so we can develop a website to help you stand out and grow your business further.'
           },
           {
-            text: "We're not about developing and reinventing the wheel. We're passionate about using technology to solve problems so will even use open-source tools, frameworks and plugins to keep things simple and efficient without comprising quality."
+            header: 'Mobile-first Content-first design',
+            text: 'Content-first design principles are used to structure our websites in a way to guide users to achieve their goals as quickly as possible. Fit for purpose mobile-first design principles are followed so whatever we create looks good and performs well on the smallest mobile screen first and then naturally translates well to bigger screens.'
+          },
+          {
+            header: 'Continuous improvement',
+            text: 'Our passion for finding and using the right technology to solve problems drives us to research, test and apply the right improvements continuously.'
+          },
+          {
+            header: 'Websites for everyone',
+            text: 'A wide range of tools and services are used to make sure we adhere to guidelines and recommendations for making websites and web content accessible and useful to everyone. Our websites are continuously tested for accessibility and adherence to good practices and standards to include people with disabilities or special needs and people who rely on assistive technologies.'
+          },
+          {
+            header: 'Open source',
+            text: 'Open-source tools, frameworks and plugins help us keep things lean, flexible, secure and reliable and allow us to create with the highest quality.'
           }
-          // and  It's not all aboutWe can also help you with a refresh and redesign if your website is looking a little dated. In so doing, you will move onto the latest tech and be where the world is going in terms of the web and data.  We can review your existing web design and provide recommendations on ways to improve its visual look and feel and performance. All our websites are search engine optimized, ensuring our sites are visible to search engines once published." },
-          // { text: 'If you are looking to launch an online store , the Odd Wave can design and develop an eCommerce website fully integrated into a payment gateway. With a the range of other services we offer , we really do give you a turnkey business solution.' },
-
-          // {
-          //   // inlineImage: 'pwa3.png',
-          //   // inlineImageRight: true,
-          //   // inlineImageText: 'Web application designed to provide the best user experience on mobile devices',
-          //   // inlineImageStyle: 'inlineImage100',
-          //   header: 'Website design with a clear WOW factor',
-          //   text: 'Website features and functions such as page and graphics design, site navigation, shopping cart, checkout and social media need to be fast, crisp, clear, simple and consistent throughout. Your whole online web and data package should be fun and enjoyable to use, from anywhere and anything.<br /><br />Great website design starts with a clear purpose in mind. Web pages need to look great and visually appealing.Good website design and content must be original and relevant to target audiences. <br /> <br />We will help you be a first- class version of yourself, not of others.Your website will also be fully responsive and will look great on any digital device.'
-          // },
-
-          // {
-          //   // inlineImage: 'awesome-development.png',
-          //   // inlineImageRight: true,
-          //   // inlineImageText: 'Our flexible web platform provides a variety of ecommerce and digital signage possibilites',
-          //   // inlineImageStyle: 'inlineImage50',
-          //   header: 'More about the Odd Wave',
-          //   text: 'The Odd Wave team are a small, tightly knit team that take pride in what they do to help others succeed.  We have 20 years experience behind us in the world of Web and Data. We are good at building websites and promoting businesses with search engine optimization, google adwords, social media and digital marketing.  We believe we have what it takes to achieve your personal and business goals. We are based in Auckland but are able to serve traders, shops, small business and medium enterprises across New Zealand.'
-          // },
-          // {
-          //   text: 'We will help you manage your online initiatives by covering everything it takes to do so:',
-          //   list: [
-          //     'Suitable domain name registration',
-          //     'Choosing a reliable hosts in terms Speed, Security, Location and Affordability',
-          //     'Structuring and optimizing your content for search and social media',
-          //     'Managing your content in a way so that it can be used anywhere very easily',
-          //     'Designing according to your brand, features, products and services',
-          //     'Managing your online presence going forward so you can focus more on your business']
-          // }
         ],
       features: [
         {
-          header: 'Webmastering',
+          header: 'Professional',
           text:
-            'Webmaster services to manage your online presence. Affordable, ongoing and trustworthy.',
-          icon: ['fas', 'mobile-alt']
+            'Professional webmaster services to help you manage your online presence. Affordable, continuous and trustworthy.',
+          icon: ['fas', 'greater-than-equal']
         },
         {
-          header: 'Mobile-First',
+          header: 'Content-First Mobile-First',
           text:
-            'Mobile-first web design, development and testing for websites and web applications that perform for everyone.',
+            'Content-First Mobile-First design, development and testing for websites that are consistent and perform well for everyone.',
           icon: ['fas', 'mobile-alt']
         },
         {
           header: 'Vanilla',
           text:
-            'Development from Vanilla HTML, CSS, Javascript and NodeJs with minimal complexity and continuous improvement.',
+            'Development from set standards, good practices, established open source frameworks, Vanilla Javascript, HTML, CSS and NodeJs. All resulting in minimal complexity and continuous improvement.',
           icon: ['fab', 'servicestack']
         },
         {
           header: 'Modern',
-          text: 'We don’t fancy overkill and clunk that usually comes with templates based design and development. Our chosen technologies are modern, lightweight, efficient and future-proof resulting in websites that are quick, easy to support and scale.',
-          // Our platform and processes empower us to design and manage your content and distribute it anywhere as required, starting with mobile devices and the web.'
+          text: 'Our chosen technologies are modern, light-weight, efficient and future-proof resulting in websites that are quick, easy to support and scale.',
           icon: ['fas', 'mobile-alt']
         }
-        // {
-        //   header: 'A+ testing and auditing',
-        //   text:
-        //       'Our websites are  testing and auditing for an A+ grade in performance, accessibility, best practices and SEO.',
-        //   icon: ['fas', 'users']
-        // }
       ],
-      price: { value: 2200, unit: 'package' },
+      price: { value: 2400, unit: 'package' },
+      relatedServices: ['seo-auckland', 'photography-auckland'],
       rate: 'hour',
       marketing: {
         header: 'Join us',
         subheader: 'Remain competitive and be where the world is going',
         content: 'Using proven vanilla lightweight and super-fast web technologies'
       },
-      cloud: [{ text: 'Website', value: 2000 },
-        { text: 'Design', value: 1900 },
-        { text: 'Optimization', value: 1800 },
-        { text: 'Websites', value: 1700 },
-        { text: 'Workshops', value: 1600 },
-        { text: 'Advertising', value: 1500 },
-        { text: 'Branding', value: 1400 },
-        { text: 'Partner', value: 1300 },
-        { text: 'Animation', value: 1200 },
-        { text: 'Content', value: 1100 },
-        { text: 'CMS', value: 1000 },
-        { text: 'SEO', value: 900 },
-        { text: 'Photography', value: 800 },
-        { text: 'Optimization', value: 700 },
-        { text: 'Websites', value: 600 },
-        { text: 'Workshops', value: 500 },
-        { text: 'Advertising', value: 400 },
-        { text: 'Branding', value: 300 },
-        { text: 'Partner', value: 200 },
-        { text: 'Animation', value: 100 },
-        { text: 'Content', value: 90 },
-        { text: 'CMS', value: 80 },
-        { text: 'Product', value: 70 }],
-      keywords: ['website', 'design', 'development', 'html', 'css', 'java', 'javascript', 'VanillaJS', 'data', 'engineering', 'mentoring', 'workshops']
+      keywords: [...commonKeywords, 'website design', 'web design', 'web development', 'custom websites', 'pwa web apps development', 'progressive web apps development', 'mobile web design', 'nuxtjs', 'javascript', 'Vanilla JS', 'data engineering']
     },
     {
-      id: 'photography-auckland',
-      title: 'Creative Film and Digital Photography',
-      linkTitle: 'Creative Film & Digital Photography',
-      description: 'We can help with your still life photography, landscape photography, candid children photography and landscape photography needs. Enlighten your products, services, websites and digital signage with great photography by The Odd Wave.',
-      landing: { header: 'Creative Film & Digital Photography', content: 'Compliment your visuals for products, services, websites and digital signage with our creative film and digital photography.' },
+      id: 'creative-photographer-auckland',
+      title: 'Creative Photography',
+      linkTitle: 'Creative Photography',
+      description: 'Get creative with great photography using film and digital. Creative photography for capturing the best of people, products, functions and candid moments.',
+      landing: { header: 'Creative Photography', content: 'Compliment your products, services, websites and digital signage with our creative photography from using both film and digital. Making awesomeness timeless through awesome creative photography.' },
       header: 'Creative Photography',
       icon: ['fas', 'camera-retro'],
       backgroundImage: { color1: 'rgba(244, 67, 108, 1)', color2: 'rgba(244, 67, 108, 1)', url: 'photography.jpg', height: 'auto' },
       headerStyle: { bgStyle: 'text-secondary text-center' },
-      subheader: 'Attract potential customers with creative photography',
+      subheader: 'Making awesomeness timeless through awesome creative photography',
       subheaderStyle: { color: 'text-primary', buttonVariant: 'info' },
       content:
         [
           {
-            text: 'Visual communication has reached new heights with digital and social media marketing resulting in digital photography, becoming an essential part of product or service promotion. Digital photography is widely used in website design and is a great way to make a website more attractive and eye-catching.'
-          },
-          {
-            text: 'Companies need to grab the attention of their target audience. An online presence, such as a website is necessary for showing your product or brand to the world and reaching potential clients.<br/><br/>We will help you support this purpose with our website design capabilities and beautiful website photography. Visual elements increase users\' willingness to read the content. The human brain processes a limited amount of information at any given time; an eye-catching photograph can be processed faster and will take precedence.',
-            inlineImage: 'photography.jpg',
-            inlineImageText: 'We compliment our designs with our own creative photography inspired by the wonders of New Zealand',
-            inlineImageStyle: 'inlineImage75'
-          },
-          {
-            text: 'Combining written text with visual content is an excellent way of grabbing a target audience\'s attention. Captivating digital photography drives emotional responses about a brand.Digital photos help users visualize the product or service they want to use and imagine how it will help improve their lives.'
-          },
-          {
-            inlineImage: 'crew.jpg',
-            inlineImageRight: true,
-            inlineImageText: 'We love creating partnerships wherever possible to offer the best New Zealand can offer in terms of creativeness and business success',
-            inlineImageStyle: 'inlineImage50',
-            text: 'Our experienced in house photographer will assist you in showcasing your product or services online with eye-catching, high-quality digital photography.<br/> <br/> Contact us with your requirements.'
-          }
-        ],
+            text: 'Visual communication has reached new heights with digital photography becoming an essential part of product or service promotion. Digital photography is widely used in website design and is a great way to make a website more attractive and eye-catching.'
+          } ],
+      features: [
+        {
+          header: 'Professional',
+          text:
+              'Professional goal-driven photography to help you get the results you need.',
+          icon: ['fas', 'greater-than-equal']
+        },
+        {
+          header: 'Win-win',
+          text:
+              'Photography to help you achieve your goals and help us retain our reputation.',
+          icon: ['fas', 'award']
+        },
+        {
+          header: 'Vanilla',
+          text:
+              'Photography from film and manual digital, RAW and JPEG formats and in a way to minimise post-processing.',
+          icon: ['fab', 'servicestack']
+        }
+      ],
       marketing: {
         header: 'Enhance your website visuals',
         subheader: 'Compliment your branding',
@@ -316,56 +273,41 @@ export const state = () => ({
       },
       slides: [
         {
-          image: 'art.jpg',
-          imageText: 'Art works'
+          image: 'chelsea-pensioner-royal-hospital-candid.jpg',
+          imageText: 'Chelsea pensioner at the Chelsea Royal Hospital'
         },
         {
-          image: 'bee.jpg',
-          imageText: 'Natural bee'
+          image: 'pet-and-owner-portrait.jpg',
+          imageText: 'Owner and dog Cerchio Italy'
         },
         {
-          image: 'colluseum.jpg',
-          imageText: 'International landmarks and attractions'
+          image: 'pet-portrait.jpg',
+          imageText: 'Cat portrait'
         },
         {
-          image: 'flower.jpg',
-          imageText: 'Natural beauty in every detail'
+          image: 'portrait-street-children-portrait.jpg',
+          imageText: 'Children portrait'
         },
         {
-          image: 'mussels.jpg',
-          imageText: 'Natural beauty in every detail'
+          image: 'bee-flower-candid.jpg',
+          imageText: 'Bee merging from flower'
         },
         {
-          image: 'silhoette.jpg',
-          imageText: 'Creative photography'
+          image: 'bee-candid.jpg',
+          imageText: 'Bee at work'
+        },
+        {
+          image: 'mussels-portrait.jpg',
+          imageText: 'Mussels in the wild'
+        },
+        {
+          image: 'silhoette-candid.jpg',
+          imageText: 'Creative silhoette of people waving'
         }
 
       ],
       price: { value: 1100, unit: 'package' },
-      cloud: [{ text: 'Website', value: 2000 },
-        { text: 'Design', value: 1900 },
-        { text: 'Optimization', value: 1800 },
-        { text: 'Websites', value: 1700 },
-        { text: 'Workshops', value: 1600 },
-        { text: 'Advertising', value: 1500 },
-        { text: 'Branding', value: 1400 },
-        { text: 'Partner', value: 1300 },
-        { text: 'Animation', value: 1200 },
-        { text: 'Content', value: 1100 },
-        { text: 'CMS', value: 1000 },
-        { text: 'SEO', value: 900 },
-        { text: 'Photography', value: 800 },
-        { text: 'Optimization', value: 700 },
-        { text: 'Websites', value: 600 },
-        { text: 'Workshops', value: 500 },
-        { text: 'Advertising', value: 400 },
-        { text: 'Branding', value: 300 },
-        { text: 'Partner', value: 200 },
-        { text: 'Animation', value: 100 },
-        { text: 'Content', value: 90 },
-        { text: 'CMS', value: 80 },
-        { text: 'Product', value: 70 }],
-      keywords: ['digital photography', 'creative photography', 'product photography', 'portrait photography', 'workshops']
+      keywords: [...commonKeywords, 'professional photographer in auckland', 'black and white photography', 'digital photography', 'film photography', 'creative photographer', 'product photographer', 'candid photographer']
     }
   ]
 })
@@ -390,8 +332,27 @@ export const getters = {
       }
     })
   },
-  related: state => (id) => {
+  others: state => (id) => {
     return state.all.filter(service => service.id !== id)
+  },
+  getServiceById: state => (id) => {
+    return state.all.find(service => service.id === id)
+  },
+  getRelatedSummaries: state => (id) => {
+    const service = state.all.find(service => service.id === id)
+    let otherSummaries
+    if (service.relatedServices && service.relatedServices.length > 0) {
+      otherSummaries = state.all.filter(item => (service.relatedServices.includes(item.id))).map(item => (
+        {
+          id: item.id,
+          title: item.linkTitle,
+          landing: item.landing,
+          backgroundImage: item.backgroundImage,
+          icon: item.icon
+        }
+      ))
+    }
+    return otherSummaries
   },
   total: (state) => {
     return state.all.length

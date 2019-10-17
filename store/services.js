@@ -93,27 +93,40 @@ export const state = () => ({
       content:
         [
           {
-            inlineImage: 'bargraph.png',
+            inlineImage: 'bargraph.jpg',
             inlineImageText: 'We manage search engine advertising campaigns to generate valid clicks to your website',
-            inlineImageStyle: 'inlineImage50',
-            text: 'PPC Advertising is paid advertising generating leads to your site, rather than earning visits organically. Advertising your business is of utmost importance. When any company goes online, pay per click advertising (PPC) works best to generate a considerable amount of web traffic.  Search engine advertising is one of the most popular forms of PPC. Pay per click or search engine marketing is one of the most potent advertising channels available, to businesses of every size. <br/><br/>The largest online advertising platform is Google Ads targeted at users using Google Search Engine. Google drives 95% of all paid search on mobile phones. Bing Ads is the second-largest platform used for PPC advertising.'
+            inlineImageStyle: 'inlineImage100',
+            text: 'Advertising your business is of utmost importance. When any company goes online, pay per click advertising (PPC) works best to generate a considerable amount of web traffic and sales leads. PPC Advertising is paid advertising generating leads to your site, rather than earning visits organically and is one of the most popular forms of PPC. <br/> <br/>The Odd Wave provides professionally managed Search Engine Marketing services for small to medium-sized businesses throughout NZ from our North Shore, Auckland office. '
           },
-          { text: 'PPC ads can be in any form of text, a photo, a video, and slides. Some interesting PPC statistics (Editor\'s Choice). In 2017, 7 million advertisers spent $10.1 billion on PPC ads. High commercial intent queries on Google AdWords get 65% of the clicks. Businesses typically earn $2 for every $1 spent on Google Ads.' },
+          { text: 'Pay per click or search engine marketing is one of the most potent advertising channels available, to businesses of every size. PPC ads can be in any form of text, a photo, a video, and slides.  The largest online advertising platform is Google Ads targeted at users using Google Search Engine. Google drives 95% of all paid search on mobile phones, the second-largest platform used for PPC advertising is Bing Ads. ' },
+          {
+            inlineImage: 'marketinglogos.png',
+            inlineImageLeft: true,
+            inlineImageText: 'We use Google Ads and Bing Ads to advertise',
+            inlineImageStyle: 'inlineImage100'
+
+          },
+          {
+            text: 'Here\'s what you can expect from The Odd Wave:',
+            list: [
+              'Initial Consultation to get know your business, products, services and your customers',
+              'Carefully selected online marketing channels, these include Search Engine Marketing (paid) and Search Engine Optimization (earned). ',
+              'Keyword Research that comply with Google policies',
+              'Ad Campaign creation and setup , including Google Analytics setup and conversion tracking',
+              'Audience Targeting ensuring you attract the right customer',
+              'Optimization of Ad Campaigns',
+              'Campaign Monitoring , checks include search terms, negative keywords, location targeting, and budgets to mention a few.',
+              'Monthly Campaign performance']
+          },
+
           {
             inlineImage: 'didyouknow.png',
             inlineImageRight: true,
             inlineImageText: 'Use a well-designed PPC campaign to maximise your market share from online advertising',
             inlineImageStyle: 'inlineImage50',
-            text: 'PPC visitors are 50% more likely to purchase something than organic visitors. 41% of clicks go to the top three paid ads in search results; .63 % of online searches are Google searches. Google AdWords reaches 80% of global internet users. In 2019, the average number of Google searches is over 191 billion per month. Paid search can raise brand awareness by up to 80%.62% of marketers plan to increase their PPC budgets in 2019. <br/>CTR (Click Through Rate) represents the percentage of people who click on your ad and visit the landing page on your website. So, if 100 people see your advertisement and 10 of them click on it, the CTR is 10 percent. It is essential to have as many of the right customer type clicking on your ad as possible, which means having a good CTR. A high CTR means users are visiting your website. More visits to your site mean more customers. The reward from Google is a lower cost per click for your Ad\'s campaign'
+            text: 'Some interesting PPC statistics (Editor\'s Choice).<br/> <br/> In 2017, 7 million advertisers spent $10.1 billion on PPC ads. Businesses typically earn $2 for every $1 spent on Google Ads. High commercial intent queries on Google AdWords get 65% of the clicks. <br/><br/>PPC visitors are 50% more likely to purchase something than organic visitors. 41% of clicks go to the top three paid ads in search results; .63 % of online searches are Google searches. Google AdWords reaches 80% of global internet users. '
           },
-          { text: 'The Odd Wave provides professionally managed Search Engine Marketing services for small to medium-sized businesses throughout NZ from our North Shore, Auckland office. We have over eight years experience in successfully managing Google advertising campaigns.' },
-          {
-            inlineImage: 'analyticsnew.png',
-            inlineImageText: 'We research and monitor the right keywords for your pay-per-click marketing campaigns',
-            inlineImageStyle: 'inlineImage75',
-            text: 'Our skilled team will create a custom digital marketing strategy that will help you achieve your company goals. We will carefully help you select the correct online marketing channels. Some of these channels include Search Engine Marketing (paid) and Search Engine Optimization (earned). <br/>Here\'s what you can expect from the odd wave: Keyword research and audience targeting ensuring you attract the right customer and professionally created Ad\'s creation based on keywords researched and comply with google policies.We make sure your campaign is running optimally. The checks include search terms, negative keywords, location targeting, and budgets to mention a few.'
-          },
-          { text: 'The Odd Wave provides professionally managed Search Engine Marketing services for small to medium-sized businesses throughout NZ from our North Shore, Auckland office. We have over eight years experience in successfully managing Google advertising campaigns.' }
+          { text: 'In 2019, the average number of Google searches is over 191 billion per month. Paid search can raise brand awareness by up to 80%.62% of marketers plan to increase their PPC budgets in 2019. <br/>CTR (Click Through Rate) represents the percentage of people who click on your ad and visit the landing page on your website. So, if 100 people see your advertisement and 10 of them click on it, the CTR is 10 percent. It is essential to have as many of the right customer type clicking on your ad as possible, which means having a good CTR. A high CTR means users are visiting your website. More visits to your site mean more customers. The reward from Google is a lower cost per click for your Ad\'s campaign' }
 
         ],
       price: { value: 240, unit: 'per month' },

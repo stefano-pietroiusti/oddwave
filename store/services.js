@@ -258,24 +258,24 @@ export const state = () => ({
         [
           {
             text: 'Visual communication has reached new heights with digital photography becoming an essential part of product or service promotion. Digital photography is widely used in website design and is a great way to make a website more attractive and eye-catching.'
-          } ],
+          }],
       features: [
         {
           header: 'Professional',
           text:
-              'Professional goal-driven photography to help you get the results you need.',
+            'Professional goal-driven photography to help you get the results you need.',
           icon: ['fas', 'greater-than-equal']
         },
         {
           header: 'Win-win',
           text:
-              'Photography to help you achieve your goals and help us retain our reputation.',
+            'Photography to help you achieve your goals and help us retain our reputation.',
           icon: ['fas', 'award']
         },
         {
           header: 'Vanilla',
           text:
-              'Photography from film and manual digital, RAW and JPEG formats and in a way to minimise post-processing.',
+            'Photography from film and manual digital, RAW and JPEG formats and in a way to minimise post-processing.',
           icon: ['fab', 'servicestack']
         }
       ],

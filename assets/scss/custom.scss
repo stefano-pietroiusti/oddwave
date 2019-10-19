@@ -13,7 +13,12 @@ $gunmetal: #292f36;
 $nickel: #747572;
 $black: #000;
 
-$blue: #091540;
+//$blue: #091540;
+//$blue: #224870;
+//$blue: #7FD1B9;
+//$blue: #AECFDF;
+//$blue:#6C91BF;
+$blue: #355691;
 $bluelight: #1446a0;
 $indigo: #1e1d1e;
 $purple: #6f42c1;
@@ -21,6 +26,7 @@ $pink: #db3069;
 $red: #9b1c31;
 $orange: #fd7e14;
 $yellow: #f5d547;
+$webyellow: #ffff00;
 $green: #28a745;
 $teal: #20c997;
 $cyan: #17a2b8;
@@ -63,7 +69,8 @@ $theme-colors: map-merge(
     "rwcteal": $rwcteal,
     "rwcred": $rwcred,
     "rwcyellow": $rwcyellow,
-    "rwclime": $rwclime
+    "rwclime": $rwclime,
+    "webyellow": $webyellow
   ),
   $theme-colors
 );
@@ -113,8 +120,6 @@ $spacers: map-merge(
   $spacers
 );
 
-
-
 $enable-rounded: true;
 $enable-shadows: true;
 $enable-gradients: true;
@@ -123,13 +128,15 @@ $enable-responsive-font-sizes: true !important;
 $enable-validation-icons: true;
 // $font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
 // Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-$font-family-ubuntu: "Ubuntu", sans-serif;
+// $font-family-ubuntu: "Ubuntu", sans-serif;
 // $font-family-roboto: "Roboto", sans-serif;
-$font-family-varelaround: "Varela Round", sans-serif;
+// $font-family-varelaround: "Varela Round", sans-serif;
+$font-family-montserrat: "Montserrat", sans-serif;
+$font-family-lato: "Lato", sans-serif;
 $body-bg: $white;
 $body-color: $gunmetal;
-$font-family-base: $font-family-varelaround;
-$font-family-secondary: $font-family-ubuntu;
+$font-family-base: $font-family-lato;
+$font-family-secondary: $font-family-montserrat;
 $font-size-base: 0.8rem;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
@@ -167,55 +174,81 @@ $max_width: 100%;
 $min_font: 18px;
 $max_font: 22px;
 $calc_font: calc(1vw + 1vh + 0.8vmin);
-// $calc_h1: calc(1vw + 1vh + 5vmin);
-// $calc_h2: calc(1vw + 1vh + 3.5vmin);
-// $calc_h3: calc(1vw + 1vh + 2vmin);
-// $calc_h4: calc(1vw + 1vh + 1.5vmin);
 $calc_h1: calc(1.375rem + 1.5vw);
 $calc_h2: calc(1.325rem + 0.9vw);
-$calc_h3: calc(1.3rem + 0.6vw);
+$calc_h3: calc(1.3rem + 0.1vw);
 $calc_h4: calc(1.275rem + 0.3vw);
 $calc_h5: calc(1.275rem + 0.3vw);
 $calc_h6: calc(1.275rem + 0.3vw);
 
 // @font-face {
-//   font-family: "Open Sans Regular";
-//   font-weight: 400;
+//   font-family: 'Varela Round';
 //   font-style: normal;
-//   src: url("fonts/OpenSans-Regular-BasicLatin.woff2") format("woff2");
-//   font-display: swap;
+//   font-weight: 400;
+//   src: local('Varela Round Regular'), local('VarelaRound-Regular'), url(https://fonts.gstatic.com/s/varelaround/v12/w8gdH283Tvk__Lua32TysjIfp8uP.woff2) format('woff2');
 // }
 
 html {
-  @include fluid-type($min_width, $max_width, $min_font, $max_font);
-  background-size: cover;
   width: 100%;
   overflow-x: hidden;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: $font-family-base;
   max-width: $max_width;
   padding: 0rem;
   margin: 0;
   font-size: 1.2rem;
   line-height: 2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 $mod_1: 1.2; // mobile
 $mod_2: 3; // desktop
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  // font-family: $font-family-secondary;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  line-height: 1.5;
+  color: inherit;
+}
 
 h1 {
   display: block;
   font-size: $calc_h1;
   text-transform: capitalize;
-  font-weight: 600;
+}
+
+.text-large {
+  font-size: $calc_h1;
+}
+
+.text-medium {
+  font-size: $calc_h3;
 }
 
 h2 {
   font-size: $calc_h2;
+  // font-size: 30px;
+  // line-height: 35px;
   text-transform: uppercase;
-  font-weight: 600;
 }
 
 h3 {
@@ -235,6 +268,7 @@ h5 {
 h6 {
   font-size: $calc_h6;
 }
+
 .vh-50 {
   height: 50vh;
 }
@@ -283,17 +317,6 @@ h6 {
   display: flex;
 }
 
-.parralaxEffectBlurred {
-  width: 100%;
-  height: 100%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: grayscale(0%) saturate(50%) brightness(90%) contrast(50%);
-  flex: 1;
-  display: flex;
-}
 .parralaxNormal {
   width: 100%;
   height: 100%;
@@ -355,9 +378,13 @@ hr {
 }
 
 .nav-item {
-  margin-left: 2vw;
+  margin-left: 3vw;
   font-size: 0.8em;
   text-transform: uppercase;
+  -webkit-transition:height 200ms ease-in;
+  -moz-transition:height 200ms ease-in;
+  -o-transition:height 200ms ease-in;
+  transition:height 200ms ease-in;
 }
 
 .navbar-toggler {
@@ -392,6 +419,45 @@ a:hover {
   color: var(--info);
 }
 
+.buttonComponent {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: 200;
+  line-height: 1.5;
+  padding: 5;
+}
+
+.btn-ripple {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  transition: all ease-in-out 0.2s;
+}
+
+.btn-ripple::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 25%;
+  height: 100%;
+  width: 50%;
+  background-color: #000;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all ease-in-out 0.5s;
+  transform: scale(5, 5);
+}
+
+.btn-ripple:active::after {
+  padding: 0;
+  margin: 0;
+  opacity: 0.2;
+  transition: 0s;
+  transform: scale(0, 0);
+}
+
 .componenttext {
   line-height: 2;
   padding: 2em;
@@ -421,15 +487,6 @@ a:hover {
   text-transform: uppercase;
   font-weight: 300;
   line-height: 1.5;
-}
-
-.buttonComponent {
-  font-size: 1.5em;
-  text-transform: none;
-  font-weight: 300;
-  line-height: 1.5;
-  padding: 5;
-  width:100%;
 }
 
 .imageComponentImage {
@@ -480,21 +537,32 @@ a:hover {
 .fa-whatsapp {
   color: var(--secondary);
 }
-.fa:hover {
+.fahover:hover {
   color: var(--secondary);
   opacity: 1;
 }
 
 .fa-contact {
+  color: var(--primary);
+  font-size: 1.2em;
+  line-height: 2em;
+  text-decoration: none;
+}
+
+.fa-contact:hover {
+  color: var(--primary);
+}
+
+fa-contact-dark {
+  color: var(--secondary);
   font-size: 1.2em;
   line-height: 2em;
   text-decoration: none;
   opacity: 1;
 }
 
-.fa-contact:hover {
-  color: var(--info);
-  opacity: 1;
+fa-contact-dark:hover {
+  color: var(--secondary);
 }
 
 /* FOOTER */
@@ -502,6 +570,7 @@ a:hover {
   height: 100%;
   width: 100%;
   bottom: 5em;
+  line-height: 2em;
 }
 
 .footer .col {
@@ -523,10 +592,18 @@ a:hover {
 .footer h4 {
   padding: unset;
   font-family: inherit;
-  font-size: 0.7em;
-  text-transform: lowercase;
+  font-size: 0.8em;
   letter-spacing: 0.25em;
   font-weight: bold;
+  line-height: 3em;
+}
+
+.footer a {
+  color: var(--secondary);
+}
+
+.footer a:hover {
+  color: var(--secondary);
 }
 
 .footer h6 {
@@ -555,6 +632,7 @@ a:hover {
 .footer ul a {
   padding: unset;
 }
+
 .footer ul a:hover {
   text-decoration: none;
 }
@@ -565,6 +643,7 @@ a:hover {
   -webkit-transition: 0.1s;
   -moz-transition: 0.1s;
 }
+
 .social ul li {
   display: inline-block;
   padding-right: 5px !important;

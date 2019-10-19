@@ -1,7 +1,7 @@
 <template>
   <div id="contactContainer" class="w-100 h-100 bg-light">
-    <HeaderComponent :pheader="header" :psubheader="subheader" />
     <AnimeBannerWordsHeaderComponent :pheader="animeheader" :pbgimage="backgroundImage" :pstyle="style" />
+    <HeaderComponent :pheader="header" />
     <ContactForm :pservices="services" :pbgimage="backgroundImage" :pstyle="style" />
   </div>
 </template>
@@ -43,10 +43,10 @@ export default {
     return {
       title: 'Start a new website, pwa or seo project with the Odd Wave team',
       description:
-        'Start an agile website design, seo or mobile-first PWA progressive web apps project with the Odd Wave team. Serving all businesses across New Zealand',
+        'Start an awesome website design, web apps and SEO project with the Odd Wave team. Serving all businesses across New Zealand',
       animeheader: "LET'S CREATE SOME AWESOMENESS",
-      header: 'Get in touch to start a website design, seo or PWA web app project',
-      subheader: 'Serving all New Zealand from Auckland, North Shore',
+      header: 'Get in touch to start your vnext website design & SEO project',
+      subheader: 'Helping all New Zealand from Auckland, North Shore',
       backgroundImage: {
         color1: 'rgba(102, 126, 234, 1)',
         color2: 'rgba(118, 75, 162, 1)',
@@ -72,12 +72,9 @@ export default {
   computed: {
     services () {
       return this.$store.state.services.all.map((item) => {
-        return { value: item.id, text: item.title, selected: true }
+        return { value: item.id, text: item.linkTitle, selected: true }
       })
     }
-    // nodeEnv () {
-    //   return process.env.nodeEnv
-    // }
   }
   // mounted () {
   //   if (process.env.NODE_ENV !== 'production') {}

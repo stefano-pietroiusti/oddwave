@@ -9,8 +9,8 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
 const routes = [
   '/services/seo-auckland',
   '/services/ppc-auckland',
-  '/services/pwa-website-design-auckland',
-  '/services/photography-auckland',
+  '/services/website-design-build-auckland',
+  '/services/creative-photographer-auckland'
 ]
 
 const baseUrl = process.env.BASE_URL || 'http://localhost:3000'
@@ -44,18 +44,22 @@ export default {
     htmlAttrs: {
       lang: 'en'
     },
-    title: process.env.npm_package_name || 'The Odd Wave of digital marketing & website design in Auckland, New Zealand',
+    title: process.env.npm_package_name || 'The Odd Wave of digital marketing, website design and PWA dev from Auckland, New Zealand',
     meta: [
       { charset: 'utf-8' },
       { hid: 'viewport', name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-      {'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
-      {'http-equiv':'content-type', content:'text/html; charset=UTF-8'},
+      { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
+      { 'http-equiv': 'content-type', content: 'text/html; charset=UTF-8' },
+      { 'http-equiv': 'Cache-Control', content: 'no-cache, no-store, must-revalidate' },
+      { 'http-equiv': 'Pragma', content: 'no-cache' },
+      { 'http-equiv': 'Expires', content: '0' },
       { hid: 'robots', name: 'robots', content: 'index, follow' },
-      { hid: 'author', name: 'author', content: 'The Odd Wave Limited' },
+      { hid: 'author', name: 'author', content: author },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:site_name', property: 'og:site_name', content: 'The Odd Wave Limited' },
       { hid: 'og:image', property: 'og:image', content: `${baseUrl}/theoddwave.jpg` },
       { hid: 'og:url', property: 'og:url', content: baseUrl },
+      // { hid: 'fb:page_id', property: 'fb:page_id', content: '43929265776' },
       {
         hid: 'og:description',
         name: 'og:description',
@@ -67,11 +71,13 @@ export default {
         content: 'The Odd Wave of Website Design and Digital marketing services based in Auckland, New Zealand'
       }
     ],
+    script: [
+      // { src: 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', defer: true }
+    ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'author', href: `${author}` },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Nunito+Sans|Roboto|Varela Round|Ubuntu|Abril Fatface|Black+Han+Sans|Bowlby+One+SC|Syncopate|Abril+Fatface|Exo|Righteous&display=swap' },
-      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' }
+      { rel: 'author', href: `${author}` }
+      // { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Varela Round|Ubuntu&display=swap' },
     ]
   },
   loading: { color: '#fff' },
@@ -82,7 +88,6 @@ export default {
     '~/plugins/anime.js',
     '~/plugins/fontawesome.js',
     { src: '~/plugins/vue-notifications', mode: 'client' },
-    { src: '~/plugins/vue-chartjs.js', mode: 'client' },
     { src: '~/plugins/ga.js', mode: 'client' }
   ],
   devModules: [
@@ -96,24 +101,36 @@ export default {
     '@nuxtjs/dotenv',
     ['@nuxtjs/robots', { UserAgent: '*', Disallow: '' }],
     '@nuxtjs/sitemap',
-    '@nuxtjs/recaptcha'
+    '@nuxtjs/recaptcha',
+    'nuxt-webfontloader'
   ],
+  webfontloader: {
+    google: {
+      // families: ['Varela Round:400,700', 'Ubuntu:400,700']
+      families: ['Montserrat: 400,700', 'Lato']
+    },
+    custom: {
+      families: ['FontAwesome'],
+      urls: ['https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css']
+    },
+    timeout: 2000
+  },
   bootstrapVue: {
-    bootstrapCSS: false, // Or `css: false`
-    bootstrapVueCSS: false, // Or `bvCSS: false`,
+    bootstrapCSS: false,
+    bootstrapVueCSS: false
     // components: ['BContainer', 'BRow', 'BCol', 'BFormInput', 'BButton', 'BTable', 'BModal', 'BNavBar', 'BNav'],
     // directives: ['VBModal', 'VBPopover', 'VBTooltip', 'VBScrollspy']
   },
   responsiveLoader: {
-    name: 'img/oddwave-[hash:7]-[width].[ext]',
-    quality: 100,
-    min: 320,
-    max: 1080,
-    steps: 8,
-    // sizes: [350, 500, 800, 1200, 1500, 1800], 
+    name: 'img/theoddwave-[hash:7]-[width].[ext]',
+    quality: 70,
+    // min: 320,
+    // max: 1440,
+    // steps: 6,
+    sizes: [320, 375, 425, 768, 1024, 1440],
     // format: 'png',
     adapter: require('responsive-loader/sharp'),
-    placeholder: false,
+    placeholder: true
 
   },
   robots: {
@@ -124,7 +141,7 @@ export default {
   sitemap: {
     hostname: baseUrl,
     gzip: false,
-    xmlns: "http://www.sitemaps.org/schemas/sitemap/0.9",
+    xmlns: 'http://www.sitemaps.org/schemas/sitemap/0.9',
     trailingSlash: true,
     defaults: {
       changefreq: 'daily',
@@ -142,7 +159,7 @@ export default {
   ],
   build: {
     // vendor: ['vue-fb-customer-chat'],
-    extend(config, { isDev, isClient }) {
+    extend (config, { isDev, isClient }) {
       // Run ESLint on save
       if (isDev && isClient) {
         config.module.rules.push({

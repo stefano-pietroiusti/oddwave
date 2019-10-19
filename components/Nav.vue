@@ -15,20 +15,18 @@
           </b-navbar-brand>
           <b-navbar-toggle target="nav-collapse" />
           <b-collapse id="nav-collapse" is-nav>
-            <b-navbar-nav>
+            <b-navbar-nav role="navigation">
               <b-nav-item to="/">
                 Home
               </b-nav-item>
               <b-nav-item-dropdown text="Services" toggle-class="text-decoration-none">
                 <b-dropdown-item
-                  v-for="service in services"
-                  :key="service.id"
-                  :to="'/services/' + service.id + '/'"
+                  v-for="item in services"
+                  :id="item.id"
+                  :key="item.id"
+                  :to="'/services/' + item.id + '/'"
                 >
-                  {{ service.title }}
-                  <!-- <nuxt-link :to="'/services/' + service.id + '/'">
-                    {{ service.title }}
-                  </nuxt-link> -->
+                  {{ item.linkTitle }}
                 </b-dropdown-item>
               </b-nav-item-dropdown>
               <b-nav-item to="/contact/">
@@ -36,6 +34,7 @@
               </b-nav-item>
             </b-navbar-nav>
           </b-collapse>
+          </b-navbar-brand>
         </b-navbar>
       </b-col>
     </b-row>
@@ -43,11 +42,9 @@
 </template>
 
 <script>
-// import Logo from '@/components/Logo'
-// import logo from 'logos/oddwave.png'
+import { mapState } from 'vuex'
 export default {
   components: {
-    // Logo
   },
   data () {
     return {
@@ -59,9 +56,9 @@ export default {
     }
   },
   computed: {
-    services () {
-      return this.$store.state.services.all
-    }
+    ...mapState({
+      services: state => state.services.all
+    })
   }
 }
 </script>

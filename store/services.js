@@ -1,20 +1,15 @@
-// const colors = {
-//   rwcblue: 'rgba(84, 200, 232, 1)',
-//   rwcpurple: 'rgba(153, 61, 187, 1)',
-//   rwcteal: 'rgba(46, 217, 195, 1)',
-//   rwcred: 'rgba(244, 67, 108, 1)',
-//   rwcyellow: 'rgba(245, 168, 0, 1)',
-//   rwclime: 'rgba(200, 232, 84, 1)'
-// }
+const commonKeywords = ['professional', 'workshops', 'auckland', 'rotorua', 'new zealand', 'NZ']
 
 export const state = () => ({
   all: [
     {
       id: 'seo-auckland',
-      title: 'Search Engine Optimization',
-      description: 'Increase your Google ranking and drive organic traffic to your website with the latest SEO practices',
-      landingSummary: 'Drive organic traffic to your website with SEO',
-      header: 'Drive organic traffic to your website with SEO',
+      title: 'SEO Auckland New Zealand - Search Engine Optimisation',
+      linkTitle: 'Search Engine Optimisation - SEO',
+      description: 'High quality Search Engine Optimisation to raise your Google ranking and drive organic traffic to your website, resulting in increased sales and ROI. ',
+      landing: { header: 'Search Engine Optimization (SEO)', content: 'Be found by more New Zealand customers searching for products and services you offer. The Odd Wave will get your business ranking on search engines such as Google and Bing by increasing your website visibility through high quality SEO.' },
+      header: 'Search Engine Optimisation (SEO)',
+      icon: ['fas', 'search'],
       backgroundImage: { color1: 'rgba(84, 200, 232, 1)', color2: 'rgba(84, 200, 232, 1)', url: 'seo.jpg', height: 'auto' },
       headerStyle: { bgStyle: 'text-secondary text-center' },
       subheader: 'Drive organic traffic to your website with the latest SEO practices',
@@ -44,10 +39,10 @@ export const state = () => ({
           text: 'Proper optimization makes a website rank on the first page of SERP. The common belief is that people generally check the first two pages of search engine results. Approximately 74% of online users use search engines to find products and services. Keyword research and the proper use of keywords (including avoiding keyword stuffing) directly influence the complexity and readability of the content. Keyword-rich page content makes a substantial difference in your Google rankings and search engine results. '
         },
         {
-          inlineImage: 'seo.jpg',
-          inlineImageRight: true,
-          inlineImageText: 'Advertising your business is of utmost importance. When any company goes online, pay per click advertising (PPC) works best to generate a considerable amount of web traffic. SEO allows a great deal of free advertising. ',
-          inlineImageStyle: 'inlineImage75',
+          // inlineImage: 'seo.jpg',
+          // inlineImageRight: true,
+          // inlineImageText: 'Advertising your business is of utmost importance. When any company goes online, pay per click advertising (PPC) works best to generate a considerable amount of web traffic. SEO allows a great deal of free advertising. ',
+          // inlineImageStyle: 'inlineImage75',
           text: 'Optimized content increases organic traffic to your website resulting in lead generation, increased sales, and improve ROI.Some search engine optimization practices are Technical SEO and On-Page SEO. Technical SEO determines the quality of a website based on factors like speed and code. Optimizing the technical aspects of the website enables search engines to crawl and index the site, which is beneficial to obtain a higher search engine rank in Google.Some steps to take in the direction of technical search engine optimization include fixing broken links. , removing duplicate pages, testing, and improving website speed. also, ensuring the website is mobile-friendly.'
         },
         {
@@ -55,6 +50,7 @@ export const state = () => ({
         }
       ],
       price: { value: 600, unit: 'month' },
+      relatedServices: ['ppc-auckland'],
       marketing: {
         header: 'SEO Services',
         subheader: 'Drive traffic to your website with latest SEO practices',
@@ -89,10 +85,12 @@ export const state = () => ({
     },
     {
       id: 'ppc-auckland',
-      title: 'Pay per Click Advertising',
-      description: 'Boost your sales with search advertising using Google Ads and Bing Ads, contact the Odd Wave online advertising team to get you started.',
-      landingSummary: 'Boost your sales with search advertising using Google Ads and Bing Ads',
+      title: 'Google AdWords Management and PPC Advertising Services',
+      linkTitle: 'Pay per Click Advertising - PPC',
+      description: 'The Odd Wave offers AdWords management services to businesses all over NZ. Google Ads and pay-per-click advertising provide instant results.',
+      landing: { header: 'Pay per Click Advertising (PPC)', content: 'The Odd Wave provides professionally managed service for Pay per Click advertising. Stay ahead of your competition with Google AdWords pay-per-click.' },
       header: 'Pay per Click  Advertising',
+      icon: ['fas', 'search-dollar'],
       backgroundImage: { color1: 'rgba(153, 61, 187, 1)', color2: 'rgba(153, 61, 187, 1)', url: 'ppc.jpg', height: 'auto' },
       headerStyle: { bgStyle: 'text-secondary text-center' },
       subheader: 'Accelerate market penetration with Google Ads',
@@ -100,30 +98,44 @@ export const state = () => ({
       content:
         [
           {
-            inlineImage: 'bargraph.png',
+            inlineImage: 'bargraph.jpg',
             inlineImageText: 'We manage search engine advertising campaigns to generate valid clicks to your website',
-            inlineImageStyle: 'inlineImage50',
-            text: 'PPC Advertising is paid advertising generating leads to your site, rather than earning visits organically. Advertising your business is of utmost importance. When any company goes online, pay per click advertising (PPC) works best to generate a considerable amount of web traffic.  Search engine advertising is one of the most popular forms of PPC. Pay per click or search engine marketing is one of the most potent advertising channels available, to businesses of every size. <br/><br/>The largest online advertising platform is Google Ads targeted at users using Google Search Engine. Google drives 95% of all paid search on mobile phones. Bing Ads is the second-largest platform used for PPC advertising.'
+            inlineImageStyle: 'inlineImage100',
+            text: 'Advertising your business is of utmost importance. When any company goes online, pay per click advertising (PPC) works best to generate a considerable amount of web traffic and sales leads. PPC Advertising is paid advertising generating leads to your site, rather than earning visits organically and is one of the most popular forms of PPC. <br/> <br/>The Odd Wave provides professionally managed Search Engine Marketing services for small to medium-sized businesses throughout NZ from our North Shore, Auckland office. '
           },
-          { text: 'PPC ads can be in any form of text, a photo, a video, and slides. Some interesting PPC statistics (Editor\'s Choice). In 2017, 7 million advertisers spent $10.1 billion on PPC ads. High commercial intent queries on Google AdWords get 65% of the clicks. Businesses typically earn $2 for every $1 spent on Google Ads.' },
+          { text: 'Pay per click or search engine marketing is one of the most potent advertising channels available, to businesses of every size. PPC ads can be in any form of text, a photo, a video, and slides.  The largest online advertising platform is Google Ads targeted at users using Google Search Engine. Google drives 95% of all paid search on mobile phones, the second-largest platform used for PPC advertising is Bing Ads. ' },
+          {
+            inlineImage: 'marketinglogos.png',
+            inlineImageLeft: true,
+            inlineImageText: 'We use Google Ads and Bing Ads to advertise',
+            inlineImageStyle: 'inlineImage100'
+
+          },
+          {
+            text: 'Here\'s what you can expect from The Odd Wave:',
+            list: [
+              'Initial Consultation to get know your business, products, services and your customers',
+              'Carefully selected online marketing channels, these include Search Engine Marketing (paid) and Search Engine Optimization (earned). ',
+              'Keyword Research that comply with Google policies',
+              'Ad Campaign creation and setup , including Google Analytics setup and conversion tracking',
+              'Audience Targeting ensuring you attract the right customer',
+              'Optimization of Ad Campaigns',
+              'Campaign Monitoring , checks include search terms, negative keywords, location targeting, and budgets to mention a few.',
+              'Monthly Campaign performance']
+          },
+
           {
             inlineImage: 'didyouknow.png',
             inlineImageRight: true,
             inlineImageText: 'Use a well-designed PPC campaign to maximise your market share from online advertising',
             inlineImageStyle: 'inlineImage50',
-            text: 'PPC visitors are 50% more likely to purchase something than organic visitors. 41% of clicks go to the top three paid ads in search results; .63 % of online searches are Google searches. Google AdWords reaches 80% of global internet users. In 2019, the average number of Google searches is over 191 billion per month. Paid search can raise brand awareness by up to 80%.62% of marketers plan to increase their PPC budgets in 2019. <br/>CTR (Click Through Rate) represents the percentage of people who click on your ad and visit the landing page on your website. So, if 100 people see your advertisement and 10 of them click on it, the CTR is 10 percent. It is essential to have as many of the right customer type clicking on your ad as possible, which means having a good CTR. A high CTR means users are visiting your website. More visits to your site mean more customers. The reward from Google is a lower cost per click for your Ad\'s campaign'
+            text: 'Some interesting PPC statistics (Editor\'s Choice).<br/> <br/> In 2017, 7 million advertisers spent $10.1 billion on PPC ads. Businesses typically earn $2 for every $1 spent on Google Ads. High commercial intent queries on Google AdWords get 65% of the clicks. <br/><br/>PPC visitors are 50% more likely to purchase something than organic visitors. 41% of clicks go to the top three paid ads in search results; .63 % of online searches are Google searches. Google AdWords reaches 80% of global internet users. '
           },
-          { text: 'The Odd Wave provides professionally managed Search Engine Marketing services for small to medium-sized businesses throughout NZ from our North Shore, Auckland office. We have over eight years experience in successfully managing Google advertising campaigns.' },
-          {
-            inlineImage: 'analyticsnew.png',
-            inlineImageText: 'We research and monitor the right keywords for your pay-per-click marketing campaigns',
-            inlineImageStyle: 'inlineImage75',
-            text: 'Our skilled team will create a custom digital marketing strategy that will help you achieve your company goals. We will carefully help you select the correct online marketing channels. Some of these channels include Search Engine Marketing (paid) and Search Engine Optimization (earned). <br/>Here\'s what you can expect from the odd wave: Keyword research and audience targeting ensuring you attract the right customer and professionally created Ad\'s creation based on keywords researched and comply with google policies.We make sure your campaign is running optimally. The checks include search terms, negative keywords, location targeting, and budgets to mention a few.'
-          },
-          { text: 'The Odd Wave provides professionally managed Search Engine Marketing services for small to medium-sized businesses throughout NZ from our North Shore, Auckland office. We have over eight years experience in successfully managing Google advertising campaigns.' }
+          { text: 'In 2019, the average number of Google searches is over 191 billion per month. Paid search can raise brand awareness by up to 80%.62% of marketers plan to increase their PPC budgets in 2019. <br/>CTR (Click Through Rate) represents the percentage of people who click on your ad and visit the landing page on your website. So, if 100 people see your advertisement and 10 of them click on it, the CTR is 10 percent. It is essential to have as many of the right customer type clicking on your ad as possible, which means having a good CTR. A high CTR means users are visiting your website. More visits to your site mean more customers. The reward from Google is a lower cost per click for your Ad\'s campaign' }
 
         ],
       price: { value: 240, unit: 'per month' },
+      relatedServices: ['seo-auckland'],
       marketing: {
         header: 'PPC search engine advertising',
         subheader: 'Generate more visits to your site',
@@ -162,127 +174,111 @@ export const state = () => ({
       keywords: ['pay per click', 'google ads', 'bing ads', 'microsoft advertising', 'advertising', 'workshops']
     },
     {
-      id: 'pwa-website-design-auckland',
-      title: 'Website Design & PWA Development',
-      description: 'The Odd Wave’s responsive website design and progressive web application development makes it easy to distribute relevant content anywhere and quickly with an awesome look. Mobie first development at it\'s best',
-      landingSummary: 'Responsive mobile website design and progressive web application development',
-      header: 'Website design and progressive website development, New Zealand',
+      id: 'website-design-build-auckland',
+      title: 'Website Design & Web Development',
+      linkTitle: 'Website Design & Web Development',
+      description: 'Affordable custom mobile-first web design and web application development from good practises and standards to target mobile & web in one go. Made with passion to grow brand loyalty, trust & sales.',
+      landing: { header: 'Website Design & Web Development', content: 'Here at The Odd Wave, we design and develop robust, cutting edge websites using stable and lightweight frameworks built to last. We avoid clunk and overkill and love keeping things simple even when developing to solve the most complex problems. We continuously test and audit code and content for performance, accessibility, best practices and SEO to give you excellent quality and ROI.' },
+      header: 'Custom Mobile First Web Design & Web Apps Development',
+      icon: ['fab', 'dev'],
       backgroundImage: { color1: 'rgba(46, 217, 195, 1)', color2: 'rgba(46, 217, 195, 1)', url: 'webdesign.jpg', height: 'auto' },
       headerStyle: { bgStyle: 'text-secondary text-center' },
-      subheader: 'Design, manage and distribute your content anywhere, starting with mobile and web',
+      subheader: 'Designing and developing for quality, loyalty, performance and trust',
       subheaderStyle: { color: 'text-primary', buttonVariant: 'info' },
       content:
         [
           {
-            inlineImage: 'kiss.png',
-            inlineImageRight: true,
-            inlineImageText: 'The Odd Wave develop websites that are efficient and search-engine friendly using proven, innovative, open source technologies',
-            inlineImageStyle: 'inlineImage100',
-            text: 'Our approach is simple. We will manage your data and content in a way that it can be distributed and used anywhere. We will design and develop a website that is fast and responsive and look great anywhere. We do this using the latest frameworks and future-proof standards in the world of web, data, search and cloud.<br/>We use plugins and custom built components to custom build progressive web applications for every client, using latest stable frameworks and supporting processes. We avoid the standard template technologies out there and strive towards creativeness and performance.<br/>We take the time to understand your business and requirements so we can develop a website to help you stand out and grow your business further. With a range of web design and web development services on offer, we will create the perfect website to suit your budget. With our extensive industry experience, we can help you realize your kiwi business dream.'
-          },
-          { text: 'We can also help you with a refresh and redesign if your website is looking a little dated. In so doing, you will move onto the latest tech and be where the world is going in terms of the web and data.  We can review your existing web design and provide recommendations on ways to improve its visual look and feel and performance. All our websites are search engine optimized, ensuring our sites are visible to search engines once published.' },
-          { text: 'If you are looking to launch an online store , the Odd Wave can design and develop an eCommerce website fully integrated into a payment gateway. With a the range of other services we offer , we really do give you a turnkey business solution.' },
-          {
-            inlineImage: 'pwa3.png',
-            inlineImageRight: true,
-            inlineImageText: 'Web application designed to provide the best user experience on mobile devices',
-            inlineImageStyle: 'inlineImage100',
-            header: 'Website design with a clear WOW factor',
-            text: 'Website features and functions such as page and graphics design, site navigation, shopping cart, checkout and social media need to be fast, crisp, clear, simple and consistent throughout. Your whole online web and data package should be fun and enjoyable to use, from anywhere and anything.<br /><br />Great website design starts with a clear purpose in mind. Web pages need to look great and visually appealing.Good website design and content must be original and relevant to target audiences. <br /> <br />We will help you be a first- class version of yourself, not of others.Your website will also be fully responsive and will look great on any digital device.'
+            text: 'We will design and develop a website that performs, looks great and continuously conforms to standards and best practices. We avoid clunk, overkill, quick template-based technologies and strive towards creativeness with quality, performance and trust. <br/>We take the time to understand your business and requirements so we can develop a website to help you stand out and grow your business further.'
           },
           {
-            // inlineImage: 'pwa.jpg',
-            // inlineImageRight: true,
-            // inlineImageText: 'Our flexible web platform provides a variety of ecommerce and digital signage possibilites',
-            // inlineImageStyle: 'inlineImage100',
-            header: 'Website services fit for purpose',
-            text: 'We don’t fancy complex processes, overkill and clunk that usually arises from templates based design and development. We are passionate about technologies that are proven, modern and future-proof.<br />We keep things quick, simple, easy to support and integrate with.<br />Our platform and processes empower us to design and manage your content and distribute it anywhere as required, starting with mobile devices and the web.'
-          },
-          'All our development is based on Vanilla JS with minimal complexity and streamlined branching, continuous integration, and continuous deployment.',
-          {
-            inlineImage: 'awesome-development.png',
-            inlineImageRight: true,
-            inlineImageText: 'Our flexible web platform provides a variety of ecommerce and digital signage possibilites',
-            inlineImageStyle: 'inlineImage50',
-            header: 'More about the Odd Wave',
-            text: 'The Odd Wave team are a small, tightly knit team that take pride in what they do to help others succeed.  We have 20 years experience behind us in the world of Web and Data. We are good at building websites and promoting businesses with search engine optimization, google adwords, social media and digital marketing.  We believe we have what it takes to achieve your personal and business goals. We are based in Auckland but are able to serve traders, shops, small business and medium enterprises across New Zealand.'
+            header: 'Mobile-first Content-first design',
+            text: 'Content-first design principles are used to structure our websites in a way to guide users to achieve their goals as quickly as possible. Fit for purpose mobile-first design principles are followed so whatever we create looks good and performs well on the smallest mobile screen first and then naturally translates well to bigger screens.'
           },
           {
-            text: 'We will help you manage your online initiatives by covering everything it takes to do so:',
-            list: [
-              'Suitable domain name registration',
-              'Choosing a reliable hosts in terms Speed, Security, Location and Affordability',
-              'Structuring and optimizing your content for search and social media',
-              'Managing your content in a way so that it can be used anywhere very easily',
-              'Designing according to your brand, features, products and services',
-              'Managing your online presence going forward so you can focus more on your business']
+            header: 'Continuous improvement',
+            text: 'Our passion for finding and using the right technology to solve problems drives us to research, test and apply the right improvements continuously.'
+          },
+          {
+            header: 'Websites for everyone',
+            text: 'A wide range of tools and services are used to make sure we adhere to guidelines and recommendations for making websites and web content accessible and useful to everyone. Our websites are continuously tested for accessibility and adherence to good practices and standards to include people with disabilities or special needs and people who rely on assistive technologies.'
+          },
+          {
+            header: 'Open source',
+            text: 'Open-source tools, frameworks and plugins help us keep things lean, flexible, secure and reliable and allow us to create with the highest quality.'
           }
         ],
-      price: { value: 2200, unit: 'package' },
+      features: [
+        {
+          header: 'Professional',
+          text:
+            'Professional webmaster services to help you manage your online presence. Affordable, continuous and trustworthy.',
+          icon: ['fas', 'greater-than-equal']
+        },
+        {
+          header: 'Content-First Mobile-First',
+          text:
+            'Content-First Mobile-First design, development and testing for websites that are consistent and perform well for everyone.',
+          icon: ['fas', 'mobile-alt']
+        },
+        {
+          header: 'Vanilla',
+          text:
+            'Development from set standards, good practices, established open source frameworks, Vanilla Javascript, HTML, CSS and NodeJs. All resulting in minimal complexity and continuous improvement.',
+          icon: ['fab', 'servicestack']
+        },
+        {
+          header: 'Modern',
+          text: 'Our chosen technologies are modern, light-weight, efficient and future-proof resulting in websites that are quick, easy to support and scale.',
+          icon: ['fas', 'mobile-alt']
+        }
+      ],
+      price: { value: 2400, unit: 'package' },
+      relatedServices: ['seo-auckland', 'photography-auckland'],
       rate: 'hour',
       marketing: {
-        header: 'Adopt latest web technologies',
+        header: 'Join us',
         subheader: 'Remain competitive and be where the world is going',
         content: 'Using proven vanilla lightweight and super-fast web technologies'
       },
-      cloud: [{ text: 'Website', value: 2000 },
-        { text: 'Design', value: 1900 },
-        { text: 'Optimization', value: 1800 },
-        { text: 'Websites', value: 1700 },
-        { text: 'Workshops', value: 1600 },
-        { text: 'Advertising', value: 1500 },
-        { text: 'Branding', value: 1400 },
-        { text: 'Partner', value: 1300 },
-        { text: 'Animation', value: 1200 },
-        { text: 'Content', value: 1100 },
-        { text: 'CMS', value: 1000 },
-        { text: 'SEO', value: 900 },
-        { text: 'Photography', value: 800 },
-        { text: 'Optimization', value: 700 },
-        { text: 'Websites', value: 600 },
-        { text: 'Workshops', value: 500 },
-        { text: 'Advertising', value: 400 },
-        { text: 'Branding', value: 300 },
-        { text: 'Partner', value: 200 },
-        { text: 'Animation', value: 100 },
-        { text: 'Content', value: 90 },
-        { text: 'CMS', value: 80 },
-        { text: 'Product', value: 70 }],
-      keywords: ['website', 'design', 'development', 'html', 'css', 'java', 'javascript', 'VanillaJS', 'data', 'engineering', 'mentoring', 'workshops']
+      keywords: [...commonKeywords, 'website design', 'web design', 'web development', 'custom websites', 'pwa web apps development', 'progressive web apps development', 'mobile web design', 'nuxtjs', 'javascript', 'Vanilla JS', 'data engineering']
     },
     {
-      id: 'photography-auckland',
-      title: 'Creative Digital Photography',
-      description: 'Show off your products and services with captivating digital photography services by The Odd Wave.',
-      landingSummary: 'Show off your products and services with captivating digital photography',
-      header: 'Creative Digital Photography',
+      id: 'creative-photographer-auckland',
+      title: 'Creative Photography',
+      linkTitle: 'Creative Photography',
+      description: 'Get creative with great photography using film and digital. Creative photography for capturing the best of people, products, functions and candid moments.',
+      landing: { header: 'Creative Photography', content: 'Compliment your products, services, websites and digital signage with our creative photography from using both film and digital. Making awesomeness timeless through awesome creative photography.' },
+      header: 'Creative Photography',
+      icon: ['fas', 'camera-retro'],
       backgroundImage: { color1: 'rgba(244, 67, 108, 1)', color2: 'rgba(244, 67, 108, 1)', url: 'photography.jpg', height: 'auto' },
       headerStyle: { bgStyle: 'text-secondary text-center' },
-      subheader: 'Attract potential customers with creative photography',
+      subheader: 'Making awesomeness timeless through awesome creative photography',
       subheaderStyle: { color: 'text-primary', buttonVariant: 'info' },
       content:
         [
           {
-
-            text: 'Visual communication has reached new heights with digital and social media marketing resulting in digital photography, becoming an essential part of product or service promotion. Digital photography is widely used in website design and is a great way to make a website more attractive and eye-catching.'
-          },
-          {
-            text: 'Companies need to grab the attention of their target audience. An online presence, such as a website is necessary for showing your product or brand to the world and reaching potential clients.<br/><br/>We will help you support this purpose with our website design capabilities and beautiful website photography. Visual elements increase users\' willingness to read the content. The human brain processes a limited amount of information at any given time; an eye-catching photograph can be processed faster and will take precedence.',
-            inlineImage: 'photography.jpg',
-            inlineImageText: 'We compliment our designs with our own creative photography inspired by the wonders of New Zealand',
-            inlineImageStyle: 'inlineImage75'
-          },
-          {
-            text: 'Combining written text with visual content is an excellent way of grabbing a target audience\'s attention. Captivating digital photography drives emotional responses about a brand.Digital photos help users visualize the product or service they want to use and imagine how it will help improve their lives.'
-          },
-          {
-            inlineImage: 'crew.jpg',
-            inlineImageRight: true,
-            inlineImageText: 'We love creating partnerships wherever possible to offer the best New Zealand can offer in terms of creativeness and business success',
-            inlineImageStyle: 'inlineImage50',
-            text: 'Our experienced in house photographer will assist you in showcasing your product or services online with eye-catching, high-quality digital photography.<br/> <br/> Contact us with your requirements.'
-          }
-        ],
+            text: 'Visual communication has reached new heights with digital photography becoming an essential part of product or service promotion. Digital photography is widely used in website design and is a great way to make a website more attractive and eye-catching.'
+          }],
+      features: [
+        {
+          header: 'Professional',
+          text:
+            'Professional goal-driven photography to help you get the results you need.',
+          icon: ['fas', 'greater-than-equal']
+        },
+        {
+          header: 'Win-win',
+          text:
+            'Photography to help you achieve your goals and help us retain our reputation.',
+          icon: ['fas', 'award']
+        },
+        {
+          header: 'Vanilla',
+          text:
+            'Photography from film and manual digital, RAW and JPEG formats and in a way to minimise post-processing.',
+          icon: ['fab', 'servicestack']
+        }
+      ],
       marketing: {
         header: 'Enhance your website visuals',
         subheader: 'Compliment your branding',
@@ -290,74 +286,88 @@ export const state = () => ({
       },
       slides: [
         {
-          image: 'art.jpg',
-          imageText: 'Art works'
+          image: 'chelsea-pensioner-royal-hospital-candid.jpg',
+          imageText: 'Chelsea pensioner at the Chelsea Royal Hospital'
         },
         {
-          image: 'bee.jpg',
-          imageText: 'Natural bee'
+          image: 'pet-and-owner-portrait.jpg',
+          imageText: 'Owner and dog Cerchio Italy'
         },
         {
-          image: 'colluseum.jpg',
-          imageText: 'International landmarks and attractions'
+          image: 'pet-portrait.jpg',
+          imageText: 'Cat portrait'
         },
         {
-          image: 'flower.jpg',
-          imageText: 'Natural beauty in every detail'
+          image: 'portrait-street-children-portrait.jpg',
+          imageText: 'Children portrait'
         },
         {
-          image: 'mussels.jpg',
-          imageText: 'Natural beauty in every detail'
+          image: 'bee-flower-candid.jpg',
+          imageText: 'Bee merging from flower'
         },
         {
-          image: 'kitten.jpg',
-          imageText: 'Natural beauty in every detail'
+          image: 'bee-candid.jpg',
+          imageText: 'Bee at work'
         },
         {
-          image: 'food.jpg',
-          imageText: 'Delicious food in every detail'
+          image: 'mussels-portrait.jpg',
+          imageText: 'Mussels in the wild'
         },
         {
-          image: 'soupbowl.jpg',
-          imageText: 'Delicious food in every detail'
-        },
-        {
-          image: 'silhoette.jpg',
-          imageText: 'Creative photography'
+          image: 'silhoette-candid.jpg',
+          imageText: 'Creative silhoette of people waving'
         }
 
       ],
       price: { value: 1100, unit: 'package' },
-      cloud: [{ text: 'Website', value: 2000 },
-        { text: 'Design', value: 1900 },
-        { text: 'Optimization', value: 1800 },
-        { text: 'Websites', value: 1700 },
-        { text: 'Workshops', value: 1600 },
-        { text: 'Advertising', value: 1500 },
-        { text: 'Branding', value: 1400 },
-        { text: 'Partner', value: 1300 },
-        { text: 'Animation', value: 1200 },
-        { text: 'Content', value: 1100 },
-        { text: 'CMS', value: 1000 },
-        { text: 'SEO', value: 900 },
-        { text: 'Photography', value: 800 },
-        { text: 'Optimization', value: 700 },
-        { text: 'Websites', value: 600 },
-        { text: 'Workshops', value: 500 },
-        { text: 'Advertising', value: 400 },
-        { text: 'Branding', value: 300 },
-        { text: 'Partner', value: 200 },
-        { text: 'Animation', value: 100 },
-        { text: 'Content', value: 90 },
-        { text: 'CMS', value: 80 },
-        { text: 'Product', value: 70 }],
-      keywords: ['digital photography', 'creative photography', 'product photography', 'portrait photography', 'workshops']
+      keywords: [...commonKeywords, 'professional photographer in auckland', 'black and white photography', 'digital photography', 'film photography', 'creative photographer', 'product photographer', 'candid photographer']
     }
   ]
 })
 
-// export const getters = {
-//   totalServices: (state) => {
-//     return state.all.length
-//   }
-// }
+export const getters = {
+  links: (state) => {
+    return state.all.map((item) => {
+      return {
+        id: item.id,
+        title: item.linkTitle
+      }
+    })
+  },
+  summaries: (state) => {
+    return state.all.map((item) => {
+      return {
+        id: item.id,
+        title: item.linkTitle,
+        landing: item.landing,
+        backgroundImage: item.backgroundImage,
+        icon: item.icon
+      }
+    })
+  },
+  others: state => (id) => {
+    return state.all.filter(service => service.id !== id)
+  },
+  getServiceById: state => (id) => {
+    return state.all.find(service => service.id === id)
+  },
+  getRelatedSummaries: state => (id) => {
+    const service = state.all.find(service => service.id === id)
+    let otherSummaries
+    if (service.relatedServices && service.relatedServices.length > 0) {
+      otherSummaries = state.all.filter(item => (service.relatedServices.includes(item.id))).map(item => (
+        {
+          id: item.id,
+          title: item.linkTitle,
+          landing: item.landing,
+          backgroundImage: item.backgroundImage,
+          icon: item.icon
+        }
+      ))
+    }
+    return otherSummaries
+  },
+  total: (state) => {
+    return state.all.length
+  }
+}

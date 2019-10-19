@@ -1,18 +1,19 @@
 <template>
-  <b-container fluid class="w-75">
+  <b-container fluid class="w-100 mt-0 py-2 bg-gunmetal">
     <b-carousel
       :id="carouselId"
       v-model="slide"
-      :interval="1500"
+      :interval="interval"
       controls
       indicators
+      :no-touch="false"
+      no-hover-pause
       :img-width="imgwidth"
       :img-height="imgheight"
-      fade
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
-      <b-carousel-slide
+      <!-- <b-carousel-slide
         v-for="item in slides"
         :key="item.image"
         :img-src="item.processedImage"
@@ -20,18 +21,25 @@
         :img-width="imgwidth"
         :img-height="imgheight"
         :img-alt="item.imageText"
-      />
-      <!-- https://stackoverflow.com/questions/56004640/cannot-display-images-in-vuejs
-      https://github.com/geeogi/nuxt-responsive-loader
-      -->
-      <!-- <img
-          slot="img"
-          class="d-block img-fluid w-100"
-          width="1024"
-          height="480"
-          src="https://xxxxxx"
-          alt="image slot"
-      >-->
+      /> -->
+
+      <b-carousel-slide
+        v-for="item in slides"
+        :key="item.image"
+        :caption="item.caption"
+        :img-alt="item.imageText"
+      >
+        <template v-slot:img>
+          <img
+
+            class="d-block img-fluid w-100 carousel-img"
+            :width="imgwidth"
+            :height="imgheight"
+            :src="item.processedImage"
+            alt="image slot"
+          >
+        </template>
+      </b-carousel-slide>
     </b-carousel>
   </b-container>
 </template>
@@ -44,16 +52,16 @@ export default {
       default: 'default'
     },
     interval: {
-      type: String,
-      default: '3000'
+      type: Number,
+      default: 3500
     },
     imgwidth: {
       type: String,
-      default: '512'
+      default: '800'
     },
     imgheight: {
       type: String,
-      default: '240'
+      default: '450'
     },
     pslides: {
       type: Array,
@@ -107,13 +115,34 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style scoped  lang="scss">
 /* .carouselStyle {
   text-shadow: 1px 1px 2px #333;
 } */
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0.5, 0.5);
+  }
+  to {
+    -webkit-transform: scale(1.2, 1.2);
+  }
+}
 
-.carousel-inner > .item > img,
+@keyframes zoom {
+  from {
+    transform: scale(0.5, 0.5);
+  }
+  to {
+    transform:  scale(1.2, 1.2);
+  }
+}
+.carousel-inner > .carousel-item > img {
+  -webkit-animation: zoom 5s;
+  animation: zoom 5s;
+}
+/* .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   width: 100%;
-}
+} */
+
 </style>

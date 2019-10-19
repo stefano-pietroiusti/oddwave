@@ -1,6 +1,4 @@
 pages/about/*
 pages/demos/*
 serverMiddleware/*
-store/client.js
-store/contact.js
 store/index.js

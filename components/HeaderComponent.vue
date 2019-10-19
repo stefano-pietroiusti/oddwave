@@ -1,33 +1,15 @@
 <template>
-  <header class="text-center p-3 text-primary">
-    <h1 v-if="pheader" class="p-5">
+  <b-container fluid class="text-center p-3 text-primary bg-secondary" :style="gradient">
+    <h1 v-if="pheader" class="p-2">
       {{ pheader }}
     </h1>
-    <h2 v-if="psubheader" class="p-2">
+    <h2 v-if="psubheader" class="p-3">
       {{ psubheader }}
     </h2>
-    <h3 v-if="psubtitle" class="p-5">
+    <h3 v-if="psubtitle" class="p-2">
       {{ psubtitle }}
     </h3>
-
-    <!-- <b-container fluid :class="fontcolor">
-      <b-row v-if="pheader">
-        <b-col class="py-4">
-          <h1>{{ pheader }}</h1>
-        </b-col>
-      </b-row>
-      <b-row v-if="psubheader" class="row py-4">
-        <b-col>
-          <h2>{{ psubheader }}</h2>
-        </b-col>
-      </b-row>
-      <b-row v-if="psubtitle" class="row py-4">
-        <b-col>
-          <h3>{{ psubtitle }}</h3>
-        </b-col>
-      </b-row>
-    </b-container> -->
-  </header>
+  </b-container>
 </template>
 <script>
 /* eslint-disable */
@@ -51,20 +33,50 @@ export default {
         return {
           color1: 'rgba(85, 255, 0, 0.2)',
           color2: 'rgba(0, 255, 255, 0.5)',
-          url: '/imgs/seodigital.jpg'
+          url: undefined,
+          height: 100
         }
-      }
-    },
-    pstyle: {
-      type: Object,
-      default() {
-        return { color: 'text-primary', buttonVariant: 'info' }
       }
     }
   },
   computed: {
-    fontcolor() {
-      return this.pstyle.color
+    bannerImagePath() {
+      if (!this.pbgimage.url) {
+        return
+      }
+      const fileName = this.pbgimage.url
+      return {
+        '1': require(`~/assets/imgs/banner/${fileName}?size=320`),
+        '2': require(`~/assets/imgs/banner/${fileName}?size=768`)
+      }
+    },
+    gradient() {
+      if (!this.pbgimage.url) {
+        return
+      }
+      const image1x = this.bannerImagePath['1']
+      const image2x = this.bannerImagePath['2']
+      return {
+        backgroundImage: `linear-gradient(45deg,  ${this.pbgimage.color1}, ${this.pbgimage.color2}), url(${image1x}), -webkit-image-set(url(${image1x}) 1x, url(${image2x}) 2x)`,
+        backgroundAttachment: 'fixed',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover'
+      }
+    },
+    background() {
+      if (!this.pbgimage) {
+        return
+      }
+      const fileName = require(`~/assets/imgs/banner/${this.pbgimage.url}`)
+      const backgroundImage = this.pbgimage.url ? `url(${fileName})` : undefined
+      return {
+        backgroundImage,
+        backgroundAttachment: 'fixed',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover'
+      }
     }
   }
 }

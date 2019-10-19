@@ -20,7 +20,7 @@
   </header>
 </template>
 <script>
-import backgroundUrl from '~/assets/imgs/odd-wave-bg-1.jpg'
+import backgroundUrl from '~/assets/imgs/banner/contact.jpg'
 
 /* eslint-disable */
 export default {

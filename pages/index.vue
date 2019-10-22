@@ -105,8 +105,8 @@ export default {
       title:
         'Web design, SEO and digital marketing services - North Shore, Auckland, Waikato, New Zealand',
       description:
-        'Custom web design and web apps development, search engine optimization, google ads management, data engineering services for New Zealand',
-      header: 'Custom Website Design & SEO services',
+        'Custom web design, web app development, search engine optimization, ppc, google ads management, cloud data engineering, Auckland, New Zealand',
+      header: 'Custom Website Design & SEO',
       subheader: 'Grow your business online',
       headerLanding: 'SIMPLE. SMART. FAST. FLEXIBLE.',
       subheaderLanding:
@@ -119,7 +119,7 @@ export default {
         height: '20vh'
       },
       subtitle:
-        "It does not matter what business you run, we can help you. <br/>We don't just provide custom website design & digital marketing solutions. <br/>We market our clients businesses as if they were our own.",
+        "We provide custom website design & digital marketing solutions from Auckland, New Zealand. <br/>We market our clients' businesses as if they were our own.",
       // subtitle:
       //   'Create a mobile first website with us <br/> using web technologies that are lightweight, fast and trustworthy. Design and optimise your content with us to make it useful   this with content & digital marketing solutions.',
 
@@ -170,7 +170,7 @@ export default {
         },
         {
           text:
-            "We have 20 years of experience in the world of Web, Data and Search across a variety of industries. Everything we do is aimed at producing results that our clients want for their businesses. We're based on the North Shore, Auckland, and service all of New Zealand."
+            "Everything we do is aimed at producing results that our clients want for their businesses. We're based on the North Shore, Auckland, and service all of New Zealand."
         }
       ],
       footerContent: [

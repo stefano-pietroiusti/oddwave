@@ -60,14 +60,14 @@
           </div>
         </div>
         </b-col>-->
-        <b-col sm="12" md="12" lg="4" xl="4" class="text-center">
+        <b-col sm="12" md="12" lg="4" xl="4" class="text-right">
           <img
             :src="require(`~/assets/imgs/banner/responsivedevices.png`)"
             alt="bg-img"
             class="bg-img"
           >
           <div class="hero-img-1 w-50 h-50">
-            <img :src="require(`~/assets/imgs/banner/pwa.png?size=200`)" alt="hero-img">
+            <img :src="require(`~/assets/imgs/banner/pwa.png?size=180`)" alt="hero-img">
           </div>
         </b-col>
       </b-row>
@@ -316,13 +316,12 @@ export default {
 
 .bg-img {
   position: absolute;
-  left: -30%;
-  width: 80%;
-  z-index: 1;
+  left: 0%;
+  width: 65%;
 }
 .hero-img-1 {
   position: relative;
-  left: 5%;
+  left: 30%;
   width: 50%;
   height: 50%;
   z-index: 100;

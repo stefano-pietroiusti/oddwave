@@ -1,16 +1,9 @@
 <template>
   <b-container fluid class="contactContainer p-0 m-0 text-primary text-medium w-100 text-left">
-    <b-container
-      fluid
-      :style="gradient"
-      class="contactBackground align-items-center text-center"
-    >
-      <!-- <h2>
-        The Odd Wave Ltd Website Design & SEO
-        <br>Auckland, New Zealand
-      </h2> -->
+    <b-container fluid :style="gradient" class="contactBackground align-items-center text-center">
       <p class="watermark">
-        The Odd Wave Ltd<br>Websites & SEO
+        The Odd Wave Ltd
+        <br>Websites & SEO
         <br>Auckland, New Zealand
       </p>
     </b-container>
@@ -57,15 +50,27 @@ export default {
           hid: 'description',
           name: 'description',
           content: this.description
+        },
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content: this.keywords.join()
         }
       ]
     }
   },
   data (context) {
+    const commonKeywords = [
+      'fun workshops auckland',
+      'workshops auckland',
+      'workshops rotorua',
+      'workshops new zealand',
+      'workshops NZ'
+    ]
     return {
-      title: 'Start or upgrade to a new website with the Odd Wave team',
+      title: 'Websites, SEO & Photography Auckland, NZ',
       description:
-        'Connect with the Odd Wave Ltd for great website designs, applications, SEO, Auckland, New Zealand',
+        'Great Website Design Auckland, SEO Auckland & Photography Auckland, New Zealand',
       animeheader: "LET'S CREATE SOME AWESOMENESS",
       header: 'Connect for a great website',
       subheader: 'Helping all New Zealand from Auckland, North Shore',
@@ -73,22 +78,15 @@ export default {
       backgroundImage: {
         color1: 'rgba(102, 126, 234, 1)',
         color2: 'rgba(118, 75, 162, 1)',
-        // rgba(147, 165, 207, 1)
-        // rgba(228, 239, 233, 1)
-        // rgba(255, 126, 179, 1)
-        // rgba(102, 126, 234, 1)
-        // rgba(118, 75, 162, 1)
         url: 'nz.svg',
         height: 100
       },
       style: { bgStyle: 'text-secondary text-center' },
       keywords: [
-        'contact',
-        'websites',
-        'seo',
-        'vanillajs',
-        'data engineering',
-        'workshops'
+        ...commonKeywords,
+        'websites north shore', 'websites browns bay', 'websites albany', 'websites NZ', 'websites new zealand',
+        'seo auckland', 'seo albany', 'seo browns bay', 'seo north shore', 'seo NZ', 'web app development albany', 'web app development browns bay', 'web app development north shore', 'web app development auckland', 'web app development NZ', 'web app development new zealand',
+        'cloud data engineer auckland', 'cloud data engineer new zealand', 'photography browns bay', 'photography north shore', 'photography NZ', 'photography auckland', 'photography new zealand'
       ]
     }
   },
@@ -131,7 +129,6 @@ export default {
 }
 </script>
 <style scoped>
-
 p.watermark {
   width: 100%;
   height: 100%;
@@ -142,7 +139,7 @@ p.watermark {
   font-family: inherit;
   color: #000;
   font-size: 5vw;
-      z-index: -1;
+  z-index: -1;
   opacity: 0.5;
 }
 

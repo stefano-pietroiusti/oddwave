@@ -94,7 +94,7 @@ export default {
         },
         {
           hid: 'keywords',
-          name: 'description',
+          name: 'keywords',
           content: this.service.keywords.join()
         }
       ]

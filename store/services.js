@@ -1,7 +1,84 @@
-const commonKeywords = ['professional', 'workshops', 'auckland', 'rotorua', 'new zealand', 'NZ']
+const commonKeywords = [
+  'fun workshops auckland',
+  'workshops auckland',
+  'workshops rotorua',
+  'workshops new zealand',
+  'workshops NZ',
+  'auckland', 'rotorua', 'new zealand', 'NZ']
 
 export const state = () => ({
   all: [
+    {
+      id: 'website-design-build-auckland',
+      variant: 'rwcyellow',
+      animate: 'bounceInLeft',
+      title: 'Website Design & Web Development',
+      linkTitle: 'Website Design & Web Development',
+      description: 'Custom mobile-first web design and web application development from good practises and standards to target mobile & web in one go. Made with passion to grow brand loyalty, trust & sales.',
+      landing: { header: 'Website Design & Web Development', content: 'Here at The Odd Wave, we design and develop robust, cutting edge websites using stable and lightweight frameworks built to last. We avoid clunk and overkill and love keeping things simple even when developing to solve the most complex problems. We continuously test and audit code and content for performance, accessibility, best practices and SEO to give you excellent quality and ROI.' },
+      header: 'Custom Mobile First Web Design & Web Apps Development',
+      icon: ['fab', 'dev'],
+      backgroundImage: { color1: 'rgba(46, 217, 195, 1)', color2: 'rgba(46, 217, 195, 1)', url: 'webdesign.jpg', height: 'auto' },
+      headerStyle: { bgStyle: 'text-secondary text-center' },
+      subheader: 'Designing and developing for quality, loyalty, performance and trust',
+      subheaderStyle: { color: 'text-primary', buttonVariant: 'info' },
+      content:
+        [
+          {
+            text: 'We will design and develop a website that performs, looks great and continuously conforms to standards and best practices. We avoid clunk, overkill, quick template-based technologies and strive towards creativeness with quality, performance and trust. <br/>We take the time to understand your business and requirements so we can develop a website to help you stand out and grow your business further.'
+          },
+          {
+            header: 'Mobile-first Content-first design',
+            text: 'Content-first design principles are used to structure our websites in a way to guide users to achieve their goals as quickly as possible. Fit for purpose mobile-first design principles are followed so whatever we create looks good and performs well on the smallest mobile screen first and then naturally translates well to bigger screens.'
+          },
+          {
+            header: 'Continuous improvement',
+            text: 'Our passion for finding and using the right technology to solve problems drives us to research, test and apply the right improvements continuously.'
+          },
+          {
+            header: 'Websites for everyone',
+            text: 'A wide range of tools and services are used to make sure we adhere to guidelines and recommendations for making websites and web content accessible and useful to everyone. Our websites are continuously tested for accessibility and adhere to good practices and standards so as to include people with disabilities or special needs and people who rely on assistive technologies.'
+          },
+          {
+            header: 'Open source',
+            text: 'Open-source tools, frameworks and plugins help us keep things lean, flexible, secure and reliable and allow us to create with the highest quality.'
+          }
+        ],
+      features: [
+        {
+          header: 'Professional',
+          text:
+            'Professional webmaster services to help you manage your online presence. Affordable, continuous and trustworthy.',
+          icon: ['fas', 'greater-than-equal']
+        },
+        {
+          header: 'Content-First Mobile-First',
+          text:
+            'Content-First Mobile-First design, development and testing for websites that are consistent and perform well for everyone.',
+          icon: ['fas', 'mobile-alt']
+        },
+        {
+          header: 'Vanilla',
+          text:
+            'Development from set standards, good practices, established open source frameworks, Vanilla Javascript, HTML, CSS and NodeJs. All resulting in minimal complexity and continuous improvement.',
+          icon: ['fab', 'servicestack']
+        },
+        {
+          header: 'Modern',
+          text: 'Our chosen technologies are modern, light-weight, efficient and future-proof resulting in websites that are quick, easy to support and scale.',
+          icon: ['fas', 'mobile-alt']
+        }
+      ],
+      price: { value: 2400, unit: 'package' },
+      relatedServices: ['seo-auckland', 'creative-photographer-auckland'],
+      rate: 'hour',
+      marketing: {
+        header: 'Join us',
+        subheader: 'Remain competitive and be where the world is going',
+        content: 'Using proven vanilla lightweight and super-fast web technologies'
+      },
+      keywords: [...commonKeywords, 'website design', 'web design', 'web development', 'custom websites', 'pwa web apps development', 'progressive web apps development', 'mobile web design', 'nuxtjs', 'javascript', 'Vanilla JS', 'data engineering']
+    },
     {
       id: 'seo-auckland',
       variant: 'rwcred',
@@ -37,14 +114,10 @@ export const state = () => ({
           text: 'Proper optimization makes a website rank on the first page of SERP. The common belief is that people generally check the first two pages of search engine results. Approximately 74% of online users use search engines to find products and services. Keyword research and the proper use of keywords (including avoiding keyword stuffing) directly influence the complexity and readability of the content. Keyword-rich page content makes a substantial difference in your Google rankings and search engine results. '
         },
         {
-          // inlineImage: 'seo.jpg',
-          // inlineImageRight: true,
-          // inlineImageText: 'Advertising your business is of utmost importance. When any company goes online, pay per click advertising (PPC) works best to generate a considerable amount of web traffic. SEO allows a great deal of free advertising. ',
-          // inlineImageStyle: 'inlineImage75',
           text: 'Optimized content increases organic traffic to your website resulting in lead generation, increased sales, and improve ROI.Some search engine optimization practices are Technical SEO and On-Page SEO. Technical SEO determines the quality of a website based on factors like speed and code. Optimizing the technical aspects of the website enables search engines to crawl and index the site, which is beneficial to obtain a higher search engine rank in Google.Some steps to take in the direction of technical search engine optimization include fixing broken links. , removing duplicate pages, testing, and improving website speed. also, ensuring the website is mobile-friendly.'
         },
         {
-          text: 'Get a serious advantage over your competitors and be found by more of the right customer. Contact The Odd Wave team for a free quotation.<br/><br/>We have various SEO packages to choose from with secure monthly payments and no fixed contract, and you can cancel anytime.'
+          text: 'We have various SEO packages to choose from, payable on a monthly basis with no fixed contract, and you can cancel anytime.'
         }
       ],
       price: { value: 600, unit: 'month' },
@@ -173,77 +246,7 @@ export const state = () => ({
         { text: 'Product', value: 70 }],
       keywords: ['pay per click', 'google ads', 'bing ads', 'microsoft advertising', 'advertising', 'workshops']
     },
-    {
-      id: 'website-design-build-auckland',
-      variant: 'rwcyellow',
-      animate: 'bounceInLeft',
-      title: 'Website Design & Web Development',
-      linkTitle: 'Website Design & Web Development',
-      description: 'Custom mobile-first web design and web application development from good practises and standards to target mobile & web in one go. Made with passion to grow brand loyalty, trust & sales.',
-      landing: { header: 'Website Design & Web Development', content: 'Here at The Odd Wave, we design and develop robust, cutting edge websites using stable and lightweight frameworks built to last. We avoid clunk and overkill and love keeping things simple even when developing to solve the most complex problems. We continuously test and audit code and content for performance, accessibility, best practices and SEO to give you excellent quality and ROI.' },
-      header: 'Custom Mobile First Web Design & Web Apps Development',
-      icon: ['fab', 'dev'],
-      backgroundImage: { color1: 'rgba(46, 217, 195, 1)', color2: 'rgba(46, 217, 195, 1)', url: 'webdesign.jpg', height: 'auto' },
-      headerStyle: { bgStyle: 'text-secondary text-center' },
-      subheader: 'Designing and developing for quality, loyalty, performance and trust',
-      subheaderStyle: { color: 'text-primary', buttonVariant: 'info' },
-      content:
-        [
-          {
-            text: 'We will design and develop a website that performs, looks great and continuously conforms to standards and best practices. We avoid clunk, overkill, quick template-based technologies and strive towards creativeness with quality, performance and trust. <br/>We take the time to understand your business and requirements so we can develop a website to help you stand out and grow your business further.'
-          },
-          {
-            header: 'Mobile-first Content-first design',
-            text: 'Content-first design principles are used to structure our websites in a way to guide users to achieve their goals as quickly as possible. Fit for purpose mobile-first design principles are followed so whatever we create looks good and performs well on the smallest mobile screen first and then naturally translates well to bigger screens.'
-          },
-          {
-            header: 'Continuous improvement',
-            text: 'Our passion for finding and using the right technology to solve problems drives us to research, test and apply the right improvements continuously.'
-          },
-          {
-            header: 'Websites for everyone',
-            text: 'A wide range of tools and services are used to make sure we adhere to guidelines and recommendations for making websites and web content accessible and useful to everyone. Our websites are continuously tested for accessibility and adherence to good practices and standards to include people with disabilities or special needs and people who rely on assistive technologies.'
-          },
-          {
-            header: 'Open source',
-            text: 'Open-source tools, frameworks and plugins help us keep things lean, flexible, secure and reliable and allow us to create with the highest quality.'
-          }
-        ],
-      features: [
-        {
-          header: 'Professional',
-          text:
-            'Professional webmaster services to help you manage your online presence. Affordable, continuous and trustworthy.',
-          icon: ['fas', 'greater-than-equal']
-        },
-        {
-          header: 'Content-First Mobile-First',
-          text:
-            'Content-First Mobile-First design, development and testing for websites that are consistent and perform well for everyone.',
-          icon: ['fas', 'mobile-alt']
-        },
-        {
-          header: 'Vanilla',
-          text:
-            'Development from set standards, good practices, established open source frameworks, Vanilla Javascript, HTML, CSS and NodeJs. All resulting in minimal complexity and continuous improvement.',
-          icon: ['fab', 'servicestack']
-        },
-        {
-          header: 'Modern',
-          text: 'Our chosen technologies are modern, light-weight, efficient and future-proof resulting in websites that are quick, easy to support and scale.',
-          icon: ['fas', 'mobile-alt']
-        }
-      ],
-      price: { value: 2400, unit: 'package' },
-      relatedServices: ['seo-auckland', 'creative-photographer-auckland'],
-      rate: 'hour',
-      marketing: {
-        header: 'Join us',
-        subheader: 'Remain competitive and be where the world is going',
-        content: 'Using proven vanilla lightweight and super-fast web technologies'
-      },
-      keywords: [...commonKeywords, 'website design', 'web design', 'web development', 'custom websites', 'pwa web apps development', 'progressive web apps development', 'mobile web design', 'nuxtjs', 'javascript', 'Vanilla JS', 'data engineering']
-    },
+
     {
       id: 'creative-photographer-auckland',
       variant: 'rwcblue',
@@ -251,7 +254,7 @@ export const state = () => ({
       title: 'Creative Photography',
       linkTitle: 'Creative Photography',
       description: 'Get creative with great photography using film and digital. Creative photography for capturing the best of people, products, functions and candid moments.',
-      landing: { header: 'Creative Photography', content: 'Compliment your products, services, websites and digital signage with our creative photography from using both film and digital. Making awesomeness timeless through awesome creative photography.' },
+      landing: { header: 'Creative Photography', content: 'Compliment your products, services, websites and digital signage with our creative photography from using both film and digital. Making great things timeless through awesome & creative photography.' },
       header: 'Creative Photography',
       icon: ['fas', 'camera-retro'],
       backgroundImage: { color1: 'rgba(244, 67, 108, 1)', color2: 'rgba(244, 67, 108, 1)', url: 'photography.jpg', height: 'auto' },

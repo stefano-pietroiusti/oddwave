@@ -13,7 +13,7 @@
         class="backgroundContainer align-items-center text-center"
       >
         <p class="watermark">
-          The Odd Wave Ltd
+          The Odd Wave Ltd <br><br>Auckland<br><br>NZ
         </p>
       </b-container>
       <HeaderComponent :pheader="header" pcontainerclass="transparent" />
@@ -86,7 +86,7 @@ export default {
         },
         {
           hid: 'keywords',
-          name: 'description',
+          name: 'keywords',
           content: this.keywords.join()
         }
       ]
@@ -94,8 +94,11 @@ export default {
   },
   data (context) {
     const commonKeywords = [
-      'professional',
-      'workshops',
+      'fun workshops auckland',
+      'workshops auckland',
+      'workshops rotorua',
+      'workshops new zealand',
+      'workshops NZ',
       'auckland',
       'rotorua',
       'new zealand',
@@ -105,8 +108,8 @@ export default {
       title:
         'Web design, SEO and digital marketing services - North Shore, Auckland, Waikato, New Zealand',
       description:
-        'Custom web design and web apps development, search engine optimization, google ads management, data engineering services for New Zealand',
-      header: 'Custom Website Design & SEO services',
+        'Custom web design, web app development, search engine optimization, ppc, google ads management, cloud data engineering, Auckland, New Zealand',
+      header: 'Custom Website Design & SEO',
       subheader: 'Grow your business online',
       headerLanding: 'SIMPLE. SMART. FAST. FLEXIBLE.',
       subheaderLanding:
@@ -119,7 +122,7 @@ export default {
         height: '20vh'
       },
       subtitle:
-        "It does not matter what business you run, we can help you. <br/>We don't just provide custom website design & digital marketing solutions. <br/>We market our clients businesses as if they were our own.",
+        "We provide custom website design & digital marketing solutions from Auckland, New Zealand. <br/>We market our clients' businesses as if they were our own.",
       // subtitle:
       //   'Create a mobile first website with us <br/> using web technologies that are lightweight, fast and trustworthy. Design and optimise your content with us to make it useful   this with content & digital marketing solutions.',
 
@@ -170,7 +173,7 @@ export default {
         },
         {
           text:
-            "We have 20 years of experience in the world of Web, Data and Search across a variety of industries. Everything we do is aimed at producing results that our clients want for their businesses. We're based on the North Shore, Auckland, and service all of New Zealand."
+            "Everything we do is aimed at producing results that our clients want for their businesses. We're based on the North Shore, Auckland, and service all of New Zealand."
         }
       ],
       footerContent: [
@@ -190,12 +193,11 @@ export default {
       ],
       keywords: [
         ...commonKeywords,
-        'Web Design',
-        'Website design',
-        'Web development',
-        'Web Apps Development',
-        'SEO',
-        'photography'
+        'Web Design north shore', 'Web Design new zealand', 'Web Design NZ',
+        'websites north shore', 'websites browns bay', 'websites albany', 'websites NZ', 'websites new zealand',
+        'seo auckland', 'seo albany', 'seo browns bay', 'seo north shore', 'seo NZ', 'web app development albany', 'web app development browns bay', 'web app development north shore', 'web app development auckland', 'web app development NZ', 'web app development new zealand',
+        'cloud data engineer auckland', 'cloud data engineer new zealand', 'photography browns bay', 'photography north shore', 'photography NZ', 'photography auckland', 'photography new zealand'
+
       ]
     }
   },

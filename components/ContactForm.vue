@@ -101,7 +101,7 @@
           </b-button>
         </b-form>
       </b-col>
-      <b-col class="p-3 text-left">
+      <b-col class="p-3 text-left text-small">
         <!-- <h6>{{ getBase }}</h6> -->
         <span v-html="companyphone1" />
         <br>

@@ -5,13 +5,13 @@
         <b-container
           class="productContainer bg-white text-primary text-center text-large"
         >
-          <h2 class="bg-white text-primary text-center text-large">
+          <h2 class="bg-white text-primary text-large">
             {{ product.header }}
           </h2>
-          <h3 class="text-center pt-2">
+          <h3 class="pt-5">
             {{ product.subheader }}
           </h3>
-          <h2>
+          <h2 class="pt-5">
             Only
             <span id="price" class="text-success text-large">${{ product.price.value }}</span> NZD + GST
           </h2>
@@ -19,7 +19,7 @@
       </b-col>
     </b-row>
     <b-row no-gutters>
-      <b-col sm="12" md="12" lg="12" xl="12" class="text-center text-success">
+      <b-col sm="12" md="12" lg="12" xl="12" class="text-center text-success pt-2">
         <h2>
           what you get?
         </h2>

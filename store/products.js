@@ -69,6 +69,11 @@ export const state = () => ({
         {
           header: 'Google analytics',
           icon: ['fas', 'check']
+        },
+        {
+          header: 'Scalable to optional add-ons after consultation',
+          text: 'Additional pages, online customer chat, ecommerce, pwa, monthly management, maintenance & support, custom feature development, content writing',
+          icon: ['fas', 'check']
         }
       ],
       addons: [

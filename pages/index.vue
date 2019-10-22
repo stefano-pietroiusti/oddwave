@@ -1,37 +1,39 @@
 <template>
-  <b-container fluid class="text-light text-left p-0">
-    <HeaderComponentLanding :pheader="subheader" :psubtitle="subtitle" />
+  <b-container id="mainContainer" fluid class="text-light text-left p-0">
+    <HeaderComponentLanding :pheader="subheader" :psubtitle="subtitle" pbackground="cyan" />
 
-    <WavesComponent :header="true" />
+    <HeaderComponent :psubheader="headerLanding" pclass="text-large pt-5" />
 
-    <HeaderComponent :psubheader="headerLanding" :psubtitle="subheaderLanding" />
+    <ProductComponent :product="featuredProduct" />
 
-    <PromoComponent :features="features" />
+    <b-container fluid class="roundedContainer text-primary">
+      <b-container
+        fluid
+        :style="gradient"
+        class="backgroundContainer align-items-center text-center"
+      >
+        <p class="watermark">
+          The Odd Wave Ltd
+        </p>
+      </b-container>
+      <HeaderComponent :pheader="header" pcontainerclass="transparent" />
+      <PromoComponent class="promoComponent" :features="features" variant="primary" />
 
-    <HeaderComponent :pheader="header" />
+      <TextImageComponent
+        v-for="(item,i) in content"
+        :key="i"
+        :pcontent="{header: item.header, text: item.text, list: item.list, bgImage: item.bgImage, inlineImage: item.inlineImage, inlineImageText: item.inlineImageText, inlineImageRight: item.inlineImageRight }"
+        :pstyle="(item.dark) ? { bgStyle: 'w-100 text-secondary text-left px-4 p-2', inlineImageStyle: item.inlineImageStyle} : { bgStyle: 'w-100 text-primary text-left  px-4 p-2', inlineImageStyle: item.inlineImageStyle}"
+      />
+      <!-- <span class="text-center text-medium">
+        <ButtonComponent btext="Get started" blink="/contact/" pvariant="outline-success" />
+      </span>-->
+      <ServicesComponent class="servicesComponent" :services="summaries" />
+    </b-container>
 
-    <TextImageComponent
-      v-for="(item,i) in content"
-      :key="i"
-      :pcontent="{header: item.header, text: item.text, list: item.list, bgImage: item.bgImage, inlineImage: item.inlineImage, inlineImageText: item.inlineImageText, inlineImageRight: item.inlineImageRight }"
-      :pstyle="(item.dark) ? { bgStyle: 'parralaxNormal w-100 text-secondary text-left px-4 p-2', inlineImageStyle: item.inlineImageStyle} : { bgStyle: 'parralaxNormal w-100 text-primary text-left  px-4 p-2', inlineImageStyle: item.inlineImageStyle}"
-    />
-    <ButtonComponent btext="Get started" blink="/contact/" />
-
-    <ServicesComponent :services="summaries" />
-    <!-- <ServicesComponent services=""
-      v-for="(item, index) in summaries"
-      :key="item.id"
-      :item="item"
-      :index="index"
-      :ptext="item.landing"
-      :pimage="{color: item.backgroundImage.color1, url: item.backgroundImage.url}"
-      :pid="item.id"
-    />-->
-
-    <ButtonComponent btext="Get started" blink="/contact/" />
+    <!-- <ButtonComponent btext="Get started" blink="/contact/" /> -->
     <!-- <PartnersComponent /> -->
-    <WavesComponent :footer="true" />
+    <!-- <WavesComponent :footer="true" /> -->
   </b-container>
 </template>
 
@@ -40,25 +42,26 @@ import { mapGetters } from 'vuex'
 // import AnimeBannerWordsComponent from '@/components/AnimeBannerWordsComponent'
 import HeaderComponentLanding from '@/components/HeaderComponentLanding'
 import HeaderComponent from '@/components/HeaderComponent'
-import ButtonComponent from '@/components/ButtonComponent'
+// import ButtonComponent from '@/components/ButtonComponent'
 import PromoComponent from '@/components/PromoComponent'
-
 import TextImageComponent from '@/components/TextImageComponent'
 // import PartnersComponent from '@/components/PartnersComponent'
 import ServicesComponent from '@/components/ServicesComponent'
-import WavesComponent from '@/components/WavesComponent'
+import ProductComponent from '@/components/ProductComponent'
+// import WavesComponent from '@/components/WavesComponent'
 
 export default {
   components: {
     // AnimeBannerWordsComponent,
     HeaderComponentLanding,
     HeaderComponent,
-    ButtonComponent,
+    // ButtonComponent,
     PromoComponent,
     TextImageComponent,
     // PartnersComponent,
     ServicesComponent,
-    WavesComponent
+    ProductComponent
+    // WavesComponent
   },
   head () {
     let content = `${process.env.baseUrl}${this.$route.path}`
@@ -80,21 +83,35 @@ export default {
           hid: 'description',
           name: 'description',
           content: this.description
+        },
+        {
+          hid: 'keywords',
+          name: 'description',
+          content: this.keywords.join()
         }
       ]
     }
   },
   data (context) {
+    const commonKeywords = [
+      'professional',
+      'workshops',
+      'auckland',
+      'rotorua',
+      'new zealand',
+      'NZ'
+    ]
     return {
       title:
-        'Mobile first web design, SEO and online marketing services - Auckland, New Zealand',
+        'Web design, SEO and digital marketing services - North Shore, Auckland, Waikato, New Zealand',
       description:
-        'Custom mobile first web design and web apps development, search engine optimization, google ads management services for New Zealand',
+        'Custom web design and web apps development, search engine optimization, google ads management, data engineering services for New Zealand',
       header: 'Custom Website Design & SEO services',
       subheader: 'Grow your business online',
-      headerLanding: 'MOBILE-FIRST. SIMPLE. SMART. FAST. FUTURE-PROOF.',
+      headerLanding: 'SIMPLE. SMART. FAST. FLEXIBLE.',
       subheaderLanding:
-        'We change the business life of our clients for good. The Odd Wave provides mobile-first web solutions , optimised content and online marketing solutions to take your business to the next level.',
+        'We change the business life of our clients for good. The Odd Wave provides content-first mobile-first web solutions and online marketing services to take your business to the next level.',
+      backgroundurl: 'nz.svg',
       headerImage: {
         color1: 'rgba(255, 0, 255, 0) 0%',
         color2: 'rgba(0, 255, 255, 0) 0%',
@@ -102,18 +119,17 @@ export default {
         height: '20vh'
       },
       subtitle:
-        'Create a custom mobile first website <br/> using lightweight web technologies & digital marketing solutions.',
+        "It does not matter what business you run, we can help you. <br/>We don't just provide custom website design & digital marketing solutions. <br/>We market our clients businesses as if they were our own.",
       // subtitle:
       //   'Create a mobile first website with us <br/> using web technologies that are lightweight, fast and trustworthy. Design and optimise your content with us to make it useful   this with content & digital marketing solutions.',
 
       linkText: 'GET STARTED',
       link: '/contact/',
       features: [
-
         {
           header: 'Content-First Mobile-First',
           text:
-            'Content-First Mobile-First web design, development and testing for websites and web applications that help everyone.',
+            'Content-First Mobile-First web design, development and testing for websites and web applications that can be used by everyone.',
           icon: ['fas', 'mobile-alt']
         },
         {
@@ -125,13 +141,13 @@ export default {
         {
           header: 'Continuous',
           text:
-            'Websites from continuous testing and auditing for an A+ grade in performance, accessibility, best practices and SEO.',
+            'Websites from continuous testing and auditing for an A+ grade in accessibility, best practices and SEO.',
           icon: ['fas', 'users']
         },
         {
           header: 'Optimised',
           text:
-            'We write content that ranks and remains searchable using SEO. Optimise your ROI from SEO with our conversion tracking and reporting.',
+            'We write and structure content to rank and remain searchable by search engines. Optimise your ROI from SEO with our conversion tracking and reporting.',
           icon: ['fas', 'chart-line']
         }
         // {
@@ -143,24 +159,19 @@ export default {
       content: [
         {
           text:
-            'The Odd Wave Limited offers a range of digital services to benefit your business and increase sales:',
+            'The Odd Wave Ltd offers a range of digital services to support your business and increase sales:',
           list: [
-            'Designing according to your brand, features, products and services',
-            'Managing, structuring and optimising content for search and social media',
-            'Managing your online presence going forward so you can focus more on your business',
-            'Suitable domain name registration',
-            'Choosing reliable hosts in terms of Speed, Security, Location and Affordability'
-            // 'Managing content in a way so that it can be used anywhere very easily',
+            'Designing to your brand, features, products and services',
+            'Integrating, managing, structuring and optimising content for search',
+            'Helping you manage your online presence so you can focus more on your business',
+            'Domain name registration',
+            'Hosting - choosing and switching to reliable hosts in terms of Speed, Security, Location and Affordability'
           ]
         },
         {
           text:
-            'We have 20 years of experience in the world of Web, Data and Search. Everything we do is aimed at producing the result our clients want for their businesses. Our company is located on the North Shore, Auckland, and we service all of New Zealand.'
+            "We have 20 years of experience in the world of Web, Data and Search across a variety of industries. Everything we do is aimed at producing results that our clients want for their businesses. We're based on the North Shore, Auckland, and service all of New Zealand."
         }
-        // {
-        //   text:
-        //     "Do you have a responsive website, and does your business rank on all search engines with trending keyword searches?  It is estimated that 97% of consumers use the Internet to find local businesses, don't miss out on being found by customers."
-        // }
       ],
       footerContent: [
         {
@@ -177,14 +188,92 @@ export default {
             "We're here to help you save money while reaching a more significant customer base than traditional methods."
         }
       ],
-      keywords:
-        'Web Design, PWA, Web Apps Development, SEO, data engineering, SEO workshops'
+      keywords: [
+        ...commonKeywords,
+        'Web Design',
+        'Website design',
+        'Web development',
+        'Web Apps Development',
+        'SEO',
+        'photography'
+      ]
     }
   },
   computed: {
-    ...mapGetters('services', ['summaries'])
+    ...mapGetters('services', ['summaries']),
+    ...mapGetters('products', ['getProductById']),
+    featuredProduct () {
+      const product = this.getProductById('business-starter')
+      return product
+    },
+    bannerImagePath () {
+      if (!this.backgroundurl) {
+        return
+      }
+      const fileName = this.backgroundurl
+      return require(`~/assets/imgs/banner/${fileName}?size=1080`)
+    },
+    gradient () {
+      return {
+        backgroundImage: `url(${this.bannerImagePath})`,
+        height: '100%',
+        width: '100%',
+        bottom: 0,
+        backgroundAttachment: 'fixed',
+        backgroundPosition: 'left',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'contain',
+        textTransform: 'uppercase'
+      }
+    }
   }
 }
 </script>
 <style scoped>
+.backgroundContainer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.promoComponent {
+  z-index: -2;
+  opacity: 1;
+}
+.servicesComponent {
+  z-index: 10;
+  opacity: 1;
+}
+p.watermark {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  margin-left: 20%;
+  top: 30%;
+  pointer-events: none;
+  font-family: inherit;
+  color: #000;
+  font-size: 5vw;
+  z-index: 20;
+  opacity: 0.5;
+}
+
+.roundedContainer {
+  position: relative;
+  border-radius: 11px;
+  line-height: 3rem;
+  font-weight: 300;
+  width: 95%;
+  z-index: 1;
+}
+
+#mainContainer {
+  width: 100%;
+}
+
 </style>

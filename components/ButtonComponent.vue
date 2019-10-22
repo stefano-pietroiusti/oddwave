@@ -2,7 +2,7 @@
   <b-container fluid class="m-0 p-5">
     <b-row>
       <b-col>
-        <b-button :variant="variant" :to="blink" class="text-medium btn-ripple">
+        <b-button :variant="variant" :to="blink" class="text-medium">
           {{ btext }}
         </b-button>
       </b-col>
@@ -20,23 +20,19 @@ export default {
       type: String,
       default: 'Get Started'
     },
-    pstyle: {
-      type: Object,
+    pvariant: {
+      type: String,
       default () {
-        return {
-          color: 'info',
-          buttonVariant: 'info'
-        }
+        return 'outline-success'
       }
     }
   },
   computed: {
     variant () {
-      return this.pstyle.buttonVariant
+      return this.pvariant
     }
   }
 }
-
 </script>
 <style scoped>
 </style>

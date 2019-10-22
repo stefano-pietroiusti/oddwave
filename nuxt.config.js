@@ -26,10 +26,6 @@ export default {
     author,
     nodeEnv
   },
-  layoutTransition: {
-    name: 'layout',
-    mode: 'out-in'
-  },
   pageTransition: {
     name: 'page',
     mode: 'out-in'
@@ -85,7 +81,7 @@ export default {
     '@/assets/scss/custom.scss'
   ],
   plugins: [
-    '~/plugins/anime.js',
+    // '~/plugins/anime.js',
     '~/plugins/fontawesome.js',
     { src: '~/plugins/vue-notifications', mode: 'client' },
     { src: '~/plugins/ga.js', mode: 'client' }
@@ -159,7 +155,7 @@ export default {
   ],
   build: {
     // vendor: ['vue-fb-customer-chat'],
-    extend (config, { isDev, isClient }) {
+    extend(config, { isDev, isClient }) {
       // Run ESLint on save
       if (isDev && isClient) {
         config.module.rules.push({

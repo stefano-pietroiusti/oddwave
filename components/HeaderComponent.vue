@@ -1,12 +1,12 @@
 <template>
-  <b-container fluid class="text-center p-3 text-primary bg-secondary" :style="gradient">
-    <h1 v-if="pheader" class="p-2">
+  <b-container fluid :class="`text-center p-3 text-primary ${pcontainerclass}`">
+    <h1 v-if="pheader" :class="`p-2 ${pclass}`">
       {{ pheader }}
     </h1>
-    <h2 v-if="psubheader" class="p-3">
+    <h2 v-if="psubheader" :class="`p-3 ${pclass}`">
       {{ psubheader }}
     </h2>
-    <h3 v-if="psubtitle" class="p-2">
+    <h3 v-if="psubtitle" :class="`p-2 ${pclass}`">
       {{ psubtitle }}
     </h3>
   </b-container>
@@ -24,6 +24,14 @@ export default {
       default: ''
     },
     psubtitle: {
+      type: String,
+      default: ''
+    },
+    pcontainerclass: {
+      type: String,
+      default: ''
+    },
+    pclass: {
       type: String,
       default: ''
     },

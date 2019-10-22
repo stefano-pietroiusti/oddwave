@@ -1,4 +1,10 @@
-const commonKeywords = ['professional', 'workshops', 'auckland', 'rotorua', 'new zealand', 'NZ']
+const commonKeywords = [
+  'fun workshops auckland',
+  'workshops auckland',
+  'workshops rotorua',
+  'workshops new zealand',
+  'workshops NZ',
+  'auckland', 'rotorua', 'new zealand', 'NZ']
 
 export const state = () => ({
   all: [

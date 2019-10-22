@@ -13,7 +13,7 @@
         class="backgroundContainer align-items-center text-center"
       >
         <p class="watermark">
-          The Odd Wave Ltd
+          The Odd Wave Ltd <br><br>Auckland<br><br>NZ
         </p>
       </b-container>
       <HeaderComponent :pheader="header" pcontainerclass="transparent" />
@@ -86,7 +86,7 @@ export default {
         },
         {
           hid: 'keywords',
-          name: 'description',
+          name: 'keywords',
           content: this.keywords.join()
         }
       ]
@@ -94,8 +94,11 @@ export default {
   },
   data (context) {
     const commonKeywords = [
-      'professional',
-      'workshops',
+      'fun workshops auckland',
+      'workshops auckland',
+      'workshops rotorua',
+      'workshops new zealand',
+      'workshops NZ',
       'auckland',
       'rotorua',
       'new zealand',
@@ -190,12 +193,11 @@ export default {
       ],
       keywords: [
         ...commonKeywords,
-        'Web Design',
-        'Website design',
-        'Web development',
-        'Web Apps Development',
-        'SEO',
-        'photography'
+        'Web Design north shore', 'Web Design new zealand', 'Web Design NZ',
+        'websites north shore', 'websites browns bay', 'websites albany', 'websites NZ', 'websites new zealand',
+        'seo auckland', 'seo albany', 'seo browns bay', 'seo north shore', 'seo NZ', 'web app development albany', 'web app development browns bay', 'web app development north shore', 'web app development auckland', 'web app development NZ', 'web app development new zealand',
+        'cloud data engineer auckland', 'cloud data engineer new zealand', 'photography browns bay', 'photography north shore', 'photography NZ', 'photography auckland', 'photography new zealand'
+
       ]
     }
   },

@@ -1,16 +1,21 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
-  <b-container id="contactForm" fluid class="bg-light text-primary w-100 text-left">
+  <b-container id="contactForm" fluid class="text-primary w-100 text-left">
     <b-row>
       <b-col cols="12" lg="6">
         <b-form
           v-if="show"
           small
-          class="text-primary bg-light text-left m-3"
+          class="text-primary text-left m-3"
           @submit="onSubmit"
           @reset="onReset"
         >
-          <b-form-group id="input-group-2" label="My name is:" label-for="input-2" label-size="lg">
+          <b-form-group
+            id="input-group-2"
+            label="My name is:"
+            label-for="input-2"
+            label-size="lg"
+          >
             <b-form-input
               id="input-2"
               v-model="form.name"
@@ -61,7 +66,7 @@
             id="input-group-4"
             label="I require help with the following:"
             label-size="lg"
-            class="bg-light text-primary mt-5"
+            class="text-success mt-5"
           >
             <b-form-checkbox-group
               id="Services-selection"
@@ -73,7 +78,12 @@
               size="lg"
             />
           </b-form-group>
-          <b-form-group id="input-group-5" label="I also need:" label-for="input-5" label-size="lg">
+          <b-form-group
+            id="input-group-5"
+            label="I also need:"
+            label-for="input-5"
+            label-size="lg"
+          >
             <b-form-textarea
               id="input-5"
               v-model="form.enquiry"
@@ -83,10 +93,10 @@
             />
           </b-form-group>
           <!-- <recaptcha @error="onError" @success="onSuccess" @expired="onExpired" /> -->
-          <b-button id="submit" type="submit" variant="success">
+          <b-button id="submit" type="submit" variant="success" class="text-medium">
             Submit
           </b-button>
-          <b-button id="reset" type="reset" variant="danger">
+          <b-button id="reset" type="reset" variant="danger" class="text-medium">
             Reset
           </b-button>
         </b-form>
@@ -137,9 +147,9 @@ export default {
       companyemail:
         '<a class="fa-contact" href="mailto:&#116;&#101;&#097;&#109;&#064;&#116;&#104;&#101;&#111;&#100;&#100;&#119;&#097;&#118;&#101;&#046;&#099;&#111;&#046;&#110;&#122;"><i class="fa fa-envelope fa-contact">&nbsp;</i>&nbsp;&#116;&#101;&#097;&#109;&#064;&#116;&#104;&#101;&#111;&#100;&#100;&#119;&#097;&#118;&#101;&#046;&#099;&#111;&#046;&#110;&#122;</a>',
       companyphone1:
-        '<a href="tel:+642108658172" class="fa-contact"><i class="fa fa-phone fa-contact">&nbsp;</i>&nbsp;+64&nbsp;210&nbsp;8658&nbsp;172</a>',
+        '<a href="tel:+642108658172" class="fa-contact"><i class="fa fa-phone fa-contact">&nbsp;</i>Jaline &nbsp;+64&nbsp;210&nbsp;8658&nbsp;172</a>',
       companyphone2:
-        '<a href="tel:+642108823769" class="fa-contact"><i class="fa fa-phone fa-contact">&nbsp;</i>&nbsp;+64&nbsp;210&nbsp;8823&nbsp;769</a>',
+        '<a href="tel:+642108823769" class="fa-contact"><i class="fa fa-phone fa-contact">&nbsp;</i>Stef &nbsp;+64&nbsp;210&nbsp;8823&nbsp;769</a>',
       form: {
         email: '',
         emailow: '',
@@ -158,16 +168,23 @@ export default {
     }
   },
   computed: {
+    bannerImagePath () {
+      if (!this.pbgimage.url) {
+        return
+      }
+      const fileName = this.pbgimage.url
+      return require(`~/assets/imgs/banner/${fileName}?size=1080`)
+    },
     gradient () {
       return {
-        backgroundImage: `linear-gradient(45deg, rgba(255, 255, 255, 1) 2%, rgba(255, 255, 255, 0) 100%), url(${this.pbgimage.url})`,
+        backgroundImage: `url(${this.bannerImagePath})`,
         height: '100%',
         width: '100%',
         bottom: 0,
         backgroundAttachment: 'fixed',
-        backgroundPosition: 'center',
+        backgroundPosition: 'left',
         backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
+        backgroundSize: 'contain',
         textTransform: 'uppercase'
       }
     },
@@ -274,16 +291,40 @@ export default {
 }
 </script>
 <style scoped>
+#contactFormContainer {
+  background: transparent;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#contactFormBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.2;
+}
 #contactForm {
+  background: transparent;
+  z-index: 10;
   text-transform: uppercase;
 }
-#email{
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 0;
-    width: 0;
-    z-index: -1;
+#email {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  z-index: -1;
 }
+
 </style>

@@ -1,24 +1,66 @@
 <template>
-  <b-container fluid role="tablist" class="p-5 w-100 text-secondary text-left bg-gunmetal">
-    <h5>Related Services</h5>
+  <b-container id="relatedContainer" fluid class="text-primary text-center p-2 m-0">
+    <b-row>
+      <b-col
+        sm="12"
+        md="12"
+        lg="12"
+        xl="12"
+        class="text-primary text-medium text-center relatedBackground"
+      >
+        Related Services
+      </b-col>
+    </b-row>
     <b-row>
       <b-col
         v-for="(item, i) in services"
         :key="i"
         sm="12"
-        md="6"
-        lg="4"
+        md="12"
+        lg="3"
         xl="3"
+        class="text-left relatedForeground"
       >
-        <b-card no-body class="my-0 w-100">
-          <b-card-header header-tag="header" class="p-1" role="tab">
-            <b-button block href="#" :to="`/services/${item.id}/`" variant="info" class="text-medium">
-              {{ item.landing.header }}
-            </b-button>
-          </b-card-header>
-        </b-card>
+        <b-button
+          :to="`/services/${item.id}/`"
+          :variant="`${item.variant}`"
+          :class="`text-small text-center m-1` "
+        >
+          {{ item.landing.header }}
+        </b-button>
       </b-col>
     </b-row>
+
+    <!-- <span class="text-primary text-medium text-center">Related Services<br>
+
+            <b-button
+        v-for="(item, i) in services"
+        :key="i"
+        href="#"
+        :to="`/services/${item.id}/`"
+        :variant="`${item.variant}`"
+        :class="`text-medium text-center m-1` "
+      >{{ item.landing.header }}</b-button>
+    </span>-->
+    <!-- <b-row>
+      <b-col
+        v-for="(item, i) in services"
+        :key="i"
+        sm="12"
+        md="12"
+        lg="12"
+        xl="12"
+        class=" text-left"
+      >
+        <nuxt-link
+          :to="`/services/${item.id}/`"
+          :title="item.id"
+          :class="`text-${item.variant}`"
+        >
+          {{ item.landing.header }}
+        </nuxt-link>
+      </b-col>
+    </b-row>-->
   </b-container>
 </template>
 <script>
@@ -57,5 +99,30 @@ export default {
 }
 </script>
 <style scoped>
+#relatedContainer {
+  position: relative;
+  border-radius: 11px;
+  background-color: rgba(238, 238, 238, 0.5);
+  width: 100%;
+  text-align: left;
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+}
+
+.relatedBackground {
+  border-radius: 11px;
+  /* background-color: #eee; */
+  color: #000;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0.5;
+    z-index: 1;
+}
+.relatedForeground {
+  opacity: 1;
+  z-index: 10;
+
+}
 
 </style>

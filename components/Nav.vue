@@ -25,7 +25,13 @@
                   :id="item.id"
                   :key="item.id"
                   :to="'/services/' + item.id + '/'"
+                  :class="`text-${item.variant}`"
                 >
+                  <font-awesome-icon
+                    :icon="
+                      item.icon"
+                    :class="`fa text-large text-${item.variant} my-2 fa-fw`"
+                  />
                   {{ item.linkTitle }}
                 </b-dropdown-item>
               </b-nav-item-dropdown>

@@ -7,7 +7,7 @@
   >
     <b-row>
       <b-col class="p-5">
-        <h2 :class="`animHeader animated ${animation}`">
+        <h2 class="animHeader">
           {{ pheader }}
         </h2>
       </b-col>
@@ -30,10 +30,6 @@ export default {
     variant: {
       type: String,
       default: 'rwcblue'
-    },
-    panimation: {
-      type: String,
-      default: 'zoomInRight'
     },
     pbgimage: {
       type: Object,
@@ -60,12 +56,6 @@ export default {
       }
       return this.pid
     },
-    animation() {
-      if (!this.panimation) {
-        return 'zoomInRight'
-      }
-      return this.panimation
-    },
     bannerImagePath() {
       if (!this.pbgimage.url) {
         return
@@ -88,38 +78,38 @@ export default {
         opacity: 0.8
       }
     }
+  },
+  mounted() {
+    let textWrapper = document.querySelector('.animHeader')
+    textWrapper.innerHTML = textWrapper.textContent.replace(
+      /\S/g,
+      "<span class='letter'>$&</span>"
+    )
+    const anims = []
+    this.$anime
+      .timeline({ loop: true })
+      .add({
+        targets: '.animHeader .letter',
+        translateY: [100, 0],
+        translateZ: 0,
+        opacity: [0, 1],
+        easing: 'easeOutExpo',
+        duration: 1400,
+        delay: (el, i) => 300 + 30 * i
+      })
+      .add({
+        targets: '.animHeader .letter',
+        translateY: [0, -100],
+        opacity: [1, 0],
+        easing: 'easeInExpo',
+        duration: 1200,
+        delay: (el, i) => 100 + 30 * i
+      })
   }
-  // mounted() {
-  //   let textWrapper = document.querySelector('.animHeader')
-  //   textWrapper.innerHTML = textWrapper.textContent.replace(
-  //     /\S/g,
-  //     "<span class='letter'>$&</span>"
-  //   )
-  //   const anims = []
-  //   this.$anime
-  //     .timeline({ loop: true })
-  //     .add({
-  //       targets: '.animHeader .letter',
-  //       translateY: [100, 0],
-  //       translateZ: 0,
-  //       opacity: [0, 1],
-  //       easing: 'easeOutExpo',
-  //       duration: 1400,
-  //       delay: (el, i) => 300 + 30 * i
-  //     })
-  //     .add({
-  //       targets: '.animHeader .letter',
-  //       translateY: [0, -100],
-  //       opacity: [1, 0],
-  //       easing: 'easeInExpo',
-  //       duration: 1200,
-  //       delay: (el, i) => 100 + 30 * i
-  //     })
-  // }
 }
 </script>
 <style scoped>
-/* .animHeader {
+.animHeader {
   position: relative;
   letter-spacing: 0.1em;
 }
@@ -129,7 +119,7 @@ export default {
   display: inline-block;
   margin: auto;
   opacity: 0;
-} */
+}
 
 .oddwave {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 2 1'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%2377aa77'/%3E%3Cstop offset='1' stop-color='%234fd'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23cf8' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23cf8' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='2' y2='2'%3E%3Cstop offset='0' stop-color='%23cf8' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23cf8' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='2' height='1'/%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='url(%23b)' points='0 1 0 0 2 0'/%3E%3Cpolygon fill='url(%23c)' points='2 1 2 0 0 0'/%3E%3C/g%3E%3C/svg%3E");

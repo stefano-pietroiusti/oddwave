@@ -11,7 +11,7 @@
         >
       </b-col>
       <b-col md="12" lg="8">
-        <h3 v-if="pcontent.header" v-html="pcontent.header" />
+        <h3 v-if="pcontent.header" class="solid" v-html="pcontent.header" />
         <p v-html="pcontent.text" />
         <ul v-if="pcontent.list">
           <li v-for="item in pcontent.list">
@@ -22,7 +22,7 @@
     </b-row>
     <b-row v-else-if="pcontent.inlineImage && pcontent.inlineImageRight">
       <b-col md="12" lg="8">
-        <h3 v-if="pcontent.header" v-html="pcontent.header" />
+        <h3 v-if="pcontent.header" class="solid" v-html="pcontent.header" />
         <p v-html="pcontent.text" />
         <ul v-if="pcontent.list">
           <li v-for="item in pcontent.list">
@@ -41,7 +41,7 @@
     </b-row>
     <b-row v-else>
       <b-col sm="12">
-        <h3 v-if="pcontent.header" v-html="pcontent.header" />
+        <h3 v-if="pcontent.header" class="solid" v-html="pcontent.header" />
         <p v-html="pcontent.text" />
         <ul v-if="pcontent.list">
           <li v-for="item in pcontent.list">
@@ -118,4 +118,7 @@ export default {
 }
 </script>
 <style scoped>
+
+h3.solid {border-left: 5px solid orangered; padding-left: 5px; font-weight: bold;}
+
 </style>

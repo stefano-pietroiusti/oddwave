@@ -50,11 +50,11 @@
         <ul>
           <li>
             <a :href="contactInfo.fb" class="fa fa-facebook fahover" title="Connect with us via facebook" />&nbsp;&nbsp;
-            <a
+            <!-- <a
               :href="contactInfo.whatsapp"
               class="fa fa-whatsapp fahover"
               title="Connect with us via whatsapp"
-            />
+            /> -->
           </li>
         </ul>
       </b-col>

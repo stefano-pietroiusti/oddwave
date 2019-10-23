@@ -9,7 +9,7 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
 const routes = [
   '/services/seo-auckland',
   '/services/ppc-auckland',
-  '/services/website-design-build-auckland',
+  '/services/website-design-auckland',
   '/services/creative-photographer-auckland'
 ]
 

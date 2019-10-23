@@ -10,7 +10,7 @@
         xl="3"
         class="p-2"
       >
-        <div class="bg-light text-center bg-feature h-100">
+        <div class="text-center bg-feature h-100">
           <h4>
             <font-awesome-icon
               :icon="
@@ -84,8 +84,9 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   border-radius: 11px;
   line-height: 3rem;
   font-weight: 300;
-  background-image: radial-gradient(ellipse at top, #fff, transparent),
-    radial-gradient(ellipse at bottom, #eee, transparent);
+  background: transparent;
+   /* background-image: radial-gradient(ellipse at top, #fff, transparent),
+    radial-gradient(ellipse at bottom, #eee, transparent); */
 }
 
 .card img {

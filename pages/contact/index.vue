@@ -3,7 +3,7 @@
     <b-container fluid :style="gradient" class="contactBackground align-items-center text-center">
       <p class="watermark">
         The Odd Wave Ltd
-        <br>Websites & SEO
+        <br>Websites & SEO & Photos
         <br>Auckland, New Zealand
       </p>
     </b-container>
@@ -71,7 +71,7 @@ export default {
       title: 'Websites, SEO & Photography Auckland, NZ',
       description:
         'Great Website Design Auckland, SEO Auckland & Photography Auckland, New Zealand',
-      animeheader: "LET'S CREATE SOME AWESOMENESS",
+      animeheader: "LET'S CREATE SOMETHING GREAT",
       header: 'Connect for a great website',
       subheader: 'Helping all New Zealand from Auckland, North Shore',
       backgroundurl: 'nz.svg',

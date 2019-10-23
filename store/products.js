@@ -1,4 +1,4 @@
-const commonKeywords = ['developing solutions', 'creating solutions', 'auckland', 'rotorua', 'new zealand', 'NZ']
+const commonKeywords = ['developing solutions', 'creating solutions', 'northland', 'auckland', 'rotorua', 'new zealand', 'NZ']
 
 export const state = () => ({
   all: [
@@ -18,7 +18,7 @@ export const state = () => ({
           icon: ['fas', 'check']
         },
         {
-          header: 'A+ SEO, Accessibility & Best Practices ',
+          header: 'A+ in SEO, Accessibility & Best Practices ',
           text: 'Error free in factors that affect user experience',
           icon: ['fas', 'check']
         },
@@ -36,7 +36,7 @@ export const state = () => ({
         },
         {
           header: 'Content design/restructuring',
-          text: "Improve your site's flow and content",
+          text: 'to improve website flow, content & SEO',
 
           icon: ['fas', 'check']
         },
@@ -72,7 +72,7 @@ export const state = () => ({
         },
         {
           header: 'Scalable to optional add-ons after consultation',
-          text: 'Additional pages, online customer chat, ecommerce, pwa, monthly management, maintenance & support, custom feature development, content writing',
+          text: 'Additional pages, online customer chat, monthly management, maintenance & support, custom feature development, content writing, headless CMS with GraphQL API, shopping cart & ecommerce',
           icon: ['fas', 'check']
         }
       ],

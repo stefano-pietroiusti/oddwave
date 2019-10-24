@@ -1,31 +1,37 @@
 <template>
   <b-container fluid class="p-0 w-100 text-primary">
     <b-row no-gutters>
-      <b-col sm="12" md="12" lg="12" xl="12" class="text-center">
-        <b-container
-          class="productContainer bg-white text-primary text-center text-large"
-        >
-          <h2 class="bg-white text-primary text-large">
+      <b-col sm="12" md="12" lg="12" xl="12" class="text-center w-100">
+        <b-container v-if="summary" fluid class="productContainer text-primary text-center text-medium w-100">
+          <h2 class="bg-white text-primary text-medium text-center">
             {{ product.header }}
           </h2>
-          <h3 class="pt-5">
+          <h3 class="pt-2 text-center">
+            {{ product.subheader }}
+          </h3>
+          <h2 class="pt-2  text-medium">
+            <span id="price" class="text-success">${{ product.price.value }}</span> NZD + GST
+          </h2>
+        </b-container>
+        <b-container v-else class="productContainer bg-white text-primary text-center text-large">
+          <h2 class="bg-white text-primary text-large text-center">
+            {{ product.header }}
+          </h2>
+          <h3 class="pt-5 text-center">
             {{ product.subheader }}
           </h3>
           <h2 class="pt-5">
-            Only
             <span id="price" class="text-success text-large">${{ product.price.value }}</span> NZD + GST
           </h2>
         </b-container>
       </b-col>
     </b-row>
-    <b-row no-gutters>
+    <b-row v-if="product.features.length > 0" no-gutters>
       <b-col sm="12" md="12" lg="12" xl="12" class="text-center text-success pt-2">
-        <h2>
-          what you get?
-        </h2>
+        <h2>what you get?</h2>
       </b-col>
     </b-row>
-    <b-row no-gutters>
+    <b-row v-if="product.features.length > 0" no-gutters>
       <b-col sm="12" md="12" lg="12" xl="12" class="p-3">
         <b-container class="productContainer bg-primary text-primary text-left">
           <b-list-group
@@ -55,6 +61,10 @@ export default {
     ButtonComponent
   },
   props: {
+    summary: {
+      type: Boolean,
+      default: false
+    },
     product: {
       type: Object,
       default () {
@@ -88,6 +98,9 @@ export default {
     variant () {
       return this.variant
     }
+    // summary () {
+    //   return this.summary
+    // }
   }
 }
 </script>
@@ -115,8 +128,8 @@ export default {
 } */
 .arrow {
   font-size: 5rem;
-font-stretch: 100%;
+  font-stretch: 100%;
   line-height: 2rem;
-width: 100%;
+  width: 100%;
 }
 </style>

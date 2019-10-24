@@ -15,9 +15,9 @@ export const state = () => ({
       animate: 'bounceInLeft',
       title: 'Website Design & Web Development',
       linkTitle: 'Website Design & Web Development',
-      description: 'Custom mobile-first web design and web application development from good practises and standards to target mobile & web in one go. Made with passion to grow brand loyalty, trust & sales.',
+      description: 'Custom mobile-first content-first web design and web application development from good practises and standards to target mobile & web in one go. Made with passion to grow brand loyalty, trust & sales.',
       landing: { header: 'Website Design & Web Development', content: 'Here at The Odd Wave, we design and develop robust, cutting edge websites using stable and lightweight frameworks built to last. We avoid clunk and overkill and love keeping things lean and simple to solve the most complex problems. We continuously test and audit code and content for performance, accessibility, best practices and SEO to give you great quality and ROI.' },
-      header: 'Custom Mobile First Web Design & Web Apps Development',
+      header: 'Custom Website Design & Web Apps Development',
       icon: ['fab', 'dev'],
       backgroundImage: { color1: 'rgba(46, 217, 195, 1)', color2: 'rgba(46, 217, 195, 1)', url: 'webdesign.jpg', height: 'auto' },
       headerStyle: { bgStyle: 'text-secondary text-center' },
@@ -75,7 +75,7 @@ export const state = () => ({
       rate: 'hour',
       marketing: {
         header: 'Join us',
-        subheader: 'Remain competitive and be where the world is going',
+        subheader: 'Get ahead in the world of web and data',
         content: 'Using proven vanilla lightweight and super-fast web technologies'
       },
       keywords: [...commonKeywords, 'website design', 'web design', 'web development', 'custom websites', 'pwa web apps development', 'progressive web apps development', 'mobile web design', 'nuxtjs', 'javascript', 'Vanilla JS', 'data engineering']
@@ -265,7 +265,8 @@ export const state = () => ({
       content:
         [
           // {
-          //   text: 'Visual communication has reached new heights with digital photography becoming an essential part of product or service promotion. Digital photography is widely used in website design and is a great way to make a website more attractive and eye-catching.'
+          //   header: ''
+          //   text: ''
           // }
         ],
       features: [
@@ -303,35 +304,63 @@ export const state = () => ({
       slides: [
         {
           image: 'chelsea-pensioner-royal-hospital-candid.jpg',
-          imageText: 'Chelsea pensioner at the Chelsea Royal Hospital'
+          imageText: 'Chelsea pensioner at the Chelsea Royal Hospital by The Odd Wave, Auckland, NZ',
+          category: 'Candid portraits',
+          orientation: 'P'
         },
         {
           image: 'pet-and-owner-portrait.jpg',
-          imageText: 'Owner and dog Cerchio Italy'
-        },
-        {
-          image: 'pet-portrait.jpg',
-          imageText: 'Cat portrait'
+          imageText: 'Owner and dog Cerchio Italy by The Odd Wave, Auckland, NZ',
+          category: 'Black & white photography',
+          orientation: 'P'
         },
         {
           image: 'portrait-street-children-portrait.jpg',
-          imageText: 'Children portrait'
+          imageText: 'Children portrait by The Odd Wave, Auckland, NZ',
+          category: 'Street photography'
         },
         {
           image: 'bee-flower-candid.jpg',
-          imageText: 'Bee merging from flower'
+          imageText: 'Bee merging from flower by The Odd Wave, Auckland, NZ',
+          category: 'Nature'
+
         },
         {
           image: 'bee-candid.jpg',
-          imageText: 'Bee at work'
+          imageText: 'Bee at work by The Odd Wave, Auckland, NZ'
+
         },
         {
-          image: 'mussels-portrait.jpg',
-          imageText: 'Mussels in the wild'
+          image: 'canary-wharf.jpg',
+          imageText: 'Canary Wharf London by The Odd Wave, Auckland, NZ',
+          category: 'Architecture'
+
+        },
+        {
+          image: 'london-city.jpg',
+          imageText: 'London City building by The Odd Wave, Auckland, NZ',
+          orientation: 'P'
+
+        },
+        {
+          image: 'canary-wharf-tube-station.jpg',
+          imageText: 'Canary Wharf Tube Station London by The Odd Wave, Auckland, NZ',
+          orientation: 'P'
+
+        },
+        {
+          image: 'colosseum-rome-still.jpg',
+          imageText: 'Colosseum Rome by The Odd Wave, Auckland, NZ'
+        },
+        {
+          image: 'big-ben-architecture.jpg',
+          imageText: 'Big Ben London by The Odd Wave, Auckland, NZ',
+          orientation: 'P'
         },
         {
           image: 'silhoette-candid.jpg',
-          imageText: 'Creative silhoette of people waving'
+          imageText: 'Creative silhoette of people waving by The Odd Wave, Auckland, NZ',
+          category: 'Creative photography'
         }
 
       ],

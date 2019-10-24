@@ -4,7 +4,7 @@ export default ({ app }) => {
   /*
   ** Only run on client-side and only in production mode
   */
-  if (process.env.NODE_ENV !== 'production') return
+  // if (process.env.NODE_ENV !== 'production') return
   /*
   ** Include Google Analytics Script
   */
@@ -25,7 +25,9 @@ export default ({ app }) => {
     */
     ga('set', 'page', to.fullPath)
     ga('send', 'pageview')
-    ga('send','event','form','submit','contact')
+    // ga('send','event','form','submit','contact')
+    // this.$ga.event('form', 'submit', 'contact')
+    // this.$ga('send','event', 'form', 'submit', 'contact')
     // ga('send', 'event', 'page', to.fullPath, JSON.stringify(to)) //causes client side error
   })
 }

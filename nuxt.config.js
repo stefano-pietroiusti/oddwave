@@ -81,10 +81,12 @@ export default {
     '@/assets/scss/custom.scss'
   ],
   plugins: [
-    // '~/plugins/anime.js',
+    // '~/plugins/laxxx.js',
     '~/plugins/fontawesome.js',
     { src: '~/plugins/vue-notifications', mode: 'client' },
-    { src: '~/plugins/ga.js', mode: 'client' }
+    // { src: '~/plugins/ga.js', mode: 'client' },
+    // { src: '~/plugins/sal.js', mode: 'client' },
+    { src: '~/plugins/lax.js', mode: 'client' }
   ],
   devModules: [
     '@nuxtjs/eslint-module'
@@ -98,7 +100,10 @@ export default {
     ['@nuxtjs/robots', { UserAgent: '*', Disallow: '' }],
     '@nuxtjs/sitemap',
     '@nuxtjs/recaptcha',
-    'nuxt-webfontloader'
+    'nuxt-webfontloader',
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-148813087-1'
+    }]
   ],
   webfontloader: {
     google: {

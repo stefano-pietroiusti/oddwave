@@ -244,6 +244,7 @@ export default {
         this.clearForm()
         this.showSubmit()
       } catch (error) {
+        this.$ga.event('form', 'submit', 'error')
         // console.log(error)
         this.showSubmitError()
       }
@@ -263,9 +264,13 @@ export default {
           data: { ...this.form, isHuman }
         })
         if (response.statusCode !== 200) {
+          this.$ga.event('form', 'submit', `contactServiceError: ${response.statusCode}`)
           this.showSubmitError()
+        } else {
+          this.$ga.event('form', 'submit', 'contact')
         }
       } catch (error) {
+        this.$ga.event('form', 'submit', `contactServiceError: ${error.message}`)
         this.showSubmitError()
       }
     },

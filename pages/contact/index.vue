@@ -4,7 +4,7 @@
       <p class="watermark">
         The Odd Wave Ltd
         <br>Websites & SEO & Photos
-        <br>Auckland, New Zealand
+        <br>New Zealand
       </p>
     </b-container>
     <b-container fluid class="contactContainer text-primary text-medium w-100 text-left m-0 p-0">
@@ -23,8 +23,8 @@
 import AnimeBannerWordsHeaderComponent from '@/components/AnimeBannerWordsHeaderComponent'
 import HeaderComponent from '@/components/HeaderComponent'
 import ContactForm from '@/components/ContactForm'
-
 export default {
+
   components: {
     AnimeBannerWordsHeaderComponent,
     HeaderComponent,
@@ -84,9 +84,29 @@ export default {
       style: { bgStyle: 'text-secondary text-center' },
       keywords: [
         ...commonKeywords,
-        'websites north shore', 'websites browns bay', 'websites albany', 'websites NZ', 'websites new zealand',
-        'seo auckland', 'seo albany', 'seo browns bay', 'seo north shore', 'seo NZ', 'web app development albany', 'web app development browns bay', 'web app development north shore', 'web app development auckland', 'web app development NZ', 'web app development new zealand',
-        'cloud data engineer auckland', 'cloud data engineer new zealand', 'photography browns bay', 'photography north shore', 'photography NZ', 'photography auckland', 'photography new zealand'
+        'websites north shore',
+        'websites browns bay',
+        'websites albany',
+        'websites NZ',
+        'websites new zealand',
+        'seo auckland',
+        'seo albany',
+        'seo browns bay',
+        'seo north shore',
+        'seo NZ',
+        'web app development albany',
+        'web app development browns bay',
+        'web app development north shore',
+        'web app development auckland',
+        'web app development NZ',
+        'web app development new zealand',
+        'cloud data engineer auckland',
+        'cloud data engineer new zealand',
+        'photography browns bay',
+        'photography north shore',
+        'photography NZ',
+        'photography auckland',
+        'photography new zealand'
       ]
     }
   },
@@ -116,16 +136,12 @@ export default {
         textTransform: 'uppercase'
       }
     }
+  },
+  mounted () {
+    this.$ga.page(this.$route.path)
+    // if (process.env.NODE_ENV !== 'production') {
+    // }
   }
-  // mounted () {
-  //   if (process.env.NODE_ENV !== 'production') {}
-  //   // this.$ga.event({
-  //   //   eventCategory: 'nav',
-  //   //   eventAction: 'init',
-  //   //   eventLabel: 'home',
-  //   //   eventValue: 1
-  //   // })
-  // }
 }
 </script>
 <style scoped>
@@ -164,4 +180,10 @@ p.watermark {
   z-index: -1;
   opacity: 0.1;
 }
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
 </style>

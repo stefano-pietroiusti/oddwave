@@ -108,9 +108,70 @@ export const state = () => ({
           icon: ['fas', 'check']
         }
       ],
+      relatedServices: ['website-design-auckland'],
       price: { value: 2200, unit: 'package', discount: '0' },
       keywords: [...commonKeywords, 'business website package', 'custom website', 'landing page', 'products website', 'services website', 'website with contact form']
+    },
+    {
+      id: 'photo-1',
+      variant: 'success',
+      title: 'Base Photography Package',
+      linkTitle: 'Business starter package',
+      description: 'Great value photography package',
+      header: 'Photo Package 1',
+      icon: ['fas', 'check'],
+      subheader: '1 hour & 24 edited images',
+      features: [
+      ],
+      price: { value: 250, unit: '1 hrs & 30 edited images', discount: '0' },
+      relatedServices: ['creative-photographer-auckland'],
+      keywords: [...commonKeywords, 'photography package']
+    },
+    {
+      id: 'photo-2',
+      variant: 'success',
+      title: 'Midi Photography Package',
+      linkTitle: 'Midi Photography package',
+      description: 'Great value business starter web package',
+      header: 'Photo Package 2',
+      icon: ['fas', 'check'],
+      subheader: '2.5 hrs & 100 edited images',
+      features: [
+      ],
+      price: { value: 600, unit: '2.5 hrs & 100 edited images', discount: '0' },
+      relatedServices: ['creative-photographer-auckland'],
+      keywords: [...commonKeywords, 'photography maxi package']
+    },
+    {
+      id: 'photo-3',
+      variant: 'success',
+      title: 'Maxi Photography Package',
+      linkTitle: 'Maxi Photography package',
+      description: 'Maxi Photography package',
+      header: 'Photo Package 3',
+      icon: ['fas', 'check'],
+      subheader: '6 hrs & 300 edited images',
+      features: [
+      ],
+      price: { value: 1700, unit: '6 hrs & 300 edited images', discount: '0' },
+      relatedServices: ['creative-photographer-auckland'],
+      keywords: [...commonKeywords, 'photography maxi package']
     }
+    // {
+    //   id: 'film-starter',
+    //   variant: 'success',
+    //   title: 'Base Photography Package',
+    //   linkTitle: 'Business starter package',
+    //   description: 'Great value photography package',
+    //   header: 'Flexi-Photo Package',
+    //   icon: ['fas', 'check'],
+    //   subheader: '1 hours & 24 edited images',
+    //   features: [
+    //   ],
+    //   price: { value: 500, unit: '1 hrs & 24 edited images', discount: '0' },
+    //   relatedServices: ['creative-photographer-auckland'],
+    //   keywords: [...commonKeywords, 'photography package']
+    // }
   ]
 })
 
@@ -134,5 +195,11 @@ export const getters = {
   },
   getProductById: state => (id) => {
     return state.all.find(product => product.id === id)
+  },
+  getProductsById: state => (serviceId) => {
+    // console.log(serviceId)
+    // const products = state.all.filter(product => (product.relatedServices.includes(serviceId)))
+    // console.log(products)
+    return state.all.filter(product => (product.relatedServices.includes(serviceId)))
   }
 }

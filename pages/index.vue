@@ -7,14 +7,16 @@
     <ProductComponent :product="featuredProduct" />
 
     <b-container fluid class="roundedContainer text-primary">
-      <b-container
-        fluid
-        :style="gradient"
-        class="backgroundContainer align-items-center text-center"
-      >
-        <p class="watermark">
-          The Odd Wave Ltd <br><br>Auckland<br><br>NZ
-        </p>
+      <b-container fluid class="backgroundContainer">
+        <b-container
+          fluid
+          :style="gradient"
+          class="align-items-center text-center"
+        >
+          <p class="watermark">
+            The Odd Wave Ltd <br><br>New Zealand
+          </p>
+        </b-container>
       </b-container>
       <HeaderComponent :pheader="header" pcontainerclass="transparent" />
       <PromoComponent class="promoComponent" :features="features" variant="primary" />
@@ -25,9 +27,6 @@
         :pcontent="{header: item.header, text: item.text, list: item.list, bgImage: item.bgImage, inlineImage: item.inlineImage, inlineImageText: item.inlineImageText, inlineImageRight: item.inlineImageRight }"
         :pstyle="(item.dark) ? { bgStyle: 'w-100 text-secondary text-left px-4 p-2', inlineImageStyle: item.inlineImageStyle} : { bgStyle: 'w-100 text-primary text-left  px-4 p-2', inlineImageStyle: item.inlineImageStyle}"
       />
-      <!-- <span class="text-center text-medium">
-        <ButtonComponent btext="Get started" blink="/contact/" pvariant="outline-success" />
-      </span>-->
       <ServicesComponent class="servicesComponent" :services="summaries" />
     </b-container>
 
@@ -228,6 +227,11 @@ export default {
         textTransform: 'uppercase'
       }
     }
+  },
+  mounted () {
+    // if (process.env.NODE_ENV !== 'production') {
+    this.$ga.page(this.$route.path)
+    // }
   }
 }
 </script>

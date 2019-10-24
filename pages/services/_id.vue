@@ -25,7 +25,25 @@
         <!-- <ButtonComponent btext="Chat about this" blink="/contact/" :pvariant="`outline-black`" /> -->
       </span>
 
+      <TextImageComponent
+        v-for="(item,i) in service.content"
+        :key="i"
+        :pcontent="{header: item.header, text: item.text, list: item.list, bgImage: item.bgImage, inlineImage: item.inlineImage, inlineImageText: item.inlineImageText, inlineImageRight: item.inlineImageRight }"
+        :pstyle="(item.dark) ? { bgStyle: 'parralaxNormal w-100 text-secondary text-left  px-3 p-2', inlineImageStyle: item.inlineImageStyle} : { bgStyle: 'parralaxNormal w-100 text-primary text-left  px-3  p-2', inlineImageStyle: item.inlineImageStyle}"
+      />
+      <HeaderComponent
+        psubheader="Featured Photography Packages"
+      />
       <ProductComponent v-for="item in featuredProducts" :key="item.id" :product="item" :summary="true" />
+
+      <!-- <div
+        v-if="service.slides"
+        id="carousel"
+        class="lax w-75"
+        data-lax-preset="zoomInOut"
+      >
+        <CarouselComponent :carousel-id="carouselId" :pslides="service.slides" />
+      </div> -->
 
       <b-container v-if="service.slides" id="lax" fluid class="text-left">
         <span v-for="item in service.slides" :key="item.image">
@@ -34,39 +52,29 @@
               class="lax"
               :alt="item.imageText"
               :src="`/imgs/carousel/${carouselId}/${item.image}`"
-              data-lax-preset="zoomInOut fadeInOut"
+              data-lax-preset="zoomInOut"
               data-lax-translate-x="vh 0, -elh (vw*1.5) | offset=10 speed=2"
             >
-            <!-- :style="(item.orientation === 'P') ? { maxWidth: '30%' } : { maxWidth: '50%' }" -->
           </div>
-          <div>
-            <h2 class="lax text-center" data-lax-preset="fadeInOut">{{ item.category }}</h2>
+          <div class="lax" data-lax-preset="fadeInOut zoomInOut | offset=10">
+            <h2 class="text-center">{{ item.category }}</h2>
           </div>
         </span>
       </b-container>
+    </div></span>
+    </b-container>
 
-      <!-- <span v-if="service.slides" id="carousel">
-        <CarouselComponent :carousel-id="carouselId" :pslides="service.slides" />
-      </span>-->
+    <HeaderComponent
+      :psubheader="service.marketing.header + ' TO ' + service.marketing.subheader"
+      :pstyle="service.subheaderStyle"
+    />
 
-      <TextImageComponent
-        v-for="(item,i) in service.content"
-        :key="i"
-        :pcontent="{header: item.header, text: item.text, list: item.list, bgImage: item.bgImage, inlineImage: item.inlineImage, inlineImageText: item.inlineImageText, inlineImageRight: item.inlineImageRight }"
-        :pstyle="(item.dark) ? { bgStyle: 'parralaxNormal w-100 text-secondary text-left  px-3 p-2', inlineImageStyle: item.inlineImageStyle} : { bgStyle: 'parralaxNormal w-100 text-primary text-left  px-3  p-2', inlineImageStyle: item.inlineImageStyle}"
-      />
+    <ButtonComponent btext="Get started" blink="/contact/" :pvariant="`outline-black`" class="text-center" />
 
-      <HeaderComponent
-        :psubheader="service.marketing.header + ' TO ' + service.marketing.subheader"
-        :pstyle="service.subheaderStyle"
-      />
+    <ServicesRelatedComponent v-if="otherServices" :services="otherServices" />
 
-      <ButtonComponent btext="Get started" blink="/contact/" :pvariant="`outline-black`" />
-
-      <ServicesRelatedComponent v-if="otherServices" :services="otherServices" />
-
-      <!--  <D3Cloud :pwordcloud="service.cloud" />-->
-    </div>
+    <!--  <D3Cloud :pwordcloud="service.cloud" />-->
+  </div>
   </div>
 </template>
 
@@ -221,12 +229,12 @@ p.watermark {
 }
 
 .imgContainer {
-  max-width: 40%;
+  max-width: 30%;
   max-height: 30%;
 }
 
 img {
-  max-width: 40%;
+  max-width: 30%;
   outline: 1px solid white;
   outline-offset: -4px;
 }

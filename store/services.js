@@ -264,10 +264,18 @@ export const state = () => ({
       subheaderStyle: { color: 'text-primary', buttonVariant: 'info' },
       content:
         [
-          // {
-          //   header: ''
-          //   text: ''
-          // }
+          {
+            header: 'What types of photography do we do?',
+            text: 'We do the following types of photography across New Zealand:',
+            list: [
+              'Events & Functions (including coporate and weddings)',
+              'Still Life & Products',
+              'Architecture & Real Estate',
+              'Portraits',
+              'Street photography',
+              'Candid',
+              'Digital & Film']
+          }
         ],
       features: [
         {

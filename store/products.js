@@ -123,7 +123,7 @@ export const state = () => ({
       subheader: '1 hour & 24 edited images',
       features: [
       ],
-      price: { value: 250, unit: '1 hrs & 30 edited images', discount: '0' },
+      price: { value: 280, unit: '1 hrs & 30 edited images', discount: '0' },
       relatedServices: ['creative-photographer-auckland'],
       keywords: [...commonKeywords, 'photography package']
     },
@@ -138,7 +138,7 @@ export const state = () => ({
       subheader: '2.5 hrs & 100 edited images',
       features: [
       ],
-      price: { value: 600, unit: '2.5 hrs & 100 edited images', discount: '0' },
+      price: { value: 680, unit: '2.5 hrs & 100 edited images', discount: '0' },
       relatedServices: ['creative-photographer-auckland'],
       keywords: [...commonKeywords, 'photography maxi package']
     },
@@ -153,7 +153,7 @@ export const state = () => ({
       subheader: '6 hrs & 300 edited images',
       features: [
       ],
-      price: { value: 1700, unit: '6 hrs & 300 edited images', discount: '0' },
+      price: { value: 1750, unit: '6 hrs & 300 edited images', discount: '0' },
       relatedServices: ['creative-photographer-auckland'],
       keywords: [...commonKeywords, 'photography maxi package']
     }

@@ -1,19 +1,19 @@
 <template>
   <b-container fluid class="p-0 w-100 text-primary">
     <b-row no-gutters>
-      <b-col sm="12" md="12" lg="12" xl="12" class="text-center w-100">
-        <b-container v-if="summary" fluid class="productContainer text-primary text-center text-medium w-100">
-          <h2 class="bg-white text-primary text-medium text-center">
+      <b-col sm="12" md="12" lg="12" xl="12" class="w-100">
+        <b-container v-if="summary" fluid class="productContainer text-center w-100">
+          <h2 class="text-small">
             {{ product.header }}
           </h2>
-          <h3 class="pt-2 text-center">
+          <h3 class="pt-2 text-center text-small">
             {{ product.subheader }}
           </h3>
-          <h2 class="pt-2  text-medium">
+          <h2 class="pt-2 text-center text-small">
             <span id="price" class="text-success">${{ product.price.value }}</span> NZD + GST
           </h2>
         </b-container>
-        <b-container v-else class="productContainer bg-white text-primary text-center text-large">
+        <b-container v-else class="productContainer text-center text-large">
           <h2 class="bg-white text-primary text-large text-center">
             {{ product.header }}
           </h2>

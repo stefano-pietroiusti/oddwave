@@ -3,13 +3,13 @@
     <b-row no-gutters>
       <b-col sm="12" md="12" lg="12" xl="12" class="w-100">
         <b-container v-if="summary" fluid class="productContainer text-center w-100">
-          <h2 class="text-small">
+          <h2 class="text-medium">
             {{ product.header }}
           </h2>
           <h3 class="pt-2 text-center text-small">
             {{ product.subheader }}
           </h3>
-          <h2 class="pt-2 text-center text-small">
+          <h2 class="pt-2 text-center text-medium">
             <span id="price" class="text-success">${{ product.price.value }}</span> NZD + GST
           </h2>
         </b-container>

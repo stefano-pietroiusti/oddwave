@@ -18,8 +18,17 @@ export const state = () => ({
           icon: ['fas', 'check']
         },
         {
-          header: 'A+ in SEO, Accessibility & Best Practices ',
+          header: 'A+ score in SEO, Accessibility & Best Practices audit',
           text: 'Error free in factors that affect user experience',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'SEO Package A',
+          text: 'Optimization of up to 5 Pages',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'Stock Images',
           icon: ['fas', 'check']
         },
         {
@@ -123,7 +132,7 @@ export const state = () => ({
       subheader: '1 hour & 24 edited images',
       features: [
       ],
-      price: { value: 280, unit: '1 hrs & 30 edited images', discount: '0' },
+      price: { value: 270, unit: '1 hrs & 30 edited images', discount: '0' },
       relatedServices: ['creative-photographer-auckland'],
       keywords: [...commonKeywords, 'photography package']
     },
@@ -135,10 +144,10 @@ export const state = () => ({
       description: 'Great value business starter web package',
       header: 'Photo Package 2',
       icon: ['fas', 'check'],
-      subheader: '2.5 hrs & 100 edited images',
+      subheader: '2 hrs & 100 edited images',
       features: [
       ],
-      price: { value: 680, unit: '2.5 hrs & 100 edited images', discount: '0' },
+      price: { value: 680, unit: '2 hrs & 100 edited images', discount: '0' },
       relatedServices: ['creative-photographer-auckland'],
       keywords: [...commonKeywords, 'photography maxi package']
     },
@@ -153,11 +162,10 @@ export const state = () => ({
       subheader: '6 hrs & 300 edited images',
       features: [
       ],
-      price: { value: 1750, unit: '6 hrs & 300 edited images', discount: '0' },
+      price: { value: 1900, unit: '6 hrs & 300 edited images', discount: '0' },
       relatedServices: ['creative-photographer-auckland'],
       keywords: [...commonKeywords, 'photography maxi package']
-    }
-    // {
+    }, // {
     //   id: 'film-starter',
     //   variant: 'success',
     //   title: 'Base Photography Package',
@@ -172,6 +180,82 @@ export const state = () => ({
     //   relatedServices: ['creative-photographer-auckland'],
     //   keywords: [...commonKeywords, 'photography package']
     // }
+
+    {
+      id: 'seo-1',
+      variant: 'success',
+      title: 'SEO Package A',
+      linkTitle: 'SEO Package A',
+      description: 'SEO Package A',
+      header: 'SEO Package A',
+      icon: ['fas', 'check'],
+      subheader: 'Optimization of up to 5 Pages',
+      features: [
+      ],
+      price: { value: 450, unit: 'Optimization of up to 5 Pages', discount: '0' },
+      relatedServices: ['seo-auckland'],
+      keywords: [...commonKeywords, 'seo package A']
+    },
+    {
+      id: 'seo-2',
+      variant: 'success',
+      title: 'SEO Package B',
+      linkTitle: 'SEO Package B',
+      description: 'SEO Package B',
+      header: 'SEO Package B',
+      icon: ['fas', 'check'],
+      subheader: 'Optimization of up to 10 Pages',
+      features: [
+      ],
+      price: { value: 900, unit: 'Optimization of up to 10 Pages', discount: '0' },
+      relatedServices: ['seo-auckland'],
+      keywords: [...commonKeywords, 'seo package B']
+    },
+    {
+      id: 'seo-3',
+      variant: 'success',
+      title: 'SEO Package C',
+      linkTitle: 'SEO Package C',
+      description: 'SEO Package C',
+      header: 'SEO Package C',
+      icon: ['fas', 'check'],
+      subheader: 'Optimization of up to 20 Pages',
+      features: [
+      ],
+      price: { value: 1700, unit: 'Optimization of up to 20 Pages', discount: '0' },
+      relatedServices: ['seo-auckland'],
+      keywords: [...commonKeywords, 'seo package C']
+    },
+    {
+      id: 'seo-4',
+      variant: 'success',
+      title: 'SEO Package D',
+      linkTitle: 'SEO Package D',
+      description: 'SEO Package D',
+      header: 'SEO Package D',
+      icon: ['fas', 'check'],
+      subheader: 'Optimization of up to 40 Pages',
+      features: [
+      ],
+      price: { value: 3200, unit: 'Optimization of up to 40 Pages', discount: '0' },
+      relatedServices: ['seo-auckland'],
+      keywords: [...commonKeywords, 'seo package D']
+    },
+    {
+      id: 'seo-5',
+      variant: 'success',
+      title: 'SEO Package E',
+      linkTitle: 'SEO Package E',
+      description: 'SEO Package E',
+      header: 'SEO Package E',
+      icon: ['fas', 'check'],
+      subheader: 'Optimization of up to 40 Pages',
+      features: [
+      ],
+      price: { value: 5900, unit: 'Optimization of up to 75 Pages for large websites with numerous services and products', discount: '0' },
+      relatedServices: ['seo-auckland'],
+      keywords: [...commonKeywords, 'seo package E']
+    }
   ]
 })
 

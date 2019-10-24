@@ -32,7 +32,8 @@
         :pstyle="(item.dark) ? { bgStyle: 'parralaxNormal w-100 text-secondary text-left  px-3 p-2', inlineImageStyle: item.inlineImageStyle} : { bgStyle: 'parralaxNormal w-100 text-primary text-left  px-3  p-2', inlineImageStyle: item.inlineImageStyle}"
       />
       <HeaderComponent
-        psubheader="Featured Photography Packages"
+        v-if="featuredProducts.length>0"
+        psubheader="Featured Packages"
       />
       <ProductComponent v-for="item in featuredProducts" :key="item.id" :product="item" :summary="true" />
 
@@ -45,7 +46,19 @@
         <CarouselComponent :carousel-id="carouselId" :pslides="service.slides" />
       </div> -->
 
-      <b-container v-if="service.slides" id="lax" fluid class="text-left">
+      <div v-if="service.slides" class="text-left">
+        <HeaderComponent
+          psubheader="Featured Instagram Photos"
+        />
+        <img
+          v-for="item in service.slides"
+          :key="item.image"
+          :alt="item.imageText"
+          :src="`/imgs/carousel/${carouselId}/${item.image}`"
+        >
+      </div>
+
+      <!-- <b-container v-if="service.slides" id="lax" fluid class="text-left">
         <span v-for="item in service.slides" :key="item.image">
           <div>
             <img
@@ -62,19 +75,19 @@
         </span>
       </b-container>
     </div></span>
-    </b-container>
+    </b-container> -->
 
-    <HeaderComponent
-      :psubheader="service.marketing.header + ' TO ' + service.marketing.subheader"
-      :pstyle="service.subheaderStyle"
-    />
+      <HeaderComponent
+        :psubheader="service.marketing.header + ' TO ' + service.marketing.subheader"
+        :pstyle="service.subheaderStyle"
+      />
 
-    <ButtonComponent btext="Get started" blink="/contact/" :pvariant="`outline-black`" class="text-center" />
+      <ButtonComponent btext="Get started" blink="/contact/" :pvariant="`outline-black`" class="text-center" />
 
-    <ServicesRelatedComponent v-if="otherServices" :services="otherServices" />
+      <ServicesRelatedComponent v-if="otherServices" :services="otherServices" />
 
     <!--  <D3Cloud :pwordcloud="service.cloud" />-->
-  </div>
+    </div>
   </div>
 </template>
 
@@ -228,12 +241,8 @@ p.watermark {
   opacity: 0.8;
 }
 
-.imgContainer {
-  max-width: 30%;
-  max-height: 30%;
-}
-
 img {
+  min-width: 30%;
   max-width: 30%;
   outline: 1px solid white;
   outline-offset: -4px;

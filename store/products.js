@@ -1,24 +1,24 @@
-const commonKeywords = ['developing solutions', 'creating solutions', 'northland', 'auckland', 'rotorua', 'new zealand', 'NZ']
+const commonKeywords = ['developing solutions', 'creating solutions', 'north shore', 'northland', 'auckland', 'rotorua', 'new zealand', 'NZ']
 
 export const state = () => ({
   all: [
     {
-      id: 'business-starter',
+      id: 'flexi-surface-business',
       variant: 'success',
-      title: 'Surface Website Package',
-      linkTitle: 'Business starter package',
-      description: 'Great value business starter web package',
-      header: 'Flexi-Surface Website Package',
+      title: 'Flexi-Surface Business Website package NZ',
+      linkTitle: 'Flexi-Surface Business Website package NZ',
+      description: 'Great value business starter web package giving access to flexible services',
+      header: 'Flexi-Surface Business Website Package',
       icon: ['fas', 'check'],
-      subheader: 'Universal package suitable for businesses, professional services, campaigns, portfolios',
+      subheader: 'Universal multi-page starter package for all businesses',
       features: [
         {
-          header: '4 page custom website',
-          text: 'Landing page, products &/ services, contact form',
+          header: '5 page custom website',
+          text: 'Landing, Contact Us, Products &/ Services',
           icon: ['fas', 'check']
         },
         {
-          header: 'A+ score in SEO, Accessibility & Best Practices audit',
+          header: 'A+ Google Audit score in SEO, Accessibility & Best Practices',
           text: 'Error free in factors that affect user experience',
           icon: ['fas', 'check']
         },
@@ -44,8 +44,8 @@ export const state = () => ({
           icon: ['fas', 'check']
         },
         {
-          header: 'Content design/restructuring',
-          text: 'to improve website flow, content & SEO',
+          header: 'Content design',
+          text: 'Optimum website flow, content & SEO',
 
           icon: ['fas', 'check']
         },
@@ -59,10 +59,6 @@ export const state = () => ({
         },
         {
           header: 'Social media links',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Custom contact form',
           icon: ['fas', 'check']
         },
         {
@@ -85,114 +81,208 @@ export const state = () => ({
           icon: ['fas', 'check']
         }
       ],
-      addons: [
-        {
-          header: 'Content writing & SEO',
-          text:
-            'Additional page, services, products',
-          icon: ['fab', 'servicestack'],
-          price: { value: 120, unit: 'page of optimised 250 words' }
-        },
-        {
-          header: 'Custom development',
-          text:
-            'Features, addons, customisations',
-          price: { value: 100, unit: 'hour' }
-        },
-        {
-          header: 'Monthly management, maintenance, reporting',
-          text:
-            'Monthly management, maintenance, analytics reporting up to 2 hours',
-          price: { value: 80, unit: 'package' }
-        }, {
-          header: 'Updates',
-          text:
-            '2 hours per month',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Monthly management & reporting',
-          text:
-            '2 hours per month',
-          icon: ['fas', 'check']
-        }
-      ],
+      // addons: [
+      //   {
+      //     header: 'Content writing & SEO',
+      //     text:
+      //       'Additional page, services, products',
+      //     icon: ['fab', 'servicestack'],
+      //     price: { value: 120, unit: 'page of optimised 250 words' }
+      //   },
+      //   {
+      //     header: 'Custom development',
+      //     text:
+      //       'Features, addons, customisations',
+      //     price: { value: 100, unit: 'hour' }
+      //   },
+      //   {
+      //     header: 'Monthly management, maintenance, reporting',
+      //     text:
+      //       'Monthly management, maintenance, analytics reporting up to 2 hours',
+      //     price: { value: 80, unit: 'package' }
+      //   }, {
+      //     header: 'Updates',
+      //     text:
+      //       '2 hours per month',
+      //     icon: ['fas', 'check']
+      //   },
+      //   {
+      //     header: 'Monthly management & reporting',
+      //     text:
+      //       '2 hours per month',
+      //     icon: ['fas', 'check']
+      //   }
+      // ],
+      isFeatured: true,
+      isFeaturedOrder: 0,
       relatedServices: ['website-design-auckland'],
-      price: { value: 2200, unit: 'package', discount: '0' },
+      price: { value: 2250, unit: 'package', discount: '0', flexible: true },
       keywords: [...commonKeywords, 'business website package', 'custom website', 'landing page', 'products website', 'services website', 'website with contact form']
     },
     {
-      id: 'photo-1',
+      id: 'flexi-landing',
+      variant: 'success',
+      title: 'Website Landing Page Auckland',
+      linkTitle: 'Website Landing Page Auckland',
+      description: 'Business promotion-specific page with external links',
+      header: 'Website Landing Page',
+      icon: ['fas', 'check'],
+      subheader: 'Dedicated promotion-specific website landing page page with media and external links',
+      features: [
+        {
+          header: 'Website landing page design',
+          text: 'Website homepage design, Content design, stock photos, Text animation &/ scroll animation, external links to services, documents, social media',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'A+ Google Website Audit score in SEO, Accessibility & Best Practices',
+          text: 'Error free in factors that affect user experience',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'Website address registration',
+          text: 'Suitable domain name registration',
+          icon: ['fas', 'check']
+        },
+        {
+          header: '1 year web hosting & email hosting',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'Website security',
+          text: 'HTTPS web server & website hosting',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'Mobile friendly',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'SEO search-engine friendly',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'Social media links',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'Unlimited email',
+          text:
+            'We will set up 1 - 5 email addresses for you initially',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'Scalable to Flexi-Surface',
+          icon: ['fas', 'check']
+        }
+      ],
+      isFeatured: true,
+      isFeaturedOrder: 0,
+      relatedServices: ['website-design-auckland'],
+      price: { value: 749, unit: 'package', discount: '0', flexible: true },
+      keywords: [...commonKeywords, 'business website package', 'custom website', 'landing page', 'products website', 'services website', 'website with contact form']
+    },
+    {
+      id: 'digital-photo-0',
+      variant: 'success',
+      title: 'Flexi Digital Photography',
+      linkTitle: 'Business starter package',
+      description: 'Great value photography package',
+      header: 'Digital Photography',
+      icon: ['fas', 'check'],
+      subheader: 'Rights to all images + 10 edited images',
+      features: [
+      ],
+      price: { value: 150, unit: 'package', discount: '0' },
+      isFeatured: true,
+      isFeaturedOrder: 5,
+      relatedServices: ['photographer-nz'],
+      keywords: [...commonKeywords, 'photography package']
+    },
+    {
+      id: 'digital-photo-1',
       variant: 'success',
       title: 'Base Photography Package',
       linkTitle: 'Business starter package',
       description: 'Great value photography package',
-      header: 'Photo Package 1',
+      header: 'Digital Photo Package 1',
       icon: ['fas', 'check'],
-      subheader: '1 hour & 24 edited images',
+      subheader: '1 hour, rights to all images + 24 edited images',
       features: [
       ],
-      price: { value: 270, unit: '1 hrs & 30 edited images', discount: '0' },
-      relatedServices: ['creative-photographer-auckland'],
+      price: { value: 270, unit: 'package', discount: '0' },
+      relatedServices: ['photographer-nz'],
       keywords: [...commonKeywords, 'photography package']
     },
     {
-      id: 'photo-2',
+      id: 'digital-photo-2',
       variant: 'success',
       title: 'Midi Photography Package',
       linkTitle: 'Midi Photography package',
       description: 'Great value business starter web package',
-      header: 'Photo Package 2',
+      header: 'Digital Photo Package 2',
       icon: ['fas', 'check'],
-      subheader: '2 hrs & 100 edited images',
+      subheader: '2 hours, rights to all images + 100 edited images',
       features: [
       ],
-      price: { value: 680, unit: '2 hrs & 100 edited images', discount: '0' },
-      relatedServices: ['creative-photographer-auckland'],
+      price: { value: 680, unit: 'package', discount: '0' },
+      relatedServices: ['photographer-nz'],
       keywords: [...commonKeywords, 'photography maxi package']
     },
     {
-      id: 'photo-3',
+      id: 'digital-photo-3',
       variant: 'success',
       title: 'Maxi Photography Package',
       linkTitle: 'Maxi Photography package',
       description: 'Maxi Photography package',
-      header: 'Photo Package 3',
+      header: 'Digital Photo Package 3',
       icon: ['fas', 'check'],
-      subheader: '6 hrs & 300 edited images',
+      subheader: '6 hours, rights to all images + 300 edited images',
       features: [
       ],
-      price: { value: 1900, unit: '6 hrs & 300 edited images', discount: '0' },
-      relatedServices: ['creative-photographer-auckland'],
+      price: { value: 1900, unit: 'package', discount: '0', flexible: true },
+      relatedServices: ['photographer-nz'],
       keywords: [...commonKeywords, 'photography maxi package']
-    }, // {
-    //   id: 'film-starter',
-    //   variant: 'success',
-    //   title: 'Base Photography Package',
-    //   linkTitle: 'Business starter package',
-    //   description: 'Great value photography package',
-    //   header: 'Flexi-Photo Package',
-    //   icon: ['fas', 'check'],
-    //   subheader: '1 hours & 24 edited images',
-    //   features: [
-    //   ],
-    //   price: { value: 500, unit: '1 hrs & 24 edited images', discount: '0' },
-    //   relatedServices: ['creative-photographer-auckland'],
-    //   keywords: [...commonKeywords, 'photography package']
-    // }
-
+    },
+    {
+      id: 'film-photography-nz',
+      variant: 'success',
+      title: 'Film Photography',
+      linkTitle: 'Business starter package',
+      description: 'Great value photography package',
+      header: 'Film Photography',
+      icon: ['fas', 'check'],
+      subheader: 'Per hour & 24 x 35mm developed images',
+      features: [
+        {
+          header: '35mm film development',
+          icon: ['fas', 'check']
+        },
+        {
+          header: '35mm film negatives to digital with our film negative scanner',
+          icon: ['fas', 'check']
+        }
+      ],
+      price: { value: 420, unit: 'package', discount: '0' },
+      isFeatured: true,
+      isFeaturedOrder: 5,
+      relatedServices: ['photographer-nz'],
+      keywords: [...commonKeywords, 'film photography package']
+    },
     {
       id: 'seo-1',
       variant: 'success',
       title: 'SEO Package A',
       linkTitle: 'SEO Package A',
       description: 'SEO Package A',
-      header: 'SEO Package A',
+      header: 'Flexi SEO',
       icon: ['fas', 'check'],
       subheader: 'Optimization of up to 5 Pages',
       features: [
       ],
-      price: { value: 450, unit: 'Optimization of up to 5 Pages', discount: '0' },
+      price: { value: 450, unit: 'package', discount: '0', flexible: true },
+      isFeatured: true,
+      isFeaturedOrder: 3,
       relatedServices: ['seo-auckland'],
       keywords: [...commonKeywords, 'seo package A']
     },
@@ -207,7 +297,7 @@ export const state = () => ({
       subheader: 'Optimization of up to 10 Pages',
       features: [
       ],
-      price: { value: 900, unit: 'Optimization of up to 10 Pages', discount: '0' },
+      price: { value: 900, unit: 'package', discount: '0', flexible: true },
       relatedServices: ['seo-auckland'],
       keywords: [...commonKeywords, 'seo package B']
     },
@@ -222,7 +312,7 @@ export const state = () => ({
       subheader: 'Optimization of up to 20 Pages',
       features: [
       ],
-      price: { value: 1700, unit: 'Optimization of up to 20 Pages', discount: '0' },
+      price: { value: 1700, unit: 'package', discount: '0', flexible: true },
       relatedServices: ['seo-auckland'],
       keywords: [...commonKeywords, 'seo package C']
     },
@@ -237,7 +327,7 @@ export const state = () => ({
       subheader: 'Optimization of up to 40 Pages',
       features: [
       ],
-      price: { value: 3200, unit: 'Optimization of up to 40 Pages', discount: '0' },
+      price: { value: 3200, unit: 'package', discount: '0', flexible: true },
       relatedServices: ['seo-auckland'],
       keywords: [...commonKeywords, 'seo package D']
     },
@@ -249,10 +339,10 @@ export const state = () => ({
       description: 'SEO Package E',
       header: 'SEO Package E',
       icon: ['fas', 'check'],
-      subheader: 'Optimization of up to 40 Pages',
+      subheader: 'Optimization of up to 75 Pages for large websites with numerous services and products',
       features: [
       ],
-      price: { value: 5900, unit: 'Optimization of up to 75 Pages for large websites with numerous services and products', discount: '0' },
+      price: { value: 5900, unit: 'package', discount: '0', flexible: true },
       relatedServices: ['seo-auckland'],
       keywords: [...commonKeywords, 'seo package E']
     }
@@ -277,13 +367,49 @@ export const getters = {
       }
     })
   },
+  getPaymentPlan: state => (price) => {
+    const gstRate = 0.15
+    const depositRate = price <= 500 ? 0.50 : 0.30
+    const interestRate = 0.02
+    const frequency = price <= 500 ? 2 : (price < 1000 ? 5 : 10)
+    const total = price * (1 + gstRate)
+    const depositBalance = Math.round((total * depositRate) * 100) / 100
+    const remainingBalance = total * (1 - depositRate)
+    const frequencyPayment = Math.round(((remainingBalance * (1 + interestRate)) / frequency) * 100) / 100
+    return `Flexi payment: deposit $${depositBalance} + ${frequency} weekly payments of $${frequencyPayment} (incl. ${interestRate * 100}% admin fee)`
+  },
+  getFeaturedProducts: (state, getters) => () => {
+    return state.all.filter(product => product.isFeatured)
+      .sort((a, b) => { return a.isFeaturedOrder - b.isFeaturedOrder || a.price.value - b.price.value })
+      // .sort((a, b) => { return a.price.value - b.price.value })
+      .map(item => (
+        {
+          id: item.id,
+          header: item.header,
+          subheader: item.subheader,
+          features: item.features,
+          price: item.price,
+          paymentPlan: item.price.flexible ? getters.getPaymentPlan(item.price.value) : undefined,
+          relatedServices: item.relatedServices
+        }
+      ))
+  },
   getProductById: state => (id) => {
     return state.all.find(product => product.id === id)
   },
-  getProductsById: state => (serviceId) => {
-    // console.log(serviceId)
-    // const products = state.all.filter(product => (product.relatedServices.includes(serviceId)))
-    // console.log(products)
+  getProductsById: (state, getters) => (serviceId) => {
     return state.all.filter(product => (product.relatedServices.includes(serviceId)))
+      .sort((a, b) => { return a.price.value - b.price.value })
+      .map(item => (
+        {
+          id: item.id,
+          header: item.header,
+          subheader: item.subheader,
+          features: item.features,
+          price: item.price,
+          paymentPlan: item.price.flexible ? getters.getPaymentPlan(item.price.value) : undefined,
+          relatedServices: item.relatedServices
+        }
+      ))
   }
 }

@@ -2,7 +2,7 @@
   <b-container fluid class="m-0 p-5">
     <b-row>
       <b-col>
-        <b-button :variant="variant" :to="blink" class="text-medium">
+        <b-button :variant="variant" :to="blink" class="text-medium" :alt="btext">
           {{ btext }}
         </b-button>
       </b-col>

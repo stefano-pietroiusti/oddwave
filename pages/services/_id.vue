@@ -32,10 +32,15 @@
         :pstyle="(item.dark) ? { bgStyle: 'parralaxNormal w-100 text-secondary text-left  px-3 p-2', inlineImageStyle: item.inlineImageStyle} : { bgStyle: 'parralaxNormal w-100 text-primary text-left  px-3  p-2', inlineImageStyle: item.inlineImageStyle}"
       />
       <HeaderComponent
-        v-if="featuredProducts.length>0"
+        v-if="featuredProducts.length > 0"
         psubheader="Featured Packages"
+        psubtitle="Flexi payment plans available. Charges for travel outside of Auckland may be applicable following initial consultation."
+        pclass="text-center"
       />
-      <ProductComponent v-for="item in featuredProducts" :key="item.id" :product="item" :summary="true" />
+      <span v-for="item in featuredProducts" :key="item.id">
+        <ProductComponent :product="item" :summary="true" />
+        <hr fluid class="hrprimary">
+      </span>
 
       <!-- <div
         v-if="service.slides"
@@ -44,19 +49,31 @@
         data-lax-preset="zoomInOut"
       >
         <CarouselComponent :carousel-id="carouselId" :pslides="service.slides" />
-      </div> -->
+      </div>-->
 
-      <div v-if="service.slides" class="text-left">
-        <HeaderComponent
-          psubheader="Featured Instagram Photos"
-        />
-        <img
-          v-for="item in service.slides"
-          :key="item.image"
-          :alt="item.imageText"
-          :src="`/imgs/carousel/${carouselId}/${item.image}`"
-        >
-      </div>
+      <b-container v-if="service.slides" fluid class="w-100">
+        <b-row>
+          <b-col sm="12" md="12" lg="12" xl="12">
+            <HeaderComponent psubheader="Featured Instagram Photos" />
+          </b-col>
+        </b-row>
+        <b-row no-gutters>
+          <b-col
+            v-for="item in service.slides"
+            :key="item.image"
+            sm="12"
+            md="6"
+            lg="4"
+            xl="3"
+          >
+            <img
+              :alt="item.imageText"
+              :src="`/imgs/carousel/${carouselId}/${item.image}`"
+              class="w-100"
+            >
+          </b-col>
+        </b-row>
+      </b-container>
 
       <!-- <b-container v-if="service.slides" id="lax" fluid class="text-left">
         <span v-for="item in service.slides" :key="item.image">
@@ -75,18 +92,23 @@
         </span>
       </b-container>
     </div></span>
-    </b-container> -->
+      </b-container>-->
 
       <HeaderComponent
         :psubheader="service.marketing.header + ' TO ' + service.marketing.subheader"
         :pstyle="service.subheaderStyle"
       />
 
-      <ButtonComponent btext="Get started" blink="/contact/" :pvariant="`outline-black`" class="text-center" />
+      <ButtonComponent
+        btext="Get started"
+        blink="/contact/"
+        :pvariant="`outline-black`"
+        class="text-center"
+      />
 
       <ServicesRelatedComponent v-if="otherServices" :services="otherServices" />
 
-    <!--  <D3Cloud :pwordcloud="service.cloud" />-->
+      <!--  <D3Cloud :pwordcloud="service.cloud" />-->
     </div>
   </div>
 </template>
@@ -166,7 +188,7 @@ export default {
       return this.getRelatedSummaries(this.id)
     },
     carouselId () {
-      return `${this.id}-carousel`
+      return `${this.id}`
     }
   },
   mounted () {
@@ -242,8 +264,8 @@ p.watermark {
 }
 
 img {
-  min-width: 30%;
-  max-width: 30%;
+  min-width: 100%;
+  max-width: 100%;
   outline: 1px solid white;
   outline-offset: -4px;
 }

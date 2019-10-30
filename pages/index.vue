@@ -4,8 +4,11 @@
 
     <HeaderComponent :psubheader="headerLanding" pclass="text-large pt-5" />
 
-    <ProductComponent :product="featuredProduct" />
-
+    <!-- <ProductComponent v-if="featuredProducts" :product="featuredProducts" /> -->
+    <span v-for="item in featuredProducts" :key="item.id">
+      <ProductComponent :product="item" />
+      <hr fluid class="hrprimary">
+    </span>
     <b-container fluid class="roundedContainer text-primary">
       <b-container fluid class="backgroundContainer">
         <b-container
@@ -202,10 +205,10 @@ export default {
   },
   computed: {
     ...mapGetters('services', ['summaries']),
-    ...mapGetters('products', ['getProductById']),
-    featuredProduct () {
-      const product = this.getProductById('business-starter')
-      return product
+    ...mapGetters('products', ['getProductById', 'getFeaturedProducts']),
+    featuredProducts () {
+      const products = this.getFeaturedProducts()
+      return products
     },
     bannerImagePath () {
       if (!this.backgroundurl) {

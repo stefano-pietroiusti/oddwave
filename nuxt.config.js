@@ -10,7 +10,7 @@ const routes = [
   '/services/seo-auckland',
   '/services/ppc-auckland',
   '/services/website-design-auckland',
-  '/services/creative-photographer-auckland'
+  '/services/photographer-nz'
 ]
 
 const baseUrl = process.env.BASE_URL || 'http://localhost:3000'
@@ -97,7 +97,19 @@ export default {
     // 'nuxt-svg-loader',
     'nuxt-responsive-loader',
     '@nuxtjs/dotenv',
-    ['@nuxtjs/robots', { UserAgent: '*', Disallow: '' }],
+    ['@nuxtjs/robots', {
+      UserAgent: '*',
+      Disallow: [
+        '/services/website-design-build-auckland/',
+        '/services/pwa-website-design-auckland/',
+        '/services/photography-auckland/',
+        '/services/seo',
+        '/services/webdesign/',
+        '/services/ppc/',
+        '/services/photography/',
+        '/services/creative-photographer-auckland/'
+      ]
+    }],
     '@nuxtjs/sitemap',
     '@nuxtjs/recaptcha',
     'nuxt-webfontloader',
@@ -136,7 +148,25 @@ export default {
   },
   robots: {
     UserAgent: '*',
-    Disallow: '',
+    // Disallow: '',
+    // Disallow: '/services/website-design-build-auckland/',
+    // Disallow: '/services/pwa-website-design-auckland/',
+    // Disallow: '/services/photography-auckland/',
+    // Disallow: '/services/seo',
+    // Disallow: '/services/webdesign/',
+    // Disallow: '/services/ppc/',
+    // Disallow: '/services/photography/',
+    // Disallow: '/services/creative-photographer-auckland/',
+    Disallow: [
+      '/services/website-design-build-auckland/',
+      '/services/pwa-website-design-auckland/',
+      '/services/photography-auckland/',
+      '/services/seo',
+      '/services/webdesign/',
+      '/services/ppc/',
+      '/services/photography/',
+      '/services/creative-photographer-auckland/'
+    ],
     Sitemap: baseUrl + '/sitemap.xml'
   },
   sitemap: {

@@ -3,32 +3,38 @@
     <b-row no-gutters>
       <b-col sm="12" md="12" lg="12" xl="12" class="w-100">
         <b-container v-if="summary" fluid class="productContainer text-center w-100">
-          <h2 class="text-medium">
-            {{ product.header }}
-          </h2>
+          <h2>{{ product.header }}</h2>
           <h3 class="pt-2 text-center text-small">
             {{ product.subheader }}
           </h3>
-          <h2 class="pt-2 text-center text-medium">
+          <h2 class="pt-2 text-center">
             <span id="price" class="text-success">${{ product.price.value }}</span> NZD + GST
           </h2>
+          <h3 class="pt-2 text-center text-small">
+            {{ product.paymentPlan }}
+          </h3>
         </b-container>
         <b-container v-else class="productContainer text-center text-large">
           <h2 class="bg-white text-primary text-large text-center">
             {{ product.header }}
           </h2>
-          <h3 class="pt-5 text-center">
+          <h3 class="pt-2 text-center">
             {{ product.subheader }}
           </h3>
-          <h2 class="pt-5">
+          <h2 class="pt-2">
             <span id="price" class="text-success text-large">${{ product.price.value }}</span> NZD + GST
           </h2>
+          <h3 class="pt-2 text-center text-small">
+            {{ product.paymentPlan }}
+          </h3>
         </b-container>
       </b-col>
     </b-row>
     <b-row v-if="product.features.length > 0" no-gutters>
       <b-col sm="12" md="12" lg="12" xl="12" class="text-center text-success pt-2">
-        <h2>what you get?</h2>
+        <h2 class="text-medium">
+          what you get?
+        </h2>
       </b-col>
     </b-row>
     <b-row v-if="product.features.length > 0" no-gutters>
@@ -40,15 +46,19 @@
             flush
             class="bg-primary text-secondary"
           >
-            <b-list-group-item class="bg-primary text-secondary text-medium">
-              <font-awesome-icon :icon="item.icon" :class="`fa text-success`" />
+            <b-list-group-item class="bg-primary text-secondary">
+              <font-awesome-icon :icon="item.icon" :class="`fa fa-small text-success`" />
               &nbsp;{{ item.header }}
               <span v-if="item.text" class="text-small">({{ item.text }})</span>
             </b-list-group-item>
           </b-list-group>
         </b-container>
         <span class="text-success text-large text-center">
-          <ButtonComponent btext="GET IN TOUCH" pvariant="outline-black" blink="/contact/" />
+          <ButtonComponent
+            btext="CONTACT US FOR A FREE CONSULT"
+            pvariant="outline-black"
+            blink="/contact/"
+          />
         </span>
       </b-col>
     </b-row>

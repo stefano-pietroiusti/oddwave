@@ -3,8 +3,7 @@
     <b-container fluid :style="gradient" class="contactBackground align-items-center text-center">
       <p class="watermark">
         The Odd Wave Ltd
-        <br>Websites & SEO & Photos
-        <br>New Zealand
+        <br>Cool Website Designs SEO Photos NZ
       </p>
     </b-container>
     <b-container fluid class="contactContainer text-primary text-medium w-100 text-left m-0 p-0">
@@ -24,7 +23,6 @@ import AnimeBannerWordsHeaderComponent from '@/components/AnimeBannerWordsHeader
 import HeaderComponent from '@/components/HeaderComponent'
 import ContactForm from '@/components/ContactForm'
 export default {
-
   components: {
     AnimeBannerWordsHeaderComponent,
     HeaderComponent,
@@ -68,12 +66,12 @@ export default {
       'workshops NZ'
     ]
     return {
-      title: 'Websites, SEO & Photography Auckland, NZ',
+      title: 'Professional Website Design NZ',
       description:
-        'Great Website Design Auckland, SEO Auckland & Photography Auckland, New Zealand',
+        'Connect with The Odd Wave for professional website design, SEO & Photography Auckland NZ',
       animeheader: "LET'S CREATE SOMETHING GREAT",
-      header: 'Connect for a great website',
-      subheader: 'Helping all New Zealand from Auckland, North Shore',
+      header: 'Professional Website Design Torbay/Browns Bay NZ',
+      subheader: 'Professional Website Design from North Shore, NZ',
       backgroundurl: 'nz.svg',
       backgroundImage: {
         color1: 'rgba(102, 126, 234, 1)',
@@ -84,29 +82,17 @@ export default {
       style: { bgStyle: 'text-secondary text-center' },
       keywords: [
         ...commonKeywords,
-        'websites north shore',
-        'websites browns bay',
-        'websites albany',
-        'websites NZ',
-        'websites new zealand',
+        'website design browns bay',
+        'website design albany',
+        'website design NZ',
+        'website design auckland',
         'seo auckland',
-        'seo albany',
-        'seo browns bay',
-        'seo north shore',
         'seo NZ',
-        'web app development albany',
-        'web app development browns bay',
-        'web app development north shore',
-        'web app development auckland',
-        'web app development NZ',
-        'web app development new zealand',
-        'cloud data engineer auckland',
-        'cloud data engineer new zealand',
-        'photography browns bay',
-        'photography north shore',
-        'photography NZ',
-        'photography auckland',
-        'photography new zealand'
+        'web developer NZ',
+        'photographer browns bay',
+        'photographer north shore',
+        'photographer NZ',
+        'photography NZ'
       ]
     }
   },
@@ -181,9 +167,8 @@ p.watermark {
   opacity: 0.1;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
-
 </style>

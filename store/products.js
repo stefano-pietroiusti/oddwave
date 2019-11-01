@@ -77,7 +77,7 @@ export const state = () => ({
         },
         {
           header: 'Scalable to optional add-ons after consultation',
-          text: 'Additional pages, online customer chat, monthly management, maintenance & support, custom feature development, content writing, headless CMS with GraphQL API, shopping cart & ecommerce',
+          text: 'Multilingual websites, JSON-LD Structured Data Support, headless CMS with GraphQL API, online shopping, online customer chat, website management, website maintenance & support, custom component development',
           icon: ['fas', 'check']
         }
       ],
@@ -116,7 +116,7 @@ export const state = () => ({
       isFeatured: true,
       isFeaturedOrder: 0,
       relatedServices: ['website-design-auckland'],
-      price: { value: 2250, unit: 'package', discount: '0', flexible: true },
+      price: { value: 2250, unit: 'package', discount: 0, flexible: true },
       keywords: [...commonKeywords, 'business website package', 'custom website', 'landing page', 'products website', 'services website', 'website with contact form']
     },
     {
@@ -125,9 +125,9 @@ export const state = () => ({
       title: 'Website Landing Page Auckland',
       linkTitle: 'Website Landing Page Auckland',
       description: 'Business promotion-specific page with external links',
-      header: 'Website Landing Page',
+      header: 'PRO Website Landing HomePage',
       icon: ['fas', 'check'],
-      subheader: 'Dedicated promotion-specific website landing page page with media and external links',
+      subheader: 'Dedicated promotion-specific website landing page with media and external links',
       features: [
         {
           header: 'Website landing page design',
@@ -179,7 +179,7 @@ export const state = () => ({
       isFeatured: true,
       isFeaturedOrder: 0,
       relatedServices: ['website-design-auckland'],
-      price: { value: 749, unit: 'package', discount: '0', flexible: true },
+      price: { value: 749, unit: 'package', discount: 0, flexible: true },
       keywords: [...commonKeywords, 'business website package', 'custom website', 'landing page', 'products website', 'services website', 'website with contact form']
     },
     {
@@ -193,7 +193,7 @@ export const state = () => ({
       subheader: 'Rights to all images + 10 edited images',
       features: [
       ],
-      price: { value: 150, unit: 'package', discount: '0' },
+      price: { value: 150, unit: 'package', discount: 0 },
       isFeatured: true,
       isFeaturedOrder: 5,
       relatedServices: ['photographer-nz'],
@@ -210,7 +210,7 @@ export const state = () => ({
       subheader: '1 hour, rights to all images + 24 edited images',
       features: [
       ],
-      price: { value: 270, unit: 'package', discount: '0' },
+      price: { value: 270, unit: 'package', discount: 0 },
       relatedServices: ['photographer-nz'],
       keywords: [...commonKeywords, 'photography package']
     },
@@ -225,7 +225,7 @@ export const state = () => ({
       subheader: '2 hours, rights to all images + 100 edited images',
       features: [
       ],
-      price: { value: 680, unit: 'package', discount: '0' },
+      price: { value: 680, unit: 'package', discount: 0 },
       relatedServices: ['photographer-nz'],
       keywords: [...commonKeywords, 'photography maxi package']
     },
@@ -240,7 +240,7 @@ export const state = () => ({
       subheader: '6 hours, rights to all images + 300 edited images',
       features: [
       ],
-      price: { value: 1900, unit: 'package', discount: '0', flexible: true },
+      price: { value: 1900, unit: 'package', discount: 0, flexible: true },
       relatedServices: ['photographer-nz'],
       keywords: [...commonKeywords, 'photography maxi package']
     },
@@ -263,7 +263,7 @@ export const state = () => ({
           icon: ['fas', 'check']
         }
       ],
-      price: { value: 420, unit: 'package', discount: '0' },
+      price: { value: 420, unit: 'package', discount: 0 },
       isFeatured: true,
       isFeaturedOrder: 5,
       relatedServices: ['photographer-nz'],
@@ -280,7 +280,7 @@ export const state = () => ({
       subheader: 'Optimization of up to 5 Pages',
       features: [
       ],
-      price: { value: 450, unit: 'package', discount: '0', flexible: true },
+      price: { value: 450, unit: 'package', discount: 0, flexible: true },
       isFeatured: true,
       isFeaturedOrder: 3,
       relatedServices: ['seo-auckland'],
@@ -297,7 +297,7 @@ export const state = () => ({
       subheader: 'Optimization of up to 10 Pages',
       features: [
       ],
-      price: { value: 900, unit: 'package', discount: '0', flexible: true },
+      price: { value: 900, unit: 'package', discount: 0, flexible: true },
       relatedServices: ['seo-auckland'],
       keywords: [...commonKeywords, 'seo package B']
     },
@@ -312,7 +312,7 @@ export const state = () => ({
       subheader: 'Optimization of up to 20 Pages',
       features: [
       ],
-      price: { value: 1700, unit: 'package', discount: '0', flexible: true },
+      price: { value: 1700, unit: 'package', discount: 0, flexible: true },
       relatedServices: ['seo-auckland'],
       keywords: [...commonKeywords, 'seo package C']
     },
@@ -327,7 +327,7 @@ export const state = () => ({
       subheader: 'Optimization of up to 40 Pages',
       features: [
       ],
-      price: { value: 3200, unit: 'package', discount: '0', flexible: true },
+      price: { value: 3200, unit: 'package', discount: 0, flexible: true },
       relatedServices: ['seo-auckland'],
       keywords: [...commonKeywords, 'seo package D']
     },
@@ -342,7 +342,7 @@ export const state = () => ({
       subheader: 'Optimization of up to 75 Pages for large websites with numerous services and products',
       features: [
       ],
-      price: { value: 5900, unit: 'package', discount: '0', flexible: true },
+      price: { value: 5900, unit: 'package', discount: 0, flexible: true },
       relatedServices: ['seo-auckland'],
       keywords: [...commonKeywords, 'seo package E']
     }
@@ -367,6 +367,10 @@ export const getters = {
       }
     })
   },
+  getPrice: state => (price, discount) => {
+    const totalPrice = (price * (1 - discount))
+    return totalPrice
+  },
   getPaymentPlan: state => (price) => {
     const gstRate = 0.15
     const depositRate = price <= 500 ? 0.50 : 0.30
@@ -388,8 +392,8 @@ export const getters = {
           header: item.header,
           subheader: item.subheader,
           features: item.features,
-          price: item.price,
-          paymentPlan: item.price.flexible ? getters.getPaymentPlan(item.price.value) : undefined,
+          price: getters.getPrice(item.price.value, item.price.discount),
+          paymentPlan: item.price.flexible ? getters.getPaymentPlan(getters.getPrice(item.price.value, item.price.discount)) : undefined,
           relatedServices: item.relatedServices
         }
       ))
@@ -406,8 +410,8 @@ export const getters = {
           header: item.header,
           subheader: item.subheader,
           features: item.features,
-          price: item.price,
-          paymentPlan: item.price.flexible ? getters.getPaymentPlan(item.price.value) : undefined,
+          price: getters.getPrice(item.price.value, item.price.discount),
+          paymentPlan: item.price.flexible ? getters.getPaymentPlan(getters.getPrice(item.price.value, item.price.discount)) : undefined,
           relatedServices: item.relatedServices
         }
       ))

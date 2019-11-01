@@ -2,26 +2,29 @@
   <b-container id="mainContainer" fluid class="text-light text-left p-0">
     <HeaderComponentLanding :pheader="subheader" :psubtitle="subtitle" pbackground="cyan" />
 
-    <HeaderComponent :psubheader="headerLanding" pclass="text-large pt-5" />
+    <HeaderComponent :pheader="header" pclass="text-large pt-5" />
 
-    <!-- <ProductComponent v-if="featuredProducts" :product="featuredProducts" /> -->
+    <HeaderComponent
+      v-if="featuredProducts.length > 0"
+      psubheader="Featured Packages with indicative pricing"
+      psubtitle="Flexible payment plans are available."
+      pclass="text-center"
+    />
     <span v-for="item in featuredProducts" :key="item.id">
       <ProductComponent :product="item" />
       <hr fluid class="hrprimary">
     </span>
     <b-container fluid class="roundedContainer text-primary">
       <b-container fluid class="backgroundContainer">
-        <b-container
-          fluid
-          :style="gradient"
-          class="align-items-center text-center"
-        >
+        <b-container fluid :style="gradient" class="align-items-center text-center">
           <p class="watermark">
-            The Odd Wave Ltd <br><br>New Zealand
+            The Odd Wave Ltd
+            <br>
+            North Shore, Auckland<br> New Zealand
           </p>
         </b-container>
       </b-container>
-      <HeaderComponent :pheader="header" pcontainerclass="transparent" />
+      <HeaderComponent :psubheader="featuresHeader" pcontainerclass="transparent" />
       <PromoComponent class="promoComponent" :features="features" variant="primary" />
 
       <TextImageComponent
@@ -33,37 +36,29 @@
       <ServicesComponent class="servicesComponent" :services="summaries" />
     </b-container>
 
-    <!-- <ButtonComponent btext="Get started" blink="/contact/" /> -->
     <!-- <PartnersComponent /> -->
-    <!-- <WavesComponent :footer="true" /> -->
   </b-container>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-// import AnimeBannerWordsComponent from '@/components/AnimeBannerWordsComponent'
 import HeaderComponentLanding from '@/components/HeaderComponentLanding'
 import HeaderComponent from '@/components/HeaderComponent'
-// import ButtonComponent from '@/components/ButtonComponent'
 import PromoComponent from '@/components/PromoComponent'
 import TextImageComponent from '@/components/TextImageComponent'
 // import PartnersComponent from '@/components/PartnersComponent'
 import ServicesComponent from '@/components/ServicesComponent'
 import ProductComponent from '@/components/ProductComponent'
-// import WavesComponent from '@/components/WavesComponent'
 
 export default {
   components: {
-    // AnimeBannerWordsComponent,
     HeaderComponentLanding,
     HeaderComponent,
-    // ButtonComponent,
     PromoComponent,
     TextImageComponent,
     // PartnersComponent,
     ServicesComponent,
     ProductComponent
-    // WavesComponent
   },
   head () {
     let content = `${process.env.baseUrl}${this.$route.path}`
@@ -96,26 +91,22 @@ export default {
   },
   data (context) {
     const commonKeywords = [
-      'fun workshops auckland',
-      'workshops auckland',
-      'workshops rotorua',
-      'workshops new zealand',
-      'workshops NZ',
-      'auckland',
-      'rotorua',
-      'new zealand',
-      'NZ'
+      'website design agency Torbay Auckland New Zealand',
+      'help with website design',
+      'help with custom web design',
+      'help with web application development',
+      'help with online marketing',
+      'help with SEO',
+      'help with photography'
     ]
     return {
       title:
-        'Web design, SEO and digital marketing services - North Shore, Auckland, Waikato, New Zealand',
+        'Website design & Online Marketing North Shore Auckland NZ',
       description:
-        'Custom web design, web app development, search engine optimization, ppc, google ads management, cloud data engineering, Auckland, New Zealand',
-      header: 'Custom Website Design & SEO',
+        'Website developers & online marketers helping NZ businesses create professional websites. Promote your business with our online marketing, SEO & photography services.',
+      header: 'PROFESSIONAL WEBSITE DESIGN WITH ONGOING ONLINE MARKETING SERVICES',
       subheader: 'Grow your business online',
-      headerLanding: 'SIMPLE. SMART. FAST. FLEXIBLE.',
-      subheaderLanding:
-        'We change the business life of our clients for good. The Odd Wave provides content-first mobile-first web solutions and online marketing services to take your business to the next level.',
+      featuresHeader: 'Highlights of our Professional Website Design & Online Marketing',
       backgroundurl: 'nz.svg',
       headerImage: {
         color1: 'rgba(255, 0, 255, 0) 0%',
@@ -124,82 +115,60 @@ export default {
         height: '20vh'
       },
       subtitle:
-        "We provide custom website design & digital marketing solutions from Auckland, New Zealand. <br/>We market our clients' businesses as if they were our own.",
-      // subtitle:
-      //   'Create a mobile first website with us <br/> using web technologies that are lightweight, fast and trustworthy. Design and optimise your content with us to make it useful   this with content & digital marketing solutions.',
-
-      linkText: 'GET STARTED',
+        "We're a kiwi technical consulting & internet marketing company here to help you with professional website design, online marketing & photography services from North Shore, Auckland, New Zealand. <br/>We market our clients' businesses as our own.",
+      linkText: 'GET STARTED with a free consult',
       link: '/contact/',
       features: [
         {
-          header: 'Content-First Mobile-First',
+          header: 'Website Design putting Users, Content & Mobile First',
           text:
-            'Content-First Mobile-First web design, development and testing for websites and web applications that can be used by everyone.',
+            'We follow a website design approach that makes our websites and web applications usable by anyone and any device.',
           icon: ['fas', 'mobile-alt']
         },
         {
-          header: 'Vanilla',
+          header: 'Professional Web Development using Open Source Technologies',
           text:
-            'Take advantage of thoroughly tested, vanilla technologies for a quick, lightweight and flexible website that will help you grow your brand image, loyalty and sales.',
+            'We compliment open source website frameworks with our vanilla HTML, CSS & javascript development to create websites that are lean, quick, flexible & scalable. Take advantage of our future-proof way to grow your brand image, loyalty and sales online.',
           icon: ['fab', 'servicestack']
         },
         {
-          header: 'Continuous',
+          header: 'A+ score in Accessibility, Best Practices & SEO',
           text:
-            'Websites from continuous testing and auditing for an A+ grade in accessibility, best practices and SEO.',
+            "Our websites are continuously tested and audited using Google's recommended open source tools to achieve an A+ score in performance, accessibility, best practices & SEO. ",
           icon: ['fas', 'users']
         },
         {
-          header: 'Optimised',
+          header: 'Website Content for Users & Search',
           text:
-            'We write and structure content to rank and remain searchable by search engines. Optimise your ROI from SEO with our conversion tracking and reporting.',
+            'We write structured content to be friendly to users, mobiles & search engines. We can also help you optimize your return on investment (ROI) from our managed search engine optimization (SEO) services with managed conversion tracking and reporting.',
           icon: ['fas', 'chart-line']
         }
-        // {
-        //   header: 'Distributable',
-        //   text: 'Manage your content with us to keep it optimised, accessible, searchable and distributable',
-        //   icon: ['fas', 'tv']
-        // },
       ],
       content: [
         {
+          header: 'The Odd Wave of website & online marketing services & products',
           text:
-            'The Odd Wave Ltd offers a range of digital services to support your business and increase sales:',
+            'The Odd Wave Ltd offers a range of website and online marketing services to support your business. We can help you with the following:',
           list: [
-            'Designing to your brand, features, products and services',
-            'Integrating, managing, structuring and optimising content for search',
-            'Helping you manage your online presence so you can focus more on your business',
-            'Domain name registration',
-            'Hosting - choosing and switching to reliable hosts in terms of Speed, Security, Location and Affordability'
+            'Designing for your users, brand, products & services',
+            'Integrating, managing, structuring and optimising content for your users & internet search engines',
+            'Helping you manage your online presence and keeping it competitive so you can focus more on your business',
+            'Webmaster services',
+            'Selecting a website name and registering a domain name',
+            'Selecting a suitable web host in terms of Speed, Security, Location and Affordability'
           ]
         },
         {
           text:
-            "Everything we do is aimed at producing results that our clients want for their businesses. We're based on the North Shore, Auckland, and service all of New Zealand."
-        }
-      ],
-      footerContent: [
-        {
-          header: 'Our approach is simple and flexible',
-          text:
-            'We manage data and content so it can be distributed anywhere, we make content accessible for display on any device. We revise and optimize content in response to trending keyword searches to make it search engine friendly and increase your Google rankings'
-        },
-        {
-          text:
-            'We design and develop awesome mobile-first websites to present your content - web apps that are fast, responsive and look great anywhere.<br/>Choose between static, periodic publishing and real-time, universal mobile web apps. A range of fit-for-purpose services and hosting packages are also available to keep carbon footprints and running costs low.'
-        },
-        {
-          text:
-            "We're here to help you save money while reaching a more significant customer base than traditional methods."
+            "Everything we do is aimed at producing results that our clients need for their businesses. We're based in Torbay, North Shore, Auckland, and are here to help everyone in New Zealand with their websites, online marketing, content management & technical support."
         }
       ],
       keywords: [
         ...commonKeywords,
-        'Web Design north shore', 'Web Design new zealand', 'Web Design NZ',
-        'websites north shore', 'websites browns bay', 'websites albany', 'websites NZ', 'websites new zealand',
-        'seo auckland', 'seo albany', 'seo browns bay', 'seo north shore', 'seo NZ', 'web app development albany', 'web app development browns bay', 'web app development north shore', 'web app development auckland', 'web app development NZ', 'web app development new zealand',
-        'cloud data engineer auckland', 'cloud data engineer new zealand', 'photography browns bay', 'photography north shore', 'photography NZ', 'photography auckland', 'photography new zealand'
-
+        'Website Design Auckland NZ',
+        'Professional Website Design North Shore',
+        'Online Marketing Auckland NZ',
+        'Professional photography North Shore'
       ]
     }
   },
@@ -270,6 +239,7 @@ p.watermark {
   font-size: 5vw;
   z-index: 20;
   opacity: 0.5;
+  line-height: 1.5em
 }
 
 .roundedContainer {
@@ -284,5 +254,4 @@ p.watermark {
 #mainContainer {
   width: 100%;
 }
-
 </style>

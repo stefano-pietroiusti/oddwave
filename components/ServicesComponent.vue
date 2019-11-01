@@ -25,7 +25,7 @@
             <b-card-text>{{ item.landing.content }}</b-card-text>
             <b-card-text>
               <nuxt-link :to="`/services/${item.id}/`" :class="`text-black`" :variant="`${item.variant}`" :alt="item.landing.header">
-                Find out more about our {{ item.landing.header }}
+                Find out more about our {{ item.landing.header }} services and related products
               </nuxt-link>
               <!-- <ButtonComponent btext="Find out more" pvariant="outline-success" :blink="`/services/${item.id}/`" /> -->
             </b-card-text>

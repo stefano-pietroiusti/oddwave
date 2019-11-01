@@ -3,8 +3,8 @@
     <b-container fluid :style="gradient" class="contactBackground align-items-center text-center">
       <p class="watermark">
         The Odd Wave Ltd
-        <br>Cool Website Designs SEO Photos NZ
-      </p>
+        <br>Cool Professional<br>Website Designs SEO Photos NZ
+      </p>1
     </b-container>
     <b-container fluid class="contactContainer text-primary text-medium w-100 text-left m-0 p-0">
       <AnimeBannerWordsHeaderComponent
@@ -59,11 +59,12 @@ export default {
   },
   data (context) {
     const commonKeywords = [
-      'fun workshops auckland',
-      'workshops auckland',
-      'workshops rotorua',
-      'workshops new zealand',
-      'workshops NZ'
+      'help with website design',
+      'help with custom web design',
+      'help with web application development',
+      'help with online marketing',
+      'help with SEO',
+      'help with photography'
     ]
     return {
       title: 'Professional Website Design NZ',
@@ -81,18 +82,7 @@ export default {
       },
       style: { bgStyle: 'text-secondary text-center' },
       keywords: [
-        ...commonKeywords,
-        'website design browns bay',
-        'website design albany',
-        'website design NZ',
-        'website design auckland',
-        'seo auckland',
-        'seo NZ',
-        'web developer NZ',
-        'photographer browns bay',
-        'photographer north shore',
-        'photographer NZ',
-        'photography NZ'
+        ...commonKeywords
       ]
     }
   },

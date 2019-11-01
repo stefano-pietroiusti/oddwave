@@ -8,7 +8,7 @@
             {{ product.subheader }}
           </h3>
           <h2 class="pt-2 text-center">
-            <span id="price" class="text-success">${{ product.price.value }}</span> NZD + GST
+            <span class="text-success">${{ product.price }}</span> NZD + GST
           </h2>
           <h3 class="pt-2 text-center text-small">
             {{ product.paymentPlan }}
@@ -22,7 +22,7 @@
             {{ product.subheader }}
           </h3>
           <h2 class="pt-2">
-            <span id="price" class="text-success text-large">${{ product.price.value }}</span> NZD + GST
+            <span class="text-success text-large ">${{ product.price }}</span> NZD + GST
           </h2>
           <h3 class="pt-2 text-center text-small">
             {{ product.paymentPlan }}

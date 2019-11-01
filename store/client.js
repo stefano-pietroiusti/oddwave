@@ -14,6 +14,7 @@ export const state = () => ({
       { text: "We're here to help you save money while reaching a more significant customer base than traditional methods." }
     ],
     fb: 'https://www.facebook.com/theoddwave',
+    instagram: '#',
     linkedin: '#',
     whatsapp: 'https://chat.whatsapp.com/DT09gv1r4fR7iD05jl7ing',
     'created_at': 1567119314889,
@@ -30,6 +31,7 @@ export const getters = {
     copyright: state.client.copyright,
     poweredBy: state.client.poweredBy,
     fb: state.client.fb,
+    instagram: state.client.instagram,
     linkedin: state.client.linkedin,
     whatsapp: state.client.whatsapp
   })

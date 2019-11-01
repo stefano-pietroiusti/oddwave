@@ -49,6 +49,7 @@
     "nuxt": "^2.0.0",
     "nuxt-env": "^0.1.0",
     "nuxt-fontawesome": "^0.4.0",
+    "nuxt-jsonld": "^1.4.4",
     "nuxt-responsive-loader": "^1.0.4",
     "nuxt-simple-line-icons": "^1.0.2",
     "nuxt-svg-loader": "^1.0.1",

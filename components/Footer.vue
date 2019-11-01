@@ -29,14 +29,14 @@
         <h2>Work with us</h2>
         <h4 v-for="(item,i) in contactInfo.phone" :key="i" class="pl-2">
           <a :href="`tel:${item}`" :title="item">
-            <i class="fa fa-phone fa-contact-dark fahover">&nbsp;</i>
+            <font-awesome-icon :icon="['fas', 'phone']" class="fa fa-small text-secondary fa-hover" />
             {{ item }}
           </a>
         </h4>
         <h4 class="pl-2">
           <a :href="`mailto:${contactInfo.email}`" :title="contactInfo.email">
-            <!-- <i class="fa fa-envelope fa-contact"> Email us</i> -->
-            <i class="fa fa-envelope fa-contact-dark fahover">&nbsp;</i>&nbsp;Email us
+            <font-awesome-icon :icon="['fas', 'envelope']" class="fa fa-small text-secondary fa-hover" />
+            &nbsp;Email us
           </a>
         </h4>
       </b-col>
@@ -49,12 +49,14 @@
         </h2>
         <ul>
           <li>
-            <a :href="contactInfo.fb" class="fa fa-facebook fahover" title="Connect with us via facebook" />&nbsp;&nbsp;
-            <!-- <a
-              :href="contactInfo.whatsapp"
-              class="fa fa-whatsapp fahover"
-              title="Connect with us via whatsapp"
-            /> -->
+            <a :href="contactInfo.fb" class="fa fa-facebook fahover" title="Connect with us via our facebook page" aria-label="Connect with us via our facebook page">
+              <font-awesome-icon :icon="['fab', 'facebook']" class="fa fa-facebook fahover fa-small" alt="Connect with us via our facebook page" />
+              &nbsp;&nbsp;
+            </a>
+            <a :href="contactInfo.instagram" class="fa fa-facebook fahover" title="Connect with us via our instagram" aria-label="Connect with us via our instagram">
+              <font-awesome-icon :icon="['fab', 'instagram']" class="fa fa-facebook fahover fa-small" alt="Connect with us via our instagram" />
+              &nbsp;&nbsp;
+            </a>
           </li>
         </ul>
       </b-col>

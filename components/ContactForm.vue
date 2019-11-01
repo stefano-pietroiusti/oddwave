@@ -26,7 +26,7 @@
           </b-form-group>
           <b-form-group
             id="input-group-1"
-            label="You may contact me on:"
+            label="You may message me on:"
             label-for="input-1"
             label-size="lg"
           >
@@ -34,8 +34,20 @@
               id="input-1"
               v-model="form.emailow"
               type="email"
-              required
               placeholder="Enter email"
+              size="lg"
+            />
+          </b-form-group>
+          <b-form-group
+            id="input-group-1"
+            label="You may call me on:"
+            label-for="input-1"
+            label-size="lg"
+          >
+            <b-form-input
+              id="input-1"
+              v-model="form.call"
+              placeholder="Enter a phone number"
               size="lg"
             />
           </b-form-group>
@@ -48,7 +60,7 @@
               size="sm"
             />
           </b-form-group>
-          <b-form-group
+          <!-- <b-form-group
             id="input-group-3"
             label="I am based here:"
             label-for="input-3"
@@ -61,10 +73,10 @@
               required
               size="lg"
             />
-          </b-form-group>
+          </b-form-group> -->
           <b-form-group
             id="input-group-4"
-            label="I require help with the following:"
+            label="I need help with:"
             label-size="lg"
             class="text-success mt-5"
           >
@@ -87,7 +99,7 @@
             <b-form-textarea
               id="input-5"
               v-model="form.enquiry"
-              placeholder="Enquiry..."
+              placeholder="Other comments..."
               rows="3"
               max-rows="6"
             />
@@ -103,10 +115,13 @@
       </b-col>
       <b-col class="p-3 text-left text-small">
         <!-- <h6>{{ getBase }}</h6> -->
+        <font-awesome-icon :icon="['fas', 'phone']" class="fa fa-small text-primary" />
         <span v-html="companyphone1" />
         <br>
+        <font-awesome-icon :icon="['fas', 'phone']" class="fa fa-small text-primary" />
         <span v-html="companyphone2" />
         <br>
+        <font-awesome-icon :icon="['fas', 'envelope']" class="fa fa-small text-primary" />
         <span v-html="companyemail" />
       </b-col>
     </b-row>
@@ -145,16 +160,17 @@ export default {
   data () {
     return {
       companyemail:
-        '<a class="fa-contact" href="mailto:&#116;&#101;&#097;&#109;&#064;&#116;&#104;&#101;&#111;&#100;&#100;&#119;&#097;&#118;&#101;&#046;&#099;&#111;&#046;&#110;&#122;"><i class="fa fa-envelope fa-contact">&nbsp;</i>&nbsp;&#116;&#101;&#097;&#109;&#064;&#116;&#104;&#101;&#111;&#100;&#100;&#119;&#097;&#118;&#101;&#046;&#099;&#111;&#046;&#110;&#122;</a>',
+        '<a class="text-primary" href="mailto:&#116;&#101;&#097;&#109;&#064;&#116;&#104;&#101;&#111;&#100;&#100;&#119;&#097;&#118;&#101;&#046;&#099;&#111;&#046;&#110;&#122;">&#116;&#101;&#097;&#109;&#064;&#116;&#104;&#101;&#111;&#100;&#100;&#119;&#097;&#118;&#101;&#046;&#099;&#111;&#046;&#110;&#122;</a>',
       companyphone1:
-        '<a href="tel:+642108658172" class="fa-contact"><i class="fa fa-phone fa-contact">&nbsp;</i>Jaline &nbsp;+64&nbsp;210&nbsp;8658&nbsp;172</a>',
+        '<a href="tel:+642108658172" class="text-primary">Jaline &nbsp;+64&nbsp;210&nbsp;8658&nbsp;172</a>',
       companyphone2:
-        '<a href="tel:+642108823769" class="fa-contact"><i class="fa fa-phone fa-contact">&nbsp;</i>Stef &nbsp;+64&nbsp;210&nbsp;8823&nbsp;769</a>',
+        '<a href="tel:+642108823769" class="text-primary">Stef &nbsp;+64&nbsp;210&nbsp;8823&nbsp;769</a>',
       form: {
         email: '',
         emailow: '',
         name: '',
-        location: null,
+        call: '',
+        // location: null,
         service: [],
         enquiry: ''
       },
@@ -174,6 +190,9 @@ export default {
       }
       const fileName = this.pbgimage.url
       return require(`~/assets/imgs/banner/${fileName}?size=1080`)
+    },
+    emailUrl () {
+      return `mailto:${this.companyemail}`
     },
     gradient () {
       return {
@@ -245,7 +264,6 @@ export default {
         this.showSubmit()
       } catch (error) {
         this.$ga.event('form', 'submit', 'error')
-        // console.log(error)
         this.showSubmitError()
       }
     },
@@ -264,13 +282,13 @@ export default {
           data: { ...this.form, isHuman }
         })
         if (response.statusCode !== 200) {
-          this.$ga.event('form', 'submit', `contactServiceError: ${response.statusCode}`)
+          this.$ga.event('form', 'submit', 'contactServiceError')
           this.showSubmitError()
         } else {
           this.$ga.event('form', 'submit', 'contact')
         }
       } catch (error) {
-        this.$ga.event('form', 'submit', `contactServiceError: ${error.message}`)
+        this.$ga.event('form', 'submit', 'contactServiceError')
         this.showSubmitError()
       }
     },
@@ -284,7 +302,8 @@ export default {
       this.form.email = ''
       this.form.emailow = ''
       this.form.name = ''
-      this.form.location = null
+      this.form.call = ''
+      // this.form.location = null
       this.form.service = []
       this.form.enquiry = ''
       this.show = false

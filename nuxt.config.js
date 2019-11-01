@@ -18,6 +18,7 @@ const contactUrl = process.env.CONTACT_URL || '/api/contact'
 const recaptchaSiteKey = process.env.SITE_KEY || '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
 const author = process.env.AUTHOR || 'https://www.linkedin.com/in/scpietro/'
 const nodeEnv = process.env.NODE_ENV || 'development'
+
 export default {
   env: {
     baseUrl,
@@ -25,6 +26,17 @@ export default {
     recaptchaSiteKey,
     author,
     nodeEnv
+  },
+  render: {
+    static: {
+      setHeaders(res) {
+        // res.setHeader('X-Frame-Options', 'ALLOWALL')
+        // res.setHeader('Access-Control-Allow-Origin', '*')
+        // res.setHeader('Access-Control-Allow-Methods', 'GET')
+        // res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
+        res.setHeader("Set-Cookie", "HttpOnly;Secure;SameSite=Strict")
+      }
+    }
   },
   pageTransition: {
     name: 'page',
@@ -81,11 +93,9 @@ export default {
     '@/assets/scss/custom.scss'
   ],
   plugins: [
-    // '~/plugins/laxxx.js',
     '~/plugins/fontawesome.js',
+    '~/plugins/jsonld',
     { src: '~/plugins/vue-notifications', mode: 'client' },
-    // { src: '~/plugins/ga.js', mode: 'client' },
-    // { src: '~/plugins/sal.js', mode: 'client' },
     { src: '~/plugins/lax.js', mode: 'client' }
   ],
   devModules: [
@@ -97,19 +107,20 @@ export default {
     // 'nuxt-svg-loader',
     'nuxt-responsive-loader',
     '@nuxtjs/dotenv',
-    ['@nuxtjs/robots', {
-      UserAgent: '*',
-      Disallow: [
-        '/services/website-design-build-auckland/',
-        '/services/pwa-website-design-auckland/',
-        '/services/photography-auckland/',
-        '/services/seo',
-        '/services/webdesign/',
-        '/services/ppc/',
-        '/services/photography/',
-        '/services/creative-photographer-auckland/'
-      ]
-    }],
+    '@nuxtjs/robots',
+    // ['@nuxtjs/robots', {
+    //   UserAgent: '*',
+    //   Disallow: [
+    //     '/services/website-design-build-auckland/',
+    //     '/services/pwa-website-design-auckland/',
+    //     '/services/photography-auckland/',
+    //     '/services/seo/',
+    //     '/services/webdesign/',
+    //     '/services/ppc/',
+    //     '/services/photography/',
+    //     '/services/creative-photographer-auckland/'
+    //   ]
+    // }],
     '@nuxtjs/sitemap',
     '@nuxtjs/recaptcha',
     'nuxt-webfontloader',
@@ -118,13 +129,24 @@ export default {
     }]
   ],
   webfontloader: {
-    google: {
-      // families: ['Varela Round:400,700', 'Ubuntu:400,700']
-      families: ['Montserrat: 400,700', 'Lato']
-    },
+    // google: {
+    //   families: [
+    //     'Montserrat:400,700',
+    //     'Lato'
+    //   ],
+    //   urls: [
+    //     'https://fonts.googleapis.com/css?family=Montserrat:400,700|Lato&display=swap'
+    //   ]
+    // },
     custom: {
-      families: ['FontAwesome'],
-      urls: ['https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css']
+      families: [
+        'Montserrat:400,700',
+        'Lato'
+      ],
+      urls: [
+        'https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap',
+        'https://fonts.googleapis.com/css?family=Lato&display=swap'
+      ]
     },
     timeout: 2000
   },
@@ -161,7 +183,7 @@ export default {
       '/services/website-design-build-auckland/',
       '/services/pwa-website-design-auckland/',
       '/services/photography-auckland/',
-      '/services/seo',
+      '/services/seo/',
       '/services/webdesign/',
       '/services/ppc/',
       '/services/photography/',

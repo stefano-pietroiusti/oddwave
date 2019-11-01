@@ -209,6 +209,7 @@ export default {
     window.requestAnimationFrame(updateLax)
 
     this.$ga.page(this.$route.path)
+    this.$ga.event('page', this.$route.params.id)
   }
 }
 </script>

@@ -1,6 +1,5 @@
 const commonKeywords = [
-  'auckland', 'waikato', 'northland', 'north shore', 'albany', 'torbay', 'browns bay', 'wellington', 'new zealand', 'NZ']
-
+  'website design company in Torbay Auckland New Zealand']
 export const state = () => ({
   all: [
     {
@@ -10,7 +9,7 @@ export const state = () => ({
       title: 'Website Design & Web Development',
       linkTitle: 'Website Design & Web Development',
       description: 'Custom mobile-first website design and web application development from good practises and standards to target mobile & web in one go. Made with passion to grow brand loyalty, trust & sales.',
-      landing: { header: 'Website Design & Web Development', content: 'Here at The Odd Wave, we design and develop robust, cutting edge websites using stable and lightweight frameworks built to last. We avoid clunk and overkill and love keeping things simple even when developing to solve the most complex problems. We continuously test and audit code and content for performance, accessibility, best practices and SEO to give you excellent quality and ROI.' },
+      landing: { header: 'Custom Website Design & Web Development', content: 'Here at The Odd Wave, we design and develop robust, cutting edge websites using stable and lightweight frameworks built to last. We avoid clunk and overkill and love keeping things simple even when developing to solve the most complex problems. We continuously test and audit code and content for performance, accessibility, best practices and SEO to give you excellent quality and ROI.' },
       header: 'Custom Mobile First Website Design & Web Apps Development',
       icon: ['fab', 'dev'],
       backgroundImage: { color1: 'rgba(46, 217, 195, 1)', color2: 'rgba(46, 217, 195, 1)', url: 'webdesign.jpg', height: 'auto' },
@@ -72,7 +71,7 @@ export const state = () => ({
         subheader: 'Remain competitive with modern website design',
         content: 'Using proven vanilla super-fast web technologies for website development'
       },
-      keywords: [...commonKeywords, 'website design', 'web design', 'web development', 'custom websites', 'pwa web apps development', 'progressive web apps development', 'mobile web design', 'nuxtjs', 'javascript', 'Vanilla JS', 'data engineering']
+      keywords: [...commonKeywords, 'website design', 'web design', 'web development', 'custom websites', 'pwa web apps development', 'progressive web apps development']
     },
     // {
     //   // make a website Web design web development web scheduler best website builder nz website design how to create a web page best web hosting
@@ -240,7 +239,7 @@ export const state = () => ({
         { text: 'CMS', value: 80 },
         { text: 'Product', value: 70 }
       ],
-      keywords: [...commonKeywords, 'seo auckland nz', 'seo nz', 'seo website', 'seo service', 'seo agency auckland', 'search engine Optimization', 'serp', 'search engine ranking', 'improve your search engine ranking']
+      keywords: [...commonKeywords, 'seo auckland nz', 'search engine optimization', 'improve your search engine ranking']
     },
     {
       id: 'ppc-auckland',
@@ -249,7 +248,7 @@ export const state = () => ({
       title: 'Google AdWords Management & Online Marketing Auckland NZ',
       linkTitle: 'Online Marketing',
       description: 'The Odd Wave offers Online Marketing & AdWords management services to businesses in Auckland and elsewhere in NZ. Google Ads and PPC advertising provide instant results.',
-      landing: { header: 'Online Marketing', content: 'The Odd Wave provides professionally managed service for Online Marketing. Stay ahead of your competition with Google AdWords PPC.' },
+      landing: { header: 'Online Marketing Services', content: 'The Odd Wave provides professionally managed service for Online Marketing. Stay ahead of your competition with Google AdWords PPC.' },
       header: 'Online Marketing Services',
       icon: ['fas', 'search-dollar'],
       backgroundImage: { color1: 'rgba(153, 61, 187, 1)', color2: 'rgba(153, 61, 187, 1)', url: 'ppc.jpg', height: 'auto' },
@@ -332,7 +331,7 @@ export const state = () => ({
         { text: 'Content', value: 90 },
         { text: 'CMS', value: 80 },
         { text: 'Product', value: 70 }],
-      keywords: ['online marketing', 'google ads', 'bing ads', 'microsoft advertising', 'ppc', 'workshops']
+      keywords: ['help with online marketing', 'help with google ads', 'help with bing ads', 'help with microsoft advertising']
     },
     // {
     //   id: 'ppc-auckland',
@@ -454,7 +453,7 @@ export const state = () => ({
       title: 'Photographer Auckland - film & digital photography NZ',
       linkTitle: 'Professional Photography',
       description: 'Get cool images from our professional photography, digital & film. Use our photographer for capturing the best of products, family, events & candid moments.',
-      landing: { header: 'Professional Photography Services', content: 'Compliment your products, services, websites and digital signage with our professional photographer & creative film & digital photography.' },
+      landing: { header: 'Professional Photography', content: 'Compliment your products, services, websites and digital signage with our professional photographer & creative film & digital photography.' },
       header: 'Professional Photography',
       icon: ['fas', 'camera-retro'],
       backgroundImage: { color1: 'rgba(244, 67, 108, 1)', color2: 'rgba(244, 67, 108, 1)', url: 'photography.jpg', height: 'auto' },
@@ -541,12 +540,6 @@ export const state = () => ({
           image: 'takapuna-nz.jpg',
           imageText: 'Takapuna NZ'
         },
-
-        {
-          image: 'pink-flowers.jpg',
-          imageText: 'Pink flowers'
-        },
-
         {
           image: 'bird.jpg',
           imageText: 'Wild bird'
@@ -581,7 +574,7 @@ export const state = () => ({
         }
       ],
       price: { value: 1100, unit: 'package' },
-      keywords: [...commonKeywords, 'professional photographer in auckland', 'creative photographer', 'product photographer', 'food photographer', 'still-life photographer', 'candid photographer', 'black and white photographer', 'digital photography', 'film photography'],
+      keywords: [...commonKeywords, 'professional photographer in auckland', 'creative photographer', 'product photographer'],
       tags: ['family photographer', 'product photographer', 'events photographer', 'functions photographer', 'real estate photographer', 'architecture photographer', 'black and white photographer', 'digital photography', 'film photography'],
       hashtags: ['family photographer', 'product photographer', 'events photographer', 'functions photographer', 'real estate photographer', 'architecture photographer', 'black and white photographer', 'digital photography', 'film photography']
     }

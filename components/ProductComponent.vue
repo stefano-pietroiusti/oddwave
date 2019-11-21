@@ -7,10 +7,10 @@
           <h3 class="pt-2 text-center text-small">
             {{ product.subheader }}
           </h3>
-          <h2 class="pt-2 text-center">
+          <h2 v-if="product.price" class="pt-2 text-center">
             <span class="text-success">${{ product.price }}</span> NZD + GST
           </h2>
-          <h3 class="pt-2 text-center text-small">
+          <h3 v-if="product.price" class="pt-2 text-center text-small">
             {{ product.paymentPlan }}
           </h3>
         </b-container>
@@ -21,10 +21,10 @@
           <h3 class="pt-2 text-center">
             {{ product.subheader }}
           </h3>
-          <h2 class="pt-2">
+          <h2 v-if="product.price" class="pt-2">
             <span class="text-success text-large ">${{ product.price }}</span> NZD + GST
           </h2>
-          <h3 class="pt-2 text-center text-small">
+          <h3 v-if="product.price" class="pt-2 text-center text-small">
             {{ product.paymentPlan }}
           </h3>
         </b-container>
@@ -47,7 +47,7 @@
             class="bg-primary text-secondary"
           >
             <b-list-group-item class="bg-primary text-secondary">
-              <font-awesome-icon :icon="item.icon" :class="`fa fa-small text-success`" />
+              <font-awesome-icon :icon="['fas', 'check']" :class="`fa fa-small text-success`" />
               &nbsp;{{ item.header }}
               <span v-if="item.text" class="text-small">({{ item.text }})</span>
             </b-list-group-item>
@@ -80,7 +80,6 @@ export default {
       default () {
         return {
           id: 'business-starter',
-          variant: 'success',
           title: 'Business starter package',
           linkTitle: 'Business starter packag',
           description: 'Great value business starter web package',

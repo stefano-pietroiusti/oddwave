@@ -2,9 +2,8 @@
   <b-container fluid class="contactContainer p-0 m-0 text-primary text-medium w-100 text-left">
     <b-container fluid :style="gradient" class="contactBackground align-items-center text-center">
       <p class="watermark">
-        The Odd Wave Ltd
-        <br>Cool Professional<br>Website Designs SEO Photos NZ
-      </p>1
+        Pro Websites SEO Digital Marketing Google Ads Data Analysis<br>pae tukutuku kūkara pānui
+      </p>
     </b-container>
     <b-container fluid class="contactContainer text-primary text-medium w-100 text-left m-0 p-0">
       <AnimeBannerWordsHeaderComponent
@@ -14,11 +13,12 @@
         :pstyle="style"
       />
       <HeaderComponent :pheader="header" />
-      <ContactForm :pservices="services" :pbgimage="backgroundImage" :pstyle="style" />
+      <ContactForm :pservices="servicesDropDown" :pbgimage="backgroundImage" :pstyle="style" />
     </b-container>
   </b-container>
 </template>
 <script>
+import { mapGetters } from 'vuex'
 import AnimeBannerWordsHeaderComponent from '@/components/AnimeBannerWordsHeaderComponent'
 import HeaderComponent from '@/components/HeaderComponent'
 import ContactForm from '@/components/ContactForm'
@@ -55,6 +55,8 @@ export default {
           content: this.keywords.join()
         }
       ]
+      // __dangerouslyDisableSanitizers: ['script'],
+      // script: [{ innerHTML: JSON.stringify(this.jsonld), type: 'application/ld+json' }]
     }
   },
   data (context) {
@@ -67,12 +69,12 @@ export default {
       'help with photography'
     ]
     return {
-      title: 'Professional Website Design NZ',
+      title: 'Contact the Odd Wave Ltd, Torbay, Auckland, NZ',
       description:
-        'Connect with The Odd Wave for professional website design, SEO & Photography Auckland NZ',
+        'Contact the Odd Wave Ltd - connect with us for your vnext website, SEO, online marketing, photographer and consulting needs',
       animeheader: "LET'S CREATE SOMETHING GREAT",
-      header: 'Professional Website Design Torbay/Browns Bay NZ',
-      subheader: 'Professional Website Design from North Shore, NZ',
+      header: 'Contact the Odd Wave Ltd for your vNext',
+      subheader: 'by the Odd Wave of people, technologies and services',
       backgroundurl: 'nz.svg',
       backgroundImage: {
         color1: 'rgba(102, 126, 234, 1)',
@@ -87,9 +89,11 @@ export default {
     }
   },
   computed: {
-    services () {
-      return this.$store.state.services.all.map((item) => {
-        return { value: item.id, text: item.linkTitle, selected: true }
+    ...mapGetters('services', ['summaries']),
+    ...mapGetters('client', ['getClient']),
+    servicesDropDown () {
+      return this.summaries.map((item) => {
+        return { value: item.id, text: item.title, selected: true }
       })
     },
     bannerImagePath () {

@@ -17,8 +17,8 @@
         :key="i"
         sm="12"
         md="12"
-        lg="3"
-        xl="3"
+        lg="12"
+        xl="12"
         class="text-left relatedForeground"
       >
         <b-button

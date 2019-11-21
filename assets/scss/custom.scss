@@ -370,7 +370,7 @@ hr {
 .logo {
   margin: 0;
   padding: 0;
-  width: 3em;
+  width: 10em;
   font-weight: bold;
   margin-right: 0.05em;
 }
@@ -550,7 +550,6 @@ a:hover {
   text-align: center;
   text-decoration: none;
   margin: 0.1em;
-  text-decoration: none;
   opacity: 0.8;
 }
 .fa-small{
@@ -558,15 +557,18 @@ a:hover {
 }
 .fa-facebook {
   color: var(--secondary);
+  text-decoration: none;
 }
 
 .fa-linkedin {
   color: var(--secondary);
+  text-decoration: none;
 }
 .fa-whatsapp {
   color: var(--secondary);
+  text-decoration: none;
 }
-.fahover:hover {
+.fa-hover:hover {
   color: var(--secondary);
   text-decoration: none;
   opacity: 1;

@@ -5,12 +5,45 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
     base: '/oddwave/'
   }
 } : {}
-
+/*
+https://theoddwave.co.nz/
+https://theoddwave.co.nz/services/website-design-auckland/
+https://theoddwave.co.nz/services/seo-auckland/
+https://theoddwave.co.nz/services/ppc-auckland/
+https://theoddwave.co.nz/services/photographer-nz/
+https://theoddwave.co.nz/services/consulting-services/
+https://theoddwave.co.nz/products/photography-website/
+https://theoddwave.co.nz/products/pro-business-website-landing/
+https://theoddwave.co.nz/products/pro-business-website/
+https://theoddwave.co.nz/products/nuxtjs-templates-nz/
+https://theoddwave.co.nz/products/seo-website-package-1/
+https://theoddwave.co.nz/products/seo-website-package-5/
+https://theoddwave.co.nz/products/seo-website-package-10/
+https://theoddwave.co.nz/products/seo-website-package-20/
+https://theoddwave.co.nz/products/website-digital-photo-24/
+https://theoddwave.co.nz/products/website-digital-photo-100/
+https://theoddwave.co.nz/products/film-photography-nz/
+https://theoddwave.co.nz/products/consulting-nz/
+https://theoddwave.co.nz/contact/
+*/
 const routes = [
-  '/services/seo-auckland',
-  '/services/ppc-auckland',
-  '/services/website-design-auckland',
-  '/services/photographer-nz'
+  '/services/seo-nz',
+  '/services/ppc-nz',
+  '/services/web-design-nz',
+  '/services/photographer-nz',
+  '/services/contracting-nz/',
+  '/products/photography-website/',
+  '/products/pro-business-website-landing/',
+  '/products/pro-business-website/',
+  '/products/nuxtjs-templates-nz/',
+  '/products/seo-website-package-1/',
+  '/products/seo-website-package-5/',
+  '/products/seo-website-package-10/',
+  '/products/seo-website-package-20/',
+  '/products/website-digital-photo-24/',
+  '/products/website-digital-photo-100/',
+  '/products/film-photography-nz/',
+  '/products/contracting-nz/'
 ]
 
 const baseUrl = process.env.BASE_URL || 'http://localhost:3000'
@@ -96,7 +129,8 @@ export default {
     '~/plugins/fontawesome.js',
     '~/plugins/jsonld',
     { src: '~/plugins/vue-notifications', mode: 'client' },
-    { src: '~/plugins/lax.js', mode: 'client' }
+    { src: '~/plugins/lax.js', mode: 'client' },
+    { src: '~/plugins/vue-fb-customer-chat', mode: 'client' }
   ],
   devModules: [
     '@nuxtjs/eslint-module'
@@ -108,19 +142,6 @@ export default {
     'nuxt-responsive-loader',
     '@nuxtjs/dotenv',
     '@nuxtjs/robots',
-    // ['@nuxtjs/robots', {
-    //   UserAgent: '*',
-    //   Disallow: [
-    //     '/services/website-design-build-auckland/',
-    //     '/services/pwa-website-design-auckland/',
-    //     '/services/photography-auckland/',
-    //     '/services/seo/',
-    //     '/services/webdesign/',
-    //     '/services/ppc/',
-    //     '/services/photography/',
-    //     '/services/creative-photographer-auckland/'
-    //   ]
-    // }],
     '@nuxtjs/sitemap',
     '@nuxtjs/recaptcha',
     'nuxt-webfontloader',
@@ -180,12 +201,15 @@ export default {
     // Disallow: '/services/photography/',
     // Disallow: '/services/creative-photographer-auckland/',
     Disallow: [
+      '/services/website-design-auckland/',
       '/services/website-design-build-auckland/',
+      '/services/ppc-auckland/',
+      '/services/seo-auckland/',
+      '/services/ppc/',
       '/services/pwa-website-design-auckland/',
       '/services/photography-auckland/',
       '/services/seo/',
       '/services/webdesign/',
-      '/services/ppc/',
       '/services/photography/',
       '/services/creative-photographer-auckland/'
     ],

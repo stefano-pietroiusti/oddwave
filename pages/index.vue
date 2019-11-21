@@ -1,12 +1,22 @@
 <template>
   <b-container id="mainContainer" fluid class="text-light text-left p-0">
-    <HeaderComponentLanding :pheader="subheader" :psubtitle="subtitle" pbackground="cyan" />
-
-    <HeaderComponent :pheader="header" pclass="text-large pt-5" />
-
+    <HeaderComponentLanding
+      :pheader="client.subheader"
+      :psubtitle="client.subtitle"
+      pbackground="cyan"
+    />
+    <HeaderComponent :pheader="client.header" pclass="text-large pt-5" />
+    <TextImageComponent
+      v-for="(item,i) in client.content"
+      :key="i"
+      :pcontent="{header: item.header, text: item.text, list: item.list, bgImage: item.bgImage, inlineImage: item.inlineImage, inlineImageText: item.inlineImageText, inlineImageRight: item.inlineImageRight }"
+      :pstyle="(item.dark) ? { bgStyle: 'w-100 text-secondary text-left px-4 p-2', inlineImageStyle: item.inlineImageStyle} : { bgStyle: 'w-100 text-primary text-left  px-4 p-2', inlineImageStyle: item.inlineImageStyle}"
+    />
+    <HeaderComponent :psubheader="client.featuresHeader" pcontainerclass="transparent" />
+    <PromoComponent class="promoComponent" :features="client.features" variant="primary" />
     <HeaderComponent
       v-if="featuredProducts.length > 0"
-      psubheader="Featured Packages with indicative pricing"
+      psubheader="Featured Packages"
       psubtitle="Flexible payment plans are available."
       pclass="text-center"
     />
@@ -18,25 +28,16 @@
       <b-container fluid class="backgroundContainer">
         <b-container fluid :style="gradient" class="align-items-center text-center">
           <p class="watermark">
-            The Odd Wave Ltd
-            <br>
-            North Shore, Auckland<br> New Zealand
+            matihiko hangarau
+            <br>pae tukutuku
+            <br>kūkara, pānui
+            <br>Aotearoa
           </p>
         </b-container>
       </b-container>
-      <HeaderComponent :psubheader="featuresHeader" pcontainerclass="transparent" />
-      <PromoComponent class="promoComponent" :features="features" variant="primary" />
 
-      <TextImageComponent
-        v-for="(item,i) in content"
-        :key="i"
-        :pcontent="{header: item.header, text: item.text, list: item.list, bgImage: item.bgImage, inlineImage: item.inlineImage, inlineImageText: item.inlineImageText, inlineImageRight: item.inlineImageRight }"
-        :pstyle="(item.dark) ? { bgStyle: 'w-100 text-secondary text-left px-4 p-2', inlineImageStyle: item.inlineImageStyle} : { bgStyle: 'w-100 text-primary text-left  px-4 p-2', inlineImageStyle: item.inlineImageStyle}"
-      />
       <ServicesComponent class="servicesComponent" :services="summaries" />
     </b-container>
-
-    <!-- <PartnersComponent /> -->
   </b-container>
 </template>
 
@@ -46,7 +47,6 @@ import HeaderComponentLanding from '@/components/HeaderComponentLanding'
 import HeaderComponent from '@/components/HeaderComponent'
 import PromoComponent from '@/components/PromoComponent'
 import TextImageComponent from '@/components/TextImageComponent'
-// import PartnersComponent from '@/components/PartnersComponent'
 import ServicesComponent from '@/components/ServicesComponent'
 import ProductComponent from '@/components/ProductComponent'
 
@@ -56,7 +56,6 @@ export default {
     HeaderComponent,
     PromoComponent,
     TextImageComponent,
-    // PartnersComponent,
     ServicesComponent,
     ProductComponent
   },
@@ -64,7 +63,7 @@ export default {
     let content = `${process.env.baseUrl}${this.$route.path}`
     content = content.slice(-1) !== '/' ? content + '/' : content
     return {
-      title: this.title,
+      title: this.client.title,
       meta: [
         {
           hid: 'og:url',
@@ -74,39 +73,25 @@ export default {
         {
           hid: 'og:description',
           name: 'og:description',
-          content: this.description
+          content: this.client.description
         },
         {
           hid: 'description',
           name: 'description',
-          content: this.description
+          content: this.client.description
         },
         {
           hid: 'keywords',
           name: 'keywords',
-          content: this.keywords.join()
+          content: this.client.keywords.join()
         }
-      ]
+      ],
+      __dangerouslyDisableSanitizers: ['script'],
+      script: [{ innerHTML: JSON.stringify(this.jsonld), type: 'application/ld+json' }]
     }
   },
   data (context) {
-    const commonKeywords = [
-      'website design agency Torbay Auckland New Zealand',
-      'help with website design',
-      'help with custom web design',
-      'help with web application development',
-      'help with online marketing',
-      'help with SEO',
-      'help with photography'
-    ]
     return {
-      title:
-        'Website design & Online Marketing North Shore Auckland NZ',
-      description:
-        'Website developers & online marketers helping NZ businesses create professional websites. Promote your business with our online marketing, SEO & photography services.',
-      header: 'PROFESSIONAL WEBSITE DESIGN WITH ONGOING ONLINE MARKETING SERVICES',
-      subheader: 'Grow your business online',
-      featuresHeader: 'Highlights of our Professional Website Design & Online Marketing',
       backgroundurl: 'nz.svg',
       headerImage: {
         color1: 'rgba(255, 0, 255, 0) 0%',
@@ -114,70 +99,55 @@ export default {
         url: 'oddwave.jpg',
         height: '20vh'
       },
-      subtitle:
-        "We're a kiwi technical consulting & internet marketing company here to help you with professional website design, online marketing & photography services from North Shore, Auckland, New Zealand. <br/>We market our clients' businesses as our own.",
-      linkText: 'GET STARTED with a free consult',
-      link: '/contact/',
-      features: [
-        {
-          header: 'Website Design putting Users, Content & Mobile First',
-          text:
-            'We follow a website design approach that makes our websites and web applications usable by anyone and any device.',
-          icon: ['fas', 'mobile-alt']
-        },
-        {
-          header: 'Professional Web Development using Open Source Technologies',
-          text:
-            'We compliment open source website frameworks with our vanilla HTML, CSS & javascript development to create websites that are lean, quick, flexible & scalable. Take advantage of our future-proof way to grow your brand image, loyalty and sales online.',
-          icon: ['fab', 'servicestack']
-        },
-        {
-          header: 'A+ score in Accessibility, Best Practices & SEO',
-          text:
-            "Our websites are continuously tested and audited using Google's recommended open source tools to achieve an A+ score in performance, accessibility, best practices & SEO. ",
-          icon: ['fas', 'users']
-        },
-        {
-          header: 'Website Content for Users & Search',
-          text:
-            'We write structured content to be friendly to users, mobiles & search engines. We can also help you optimize your return on investment (ROI) from our managed search engine optimization (SEO) services with managed conversion tracking and reporting.',
-          icon: ['fas', 'chart-line']
-        }
-      ],
-      content: [
-        {
-          header: 'The Odd Wave of website & online marketing services & products',
-          text:
-            'The Odd Wave Ltd offers a range of website and online marketing services to support your business. We can help you with the following:',
-          list: [
-            'Designing for your users, brand, products & services',
-            'Integrating, managing, structuring and optimising content for your users & internet search engines',
-            'Helping you manage your online presence and keeping it competitive so you can focus more on your business',
-            'Webmaster services',
-            'Selecting a website name and registering a domain name',
-            'Selecting a suitable web host in terms of Speed, Security, Location and Affordability'
-          ]
-        },
-        {
-          text:
-            "Everything we do is aimed at producing results that our clients need for their businesses. We're based in Torbay, North Shore, Auckland, and are here to help everyone in New Zealand with their websites, online marketing, content management & technical support."
-        }
-      ],
-      keywords: [
-        ...commonKeywords,
-        'Website Design Auckland NZ',
-        'Professional Website Design North Shore',
-        'Online Marketing Auckland NZ',
-        'Professional photography North Shore'
-      ]
+      linkText: 'GET STARTED',
+      link: '/contact/'
     }
   },
   computed: {
     ...mapGetters('services', ['summaries']),
     ...mapGetters('products', ['getProductById', 'getFeaturedProducts']),
+    ...mapGetters('client', ['getClient']),
+    client () {
+      return this.getClient
+    },
     featuredProducts () {
       const products = this.getFeaturedProducts()
       return products
+    },
+    jsonld () {
+      if (!this.client) {
+        return null
+      }
+      return {
+        '@context': 'http://schema.org',
+        '@type': 'LocalBusiness',
+        name: this.client.name,
+        legalName: this.client.legalName,
+        '@id': this.client['@id'],
+        logo: this.client.logo,
+        image: this.client.image,
+        foundingDate: this.client.foundingDate,
+        founders: this.client.founders,
+        address: this.client.address,
+        geo: this.client.geo,
+        contactPoint: this.client.contactPoint,
+        sameAs: this.client.sameAs,
+        url: this.client.url,
+        description: this.client.description,
+        telephone: this.client.telephone,
+        openingHoursSpecification: this.client.openingHoursSpecification,
+        priceRange: this.client.priceRange
+        // '@type': 'Organization',
+        // name: this.client.name,
+        // legalName: this.client.legalName,
+        // url: this.client.url,
+        // logo: this.client.logo,
+        // foundingDate: this.client.foundingDate,
+        // founders: this.client.founders,
+        // address: this.client.address,
+        // contactPoint: this.client.contactPoint,
+        // sameAs: this.client.sameAs
+      }
     },
     bannerImagePath () {
       if (!this.backgroundurl) {
@@ -239,7 +209,7 @@ p.watermark {
   font-size: 5vw;
   z-index: 20;
   opacity: 0.5;
-  line-height: 1.5em
+  line-height: 1.5em;
 }
 
 .roundedContainer {

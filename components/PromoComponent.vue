@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-v-html vue/require-v-for-key -->
 <template>
   <b-container fluid class="p-5 gradient">
     <b-row>
@@ -22,7 +23,14 @@
             <h6 class="text-primary">
               {{ item.header }}
             </h6>
-            <p>{{ item.text }}</p>
+            <p v-if="item.text">
+              {{ item.text }}
+            </p>
+            <ul v-if="item.list" class="text-left pl-5">
+              <li v-for="litem in item.list">
+                {{ litem }}
+              </li>
+            </ul>
           </div>
         </div>
       </b-col>
@@ -74,9 +82,8 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 background-attachment: fixed;
 background-size: cover; */
 
-/* background-color: #1561ad;
+  /* background-color: #1561ad;
 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 90 90'%3E%3Ccircle fill='%23fa0f9c' cx='45' cy='45' r='13'/%3E%3Cg fill='%233befff' fill-opacity='1'%3E%3Ccircle cx='0' cy='90' r='13'/%3E%3Ccircle cx='90' cy='90' r='13'/%3E%3Ccircle cx='90' cy='0' r='13'/%3E%3Ccircle cx='0' cy='0' r='13'/%3E%3C/g%3E%3C/svg%3E"); */
-
 }
 
 .bg-feature {
@@ -85,7 +92,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   line-height: 3rem;
   font-weight: 300;
   background: transparent;
-   /* background-image: radial-gradient(ellipse at top, #fff, transparent),
+  /* background-image: radial-gradient(ellipse at top, #fff, transparent),
     radial-gradient(ellipse at bottom, #eee, transparent); */
 }
 

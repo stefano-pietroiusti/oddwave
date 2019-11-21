@@ -5,12 +5,45 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
     base: '/oddwave/'
   }
 } : {}
-
+/*
+https://theoddwave.co.nz/
+https://theoddwave.co.nz/services/website-design-auckland/
+https://theoddwave.co.nz/services/seo-auckland/
+https://theoddwave.co.nz/services/ppc-auckland/
+https://theoddwave.co.nz/services/photographer-nz/
+https://theoddwave.co.nz/services/consulting-services/
+https://theoddwave.co.nz/products/photography-website/
+https://theoddwave.co.nz/products/pro-business-website-landing/
+https://theoddwave.co.nz/products/pro-business-website/
+https://theoddwave.co.nz/products/nuxtjs-templates-nz/
+https://theoddwave.co.nz/products/seo-website-package-1/
+https://theoddwave.co.nz/products/seo-website-package-5/
+https://theoddwave.co.nz/products/seo-website-package-10/
+https://theoddwave.co.nz/products/seo-website-package-20/
+https://theoddwave.co.nz/products/website-digital-photo-24/
+https://theoddwave.co.nz/products/website-digital-photo-100/
+https://theoddwave.co.nz/products/film-photography-nz/
+https://theoddwave.co.nz/products/consulting-nz/
+https://theoddwave.co.nz/contact/
+*/
 const routes = [
-  '/services/seo-auckland',
-  '/services/ppc-auckland',
-  '/services/website-design-build-auckland',
-  '/services/creative-photographer-auckland'
+  '/services/seo-nz',
+  '/services/ppc-nz',
+  '/services/web-design-nz',
+  '/services/photographer-nz',
+  '/services/contracting-nz/',
+  '/products/photography-website/',
+  '/products/pro-business-website-landing/',
+  '/products/pro-business-website/',
+  '/products/nuxtjs-templates-nz/',
+  '/products/seo-website-package-1/',
+  '/products/seo-website-package-5/',
+  '/products/seo-website-package-10/',
+  '/products/seo-website-package-20/',
+  '/products/website-digital-photo-24/',
+  '/products/website-digital-photo-100/',
+  '/products/film-photography-nz/',
+  '/products/contracting-nz/'
 ]
 
 const baseUrl = process.env.BASE_URL || 'http://localhost:3000'
@@ -18,6 +51,7 @@ const contactUrl = process.env.CONTACT_URL || '/api/contact'
 const recaptchaSiteKey = process.env.SITE_KEY || '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
 const author = process.env.AUTHOR || 'https://www.linkedin.com/in/scpietro/'
 const nodeEnv = process.env.NODE_ENV || 'development'
+
 export default {
   env: {
     baseUrl,
@@ -25,6 +59,17 @@ export default {
     recaptchaSiteKey,
     author,
     nodeEnv
+  },
+  render: {
+    static: {
+      setHeaders(res) {
+        // res.setHeader('X-Frame-Options', 'ALLOWALL')
+        // res.setHeader('Access-Control-Allow-Origin', '*')
+        // res.setHeader('Access-Control-Allow-Methods', 'GET')
+        // res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
+        res.setHeader("Set-Cookie", "HttpOnly;Secure;SameSite=Strict")
+      }
+    }
   },
   pageTransition: {
     name: 'page',
@@ -81,10 +126,11 @@ export default {
     '@/assets/scss/custom.scss'
   ],
   plugins: [
-    // '~/plugins/anime.js',
     '~/plugins/fontawesome.js',
+    '~/plugins/jsonld',
     { src: '~/plugins/vue-notifications', mode: 'client' },
-    { src: '~/plugins/ga.js', mode: 'client' }
+    { src: '~/plugins/lax.js', mode: 'client' },
+    { src: '~/plugins/vue-fb-customer-chat', mode: 'client' }
   ],
   devModules: [
     '@nuxtjs/eslint-module'
@@ -95,19 +141,33 @@ export default {
     // 'nuxt-svg-loader',
     'nuxt-responsive-loader',
     '@nuxtjs/dotenv',
-    ['@nuxtjs/robots', { UserAgent: '*', Disallow: '' }],
+    '@nuxtjs/robots',
     '@nuxtjs/sitemap',
     '@nuxtjs/recaptcha',
-    'nuxt-webfontloader'
+    'nuxt-webfontloader',
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-148813087-1'
+    }]
   ],
   webfontloader: {
-    google: {
-      // families: ['Varela Round:400,700', 'Ubuntu:400,700']
-      families: ['Montserrat: 400,700', 'Lato']
-    },
+    // google: {
+    //   families: [
+    //     'Montserrat:400,700',
+    //     'Lato'
+    //   ],
+    //   urls: [
+    //     'https://fonts.googleapis.com/css?family=Montserrat:400,700|Lato&display=swap'
+    //   ]
+    // },
     custom: {
-      families: ['FontAwesome'],
-      urls: ['https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css']
+      families: [
+        'Montserrat:400,700',
+        'Lato'
+      ],
+      urls: [
+        'https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap',
+        'https://fonts.googleapis.com/css?family=Lato&display=swap'
+      ]
     },
     timeout: 2000
   },
@@ -131,7 +191,28 @@ export default {
   },
   robots: {
     UserAgent: '*',
-    Disallow: '',
+    // Disallow: '',
+    // Disallow: '/services/website-design-build-auckland/',
+    // Disallow: '/services/pwa-website-design-auckland/',
+    // Disallow: '/services/photography-auckland/',
+    // Disallow: '/services/seo',
+    // Disallow: '/services/webdesign/',
+    // Disallow: '/services/ppc/',
+    // Disallow: '/services/photography/',
+    // Disallow: '/services/creative-photographer-auckland/',
+    Disallow: [
+      '/services/website-design-auckland/',
+      '/services/website-design-build-auckland/',
+      '/services/ppc-auckland/',
+      '/services/seo-auckland/',
+      '/services/ppc/',
+      '/services/pwa-website-design-auckland/',
+      '/services/photography-auckland/',
+      '/services/seo/',
+      '/services/webdesign/',
+      '/services/photography/',
+      '/services/creative-photographer-auckland/'
+    ],
     Sitemap: baseUrl + '/sitemap.xml'
   },
   sitemap: {

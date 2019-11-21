@@ -43,7 +43,7 @@
               to="/contact/"
               class="buttonComponent letter-spacing  m-2 animated pulse delay-1s"
             >
-              Get Started
+              Get In Touch
             </b-button>
           </div>
         </b-col>

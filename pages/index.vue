@@ -1,73 +1,69 @@
 <template>
   <b-container id="mainContainer" fluid class="text-light text-left p-0">
-    <HeaderComponentLanding :pheader="subheader" :psubtitle="subtitle" pbackground="cyan" />
-
-    <HeaderComponent :psubheader="headerLanding" pclass="text-large pt-5" />
-
-    <ProductComponent :product="featuredProduct" />
-
+    <HeaderComponentLanding
+      :pheader="client.subheader"
+      :psubtitle="client.subtitle"
+      pbackground="cyan"
+    />
+    <HeaderComponent :pheader="client.header" pclass="text-large pt-5" />
+    <TextImageComponent
+      v-for="(item,i) in client.content"
+      :key="i"
+      :pcontent="{header: item.header, text: item.text, list: item.list, bgImage: item.bgImage, inlineImage: item.inlineImage, inlineImageText: item.inlineImageText, inlineImageRight: item.inlineImageRight }"
+      :pstyle="(item.dark) ? { bgStyle: 'w-100 text-secondary text-left px-4 p-2', inlineImageStyle: item.inlineImageStyle} : { bgStyle: 'w-100 text-primary text-left  px-4 p-2', inlineImageStyle: item.inlineImageStyle}"
+    />
+    <HeaderComponent :psubheader="client.featuresHeader" pcontainerclass="transparent" />
+    <PromoComponent class="promoComponent" :features="client.features" variant="primary" />
+    <HeaderComponent
+      v-if="featuredProducts.length > 0"
+      psubheader="Featured Packages"
+      psubtitle="Flexible payment plans are available."
+      pclass="text-center"
+    />
+    <span v-for="item in featuredProducts" :key="item.id">
+      <ProductComponent :product="item" />
+      <hr fluid class="hrprimary">
+    </span>
     <b-container fluid class="roundedContainer text-primary">
-      <b-container
-        fluid
-        :style="gradient"
-        class="backgroundContainer align-items-center text-center"
-      >
-        <p class="watermark">
-          The Odd Wave Ltd <br><br>Auckland<br><br>NZ
-        </p>
+      <b-container fluid class="backgroundContainer">
+        <b-container fluid :style="gradient" class="align-items-center text-center">
+          <p class="watermark">
+            matihiko hangarau
+            <br>pae tukutuku
+            <br>kūkara, pānui
+            <br>Aotearoa
+          </p>
+        </b-container>
       </b-container>
-      <HeaderComponent :pheader="header" pcontainerclass="transparent" />
-      <PromoComponent class="promoComponent" :features="features" variant="primary" />
 
-      <TextImageComponent
-        v-for="(item,i) in content"
-        :key="i"
-        :pcontent="{header: item.header, text: item.text, list: item.list, bgImage: item.bgImage, inlineImage: item.inlineImage, inlineImageText: item.inlineImageText, inlineImageRight: item.inlineImageRight }"
-        :pstyle="(item.dark) ? { bgStyle: 'w-100 text-secondary text-left px-4 p-2', inlineImageStyle: item.inlineImageStyle} : { bgStyle: 'w-100 text-primary text-left  px-4 p-2', inlineImageStyle: item.inlineImageStyle}"
-      />
-      <!-- <span class="text-center text-medium">
-        <ButtonComponent btext="Get started" blink="/contact/" pvariant="outline-success" />
-      </span>-->
       <ServicesComponent class="servicesComponent" :services="summaries" />
     </b-container>
-
-    <!-- <ButtonComponent btext="Get started" blink="/contact/" /> -->
-    <!-- <PartnersComponent /> -->
-    <!-- <WavesComponent :footer="true" /> -->
   </b-container>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-// import AnimeBannerWordsComponent from '@/components/AnimeBannerWordsComponent'
 import HeaderComponentLanding from '@/components/HeaderComponentLanding'
 import HeaderComponent from '@/components/HeaderComponent'
-// import ButtonComponent from '@/components/ButtonComponent'
 import PromoComponent from '@/components/PromoComponent'
 import TextImageComponent from '@/components/TextImageComponent'
-// import PartnersComponent from '@/components/PartnersComponent'
 import ServicesComponent from '@/components/ServicesComponent'
 import ProductComponent from '@/components/ProductComponent'
-// import WavesComponent from '@/components/WavesComponent'
 
 export default {
   components: {
-    // AnimeBannerWordsComponent,
     HeaderComponentLanding,
     HeaderComponent,
-    // ButtonComponent,
     PromoComponent,
     TextImageComponent,
-    // PartnersComponent,
     ServicesComponent,
     ProductComponent
-    // WavesComponent
   },
   head () {
     let content = `${process.env.baseUrl}${this.$route.path}`
     content = content.slice(-1) !== '/' ? content + '/' : content
     return {
-      title: this.title,
+      title: this.client.title,
       meta: [
         {
           hid: 'og:url',
@@ -77,43 +73,25 @@ export default {
         {
           hid: 'og:description',
           name: 'og:description',
-          content: this.description
+          content: this.client.description
         },
         {
           hid: 'description',
           name: 'description',
-          content: this.description
+          content: this.client.description
         },
         {
           hid: 'keywords',
           name: 'keywords',
-          content: this.keywords.join()
+          content: this.client.keywords.join()
         }
-      ]
+      ],
+      __dangerouslyDisableSanitizers: ['script'],
+      script: [{ innerHTML: JSON.stringify(this.jsonld), type: 'application/ld+json' }]
     }
   },
   data (context) {
-    const commonKeywords = [
-      'fun workshops auckland',
-      'workshops auckland',
-      'workshops rotorua',
-      'workshops new zealand',
-      'workshops NZ',
-      'auckland',
-      'rotorua',
-      'new zealand',
-      'NZ'
-    ]
     return {
-      title:
-        'Web design, SEO and digital marketing services - North Shore, Auckland, Waikato, New Zealand',
-      description:
-        'Custom web design, web app development, search engine optimization, ppc, google ads management, cloud data engineering, Auckland, New Zealand',
-      header: 'Custom Website Design & SEO',
-      subheader: 'Grow your business online',
-      headerLanding: 'SIMPLE. SMART. FAST. FLEXIBLE.',
-      subheaderLanding:
-        'We change the business life of our clients for good. The Odd Wave provides content-first mobile-first web solutions and online marketing services to take your business to the next level.',
       backgroundurl: 'nz.svg',
       headerImage: {
         color1: 'rgba(255, 0, 255, 0) 0%',
@@ -121,92 +99,55 @@ export default {
         url: 'oddwave.jpg',
         height: '20vh'
       },
-      subtitle:
-        "We provide custom website design & digital marketing solutions from Auckland, New Zealand. <br/>We market our clients' businesses as if they were our own.",
-      // subtitle:
-      //   'Create a mobile first website with us <br/> using web technologies that are lightweight, fast and trustworthy. Design and optimise your content with us to make it useful   this with content & digital marketing solutions.',
-
       linkText: 'GET STARTED',
-      link: '/contact/',
-      features: [
-        {
-          header: 'Content-First Mobile-First',
-          text:
-            'Content-First Mobile-First web design, development and testing for websites and web applications that can be used by everyone.',
-          icon: ['fas', 'mobile-alt']
-        },
-        {
-          header: 'Vanilla',
-          text:
-            'Take advantage of thoroughly tested, vanilla technologies for a quick, lightweight and flexible website that will help you grow your brand image, loyalty and sales.',
-          icon: ['fab', 'servicestack']
-        },
-        {
-          header: 'Continuous',
-          text:
-            'Websites from continuous testing and auditing for an A+ grade in accessibility, best practices and SEO.',
-          icon: ['fas', 'users']
-        },
-        {
-          header: 'Optimised',
-          text:
-            'We write and structure content to rank and remain searchable by search engines. Optimise your ROI from SEO with our conversion tracking and reporting.',
-          icon: ['fas', 'chart-line']
-        }
-        // {
-        //   header: 'Distributable',
-        //   text: 'Manage your content with us to keep it optimised, accessible, searchable and distributable',
-        //   icon: ['fas', 'tv']
-        // },
-      ],
-      content: [
-        {
-          text:
-            'The Odd Wave Ltd offers a range of digital services to support your business and increase sales:',
-          list: [
-            'Designing to your brand, features, products and services',
-            'Integrating, managing, structuring and optimising content for search',
-            'Helping you manage your online presence so you can focus more on your business',
-            'Domain name registration',
-            'Hosting - choosing and switching to reliable hosts in terms of Speed, Security, Location and Affordability'
-          ]
-        },
-        {
-          text:
-            "Everything we do is aimed at producing results that our clients want for their businesses. We're based on the North Shore, Auckland, and service all of New Zealand."
-        }
-      ],
-      footerContent: [
-        {
-          header: 'Our approach is simple and flexible',
-          text:
-            'We manage data and content so it can be distributed anywhere, we make content accessible for display on any device. We revise and optimize content in response to trending keyword searches to make it search engine friendly and increase your Google rankings'
-        },
-        {
-          text:
-            'We design and develop awesome mobile-first websites to present your content - web apps that are fast, responsive and look great anywhere.<br/>Choose between static, periodic publishing and real-time, universal mobile web apps. A range of fit-for-purpose services and hosting packages are also available to keep carbon footprints and running costs low.'
-        },
-        {
-          text:
-            "We're here to help you save money while reaching a more significant customer base than traditional methods."
-        }
-      ],
-      keywords: [
-        ...commonKeywords,
-        'Web Design north shore', 'Web Design new zealand', 'Web Design NZ',
-        'websites north shore', 'websites browns bay', 'websites albany', 'websites NZ', 'websites new zealand',
-        'seo auckland', 'seo albany', 'seo browns bay', 'seo north shore', 'seo NZ', 'web app development albany', 'web app development browns bay', 'web app development north shore', 'web app development auckland', 'web app development NZ', 'web app development new zealand',
-        'cloud data engineer auckland', 'cloud data engineer new zealand', 'photography browns bay', 'photography north shore', 'photography NZ', 'photography auckland', 'photography new zealand'
-
-      ]
+      link: '/contact/'
     }
   },
   computed: {
     ...mapGetters('services', ['summaries']),
-    ...mapGetters('products', ['getProductById']),
-    featuredProduct () {
-      const product = this.getProductById('business-starter')
-      return product
+    ...mapGetters('products', ['getProductById', 'getFeaturedProducts']),
+    ...mapGetters('client', ['getClient']),
+    client () {
+      return this.getClient
+    },
+    featuredProducts () {
+      const products = this.getFeaturedProducts()
+      return products
+    },
+    jsonld () {
+      if (!this.client) {
+        return null
+      }
+      return {
+        '@context': 'http://schema.org',
+        '@type': 'LocalBusiness',
+        name: this.client.name,
+        legalName: this.client.legalName,
+        '@id': this.client['@id'],
+        logo: this.client.logo,
+        image: this.client.image,
+        foundingDate: this.client.foundingDate,
+        founders: this.client.founders,
+        address: this.client.address,
+        geo: this.client.geo,
+        contactPoint: this.client.contactPoint,
+        sameAs: this.client.sameAs,
+        url: this.client.url,
+        description: this.client.description,
+        telephone: this.client.telephone,
+        openingHoursSpecification: this.client.openingHoursSpecification,
+        priceRange: this.client.priceRange
+        // '@type': 'Organization',
+        // name: this.client.name,
+        // legalName: this.client.legalName,
+        // url: this.client.url,
+        // logo: this.client.logo,
+        // foundingDate: this.client.foundingDate,
+        // founders: this.client.founders,
+        // address: this.client.address,
+        // contactPoint: this.client.contactPoint,
+        // sameAs: this.client.sameAs
+      }
     },
     bannerImagePath () {
       if (!this.backgroundurl) {
@@ -228,6 +169,11 @@ export default {
         textTransform: 'uppercase'
       }
     }
+  },
+  mounted () {
+    // if (process.env.NODE_ENV !== 'production') {
+    this.$ga.page(this.$route.path)
+    // }
   }
 }
 </script>
@@ -263,6 +209,7 @@ p.watermark {
   font-size: 5vw;
   z-index: 20;
   opacity: 0.5;
+  line-height: 1.5em;
 }
 
 .roundedContainer {
@@ -277,5 +224,4 @@ p.watermark {
 #mainContainer {
   width: 100%;
 }
-
 </style>

@@ -2,9 +2,7 @@
   <b-container fluid class="contactContainer p-0 m-0 text-primary text-medium w-100 text-left">
     <b-container fluid :style="gradient" class="contactBackground align-items-center text-center">
       <p class="watermark">
-        The Odd Wave Ltd
-        <br>Websites & SEO
-        <br>Auckland, New Zealand
+        Pro Websites SEO Digital Marketing Google Ads Data Analysis<br>pae tukutuku kūkara pānui
       </p>
     </b-container>
     <b-container fluid class="contactContainer text-primary text-medium w-100 text-left m-0 p-0">
@@ -15,15 +13,15 @@
         :pstyle="style"
       />
       <HeaderComponent :pheader="header" />
-      <ContactForm :pservices="services" :pbgimage="backgroundImage" :pstyle="style" />
+      <ContactForm :pservices="servicesDropDown" :pbgimage="backgroundImage" :pstyle="style" />
     </b-container>
   </b-container>
 </template>
 <script>
+import { mapGetters } from 'vuex'
 import AnimeBannerWordsHeaderComponent from '@/components/AnimeBannerWordsHeaderComponent'
 import HeaderComponent from '@/components/HeaderComponent'
 import ContactForm from '@/components/ContactForm'
-
 export default {
   components: {
     AnimeBannerWordsHeaderComponent,
@@ -57,23 +55,26 @@ export default {
           content: this.keywords.join()
         }
       ]
+      // __dangerouslyDisableSanitizers: ['script'],
+      // script: [{ innerHTML: JSON.stringify(this.jsonld), type: 'application/ld+json' }]
     }
   },
   data (context) {
     const commonKeywords = [
-      'fun workshops auckland',
-      'workshops auckland',
-      'workshops rotorua',
-      'workshops new zealand',
-      'workshops NZ'
+      'help with website design',
+      'help with custom web design',
+      'help with web application development',
+      'help with online marketing',
+      'help with SEO',
+      'help with photography'
     ]
     return {
-      title: 'Websites, SEO & Photography Auckland, NZ',
+      title: 'Contact the Odd Wave Ltd, Torbay, Auckland, NZ',
       description:
-        'Great Website Design Auckland, SEO Auckland & Photography Auckland, New Zealand',
-      animeheader: "LET'S CREATE SOME AWESOMENESS",
-      header: 'Connect for a great website',
-      subheader: 'Helping all New Zealand from Auckland, North Shore',
+        'Contact the Odd Wave Ltd - connect with us for your vnext website, SEO, online marketing, photographer and consulting needs',
+      animeheader: "LET'S CREATE SOMETHING GREAT",
+      header: 'Contact the Odd Wave Ltd for your vNext',
+      subheader: 'by the Odd Wave of people, technologies and services',
       backgroundurl: 'nz.svg',
       backgroundImage: {
         color1: 'rgba(102, 126, 234, 1)',
@@ -83,17 +84,16 @@ export default {
       },
       style: { bgStyle: 'text-secondary text-center' },
       keywords: [
-        ...commonKeywords,
-        'websites north shore', 'websites browns bay', 'websites albany', 'websites NZ', 'websites new zealand',
-        'seo auckland', 'seo albany', 'seo browns bay', 'seo north shore', 'seo NZ', 'web app development albany', 'web app development browns bay', 'web app development north shore', 'web app development auckland', 'web app development NZ', 'web app development new zealand',
-        'cloud data engineer auckland', 'cloud data engineer new zealand', 'photography browns bay', 'photography north shore', 'photography NZ', 'photography auckland', 'photography new zealand'
+        ...commonKeywords
       ]
     }
   },
   computed: {
-    services () {
-      return this.$store.state.services.all.map((item) => {
-        return { value: item.id, text: item.linkTitle, selected: true }
+    ...mapGetters('services', ['summaries']),
+    ...mapGetters('client', ['getClient']),
+    servicesDropDown () {
+      return this.summaries.map((item) => {
+        return { value: item.id, text: item.title, selected: true }
       })
     },
     bannerImagePath () {
@@ -116,16 +116,12 @@ export default {
         textTransform: 'uppercase'
       }
     }
+  },
+  mounted () {
+    this.$ga.page(this.$route.path)
+    // if (process.env.NODE_ENV !== 'production') {
+    // }
   }
-  // mounted () {
-  //   if (process.env.NODE_ENV !== 'production') {}
-  //   // this.$ga.event({
-  //   //   eventCategory: 'nav',
-  //   //   eventAction: 'init',
-  //   //   eventLabel: 'home',
-  //   //   eventValue: 1
-  //   // })
-  // }
 }
 </script>
 <style scoped>
@@ -163,5 +159,10 @@ p.watermark {
   height: 100%;
   z-index: -1;
   opacity: 0.1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
 }
 </style>

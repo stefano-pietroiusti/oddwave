@@ -22,10 +22,10 @@ export const state = () => ({
       'Web Design Auckland NZ | SEO NZ | Digital Marketing NZ | Google Ads',
     description:
       'Web Design and web development company developing responsive websites for ROI using modern tech, SEO, Digital Marketing, Google Ads management',
-    header: 'Web Design Auckland NZ',
-    subheader: 'WEB DESIGN, WEB DEVELOPMENT, SEO AND DIGITAL MARKETING AUCKLAND NZ',
+    header: 'WEB DESIGN | SEO | DIGITAL MARKETING | DATA ANALYSIS',
+    subheader: 'GOAL DRIVEN WEB DESIGN, SEO & DIGITAL MARKETING TO HELP NZ BUSINESSES GROW',
     subtitle:
-      "We provide custom web design & digital marketing solutions from Auckland, New Zealand. We market our clients' businesses as if they were our own.",
+      "We provide custom web solutions from Auckland, New Zealand. We market our clients' businesses as if they were our own.",
 
     featuresHeader: 'Why us?',
     features: [

@@ -1,6 +1,7 @@
 <template>
-  <b-container fluid class="contactContainer p-0 m-0 text-primary text-medium w-100 text-left">
-    <b-container fluid :style="gradient" class="contactBackground align-items-center text-center">
+  <b-container fluid class="contactContainer p-0 m-0 text-primary w-100 text-left">
+    <Nav />
+    <b-container fluid :style="gradient" class="contactBackground  text-medium align-items-center text-center">
       <p class="watermark">
         Pro Websites SEO Digital Marketing Google Ads Data Analysis<br>pae tukutuku kūkara pānui
       </p>
@@ -19,11 +20,13 @@
 </template>
 <script>
 import { mapGetters } from 'vuex'
+import Nav from '@/components/Nav'
 import AnimeBannerWordsHeaderComponent from '@/components/AnimeBannerWordsHeaderComponent'
 import HeaderComponent from '@/components/HeaderComponent'
 import ContactForm from '@/components/ContactForm'
 export default {
   components: {
+    Nav,
     AnimeBannerWordsHeaderComponent,
     HeaderComponent,
     ContactForm

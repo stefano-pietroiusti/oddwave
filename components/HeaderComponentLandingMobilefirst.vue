@@ -1,10 +1,33 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
   <b-container
+    id="headerHero"
     fluid
-    :class="`text-left mt-10 p-0 m-0 animated fadeInUp`"
+    :class="`text-left p-0 m-0 bg-${pbackground} animated fadeInDown no-gutters`"
   >
-    <b-container fluid :class="`text-left p-3 text-secondary`">
+    <b-container fluid class="text-center m-0 p-0 w-100 h-100 no-gutters">
+      <svg id="headerSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 190">
+        <path
+          id="headerPathBg1"
+          d="m-1,39.93651l30,2.28136c30,2.19607 90,6.88671 150,6.82276c60,0.06396 120,-4.62667 180,-11.38547c60,-6.88671 120,-15.84157 180,-20.46825c60,-4.54139 120,-4.54139 180,4.56272c60,9.01883 120,27.35497 180,34.11376c60,6.88671 120,2.19607 180,-6.82276c60,-9.10411 120,-22.74962 180,-23.87963c60,-1.2153 120,10.29809 150,15.90554l30,5.69274l0,-47.75927l-30,0c-30,0 -90,0 -150,0c-60,0 -120,0 -180,0c-60,0 -120,0 -180,0c-60,0 -120,0 -180,0c-60,0 -120,0 -180,0c-60,0 -120,0 -180,0c-60,0 -120,0 -180,0c-60,0 -120,0 -150,0l-30,0l0,40.93651l0,-0.00001l0,-0.00001l0,0.00001z"
+          fill="#355691"
+        />
+        <path
+          id="headerPathBg2"
+          opacity="1"
+          d="m-1,74.64028l30,4.21537c30,4.05778 90,12.7249 150,12.60672c60,0.11819 120,-8.54892 180,-21.03745c60,-12.7249 120,-29.27121 180,-37.82014c60,-8.39134 120,-8.39134 180,8.43074c60,16.6645 120,50.54505 180,63.03358c60,12.7249 120,4.05778 180,-12.60672c60,-16.82208 120,-42.03552 180,-44.1235c60,-2.24557 120,19.02826 150,29.38941l30,10.51873l0,-88.24701l-30,0c-30,0 -90,0 -150,0c-60,0 -120,0 -180,0c-60,0 -120,0 -180,0c-60,0 -120,0 -180,0c-60,0 -120,0 -180,0c-60,0 -120,0 -180,0c-60,0 -120,0 -180,0c-60,0 -120,0 -150,0l-30,0l0,75.64029l0,-0.00001l0,-0.00001z"
+          fill="#355691"
+        />
+        <path
+          id="headerPathBg3"
+          opacity="0.22"
+          d="m-212,81.00121l34.45833,4.29121c34.45833,4.13079 103.375,12.95385 172.29166,12.83354c68.91667,0.12032 137.83333,-8.70273 206.75,-21.41596c68.91667,-12.95385 137.83333,-29.79786 206.75,-38.5006c68.91667,-8.54232 137.83333,-8.54232 206.75,8.58243c68.91667,16.96433 137.83333,51.45446 206.75,64.16769c68.91667,12.95385 137.83333,4.13079 206.75,-12.83354c68.91667,-17.12474 137.83333,-42.79183 206.75,-44.91737c68.91667,-2.28597 137.83333,19.37062 172.29166,29.91819l34.45833,10.70798l0,-89.83476l-34.45833,0c-34.45833,0 -103.375,0 -172.29166,0c-68.91667,0 -137.83333,0 -206.75,0c-68.91667,0 -137.83333,0 -206.75,0c-68.91667,0 -137.83333,0 -206.75,0c-68.91667,0 -137.83333,0 -206.75,0c-68.91667,0 -137.83333,0 -206.75,0c-68.91667,0 -137.83333,0 -206.75,0c-68.91667,0 -137.83333,0 -172.29166,0l-34.45833,0l0,77.00122l0,-0.00001l0,-0.00001z"
+          fill="#355691"
+        />
+      </svg>
+    </b-container>
+
+    <b-container fluid :class="`text-left p-3 text-secondary bg-${pbackground}`">
       <b-row>
         <b-col sm="12" md="12" lg="8" xl="8" class="align-items-center w-100">
           <div class="hero-content">
@@ -23,6 +46,36 @@
             >
               free consultation
             </b-button>
+          </div>
+        </b-col>
+        <!-- <b-col sm="12" md="12" lg="4" xl="4">
+        <div class="hero-product-img">
+          <div class="offer-badge bg-danger">
+            <p>
+              <strong>Business starter </strong>
+              <br>
+              <strong>Mobile First Universal</strong>
+              <br>
+              <strong>Websites</strong>
+            </p>
+          </div>
+        </div>
+        </b-col>-->
+        <b-col sm="12" md="12" lg="4" xl="4" class="text-right">
+          <img
+            :src="require(`~/assets/imgs/banner/responsivedevices.png`)"
+            alt="bg-img"
+            class="bg-img"
+          >
+          <div class="hero-img-1 w-50 h-50">
+            <p>
+              <strong>User-Mobile First</strong>
+              <br>
+              <strong>Search Friendly</strong>
+              <br>
+              <strong>Web Solutions</strong>
+            </p>
+            <img :src="require(`~/assets/imgs/banner/pwa.png?size=180`)" alt="hero-img">
           </div>
         </b-col>
       </b-row>
@@ -55,7 +108,7 @@ export default {
         return {
           color1: 'rgba(0, 0, 0, 0.2)',
           color2: 'rgba(0, 0, 0, 0.5)',
-          url: 'laptop.jpg',
+          url: undefined,
           height: 100
         }
       }
@@ -68,7 +121,7 @@ export default {
       }
       const fileName = this.pbgimage.url
       return {
-        '1': require(`~/assets/imgs/banner/${fileName}?size=1920`),
+        '1': require(`~/assets/imgs/banner/${fileName}?size=320`),
         '2': require(`~/assets/imgs/banner/${fileName}?size=768`)
       }
     },
@@ -83,7 +136,8 @@ export default {
         backgroundAttachment: 'fixed',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover'
+        backgroundSize: 'cover',
+        opacity: 0.5
       }
     },
     background() {

@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
-  <b-container fluid class="text-light text-left bg-primary footer">
+  <b-container fluid class="text-light text-left bg-black footer">
     <b-row>
       <b-col md="6" lg="4" xl="4" class="pl-3 pt-3">
         <h2>{{ contactInfo.name }}</h2>

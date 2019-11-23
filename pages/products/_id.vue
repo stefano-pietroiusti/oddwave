@@ -1,6 +1,7 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
   <div id="productsMainContainer">
+    <Nav />
     <b-container id="productsBackground">
       <b-container id="productsTextBackground">
         <p class="watermark">
@@ -61,11 +62,13 @@
 <script>
 import lax from 'lax.js'
 import { mapGetters } from 'vuex'
+import Nav from '@/components/Nav'
 import HeaderComponent from '@/components/HeaderComponent'
 import ButtonComponent from '@/components/ButtonComponent'
 
 export default {
   components: {
+    Nav,
     HeaderComponent,
     ButtonComponent
   },

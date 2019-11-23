@@ -1,6 +1,7 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
   <div id="servicesMainContainer">
+    <Nav />
     <b-container id="servicesBackground">
       <b-container id="servicesTextBackground">
         <p class="watermark">
@@ -115,7 +116,9 @@
 
 <script>
 import lax from 'lax.js'
+
 import { mapGetters } from 'vuex'
+import Nav from '@/components/Nav'
 import HeaderComponent from '@/components/HeaderComponent'
 import ButtonComponent from '@/components/ButtonComponent'
 import TextImageComponent from '@/components/TextImageComponent'
@@ -127,6 +130,7 @@ import ServicesRelatedComponent from '@/components/ServicesRelatedComponent'
 
 export default {
   components: {
+    Nav,
     HeaderComponent,
     ButtonComponent,
     TextImageComponent,

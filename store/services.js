@@ -478,8 +478,8 @@ export const state = () => ({
         [{
           header: "We're technology generalists who abide by",
           list: [
-            'Best practices and standards',
-            'Research',
+            'Best practices & standards',
+            'Research & experimentation',
             'Performance',
             'Creativeness',
             'Usability',

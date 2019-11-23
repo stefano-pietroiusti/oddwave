@@ -1,19 +1,66 @@
 <template>
-  <b-container id="mainContainer" fluid class="text-light text-left p-0">
-    <HeaderComponentLanding
-      :pheader="client.subheader"
-      :psubtitle="client.subtitle"
-      pbackground="cyan"
-    />
-    <HeaderComponent :pheader="client.header" pclass="text-large pt-5" />
+  <b-container id="mainContainer" fluid class="text-light text-left p-0 m-0">
+    <Nav />
+    <b-container fluid class="headerModule rellaxImage comboFilter " :style="gradient" />
+    <div class="module resetFilter ">
+      <div class="module-inside resetFilter">
+        <HeaderComponentLanding
+          :pheader="client.subheader"
+          :psubtitle="client.subtitle"
+          pbackground="cyan"
+        />
+      </div>
+    </div>
+    <!-- <div id="wave-container">
+      <div id="wave" />
+    </div> -->
+    <!-- <svg>
+      <clipPath id="wave" clipPathUnits="objectBoundingBox">
+        <path d="M1,0c0,0-0.3,0.5-0.5,0.3S0.3,0,0,0.1V1h1L1,0z" />
+      </clipPath>
+    </svg> -->
+    <HeaderComponent :pheader="client.header" class="text-center w-100 m-0 p-0 text-primary pt-5 bg-secondary waveClip" />
+
     <TextImageComponent
       v-for="(item,i) in client.content"
       :key="i"
       :pcontent="{header: item.header, text: item.text, list: item.list, bgImage: item.bgImage, inlineImage: item.inlineImage, inlineImageText: item.inlineImageText, inlineImageRight: item.inlineImageRight }"
       :pstyle="(item.dark) ? { bgStyle: 'w-100 text-secondary text-left px-4 p-2', inlineImageStyle: item.inlineImageStyle} : { bgStyle: 'w-100 text-primary text-left  px-4 p-2', inlineImageStyle: item.inlineImageStyle}"
     />
+
+    <b-container
+      fluid
+      class="text-primary rellaximage rellaxwatermark rellax"
+    >
+      I’m that default chill speed of "-2"
+    </b-container>
+    <b-container fluid class="text-primary rellax" data-rellax-speed="-4">
+      I’m extra slow and smooth
+    </b-container>
+    <b-container
+      fluid
+      class="text-primary rellax"
+      data-rellax-speed="3"
+      data-rellax-zindex="10"
+    >
+      I’m super fast!!
+    </b-container>
+    <b-container
+      fluid
+      class="text-primary rellax"
+      data-rellax-speed="10"
+      data-rellax-zindex="20"
+    >
+      I’m second super fast!!
+    </b-container>
     <HeaderComponent :psubheader="client.featuresHeader" pcontainerclass="transparent" />
-    <PromoComponent class="promoComponent" :features="client.features" variant="primary" />
+
+    <PromoComponent
+      class="promoComponent rellax"
+      data-rellax-speed="-2"
+      :features="client.features"
+      variant="primary"
+    />
     <HeaderComponent
       v-if="featuredProducts.length > 0"
       psubheader="Featured Packages"
@@ -24,6 +71,7 @@
       <ProductComponent :product="item" />
       <hr fluid class="hrprimary">
     </span>
+
     <b-container fluid class="roundedContainer text-primary">
       <b-container fluid class="backgroundContainer">
         <b-container fluid :style="gradient" class="align-items-center text-center">
@@ -35,7 +83,6 @@
           </p>
         </b-container>
       </b-container>
-
       <ServicesComponent class="servicesComponent" :services="summaries" />
     </b-container>
   </b-container>
@@ -43,6 +90,8 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import Rellax from 'rellax'
+import Nav from '@/components/Nav'
 import HeaderComponentLanding from '@/components/HeaderComponentLanding'
 import HeaderComponent from '@/components/HeaderComponent'
 import PromoComponent from '@/components/PromoComponent'
@@ -52,6 +101,7 @@ import ProductComponent from '@/components/ProductComponent'
 
 export default {
   components: {
+    Nav,
     HeaderComponentLanding,
     HeaderComponent,
     PromoComponent,
@@ -87,16 +137,18 @@ export default {
         }
       ],
       __dangerouslyDisableSanitizers: ['script'],
-      script: [{ innerHTML: JSON.stringify(this.jsonld), type: 'application/ld+json' }]
+      script: [
+        { innerHTML: JSON.stringify(this.jsonld), type: 'application/ld+json' }
+      ]
     }
   },
   data (context) {
     return {
       backgroundurl: 'nz.svg',
-      headerImage: {
+      pbgimage: {
         color1: 'rgba(255, 0, 255, 0) 0%',
         color2: 'rgba(0, 255, 255, 0) 0%',
-        url: 'oddwave.jpg',
+        url: 'laptop.jpg',
         height: '20vh'
       },
       linkText: 'GET STARTED',
@@ -150,34 +202,104 @@ export default {
       }
     },
     bannerImagePath () {
-      if (!this.backgroundurl) {
+      if (!this.pbgimage.url) {
         return
       }
-      const fileName = this.backgroundurl
-      return require(`~/assets/imgs/banner/${fileName}?size=1080`)
+      const fileName = this.pbgimage.url
+      return {
+        '1': require(`~/assets/imgs/banner/${fileName}?size=1920`),
+        '2': require(`~/assets/imgs/banner/${fileName}?size=768`)
+      }
     },
     gradient () {
+      if (!this.pbgimage.url) {
+        return
+      }
+      const image1x = this.bannerImagePath['1']
+      const image2x = this.bannerImagePath['2']
       return {
-        backgroundImage: `url(${this.bannerImagePath})`,
-        height: '100%',
-        width: '100%',
-        bottom: 0,
+        backgroundImage: `linear-gradient(45deg,  ${this.pbgimage.color1}, ${this.pbgimage.color2}), url(${image1x}), -webkit-image-set(url(${image1x}) 1x, url(${image2x}) 2x)`,
         backgroundAttachment: 'fixed',
-        backgroundPosition: 'left',
+        height: '80vh',
+        backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        backgroundSize: 'contain',
-        textTransform: 'uppercase'
+        backgroundSize: 'cover'
+      }
+    },
+    testgradient () {
+      if (!this.pbgimage.url) {
+        return
+      }
+      const image1x = this.bannerImagePath['1']
+      const image2x = this.bannerImagePath['2']
+      return {
+        backgroundImage: `linear-gradient(45deg,  ${this.pbgimage.color1}, ${this.pbgimage.color2}), url(${image1x}), -webkit-image-set(url(${image1x}) 1x, url(${image2x}) 2x)`
+        // backgroundAttachment: 'fixed',
+        // height: '80vh',
+        // backgroundPosition: 'center',
+        // backgroundRepeat: 'no-repeat',
+        // backgroundSize: 'cover'
       }
     }
   },
   mounted () {
     // if (process.env.NODE_ENV !== 'production') {
     this.$ga.page(this.$route.path)
+    this.rellax = new Rellax('.rellax', {
+      speed: -2,
+      center: false,
+      wrapper: null,
+      round: true,
+      vertical: true,
+      horizontal: false
+    })
     // }
   }
 }
 </script>
 <style scoped>
+.module {
+  position: relative;
+}
+.module::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: grayscale(100%);
+}
+.module-inside {
+  /* This will make it stack on top of the ::before */
+  position: relative;
+}
+
+.rellaximage {
+  background-color: #000;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+}
+
+.rellaxwatermark {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* margin-left: 20%;
+  top: 30%;
+  pointer-events: none;
+  font-family: inherit;
+  color: #000;
+  font-size: 5vw;
+  z-index: 20; */
+  font-size: 5vw;
+  z-index: 20;
+  opacity: 0.5;
+}
+
 .backgroundContainer {
   position: absolute;
   bottom: 0;

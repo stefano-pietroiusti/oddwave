@@ -366,7 +366,125 @@ hr {
   background-image: linear-gradient(to right, $secondary, $primary);
 }
 
+.headerModule {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  z-index: -1;
+}
+.headerModuleContents {
+  /* This will make it stack on top of the ::before */
+  position: relative;
+  z-index: 1;
+}
+
 /*NAVBAR*/
+#content-desktop {display: block;}
+#content-mobile {display: none;}
+
+@media screen and (max-width: 992px) {
+
+#content-desktop {display: none;}
+#content-mobile {display: block;}
+
+}
+
+.rellaximage {
+  background-color: #000;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#wave-container {
+  width: 100%;
+  height: 10vh;
+  overflow: visible;
+}
+
+#wave {
+  display: block;
+  position: relative;
+  height: 2vh;
+  background: white;
+}
+
+#wave:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  width: 80%;
+  height: 20vh;
+  background-color: red;
+  right: -20%;
+  top: -20%;
+}
+
+#wave:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  width: 50%;
+  height: 300px;
+  background-color: black;
+  left: -5%;
+  top: -5vh;
+}
+
+.waveClip {
+  // height: 100VH;
+  margin-top: -100px;
+  clip-path: url(#wave);
+}
+.waveClip2 {
+  margin-top: 50px;
+  clip-path: path('M1,0c0,0-0.3,0.5-0.5,0.3S0.3,0,0,0.1V1h1L1,0z');
+}
+
+
+/* Image filters */
+.contrast {
+  -webkit-filter: contrast(180%);
+  filter: contrast(180%);
+}
+
+.comboFilter {
+  filter: grayscale(0%) saturate(0.3) brightness(0.5);
+  -webkit-filter: grayscale(0%) saturate(0.3) brightness(0.5);
+}
+.resetFilter {
+  filter: grayscale(0%) saturate(1);
+  -webkit-filter: grayscale(0%) saturate(1);
+}
+
+.grayscale {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+.brightness {
+  -webkit-filter: brightness(100%);
+  filter: brightness(100%);
+}
+.sepia {
+  -webkit-filter: sepia(100%);
+  filter: sepia(100%);
+}
+.invert {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+.navbar.scrolled {
+  background: rgb(68, 68, 68); /* IE */
+  background: rgba(0, 0, 0, 0.78); /* NON-IE */
+}
+
 .logo {
   margin: 0;
   padding: 0;
@@ -374,6 +492,7 @@ hr {
   font-weight: bold;
   margin-right: 0.05em;
 }
+
 .navbar-brand {
   font-size: 1rem;
   letter-spacing: 0em;
@@ -383,6 +502,11 @@ hr {
 
 .navbar {
   width: 100%;
+  -webkit-transition: all 0.6s ease-out;
+  -moz-transition: all 0.6s ease-out;
+  -o-transition: all 0.6s ease-out;
+  -ms-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
 }
 
 .nav-item {
@@ -393,6 +517,14 @@ hr {
   -moz-transition:height 200ms ease-in;
   -o-transition:height 200ms ease-in;
   transition:height 200ms ease-in;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 1);
+}
+
+.navbar-dark:hover .navbar-nav:hover .nav-link:hover {
+  color: #fff;
 }
 
 .navbar-toggler {
@@ -413,11 +545,36 @@ hr {
   box-shadow: none;
   border: none;
 }
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+.dropdown > .dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+  pointer-events: none;
+}
 
 .dropdown-menu {
   background-color: var(--primary);
   color: var(--secondary);
   font-size: inherit;
+  -webkit-transition: all 0.6s ease-out;
+  -moz-transition: all 0.6s ease-out;
+  -o-transition: all 0.6s ease-out;
+  -ms-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
+}
+
+.dropdown-menu:before {
+  content:"";
+  position: absolute;
+  left: 11px;
+  top: -10px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent var(--primary) transparent;
+  z-index:9999;
 }
 
 .dropdown-item {
@@ -425,6 +582,13 @@ hr {
   background-color:var(--primary);
   color: var(--secondary);
   margin-top: 0.5vw;
+}
+
+
+.nav-item:hover, .nav-item:active  {
+  background-color:var(--primary);
+  color: var(--secondary);
+  text-decoration: underline;
 }
 
 .dropdown-item:hover, .dropdown-item:focus, .dropdown-item:active  {
@@ -445,8 +609,7 @@ a:hover {
 
 .buttonComponent {
   font-size: 1rem;
-  text-transform: uppercase;
-  font-weight: 600;
+  text-transform: capitalize;
   line-height: 2;
   // padding: 5;
   letter-spacing:0.2em;

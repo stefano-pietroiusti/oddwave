@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
   <div id="productsMainContainer">
-    <Nav />
+    <Nav class="container-fluid  navbar-light" />
     <b-container id="productsBackground">
       <b-container id="productsTextBackground">
         <p class="watermark">

@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
   <div id="servicesMainContainer">
-    <Nav />
+    <Nav class="container-fluid bg-secondary text-primary" />
     <b-container id="servicesBackground">
       <b-container id="servicesTextBackground">
         <p class="watermark">

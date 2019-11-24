@@ -1,8 +1,8 @@
 <template>
   <b-container id="mainContainer" fluid class="text-light text-left p-0 m-0">
-    <Nav />
-    <b-container fluid class="headerModule rellaxImage comboFilter " :style="gradient" />
-    <div class="module resetFilter ">
+    <Nav id="navbar" class="container-fluid navbar-dark" p-icon-color="text-primary" />
+    <b-container fluid class="headerModule rellaxImage comboFilter" :style="gradient" />
+    <div class="module resetFilter">
       <div class="module-inside resetFilter">
         <HeaderComponentLanding
           :pheader="client.subheader"
@@ -11,15 +11,10 @@
         />
       </div>
     </div>
-    <!-- <div id="wave-container">
-      <div id="wave" />
-    </div> -->
-    <!-- <svg>
-      <clipPath id="wave" clipPathUnits="objectBoundingBox">
-        <path d="M1,0c0,0-0.3,0.5-0.5,0.3S0.3,0,0,0.1V1h1L1,0z" />
-      </clipPath>
-    </svg> -->
-    <HeaderComponent :pheader="client.header" class="text-center w-100 m-0 p-0 text-primary pt-5 bg-secondary waveClip" />
+    <HeaderComponent
+      :pheader="client.header"
+      class="text-center w-100 m-0 p-0 text-primary pt-5 bg-secondary waveClip"
+    />
 
     <TextImageComponent
       v-for="(item,i) in client.content"
@@ -253,7 +248,19 @@ export default {
       vertical: true,
       horizontal: false
     })
-    // }
+    this.$nextTick(function () {
+      window.addEventListener('scroll', function () {
+        const navbar = document.getElementById('navbar')
+        const navClasses = navbar.classList
+        if (document.documentElement.scrollTop >= 150) {
+          if (navClasses.contains('scrolled') === false) {
+            navClasses.toggle('scrolled')
+          }
+        } else if (navClasses.contains('scrolled') === true) {
+          navClasses.toggle('scrolled')
+        }
+      })
+    })
   }
 }
 </script>

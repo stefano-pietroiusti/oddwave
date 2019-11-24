@@ -439,12 +439,8 @@ hr {
 
 .waveClip {
   // height: 100VH;
-  margin-top: -100px;
-  clip-path: url(#wave);
-}
-.waveClip2 {
   margin-top: 50px;
-  clip-path: path('M1,0c0,0-0.3,0.5-0.5,0.3S0.3,0,0,0.1V1h1L1,0z');
+  clip-path: url(#wave);
 }
 
 
@@ -481,8 +477,18 @@ hr {
 }
 
 .navbar.scrolled {
-  background: rgb(68, 68, 68); /* IE */
-  background: rgba(0, 0, 0, 0.78); /* NON-IE */
+  background: rgb(0, 0, 0); /* IE */
+  background: rgba(0, 0, 0, 1); /* NON-IE */
+}
+.scrolled {
+  background: rgb(0, 0, 0); /* IE */
+  background: rgba(0, 0, 0, 1); /* NON-IE */
+}
+transparent{
+  background: transparent;
+}
+.navbar.transparent {
+  background: transparent;
 }
 
 .logo {
@@ -524,8 +530,22 @@ hr {
 }
 
 .navbar-dark:hover .navbar-nav:hover .nav-link:hover {
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
+.navbar-light:hover .navbar-nav:hover .nav-link:hover {
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
+.navbar-item:hover  {
   color: #fff;
 }
+.navbar-link:hover  {
+  color: #fff;
+}
+
 
 .navbar-toggler {
   margin: 0 1em 0 1em;

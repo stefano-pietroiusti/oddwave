@@ -1,19 +1,22 @@
 <template>
-  <b-container id="mainContainer" fluid class="text-light text-left p-0 m-0">
-    <Nav id="navbar" class="container-fluid navbar-dark" p-icon-color="text-primary" />
+  <b-container id="mainContainer" fluid class="text-left p-0 m-0">
+    <Nav id="navbar" class="container-fluid" :ptheme="theme" />
     <b-container fluid class="headerModule rellaxImage comboFilter" :style="gradient" />
     <div class="module resetFilter">
       <div class="module-inside resetFilter">
-        <HeaderComponentLanding
-          :pheader="client.subheader"
-          :psubtitle="client.subtitle"
-          pbackground="cyan"
-        />
+        <HeaderComponentLanding :pheader="client.subheader" :psubtitle="client.subtitle" />
       </div>
     </div>
-    <HeaderComponent
-      :pheader="client.header"
-      class="text-center w-100 m-0 p-0 text-primary pt-5 bg-secondary waveClip"
+    <b-container fluid class="aboutus waveClip" />
+    <SectionComponent
+      pheader="About Us"
+      :pcontent="client.about"
+      class="align-self-center aboutus"
+    />
+    <SectionComponent
+      pheader="Services"
+      :pcontent="client.services"
+      class="align-self-center services"
     />
 
     <TextImageComponent
@@ -23,7 +26,7 @@
       :pstyle="(item.dark) ? { bgStyle: 'w-100 text-secondary text-left px-4 p-2', inlineImageStyle: item.inlineImageStyle} : { bgStyle: 'w-100 text-primary text-left  px-4 p-2', inlineImageStyle: item.inlineImageStyle}"
     />
 
-    <b-container
+    <!-- <b-container
       fluid
       class="text-primary rellaximage rellaxwatermark rellax"
     >
@@ -47,7 +50,7 @@
       data-rellax-zindex="20"
     >
       I’m second super fast!!
-    </b-container>
+    </b-container>-->
     <HeaderComponent :psubheader="client.featuresHeader" pcontainerclass="transparent" />
 
     <PromoComponent
@@ -68,7 +71,7 @@
     </span>
 
     <b-container fluid class="roundedContainer text-primary">
-      <b-container fluid class="backgroundContainer">
+      <!-- <b-container fluid class="backgroundContainer">
         <b-container fluid :style="gradient" class="align-items-center text-center">
           <p class="watermark">
             matihiko hangarau
@@ -77,7 +80,7 @@
             <br>Aotearoa
           </p>
         </b-container>
-      </b-container>
+      </b-container>-->
       <ServicesComponent class="servicesComponent" :services="summaries" />
     </b-container>
   </b-container>
@@ -93,7 +96,7 @@ import PromoComponent from '@/components/PromoComponent'
 import TextImageComponent from '@/components/TextImageComponent'
 import ServicesComponent from '@/components/ServicesComponent'
 import ProductComponent from '@/components/ProductComponent'
-
+import SectionComponent from '@/components/SectionComponent'
 export default {
   components: {
     Nav,
@@ -102,7 +105,8 @@ export default {
     PromoComponent,
     TextImageComponent,
     ServicesComponent,
-    ProductComponent
+    ProductComponent,
+    SectionComponent
   },
   head () {
     let content = `${process.env.baseUrl}${this.$route.path}`
@@ -146,8 +150,7 @@ export default {
         url: 'laptop.jpg',
         height: '20vh'
       },
-      linkText: 'GET STARTED',
-      link: '/contact/'
+      theme: 'theoddwave'
     }
   },
   computed: {
@@ -215,25 +218,10 @@ export default {
       return {
         backgroundImage: `linear-gradient(45deg,  ${this.pbgimage.color1}, ${this.pbgimage.color2}), url(${image1x}), -webkit-image-set(url(${image1x}) 1x, url(${image2x}) 2x)`,
         backgroundAttachment: 'fixed',
-        height: '80vh',
+        height: '85vh',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover'
-      }
-    },
-    testgradient () {
-      if (!this.pbgimage.url) {
-        return
-      }
-      const image1x = this.bannerImagePath['1']
-      const image2x = this.bannerImagePath['2']
-      return {
-        backgroundImage: `linear-gradient(45deg,  ${this.pbgimage.color1}, ${this.pbgimage.color2}), url(${image1x}), -webkit-image-set(url(${image1x}) 1x, url(${image2x}) 2x)`
-        // backgroundAttachment: 'fixed',
-        // height: '80vh',
-        // backgroundPosition: 'center',
-        // backgroundRepeat: 'no-repeat',
-        // backgroundSize: 'cover'
       }
     }
   },
@@ -248,19 +236,48 @@ export default {
       vertical: true,
       horizontal: false
     })
-    this.$nextTick(function () {
-      window.addEventListener('scroll', function () {
-        const navbar = document.getElementById('navbar')
-        const navClasses = navbar.classList
-        if (document.documentElement.scrollTop >= 150) {
-          if (navClasses.contains('scrolled') === false) {
-            navClasses.toggle('scrolled')
-          }
-        } else if (navClasses.contains('scrolled') === true) {
-          navClasses.toggle('scrolled')
+    window.addEventListener('scroll', this.onScroll)
+    // window.addEventListener('scroll', function () {
+    //   const navbar = document.getElementById('navbar')
+    //   const navClasses = navbar.classList
+    //   if (navClasses.contains('light') === true) {
+    //     navClasses.remove('light')
+    //   }
+    //   if (window.screenTop >= 150) {
+    //     if (navClasses.contains('dark') === false) {
+    //       navClasses.toggle('dark')
+    //     }
+    //   } else if (navClasses.contains('dark') === true) {
+    //     navClasses.toggle('dark')
+    //   }
+    // })
+    // this.$nextTick(function () {
+
+    // })
+  },
+  beforeDestroy () {
+    window.removeEventListener('scroll', this.onScroll)
+  },
+  methods: {
+    onScroll () {
+      const currentScrollPosition =
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        window.screenTop
+      // Because of momentum scrolling on mobiles, we shouldn't continue if it is less than zero
+      if (currentScrollPosition < 0) {
+        return
+      }
+      const navbar = document.getElementById('navbar')
+      const navClasses = navbar.classList
+      if (currentScrollPosition >= 200) {
+        if (navClasses.contains('navbar-theoddwave')) {
+          navClasses.add('black')
         }
-      })
-    })
+      } else {
+        navClasses.remove('black')
+      }
+    }
   }
 }
 </script>
@@ -352,5 +369,19 @@ p.watermark {
 
 #mainContainer {
   width: 100%;
+}
+
+.svg {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.clipped {
+  width: 100%;
+  height: 350px;
+  background: black;
+  background-size: cover;
+  -webkit-clip-path: url(#my-clip-path);
+  clip-path: url(#my-clip-path);
 }
 </style>

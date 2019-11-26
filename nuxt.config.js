@@ -161,11 +161,11 @@ export default {
     // },
     custom: {
       families: [
-        'Montserrat:400,700',
+        'Montserrat:100, 400,700',
         'Lato'
       ],
       urls: [
-        'https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap',
+        'https://fonts.googleapis.com/css?family=Montserrat:100,400,700&display=swap',
         'https://fonts.googleapis.com/css?family=Lato&display=swap'
       ]
     },

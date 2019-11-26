@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
   <div id="productsMainContainer">
-    <Nav class="container-fluid  navbar-light" />
+    <Nav id="navbar" class="container-fluid" :ptheme="theme" />
     <b-container id="productsBackground">
       <b-container id="productsTextBackground">
         <p class="watermark">
@@ -26,14 +26,17 @@
       />
       <!-- <p class="text-primary">
         {{ product.description }}
-      </p> -->
+      </p>-->
       <p v-if="product.price" class="text-primary text-large">
         <span class="text-success text-large">${{ product.price }}</span> NZD + GST
       </p>
       <p v-if="product.price" class="text-primary">
         {{ product.paymentPlan }}
       </p>
-      <b-container v-if="product.features.length > 0" class="productContainer bg-primary text-primary text-left">
+      <b-container
+        v-if="product.features.length > 0"
+        class="productContainer bg-primary text-primary text-left"
+      >
         <b-list-group
           v-for="(item, i) in product.features"
           :key="i"
@@ -99,7 +102,8 @@ export default {
   data () {
     return {
       id: this.$route.params.id,
-      panimheader: 'be where the world is going'
+      panimheader: 'be where the world is going',
+      theme: 'default'
     }
   },
   computed: {

@@ -1,7 +1,8 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
   <div id="servicesMainContainer">
-    <Nav class="container-fluid bg-secondary text-primary" />
+    <Nav id="navbar" class="container-fluid" :ptheme="theme" />
+    <!-- <Nav class="container-fluid bg-secondary text-primary" /> -->
     <b-container id="servicesBackground">
       <b-container id="servicesTextBackground">
         <p class="watermark">
@@ -172,7 +173,8 @@ export default {
   data () {
     return {
       id: this.$route.params.id,
-      panimheader: 'be where the world is going'
+      panimheader: 'be where the world is going',
+      theme: 'default'
     }
   },
   computed: {

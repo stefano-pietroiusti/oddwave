@@ -1,12 +1,24 @@
 <template>
-  <b-container fluid class="contactContainer p-0 m-0 text-primary w-100 text-left">
-    <Nav />
-    <b-container fluid :style="gradient" class="contactBackground  text-medium align-items-center text-center">
+  <div id="contactMainContainer">
+    <Nav id="navbar" class="container-fluid" :ptheme="theme" />
+    <!-- <b-container
+      fluid
+      :style="gradient"
+      class="contactBackground text-medium align-items-center text-center"
+    >
       <p class="watermark">
-        Pro Websites SEO Digital Marketing Google Ads Data Analysis<br>pae tukutuku kūkara pānui
+        Pro Websites SEO Digital Marketing Google Ads Data Analysis
       </p>
-    </b-container>
-    <b-container fluid class="contactContainer text-primary text-medium w-100 text-left m-0 p-0">
+    </b-container> -->
+    <AnimeBannerWordsHeaderComponent
+      pid="contact"
+      :pheader="animeheader"
+      :pbgimage="backgroundImage"
+      :pstyle="style"
+    />
+    <HeaderComponent :pheader="header" />
+    <ContactForm :pservices="servicesDropDown" :pbgimage="backgroundImage" :pstyle="style" />
+    <!-- <b-container fluid class="text-primary text-medium w-100 text-left m-0 p-0">
       <AnimeBannerWordsHeaderComponent
         pid="contact"
         :pheader="animeheader"
@@ -15,8 +27,8 @@
       />
       <HeaderComponent :pheader="header" />
       <ContactForm :pservices="servicesDropDown" :pbgimage="backgroundImage" :pstyle="style" />
-    </b-container>
-  </b-container>
+    </b-container>-->
+  </div>
 </template>
 <script>
 import { mapGetters } from 'vuex'
@@ -86,9 +98,8 @@ export default {
         height: 100
       },
       style: { bgStyle: 'text-secondary text-center' },
-      keywords: [
-        ...commonKeywords
-      ]
+      keywords: [...commonKeywords],
+      theme: 'contact'
     }
   },
   computed: {
@@ -121,13 +132,35 @@ export default {
     }
   },
   mounted () {
+    console.log('route: ', this.$route.name)
+    console.log('theme: ', this.theme)
     this.$ga.page(this.$route.path)
-    // if (process.env.NODE_ENV !== 'production') {
-    // }
+    // window.addEventListener('scroll', function () {
+    //   const navbar = document.getElementById('navbar')
+    //   const navClasses = navbar.classList
+    //   console.log('navClasses: ', navClasses)
+    //   if (window.documentElement.scrollTop >= 150) {
+    //     if (navClasses.contains(this.theme) === false) {
+    //       navClasses.toggle(this.theme)
+    //     }
+    //   } else if (navClasses.contains(this.theme) === true) {
+    //     navClasses.toggle(this.theme)
+    //   }
+    // })
   }
+
 }
 </script>
 <style scoped>
+#contactMainContainer {
+  background: transparent;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 p.watermark {
   width: 100%;
   height: 100%;
@@ -162,10 +195,5 @@ p.watermark {
   height: 100%;
   z-index: -1;
   opacity: 0.1;
-}
-
-* {
-  margin: 0;
-  padding: 0;
 }
 </style>

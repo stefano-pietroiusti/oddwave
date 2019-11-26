@@ -142,6 +142,7 @@ export const state = () => ({
     copyright: '© 2019 Copyright The Odd Wave',
     poweredBy: 'powered by The Odd Wave suite of web technologies',
     about: 'Web Design, Web Development, SEO, Digital Marketing Agency Auckland specializing in cloud, web, data and search solutions',
+    services: 'Solid and flexible web design, developer, SEO, Digital marketing and data analysis to drive the right traffic to your online business and help your business grow online.<br/>We do websites for ROI.',
     fb: 'https://www.facebook.com/theoddwave',
     instagram: 'https://www.instagram.com/theoddwavenz/',
     linkedin: 'https://www.linkedin.com/company/the-odd-wave-ltd/',

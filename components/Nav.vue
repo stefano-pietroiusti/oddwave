@@ -1,8 +1,5 @@
 <template>
-  <b-navbar
-    fixed="top"
-    toggleable="lg"
-  >
+  <b-navbar fixed="top" toggleable="lg" :type="theme" :variant="theme">
     <b-navbar-brand to="/" title="Web Design by The Odd Wave">
       <img
         :src="logoPath"
@@ -15,60 +12,88 @@
     </b-navbar-brand>
     <div id="content-mobile">
       <a :href="`tel:${callAction.telephone}`" :title="`Call us: ${callAction.telephone}`">
-        <font-awesome-icon :icon="['fas', 'phone']" class="fa fa-medium fa-hover text-white pl-2 ml-2" />
+        <font-awesome-icon
+          :icon="['fas', 'phone']"
+          :class="`fa fa-medium fa-hover pl-2 ml-2 ${color}`"
+        />
       </a>
       <a :href="`mailto:${callAction.email}`" :title="`Email us: ${callAction.email}`">
-        <font-awesome-icon :icon="['fas', 'envelope']" class="fa fa-medium text-white fa-hover pl-2  ml-2" />
+        <font-awesome-icon
+          :icon="['fas', 'envelope']"
+          :class="`fa fa-medium fa-hover pl-2 ml-2 ${color}`"
+        />
       </a>
     </div>
-    <b-navbar-toggle target="nav-collapse" />
+    <b-navbar-toggle target="nav-collapse" class="custom-toggler" />
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav role="navigation">
-        <b-nav-item to="/">
+        <b-nav-item to="/" exact exact-active-class="activeClass rounded-pill">
           Home
+          <div class="underline" />
         </b-nav-item>
-        <b-nav-item-dropdown text="Services" toggle-class="text-decoration-none">
+        <b-nav-item-dropdown
+          text="Services"
+          :extra-toggle-classes="this.$route.name === 'services-id' ? 'activeClass' : ''"
+        >
           <b-dropdown-item
             v-for="item in services"
             :id="item.id"
             :key="item.id"
             :to="'/services/' + item.id + '/'"
-            :class="`text-${item.variant}`"
+            class="text-lightgray"
+            exact
+            exact-active-class="activeClass"
           >
-            <!-- <font-awesome-icon
-                    :icon="
-                      item.icon"
-                    :class="`fa text-large text-${item.variant} my-2 fa-fw`"
-                  /> -->
             {{ item.title }}
+            <!-- <b-dropdown-divider /> -->
           </b-dropdown-item>
+
+          <div class="underline" />
         </b-nav-item-dropdown>
-        <b-nav-item-dropdown text="Pricing" toggle-class="text-decoration-none">
+        <b-nav-item-dropdown
+          text="Pricing"
+          exact
+          :exact-active-class="this.$route.path === 'products' ? 'activeClass' : ''"
+          :extra-toggle-classes="this.$route.path === 'products' ? 'activeClass' : ''"
+        >
           <b-dropdown-item
             v-for="item in products"
             :id="item.id"
             :key="item.id"
             :to="'/products/' + item.id + '/'"
+            class="text-lightgray"
+            exact
+            exact-active-class="activeClass"
           >
-            <!-- <font-awesome-icon
-                    :icon="
-                      item.icon"
-                    :class="`fa text-large text-${item.variant} my-2 fa-fw`"
-                  /> -->
             {{ item.title }}
           </b-dropdown-item>
-          </b-dropdown-i1tem>
         </b-nav-item-dropdown>
-        <b-nav-item to="/contact/">
+        <b-nav-item to="/contact/" exact exact-active-class="activeClass rounded-pill">
           Contact us
         </b-nav-item>
-        <div id="content-desktop">
+        <div id="content-desktop" class="pl-5">
           <a :href="`tel:${callAction.telephone}`" :title="`Call us: ${callAction.telephone}`">
-            <font-awesome-icon :icon="['fas', 'phone']" class="fa fa-medium fa-hover  pl-2 ml-2" />
+            <font-awesome-icon
+              :icon="['fas', 'phone']"
+              :class="`fa fa-medium fa-hover pl-2 ml-2 ${color}`"
+            />
           </a>
           <a :href="`mailto:${callAction.email}`" :title="`Email us: ${callAction.email}`">
-            <font-awesome-icon :icon="['fas', 'envelope']" class="fa fa-medium fa-hover pl-2  ml-2" />
+            <font-awesome-icon
+              :icon="['fas', 'envelope']"
+              :class="`fa fa-medium fa-hover pl-2 ml-2 ${color}`"
+            />
           </a>
+        </div>
+        <div id="whyusbutton" class="pl-5">
+          <b-button
+            pill
+            variant="rwcblue"
+            to="#whyus"
+            class="px-3 whyusbutton justify-content-center animated pulse delay-1s text-white"
+          >
+            Why Us?
+          </b-button>
         </div>
       </b-navbar-nav>
     </b-collapse>
@@ -78,8 +103,7 @@
 <script>
 import { mapGetters } from 'vuex'
 export default {
-  components: {
-  },
+  components: {},
   props: {
     pbgimage: {
       type: Object,
@@ -91,6 +115,10 @@ export default {
           height: 100
         }
       }
+    },
+    ptheme: {
+      type: String,
+      default: 'dark'
     }
   },
   data () {
@@ -107,7 +135,10 @@ export default {
     ...mapGetters('products', ['productLinks']),
     ...mapGetters('client', ['getClient']),
     callAction () {
-      return { telephone: this.getClient.telephone, email: this.getClient.email }
+      return {
+        telephone: this.getClient.telephone,
+        email: this.getClient.email
+      }
     },
     services () {
       const services = this.serviceLinks
@@ -118,7 +149,15 @@ export default {
       return products
     },
     logoPath () {
-      return require(`~/assets/logos/oddwave.png`)
+      return this.ptheme === 'theoddwave'
+        ? require(`~/assets/logos/oddwave-dark.png`)
+        : require(`~/assets/logos/oddwave-light.png`)
+    },
+    color () {
+      return this.ptheme === 'theoddwave' ? 'text-white' : 'text-black'
+    },
+    theme () {
+      return this.ptheme
     },
     bannerImagePath () {
       if (!this.pbgimage.url) {
@@ -148,5 +187,4 @@ export default {
 }
 </script>
 <style scoped>
-
 </style>

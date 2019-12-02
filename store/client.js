@@ -33,26 +33,30 @@ export const state = () => ({
         header: 'Web design with A+ Google audit score in Performance, Accessibility, Best Practices & SEO',
         text:
           "Our websites are continuously tested and audited using Google's recommended open source tools to achieve an A+ score in performance, accessibility, best practices & SEO. ",
-        icon: ['fas', 'users']
+        icon: ['fas', 'users'],
+        image: '/imgs/best-web-design.svg'
       },
       {
         header: 'Web Design that puts Users, Content & Mobile First',
         text:
           'We follow a user-oriented web design approach that makes our websites, web applications and content usable by anyone on any device.',
-        icon: ['fas', 'mobile-alt']
+        icon: ['fas', 'mobile-alt'],
+        image: '/imgs/mobile-first.svg'
       },
       {
         header: 'Web Development with fit-for-purpose Open Source',
         text:
           'We combine established open source website frameworks with our vanilla HTML, CSS & javascript development to build websites that are lean, quick, flexible & scalable. Take advantage of our future-proof way to grow your brand image, sales and customer loyalty online.',
-        icon: ['fab', 'servicestack']
+        icon: ['fab', 'servicestack'],
+        image: '/imgs/web-dev.svg'
       },
 
       {
         header: 'Web design and Content for Users and Search',
         text:
           'We write structured online content to be friendly to users, mobiles & search engines. We can also help you optimize your return on investment (ROI) from our search engine optimization (SEO) services, managed conversion tracking and reporting.',
-        icon: ['fas', 'chart-line']
+        icon: ['fas', 'chart-line'],
+        image: '/imgs/web-content-search.svg'
       }
     ],
     content: [
@@ -141,8 +145,9 @@ export const state = () => ({
     priceRange: '$$',
     copyright: '© 2019 Copyright The Odd Wave',
     poweredBy: 'powered by The Odd Wave suite of web technologies',
-    about: 'Web Design, Web Development, SEO, Digital Marketing Agency Auckland specializing in cloud, web, data and search solutions',
-    services: 'Solid and flexible web design, developer, SEO, Digital marketing and data analysis to drive the right traffic to your online business and help your business grow online.<br/>We do websites for ROI.',
+    about: "The Odd Wave offers a range of services to support your online business venture. Everything we do is aimed at producing results that our clients want for their businesses. We're based in Torbay, North Shore, Auckland, and are here to help everyone in New Zealand.",
+    services: 'Solid and flexible web design, developer, SEO, Digital marketing and data analysis to <b>drive the right traffic</b> to your online business and <b>help your business grow</b> online.<br/><u>We do websites for ROI.</u>',
+    businessvalue: "Everything we do is aimed at producing results that our clients want for their businesses. We're based in Torbay, North Shore, Auckland, and are here to help everyone in New Zealand.",
     fb: 'https://www.facebook.com/theoddwave',
     instagram: 'https://www.instagram.com/theoddwavenz/',
     linkedin: 'https://www.linkedin.com/company/the-odd-wave-ltd/',

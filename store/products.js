@@ -455,7 +455,7 @@ export const getters = {
         {
           id: item.id,
           header: item.header,
-          subheader: item.subheader,
+          description: item.description,
           features: item.features,
           price: getters.getPrice(item.price.value, item.price.discount),
           paymentPlan: item.price.flexible ? getters.getPaymentPlan(getters.getPrice(item.price.value, item.price.discount)) : undefined,

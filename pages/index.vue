@@ -1,30 +1,54 @@
 <template>
   <b-container id="mainContainer" fluid class="text-left p-0 m-0">
-    <Nav id="navbar" class="container-fluid" :ptheme="theme" />
-    <b-container fluid class="headerModule rellaxImage comboFilter" :style="gradient" />
+    <!-- <Nav id="navbar" class="container-fluid" :ptheme="theme" /> -->
+    <!-- <b-container fluid class="headerModule rellaxImage comboFilter h-100" :style="gradient" />
     <div class="module resetFilter">
       <div class="module-inside resetFilter">
         <HeaderComponentLanding :pheader="client.subheader" :psubtitle="client.subtitle" />
       </div>
-    </div>
-    <b-container fluid class="aboutus waveClip" />
+    </div> -->
+
+    <b-container fluid class="m-0 p-0" :style="gradient">
+      <Nav id="navbar" class="container-fluid" :ptheme="theme" />
+      <div class="module resetFilter" style="top:20%;">
+        <div class="module-inside resetFilter" style="min-height: 80vh;">
+          <HeaderComponentLanding :pheader="client.subheader" :psubtitle="client.subtitle" />
+        </div>
+      </div>
+    </b-container>
+    <!-- <b-container fluid class="divider bg-white waveClip" /> -->
+
     <SectionComponent
       pheader="About Us"
       :pcontent="client.about"
-      class="align-self-center aboutus"
+      class="align-self-center aboutus bgsteelblue"
     />
     <SectionComponent
       pheader="Services"
       :pcontent="client.services"
       class="align-self-center services"
     />
+    <ServicesLinksComponent class="servicesComponent" :services="summaries" />
 
-    <TextImageComponent
+    <p id="whyussection" class="p-3" />
+    <WhyUsComponent
+      pheader="Why Us?"
+      class="align-self-center whyus bgsteelblue"
+      :pfeatures="client.features"
+    />
+
+    <SectionContactComponent
+      pheader="What can we do for you?"
+      :pcontent="client.businessvalue"
+      class="align-self-center services"
+    />
+
+    <!-- <TextImageComponent
       v-for="(item,i) in client.content"
       :key="i"
       :pcontent="{header: item.header, text: item.text, list: item.list, bgImage: item.bgImage, inlineImage: item.inlineImage, inlineImageText: item.inlineImageText, inlineImageRight: item.inlineImageRight }"
       :pstyle="(item.dark) ? { bgStyle: 'w-100 text-secondary text-left px-4 p-2', inlineImageStyle: item.inlineImageStyle} : { bgStyle: 'w-100 text-primary text-left  px-4 p-2', inlineImageStyle: item.inlineImageStyle}"
-    />
+    /> -->
 
     <!-- <b-container
       fluid
@@ -51,15 +75,15 @@
     >
       I’m second super fast!!
     </b-container>-->
-    <HeaderComponent :psubheader="client.featuresHeader" pcontainerclass="transparent" />
+    <!-- <HeaderComponent :psubheader="client.featuresHeader" pcontainerclass="transparent" />
 
     <PromoComponent
       class="promoComponent rellax"
       data-rellax-speed="-2"
       :features="client.features"
       variant="primary"
-    />
-    <HeaderComponent
+    /> -->
+    <!-- <HeaderComponent
       v-if="featuredProducts.length > 0"
       psubheader="Featured Packages"
       psubtitle="Flexible payment plans are available."
@@ -68,21 +92,9 @@
     <span v-for="item in featuredProducts" :key="item.id">
       <ProductComponent :product="item" />
       <hr fluid class="hrprimary">
-    </span>
+    </span> -->
 
-    <b-container fluid class="roundedContainer text-primary">
-      <!-- <b-container fluid class="backgroundContainer">
-        <b-container fluid :style="gradient" class="align-items-center text-center">
-          <p class="watermark">
-            matihiko hangarau
-            <br>pae tukutuku
-            <br>kūkara, pānui
-            <br>Aotearoa
-          </p>
-        </b-container>
-      </b-container>-->
-      <ServicesComponent class="servicesComponent" :services="summaries" />
-    </b-container>
+    <SliderComponent :products="featuredProducts" />
   </b-container>
 </template>
 
@@ -91,22 +103,29 @@ import { mapGetters } from 'vuex'
 import Rellax from 'rellax'
 import Nav from '@/components/Nav'
 import HeaderComponentLanding from '@/components/HeaderComponentLanding'
-import HeaderComponent from '@/components/HeaderComponent'
-import PromoComponent from '@/components/PromoComponent'
-import TextImageComponent from '@/components/TextImageComponent'
-import ServicesComponent from '@/components/ServicesComponent'
-import ProductComponent from '@/components/ProductComponent'
+// import HeaderComponent from '@/components/HeaderComponent'
+// import PromoComponent from '@/components/PromoComponent'
+
+import ServicesLinksComponent from '@/components/ServicesLinksComponent'
+// import ProductComponent from '@/components/ProductComponent'
 import SectionComponent from '@/components/SectionComponent'
+import SectionContactComponent from '@/components/SectionContactComponent'
+import WhyUsComponent from '@/components/WhyUsComponent'
+import SliderComponent from '@/components/SliderComponent'
+
 export default {
   components: {
     Nav,
     HeaderComponentLanding,
-    HeaderComponent,
-    PromoComponent,
-    TextImageComponent,
-    ServicesComponent,
-    ProductComponent,
-    SectionComponent
+    // HeaderComponent,
+    // PromoComponent,
+    // TextImageComponent,
+    ServicesLinksComponent,
+    // ProductComponent,
+    SectionComponent,
+    SectionContactComponent,
+    WhyUsComponent,
+    SliderComponent
   },
   head () {
     let content = `${process.env.baseUrl}${this.$route.path}`
@@ -145,8 +164,8 @@ export default {
     return {
       backgroundurl: 'nz.svg',
       pbgimage: {
-        color1: 'rgba(255, 0, 255, 0) 0%',
-        color2: 'rgba(0, 255, 255, 0) 0%',
+        color1: 'rgba(0, 0, 0, 0.5) 0%',
+        color2: 'rgba(0, 0, 0, 0.5) 0%',
         url: 'laptop.jpg',
         height: '20vh'
       },
@@ -218,7 +237,7 @@ export default {
       return {
         backgroundImage: `linear-gradient(45deg,  ${this.pbgimage.color1}, ${this.pbgimage.color2}), url(${image1x}), -webkit-image-set(url(${image1x}) 1x, url(${image2x}) 2x)`,
         backgroundAttachment: 'fixed',
-        height: '85vh',
+        height: '100vh',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover'
@@ -237,6 +256,7 @@ export default {
       horizontal: false
     })
     window.addEventListener('scroll', this.onScroll)
+    this.onScroll()
     // window.addEventListener('scroll', function () {
     //   const navbar = document.getElementById('navbar')
     //   const navClasses = navbar.classList
@@ -281,7 +301,11 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style scoped lang="scss">
+.testbackground {
+  background: rgba($color: black, $alpha: 0.1);
+}
+
 .module {
   position: relative;
 }
@@ -291,8 +315,8 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  filter: grayscale(100%);
+  height: 50%;
+  // filter: grayscale(100%);
 }
 .module-inside {
   /* This will make it stack on top of the ::before */
@@ -302,10 +326,11 @@ export default {
 .rellaximage {
   background-color: #000;
   background-attachment: fixed;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.9;
+  background-size: contain;
+  opacity: 1;
+  min-height: 100%;
 }
 
 .rellaxwatermark {

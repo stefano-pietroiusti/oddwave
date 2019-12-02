@@ -16,7 +16,7 @@
       :pbgimage="backgroundImage"
       :pstyle="style"
     />
-    <HeaderComponent :pheader="header" />
+    <HeaderComponent :pheader="header" class="text-center" />
     <ContactForm :pservices="servicesDropDown" :pbgimage="backgroundImage" :pstyle="style" />
     <!-- <b-container fluid class="text-primary text-medium w-100 text-left m-0 p-0">
       <AnimeBannerWordsHeaderComponent

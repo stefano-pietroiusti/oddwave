@@ -9,7 +9,7 @@
 
         </clipPath>
       </defs>
-    </svg> -->
+    </svg>-->
     <!-- <svg class="svg" height="1px" width="1px">
       <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">
         <path
@@ -18,14 +18,21 @@
       </clipPath>
     </svg>
 
-    <div class="clipped" /> -->
-    <svg>
-      <clipPath id="wave" clipPathUnits="objectBoundingBox">
+    <div class="clipped" />-->
+    <!-- <svg>
+      <clipPath id="wave" clipPathUnits="objectBoundingBox" width="0" height="0">
         <path d="M1,0c0,0-0.3,0.1-0.5,0.1S0.3,0,0,0.1V1h1L1,0z" />
       </clipPath>
     </svg>
+    <svg>
+      <defs>
+        <clipPath id="footerwave" clipPathUnits="objectBoundingBox" width="0" height="0">
+          <path d="M1,0c0,0-0.3,0.1-0.5,0.1S0.3,0,0,0.1V1h1L1,0z" />
+        </clipPath>
+      </defs>
+    </svg> -->
     <nuxt />
-    <Footer class="waveClip" />
+    <Footer class="mt-10 footerWaveClip" />
   </div>
 </template>
 

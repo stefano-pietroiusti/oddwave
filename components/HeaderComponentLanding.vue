@@ -2,8 +2,9 @@
 <template>
   <b-container
     fluid
-    :class="`text-left mt-5 p-0 m-0 animated fadeInUp`"
+    :class="`text-left mt-0 p-0 m-0 h-100 w-100`"
   >
+    <!-- animated fadeInUp -->
     <b-container fluid :class="`text-left p-0 text-secondary`">
       <b-row>
         <b-col sm="12" md="12" lg="8" xl="8" class="align-items-center w-100">
@@ -301,7 +302,7 @@ export default {
 
 .hero-content-wrap {
   display: table;
-  height: 80%;
+  height: 100%;
   width: 100%;
 }
 

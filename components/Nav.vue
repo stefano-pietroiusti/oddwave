@@ -1,6 +1,6 @@
 <template>
   <b-navbar fixed="top" toggleable="lg" :type="theme" :variant="theme">
-    <b-navbar-brand to="/" title="Web Design by The Odd Wave">
+    <b-navbar-brand to="/" title="Web Design by The Odd Wave" exact exact-active-class="">
       <img
         :src="logoPath"
         :srcset="logoPath.srcSet"
@@ -27,13 +27,12 @@
     <b-navbar-toggle target="nav-collapse" class="custom-toggler" />
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav role="navigation">
-        <b-nav-item to="/" exact exact-active-class="activeClass rounded-pill">
+        <b-nav-item to="/" exact exact-active-class="underline">
           Home
-          <div class="underline" />
         </b-nav-item>
         <b-nav-item-dropdown
           text="Services"
-          :extra-toggle-classes="this.$route.name === 'services-id' ? 'activeClass' : ''"
+          :extra-toggle-classes="this.$route.name === 'services-id' ? 'activeClassServicesProducts' : ''"
         >
           <b-dropdown-item
             v-for="item in services"
@@ -42,19 +41,16 @@
             :to="'/services/' + item.id + '/'"
             class="text-lightgray"
             exact
-            exact-active-class="activeClass"
+            exact-active-class="activeClassServicesProducts"
           >
             {{ item.title }}
             <!-- <b-dropdown-divider /> -->
           </b-dropdown-item>
-
-          <div class="underline" />
         </b-nav-item-dropdown>
         <b-nav-item-dropdown
           text="Pricing"
           exact
-          :exact-active-class="this.$route.path === 'products' ? 'activeClass' : ''"
-          :extra-toggle-classes="this.$route.path === 'products' ? 'activeClass' : ''"
+          :extra-toggle-classes="this.$route.path === 'products' ? 'activeClassServicesProducts' : ''"
         >
           <b-dropdown-item
             v-for="item in products"
@@ -63,12 +59,12 @@
             :to="'/products/' + item.id + '/'"
             class="text-lightgray"
             exact
-            exact-active-class="activeClass"
+            exact-active-class="activeClassServicesProducts"
           >
             {{ item.title }}
           </b-dropdown-item>
         </b-nav-item-dropdown>
-        <b-nav-item to="/contact/" exact exact-active-class="activeClass rounded-pill">
+        <b-nav-item to="/contact/" exact exact-active-class="underline">
           Contact us
         </b-nav-item>
         <div id="content-desktop" class="pl-5">
@@ -85,12 +81,12 @@
             />
           </a>
         </div>
-        <div id="whyusbutton" class="pl-5">
+        <div id="whyus" class="pl-5">
           <b-button
             pill
             variant="rwcblue"
-            to="#whyus"
-            class="px-3 whyusbutton justify-content-center animated pulse delay-1s text-white"
+            href="/#whyussection"
+            class="px-3 whyusbutton justify-content-center animated pulse delay-1s text-white text-medium"
           >
             Why Us?
           </b-button>

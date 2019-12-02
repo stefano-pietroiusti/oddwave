@@ -23,7 +23,7 @@ $bluelight: #1446a0;
 $indigo: #1e1d1e;
 $purple: #6f42c1;
 $pink: #db3069;
-$red: #f00;
+$red: #fc3d59;
 $orange: #fd7e14;
 $yellow: #f5d547;
 $webyellow: #ffff00;
@@ -175,8 +175,8 @@ $font-size-base: 0.8rem;
 
 $min_width: 320px;
 $max_width: 100%;
-$min_font: 18px;
-$max_font: 22px;
+$min_font: 23px;
+$max_font: 28px;
 $calc_font: calc(1vw + 1vh + 0.8vmin);
 $calc_h1: calc(1.375rem + 1.5vw);
 $calc_h2: calc(1.325rem + 0.9vw);
@@ -386,11 +386,84 @@ hr {
 
 /*NAVBAR*/
 
+// .underlinedef:hover:after {
+//   content: "";
+//   position: absolute;
+//   width: 100%;
+//   height: 5px;
+//   bottom: 0;
+//   left: 0;
+//   border-bottom: 5px solid #00c3ff;
+// }
+
+//   &:before {
+//     content: "";
+//     position: absolute;
+//     width: 30%;
+//     height: 5px;
+//     bottom: 0;
+//     left: 25%;
+//     border-bottom: 5px solid #00c3ff;
+//     transition: all 0.25s;
+//   }
+// }
+
+.underline {
+  position: relative;
+  margin: 0px;
+  &:hover,
+  &:focus,
+  &:active {
+    /* cursor: pointer;*/
+    &:before {
+      width: 100%;
+      left: 0%;
+    }
+  }
+
+  // &:after {
+  //     content: '';
+  //     position: absolute;
+  //     left: 25%; bottom: -7px;
+  //     height: 4px;
+  //     background-color: #fff;
+  //     width: 50%;
+  //     transition: width .25s;
+  //   }
+  &:before {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 5px;
+    bottom: 0;
+    left: 25%;
+    border-bottom: 5px solid #00c3ff;
+    transition: all 0.25s;
+  }
+}
+
+.activeClass1 {
+  text-decoration: none;
+  color: white;
+  background-color: $gray-900;
+}
+
 .activeClass {
   text-decoration: none;
-  background-color: black;
-  color: $gray-400;
+  color: black;
+  background-color: $gray-700;
 }
+
+.activeClassServicesProducts {
+  text-decoration: none;
+  color: black !important;
+  background-color: #fff !important;
+}
+
+// .nuxt-link-active {
+//   color: white;
+//   background-color: transparent;
+// }
 
 #content-desktop {
   display: block;
@@ -654,63 +727,55 @@ hr {
   color: black;
 }
 
-nav:hover .navbar-nav:hover .nav-link:hover {
-  background-color: var(--primary);
-  color: var(--secondary);
-}
-
-.navbar-theoddwave:hover .navbar-nav:hover .b-nav-dropdown:hover {
-  background-color: var(--primary);
-  color: white;
-}
-
-// .nav-link li.active > a {
-// 	background-color: #333;
-// 	color: #fff;
+// .navbar-theoddwave:hover .navbar-nav:hover .b-nav-dropdown:hover::before {
+//   content: "";
+//   position: absolute;
+//   width: 30%;
+//   height: 5px;
+//   bottom: 0;
+//   left: 25%;
+//   border-bottom: 5px solid #00c3ff;
+//   transition: all 0.25s;
 // }
 
-nav:active .navbar-nav:active .nav-link:active {
-  background-color: var(--primary);
-  color: var(--secondary);
-}
+// nav:hover .nav-item:hover .nav-link:hover::before {
+//   content: "";
+//   position: absolute;
+//   width: 30%;
+//   height: 5px;
+//   bottom: 0;
+//   left: 25%;
+//   border-bottom: 5px solid #00c3ff;
+// }
 
-nav:focus .navbar-nav:focus .nav-link:focus {
-  background-color: var(--primary);
-  color: var(--secondary);
-}
+// nav:hover .navbar-nav:hover .nav-link:hover {
+//   background-color: var(--primary);
+//   color: var(--secondary);
+// }
+
+// .navbar-theoddwave:hover .navbar-nav:hover .b-nav-dropdown:hover {
+//   background-color: var(--primary);
+//   color: white;
+// }
+
+// nav:hover .navbar-nav:hover .nav-link:hover {
+//   background-color: var(--primary);
+//   color: var(--secondary);
+// }
+
+// nav:active .navbar-nav:active .nav-link:active {
+//   background-color: var(--primary);
+//   color: var(--secondary);
+// }
+
+// nav:focus .navbar-nav:focus .nav-link:focus {
+//   background-color: var(--primary);
+//   color: var(--secondary);
+// }
 
 // .navbar-dark:hover .navbar-nav:hover .nav-link:hover {
 //   background-color: var(--primary);
 //   color: var(--secondary);
-// }
-
-// .navbar-dark:active .navbar-nav:active .nav-link:active {
-//   background-color: var(--primary);
-//   color: var(--secondary);
-// }
-// .navbar-light:active .navbar-nav:active .nav-link:active {
-//   // background-color: var(--primary);
-//   color: var(--secondary);
-// }
-
-// .navbar-light:hover .navbar-nav:hover .nav-link:hover {
-//   background-color: var(--primary)!important;
-//   text-decoration: underline;
-//   color: white!important;
-// }
-
-// .nuxt-link-active {
-//   color: white!important;
-
-// }
-
-// .router-link-active {
-//   color: white!important;
-
-// }
-
-// .navbar-light .navbar-nav .nav-link {
-//   color: black !important;
 // }
 
 .dropdown-item:hover,
@@ -725,7 +790,6 @@ nav:focus .navbar-nav:focus .nav-link:focus {
 }
 
 .whyusbutton {
-  font-size: 0.8rem;
   text-transform: capitalize;
   line-height: 1.5;
   // padding: 5;
@@ -788,6 +852,9 @@ nav:focus .navbar-nav:focus .nav-link:focus {
   clip-path: url(#wave);
 }
 
+.footerWaveClip {
+  clip-path: url(#footerwave);
+}
 /* Image filters */
 .contrast {
   -webkit-filter: contrast(180%);
@@ -826,17 +893,100 @@ nav:focus .navbar-nav:focus .nav-link:focus {
   flex: 0 0 50%;
 }
 
-
+.bgsteelblue {
+  background: rgba($color: #687fac, $alpha: 0.1);
+}
 .aboutus {
   font-size: 28px;
-  min-height: 30vh;
-  background: rgba($color: #687FAC, $alpha: .1);
+}
+
+.whyus {
+  font-size: 28px;
+  padding: 0 5vw 5vw 5vw;
+}
+
+.featureCards {
+  padding: 1vw 1vw 1vw 1vw;
+}
+
+
+.servicesCard {
+  fill: #000000; 
+  color: #000000; 
+  background-color:#fff; 
+  text-decoration: none;
+
+}
+.servicesCard:hover {
+  fill: #ffffff; 
+  color: #ffffff; 
+  background-color: $primary; 
+  text-decoration: none;
+}
+
+.card {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 20px #0000002b;
+  border-radius: 22px;
+  opacity: 1;
+}
+
+.cardLarge {
+  min-height: 350px;
+  height: 350px;
+}
+
+.cardSmall {
+  min-height: 240px;
+  height: 240px;
+  min-width: 240px;
+  width: 240px;
+  // color: #000;
+  // background-color: white;
+  font-size: 1.1rem;
+  opacity: 1;
+}
+
+.cardMedium {
+  min-width: 320px;
+  width: 320px;
+  font-size: 1rem;
+}
+
+.productLink {
+ text-decoration: none;
+}
+.productLink:hover {
+  text-decoration: none;
+ }
+
+.card-header-custom {
+  position: relative;
+  font-size: 24px;
+  height: 95px;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card-header-text {
+  padding: 0 5px 0 125px;
+}
+
+.card-text {
+  position: relative;
+  font-size: 1.3rem;
+  padding: 5px 5px 5px 0px;
+}
+
+.divider {
+  min-height: 20vh;
 }
 
 .services {
   font-size: 28px;
   min-height: 30vh;
-  background: rgba($color: #fff, $alpha: .1);
+  background: rgba($color: #fff, $alpha: 0.1);
 }
 
 /*LINKS*/
@@ -1004,32 +1154,15 @@ fa-contact-dark:hover {
   height: 100%;
   width: 100%;
   bottom: 5em;
-  line-height: 2em;
+  // line-height: 2em;
 }
 
-.footer .col {
-  width: auto;
-  height: auto;
-  float: left;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-}
 .footer h2 {
   padding: unset;
-  font-family: inherit;
-  font-size: 0.8em;
-  font-weight: normal;
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
-}
-.footer h4 {
-  padding: unset;
-  font-family: inherit;
-  font-size: 0.8em;
-  letter-spacing: 0.25em;
+   font-size: 1.3rem;
   font-weight: bold;
-  line-height: 3em;
+  text-transform: none;
+  // letter-spacing: 0.25em;
 }
 
 .footer a {
@@ -1040,22 +1173,14 @@ fa-contact-dark:hover {
   color: var(--secondary);
 }
 
-.footer h6 {
-  font-family: inherit;
-  font-size: 0.4em;
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
-}
-
 .footer ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 .footer ul li {
+  font-size: 1.1rem;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 0.8em;
-  font-family: inherit;
   margin: 0vw;
   transition: 0.2s;
   -webkit-transition: 0.2s;
@@ -1067,10 +1192,6 @@ fa-contact-dark:hover {
   padding: unset;
 }
 
-// .footer ul a:hover {
-//   // text-decoration: none;
-// }
-
 .footer ul li:hover {
   color: #ffffff;
   transition: 0.1s;
@@ -1078,11 +1199,6 @@ fa-contact-dark:hover {
   -moz-transition: 0.1s;
 }
 
-.social ul li {
-  display: inline-block;
-  padding-right: 5px !important;
-  color: #000;
-}
 .clearfix {
   clear: both;
 }

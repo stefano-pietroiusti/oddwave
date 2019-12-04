@@ -145,6 +145,7 @@ $font-size-base: 0.8rem;
 @import "../../node_modules/bootstrap-vue/src/index.scss";
 
 @import "@/assets/scss/animate.css";
+@import "../../node_modules/swiper/css/swiper.css";
 
 @function strip-unit($value) {
   @return $value / ($value * 0 + 1);
@@ -247,6 +248,10 @@ h1 {
 
 .text-medium {
   font-size: $calc_h3;
+}
+
+.text-mediumLarge {
+  font-size: $calc_h2;
 }
 
 .text-small {
@@ -923,8 +928,8 @@ hr {
   background-color: $primary; 
   text-decoration: none;
 }
-
 .card {
+  // display:inline-block;
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 1px 20px #0000002b;
   border-radius: 22px;
@@ -948,8 +953,10 @@ hr {
 }
 
 .cardMedium {
-  min-width: 320px;
-  width: 320px;
+  // min-width: 320px;
+  max-width: 70%;
+  min-height: 100%;
+  max-height: 100%;
   font-size: 1rem;
 }
 
@@ -959,6 +966,8 @@ hr {
 .productLink:hover {
   text-decoration: none;
  }
+
+
 
 .card-header-custom {
   position: relative;

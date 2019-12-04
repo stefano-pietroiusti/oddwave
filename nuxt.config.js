@@ -124,13 +124,15 @@ export default {
   loading: { color: '#fff' },
   css: [
     '@/assets/scss/custom.scss'
+    // 'swiper/dist/css/swiper.css'
   ],
   plugins: [
     '~/plugins/fontawesome.js',
     '~/plugins/jsonld',
     { src: '~/plugins/vue-notifications', mode: 'client' },
     { src: '~/plugins/lax.js', mode: 'client' },
-    { src: '~/plugins/vue-fb-customer-chat', mode: 'client' }
+    { src: '~/plugins/vue-fb-customer-chat', mode: 'client' },
+    { src: '~/plugins/vue-swiper', mode: 'client' }
   ],
   devModules: [
     '@nuxtjs/eslint-module'

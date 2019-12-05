@@ -3,16 +3,12 @@
   <b-container fluid class="w-100 mx-auto text-center">
     <b-row>
       <b-card-group deck>
-        <!-- <b-col
-          v-for="(item, i) in features"
-          :key="i"
-        > -->
         <b-card
           v-for="(item, i) in features"
           :key="i"
 
           no-body
-          class="card servicesCard"
+          class="card"
         >
           <b-card-body>
             <span :text="item.header" v-html="item.image" />
@@ -24,7 +20,6 @@
             </div>
           </b-card-body>
         </b-card>
-        <!-- </b-col> -->
       </b-card-group>
     </b-row>
   </b-container>

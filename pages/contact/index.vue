@@ -1,22 +1,25 @@
 <template>
   <div id="contactMainContainer">
     <Nav id="navbar" class="container-fluid" :ptheme="theme" />
-    <!-- <b-container
+    <b-container
       fluid
       :style="gradient"
       class="contactBackground text-medium align-items-center text-center"
     >
-      <p class="watermark">
-        Pro Websites SEO Digital Marketing Google Ads Data Analysis
-      </p>
-    </b-container> -->
-    <AnimeBannerWordsHeaderComponent
+      <p class="watermark" />
+    </b-container>
+    <!-- <AnimeBannerWordsHeaderComponent
       pid="contact"
       :pheader="animeheader"
       :pbgimage="backgroundImage"
       :pstyle="style"
+    /> -->
+
+    <HeaderComponent
+      pheader="Contact Us"
+      :psubheader="animeheader"
+      pcontainerclass="text-center mt-10 borderLeft"
     />
-    <HeaderComponent :pheader="header" class="text-center" />
     <ContactForm :pservices="servicesDropDown" :pbgimage="backgroundImage" :pstyle="style" />
     <!-- <b-container fluid class="text-primary text-medium w-100 text-left m-0 p-0">
       <AnimeBannerWordsHeaderComponent
@@ -33,13 +36,13 @@
 <script>
 import { mapGetters } from 'vuex'
 import Nav from '@/components/Nav'
-import AnimeBannerWordsHeaderComponent from '@/components/AnimeBannerWordsHeaderComponent'
+// import AnimeBannerWordsHeaderComponent from '@/components/AnimeBannerWordsHeaderComponent'
 import HeaderComponent from '@/components/HeaderComponent'
 import ContactForm from '@/components/ContactForm'
 export default {
   components: {
     Nav,
-    AnimeBannerWordsHeaderComponent,
+    // AnimeBannerWordsHeaderComponent,
     HeaderComponent,
     ContactForm
   },
@@ -127,7 +130,8 @@ export default {
         backgroundPosition: 'left',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'contain',
-        textTransform: 'uppercase'
+        textTransform: 'uppercase',
+        opacity: 0.05
       }
     }
   },

@@ -8,7 +8,7 @@
           {{ product.name }}
         </p>
       </b-container>
-    </b-container> -->
+    </b-container>-->
 
     <div id="productsContainer" class="text-center w-100">
       <!-- <AnimeBannerWordsHeaderComponent
@@ -23,39 +23,46 @@
         :psubheader="product.description"
         pcontainerclass="mt-10 borderLeft"
       />
-
-      <!-- <p class="text-primary">
-        {{ product.description }}
-      </p>-->
-      <p v-if="product.price" class="text-primary text-large">
-        <span class="text-success text-large">${{ product.price }}</span> NZD + GST
-      </p>
-      <p v-if="product.price" class="text-primary">
-        {{ product.paymentPlan }}
-      </p>
-      <b-container
-        v-if="product.features.length > 0"
-        class="productContainer bg-primary text-primary text-left"
-      >
-        <b-list-group
-          v-for="(item, i) in product.features"
-          :key="i"
-          flush
-          class="bg-primary text-secondary"
-        >
-          <b-list-group-item class="bg-primary text-secondary">
-            <font-awesome-icon :icon="['fas', 'check']" :class="`fa fa-small text-success`" />
-            &nbsp;{{ item.header }}
-            <span v-if="item.text" class="text-small">({{ item.text }})</span>
-          </b-list-group-item>
-        </b-list-group>
-      </b-container>
-
+      <!-- <span v-if="product.features.length > 0"> -->
+      <b-card no-body class="text-white bg-primary h-100 cardMedium">
+        <b-card-body>
+          <h2 v-if="product.price">
+            <span class="text-large">${{ product.price }}</span>
+          </h2>
+          <b-card-text>{{ product.paymentPlan }}</b-card-text>
+          <b-list-group v-for="(feature, fi) in product.features.slice(0, 5)" :key="fi" flush>
+            <b-list-group-item class="text-white text-left text-small bg-primary">
+              <b-card-text>
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      style="fill: #ffffff;"
+                      d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"
+                    />
+                  </svg>
+                </span>
+                {{ feature.header }}
+                <span v-if="feature.text" class="text-small">({{ feature.text }})</span>
+              </b-card-text>
+            </b-list-group-item>
+          </b-list-group>
+        </b-card-body>
+      </b-card>
+      <!-- </span>
+      <span v-else>
+        <h2 v-if="product.price">
+          <span class="text-large">${{ product.price }}</span>
+        </h2>
+      </span> -->
       <SectionContactComponent
         pheader="What can we do for you?"
         class="align-self-center services"
       />
-
       <!-- <ServicesRelatedComponent v-if="otherServices" :services="otherServices" /> -->
     </div>
   </div>

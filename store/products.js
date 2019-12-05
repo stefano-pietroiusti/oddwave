@@ -403,7 +403,7 @@ export const state = () => ({
         //   icon: ['fas', 'check']
         // }
       ],
-      price: { value: 80, unit: 'hour', discount: 0 },
+      price: { value: 90, unit: 'hour', discount: 0 },
       isFeatured: false,
       isFeaturedOrder: 5,
       relatedServices: ['contracting-nz'],
@@ -433,15 +433,15 @@ export const getters = {
     })
   },
   getPrice: state => (price, discount) => {
-    const totalPrice = (Math.round(price * (1 - discount)) * 100) / 100
+    const gstRate = 0.15
+    const totalPrice = (Math.round(price * (1 - discount) * (1 + gstRate)) * 100) / 100
     return totalPrice
   },
   getPaymentPlan: state => (price) => {
-    const gstRate = 0.15
     const depositRate = price <= 500 ? 0.50 : 0.30
     const interestRate = 0.02
     const frequency = price <= 500 ? 0 : (price < 1000 ? 2 : 5)
-    const total = price * (1 + gstRate)
+    const total = price
     const depositBalance = Math.round((total * depositRate) * 100) / 100
     const remainingBalance = total * (1 - depositRate)
     const frequencyPayment = price <= 500 ? ((Math.round(total) * 100) / 100) : Math.round(((remainingBalance * (1 + interestRate)) / frequency) * 100) / 100

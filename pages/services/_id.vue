@@ -130,8 +130,8 @@ import lax from 'lax.js'
 import { mapGetters } from 'vuex'
 import Nav from '@/components/Nav'
 import HeaderComponent from '@/components/HeaderComponent'
-// import ButtonComponent from '@/components/ButtonComponent'
 import TextImageComponent from '@/components/TextImageComponent'
+// import ButtonComponent from '@/components/ButtonComponent'
 // import AnimeBannerWordsHeaderComponent from '@/components/AnimeBannerWordsHeaderComponent'
 // import CarouselComponent from '@/components/CarouselComponent'
 // import PromoComponent from '@/components/PromoComponent'
@@ -146,8 +146,8 @@ export default {
   components: {
     Nav,
     HeaderComponent,
-    // ButtonComponent,
     TextImageComponent,
+    // ButtonComponent,
     // AnimeBannerWordsHeaderComponent,
     // CarouselComponent,
     // PromoComponent,

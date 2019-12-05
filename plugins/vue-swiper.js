@@ -5,14 +5,10 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/css/swiper.css'
 
 const options = {
-  loop: true,
+  loop: false,
   slidesPerView: 'auto',
   spaceBetween: 0,
   centeredSlides: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false
-  },
   pagination: {
     el: '.swiper-pagination',
     clickable: true,

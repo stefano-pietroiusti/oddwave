@@ -1,14 +1,10 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
-  <b-container fluid class="w-75 mx-auto text-center">
+  <b-container fluid class="mx-auto text-center bg-white">
     <swiper :options="swiperOption" class="swiper-container mx-auto">
       <swiper-slide v-for="(item, i) in products" :key="i" class="swiper-slide">
-        <nuxt-link
-          :to="`/contact/`"
-          :title="`${item.header}`"
-          class="productLink"
-        >
-          <b-card no-body class="cardMedium text-white bg-primary">
+        <nuxt-link :to="`/contact/`" :title="`${item.header}`" class="productLink">
+          <b-card no-body class="text-white bg-primary h-100 cardMedium">
             <b-card-body>
               <h2 v-if="item.price" class="text-medium">
                 {{ item.header }}
@@ -86,13 +82,27 @@ export default {
   data () {
     return {
       swiperOption: {
+        // centeredSlides: true,
+        direction: 'horizontal',
         loop: true,
-        slidesPerView: 'auto',
+        autoplay: {
+          delay: 10000,
+          disableOnInteraction: false
+        },
+        slidesPerView: 3,
         slidesPerGroup: 1,
-        spaceBetween: 0,
-        centeredSlides: true,
+        loopadditionalslides: 0,
+        spaceBetween: 5,
         mousewheel: true,
-        // loopFillGroupWithBlank: true,
+        loopFillGroupWithBlank: true,
+        effect: 'coverflow',
+        coverflowEffect: {
+          // rotate: 60,
+          // slideShadows: false,
+          depth: 3
+          // stretch: -50
+
+        },
         pagination: {
           el: '.swiper-pagination',
           clickable: true
@@ -100,6 +110,18 @@ export default {
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev'
+        },
+        breakpoints: {
+          991: {
+            slidesPerView: 1,
+            slidesOffsetBefore: 1,
+            spaceBetween: 5
+          },
+          1199: {
+            slidesPerView: 3,
+            slidesOffsetBefore: 0,
+            spaceBetween: 5
+          }
         }
       }
     }
@@ -112,9 +134,13 @@ export default {
   min-height: 100%;
 }
 .swiper-slide {
-  min-height: 100%;
-    max-height: 100%;
-  width: 100%;
+  display: inline-block;
+  // align-content: center;
+  // align-items: center;
+  // align-self: center;
+  align-self: stretch;
+  width: auto;
+  height: auto !important;
   background: #fff;
   border: #000;
   /* Center slide text vertically */
@@ -130,5 +156,26 @@ export default {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 60px;
+  height: 60px;
+  background: white;
+  border: 2px solid grey;
+  color: grey;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 60px;
+  z-index: 9999;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: white;
+  border: 2px solid black;
+  color: black;
 }
 </style>

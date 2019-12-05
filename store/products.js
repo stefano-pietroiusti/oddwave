@@ -64,7 +64,7 @@ export const state = () => ({
       isFeatured: false,
       isFeaturedOrder: 0,
       relatedServices: ['web-design-nz'],
-      price: { value: 648, unit: 'package', discount: 0.3, flexible: true },
+      price: { value: 648, unit: 'package', discount: 0, flexible: true },
       keywords: [...commonKeywords, 'photography website package', 'photographer website']
     },
     {
@@ -132,7 +132,7 @@ export const state = () => ({
       isFeatured: true,
       isFeaturedOrder: 0,
       relatedServices: ['web-design-nz'],
-      price: { value: 648, unit: 'package', discount: 0.25, flexible: true },
+      price: { value: 648, unit: 'package', discount: 0, flexible: true },
       keywords: [...commonKeywords, 'business website package', 'custom website', 'landing page', 'products website', 'services website', 'website with contact form']
     },
     {
@@ -211,7 +211,7 @@ export const state = () => ({
       isFeatured: true,
       isFeaturedOrder: 0,
       relatedServices: ['web-design-nz'],
-      price: { value: 1950, unit: 'package', discount: 0.2, flexible: true },
+      price: { value: 1950, unit: 'package', discount: 0, flexible: true },
       keywords: [...commonKeywords, 'business website package', 'custom website', 'landing page', 'products website', 'services website', 'website with contact form']
     },
     // {
@@ -271,7 +271,7 @@ export const state = () => ({
         }
       ],
       price: { value: 130, unit: 'package', discount: 0, flexible: true },
-      isFeatured: false,
+      isFeatured: true,
       isFeaturedOrder: 3,
       relatedServices: ['seo-nz'],
       keywords: [...commonKeywords, 'seo package A']
@@ -341,9 +341,9 @@ export const state = () => ({
       image: 'photography.jpg',
       features: [
       ],
-      isFeatured: false,
+      isFeatured: true,
       isFeaturedOrder: 5,
-      price: { value: 270, unit: 'package', discount: 0.20 },
+      price: { value: 270, unit: 'package', discount: 0.0 },
       relatedServices: ['photographer-nz'],
       keywords: [...commonKeywords, 'photography package']
     },
@@ -359,7 +359,7 @@ export const state = () => ({
 
       features: [
       ],
-      price: { value: 680, unit: 'package', discount: 0.20 },
+      price: { value: 680, unit: 'package', discount: 0.0 },
       relatedServices: ['photographer-nz'],
       keywords: [...commonKeywords, 'photography maxi package']
     },
@@ -403,7 +403,7 @@ export const state = () => ({
         //   icon: ['fas', 'check']
         // }
       ],
-      price: { value: 120, unit: 'hour', discount: 0.25 },
+      price: { value: 80, unit: 'hour', discount: 0 },
       isFeatured: false,
       isFeaturedOrder: 5,
       relatedServices: ['contracting-nz'],

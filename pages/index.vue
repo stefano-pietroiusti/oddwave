@@ -33,14 +33,8 @@
     <p id="whyussection" class="p-3" />
     <WhyUsComponent
       pheader="Why Us?"
-      class="align-self-center whyus bgsteelblue"
+      class="align-self-center whyus bgsteelblue "
       :pfeatures="client.features"
-    />
-
-    <SectionContactComponent
-      pheader="What can we do for you?"
-      :pcontent="client.businessvalue"
-      class="align-self-center services"
     />
 
     <!-- <TextImageComponent
@@ -95,6 +89,11 @@
     </span> -->
 
     <SliderComponent :products="featuredProducts" />
+    <SectionContactComponent
+      pheader="What can we do for you?"
+      :pcontent="client.businessvalue"
+      class="align-self-center services"
+    />
   </b-container>
 </template>
 

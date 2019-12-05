@@ -2,13 +2,13 @@
 <template>
   <div id="productsMainContainer">
     <Nav id="navbar" class="container-fluid" :ptheme="theme" />
-    <b-container id="productsBackground">
+    <!-- <b-container id="productsBackground">
       <b-container id="productsTextBackground">
         <p class="watermark">
           {{ product.name }}
         </p>
       </b-container>
-    </b-container>
+    </b-container> -->
 
     <div id="productsContainer" class="text-center w-100">
       <!-- <AnimeBannerWordsHeaderComponent
@@ -18,12 +18,12 @@
         :pid="service.id"
         :panimation="service.animate"
       />-->
-
       <HeaderComponent
         :pheader="product.name"
-        :psubtitle="product.description"
-        :pstyle="{ bgStyle: 'text-secondary text-center' }"
+        :psubheader="product.description"
+        pcontainerclass="mt-10 borderLeft"
       />
+
       <!-- <p class="text-primary">
         {{ product.description }}
       </p>-->
@@ -50,11 +50,10 @@
           </b-list-group-item>
         </b-list-group>
       </b-container>
-      <ButtonComponent
-        btext="Get started"
-        blink="/contact/"
-        :pvariant="`outline-black`"
-        class="text-center"
+
+      <SectionContactComponent
+        pheader="What can we do for you?"
+        class="align-self-center services"
       />
 
       <!-- <ServicesRelatedComponent v-if="otherServices" :services="otherServices" /> -->
@@ -67,13 +66,14 @@ import lax from 'lax.js'
 import { mapGetters } from 'vuex'
 import Nav from '@/components/Nav'
 import HeaderComponent from '@/components/HeaderComponent'
-import ButtonComponent from '@/components/ButtonComponent'
-
+// import ButtonComponent from '@/components/ButtonComponent'
+import SectionContactComponent from '@/components/SectionContactComponent'
 export default {
   components: {
     Nav,
     HeaderComponent,
-    ButtonComponent
+    // ButtonComponent,
+    SectionContactComponent
   },
   head () {
     let content = `${process.env.baseUrl}${this.$route.path}`

@@ -2,58 +2,53 @@
 <template>
   <b-container fluid class="w-100 mx-auto text-center">
     <b-row>
-      <b-col
-        v-for="(item, i) in services"
-        :key="i"
-      >
-        <nuxt-link
-          :to="`/services/${item.id}/`"
-          :title="`${item.subheader}`"
+      <b-card-group deck>
+        <!-- <b-col
+          v-for="(item, i) in features"
+          :key="i"
+        > -->
+        <b-card
+          v-for="(item, i) in features"
+          :key="i"
+
+          no-body
+          class="card servicesCard"
         >
-          <b-card no-body class="cardSmall servicesCard">
-            <b-card-body>
-              <span :text="item.landing.header" v-html="item.image" />
-              <b-card-text>
-                <span class="text-small">{{ item.landing.header }}</span>
-              </b-card-text>
-              <div class="card-text">
-                {{ item.text }}
-              </div>
-            </b-card-body>
-          </b-card>
-        </nuxt-link>
-      </b-col>
+          <b-card-body>
+            <span :text="item.header" v-html="item.image" />
+            <b-card-text>
+              <span class="text-medium">{{ item.header }}</span>
+            </b-card-text>
+            <div class="text-small">
+              {{ item.text }}
+            </div>
+          </b-card-body>
+        </b-card>
+        <!-- </b-col> -->
+      </b-card-group>
     </b-row>
   </b-container>
 </template>
 <script>
 export default {
   props: {
-    services: {
+    features: {
       type: Array,
       default () {
         return [
           {
-            id: 1,
-            header: 'SEO',
+            id: 'testing',
+            header: 'Continuous Testing',
             text:
               'Continuous testing and auditing for an A+ grade in Performance, Accessibility, Best Practices and SEO',
-            icon: ['fas', 'chart-line'],
-            landing: {
-              header: 'header',
-              content: 'text'
-            }
+            image: 'fa-phone'
           },
           {
-            id: 2,
+            id: 'vanilla',
             header: 'Vanilla Technology',
             text:
               'Take advantage of thoroughly tested, vanilla technologies to guuarantee a quick, lightweight website for all devices',
-            icon: ['fas', 'chart-line'],
-            landing: {
-              header: 'header',
-              content: 'text'
-            }
+            image: 'fa-envelope'
           }
         ]
       }

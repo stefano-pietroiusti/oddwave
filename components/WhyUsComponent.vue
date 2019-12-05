@@ -2,13 +2,13 @@
 <template>
   <b-container fluid>
     <b-row>
-      <b-col lg="2" />
-      <b-col lg="8" class="p-5 align-items-center text-larger">
+      <b-col sm="12" md="12" lg="2" />
+      <b-col sm="12" md="12" lg="8" class="p-5 align-items-center text-larger">
         <h2 class="sectionHeader">
           {{ header }}
         </h2>
       </b-col>
-      <b-col lg="2" />
+      <b-col sm="12" md="12" lg="2" />
     </b-row>
     <b-row>
       <b-col
@@ -22,12 +22,20 @@
       >
         <b-card no-body class="cardLarge">
           <b-card-body>
-            <div class="card-header-custom" :style="`background: transparent url('${ item.image }') 0% 0% no-repeat padding-box;`">
-              <div class="card-header-text">
+            <div
+              class="card-header-custom clearfix"
+              :style="`background: transparent url('${ item.image }') 0% 0% no-repeat padding-box;`"
+            >
+              <div class="card-header-text clearfix">
                 {{ item.header }}
               </div>
             </div>
-            <div class="card-text">
+            <div
+              style="width: 100%; height: 50px; float:left; display:inline-block"
+              class="clearfix"
+            />
+
+            <div class="card-text clearfix">
               {{ item.text }}
             </div>
           </b-card-body>
@@ -102,21 +110,4 @@ export default {
 }
 </script>
 <style scoped>
-.sectionHeader {
-  font-weight: 600;
-  display: inline-block;
-  padding-bottom: 5px;
-  position: relative;
-  color: #00c3ff;
-}
-
-.sectionHeader:before {
-  content: '';
-  position: absolute;
-  width: 30%;
-  height: 5px;
-  bottom: 0;
-  left: 25%;
-  border-bottom: 5px solid #00c3ff;
-}
 </style>

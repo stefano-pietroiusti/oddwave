@@ -1,23 +1,21 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
-  <b-container fluid>
+  <b-container fluid class="pt-7">
     <b-row>
-      <b-col lg="2" />
-      <b-col lg="8" class="pt-5 align-items-center text-larger">
+      <!-- <b-col xs="12" sm="12" md="12" lg="2" /> -->
+      <b-col xs="12" sm="12" md="12" lg="12" class="px-5 align-items-center text-larger">
         <h2>{{ header }}</h2>
       </b-col>
-      <b-col lg="2" />
     </b-row>
     <b-row>
-      <b-col lg="2" />
-      <b-col lg="8" class="p-3">
+      <!-- <b-col lg="2" /> -->
+      <b-col lg="12" class="px-lg-10">
         <span class="text-medium" v-html="content" />
       </b-col>
-      <b-col lg="2" />
     </b-row>
     <b-row>
       <b-col lg="2" />
-      <b-col lg="8" class="p-5 align-items-center  text-medium">
+      <b-col lg="8" class="p-5 align-items-center text-medium">
         <b-button
           pill
           variant="red"
@@ -27,7 +25,6 @@
           Get in Touch
         </b-button>
       </b-col>
-      <b-col lg="2" />
     </b-row>
   </b-container>
 </template>

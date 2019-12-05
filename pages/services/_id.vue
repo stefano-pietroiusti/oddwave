@@ -3,27 +3,31 @@
   <div id="servicesMainContainer">
     <Nav id="navbar" class="container-fluid" :ptheme="theme" />
     <!-- <Nav class="container-fluid bg-secondary text-primary" /> -->
-    <b-container id="servicesBackground">
+    <!-- <b-container id="servicesBackground">
       <b-container id="servicesTextBackground">
         <p class="watermark">
           {{ service.title }}
         </p>
       </b-container>
-    </b-container>
+    </b-container>-->
 
     <div id="servicesContainer" class="text-center w-100">
-      <AnimeBannerWordsHeaderComponent
+      <HeaderComponent
+        :pheader="service.header"
+        :psubheader="service.subheader"
+        pcontainerclass="mt-10 borderLeft"
+      />
+
+      <!-- <AnimeBannerWordsHeaderComponent
         :pheader="service.subheader"
         :pbgimage="service.backgroundImage"
         :variant="service.variant"
         :pid="service.id"
         :panimation="service.animate"
-      />
-
-      <HeaderComponent :pheader="service.header" :pstyle="service.headerStyle" />
+      />-->
 
       <span v-if="service.features">
-        <PromoComponent :features="service.features" variant="primary" />
+        <FeaturesComponent :features="service.features" variant="black" />
         <!-- <ButtonComponent btext="Chat about this" blink="/contact/" :pvariant="`outline-black`" /> -->
       </span>
 
@@ -31,32 +35,25 @@
         v-for="(item,i) in service.content"
         :key="i"
         :pcontent="{header: item.header, text: item.text, list: item.list, bgImage: item.bgImage, inlineImage: item.inlineImage, inlineImageText: item.inlineImageText, inlineImageRight: item.inlineImageRight }"
-        :pstyle="(item.dark) ? { bgStyle: 'parralaxNormal w-100 text-secondary text-left  px-3 p-2', inlineImageStyle: item.inlineImageStyle} : { bgStyle: 'parralaxNormal w-100 text-primary text-left  px-3  p-2', inlineImageStyle: item.inlineImageStyle}"
+        :pstyle="(item.dark) ? { bgStyle: 'parralaxNormal w-100 text-secondary text-left  px-3 p-2', inlineImageStyle: item.inlineImageStyle} : { bgStyle: 'parralaxNormal w-100 text-black text-left  px-3  p-2', inlineImageStyle: item.inlineImageStyle}"
       />
       <HeaderComponent
         v-if="featuredProducts.length > 0"
         psubheader="Featured Packages"
+        psubheaderclass="sectionHeaderPrimary"
         psubtitle="Flexi payment plans available. Charges for travel outside of Auckland may be applicable following initial consultation."
         pclass="text-center"
       />
-      <span v-for="item in featuredProducts" :key="item.id">
+      <!-- <span v-for="item in featuredProducts" :key="item.id">
         <ProductComponent :product="item" :summary="true" />
         <hr fluid class="hrprimary">
-      </span>
-
-      <!-- <div
-        v-if="service.slides"
-        id="carousel"
-        class="lax w-75"
-        data-lax-preset="zoomInOut"
-      >
-        <CarouselComponent :carousel-id="carouselId" :pslides="service.slides" />
-      </div>-->
+      </span>-->
+      <SliderComponent :products="featuredProducts" />
 
       <b-container v-if="service.slides" fluid class="w-100">
         <b-row>
           <b-col sm="12" md="12" lg="12" xl="12">
-            <HeaderComponent psubheader="Featured Instagram Photos" />
+            <HeaderComponent psubheader="Portfolio" pclass="sectionHeaderPrimary" />
           </b-col>
         </b-row>
         <b-row no-gutters>
@@ -96,19 +93,32 @@
     </div></span>
       </b-container>-->
 
-      <HeaderComponent
+      <!-- <HeaderComponent
         :psubheader="service.marketing.header + ' TO ' + service.marketing.subheader"
         :pstyle="service.subheaderStyle"
-      />
+      /> -->
 
-      <ButtonComponent
+      <!-- <ButtonComponent
         btext="Get started"
         blink="/contact/"
         :pvariant="`outline-black`"
         class="text-center"
+      /> -->
+
+      <!-- <ServicesRelatedComponent v-if="otherServices" :services="otherServices" /> -->
+
+      <SectionContactComponent
+        pheader="What can we do for you?"
+        :pcontent="service.businessvalue"
+        class="align-self-center services"
       />
 
-      <ServicesRelatedComponent v-if="otherServices" :services="otherServices" />
+      <HeaderComponent
+        psubheader="Related Services"
+        pclass="sectionHeaderPrimary"
+        pcontainerclass="m-0 p-0"
+      />
+      <ServicesLinksComponent :services="otherServices" />
 
       <!--  <D3Cloud :pwordcloud="service.cloud" />-->
     </div>
@@ -117,29 +127,36 @@
 
 <script>
 import lax from 'lax.js'
-
 import { mapGetters } from 'vuex'
 import Nav from '@/components/Nav'
 import HeaderComponent from '@/components/HeaderComponent'
-import ButtonComponent from '@/components/ButtonComponent'
+// import ButtonComponent from '@/components/ButtonComponent'
 import TextImageComponent from '@/components/TextImageComponent'
-import AnimeBannerWordsHeaderComponent from '@/components/AnimeBannerWordsHeaderComponent'
+// import AnimeBannerWordsHeaderComponent from '@/components/AnimeBannerWordsHeaderComponent'
 // import CarouselComponent from '@/components/CarouselComponent'
-import PromoComponent from '@/components/PromoComponent'
-import ProductComponent from '@/components/ProductComponent'
-import ServicesRelatedComponent from '@/components/ServicesRelatedComponent'
+// import PromoComponent from '@/components/PromoComponent'
+// import ProductComponent from '@/components/ProductComponent'
+// import ServicesRelatedComponent from '@/components/ServicesRelatedComponent'
+import SliderComponent from '@/components/SliderComponent'
+import ServicesLinksComponent from '@/components/ServicesLinksComponent'
+import SectionContactComponent from '@/components/SectionContactComponent'
+import FeaturesComponent from '@/components/FeaturesComponent'
 
 export default {
   components: {
     Nav,
     HeaderComponent,
-    ButtonComponent,
+    // ButtonComponent,
     TextImageComponent,
-    AnimeBannerWordsHeaderComponent,
+    // AnimeBannerWordsHeaderComponent,
     // CarouselComponent,
-    PromoComponent,
-    ProductComponent,
-    ServicesRelatedComponent
+    // PromoComponent,
+    // ProductComponent,
+    // ServicesRelatedComponent,
+    SliderComponent,
+    ServicesLinksComponent,
+    SectionContactComponent,
+    FeaturesComponent
   },
   head () {
     let content = `${process.env.baseUrl}${this.$route.path}`

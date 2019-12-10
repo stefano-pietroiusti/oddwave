@@ -3,10 +3,11 @@
     <h1 v-if="pheader" :class="`${pclass} ${pheaderclass} text-left`">
       {{ pheader }}
     </h1>
-    <h2 v-if="psubheader" :class="`${pclass} ${psubheaderclass} text-left animated ${animation}`">
+    <!-- <h2 v-if="psubheader" :class="`${pclass} ${psubheaderclass} text-left animated ${animation}`"> -->
+    <h2 v-if="psubheader" :class="`${pclass} ${psubheaderclass} text-left`">
       {{ psubheader }}
     </h2>
-    <h3 v-if="psubtitle" :class="`${pclass} ${psubtitleclass}text-left animated ${animation}`">
+    <h3 v-if="psubtitle" :class="`${pclass} ${psubtitleclass}text-left`">
       {{ psubtitle }}
     </h3>
   </b-container>

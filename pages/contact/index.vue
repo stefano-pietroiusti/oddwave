@@ -17,7 +17,6 @@
 
     <HeaderComponent
       pheader="Contact Us"
-      :psubheader="animeheader"
       pcontainerclass="text-center mt-10 borderLeft"
     />
     <ContactForm :pservices="servicesDropDown" :pbgimage="backgroundImage" :pstyle="style" />
@@ -31,6 +30,12 @@
       <HeaderComponent :pheader="header" />
       <ContactForm :pservices="servicesDropDown" :pbgimage="backgroundImage" :pstyle="style" />
     </b-container>-->
+    <p id="whyussection" class="p-3" />
+    <WhyUsComponent
+      pheader="Why Us?"
+      class="align-self-center whyus bgsteelblue "
+      :pfeatures="features"
+    />
   </div>
 </template>
 <script>
@@ -39,12 +44,14 @@ import Nav from '@/components/Nav'
 // import AnimeBannerWordsHeaderComponent from '@/components/AnimeBannerWordsHeaderComponent'
 import HeaderComponent from '@/components/HeaderComponent'
 import ContactForm from '@/components/ContactForm'
+import WhyUsComponent from '@/components/WhyUsComponent'
 export default {
   components: {
     Nav,
     // AnimeBannerWordsHeaderComponent,
     HeaderComponent,
-    ContactForm
+    ContactForm,
+    WhyUsComponent
   },
   head () {
     let content = `${process.env.baseUrl}${this.$route.path}`
@@ -107,11 +114,15 @@ export default {
   },
   computed: {
     ...mapGetters('services', ['summaries']),
-    ...mapGetters('client', ['getClient']),
+    ...mapGetters('client', ['getClientFeatures']),
     servicesDropDown () {
       return this.summaries.map((item) => {
         return { value: item.id, text: item.title, selected: true }
       })
+    },
+    features () {
+      // return this.getServiceFeatures(this.id) || this.getClientFeatures
+      return this.getClientFeatures
     },
     bannerImagePath () {
       if (!this.backgroundurl) {

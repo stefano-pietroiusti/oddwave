@@ -10,7 +10,7 @@
         class="logo"
       >
     </b-navbar-brand>
-    <div id="content-mobile">
+    <!-- <div id="content-mobile">
       <a :href="`tel:${callAction.telephone}`" :title="`Call us: ${callAction.telephone}`">
         <font-awesome-icon
           :icon="['fas', 'phone']"
@@ -23,7 +23,7 @@
           :class="`fa fa-medium fa-hover pl-2 ml-2 ${color}`"
         />
       </a>
-    </div>
+    </div> -->
     <b-navbar-toggle target="nav-collapse" class="custom-toggler" />
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav role="navigation">
@@ -85,7 +85,7 @@
           <b-button
             pill
             variant="rwcblue"
-            href="/#whyussection"
+            href="#whyussection"
             class="px-3 whyusbutton justify-content-center animated pulse delay-1s text-white text-medium"
           >
             Why Us?
@@ -150,7 +150,7 @@ export default {
         : require(`~/assets/logos/oddwave-light.png`)
     },
     color () {
-      return this.ptheme === 'theoddwave' ? 'text-white' : 'text-black'
+      return (this.ptheme === 'theoddwave' || this.ptheme === 'contact') ? 'text-white' : 'text-black'
     },
     theme () {
       return this.ptheme

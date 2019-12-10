@@ -163,5 +163,8 @@ export const getters = {
   getClient: (state) => {
     const client = state.client
     return client
+  },
+  getClientFeatures: (state) => {
+    return state.client.features
   }
 }

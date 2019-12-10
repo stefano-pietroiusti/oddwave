@@ -389,7 +389,7 @@ export const state = () => ({
       keywords: [...commonKeywords, 'film photography package']
     },
     {
-      id: 'contracting-nz',
+      id: 'creating-solutions-nz',
       icon: ['fab', 'dev'],
       variant: 'rwcgreen',
       title: 'Software Development | IT Specialists in Cloud Web Data Search',
@@ -475,6 +475,7 @@ export const getters = {
       subheader: item.subheader,
       image: item.image,
       features: item.features,
+      relatedService: item.relatedServices[0],
       price: getters.getPrice(item.price.value, item.price.discount),
       priceCurrency: 'NZD',
       paymentPlan: item.price.flexible ? getters.getPaymentPlan(getters.getPrice(item.price.value, item.price.discount)) : undefined,

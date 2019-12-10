@@ -36,6 +36,9 @@
                   <span>{{ feature.header }}</span>
                 </b-list-group-item>
               </b-list-group>
+              <b-card-text class="text-small">
+                <ButtonComponent />
+              </b-card-text>
             </b-card-body>
           </b-card>
         </nuxt-link>
@@ -47,7 +50,12 @@
   </b-container>
 </template>
 <script>
+import ButtonComponent from '@/components/ButtonComponent'
+
 export default {
+  components: {
+    ButtonComponent
+  },
   props: {
     products: {
       type: Array,
@@ -93,7 +101,7 @@ export default {
         slidesPerGroup: 1,
         loopadditionalslides: 0,
         spaceBetween: 5,
-        mousewheel: true,
+        mousewheel: false,
         loopFillGroupWithBlank: true,
         effect: 'coverflow',
         coverflowEffect: {

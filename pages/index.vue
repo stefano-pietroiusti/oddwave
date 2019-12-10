@@ -8,7 +8,7 @@
       </div>
     </div> -->
 
-    <b-container fluid class="m-0 p-0" :style="gradient">
+    <b-container fluid class="m-0 p-0 clip-svg-inline" :style="gradient">
       <Nav id="navbar" class="container-fluid" :ptheme="theme" />
       <div class="module resetFilter" style="top:20%;">
         <div class="module-inside resetFilter" style="min-height: 80vh;">
@@ -163,8 +163,8 @@ export default {
     return {
       backgroundurl: 'nz.svg',
       pbgimage: {
-        color1: 'rgba(0, 0, 0, 0.5) 0%',
-        color2: 'rgba(0, 0, 0, 0.5) 0%',
+        color1: 'rgba(0, 0, 0, 1) 50%',
+        color2: 'rgba(0, 0, 0, 0.8) 50%',
         url: 'laptop.jpg',
         height: '20vh'
       },
@@ -205,16 +205,6 @@ export default {
         telephone: this.client.telephone,
         openingHoursSpecification: this.client.openingHoursSpecification,
         priceRange: this.client.priceRange
-        // '@type': 'Organization',
-        // name: this.client.name,
-        // legalName: this.client.legalName,
-        // url: this.client.url,
-        // logo: this.client.logo,
-        // foundingDate: this.client.foundingDate,
-        // founders: this.client.founders,
-        // address: this.client.address,
-        // contactPoint: this.client.contactPoint,
-        // sameAs: this.client.sameAs
       }
     },
     bannerImagePath () {
@@ -231,10 +221,13 @@ export default {
       if (!this.pbgimage.url) {
         return
       }
-      const image1x = this.bannerImagePath['1']
-      const image2x = this.bannerImagePath['2']
+      // const image1x = this.bannerImagePath['1']
+      // const image2x = this.bannerImagePath['2']
+      const imagewebp = `/imgs/laptop-dark.webp`
+      const imagepng = `/imgs/laptop-dark-mobile.png`
       return {
-        backgroundImage: `linear-gradient(45deg,  ${this.pbgimage.color1}, ${this.pbgimage.color2}), url(${image1x}), -webkit-image-set(url(${image1x}) 1x, url(${image2x}) 2x)`,
+        // backgroundImage: `linear-gradient(45deg,  ${this.pbgimage.color1}, ${this.pbgimage.color2}), url(${image1x}), -webkit-image-set(url(${image1x}) 1x, url(${image2x}) 2x)`,
+        backgroundImage: `url(${imagewebp}), url(${imagepng}), linear-gradient(45deg,  ${this.pbgimage.color1}, ${this.pbgimage.color2})`,
         backgroundAttachment: 'fixed',
         height: '100vh',
         backgroundPosition: 'center',

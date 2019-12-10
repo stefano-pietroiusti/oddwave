@@ -18,17 +18,14 @@
         :pid="service.id"
         :panimation="service.animate"
       />-->
-      <HeaderComponent
-        :pheader="product.name"
-        :psubheader="product.description"
-        pcontainerclass="mt-10 borderLeft"
-      />
+      <HeaderComponent :pheader="product.name" pcontainerclass="mt-10 borderLeft" psubheaderclass="sectionHeaderPrimary" />
       <!-- <span v-if="product.features.length > 0"> -->
-      <b-card no-body class="text-white bg-primary h-100 cardMedium">
+      <b-card no-body class="text-white bg-primary h-100 cardMedium w-50">
         <b-card-body>
           <h2 v-if="product.price">
-            <span class="text-large">${{ product.price }}</span>
+            <span class="text-large price">${{ product.price }}</span>
           </h2>
+          <b-card-text>{{ product.description }}</b-card-text>
           <b-card-text>{{ product.paymentPlan }}</b-card-text>
           <b-list-group v-for="(feature, fi) in product.features.slice(0, 5)" :key="fi" flush>
             <b-list-group-item class="text-white text-left text-small bg-primary">
@@ -47,10 +44,16 @@
                   </svg>
                 </span>
                 {{ feature.header }}
-                <span v-if="feature.text" class="text-small">({{ feature.text }})</span>
+                <span
+                  v-if="feature.text"
+                  class="text-small"
+                >({{ feature.text }})</span>
               </b-card-text>
             </b-list-group-item>
           </b-list-group>
+          <b-card-text class="text-small">
+            <ButtonComponent />
+          </b-card-text>
         </b-card-body>
       </b-card>
       <!-- </span>
@@ -58,12 +61,17 @@
         <h2 v-if="product.price">
           <span class="text-large">${{ product.price }}</span>
         </h2>
-      </span> -->
+      </span>-->
       <SectionContactComponent
         pheader="What can we do for you?"
         class="align-self-center services"
       />
-      <!-- <ServicesRelatedComponent v-if="otherServices" :services="otherServices" /> -->
+      <p id="whyussection" class="p-3" />
+      <WhyUsComponent
+        pheader="Why Us?"
+        class="align-self-center whyus bgsteelblue"
+        :pfeatures="features"
+      />
     </div>
   </div>
 </template>
@@ -75,12 +83,16 @@ import Nav from '@/components/Nav'
 import HeaderComponent from '@/components/HeaderComponent'
 // import ButtonComponent from '@/components/ButtonComponent'
 import SectionContactComponent from '@/components/SectionContactComponent'
+import WhyUsComponent from '@/components/WhyUsComponent'
+import ButtonComponent from '@/components/ButtonComponent'
 export default {
   components: {
     Nav,
     HeaderComponent,
     // ButtonComponent,
-    SectionContactComponent
+    SectionContactComponent,
+    WhyUsComponent,
+    ButtonComponent
   },
   head () {
     let content = `${process.env.baseUrl}${this.$route.path}`
@@ -114,14 +126,19 @@ export default {
     }
   },
   computed: {
-    // ...mapGetters('services', ['getRelatedSummaries', 'getServiceById']),
     ...mapGetters('products', ['getProductById', 'getProductsById']),
+    ...mapGetters('client', ['getClientFeatures']),
+    ...mapGetters('services', ['getServiceFeatures']),
     product () {
       const product = this.getProductById(this.id)
       return product
     },
     imagePath () {
       return `${process.env.baseUrl}/imgs/${this.product.image}`
+    },
+    features () {
+      // return this.getServiceFeatures(this.product.relatedService) || this.getClientFeatures
+      return this.getClientFeatures
     }
     // otherServices () {
     //   return this.getRelatedSummaries(this.id)

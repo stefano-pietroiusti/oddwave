@@ -14,9 +14,14 @@
     <div id="servicesContainer" class="text-center w-100">
       <HeaderComponent
         :pheader="service.header"
-        :psubheader="service.subheader"
         pcontainerclass="mt-10 borderLeft"
       />
+
+      <!-- <HeaderComponent
+        :pheader="service.header"
+        :psubheader="service.subheader"
+        pcontainerclass="mt-10 borderLeft"
+      /> -->
 
       <!-- <AnimeBannerWordsHeaderComponent
         :pheader="service.subheader"
@@ -26,17 +31,25 @@
         :panimation="service.animate"
       />-->
 
-      <span v-if="service.features">
-        <FeaturesComponent :features="service.features" variant="black" />
-        <!-- <ButtonComponent btext="Chat about this" blink="/contact/" :pvariant="`outline-black`" /> -->
-      </span>
-
       <TextImageComponent
         v-for="(item,i) in service.content"
         :key="i"
         :pcontent="{header: item.header, text: item.text, list: item.list, bgImage: item.bgImage, inlineImage: item.inlineImage, inlineImageText: item.inlineImageText, inlineImageRight: item.inlineImageRight }"
         :pstyle="(item.dark) ? { bgStyle: 'parralaxNormal w-100 text-secondary text-left  px-3 p-2', inlineImageStyle: item.inlineImageStyle} : { bgStyle: 'parralaxNormal w-100 text-black text-left  px-3  p-2', inlineImageStyle: item.inlineImageStyle}"
       />
+
+      <HeaderComponent
+        v-if="service.features && service.features.length > 0"
+        :psubheader="service.subheader"
+        psubheaderclass="sectionHeaderPrimary"
+        pclass="text-center"
+      />
+
+      <span v-if="service.features">
+        <FeaturesComponent :features="service.features" variant="black" />
+        <!-- <ButtonComponent btext="Chat about this" blink="/contact/" :pvariant="`outline-black`" /> -->
+      </span>
+
       <HeaderComponent
         v-if="featuredProducts.length > 0"
         psubheader="Featured Packages"
@@ -112,15 +125,21 @@
         :pcontent="service.businessvalue"
         class="align-self-center services"
       />
+      <div class="m-0 pb-5 bgsteelblue">
+        <HeaderComponent
+          psubheader="Related Services"
+          pclass="sectionHeaderPrimary"
+          pcontainerclass="m-0 p-0"
+        />
+        <ServicesLinksComponent :services="otherServices" />
 
-      <HeaderComponent
-        psubheader="Related Services"
-        pclass="sectionHeaderPrimary"
-        pcontainerclass="m-0 p-0"
-      />
-      <ServicesLinksComponent :services="otherServices" />
-
-      <!--  <D3Cloud :pwordcloud="service.cloud" />-->
+        <p id="whyussection" class="p-3" />
+        <WhyUsComponent
+          pheader="Why Us?"
+          class="align-self-center whyus "
+          :pfeatures="features"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -141,6 +160,7 @@ import SliderComponent from '@/components/SliderComponent'
 import ServicesLinksComponent from '@/components/ServicesLinksComponent'
 import SectionContactComponent from '@/components/SectionContactComponent'
 import FeaturesComponent from '@/components/FeaturesComponent'
+import WhyUsComponent from '@/components/WhyUsComponent'
 
 export default {
   components: {
@@ -156,7 +176,8 @@ export default {
     SliderComponent,
     ServicesLinksComponent,
     SectionContactComponent,
-    FeaturesComponent
+    FeaturesComponent,
+    WhyUsComponent
   },
   head () {
     let content = `${process.env.baseUrl}${this.$route.path}`
@@ -195,8 +216,9 @@ export default {
     }
   },
   computed: {
-    ...mapGetters('services', ['getRelatedSummaries', 'getServiceById']),
+    ...mapGetters('services', ['getRelatedSummaries', 'getServiceById', 'getServiceFeatures']),
     ...mapGetters('products', ['getProductById', 'getProductsById']),
+    ...mapGetters('client', ['getClientFeatures']),
     service () {
       const service = this.getServiceById(this.id)
       service.enquire = 'Get in touch'
@@ -212,6 +234,10 @@ export default {
     },
     carouselId () {
       return `${this.id}`
+    },
+    features () {
+      // return this.getServiceFeatures(this.id) || this.getClientFeatures
+      return this.getClientFeatures
     }
   },
   mounted () {

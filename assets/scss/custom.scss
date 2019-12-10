@@ -135,7 +135,7 @@ $enable-validation-icons: true;
 // $font-family-varelaround: "Varela Round", sans-serif;
 $font-family-montserrat: "Montserrat", sans-serif;
 $font-family-lato: "Lato", sans-serif;
-$body-bg: $white;
+$body-bg: transparent;
 $body-color: $gunmetal;
 $font-family-base: $font-family-montserrat;
 $font-family-secondary: $font-family-montserrat;
@@ -244,18 +244,22 @@ h1 {
 
 .text-large {
   font-size: $calc_h1;
+  font-weight: normal;
 }
 
 .text-medium {
   font-size: $calc_h3;
+  font-weight: normal;
 }
 
 .text-mediumLarge {
   font-size: $calc_h2;
+  font-weight: normal;
 }
 
 .text-small {
   font-size: 1rem;
+  font-weight: normal;
 }
 
 h2 {
@@ -355,7 +359,9 @@ h6 {
   padding-right: 2em;
 }
 
-.contentHeader {border-left: 5px solid $rwcblue; padding-left: 5px; font-weight: bold;}
+.contentHeader {
+  // border-left: 5px solid $rwcblue; 
+font-weight: bold; color: $rwcblue;}
 
 .sectionHeader {
   font-weight: 600;
@@ -903,6 +909,18 @@ hr {
 .footerWaveClip {
   clip-path: url(#footerwave);
 }
+
+.clip-svg{
+  background-color: black;
+}
+
+.clip-svg-inline {
+  -webkit-clip-path: url(#clip-polygon);
+  clip-path: url(#clip-polygon);
+}
+
+
+
 /* Image filters */
 .contrast {
   -webkit-filter: contrast(180%);
@@ -943,7 +961,14 @@ hr {
 
 .bgsteelblue {
   background: rgba($color: #687fac, $alpha: 0.1);
+  // border-radius: 22px;
 }
+
+.bgreset {
+  background: none;
+  // border-radius: 22px;
+}
+
 .aboutus {
   font-size: 28px;
 }
@@ -1000,7 +1025,15 @@ hr {
   font-size: 1rem;
 }
 
+.price {
+  font-weight: normal;
+  }
 
+.col-form-label, .col-form-label-lg {
+  color: $rwcblue;
+  text-decoration: none;
+  text-transform: none;
+}
 
 .productLink {
  text-decoration: none;
@@ -1009,6 +1042,11 @@ hr {
   text-decoration: none;
  }
 
+ .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active, .open>.dropdown-toggle.btn-secondary {
+  color: #fff;
+  background: rgba(0, 0, 0, 1);
+  border-color: #000; /*set the color you want here*/
+}
 
 
 .card-header-custom {

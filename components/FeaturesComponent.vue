@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
-  <b-container fluid class="w-100 mx-auto text-center">
+  <b-container fluid class="w-100 mx-auto text-center p-5">
     <b-row>
       <b-card-group deck>
         <b-card
@@ -11,7 +11,7 @@
           class="card"
         >
           <b-card-body>
-            <span :text="item.header" v-html="item.image" />
+            <img v-if="item.image" :alt="item.header" :src="item.image">
             <b-card-text>
               <span class="text-medium">{{ item.header }}</span>
             </b-card-text>

@@ -56,25 +56,32 @@ export const state = () => ({
         {
           header: 'Modern Website Design',
           text: 'Our chosen web development technologies are modern, light-weight, efficient and future-proof resulting in websites that are quick, easy to support and scale.',
-          icon: ['fas', 'mobile-alt']
+          icon: ['fas', 'mobile-alt'],
+          image: '/imgs/best-web-design.svg'
         },
         {
           header: 'Professional Website Management',
           text:
             'We offer professional webmaster services to help you manage your website in trustworthy way.',
-          icon: ['fas', 'greater-than-equal']
+          icon: ['fas', 'greater-than-equal'],
+          image: '/imgs/best-web-design.svg'
+
         },
         {
           header: 'User-Content-Mobile Design Thinking',
           text:
             'User-Content-Mobile Design thinking for websites that are consistent and perform well for everyone.',
-          icon: ['fas', 'mobile-alt']
+          icon: ['fas', 'mobile-alt'],
+          image: '/imgs/best-web-design.svg'
+
         },
         {
           header: 'Vanilla Processes',
           text:
             'Website development from set standards, good practices and established open source frameworks. We use Vue.js, Vanilla Javascript, HTML, CSS and NodeJs. This gives us rapid application development, maximum flexibility, minimum complexity and continuous improvement.',
-          icon: ['fab', 'servicestack']
+          icon: ['fab', 'servicestack'],
+          image: '/imgs/best-web-design.svg'
+
         }
       ],
       price: { value: 2400, unit: 'package' },
@@ -308,25 +315,29 @@ export const state = () => ({
           header: 'Creative',
           text:
             'From black & white/ colour film photography to creative digital photography. Working together to capture the best of architecture, still-life, ideas, products, services, events/functions, loved ones, hobbies and sports.',
-          icon: ['fab', 'servicestack']
+          icon: ['fab', 'servicestack'],
+          image: '/imgs/creative-services.svg'
         },
         {
           header: 'Diverse',
           text:
             'A range of photography techniques are used to isolate, highlight and enhance ideas. ',
-          icon: ['fas', 'award']
+          icon: ['fas', 'award'],
+          image: '/imgs/diverse-services.svg'
         },
         {
           header: 'Flexible',
           text:
             'Photography from film and manual digital to high quality media, RAW & JPEG formats. Creative photography as a service where you hold the rights to your photos.',
-          icon: ['fab', 'servicestack']
+          icon: ['fab', 'servicestack'],
+          image: '/imgs/flexible-services.svg'
         },
         {
           header: 'Professional',
           text:
             'Professional goal-driven photography to help you get the results you need.',
-          icon: ['fas', 'greater-than-equal']
+          icon: ['fas', 'greater-than-equal'],
+          image: '/imgs/professional-services.svg'
         }
       ],
       relatedServices: ['web-design-nz'],
@@ -566,5 +577,8 @@ export const getters = {
   },
   total: (state) => {
     return state.all.length
+  },
+  getServiceFeatures: state => (id) => {
+    return state.all.find(service => service.id === id).features
   }
 }

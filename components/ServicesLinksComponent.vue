@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
-  <b-container fluid class="w-100 mx-auto text-center">
+  <b-container fluid>
     <b-row>
       <b-col
         v-for="(item, i) in services"

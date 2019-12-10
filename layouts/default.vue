@@ -35,8 +35,8 @@
     <Footer class="footerWaveClip" />
     <svg class="clip-svg" height="0" width="0">
       <defs>
-        <clipPath id="clip-polygon" clipPathUnits="objectBoundingBox">
-          <path d="M 0,0 0,1 C0.9,0.9 1,1  1,0 Z" />
+        <clipPath id="clip-wave" clipPathUnits="objectBoundingBox">
+          <path d="M0,0 1,0 1,.95 S0.9,0.85 0.6,.95 S0.05,0.85 0,.88Z" />
         </clipPath>
         <!-- <polygon points="0 1, 0 0, 1 0, 0.8 1" /> -->
         <!-- <polygon points="0 0, 1 0, 1 .9,.8 1,.3 .9, 0 1 Z" /> -->

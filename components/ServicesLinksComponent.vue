@@ -10,7 +10,7 @@
           :to="`/services/${item.id}/`"
           :title="`${item.subheader}`"
         >
-          <b-card no-body class="cardSmall servicesCard">
+          <b-card deck no-body class="cardSmall servicesCard">
             <b-card-body>
               <span :text="item.landing.header" v-html="item.image" />
               <b-card-text>

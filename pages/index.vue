@@ -1,5 +1,5 @@
 <template>
-  <b-container id="mainContainer" fluid class="text-left p-0 m-0">
+  <b-container id="mainContainer" fluid class="text-left p-0 m-0 bgsteelblue">
     <!-- <Nav id="navbar" class="container-fluid" :ptheme="theme" /> -->
     <!-- <b-container fluid class="headerModule rellaxImage comboFilter h-100" :style="gradient" />
     <div class="module resetFilter">
@@ -8,7 +8,7 @@
       </div>
     </div> -->
 
-    <b-container fluid class="m-0 p-0 clip-svg-inline" :style="gradient">
+    <b-container fluid class="m-0 p-0 clip-wave" :style="gradient">
       <Nav id="navbar" class="container-fluid" :ptheme="theme" />
       <div class="module resetFilter" style="top:20%;">
         <div class="module-inside resetFilter" style="min-height: 80vh;">
@@ -21,19 +21,19 @@
     <SectionComponent
       pheader="About Us"
       :pcontent="client.about"
-      class="align-self-center aboutus bgsteelblue"
+      class="align-self-center section"
     />
     <SectionComponent
       pheader="Services"
       :pcontent="client.services"
-      class="align-self-center services"
+      class="align-self-center section bg-white"
     />
-    <ServicesLinksComponent class="servicesComponent" :services="summaries" />
+    <ServicesLinksComponent class="bg-white pb-5 text-center" :services="summaries" />
 
     <p id="whyussection" class="p-3" />
     <WhyUsComponent
       pheader="Why Us?"
-      class="align-self-center whyus bgsteelblue "
+      class="align-self-center section"
       :pfeatures="client.features"
     />
 
@@ -92,7 +92,7 @@
     <SectionContactComponent
       pheader="What can we do for you?"
       :pcontent="client.businessvalue"
-      class="align-self-center services"
+      class="align-self-center services bg-white"
     />
   </b-container>
 </template>
@@ -356,10 +356,7 @@ export default {
   z-index: -2;
   opacity: 1;
 }
-.servicesComponent {
-  z-index: 10;
-  opacity: 1;
-}
+
 p.watermark {
   width: 100%;
   height: 100%;

@@ -1,14 +1,6 @@
 <template>
   <b-container id="mainContainer" fluid class="text-left p-0 m-0 bgsteelblue">
-    <!-- <Nav id="navbar" class="container-fluid" :ptheme="theme" /> -->
-    <!-- <b-container fluid class="headerModule rellaxImage comboFilter h-100" :style="gradient" />
-    <div class="module resetFilter">
-      <div class="module-inside resetFilter">
-        <HeaderComponentLanding :pheader="client.subheader" :psubtitle="client.subtitle" />
-      </div>
-    </div> -->
-
-    <b-container fluid class="m-0 p-0 clip-wave" :style="gradient">
+    <b-container fluid class="m-0 p-0 clip-wave-bottom" :style="gradient">
       <Nav id="navbar" class="container-fluid" :ptheme="theme" />
       <div class="module resetFilter" style="top:20%;">
         <div class="module-inside resetFilter" style="min-height: 80vh;">
@@ -16,21 +8,19 @@
         </div>
       </div>
     </b-container>
-    <!-- <b-container fluid class="divider bg-white waveClip" /> -->
+    <!-- <Nav id="navbar" class="container-fluid" :ptheme="theme" /> -->
+    <SectionComponent pheader="About Us" :pcontent="client.about" class="align-self-center" />
 
-    <SectionComponent
-      pheader="About Us"
-      :pcontent="client.about"
-      class="align-self-center section"
-    />
+    <TeamComponent pheader="Our team" :pteam="team" class="align-self-center" />
+
     <SectionComponent
       pheader="Services"
       :pcontent="client.services"
       class="align-self-center section bg-white"
     />
+
     <ServicesLinksComponent class="bg-white pb-5 text-center" :services="summaries" />
 
-    <p id="whyussection" class="p-3" />
     <WhyUsComponent
       pheader="Why Us?"
       class="align-self-center section"
@@ -42,7 +32,7 @@
       :key="i"
       :pcontent="{header: item.header, text: item.text, list: item.list, bgImage: item.bgImage, inlineImage: item.inlineImage, inlineImageText: item.inlineImageText, inlineImageRight: item.inlineImageRight }"
       :pstyle="(item.dark) ? { bgStyle: 'w-100 text-secondary text-left px-4 p-2', inlineImageStyle: item.inlineImageStyle} : { bgStyle: 'w-100 text-primary text-left  px-4 p-2', inlineImageStyle: item.inlineImageStyle}"
-    /> -->
+    />-->
 
     <!-- <b-container
       fluid
@@ -76,7 +66,7 @@
       data-rellax-speed="-2"
       :features="client.features"
       variant="primary"
-    /> -->
+    />-->
     <!-- <HeaderComponent
       v-if="featuredProducts.length > 0"
       psubheader="Featured Packages"
@@ -86,7 +76,7 @@
     <span v-for="item in featuredProducts" :key="item.id">
       <ProductComponent :product="item" />
       <hr fluid class="hrprimary">
-    </span> -->
+    </span>-->
 
     <SliderComponent :products="featuredProducts" />
     <SectionContactComponent
@@ -111,6 +101,7 @@ import SectionComponent from '@/components/SectionComponent'
 import SectionContactComponent from '@/components/SectionContactComponent'
 import WhyUsComponent from '@/components/WhyUsComponent'
 import SliderComponent from '@/components/SliderComponent'
+import TeamComponent from '@/components/TeamComponent'
 
 export default {
   components: {
@@ -124,7 +115,8 @@ export default {
     SectionComponent,
     SectionContactComponent,
     WhyUsComponent,
-    SliderComponent
+    SliderComponent,
+    TeamComponent
   },
   head () {
     let content = `${process.env.baseUrl}${this.$route.path}`
@@ -206,6 +198,12 @@ export default {
         openingHoursSpecification: this.client.openingHoursSpecification,
         priceRange: this.client.priceRange
       }
+    },
+    team () {
+      if (!this.client.founders) {
+        return null
+      }
+      return this.client.founders
     },
     bannerImagePath () {
       if (!this.pbgimage.url) {

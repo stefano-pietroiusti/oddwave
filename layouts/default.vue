@@ -32,11 +32,16 @@
       </defs>
     </svg> -->
     <nuxt />
-    <Footer class="footerWaveClip" />
+    <Footer class="clip-wave-top" />
     <svg class="clip-svg" height="0" width="0">
       <defs>
         <clipPath id="clip-wave" clipPathUnits="objectBoundingBox">
-          <path d="M0,0 1,0 1,.95 S0.9,0.85 0.6,.95 S0.05,0.85 0,.88Z" />
+          <path d="M0,0,1,0,1,1 S0.9,0.92,0.6,0.97 S0.05,0.96,0,0.95 Z" />
+          <!-- <path d="M 0,1 0,0 1,0  1,1 S0.8,0.95 .6,.99 S-0.02,.92 0,.96 Z" /> -->
+        </clipPath>
+        <clipPath id="clip-wave-top" clipPathUnits="objectBoundingBox">
+          <path d="M0,0.02 0,1 1,1 1,0.02 S0.9,-0.02 0.6,0.02 S0.0,0 0,0Z" />
+          <!-- <path d="M0,0.133,1,0.133,1,1 S0.8,0.867,0.6,0.933 S0.05,0.667,0,0.933" /> -->
         </clipPath>
         <!-- <polygon points="0 1, 0 0, 1 0, 0.8 1" /> -->
         <!-- <polygon points="0 0, 1 0, 1 .9,.8 1,.3 .9, 0 1 Z" /> -->

@@ -916,12 +916,14 @@ hr {
   z-index: -1;
 }
 
-.clip-wave {
+.clip-wave-bottom {
   -webkit-clip-path: url(#clip-wave);
   clip-path: url(#clip-wave);
 }
-
-
+.clip-wave-top {
+  -webkit-clip-path: url(#clip-wave-top);
+  clip-path: url(#clip-wave-top);
+}
 
 /* Image filters */
 .contrast {
@@ -1017,6 +1019,14 @@ hr {
   height: 240px;
   min-width: 240px;
   width: 240px;
+  font-size: 1.1rem;
+}
+
+.cardTeam {
+  min-height: 300px;
+  height: 300px;
+  min-width: 300px;
+  width: 300px;
   font-size: 1.1rem;
 }
 

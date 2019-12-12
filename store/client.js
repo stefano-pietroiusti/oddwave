@@ -96,13 +96,22 @@ export const state = () => ({
     foundingDate: '2019',
     founders: [{
       '@type': 'Person',
-      name: 'Jaline Van Dyk'
+      name: 'Jaline Van Dyk',
+      jobTitle: 'Owner and Director of Digital Marketing',
+      description: '15+ years experience in business management and online marketing.',
+      image: '/imgs/stefano-pietroiusti.jpg',
+      sameAs: [
+        'https://www.linkedin.com/in/jaline-pietroiusti-ab354b56'
+      ]
     }, {
       '@type': 'Person',
       name: 'Stefano Pietroiusti',
       sameAs: [
         `${process.env.author}`
-      ]
+      ],
+      jobTitle: 'IT Director',
+      description: '20+ years experience in delivering cloud, web and database solutions.',
+      image: '/imgs/stefano-pietroiusti.jpg'
     }
     ],
     phone: ['+64 210 8658 172', '+64 210 8823 769'],
@@ -138,9 +147,7 @@ export const state = () => ({
     sameAs: [
       'https://www.facebook.com/theoddwave',
       'https://www.instagram.com/theoddwavenz/',
-      'https://www.linkedin.com/company/the-odd-wave-ltd/',
-      'https://www.instagram.com/pietroiustistefano/',
-      'https://www.facebook.com/School-of-Photography-230606717003222/'
+      'https://www.linkedin.com/company/the-odd-wave-ltd/'
     ],
     priceRange: '$$',
     copyright: '© 2019 Copyright The Odd Wave',

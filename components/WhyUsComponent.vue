@@ -4,6 +4,7 @@
     <b-row>
       <b-col sm="12" md="12" lg="2" />
       <b-col sm="12" md="12" lg="8" class="p-5 align-items-center text-larger">
+        <p id="whyussection" class="p-3" />
         <h2 class="sectionHeader">
           {{ header }}
         </h2>
@@ -11,58 +12,31 @@
       <b-col sm="12" md="12" lg="2" />
     </b-row>
     <b-row>
-      <b-col
-        v-for="(item, i) in pfeatures"
-        :key="i"
-        sm="12"
-        md="12"
-        lg="6"
-        xl="6"
-        class="featureCards"
-      >
-        <b-card no-body class="cardLarge">
-          <b-card-body>
-            <div
-              class="card-header-custom clearfix"
-              :style="`background: transparent url('${ item.image }') 0% 0% no-repeat padding-box;`"
-            >
-              <div class="card-header-text clearfix">
-                {{ item.header }}
+      <b-col sm="12" md="12" lg="12" xl="12" class="featureCards">
+        <b-card-group deck>
+          <b-card v-for="(item, i) in pfeatures" :key="i" no-body class="cardLarge">
+            <b-card-body>
+              <!-- <div
+                class="card-header-custom clearfix"
+                :style="`background: transparent url('${ item.image }') 0% 0% no-repeat padding-box;`"
+              >
+               <div class="card-header-text clearfix">
+                  {{ item.header }}
+                </div>
               </div>
-            </div>
-            <div
-              style="width: 100%; height: 50px; float:left; display:inline-block"
-              class="clearfix"
-            />
-
-            <div class="card-text clearfix">
-              {{ item.text }}
-            </div>
-          </b-card-body>
-        </b-card>
-
-        <!-- <div class="text-center bg-feature h-100">
-          <h4>
-            <font-awesome-icon
-              :icon="
-                item.icon"
-              :class="`fa text-large text-${variant} my-2 fa-fw`"
-            />
-          </h4>
-          <div class="container text-primary bg-feature">
-            <h6 class="text-primary">
-              {{ item.header }}
-            </h6>
-            <p v-if="item.text">
-              {{ item.text }}
-            </p>
-            <ul v-if="item.list" class="text-left pl-5">
-              <li v-for="(litem, i) in item.list" :key="i">
-                {{ litem }}
-              </li>
-            </ul>
-          </div>
-        </div>-->
+              <div
+                style="width: 100%; height: 50px; float:left; display:inline-block"
+                class="clearfix"
+              /> -->
+              <div class="card-header clearfix text-left bg-white">
+                <img :src="`${ item.image }`" :alt="item.header"> {{ item.header }}
+              </div>
+              <div class="card-text clearfix">
+                {{ item.text }}
+              </div>
+            </b-card-body>
+          </b-card>
+        </b-card-group>
       </b-col>
     </b-row>
   </b-container>

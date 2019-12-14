@@ -3,71 +3,6 @@ const commonKeywords = ['developing solutions', 'creating solutions', 'north sho
 export const state = () => ({
   all: [
     {
-      id: 'photography-website',
-      icon: ['fab', 'dev'],
-      variant: 'rwcyellow',
-      title: 'Photography website with SEO',
-      linkTitle: 'Photography Website & SEO',
-      description: 'A photography website with graphics, optimized images, animation, photo grids, carousels',
-      header: 'Professional Photographer Website & SEO',
-      image: 'websitedesign.jpg',
-      features: [
-        {
-          header: 'Optimized images',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Optimized content',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Scroll and text animation effects',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'SEO Website Package',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Website address registration',
-          text: 'Suitable domain name registration',
-          icon: ['fas', 'check']
-        },
-        {
-          header: '1 year web hosting & email hosting',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Website security',
-          text: 'HTTPS web server & website hosting',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Search & Mobile friendly',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'JSON-LD Structured Data Support for LocalBusiness / Service',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Social media links',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Unlimited email',
-          text:
-            'We will set up 1 - 5 email addresses for you initially',
-          icon: ['fas', 'check']
-        }
-      ],
-      isFeatured: false,
-      isFeaturedOrder: 0,
-      relatedServices: ['web-design-nz'],
-      price: { value: 648, unit: 'package', discount: 0, flexible: true },
-      keywords: [...commonKeywords, 'photography website package', 'photographer website']
-    },
-    {
       id: 'pro-business-website-landing',
       icon: ['fab', 'dev'],
       variant: 'rwcyellow',
@@ -214,34 +149,6 @@ export const state = () => ({
       price: { value: 1950, unit: 'package', discount: 0, flexible: true },
       keywords: [...commonKeywords, 'business website package', 'custom website', 'landing page', 'products website', 'services website', 'website with contact form']
     },
-    // {
-    //   id: 'nuxtjs-templates-nz',
-    //   icon: ['fab', 'dev'],
-    //   variant: 'rwcyellow',
-    //   title: 'Nuxtjs templates with Vuejs Vuex Bootstrap 4',
-    //   linkTitle: 'Nuxtjs templates',
-    //   description: 'Order a Nuxtjs template that includes bootstrap 4 SCSS, dynamic Vuejs Components, vuex store with getters',
-    //   header: 'Nuxtjs template',
-    //   image: 'websitedesign.jpg',
-    //   features: [
-    //     {
-    //       header: 'Vuex store',
-    //       icon: ['fas', 'check']
-    //     },
-    //     {
-    //       header: 'Dynamic Vuejs content components',
-    //       icon: ['fas', 'check']
-    //     }, {
-    //       header: 'Bootstrap 4 SCSS',
-    //       icon: ['fas', 'check']
-    //     }
-    //   ],
-    //   price: { value: 120, unit: 'template', discount: 0 },
-    //   isFeatured: false,
-    //   isFeaturedOrder: 5,
-    //   relatedServices: ['web-design-nz'],
-    //   keywords: [...commonKeywords, 'hourly consulting services']
-    // },
     {
       id: 'seo-website-package-1',
       icon: ['fas', 'search'],
@@ -352,7 +259,7 @@ export const state = () => ({
       icon: ['fas', 'camera-retro'],
       variant: 'rwcblue',
       title: 'Digital Photography Package with 100 edited images',
-      linkTitle: 'Website Photography Pack 2.5HR x100',
+      linkTitle: 'Digital Photography Pack 2.5HR x100',
       description: 'Our digital photography package for large format digital product photos, services, backgrounds and website visuals. 2.5 hours photography time, rights and access to all images, including 100 edited images. ',
       header: 'Digital Photography Pack 2.5HR x100',
       image: 'photography.jpg',
@@ -395,15 +302,48 @@ export const state = () => ({
       title: 'Software Development | IT Specialists in Cloud Web Data Search',
       linkTitle: 'Software Development Services',
       header: 'Software Development Services',
-      description: 'Our company specializes in app development, cloud development, data engineering, data analysis and data visualization. Our software engineer services are charged per hour of consulting and for any combo of app development, data engineering, cloud services development, DevOps, data analysis, data visualization and reports development.',
+      description: 'Our company specializes in app development, cloud development, data engineering, data analysis and data visualization. Our software engineer services are charged per hour and for any combo of web and app development, data engineering, cloud services development, automation, data analysis, visualization and reports development.',
       image: 'websitedesign.jpg',
       features: [
-        // {
-        //   header: 'Training and Knowledge transfer',
-        //   icon: ['fas', 'check']
-        // }
+        {
+          header: 'Custom development from designs',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'Documentation',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'Training',
+          icon: ['fas', 'check']
+        }
       ],
       price: { value: 90, unit: 'hour', discount: 0 },
+      isFeatured: false,
+      isFeaturedOrder: 5,
+      relatedServices: ['contracting-nz'],
+      keywords: [...commonKeywords, 'hourly consulting services']
+    },
+    {
+      id: 'technical-support-nz',
+      icon: ['fab', 'dev'],
+      variant: 'rwcgreen',
+      title: 'Technical Help and Support by IT Specialists North Shore Auckland',
+      linkTitle: 'Technical Support Services',
+      header: 'Technical Help and Support',
+      description: 'Our team can assist with adhoc technical help in web and app development and customisation, webmaster services, app configurations, data engineering, data analysis, data visualization and reporting.',
+      image: 'websitedesign.jpg',
+      features: [
+        {
+          header: 'Technical brief, analysis and support',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'Technical writing and documentation',
+          icon: ['fas', 'check']
+        }
+      ],
+      price: { value: 80, unit: 'hour', discount: 0 },
       isFeatured: false,
       isFeaturedOrder: 5,
       relatedServices: ['contracting-nz'],

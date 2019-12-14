@@ -19,14 +19,13 @@ export const state = () => ({
       'longitude': 174.734479
     },
     title:
-      'Web Design Auckland NZ | SEO NZ | Digital Marketing NZ | Google Ads',
+      'Web Design & Digital Marketing Company North Shore Auckland NZ',
     description:
-      'Web Design and web development company developing responsive websites for ROI using modern tech, SEO, Digital Marketing, Google Ads management',
+      'Web Design and web development company that can help you grow your online business using modern web technology, data engineering, automation, SEO and Digital Marketing',
     header: 'WEB DESIGN | SEO | DIGITAL MARKETING | DATA ANALYSIS',
-    subheader: 'GOAL DRIVEN WEB DESIGN, SEO & DIGITAL MARKETING TO HELP NZ BUSINESSES GROW',
+    subheader: 'CUSTOM WEB DESIGN & DIGITAL MARKETING TO HELP NZ BUSINESSES GROW',
     subtitle:
-      "We provide custom web solutions from Auckland, New Zealand. We market our clients' businesses as if they were our own.",
-
+      "We provide custom web design and web application development from North Shore, Auckland, New Zealand. We market our clients' businesses as if they were our own.",
     featuresHeader: 'Why us?',
     features: [
       {

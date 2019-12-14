@@ -974,12 +974,12 @@ hr {
 }
 
 .section {
-  font-size: 28px;
+  font-size: 1.4rem;
 }
 
 
 .whyus {
-  font-size: 28px;
+  font-size: 1.4rem;
   // padding: 0 5vw 5vw 5vw;
 }
 
@@ -1012,6 +1012,7 @@ hr {
 .cardLarge {
   min-height: 400px;
   height: auto;
+  font-size: 1.2rem;
 }
 
 .cardSmall {
@@ -1019,7 +1020,7 @@ hr {
   height: 240px;
   min-width: 240px;
   width: 240px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 .cardTeam {
@@ -1027,7 +1028,7 @@ hr {
   height: 300px;
   min-width: 300px;
   width: 300px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 .cardMedium {
@@ -1060,14 +1061,17 @@ hr {
   background: rgba(0, 0, 0, 1);
   border-color: #000; /*set the color you want here*/
 }
+.card-header {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
 
 
 .card-header-custom {
   position: relative;
-  font-size: 24px;
   height: 95px;
   width: 100%;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: bold;
 }
 
@@ -1077,7 +1081,7 @@ hr {
 
 .card-text {
   position: relative;
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   padding: 5px 5px 5px 0px;
 }
 

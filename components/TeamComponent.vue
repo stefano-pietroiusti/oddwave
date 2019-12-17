@@ -22,8 +22,7 @@
 
           <div class="text-center text-white rounded-circle back">
             <div class="img-overlay-bottom text-small text-center p-5 w-100 h-100">
-              {{ item.description }}
-              <a :href="`${item.sameAs[0]}`" :title="item.name" class="text-white text-large">&#43;</a>
+              <a :href="`${item.sameAs[0]}`" :title="item.name" class="text-white text-small profileLink">{{ item.description }}<br>Read more &#43;</a>
             </div>
           </div>
         </div>

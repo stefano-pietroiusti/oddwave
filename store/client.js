@@ -96,8 +96,8 @@ export const state = () => ({
     founders: [{
       '@type': 'Person',
       name: 'Jaline Van Dyk',
-      jobTitle: 'Owner and Director of Digital Marketing',
-      description: '15+ years experience in business management and online marketing.',
+      jobTitle: 'Owner / Director of Digital Marketing',
+      description: '15+ years experience software development & management.',
       image: '/imgs/stefano-pietroiusti.jpg',
       sameAs: [
         'https://www.linkedin.com/in/jaline-pietroiusti-ab354b56'
@@ -109,7 +109,7 @@ export const state = () => ({
         `${process.env.author}`
       ],
       jobTitle: 'IT Director',
-      description: '20+ years experience in delivering cloud, web and database solutions.',
+      description: '20+ years experience in web, data, cloud, team leading & mentoring.',
       image: '/imgs/stefano-pietroiusti.jpg'
     }
     ],

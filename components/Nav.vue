@@ -79,9 +79,7 @@
               :icon="['fas', 'envelope']"
               :class="`fa fa-medium fa-hover pl-2 ml-2 ${color}`"
             />
-          </a>
-        </div>
-        <div id="whyus" class="pl-5">
+          </a>&nbsp;&nbsp;
           <b-button
             pill
             variant="rwcblue"
@@ -91,6 +89,16 @@
             Why Us?
           </b-button>
         </div>
+        <!-- <div id="whyus" class="pl-5">
+            <b-button
+              pill
+              variant="rwcblue"
+              href="#whyussection"
+              class="px-3 whyusbutton justify-content-center animated pulse delay-1s text-white text-medium"
+            >
+              Why Us?
+            </b-button>
+          </div> -->
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>

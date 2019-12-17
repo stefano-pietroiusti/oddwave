@@ -5,16 +5,24 @@
       <b-col sm="12" md="12" lg="2" />
       <b-col sm="12" md="12" lg="8" class="p-5 align-items-center text-larger">
         <p id="whyussection" class="p-3" />
-        <h2 class="sectionHeader">
+        <h2 :class="headerClass">
           {{ header }}
         </h2>
       </b-col>
       <b-col sm="12" md="12" lg="2" />
     </b-row>
     <b-row>
-      <b-col sm="12" md="12" lg="12" xl="12" class="featureCards">
+      <b-col
+        v-for="(item, i) in pfeatures"
+        :key="i"
+        sm="12"
+        md="6"
+        lg="6"
+        xl="3"
+        class="featureCards"
+      >
         <b-card-group deck>
-          <b-card v-for="(item, i) in pfeatures" :key="i" no-body class="cardLarge">
+          <b-card no-body class="cardLarge">
             <b-card-body>
               <!-- <div
                 class="card-header-custom clearfix"
@@ -28,8 +36,8 @@
                 style="width: 100%; height: 50px; float:left; display:inline-block"
                 class="clearfix"
               /> -->
-              <div class="card-header clearfix text-left bg-white">
-                <img :src="`${ item.image }`" :alt="item.header"> {{ item.header }}
+              <div class="card-header bg-white">
+                <img :src="`${ item.image }`" :alt="item.header" :title="item.header"><span class="px-2">{{ item.header }}</span>
               </div>
               <div class="card-text clearfix">
                 {{ item.text }}
@@ -48,6 +56,10 @@ export default {
     pheader: {
       type: String,
       default: ''
+    },
+    pheaderclass: {
+      type: String,
+      default: 'sectionHeader'
     },
     pvariant: {
       type: String,
@@ -79,6 +91,9 @@ export default {
   computed: {
     header: function() {
       return this.pheader || 'Why Us?'
+    },
+    headerClass () {
+      return this.pheaderclass || 'sectionHeader'
     }
   }
 }

@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
-  <div id="servicesMainContainer">
+  <div id="servicesMainContainer" class="bg-white">
     <Nav id="navbar" class="container-fluid" :ptheme="theme" />
     <!-- <Nav class="container-fluid bg-secondary text-primary" /> -->
     <!-- <b-container id="servicesBackground">
@@ -12,24 +12,7 @@
     </b-container>-->
 
     <div id="servicesContainer" class="text-center w-100">
-      <HeaderComponent
-        :pheader="service.header"
-        pcontainerclass="mt-10 borderLeft"
-      />
-
-      <!-- <HeaderComponent
-        :pheader="service.header"
-        :psubheader="service.subheader"
-        pcontainerclass="mt-10 borderLeft"
-      /> -->
-
-      <!-- <AnimeBannerWordsHeaderComponent
-        :pheader="service.subheader"
-        :pbgimage="service.backgroundImage"
-        :variant="service.variant"
-        :pid="service.id"
-        :panimation="service.animate"
-      />-->
+      <HeaderComponent :pheader="service.header" pcontainerclass="mt-7 mb-5 borderLeft" />
 
       <TextImageComponent
         v-for="(item,i) in service.content"
@@ -50,18 +33,11 @@
         <!-- <ButtonComponent btext="Chat about this" blink="/contact/" :pvariant="`outline-black`" /> -->
       </span>
 
-      <HeaderComponent
-        v-if="featuredProducts.length > 0"
-        psubheader="Featured Packages"
-        psubheaderclass="sectionHeaderPrimary"
-        psubtitle="Flexi payment plans available. Charges for travel outside of Auckland may be applicable following initial consultation."
-        pclass="text-center"
-      />
       <!-- <span v-for="item in featuredProducts" :key="item.id">
         <ProductComponent :product="item" :summary="true" />
         <hr fluid class="hrprimary">
       </span>-->
-      <SliderComponent :products="featuredProducts" />
+      <SliderComponent :products="featuredProducts" pheaderclass="sectionHeaderPrimary" />
 
       <b-container v-if="service.slides" fluid class="w-100">
         <b-row>
@@ -109,14 +85,14 @@
       <!-- <HeaderComponent
         :psubheader="service.marketing.header + ' TO ' + service.marketing.subheader"
         :pstyle="service.subheaderStyle"
-      /> -->
+      />-->
 
       <!-- <ButtonComponent
         btext="Get started"
         blink="/contact/"
         :pvariant="`outline-black`"
         class="text-center"
-      /> -->
+      />-->
 
       <!-- <ServicesRelatedComponent v-if="otherServices" :services="otherServices" /> -->
 
@@ -132,13 +108,10 @@
           pcontainerclass="m-0 p-0"
         />
         <ServicesLinksComponent :services="otherServices" />
-
+      </div>
+      <div class="m-0 pb-5 bg-white">
         <p id="whyussection" class="p-3" />
-        <WhyUsComponent
-          pheader="Why Us?"
-          class="align-self-center whyus "
-          :pfeatures="features"
-        />
+        <WhyUsComponent pheader="Why Us?" class="align-self-center" :pfeatures="features" pheaderclass="sectionHeaderPrimary" />
       </div>
     </div>
   </div>
@@ -216,7 +189,11 @@ export default {
     }
   },
   computed: {
-    ...mapGetters('services', ['getRelatedSummaries', 'getServiceById', 'getServiceFeatures']),
+    ...mapGetters('services', [
+      'getRelatedSummaries',
+      'getServiceById',
+      'getServiceFeatures'
+    ]),
     ...mapGetters('products', ['getProductById', 'getProductsById']),
     ...mapGetters('client', ['getClientFeatures']),
     service () {

@@ -302,11 +302,11 @@ export const state = () => ({
       title: 'Software Development | IT Specialists in Cloud Web Data Search',
       linkTitle: 'Software Development Services',
       header: 'Software Development Services',
-      description: 'Our company specializes in app development, cloud development, data engineering, data analysis and data visualization. Our software engineer services are charged per hour and for any combo of web and app development, data engineering, cloud services development, automation, data analysis, visualization and reports development.',
+      description: 'Our company specializes in website design, application development, cloud development, data engineering, data analysis and data visualization. Our software engineer services are charged per hour and for any combo of web and application programming, data engineering, cloud services development, devops, automation, data analysis, visualization and reports development.',
       image: 'websitedesign.jpg',
       features: [
         {
-          header: 'Custom development from designs',
+          header: 'Custom development from designs and POCs',
           icon: ['fas', 'check']
         },
         {
@@ -331,7 +331,7 @@ export const state = () => ({
       title: 'Technical Help and Support by IT Specialists North Shore Auckland',
       linkTitle: 'Technical Support Services',
       header: 'Technical Help and Support',
-      description: 'Our team can assist with adhoc technical help in web and app development and customisation, webmaster services, app configurations, data engineering, data analysis, data visualization and reporting.',
+      description: 'Our team can assist with adhoc technical help with business computing, web and app development, webmaster services, web and app customisation and configuration, data engineering, data analysis, data visualization and reporting.',
       image: 'websitedesign.jpg',
       features: [
         {

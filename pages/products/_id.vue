@@ -18,7 +18,11 @@
         :pid="service.id"
         :panimation="service.animate"
       />-->
-      <HeaderComponent :pheader="product.name" pcontainerclass="mt-10 borderLeft" psubheaderclass="sectionHeaderPrimary" />
+      <HeaderComponent
+        :pheader="product.name"
+        pcontainerclass="mt-7 mb-5 borderLeft"
+        psubheaderclass="sectionHeaderPrimary"
+      />
       <!-- <span v-if="product.features.length > 0"> -->
       <b-card no-body class="text-white bg-primary h-100 cardMedium w-50">
         <b-card-body>
@@ -66,12 +70,10 @@
         pheader="What can we do for you?"
         class="align-self-center services"
       />
-      <p id="whyussection" class="p-3" />
-      <WhyUsComponent
-        pheader="Why Us?"
-        class="align-self-center whyus bgsteelblue"
-        :pfeatures="features"
-      />
+      <div class="m-0 pb-5 bg-white">
+        <p id="whyussection" class="p-3" />
+        <WhyUsComponent pheader="Why Us?" class="align-self-center" :pfeatures="features" pheaderclass="sectionHeaderPrimary" />
+      </div>
     </div>
   </div>
 </template>

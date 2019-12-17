@@ -17,7 +17,7 @@
 
     <HeaderComponent
       pheader="Contact Us"
-      pcontainerclass="text-center mt-10 borderLeft"
+      pcontainerclass="mt-7 mb-5 borderLeft"
     />
     <ContactForm :pservices="servicesDropDown" :pbgimage="backgroundImage" :pstyle="style" />
     <!-- <b-container fluid class="text-primary text-medium w-100 text-left m-0 p-0">
@@ -30,12 +30,10 @@
       <HeaderComponent :pheader="header" />
       <ContactForm :pservices="servicesDropDown" :pbgimage="backgroundImage" :pstyle="style" />
     </b-container>-->
-    <p id="whyussection" class="p-3" />
-    <WhyUsComponent
-      pheader="Why Us?"
-      class="align-self-center whyus bgsteelblue "
-      :pfeatures="features"
-    />
+    <div class="m-0 pb-5 bg-transparent">
+      <p id="whyussection" class="p-3" />
+      <WhyUsComponent pheader="Why Us?" class="align-self-center" :pfeatures="features" />
+    </div>
   </div>
 </template>
 <script>
@@ -147,8 +145,8 @@ export default {
     }
   },
   mounted () {
-    console.log('route: ', this.$route.name)
-    console.log('theme: ', this.theme)
+    // console.log('route: ', this.$route.name)
+    // console.log('theme: ', this.theme)
     this.$ga.page(this.$route.path)
     // window.addEventListener('scroll', function () {
     //   const navbar = document.getElementById('navbar')

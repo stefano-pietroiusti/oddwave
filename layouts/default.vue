@@ -1,51 +1,15 @@
 <template>
   <div class="no-gutters">
-    <!-- <svg width="0" height="0">
-      <defs>
-        <clipPath id="wave" clipPathUnits="objectBoundingBox">
-          <path
-            d="M 0,1 L 0,0 L 1,0 L 1,1 C .65 .8, .35 .8, 0 1 Z"
-          />
-
-        </clipPath>
-      </defs>
-    </svg>-->
-    <!-- <svg class="svg" height="1px" width="1px">
-      <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">
-        <path
-          d="M0,0 H1 V1 s-0.141,-0.095,-0.326,-0.095 s-0.251,0.071,-0.415,0.08 C0.055,0.976,0,0.894,0,0.894"
-        />
-      </clipPath>
-    </svg>
-
-    <div class="clipped" />-->
-    <!-- <svg>
-      <clipPath id="wave" clipPathUnits="objectBoundingBox" width="0" height="0">
-        <path d="M1,0c0,0-0.3,0.1-0.5,0.1S0.3,0,0,0.1V1h1L1,0z" />
-      </clipPath>
-    </svg>
-    <svg>
-      <defs>
-        <clipPath id="footerwave" clipPathUnits="objectBoundingBox" width="0" height="0">
-          <path d="M1,0c0,0-0.3,0.1-0.5,0.1S0.3,0,0,0.1V1h1L1,0z" />
-        </clipPath>
-      </defs>
-    </svg> -->
     <nuxt />
     <Footer class="clip-wave-top" />
     <svg class="clip-svg" height="0" width="0">
       <defs>
         <clipPath id="clip-wave" clipPathUnits="objectBoundingBox">
           <path d="M0,0,1,0,1,1 S0.9,0.92,0.6,0.97 S0.05,0.96,0,0.95 Z" />
-          <!-- <path d="M 0,1 0,0 1,0  1,1 S0.8,0.95 .6,.99 S-0.02,.92 0,.96 Z" /> -->
         </clipPath>
         <clipPath id="clip-wave-top" clipPathUnits="objectBoundingBox">
           <path d="M0,0.02 0,1 1,1 1,0.02 S0.9,-0.02 0.6,0.02 S0.0,0 0,0Z" />
-          <!-- <path d="M0,0.133,1,0.133,1,1 S0.8,0.867,0.6,0.933 S0.05,0.667,0,0.933" /> -->
         </clipPath>
-        <!-- <polygon points="0 1, 0 0, 1 0, 0.8 1" /> -->
-        <!-- <polygon points="0 0, 1 0, 1 .9,.8 1,.3 .9, 0 1 Z" /> -->
-
       </defs>
     </svg>
   </div>

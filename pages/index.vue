@@ -11,7 +11,11 @@
     <!-- <Nav id="navbar" class="container-fluid" :ptheme="theme" /> -->
     <SectionComponent pheader="About Us" :pcontent="client.about" class="align-self-center" />
 
-    <TeamComponent pheader="Our team" :pteam="team" class="align-self-center" />
+    <TeamComponent
+      pheader="Our team"
+      :pteam="team"
+      class="align-self-center"
+    />
 
     <SectionComponent
       pheader="Services"
@@ -77,7 +81,12 @@
       <ProductComponent :product="item" />
       <hr fluid class="hrprimary">
     </span>-->
-
+    <!-- <HeaderComponent
+      v-if="featuredProducts.length > 0"
+      psubheader="Featured Packages"
+      psubheaderclass="sectionHeaderPrimary"
+      pclass="text-center"
+    /> -->
     <SliderComponent :products="featuredProducts" />
     <SectionContactComponent
       pheader="What can we do for you?"

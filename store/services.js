@@ -482,35 +482,10 @@ export const state = () => ({
           list: [
             'Javascript, Vue.js, Nuxt.js, Node.js, Java',
             'Data (SQL, Excel, Qlikview, PowerBI)',
-            'Cloud development (Azure, AWS)'],
+            'Cloud development (Azure, AWS, Google)'],
           icon: ['fab', 'servicestack']
         }
         ],
-      // features: [
-      //   {
-      //     header: 'Excel Contracting',
-      //     text: 'Our chosen web development technologies are modern, light-weight, efficient and future-proof resulting in websites that are quick, easy to support and scale.',
-      //     icon: ['fas', 'mobile-alt']
-      //   },
-      //   {
-      //     header: 'Professional Website Management',
-      //     text:
-      //       'We offer professional webmaster services to help you manage your website in an competitive and trustworthy way.',
-      //     icon: ['fas', 'greater-than-equal']
-      //   },
-      //   {
-      //     header: 'User-Content-Mobile Design Thinking',
-      //     text:
-      //       'User-Content-Mobile Design thinking for websites that are consistent and perform well for everyone.',
-      //     icon: ['fas', 'mobile-alt']
-      //   },
-      //   {
-      //     header: 'Vanilla JS',
-      //     text:
-      //       'Website development from set standards, good practices, established open source frameworks, Vanilla Javascript, HTML, CSS and NodeJs. All resulting in minimal complexity and continuous improvement.',
-      //     icon: ['fab', 'servicestack']
-      //   }
-      // ],
       price: { value: 110, unit: 'hour' },
       relatedServices: ['seo-nz', 'ppc-nz', 'web-design-nz'],
       rate: 'hour',

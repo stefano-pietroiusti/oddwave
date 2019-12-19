@@ -23,19 +23,11 @@
     />
 
     <ServicesLinksComponent class="bg-white pb-5 text-center" :services="summaries" />
-
     <WhyUsComponent
       pheader="Why Us?"
       class="align-self-center section"
       :pfeatures="client.features"
     />
-
-    <!-- <TextImageComponent
-      v-for="(item,i) in client.content"
-      :key="i"
-      :pcontent="{header: item.header, text: item.text, list: item.list, bgImage: item.bgImage, inlineImage: item.inlineImage, inlineImageText: item.inlineImageText, inlineImageRight: item.inlineImageRight }"
-      :pstyle="(item.dark) ? { bgStyle: 'w-100 text-secondary text-left px-4 p-2', inlineImageStyle: item.inlineImageStyle} : { bgStyle: 'w-100 text-primary text-left  px-4 p-2', inlineImageStyle: item.inlineImageStyle}"
-    />-->
 
     <!-- <b-container
       fluid
@@ -54,39 +46,10 @@
     >
       I’m super fast!!
     </b-container>
-    <b-container
-      fluid
-      class="text-primary rellax"
-      data-rellax-speed="10"
-      data-rellax-zindex="20"
-    >
-      I’m second super fast!!
-    </b-container>-->
-    <!-- <HeaderComponent :psubheader="client.featuresHeader" pcontainerclass="transparent" />
+    -->
 
-    <PromoComponent
-      class="promoComponent rellax"
-      data-rellax-speed="-2"
-      :features="client.features"
-      variant="primary"
-    />-->
-    <!-- <HeaderComponent
-      v-if="featuredProducts.length > 0"
-      psubheader="Featured Packages"
-      psubtitle="Flexible payment plans are available."
-      pclass="text-center"
-    />
-    <span v-for="item in featuredProducts" :key="item.id">
-      <ProductComponent :product="item" />
-      <hr fluid class="hrprimary">
-    </span>-->
-    <!-- <HeaderComponent
-      v-if="featuredProducts.length > 0"
-      psubheader="Featured Packages"
-      psubheaderclass="sectionHeaderPrimary"
-      pclass="text-center"
-    /> -->
     <SliderComponent :products="featuredProducts" />
+
     <SectionContactComponent
       pheader="What can we do for you?"
       :pcontent="client.businessvalue"
@@ -97,6 +60,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import lax from 'lax.js'
 // import Rellax from 'rellax'
 import Nav from '@/components/Nav'
 import HeaderComponentLanding from '@/components/HeaderComponentLanding'
@@ -111,11 +75,7 @@ export default {
   components: {
     Nav,
     HeaderComponentLanding,
-    // HeaderComponent,
-    // PromoComponent,
-    // TextImageComponent,
     ServicesLinksComponent,
-    // ProductComponent,
     SectionComponent,
     SectionContactComponent,
     WhyUsComponent,
@@ -238,9 +198,11 @@ export default {
       }
     }
   },
+
   mounted () {
     // if (process.env.NODE_ENV !== 'production') {
     this.$ga.page(this.$route.path)
+    this.$ga.event('page', '/')
     // this.rellax = new Rellax('.rellax', {
     //   speed: -2,
     //   center: false,
@@ -251,6 +213,21 @@ export default {
     // })
     window.addEventListener('scroll', this.onScroll)
     this.onScroll()
+    lax.setup() // init
+    window.addEventListener('resize', function () {
+      lax.updateElements()
+    })
+    // lax.addPreset('myCoolPreset', function () {
+    //   return {
+    //     'data-lax-opacity': '(-vh*0.8) 40, (-vh*0.6) 0',
+    //     'data-lax-rotate': '(-vh*2) 1000, (-vh*0.5) 0'
+    //   }
+    // })
+    const updateLax = () => {
+      lax.update(window.scrollY)
+      window.requestAnimationFrame(updateLax)
+    }
+    window.requestAnimationFrame(updateLax)
   },
   beforeDestroy () {
     window.removeEventListener('scroll', this.onScroll)

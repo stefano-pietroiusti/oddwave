@@ -23,7 +23,7 @@ export const state = () => ({
     description:
       'Web design and digital marketing company to help you grow your online business using modern web technology, data engineering and automation.',
     header: 'WEB DESIGN, DATA & DIGITAL MARKETING',
-    subheader: 'CUSTOM WEB DESIGN & DIGITAL MARKETING TO HELP NZ BUSINESSES GROW',
+    subheader: 'CUSTOM WEB DESIGN & DIGITAL MARKETING',
     subtitle:
       "We provide custom web design and digital marketing services from North Shore, Auckland, New Zealand. We market our clients' businesses as if they were our own.",
     featuresHeader: 'Why us?',

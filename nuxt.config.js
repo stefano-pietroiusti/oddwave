@@ -131,7 +131,7 @@ export default {
     '~/plugins/jsonld',
     { src: '~/plugins/vue-notifications', mode: 'client' },
     { src: '~/plugins/lax.js', mode: 'client' },
-    // { src: '~/plugins/vue-fb-customer-chat', mode: 'client' },
+    { src: '~/plugins/vue-fb-customer-chat', mode: 'client' },
     { src: '~/plugins/vue-swiper', mode: 'client' }
   ],
   devModules: [

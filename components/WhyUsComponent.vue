@@ -2,9 +2,10 @@
 <template>
   <b-container fluid>
     <b-row>
-      <b-col sm="12" md="12" lg="2" />
-      <b-col sm="12" md="12" lg="8" class="p-5 align-items-center text-larger">
-        <p id="whyussection" class="p-3" />
+      <b-col cols="12">
+        <p id="whyussection" class="pt-5" />
+      </b-col>
+      <b-col cols="12" class="p-5 align-items-center text-larger">
         <h2 :class="headerClass">
           {{ header }}
         </h2>
@@ -24,18 +25,6 @@
         <b-card-group deck>
           <b-card no-body class="cardLarge">
             <b-card-body>
-              <!-- <div
-                class="card-header-custom clearfix"
-                :style="`background: transparent url('${ item.image }') 0% 0% no-repeat padding-box;`"
-              >
-               <div class="card-header-text clearfix">
-                  {{ item.header }}
-                </div>
-              </div>
-              <div
-                style="width: 100%; height: 50px; float:left; display:inline-block"
-                class="clearfix"
-              /> -->
               <div class="card-header bg-white">
                 <img :src="`${ item.image }`" :alt="item.header" :title="item.header"><span class="px-2">{{ item.header }}</span>
               </div>

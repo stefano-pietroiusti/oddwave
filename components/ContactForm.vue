@@ -11,12 +11,12 @@
           @reset="onReset"
         >
           <b-form-group
-            id="input-group-2"
-            label-for="input-2"
+            id="input-group-1"
+            label-for="input-1"
             label-size="lg"
           >
             <b-form-input
-              id="input-2"
+              id="input-1"
               v-model="form.name"
               required
               placeholder="Name"
@@ -24,12 +24,12 @@
             />
           </b-form-group>
           <b-form-group
-            id="input-group-1"
-            label-for="input-1"
+            id="input-group-2"
+            label-for="input-2"
             label-size="lg"
           >
             <b-form-input
-              id="input-1"
+              id="input-2"
               v-model="form.emailow"
               type="email"
               placeholder="Email"
@@ -37,12 +37,12 @@
             />
           </b-form-group>
           <b-form-group
-            id="input-group-1"
-            label-for="input-1"
+            id="input-group-3"
+            label-for="input-3"
             label-size="lg"
           >
             <b-form-input
-              id="input-1"
+              id="input-3"
               v-model="form.call"
               placeholder="Phone number"
               size="lg"

@@ -12,31 +12,31 @@ const commonKeywords = [
 export const state = () => ({
   client: {
     '@id': `${process.env.baseUrl}`,
-    '@type': 'Web Designer',
+    '@type': 'Organization',
     geo: {
       '@type': 'GeoCoordinates',
       'latitude': -36.708400,
       'longitude': 174.734479
     },
     title:
-      'Web Design & Digital Marketing Company North Shore Auckland NZ',
+      'Web Design & Digital Marketing company North Shore Auckland NZ',
     description:
-      'Web Design and web development company that can help you grow your online business using modern web technology, data engineering, automation, SEO and Digital Marketing',
-    header: 'WEB DESIGN | SEO | DIGITAL MARKETING | DATA ANALYSIS',
+      'Web design and digital marketing company to help you grow your online business using modern web technology, data engineering and automation.',
+    header: 'WEB DESIGN, DATA & DIGITAL MARKETING',
     subheader: 'CUSTOM WEB DESIGN & DIGITAL MARKETING TO HELP NZ BUSINESSES GROW',
     subtitle:
-      "We provide custom web design and web application development from North Shore, Auckland, New Zealand. We market our clients' businesses as if they were our own.",
+      "We provide custom web design and digital marketing services from North Shore, Auckland, New Zealand. We market our clients' businesses as if they were our own.",
     featuresHeader: 'Why us?',
     features: [
       {
-        header: 'Web design with A+ Google audit score in Performance, Accessibility, Best Practices & SEO',
+        header: 'Websites with A+ Google audit score in Performance, Accessibility, Best Practices & SEO',
         text:
           "Our websites are continuously tested and audited using Google's recommended open source tools to achieve an A+ score in performance, accessibility, best practices & SEO. ",
         icon: ['fas', 'users'],
         image: '/imgs/best-web-design.svg'
       },
       {
-        header: 'Web Design that puts Users, Content & Mobile First',
+        header: 'Web Design that puts Users First',
         text:
           'We follow a user-oriented web design approach that makes our websites, web applications and content usable by anyone on any device.',
         icon: ['fas', 'mobile-alt'],
@@ -45,7 +45,7 @@ export const state = () => ({
       {
         header: 'Web Development with fit-for-purpose Open Source',
         text:
-          'We combine established open source website frameworks with our vanilla HTML, CSS & javascript development to build websites that are lean, quick, flexible & scalable. Take advantage of our future-proof way to grow your brand image, sales and customer loyalty online.',
+          'We combine established open source website frameworks with our vanilla HTML, CSS & javascript developer expertise to build websites that are lean, quick, flexible & scalable. Take advantage of our future-proof way to grow your brand image, sales and customer loyalty online.',
         icon: ['fab', 'servicestack'],
         image: '/imgs/web-dev.svg'
       },
@@ -81,9 +81,9 @@ export const state = () => ({
           "We're based in Torbay, North Shore, Auckland, and are here to help everyone in New Zealand."
       }
     ],
-    name: 'The Odd Wave - SEO Web Design, Web Development & Digital Marketing Auckland NZ',
+    name: 'The Odd Wave Digital - Websites & Digital Marketing',
     legalName: 'The Odd Wave Ltd',
-    category: ['Technology'],
+    category: ['Internet Marketing', 'Website Designer'],
     email: 'team@theoddwave.co.nz',
     url: process.env.baseUrl,
     image: [
@@ -96,8 +96,8 @@ export const state = () => ({
     founders: [{
       '@type': 'Person',
       name: 'Jaline Van Dyk',
-      jobTitle: 'Owner / Director of Digital Marketing',
-      description: '15+ years experience software development & management.',
+      jobTitle: 'Owner',
+      description: '15+ years experience software development, digital marketing & management.',
       image: '/imgs/stefano-pietroiusti.jpg',
       sameAs: [
         'https://www.linkedin.com/in/jaline-pietroiusti-ab354b56'
@@ -108,15 +108,15 @@ export const state = () => ({
       sameAs: [
         `${process.env.author}`
       ],
-      jobTitle: 'IT Director',
-      description: '20+ years experience in web, data, cloud, team leading & mentoring.',
+      jobTitle: 'Technical Lead',
+      description: '20+ years experience in web, data, cloud, search, team leading & mentoring.',
       image: '/imgs/stefano-pietroiusti.jpg'
     }
     ],
     phone: ['+64 210 8658 172', '+64 210 8823 769'],
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '7 Halder Pl',
+      streetAddress: '7 Halder Place',
       addressLocality: 'Torbay',
       addressRegion: 'Auckland',
       postalCode: '0632',
@@ -124,7 +124,7 @@ export const state = () => ({
     },
     contactPoint: {
       '@type': 'ContactPoint',
-      contactType: 'Sales Support',
+      contactType: 'Support',
       telephone: '+642108658172',
       email: 'team@theoddwave.co.nz'
     },
@@ -144,6 +144,7 @@ export const state = () => ({
       }
     ],
     sameAs: [
+      'https://g.page/theoddwave/',
       'https://www.facebook.com/theoddwave',
       'https://www.instagram.com/theoddwavenz/',
       'https://www.linkedin.com/company/the-odd-wave-ltd/'

@@ -1,12 +1,12 @@
 <template>
   <b-navbar fixed="top" toggleable="lg" :type="theme" :variant="theme">
-    <b-navbar-brand to="/" title="Web Design by The Odd Wave" exact exact-active-class="">
+    <b-navbar-brand to="/" title="Web Design by The Odd Wave" exact exact-active-class>
       <img
         :src="logoPath"
         :srcset="logoPath.srcSet"
         fluid
-        alt="Web Design by The Odd Wave"
-        text="Web Design by The Odd Wave"
+        alt="Websites & Digital Marketing by The Odd Wave"
+        text="Websites & Digital Marketing by The Odd Wave"
         class="logo"
       >
     </b-navbar-brand>
@@ -23,8 +23,9 @@
           :class="`fa fa-medium fa-hover pl-2 ml-2 ${color}`"
         />
       </a>
-    </div> -->
-    <b-navbar-toggle target="nav-collapse" class="custom-toggler" />
+    </div>-->
+
+    <b-navbar-toggle target="nav-collapse" class="custom-toggler navbar-toggler-right" />
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav role="navigation">
         <b-nav-item to="/" exact exact-active-class="underline">
@@ -79,7 +80,7 @@
               :icon="['fas', 'envelope']"
               :class="`fa fa-medium fa-hover pl-2 ml-2 ${color}`"
             />
-          </a>&nbsp;&nbsp;
+          </a>&nbsp;&nbsp;&nbsp;&nbsp;
           <b-button
             pill
             variant="rwcblue"
@@ -89,16 +90,6 @@
             Why Us?
           </b-button>
         </div>
-        <!-- <div id="whyus" class="pl-5">
-            <b-button
-              pill
-              variant="rwcblue"
-              href="#whyussection"
-              class="px-3 whyusbutton justify-content-center animated pulse delay-1s text-white text-medium"
-            >
-              Why Us?
-            </b-button>
-          </div> -->
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -158,7 +149,9 @@ export default {
         : require(`~/assets/logos/oddwave-light.png`)
     },
     color () {
-      return (this.ptheme === 'theoddwave' || this.ptheme === 'contact') ? 'text-white' : 'text-black'
+      return this.ptheme === 'theoddwave' || this.ptheme === 'contact'
+        ? 'text-white'
+        : 'text-black'
     },
     theme () {
       return this.ptheme
@@ -190,5 +183,33 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style scoped lang="scss">
+@media (max-width: 992px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 80px;
+        right: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+    width: 100%;
+    transition: all 0.3s ease;
+    display: block;
+      background: rgba(0, 0, 0, .1);
+
+  }
+  .navbar-collapse.collapsing {
+    height: auto !important;
+    margin-right: 50%;
+    transition: all 0.3s ease;
+    display: block;
+  }
+  .navbar-collapse.show {
+    right: 0;
+  }
+  .navbar-toggler > .close {
+    display: inline;
+  }
+}
+
 </style>

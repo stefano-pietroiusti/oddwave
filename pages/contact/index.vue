@@ -71,12 +71,12 @@ export default {
           hid: 'description',
           name: 'description',
           content: this.description
-        },
-        {
-          hid: 'keywords',
-          name: 'keywords',
-          content: this.keywords.join()
         }
+        // {
+        //   hid: 'keywords',
+        //   name: 'keywords',
+        //   content: this.keywords.join()
+        // }
       ]
       // __dangerouslyDisableSanitizers: ['script'],
       // script: [{ innerHTML: JSON.stringify(this.jsonld), type: 'application/ld+json' }]

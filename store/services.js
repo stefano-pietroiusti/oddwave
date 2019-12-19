@@ -99,7 +99,7 @@ export const state = () => ({
       variant: 'rwcred',
       animate: 'flipInX',
       title: 'SEO NZ - organic search engine marketing NZ',
-      linkTitle: 'SEO NZ',
+      linkTitle: 'SEO',
       maori: 'kūkara Aotearoa',
       description: 'High quality SEO and organic search engine marketing to raise your Google ranking and drive organic traffic to your website for ROI.',
       landing: { header: 'SEO', content: 'Be found by more New Zealand customers searching for your products and services. The Odd Wave will help you get your business ranking higher on web search engines such as Google, Bing, DuckDuckGo.' },

@@ -172,12 +172,11 @@ export default {
           hid: 'description',
           name: 'description',
           content: this.service.description
-        },
-        {
-          hid: 'keywords',
-          name: 'keywords',
-          content: this.service.keywords.join()
-        }
+        } // {
+        //   hid: 'keywords',
+        //   name: 'keywords',
+        //   content: this.service.keywords.join()
+        // }
       ]
     }
   },

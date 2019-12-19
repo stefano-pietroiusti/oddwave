@@ -1,14 +1,13 @@
 <template>
   <b-container id="mainContainer" fluid class="text-left p-0 m-0 bgsteelblue">
+    <Nav id="navbar" class="container-fluid" :ptheme="theme" />
     <b-container fluid class="m-0 p-0 clip-wave-bottom" :style="gradient">
-      <Nav id="navbar" class="container-fluid" :ptheme="theme" />
       <div class="module resetFilter" style="top:20%;">
         <div class="module-inside resetFilter" style="min-height: 80vh;">
           <HeaderComponentLanding :pheader="client.subheader" :psubtitle="client.subtitle" />
         </div>
       </div>
     </b-container>
-    <!-- <Nav id="navbar" class="container-fluid" :ptheme="theme" /> -->
     <SectionComponent pheader="About Us" :pcontent="client.about" class="align-self-center" />
 
     <TeamComponent
@@ -98,14 +97,10 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import Rellax from 'rellax'
+// import Rellax from 'rellax'
 import Nav from '@/components/Nav'
 import HeaderComponentLanding from '@/components/HeaderComponentLanding'
-// import HeaderComponent from '@/components/HeaderComponent'
-// import PromoComponent from '@/components/PromoComponent'
-
 import ServicesLinksComponent from '@/components/ServicesLinksComponent'
-// import ProductComponent from '@/components/ProductComponent'
 import SectionComponent from '@/components/SectionComponent'
 import SectionContactComponent from '@/components/SectionContactComponent'
 import WhyUsComponent from '@/components/WhyUsComponent'
@@ -147,12 +142,12 @@ export default {
           hid: 'description',
           name: 'description',
           content: this.client.description
-        },
-        {
-          hid: 'keywords',
-          name: 'keywords',
-          content: this.client.keywords.join()
         }
+        // {
+        //   hid: 'keywords',
+        //   name: 'keywords',
+        //   content: this.client.keywords.join()
+        // }
       ],
       __dangerouslyDisableSanitizers: ['script'],
       script: [
@@ -189,7 +184,7 @@ export default {
       }
       return {
         '@context': 'http://schema.org',
-        '@type': 'LocalBusiness',
+        '@type': 'Organization',
         name: this.client.name,
         legalName: this.client.legalName,
         '@id': this.client['@id'],
@@ -246,33 +241,16 @@ export default {
   mounted () {
     // if (process.env.NODE_ENV !== 'production') {
     this.$ga.page(this.$route.path)
-    this.rellax = new Rellax('.rellax', {
-      speed: -2,
-      center: false,
-      wrapper: null,
-      round: true,
-      vertical: true,
-      horizontal: false
-    })
+    // this.rellax = new Rellax('.rellax', {
+    //   speed: -2,
+    //   center: false,
+    //   wrapper: null,
+    //   round: true,
+    //   vertical: true,
+    //   horizontal: false
+    // })
     window.addEventListener('scroll', this.onScroll)
     this.onScroll()
-    // window.addEventListener('scroll', function () {
-    //   const navbar = document.getElementById('navbar')
-    //   const navClasses = navbar.classList
-    //   if (navClasses.contains('light') === true) {
-    //     navClasses.remove('light')
-    //   }
-    //   if (window.screenTop >= 150) {
-    //     if (navClasses.contains('dark') === false) {
-    //       navClasses.toggle('dark')
-    //     }
-    //   } else if (navClasses.contains('dark') === true) {
-    //     navClasses.toggle('dark')
-    //   }
-    // })
-    // this.$nextTick(function () {
-
-    // })
   },
   beforeDestroy () {
     window.removeEventListener('scroll', this.onScroll)

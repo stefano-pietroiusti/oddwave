@@ -8,13 +8,13 @@ export const state = () => ({
       variant: 'rwcyellow',
       title: 'Website Landing Page with SEO',
       linkTitle: 'Website Landing Page & SEO',
-      description: 'Promotion-specific mobile and search friendly business web page with SEO, animation, media and external links',
+      description: 'Custom web landing page with animations, stock photos, profiles, social media integration, SEO',
       header: 'Website Landing Page & SEO',
       image: 'websitedesign.jpg',
       features: [
         {
-          header: 'Website landing page design',
-          text: 'Website homepage design, Content design, stock photos, Text animation &/ scroll animation, external links to services, documents, social media',
+          header: 'Website design & development',
+          text: 'Website homepage design, content design, stock photos, animation',
           icon: ['fas', 'check']
         },
         {
@@ -23,46 +23,42 @@ export const state = () => ({
           icon: ['fas', 'check']
         },
         {
-          header: 'SEO Website Package',
-          text: 'SEO Optimization of a web page',
+          header: 'Advanced SEO optimization with JSON-LD Structured Data Support',
+          text: 'Advanced SEO optimization with JSON-LD Structured Data Support',
           icon: ['fas', 'check']
         },
         {
-          header: 'Website address registration',
-          text: 'Suitable domain name registration',
+          header: 'Mobile and Search-engine friendly',
           icon: ['fas', 'check']
         },
         {
-          header: 'Web hosting & email hosting setup',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Website security',
-          text: 'HTTPS web server & website hosting',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Mobile friendly',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Search-engine friendly',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'JSON-LD Structured Data Support for LocalBusiness',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Social media links',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Unlimited email',
-          text:
-            'We will set up 1 - 5 email addresses for you initially',
+          header: 'Web hosting & email setup',
           icon: ['fas', 'check']
         }
+        // {
+        //   header: 'Website address registration',
+        //   text: 'Domain name registration',
+        //   icon: ['fas', 'check']
+        // },
+        // {
+        //   header: 'Website security',
+        //   text: 'HTTPS web server & website hosting',
+        //   icon: ['fas', 'check']
+        // },
+        // {
+        //   header: 'Mobile and Search-engine friendly',
+        //   icon: ['fas', 'check']
+        // },
+        // {
+        //   header: 'Search-engine friendly',
+        //   icon: ['fas', 'check']
+        // },
+        // {
+        //   header: 'Unlimited email',
+        //   text:
+        //     'We will set up 1 - 5 email addresses for you initially',
+        //   icon: ['fas', 'check']
+        // }
       ],
       isFeatured: true,
       isFeaturedOrder: 0,
@@ -76,13 +72,18 @@ export const state = () => ({
       variant: 'rwcyellow',
       title: 'Business Website with SEO',
       linkTitle: 'Business Website & SEO Package',
-      description: 'Universal multi-page professional business website package with SEO and scalable to optional add-ons after consultation',
+      description: 'Multi-page business website',
       header: 'Business Website & SEO Package',
       name: 'Business Website',
       image: 'websitedesign.jpg',
       features: [
         {
-          header: '5 page custom website',
+          header: '5 page custom website design & development',
+          text: 'Landing, Contact Us, Products &/ Services',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'Custom Contact Us page',
           text: 'Landing, Contact Us, Products &/ Services',
           icon: ['fas', 'check']
         },
@@ -92,19 +93,21 @@ export const state = () => ({
           icon: ['fas', 'check']
         },
         {
-          header: 'SEO Website Package',
+          header: 'Advanced SEO optimization with JSON-LD Structured Data Support',
           text: 'Optimization of up to 5 Pages',
-          icon: ['fas', 'check']
-        }, {
-          header: 'Search and Mobile friendly',
-          icon: ['fas', 'check']
-        }, {
-          header: 'JSON-LD Structured Data Support',
-          text: 'JSON-LD Logo, Organization, LocalBusiness',
           icon: ['fas', 'check']
         },
         {
-          header: 'Stock Images',
+          header: 'Mobile and Search-engine friendly',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'Web hosting & email setup',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'JSON-LD Structured Data Support',
+          text: 'JSON-LD Logo, Organization, LocalBusiness',
           icon: ['fas', 'check']
         },
         {
@@ -299,27 +302,32 @@ export const state = () => ({
       id: 'creating-solutions-nz',
       icon: ['fab', 'dev'],
       variant: 'rwcgreen',
-      title: 'Software Development | IT Specialists in Cloud Web Data Search',
-      linkTitle: 'Software Development Services',
-      header: 'Software Development Services',
-      description: 'Our company specializes in website design, application development, cloud development, data engineering, data analysis and data visualization. Our software engineer services are charged per hour and for any combo of web and application programming, data engineering, cloud services development, devops, automation, data analysis, visualization and reports development.',
+      title: 'Design and Development in Cloud, Web, Data, Search',
+      linkTitle: 'Design and Development Services',
+      header: 'Design and Development Services',
+      description: 'Supporting businesses with design and development across the Cloud, Web, Data and Search.',
       image: 'websitedesign.jpg',
       features: [
         {
-          header: 'Custom development from designs and POCs',
+          header: 'Custom design, development & engineering from your ideas, designs, POCs, APIs',
+          icon: ['fas', 'check']
+        }, {
+          header: 'Web design, Web development, Cloud development',
+          icon: ['fas', 'check']
+        }, {
+          header: 'Integration, Data Engineering',
+          icon: ['fas', 'check']
+        }, {
+          header: 'BI development, Data Analysis (TSQL, Qlikview, Excel, PowerBI)',
           icon: ['fas', 'check']
         },
         {
-          header: 'Documentation',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Training',
+          header: 'Documentation & Training',
           icon: ['fas', 'check']
         }
       ],
       price: { value: 90, unit: 'hour', discount: 0 },
-      isFeatured: false,
+      isFeatured: true,
       isFeaturedOrder: 5,
       relatedServices: ['contracting-nz'],
       keywords: [...commonKeywords, 'hourly consulting services']
@@ -328,14 +336,26 @@ export const state = () => ({
       id: 'technical-support-nz',
       icon: ['fab', 'dev'],
       variant: 'rwcgreen',
-      title: 'Technical Help and Support by IT Specialists North Shore Auckland',
+      title: 'Technical Help and Support North Shore Auckland NZ',
       linkTitle: 'Technical Support Services',
       header: 'Technical Help and Support',
-      description: 'Our team can assist with adhoc technical help with business computing, web and app development, webmaster services, web and app customisation and configuration, data engineering, data analysis, data visualization and reporting.',
+      description: 'Supporting businesses with anything technical.',
       image: 'websitedesign.jpg',
       features: [
         {
-          header: 'Technical brief, analysis and support',
+          header: 'Prototyping, designing, POCs',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'Computing and Webmaster Support',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'Customisation and configuration',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'Data visualization and reporting',
           icon: ['fas', 'check']
         },
         {
@@ -343,8 +363,8 @@ export const state = () => ({
           icon: ['fas', 'check']
         }
       ],
-      price: { value: 80, unit: 'hour', discount: 0 },
-      isFeatured: false,
+      price: { value: 90, unit: 'hour', discount: 0 },
+      isFeatured: true,
       isFeaturedOrder: 5,
       relatedServices: ['contracting-nz'],
       keywords: [...commonKeywords, 'hourly consulting services']

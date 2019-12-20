@@ -14,7 +14,7 @@
             deck
             no-body
             class="cardSmall servicesCard lax"
-            data-lax-preset="zoomInOut driftRight"
+            data-lax-preset="zoomIn"
           >
             <b-card-body>
               <span :text="item.landing.header" v-html="item.image" />

@@ -109,7 +109,7 @@ export const state = () => ({
         `${process.env.author}`
       ],
       jobTitle: 'Technical Lead',
-      description: '20+ years experience in web, data, cloud, search, team leading & mentoring.',
+      description: 'Experienced IT generalist and tech enthusiast with 20+ years experience across web, data, cloud, search & mentoring.',
       image: '/imgs/stefano-pietroiusti.jpg'
     }
     ],

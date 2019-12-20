@@ -125,8 +125,8 @@ export default {
         loopFillGroupWithBlank: true,
         effect: 'coverflow',
         coverflowEffect: {
-          // rotate: 60,
-          // slideShadows: false,
+          rotate: 60,
+          slideShadows: false,
           depth: 3
           // stretch: -50
         },
@@ -166,7 +166,8 @@ export default {
 <style lang="scss" scoped>
 .swiper-container {
   width: 100%;
-  min-height: 100%;
+  max-height: 100%;
+  max-width: 100%;
 }
 .swiper-slide {
   display: inline-block;
@@ -176,6 +177,8 @@ export default {
   align-self: stretch;
   width: auto;
   height: auto !important;
+  max-height: 100% !important;
+  max-width: 100% !important;
   background: #fff;
   border: #000;
   /* Center slide text vertically */
@@ -195,22 +198,24 @@ export default {
 
 .swiper-button-prev,
 .swiper-button-next {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   background: white;
-  border: 2px solid grey;
-  color: grey;
+  border: 3px solid black;
+  color: black;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  border-radius: 60px;
-  z-index: 9999;
+  // transform: translateY(-50%);
+  border-radius: 50px;
+  z-index: 2;
+  margin: 1em;
 }
 
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
   background: white;
-  border: 2px solid black;
-  color: black;
+  border: 2px solid #00c3ff;
+  color: #00c3ff;
 }
+
 </style>

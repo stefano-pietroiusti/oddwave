@@ -5,8 +5,8 @@
         :src="logoPath"
         :srcset="logoPath.srcSet"
         fluid
-        alt="Websites & Digital Marketing by The Odd Wave"
-        text="Websites & Digital Marketing by The Odd Wave"
+        alt="Web Design, Development & Digital Marketing by The Odd Wave"
+        text="Web Design, Development & Digital Marketing by The Odd Wave"
         class="logo"
       >
     </b-navbar-brand>
@@ -184,32 +184,33 @@ export default {
 }
 </script>
 <style scoped lang="scss">
-@media (max-width: 992px) {
-  .navbar-collapse {
-    position: absolute;
-    top: 80px;
-        right: 100%;
-        padding-left: 15px;
-        padding-right: 15px;
-        padding-bottom: 15px;
-    width: 100%;
-    transition: all 0.3s ease;
-    display: block;
-      background: rgba(0, 0, 0, .1);
+// @media (max-width: 992px) {
+//   .navbar-collapse {
+//     position: absolute;
+//     top: 80px;
+//         right: 100%;
+//         padding-left: 15px;
+//         padding-right: 15px;
+//         padding-bottom: 15px;
+//     width: 100%;
+//     transition: all 0.3s ease;
+//     display: block;
+//       background: rgba(0, 0, 0, .9);
 
-  }
-  .navbar-collapse.collapsing {
-    height: auto !important;
-    margin-right: 50%;
-    transition: all 0.3s ease;
-    display: block;
-  }
-  .navbar-collapse.show {
-    right: 0;
-  }
-  .navbar-toggler > .close {
-    display: inline;
-  }
-}
+//   }
+  // .navbar-collapse.collapsing {
+  //   height: auto !important;
+  //   margin-right: 50%;
+  //   transition: all 0.3s ease;
+  //   display: block;
+  // }
+  // .navbar-collapse.show {
+  //   right: 0;
+  //   transition: all 0.3s ease;
+  // }
+//   .navbar-toggler > .close {
+//     display: inline;
+//   }
+// }
 
 </style>

@@ -20,7 +20,11 @@
             </div>
           </div>
 
-          <div class="text-center text-white rounded-circle back">
+          <div
+            class="lax text-center text-white rounded-circle back"
+            data-lax-rotate-y="(vh*1.2) 90, (vh) 90, (vh*0.9) 180, (vh*0.8) 360, (vh*0.2) 360, (vh*0.1) 180, 0 90, (-100) 90"
+            data-lax-anchor="self"
+          >
             <div class="img-overlay-bottom text-small text-center p-5 w-100 h-100">
               <a :href="`${item.sameAs[0]}`" :title="item.name" class="text-white text-small profileLink">{{ item.description }}<br>Read more &#43;</a>
             </div>
@@ -120,12 +124,17 @@ export default {
     margin: 0 auto;
 }
 
-.back {
+/* .back {
     -webkit-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
+} */
+.back {
+    -webkit-transform: rotateY(90deg);
+    transform: rotateY(90deg);
 }
-.flip-container:hover .back {
+
+/* .flip-container:hover .back {
     transform: rotateY(0deg);
 
-}
+} */
 </style>

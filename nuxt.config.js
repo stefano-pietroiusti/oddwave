@@ -32,10 +32,8 @@ const routes = [
   '/services/web-design-nz',
   '/services/photographer-nz',
   '/services/contracting-nz/',
-  '/products/photography-website/',
   '/products/pro-business-website-landing/',
   '/products/pro-business-website/',
-  '/products/nuxtjs-templates-nz/',
   '/products/seo-website-package-1/',
   '/products/seo-website-package-5/',
   '/products/seo-website-package-10/',
@@ -43,7 +41,8 @@ const routes = [
   '/products/website-digital-photo-24/',
   '/products/website-digital-photo-100/',
   '/products/film-photography-nz/',
-  '/products/contracting-nz/'
+  '/products/creating-solutions-nz/',
+  '/products/technical-support-nz/'
 ]
 
 const baseUrl = process.env.BASE_URL || 'http://localhost:3000'

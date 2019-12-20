@@ -481,7 +481,6 @@ hr {
     bottom: 0;
     left: 0;
     border-bottom: 5px solid #00c3ff;
-    transition: all 1s;
   }
 }
 
@@ -639,11 +638,11 @@ hr {
   background-color: var(--primary);
   color: var(--secondary);
   font-size: inherit;
-  -webkit-transition: all 0.6s ease-out;
-  -moz-transition: all 0.6s ease-out;
-  -o-transition: all 0.6s ease-out;
-  -ms-transition: all 0.6s ease-out;
-  transition: all 0.6s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 //upper arrow

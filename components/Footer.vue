@@ -3,8 +3,10 @@
   <b-container fluid class="p-0 m-0 bg-black">
     <b-container fluid class="w-75 pt-10 mx-auto text-light text-left bg-black footer text-medium">
       <b-row>
-        <b-col>
-          <h2>Contact Us</h2>
+        <b-col xs="12" sm="12" md="6" lg="6">
+          <h2 class="pt-5">
+            Contact Us
+          </h2>
           <ul class="pl-2">
             <li v-for="(item,i) in contactInfo.phone" :key="i">
               <a :href="`tel:${item}`" :title="item">{{ item }}</a>
@@ -17,8 +19,8 @@
             </li>
           </ul>
         </b-col>
-        <b-col>
-          <h2>
+        <b-col xs="12" sm="12" md="6" lg="6">
+          <h2 class="pt-5">
             Social
           </h2>
           <ul class="pl-2">
@@ -46,7 +48,9 @@
           </ul>
         </b-col>
         <b-col>
-          <h2>Services</h2>
+          <h2 class="pt-5">
+            Services
+          </h2>
           <ul class="pl-2">
             <li v-for="item in services" :key="item.id">
               <nuxt-link :to="'/services/' + item.id + '/'">
@@ -56,7 +60,9 @@
           </ul>
         </b-col>
         <b-col>
-          <h2>Pricing</h2>
+          <h2 class="pt-5">
+            Pricing
+          </h2>
           <ul class="pl-2">
             <li v-for="item in products" :key="item.id">
               <nuxt-link :to="'/products/' + item.id + '/'">

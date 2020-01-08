@@ -326,7 +326,7 @@ export const state = () => ({
           icon: ['fas', 'check']
         }
       ],
-      price: { value: 90, unit: 'hour', discount: 0 },
+      price: { value: 104, unit: 'hour', discount: 0 },
       isFeatured: true,
       isFeaturedOrder: 5,
       relatedServices: ['contracting-nz'],
@@ -363,7 +363,7 @@ export const state = () => ({
           icon: ['fas', 'check']
         }
       ],
-      price: { value: 90, unit: 'hour', discount: 0 },
+      price: { value: 104, unit: 'hour', discount: 0 },
       isFeatured: true,
       isFeaturedOrder: 5,
       relatedServices: ['contracting-nz'],

@@ -5,15 +5,10 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/css/swiper.css'
 
 const options = {
-  loop: false,
+  loop: true,
   slidesPerView: 'auto',
   spaceBetween: 0,
   centeredSlides: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-    dynamicBullets: true
-  },
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev'

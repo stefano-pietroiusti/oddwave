@@ -80,7 +80,7 @@ export default {
       const image2x = this.bannerImagePath['2']
       return {
         backgroundImage: `linear-gradient(45deg,  ${this.pbgimage.color1}, ${this.pbgimage.color2}), url(${image1x}), -webkit-image-set(url(${image1x}) 1x, url(${image2x}) 2x)`,
-        backgroundAttachment: 'fixed',
+        // backgroundAttachment: 'fixed',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover'
@@ -94,10 +94,10 @@ export default {
       const backgroundImage = this.pbgimage.url ? `url(${fileName})` : undefined
       return {
         backgroundImage,
-        backgroundAttachment: 'fixed',
+        // backgroundAttachment: 'fixed',
         backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover'
+        backgroundRepeat: 'no-repeat'
+        // backgroundSize: 'cover'
       }
     }
   }

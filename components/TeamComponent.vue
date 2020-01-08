@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
-  <b-container fluid class="text-center pb-5">
+  <b-container fluid class="text-center m-0 mb-5 text-center">
     <!-- <b-row>
       <b-col cols="12" class="p-5">
         <h2 class="sectionHeader">
@@ -8,26 +8,33 @@
         </h2>
       </b-col>
     </b-row>-->
-    <b-row>
-      <div v-for="(item, i) in team" :key="i" class="col flip-container text-center my-1">
+    <b-row no-gutters>
+      <div v-for="(item, i) in team" :key="i" class="col flip-container text-center my-4">
         <div class="flipper pb-5">
           <div class="text-center text-white rounded-circle front">
-            <img :src="`${ item.image }`" :alt="item.name" class="teamImg rounded-circle">
-            <div class="img-overlay-bottom text-small text-center p-3">
-              <b>{{ item.name }}</b>
-              <br>
-              {{ item.jobTitle }}
-            </div>
+            <a :href="`${item.sameAs[0]}`" :title="item.name" class="text-white text-small profileLink">
+              <img :src="`${ item.image }`" :alt="item.name" class="teamImg rounded-circle">
+              <div class="img-overlay-bottom text-small text-center p-3">
+
+                <b>{{ item.name }}</b>
+                <br>
+                {{ item.jobTitle }}
+              </div>
+            </a>
           </div>
 
           <div
             class="lax text-center text-white rounded-circle back"
-            data-lax-rotate-y="(vh*1.2) 90, (vh) 90, (vh*0.9) 180, (vh*0.8) 360, (vh*0.2) 360, (vh*0.1) 180, 0 90, (-100) 90"
+            data-lax-rotate-y_large="(vh*1.2) 90, (vh) 90, (vh*0.9) 180, (vh*0.8) 360, (vh*0.2) 360, (vh*0.1) 180, 0 90, (-100) 90"
+            data-lax-rotate-y_small="(vh*1.2) 90, (vh) 90, (vh*0.6) 360, (vh*0.1) 360"
             data-lax-anchor="self"
           >
-            <div class="img-overlay-bottom text-small text-center p-5 w-100 h-100">
-              <a :href="`${item.sameAs[0]}`" :title="item.name" class="text-white text-small profileLink">{{ item.description }}<br>Read more &#43;</a>
-            </div>
+            <!-- data-lax-rotate-y="(vh*1.2) 90, (vh) 90, (vh*0.9) 180, (vh*0.8) 360, (vh*0.2) 360, (vh*0.1) 180, 0 90, (-100) 90" -->
+            <a :href="`${item.sameAs[0]}`" :title="item.name" class="text-white text-small profileLink">
+              <div class="img-overlay-bottom text-small text-center p-5 w-100 h-100">
+                {{ item.description }}<br>Read more &#43;
+              </div>
+            </a>
           </div>
         </div>
         </a>

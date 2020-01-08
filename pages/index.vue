@@ -11,11 +11,7 @@
 
     <SectionComponent pheader="About Us" :pcontent="client.about" class="align-self-center" />
 
-    <TeamComponent
-      pheader="Our team"
-      :pteam="team"
-      class="align-self-center"
-    />
+    <TeamComponent pheader="Our team" :pteam="team" class="align-self-center" />
 
     <SectionComponent
       pheader="Services"
@@ -93,6 +89,11 @@ export default {
           hid: 'og:url',
           property: 'og:url',
           content
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.client.title
         },
         {
           hid: 'og:description',
@@ -214,7 +215,10 @@ export default {
     // })
     window.addEventListener('scroll', this.onScroll)
     this.onScroll()
-    lax.setup() // init
+    lax.setup({
+      breakpoints: { small: 0, large: 768 }
+
+    }) // init
     window.addEventListener('resize', function () {
       lax.updateElements()
     })
@@ -376,14 +380,15 @@ p.watermark {
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -400,5 +405,4 @@ p.watermark {
   color: white;
   transform: rotateY(180deg);
 }
-
 </style>

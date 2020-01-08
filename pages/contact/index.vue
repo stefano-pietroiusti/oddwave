@@ -63,6 +63,11 @@ export default {
           content
         },
         {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.title
+        },
+        {
           hid: 'og:description',
           name: 'og:description',
           content: this.description
@@ -72,11 +77,6 @@ export default {
           name: 'description',
           content: this.description
         }
-        // {
-        //   hid: 'keywords',
-        //   name: 'keywords',
-        //   content: this.keywords.join()
-        // }
       ]
       // __dangerouslyDisableSanitizers: ['script'],
       // script: [{ innerHTML: JSON.stringify(this.jsonld), type: 'application/ld+json' }]

@@ -108,6 +108,11 @@ export default {
           content
         },
         {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.product.title
+        },
+        {
           hid: 'og:description',
           name: 'og:description',
           content: this.product.description
@@ -165,7 +170,9 @@ export default {
   //   }
   // },
   mounted () {
-    lax.setup() // init
+    lax.setup({
+      breakpoints: { small: 0, large: 768 }
+    })
     window.addEventListener('resize', function () {
       lax.updateElements()
     })

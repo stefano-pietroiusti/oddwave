@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
   <b-container fluid class="mx-auto text-center bg-white">
-    <b-row>
+    <b-row v-if="products.length>0">
       <b-col cols="12" class="p-5 align-items-center text-larger">
         <h2 :class="headerClass">
           {{ header }}
@@ -14,7 +14,7 @@
         <swiper :options="swiperOption" class="swiper-container mx-auto">
           <swiper-slide v-for="(item, i) in products" :key="i" class="swiper-slide">
             <nuxt-link :to="`/contact/`" :title="`${item.header}`" class="productLink">
-              <b-card no-body class="text-white bg-primary h-100 cardMedium">
+              <b-card no-body class="text-white bg-primary h-100">
                 <b-card-body>
                   <h2 v-if="item.price" class="text-medium">
                     {{ item.header }}
@@ -110,38 +110,42 @@ export default {
   data () {
     return {
       swiperOption: {
-        // centeredSlides: true,
+        centeredSlides: true,
         direction: 'horizontal',
         loop: true,
-        autoplay: {
-          delay: 10000,
-          disableOnInteraction: false
-        },
-        slidesPerView: 3,
-        slidesPerGroup: 1,
-        loopadditionalslides: 0,
-        spaceBetween: 5,
+        // autoplay: {
+        //   delay: 10000,
+        //   disableOnInteraction: false
+        // },
+        slidesPerView: '3',
+        // slidesPerGroup: 1,
+        // loopadditionalslides: 0,
+        // spaceBetween: 5,
         mousewheel: false,
-        loopFillGroupWithBlank: true,
+        // loopFillGroupWithBlank: true,
         effect: 'coverflow',
         coverflowEffect: {
-          rotate: 60,
-          slideShadows: false,
-          depth: 3
-          // stretch: -50
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: false
         },
         pagination: {
           el: '.swiper-pagination',
-          clickable: true
+          clickable: true,
+          renderBullet (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + '</span>'
+          }
         },
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev'
         },
         breakpoints: {
-          991: {
+          768: {
             slidesPerView: 1,
-            slidesOffsetBefore: 1,
+            slidesOffsetBefore: 0,
             spaceBetween: 5
           },
           1199: {
@@ -171,16 +175,14 @@ export default {
 }
 .swiper-slide {
   display: inline-block;
-  // align-content: center;
-  // align-items: center;
-  // align-self: center;
-  align-self: stretch;
+  align-self: center;
   width: auto;
-  height: auto !important;
+  padding-bottom: 50px;
+  height: 100% !important;
   max-height: 100% !important;
   max-width: 100% !important;
   background: #fff;
-  border: #000;
+  // border: #000;
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -198,24 +200,46 @@ export default {
 
 .swiper-button-prev,
 .swiper-button-next {
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
   background: white;
-  border: 3px solid black;
-  color: black;
+  border: 5px solid #00c3ff;
+  color: #00c3ff;
   position: absolute;
   top: 50%;
-  // transform: translateY(-50%);
+  transform: translateY(-100%);
   border-radius: 50px;
-  z-index: 2;
+  z-index: 100;
   margin: 1em;
+  opacity: 0.3;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
 }
 
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-  background: white;
-  border: 2px solid #00c3ff;
-  color: #00c3ff;
+  opacity: 1;
 }
+// .swiper-pagination-bullet {
+//  display: inline-block;
+//   width: 20px;
+//   height: 20px;
+//   text-align: center;
+//   line-height: 20px;
+//   font-size: 10px;
+//   color: #000;
+//   opacity: 1;
+//   background: rgba(0, 0, 0, 1);
+// }
 
+// .swiper-pagination-bullet-active {
+//   color: #fff;
+//   background: #007aff;
+// }
 </style>

@@ -15,6 +15,8 @@
             no-body
             class="cardSmall servicesCard lax"
             data-lax-preset="zoomIn"
+            data-lax-preset_large="zoomIn"
+            data-lax-preset_small="zoomIn"
           >
             <b-card-body>
               <span :text="item.landing.header" v-html="item.image" />

@@ -1,6 +1,27 @@
 <template>
-  <b-navbar fixed="top" toggleable="lg" :type="theme" :variant="theme">
-    <b-navbar-brand to="/" title="Web Design by The Odd Wave" exact exact-active-class>
+  <b-navbar fixed="top" toggleable="lg" :type="theme" :variant="theme" class="p-0 m-0">
+    <!-- <button
+      type="button"
+      data-target="#nav-collapse"
+      aria-label="Toggle navigation"
+      aria-controls="nav-collapse"
+      aria-expanded="false"
+      class="custom-toggler navbar-toggler-right navbar-toggler"
+    >
+      <span class="navbar-toggler-icon" />
+    </button>-->
+    <b-navbar-toggle target="nav-collapse" class="navbar-toggler collapsed">
+      <span />
+      <span />
+      <span />
+    </b-navbar-toggle>
+    <b-navbar-brand
+      to="/"
+      title="Web Design by The Odd Wave"
+      exact
+      exact-active-class
+      class="px-4 mx-0"
+    >
       <img
         :src="logoPath"
         :srcset="logoPath.srcSet"
@@ -10,22 +31,7 @@
         class="logo"
       >
     </b-navbar-brand>
-    <!-- <div id="content-mobile">
-      <a :href="`tel:${callAction.telephone}`" :title="`Call us: ${callAction.telephone}`">
-        <font-awesome-icon
-          :icon="['fas', 'phone']"
-          :class="`fa fa-medium fa-hover pl-2 ml-2 ${color}`"
-        />
-      </a>
-      <a :href="`mailto:${callAction.email}`" :title="`Email us: ${callAction.email}`">
-        <font-awesome-icon
-          :icon="['fas', 'envelope']"
-          :class="`fa fa-medium fa-hover pl-2 ml-2 ${color}`"
-        />
-      </a>
-    </div>-->
 
-    <b-navbar-toggle target="nav-collapse" class="custom-toggler navbar-toggler-right" />
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav role="navigation">
         <b-nav-item to="/" exact exact-active-class="underline">
@@ -51,7 +57,7 @@
         <b-nav-item-dropdown
           text="Pricing"
           exact
-          :extra-toggle-classes="this.$route.path === 'products' ? 'activeClassServicesProducts' : ''"
+          :extra-toggle-classes="this.$route.name === 'products-id' ? 'activeClassServicesProducts' : ''"
         >
           <b-dropdown-item
             v-for="item in products"
@@ -183,34 +189,141 @@ export default {
   }
 }
 </script>
-<style scoped lang="scss">
-// @media (max-width: 992px) {
-//   .navbar-collapse {
-//     position: absolute;
-//     top: 80px;
-//         right: 100%;
-//         padding-left: 15px;
-//         padding-right: 15px;
-//         padding-bottom: 15px;
-//     width: 100%;
-//     transition: all 0.3s ease;
-//     display: block;
-//       background: rgba(0, 0, 0, .9);
+<style scoped>
+.navbar-toggler {
+  margin: 0 1rem 0 0rem;
+  padding: 1rem !important;
+  border: none;
+}
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler:hover {
+  outline: none;
+  box-shadow: none;
+  border: 1px solid #00c3ff;
+  border-radius: 25%;
+}
+.navbar-toggler {
+  border: 1px solid #00c3ff;
+  border-radius: 25%;
+  color:#00c3ff;
+  background-image: none;
+  align-content: center;
+ /* background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(84, 200, 232, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); */
+}
 
-//   }
-  // .navbar-collapse.collapsing {
-  //   height: auto !important;
-  //   margin-right: 50%;
-  //   transition: all 0.3s ease;
-  //   display: block;
-  // }
-  // .navbar-collapse.show {
-  //   right: 0;
-  //   transition: all 0.3s ease;
-  // }
-//   .navbar-toggler > .close {
-//     display: inline;
-//   }
-// }
+.navbar-theoddwave .navbar-collapse.collapse.show .navbar-nav {
+  background: rgba(0, 0, 0, 1);
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  left: -50 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+
+  width: 100%;
+}
+
+/* .navbar-toggler:hover {
+  background: transparent !important;
+}
+.navbar-toggler .icon-bar {
+  width: 22px;
+  transition: all 0.2s;
+}
+.navbar-toggler .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+.navbar-toggler .middle-bar {
+  opacity: 0;
+}
+.navbar-toggler .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+.navbar-toggler.collapsed .top-bar {
+  transform: rotate(0);
+}
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+}
+.navbar-toggler.collapsed .bottom-bar {
+  transform: rotate(0);
+} */
+
+.navbar-toggler[aria-expanded="false"] span {
+  display: block;
+  background-color: #00c3ff;
+  height: 4px;
+  width: 40px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  position: relative;
+  left: 0;
+  opacity: 1;
+}
+
+.navbar-toggler span:nth-child(1),
+.navbar-toggler span:nth-child(3) {
+  -webkit-transition: transform 0.35s ease-in-out;
+  -moz-transition: transform 0.35s ease-in-out;
+  -o-transition: transform 0.35s ease-in-out;
+  transition: transform 0.35s ease-in-out;
+}
+
+.navbar-toggler[aria-expanded="false"] span:nth-child(1),
+.navbar-toggler[aria-expanded="false"] span:nth-child(3) {
+  width: 30px;
+  margin-left: 5px;
+
+}
+
+.navbar-toggler[aria-expanded="true"] span:nth-child(1) {
+  /* position: absolute; */
+  display: block;
+  background-color: #00c3ff;
+  height: 4px;
+  width: 40px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+  opacity: 0.9;
+}
+
+.navbar-toggler[aria-expanded="true"] span:nth-child(2) {
+  height: 12px;
+  visibility: hidden;
+  background-color: transparent;
+}
+
+.navbar-toggler[aria-expanded="true"] span:nth-child(3) {
+    height: 12px;
+  visibility: hidden;
+  background-color: transparent;
+  /* position:absolute;
+  display: block;
+  background-color: #00c3ff;
+  height: 4px;
+  width: 40px;
+  margin-top: 4px;
+  margin-bottom: 12px;
+  left: 21px;
+  top: 30px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+  opacity: 0.9; */
+}
 
 </style>

@@ -32,10 +32,8 @@ const routes = [
   '/services/web-design-nz',
   '/services/photographer-nz',
   '/services/contracting-nz/',
-  '/products/photography-website/',
   '/products/pro-business-website-landing/',
   '/products/pro-business-website/',
-  '/products/nuxtjs-templates-nz/',
   '/products/seo-website-package-1/',
   '/products/seo-website-package-5/',
   '/products/seo-website-package-10/',
@@ -43,7 +41,8 @@ const routes = [
   '/products/website-digital-photo-24/',
   '/products/website-digital-photo-100/',
   '/products/film-photography-nz/',
-  '/products/contracting-nz/'
+  '/products/creating-solutions-nz/',
+  '/products/technical-support-nz/'
 ]
 
 const baseUrl = process.env.BASE_URL || 'http://localhost:3000'
@@ -124,13 +123,15 @@ export default {
   loading: { color: '#fff' },
   css: [
     '@/assets/scss/custom.scss'
+    // 'swiper/dist/css/swiper.css'
   ],
   plugins: [
     '~/plugins/fontawesome.js',
     '~/plugins/jsonld',
     { src: '~/plugins/vue-notifications', mode: 'client' },
     { src: '~/plugins/lax.js', mode: 'client' },
-    { src: '~/plugins/vue-fb-customer-chat', mode: 'client' }
+    { src: '~/plugins/vue-fb-customer-chat', mode: 'client' },
+    { src: '~/plugins/vue-swiper', mode: 'client' }
   ],
   devModules: [
     '@nuxtjs/eslint-module'
@@ -161,11 +162,11 @@ export default {
     // },
     custom: {
       families: [
-        'Montserrat:400,700',
+        'Montserrat:100, 400,700',
         'Lato'
       ],
       urls: [
-        'https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap',
+        'https://fonts.googleapis.com/css?family=Montserrat:100,400,700&display=swap',
         'https://fonts.googleapis.com/css?family=Lato&display=swap'
       ]
     },

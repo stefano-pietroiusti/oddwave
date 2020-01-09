@@ -1,5 +1,14 @@
 <template>
-  <b-container fluid class="m-0 p-5">
+  <b-button
+    pill
+    :variant="pvariant"
+    :to="blink"
+    class="buttonComponent letter-spacing  m-2 animated pulse delay-1s"
+  >
+    {{ btext }}
+  </b-button>
+
+  <!-- <b-container fluid class="m-0 p-5">
     <b-row>
       <b-col>
         <b-button :variant="variant" :to="blink" class="text-medium" :alt="btext">
@@ -7,23 +16,23 @@
         </b-button>
       </b-col>
     </b-row>
-  </b-container>
+  </b-container> -->
 </template>
 <script>
 export default {
   props: {
     btext: {
       type: String,
-      default: ''
+      default: 'free consultation'
     },
     blink: {
       type: String,
-      default: 'Get Started'
+      default: '/contact/'
     },
     pvariant: {
       type: String,
       default () {
-        return 'outline-success'
+        return 'secondary'
       }
     }
   },

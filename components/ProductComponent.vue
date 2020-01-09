@@ -55,7 +55,7 @@
         </b-container>
         <span class="text-success text-large text-center">
           <ButtonComponent
-            btext="CONTACT US FOR A FREE CONSULT"
+            btext="Free consultation"
             pvariant="outline-black"
             blink="/contact/"
           />

@@ -3,83 +3,18 @@ const commonKeywords = ['developing solutions', 'creating solutions', 'north sho
 export const state = () => ({
   all: [
     {
-      id: 'photography-website',
-      icon: ['fab', 'dev'],
-      variant: 'rwcyellow',
-      title: 'Photography website with SEO',
-      linkTitle: 'Photography Website & SEO',
-      description: 'A photography website with graphics, optimized images, animation, photo grids, carousels',
-      header: 'Professional Photographer Website & SEO',
-      image: 'websitedesign.jpg',
-      features: [
-        {
-          header: 'Optimized images',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Optimized content',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Scroll and text animation effects',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'SEO Website Package',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Website address registration',
-          text: 'Suitable domain name registration',
-          icon: ['fas', 'check']
-        },
-        {
-          header: '1 year web hosting & email hosting',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Website security',
-          text: 'HTTPS web server & website hosting',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Search & Mobile friendly',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'JSON-LD Structured Data Support for LocalBusiness / Service',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Social media links',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Unlimited email',
-          text:
-            'We will set up 1 - 5 email addresses for you initially',
-          icon: ['fas', 'check']
-        }
-      ],
-      isFeatured: false,
-      isFeaturedOrder: 0,
-      relatedServices: ['web-design-nz'],
-      price: { value: 648, unit: 'package', discount: 0.3, flexible: true },
-      keywords: [...commonKeywords, 'photography website package', 'photographer website']
-    },
-    {
       id: 'pro-business-website-landing',
       icon: ['fab', 'dev'],
       variant: 'rwcyellow',
       title: 'Website Landing Page with SEO',
       linkTitle: 'Website Landing Page & SEO',
-      description: 'Promotion-specific mobile and search friendly business web page with SEO, animation, media and external links',
+      description: 'Custom web landing page with animations, stock photos, profiles, social media integration, SEO',
       header: 'Website Landing Page & SEO',
       image: 'websitedesign.jpg',
       features: [
         {
-          header: 'Website landing page design',
-          text: 'Website homepage design, Content design, stock photos, Text animation &/ scroll animation, external links to services, documents, social media',
+          header: 'Custom Website design & development',
+          text: 'Website homepage design, content design, stock photos, animation, security',
           icon: ['fas', 'check']
         },
         {
@@ -88,51 +23,34 @@ export const state = () => ({
           icon: ['fas', 'check']
         },
         {
-          header: 'SEO Website Package',
-          text: 'SEO Optimization of a web page',
+          header: 'Advanced Data/Content and SEO optimization with JSON-LD Structured Data Support',
+          text: 'Advanced Data/Content and SEO optimization with in-memory data store and JSON-LD Structured Data Support',
           icon: ['fas', 'check']
         },
         {
-          header: 'Website address registration',
-          text: 'Suitable domain name registration',
+          header: 'Responsive Mobile and Search-Engine friendly',
           icon: ['fas', 'check']
         },
         {
-          header: 'Web hosting & email hosting setup',
+          header: 'Web hosting & email setup',
           icon: ['fas', 'check']
+        }
+      ],
+      samples: [
+        {
+          image: 'catering.jpg',
+          text: 'Custom design & development for Catering companies'
         },
         {
-          header: 'Website security',
-          text: 'HTTPS web server & website hosting',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Mobile friendly',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Search-engine friendly',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'JSON-LD Structured Data Support for LocalBusiness',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Social media links',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Unlimited email',
-          text:
-            'We will set up 1 - 5 email addresses for you initially',
-          icon: ['fas', 'check']
+          testimonial: 'We developed a great partnership with the Odd Wave Digital and are impressed by their dedication to helping us launch online successfully. We continue to use their services for SEO and  Digital marketing management so we can focus on our core business.',
+          author: 'Jacques Pretorius, CEO, Jumalutech fencing',
+          link: 'www.jumlautech.co.za'
         }
       ],
       isFeatured: true,
       isFeaturedOrder: 0,
       relatedServices: ['web-design-nz'],
-      price: { value: 648, unit: 'package', discount: 0.25, flexible: true },
+      price: { value: 648, unit: 'package', discount: 0, flexible: true },
       keywords: [...commonKeywords, 'business website package', 'custom website', 'landing page', 'products website', 'services website', 'website with contact form']
     },
     {
@@ -141,13 +59,18 @@ export const state = () => ({
       variant: 'rwcyellow',
       title: 'Business Website with SEO',
       linkTitle: 'Business Website & SEO Package',
-      description: 'Universal multi-page professional business website package with SEO and scalable to optional add-ons after consultation',
+      description: 'Multi-page business website',
       header: 'Business Website & SEO Package',
       name: 'Business Website',
       image: 'websitedesign.jpg',
       features: [
         {
-          header: '5 page custom website',
+          header: '5 page custom website design & development',
+          text: 'Landing, Contact Us, Products &/ Services',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'Custom Contact Us page',
           text: 'Landing, Contact Us, Products &/ Services',
           icon: ['fas', 'check']
         },
@@ -157,19 +80,21 @@ export const state = () => ({
           icon: ['fas', 'check']
         },
         {
-          header: 'SEO Website Package',
+          header: 'Advanced SEO optimization with JSON-LD Structured Data Support',
           text: 'Optimization of up to 5 Pages',
-          icon: ['fas', 'check']
-        }, {
-          header: 'Search and Mobile friendly',
-          icon: ['fas', 'check']
-        }, {
-          header: 'JSON-LD Structured Data Support',
-          text: 'JSON-LD Logo, Organization, LocalBusiness',
           icon: ['fas', 'check']
         },
         {
-          header: 'Stock Images',
+          header: 'Mobile and Search-engine friendly',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'Web hosting & email setup',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'JSON-LD Structured Data Support',
+          text: 'JSON-LD Logo, Organization, LocalBusiness',
           icon: ['fas', 'check']
         },
         {
@@ -208,40 +133,23 @@ export const state = () => ({
           icon: ['fas', 'check']
         }
       ],
+      samples: [
+        {
+          image: 'restaurant.jpg',
+          text: 'Custom design & development for leading NZ restaurant businesses'
+        },
+        {
+          testimonial: 'We developed a great partnership with the Odd Wave Digital and are impressed by their dedication to helping us launch online successfully. We continue to use their services for SEO and  Digital marketing management so we can focus on our core business.',
+          author: 'Jacques Pretorius, CEO, Jumalutech fencing',
+          link: 'www.jumlautech.co.za'
+        }
+      ],
       isFeatured: true,
       isFeaturedOrder: 0,
       relatedServices: ['web-design-nz'],
-      price: { value: 1950, unit: 'package', discount: 0.2, flexible: true },
+      price: { value: 1950, unit: 'package', discount: 0, flexible: true },
       keywords: [...commonKeywords, 'business website package', 'custom website', 'landing page', 'products website', 'services website', 'website with contact form']
     },
-    // {
-    //   id: 'nuxtjs-templates-nz',
-    //   icon: ['fab', 'dev'],
-    //   variant: 'rwcyellow',
-    //   title: 'Nuxtjs templates with Vuejs Vuex Bootstrap 4',
-    //   linkTitle: 'Nuxtjs templates',
-    //   description: 'Order a Nuxtjs template that includes bootstrap 4 SCSS, dynamic Vuejs Components, vuex store with getters',
-    //   header: 'Nuxtjs template',
-    //   image: 'websitedesign.jpg',
-    //   features: [
-    //     {
-    //       header: 'Vuex store',
-    //       icon: ['fas', 'check']
-    //     },
-    //     {
-    //       header: 'Dynamic Vuejs content components',
-    //       icon: ['fas', 'check']
-    //     }, {
-    //       header: 'Bootstrap 4 SCSS',
-    //       icon: ['fas', 'check']
-    //     }
-    //   ],
-    //   price: { value: 120, unit: 'template', discount: 0 },
-    //   isFeatured: false,
-    //   isFeaturedOrder: 5,
-    //   relatedServices: ['web-design-nz'],
-    //   keywords: [...commonKeywords, 'hourly consulting services']
-    // },
     {
       id: 'seo-website-package-1',
       icon: ['fas', 'search'],
@@ -270,8 +178,15 @@ export const state = () => ({
           header: 'Following Google Webmaster Guidelines'
         }
       ],
+      samples: [
+        {
+          testimonial: 'The Odd Wave Digital SEO services are professional, flexible and we look forward to building a trustworthy relationship with them for our online marketing.',
+          author: 'Cameron, Owner, Create Renovations',
+          link: 'https://www.createrenovations.co.nz/'
+        }
+      ],
       price: { value: 130, unit: 'package', discount: 0, flexible: true },
-      isFeatured: false,
+      isFeatured: true,
       isFeaturedOrder: 3,
       relatedServices: ['seo-nz'],
       keywords: [...commonKeywords, 'seo package A']
@@ -341,9 +256,9 @@ export const state = () => ({
       image: 'photography.jpg',
       features: [
       ],
-      isFeatured: false,
+      isFeatured: true,
       isFeaturedOrder: 5,
-      price: { value: 270, unit: 'package', discount: 0.20 },
+      price: { value: 270, unit: 'package', discount: 0.0 },
       relatedServices: ['photographer-nz'],
       keywords: [...commonKeywords, 'photography package']
     },
@@ -352,14 +267,14 @@ export const state = () => ({
       icon: ['fas', 'camera-retro'],
       variant: 'rwcblue',
       title: 'Digital Photography Package with 100 edited images',
-      linkTitle: 'Website Photography Pack 2.5HR x100',
+      linkTitle: 'Digital Photography Pack 2.5HR x100',
       description: 'Our digital photography package for large format digital product photos, services, backgrounds and website visuals. 2.5 hours photography time, rights and access to all images, including 100 edited images. ',
       header: 'Digital Photography Pack 2.5HR x100',
       image: 'photography.jpg',
 
       features: [
       ],
-      price: { value: 680, unit: 'package', discount: 0.20 },
+      price: { value: 680, unit: 'package', discount: 0.0 },
       relatedServices: ['photographer-nz'],
       keywords: [...commonKeywords, 'photography maxi package']
     },
@@ -389,22 +304,72 @@ export const state = () => ({
       keywords: [...commonKeywords, 'film photography package']
     },
     {
-      id: 'contracting-nz',
+      id: 'creating-solutions-nz',
       icon: ['fab', 'dev'],
       variant: 'rwcgreen',
-      title: 'Software Development | IT Specialists in Cloud Web Data Search',
-      linkTitle: 'Software Development Services',
-      header: 'Software Development Services',
-      description: 'Our company specializes in app development, cloud development, data engineering, data analysis and data visualization. Our software engineer services are charged per hour of consulting and for any combo of app development, data engineering, cloud services development, DevOps, data analysis, data visualization and reports development.',
+      title: 'Design and Development in Cloud, Web, Data, Search',
+      linkTitle: 'Design and Development Services',
+      header: 'Design and Development Services',
+      description: 'Supporting businesses with design and development across the Cloud, Web, Data and Search.',
       image: 'websitedesign.jpg',
       features: [
-        // {
-        //   header: 'Training and Knowledge transfer',
-        //   icon: ['fas', 'check']
-        // }
+        {
+          header: 'Custom design, development & engineering from your ideas, designs, POCs, APIs',
+          icon: ['fas', 'check']
+        }, {
+          header: 'Web design, Web development, Cloud development',
+          icon: ['fas', 'check']
+        }, {
+          header: 'Integration, Data Engineering',
+          icon: ['fas', 'check']
+        }, {
+          header: 'BI development, Data Analysis (TSQL, Qlikview, Excel, PowerBI)',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'Documentation & Training',
+          icon: ['fas', 'check']
+        }
       ],
-      price: { value: 120, unit: 'hour', discount: 0.25 },
-      isFeatured: false,
+      price: { value: 104, unit: 'hour', discount: 0 },
+      isFeatured: true,
+      isFeaturedOrder: 5,
+      relatedServices: ['contracting-nz'],
+      keywords: [...commonKeywords, 'hourly consulting services']
+    },
+    {
+      id: 'technical-support-nz',
+      icon: ['fab', 'dev'],
+      variant: 'rwcgreen',
+      title: 'Technical Help and Support North Shore Auckland NZ',
+      linkTitle: 'Technical Support Services',
+      header: 'Technical Help and Support',
+      description: 'Supporting businesses with anything technical.',
+      image: 'websitedesign.jpg',
+      features: [
+        {
+          header: 'Prototyping, designing, POCs',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'Computing and Webmaster Support',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'Customisation and configuration',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'Data visualization and reporting',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'Technical writing and documentation',
+          icon: ['fas', 'check']
+        }
+      ],
+      price: { value: 104, unit: 'hour', discount: 0 },
+      isFeatured: true,
       isFeaturedOrder: 5,
       relatedServices: ['contracting-nz'],
       keywords: [...commonKeywords, 'hourly consulting services']
@@ -433,15 +398,15 @@ export const getters = {
     })
   },
   getPrice: state => (price, discount) => {
-    const totalPrice = (Math.round(price * (1 - discount)) * 100) / 100
+    const gstRate = 0.15
+    const totalPrice = (Math.round(price * (1 - discount) * (1 + gstRate)) * 100) / 100
     return totalPrice
   },
   getPaymentPlan: state => (price) => {
-    const gstRate = 0.15
     const depositRate = price <= 500 ? 0.50 : 0.30
     const interestRate = 0.02
     const frequency = price <= 500 ? 0 : (price < 1000 ? 2 : 5)
-    const total = price * (1 + gstRate)
+    const total = price
     const depositBalance = Math.round((total * depositRate) * 100) / 100
     const remainingBalance = total * (1 - depositRate)
     const frequencyPayment = price <= 500 ? ((Math.round(total) * 100) / 100) : Math.round(((remainingBalance * (1 + interestRate)) / frequency) * 100) / 100
@@ -455,7 +420,7 @@ export const getters = {
         {
           id: item.id,
           header: item.header,
-          subheader: item.subheader,
+          description: item.description,
           features: item.features,
           price: getters.getPrice(item.price.value, item.price.discount),
           paymentPlan: item.price.flexible ? getters.getPaymentPlan(getters.getPrice(item.price.value, item.price.discount)) : undefined,
@@ -475,6 +440,7 @@ export const getters = {
       subheader: item.subheader,
       image: item.image,
       features: item.features,
+      relatedService: item.relatedServices[0],
       price: getters.getPrice(item.price.value, item.price.discount),
       priceCurrency: 'NZD',
       paymentPlan: item.price.flexible ? getters.getPaymentPlan(getters.getPrice(item.price.value, item.price.discount)) : undefined,
@@ -507,5 +473,21 @@ export const getters = {
           relatedServices: item.relatedServices
         }
       ))
+  },
+  getSamples: (state, getters) => () => {
+    // return state.all.filter(product => product.isFeatured)
+    // .sort((a, b) => { return a.isFeaturedOrder - b.isFeaturedOrder || a.price.value - b.price.value })
+    // return state.all.map(item => (
+    //   {
+    //     id: item.id,
+    //     header: item.header,
+    //     description: item.description,
+    //     features: item.features,
+    //     price: getters.getPrice(item.price.value, item.price.discount),
+    //     paymentPlan: item.price.flexible ? getters.getPaymentPlan(getters.getPrice(item.price.value, item.price.discount)) : undefined,
+    //     relatedServices: item.relatedServices
+    //   }
+    // ))
+    return state.all.samples
   }
 }

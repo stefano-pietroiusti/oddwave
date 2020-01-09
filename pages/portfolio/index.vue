@@ -1,35 +1,18 @@
 <template>
-  <div id="contactMainContainer">
+  <div id="samplesMainContainer">
     <Nav id="navbar" class="container-fluid" :ptheme="theme" />
     <b-container
       fluid
       :style="gradient"
-      class="contactBackground text-medium align-items-center text-center"
+      class="text-small align-items-center text-center"
     >
       <p class="watermark" />
     </b-container>
-    <!-- <AnimeBannerWordsHeaderComponent
-      pid="contact"
-      :pheader="animeheader"
-      :pbgimage="backgroundImage"
-      :pstyle="style"
-    /> -->
-
     <HeaderComponent
-      pheader="Contact Us"
+      pheader="Testimonials & sample custom design & development"
       pcontainerclass="mt-7 mb-5 borderLeft"
     />
-    <ContactForm :pservices="servicesDropDown" :pbgimage="backgroundImage" :pstyle="style" />
-    <!-- <b-container fluid class="text-primary text-medium w-100 text-left m-0 p-0">
-      <AnimeBannerWordsHeaderComponent
-        pid="contact"
-        :pheader="animeheader"
-        :pbgimage="backgroundImage"
-        :pstyle="style"
-      />
-      <HeaderComponent :pheader="header" />
-      <ContactForm :pservices="servicesDropDown" :pbgimage="backgroundImage" :pstyle="style" />
-    </b-container>-->
+
     <div class="m-0 pb-5 bg-transparent">
       <p id="whyussection" class="p-3" />
       <WhyUsComponent pheader="Why Us?" class="align-self-center" :pfeatures="features" />
@@ -41,14 +24,11 @@ import { mapGetters } from 'vuex'
 import Nav from '@/components/Nav'
 // import AnimeBannerWordsHeaderComponent from '@/components/AnimeBannerWordsHeaderComponent'
 import HeaderComponent from '@/components/HeaderComponent'
-import ContactForm from '@/components/ContactForm'
 import WhyUsComponent from '@/components/WhyUsComponent'
 export default {
   components: {
     Nav,
-    // AnimeBannerWordsHeaderComponent,
     HeaderComponent,
-    ContactForm,
     WhyUsComponent
   },
   head () {
@@ -92,12 +72,10 @@ export default {
       'help with photography'
     ]
     return {
-      title: 'Contact the Odd Wave Ltd Digital Solutions, North Shore, Torbay, Auckland, NZ',
+      title: 'Feedback and Samples of custom designs and developments by the Odd Wave Ltd Digital Solutions',
       description:
-        'Contact the Odd Wave Ltd Digital Solutions - connect with us for your next website, SEO, online marketing and consulting needs',
+        'Testimonials and samples of custom design and development from the Odd Wave Ltd Digital',
       animeheader: "LET'S CREATE SOMETHING GREAT",
-      header: 'Contact the Odd Wave Ltd for your vNext',
-      subheader: 'by the Odd Wave of people, technologies and services',
       backgroundurl: 'nz.svg',
       backgroundImage: {
         color1: 'rgba(102, 126, 234, 1)',
@@ -113,13 +91,7 @@ export default {
   computed: {
     ...mapGetters('services', ['summaries']),
     ...mapGetters('client', ['getClientFeatures']),
-    servicesDropDown () {
-      return this.summaries.map((item) => {
-        return { value: item.id, text: item.title, selected: true }
-      })
-    },
     features () {
-      // return this.getServiceFeatures(this.id) || this.getClientFeatures
       return this.getClientFeatures
     },
     bannerImagePath () {
@@ -145,21 +117,7 @@ export default {
     }
   },
   mounted () {
-    // console.log('route: ', this.$route.name)
-    // console.log('theme: ', this.theme)
     this.$ga.page(this.$route.path)
-    // window.addEventListener('scroll', function () {
-    //   const navbar = document.getElementById('navbar')
-    //   const navClasses = navbar.classList
-    //   console.log('navClasses: ', navClasses)
-    //   if (window.documentElement.scrollTop >= 150) {
-    //     if (navClasses.contains(this.theme) === false) {
-    //       navClasses.toggle(this.theme)
-    //     }
-    //   } else if (navClasses.contains(this.theme) === true) {
-    //     navClasses.toggle(this.theme)
-    //   }
-    // })
   }
 
 }

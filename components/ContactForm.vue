@@ -1,53 +1,50 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
-  <b-container id="contactForm" fluid class="text-primary w-100 text-left">
+  <b-container id="contactForm" fluid class="text-black w-100 text-center">
     <b-row>
-      <b-col cols="12" lg="6">
+      <b-col cols="12" xs="12" lg="4">
         <b-form
           v-if="show"
           small
-          class="text-primary text-left m-3"
+          class="text-black text-left m-3"
           @submit="onSubmit"
           @reset="onReset"
         >
           <b-form-group
+            id="input-group-1"
+            label-for="input-1"
+            label-size="lg"
+          >
+            <b-form-input
+              id="input-1"
+              v-model="form.name"
+              required
+              placeholder="Name"
+              size="lg"
+            />
+          </b-form-group>
+          <b-form-group
             id="input-group-2"
-            label="My name is:"
             label-for="input-2"
             label-size="lg"
           >
             <b-form-input
               id="input-2"
-              v-model="form.name"
-              required
-              placeholder="Enter name"
-              size="lg"
-            />
-          </b-form-group>
-          <b-form-group
-            id="input-group-1"
-            label="You may message me on:"
-            label-for="input-1"
-            label-size="lg"
-          >
-            <b-form-input
-              id="input-1"
               v-model="form.emailow"
               type="email"
-              placeholder="Enter email"
+              placeholder="Email"
               size="lg"
             />
           </b-form-group>
           <b-form-group
-            id="input-group-1"
-            label="You may call me on:"
-            label-for="input-1"
+            id="input-group-3"
+            label-for="input-3"
             label-size="lg"
           >
             <b-form-input
-              id="input-1"
+              id="input-3"
               v-model="form.call"
-              placeholder="Enter a phone number"
+              placeholder="Phone number"
               size="lg"
             />
           </b-form-group>
@@ -56,7 +53,7 @@
               id="email"
               v-model="form.email"
               type="email"
-              placeholder="Enter email"
+              placeholder="Email"
               size="sm"
             />
           </b-form-group>
@@ -78,15 +75,14 @@
             id="input-group-4"
             label="I need help with:"
             label-size="lg"
-            class="text-success mt-5"
+            class="mt-5"
           >
             <b-form-checkbox-group
               id="Services-selection"
               v-model="form.service"
               :options="pservices"
               stacked
-              buttons
-              button-variant="outline-primary"
+              variant="outline-black"
               size="lg"
             />
           </b-form-group>
@@ -113,16 +109,14 @@
           </b-button>
         </b-form>
       </b-col>
-      <b-col class="p-3 text-left text-small">
-        <!-- <h6>{{ getBase }}</h6> -->
-        <font-awesome-icon :icon="['fas', 'phone']" class="fa fa-small text-primary" />
-        <span v-html="companyphone1" />
+      <b-col class="p-3 pl-5 text-left text-black">
+        <span class="text-medium text-bold" v-html="company" />
         <br>
-        <font-awesome-icon :icon="['fas', 'phone']" class="fa fa-small text-primary" />
-        <span v-html="companyphone2" />
+        <span class="text-small" v-html="companyphone1" />
         <br>
-        <font-awesome-icon :icon="['fas', 'envelope']" class="fa fa-small text-primary" />
-        <span v-html="companyemail" />
+        <span class="text-small" v-html="companyphone2" />
+        <br>
+        <span class="text-small" v-html="companyemail" />
       </b-col>
     </b-row>
   </b-container>
@@ -159,12 +153,14 @@ export default {
   },
   data () {
     return {
+      company:
+        'The Odd Wave Ltd',
       companyemail:
-        '<a class="text-primary" href="mailto:&#116;&#101;&#097;&#109;&#064;&#116;&#104;&#101;&#111;&#100;&#100;&#119;&#097;&#118;&#101;&#046;&#099;&#111;&#046;&#110;&#122;">&#116;&#101;&#097;&#109;&#064;&#116;&#104;&#101;&#111;&#100;&#100;&#119;&#097;&#118;&#101;&#046;&#099;&#111;&#046;&#110;&#122;</a>',
+        '<a class="text-black" style="word-break: break-all;" href="mailto:&#116;&#101;&#097;&#109;&#064;&#116;&#104;&#101;&#111;&#100;&#100;&#119;&#097;&#118;&#101;&#046;&#099;&#111;&#046;&#110;&#122;">&#116;&#101;&#097;&#109;&#064;&#116;&#104;&#101;&#111;&#100;&#100;&#119;&#097;&#118;&#101;&#046;&#099;&#111;&#046;&#110;&#122;</a>',
       companyphone1:
-        '<a href="tel:+642108658172" class="text-primary">Jaline &nbsp;+64&nbsp;210&nbsp;8658&nbsp;172</a>',
+        '<a href="tel:+642108658172" class="text-black">Jaline &nbsp;+64&nbsp;210&nbsp;8658&nbsp;172</a>',
       companyphone2:
-        '<a href="tel:+642108823769" class="text-primary">Stef &nbsp;+64&nbsp;210&nbsp;8823&nbsp;769</a>',
+        '<a href="tel:+642108823769" class="text-black">Stef &nbsp;+64&nbsp;210&nbsp;8823&nbsp;769</a>',
       form: {
         email: '',
         emailow: '',

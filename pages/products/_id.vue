@@ -1,13 +1,14 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
   <div id="productsMainContainer">
-    <b-container id="productsBackground">
+    <Nav id="navbar" class="container-fluid" :ptheme="theme" />
+    <!-- <b-container id="productsBackground">
       <b-container id="productsTextBackground">
         <p class="watermark">
           {{ product.name }}
         </p>
       </b-container>
-    </b-container>
+    </b-container>-->
 
     <div id="productsContainer" class="text-center w-100">
       <!-- <AnimeBannerWordsHeaderComponent
@@ -17,43 +18,62 @@
         :pid="service.id"
         :panimation="service.animate"
       />-->
-
       <HeaderComponent
         :pheader="product.name"
-        :psubtitle="product.description"
-        :pstyle="{ bgStyle: 'text-secondary text-center' }"
+        pcontainerclass="mt-7 mb-5 borderLeft"
+        psubheaderclass="sectionHeaderPrimary"
       />
-      <!-- <p class="text-primary">
-        {{ product.description }}
-      </p> -->
-      <p v-if="product.price" class="text-primary text-large">
-        <span class="text-success text-large">${{ product.price }}</span> NZD + GST
-      </p>
-      <p v-if="product.price" class="text-primary">
-        {{ product.paymentPlan }}
-      </p>
-      <b-container v-if="product.features.length > 0" class="productContainer bg-primary text-primary text-left">
-        <b-list-group
-          v-for="(item, i) in product.features"
-          :key="i"
-          flush
-          class="bg-primary text-secondary"
-        >
-          <b-list-group-item class="bg-primary text-secondary">
-            <font-awesome-icon :icon="['fas', 'check']" :class="`fa fa-small text-success`" />
-            &nbsp;{{ item.header }}
-            <span v-if="item.text" class="text-small">({{ item.text }})</span>
-          </b-list-group-item>
-        </b-list-group>
-      </b-container>
-      <ButtonComponent
-        btext="Get started"
-        blink="/contact/"
-        :pvariant="`outline-black`"
-        class="text-center"
+      <!-- <span v-if="product.features.length > 0"> -->
+      <b-card no-body class="text-white bg-primary h-auto w-auto w-100-xs w-100-sm w-75-md w-50-lg w-50-xl">
+        <b-card-body>
+          <h2 v-if="product.price">
+            <span class="text-large price">${{ product.price }}</span>
+          </h2>
+          <b-card-text>{{ product.description }}</b-card-text>
+          <b-card-text>{{ product.paymentPlan }}</b-card-text>
+          <b-list-group v-for="(feature, fi) in product.features.slice(0, 5)" :key="fi" flush>
+            <b-list-group-item class="text-white text-left text-small bg-primary">
+              <b-card-text>
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      style="fill: #ffffff;"
+                      d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"
+                    />
+                  </svg>
+                </span>
+                {{ feature.header }}
+                <span
+                  v-if="feature.text"
+                  class="text-small"
+                >({{ feature.text }})</span>
+              </b-card-text>
+            </b-list-group-item>
+          </b-list-group>
+          <b-card-text class="text-small">
+            <ButtonComponent />
+          </b-card-text>
+        </b-card-body>
+      </b-card>
+      <!-- </span>
+      <span v-else>
+        <h2 v-if="product.price">
+          <span class="text-large">${{ product.price }}</span>
+        </h2>
+      </span>-->
+      <SectionContactComponent
+        pheader="What can we do for you?"
+        class="align-self-center services"
       />
-
-      <!-- <ServicesRelatedComponent v-if="otherServices" :services="otherServices" /> -->
+      <div class="m-0 pb-5 bg-white">
+        <p id="whyussection" class="p-3" />
+        <WhyUsComponent pheader="Why Us?" class="align-self-center" :pfeatures="features" pheaderclass="sectionHeaderPrimary" />
+      </div>
     </div>
   </div>
 </template>
@@ -61,12 +81,19 @@
 <script>
 import lax from 'lax.js'
 import { mapGetters } from 'vuex'
+import Nav from '@/components/Nav'
 import HeaderComponent from '@/components/HeaderComponent'
+// import ButtonComponent from '@/components/ButtonComponent'
+import SectionContactComponent from '@/components/SectionContactComponent'
+import WhyUsComponent from '@/components/WhyUsComponent'
 import ButtonComponent from '@/components/ButtonComponent'
-
 export default {
   components: {
+    Nav,
     HeaderComponent,
+    // ButtonComponent,
+    SectionContactComponent,
+    WhyUsComponent,
     ButtonComponent
   },
   head () {
@@ -79,6 +106,11 @@ export default {
           hid: 'og:url',
           property: 'og:url',
           content
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.product.title
         },
         {
           hid: 'og:description',
@@ -96,18 +128,24 @@ export default {
   data () {
     return {
       id: this.$route.params.id,
-      panimheader: 'be where the world is going'
+      panimheader: 'be where the world is going',
+      theme: 'default'
     }
   },
   computed: {
-    // ...mapGetters('services', ['getRelatedSummaries', 'getServiceById']),
     ...mapGetters('products', ['getProductById', 'getProductsById']),
+    ...mapGetters('client', ['getClientFeatures']),
+    ...mapGetters('services', ['getServiceFeatures']),
     product () {
       const product = this.getProductById(this.id)
       return product
     },
     imagePath () {
       return `${process.env.baseUrl}/imgs/${this.product.image}`
+    },
+    features () {
+      // return this.getServiceFeatures(this.product.relatedService) || this.getClientFeatures
+      return this.getClientFeatures
     }
     // otherServices () {
     //   return this.getRelatedSummaries(this.id)
@@ -132,7 +170,9 @@ export default {
   //   }
   // },
   mounted () {
-    lax.setup() // init
+    lax.setup({
+      breakpoints: { small: 0, large: 768 }
+    })
     window.addEventListener('resize', function () {
       lax.updateElements()
     })

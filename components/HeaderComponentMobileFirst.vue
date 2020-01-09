@@ -1,13 +1,12 @@
 <template>
-  <b-container fluid :class="`pr-lg-3 pr-xl-3 ml-lg-3 ml-xl-3 ml-3 pr-3 pt-5 pb-5 ${pcontainerclass}`">
-    <h1 v-if="pheader" :class="`${pclass} ${pheaderclass} text-left`">
+  <b-container fluid :class="`${pcontainerclass}`">
+    <h1 v-if="pheader" :class="`p-2 ${pclass}`">
       {{ pheader }}
     </h1>
-    <!-- <h2 v-if="psubheader" :class="`${pclass} ${psubheaderclass} text-left animated ${animation}`"> -->
-    <h2 v-if="psubheader" :class="`${pclass} ${psubheaderclass} text-left`">
+    <h2 v-if="psubheader" :class="`p-3 ${pclass}`">
       {{ psubheader }}
     </h2>
-    <h3 v-if="psubtitle" :class="`${pclass} ${psubtitleclass}text-left`">
+    <h3 v-if="psubtitle" :class="`p-2 ${pclass}`">
       {{ psubtitle }}
     </h3>
   </b-container>
@@ -36,26 +35,6 @@ export default {
       type: String,
       default: ''
     },
-    pheaderclass: {
-      type: String,
-      default: ''
-    },
-    psubheaderclass: {
-      type: String,
-      default: ''
-    },
-    psubtitleclass: {
-      type: String,
-      default: ''
-    },
-    variant: {
-      type: String,
-      default: 'rwcblue'
-    },
-    panimation: {
-      type: String,
-      default: 'zoomInRight'
-    },
     pbgimage: {
       type: Object,
       default() {
@@ -78,12 +57,6 @@ export default {
         '1': require(`~/assets/imgs/banner/${fileName}?size=320`),
         '2': require(`~/assets/imgs/banner/${fileName}?size=768`)
       }
-    },
-    animation() {
-      if (!this.panimation) {
-        return 'zoomInRight'
-      }
-      return this.panimation
     },
     gradient() {
       if (!this.pbgimage.url) {

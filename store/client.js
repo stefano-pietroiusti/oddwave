@@ -12,47 +12,50 @@ const commonKeywords = [
 export const state = () => ({
   client: {
     '@id': `${process.env.baseUrl}`,
-    '@type': 'Web Designer',
+    '@type': 'Organization',
     geo: {
       '@type': 'GeoCoordinates',
       'latitude': -36.708400,
       'longitude': 174.734479
     },
     title:
-      'Web Design Auckland NZ | SEO NZ | Digital Marketing NZ | Google Ads',
+      'Web Design & Digital Marketing company North Shore Auckland NZ',
     description:
-      'Web Design and web development company developing responsive websites for ROI using modern tech, SEO, Digital Marketing, Google Ads management',
-    header: 'Web Design Auckland NZ',
-    subheader: 'WEB DESIGN, WEB DEVELOPMENT, SEO AND DIGITAL MARKETING AUCKLAND NZ',
+      'Web design and digital marketing company to help you grow your online business using modern web technology, data engineering and automation.',
+    header: 'WEB DESIGN, DATA & DIGITAL MARKETING',
+    subheader: 'CUSTOM WEB DESIGN & DIGITAL MARKETING',
     subtitle:
-      "We provide custom web design & digital marketing solutions from Auckland, New Zealand. We market our clients' businesses as if they were our own.",
-
+      "We provide custom web design and digital marketing services from North Shore, Auckland, New Zealand. We market our clients' businesses as if they were our own.",
     featuresHeader: 'Why us?',
     features: [
       {
-        header: 'Web design with A+ Google audit score in Performance, Accessibility, Best Practices & SEO',
+        header: 'Websites with A+ Google audit score in Performance, Accessibility, Best Practices & SEO',
         text:
           "Our websites are continuously tested and audited using Google's recommended open source tools to achieve an A+ score in performance, accessibility, best practices & SEO. ",
-        icon: ['fas', 'users']
+        icon: ['fas', 'users'],
+        image: '/imgs/best-web-design.svg'
       },
       {
-        header: 'Web Design that puts Users, Content & Mobile First',
+        header: 'Web Design that puts Users First',
         text:
           'We follow a user-oriented web design approach that makes our websites, web applications and content usable by anyone on any device.',
-        icon: ['fas', 'mobile-alt']
+        icon: ['fas', 'mobile-alt'],
+        image: '/imgs/mobile-first.svg'
       },
       {
         header: 'Web Development with fit-for-purpose Open Source',
         text:
-          'We combine established open source website frameworks with our vanilla HTML, CSS & javascript development to build websites that are lean, quick, flexible & scalable. Take advantage of our future-proof way to grow your brand image, sales and customer loyalty online.',
-        icon: ['fab', 'servicestack']
+          'We combine established open source website frameworks with our vanilla HTML, CSS & javascript developer expertise to build websites that are lean, quick, flexible & scalable. Take advantage of our future-proof way to grow your brand image, sales and customer loyalty online.',
+        icon: ['fab', 'servicestack'],
+        image: '/imgs/web-dev.svg'
       },
 
       {
         header: 'Web design and Content for Users and Search',
         text:
           'We write structured online content to be friendly to users, mobiles & search engines. We can also help you optimize your return on investment (ROI) from our search engine optimization (SEO) services, managed conversion tracking and reporting.',
-        icon: ['fas', 'chart-line']
+        icon: ['fas', 'chart-line'],
+        image: '/imgs/web-content-search.svg'
       }
     ],
     content: [
@@ -78,9 +81,9 @@ export const state = () => ({
           "We're based in Torbay, North Shore, Auckland, and are here to help everyone in New Zealand."
       }
     ],
-    name: 'The Odd Wave - SEO Web Design, Web Development & Digital Marketing Auckland NZ',
+    name: 'The Odd Wave Digital - Websites & Digital Marketing',
     legalName: 'The Odd Wave Ltd',
-    category: ['Technology'],
+    category: ['Internet Marketing', 'Website Designer'],
     email: 'team@theoddwave.co.nz',
     url: process.env.baseUrl,
     image: [
@@ -92,19 +95,28 @@ export const state = () => ({
     foundingDate: '2019',
     founders: [{
       '@type': 'Person',
-      name: 'Jaline Van Dyk'
+      name: 'Jaline Van Dyk',
+      jobTitle: 'Owner',
+      description: '15+ years experience software development, digital marketing & management.',
+      image: '/imgs/stefano-pietroiusti.jpg',
+      sameAs: [
+        'https://www.linkedin.com/in/jaline-pietroiusti-ab354b56'
+      ]
     }, {
       '@type': 'Person',
       name: 'Stefano Pietroiusti',
       sameAs: [
         `${process.env.author}`
-      ]
+      ],
+      jobTitle: 'Technical Lead',
+      description: 'Experienced IT generalist and tech enthusiast with 20+ years experience across web, data, cloud, search & mentoring.',
+      image: '/imgs/stefano-pietroiusti.jpg'
     }
     ],
     phone: ['+64 210 8658 172', '+64 210 8823 769'],
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '7 Halder Pl',
+      streetAddress: '7 Halder Place',
       addressLocality: 'Torbay',
       addressRegion: 'Auckland',
       postalCode: '0632',
@@ -112,7 +124,7 @@ export const state = () => ({
     },
     contactPoint: {
       '@type': 'ContactPoint',
-      contactType: 'Sales Support',
+      contactType: 'Support',
       telephone: '+642108658172',
       email: 'team@theoddwave.co.nz'
     },
@@ -132,16 +144,17 @@ export const state = () => ({
       }
     ],
     sameAs: [
+      'https://g.page/theoddwave/',
       'https://www.facebook.com/theoddwave',
       'https://www.instagram.com/theoddwavenz/',
-      'https://www.linkedin.com/company/the-odd-wave-ltd/',
-      'https://www.instagram.com/pietroiustistefano/',
-      'https://www.facebook.com/School-of-Photography-230606717003222/'
+      'https://www.linkedin.com/company/the-odd-wave-ltd/'
     ],
     priceRange: '$$',
     copyright: '© 2019 Copyright The Odd Wave',
     poweredBy: 'powered by The Odd Wave suite of web technologies',
-    about: 'Web Design, Web Development, SEO, Digital Marketing Agency Auckland specializing in cloud, web, data and search solutions',
+    about: "The Odd Wave offers a range of services to support your online business venture. Everything we do is aimed at producing results that our clients want for their businesses. We're based in Torbay, North Shore, Auckland, and are here to help everyone in New Zealand.",
+    services: 'Solid and flexible web design, developer, SEO, Digital marketing and data analysis to <b>drive the right traffic</b> to your online business and <b>help your business grow</b> online.<br/><u>We do websites for ROI.</u>',
+    businessvalue: "Everything we do is aimed at producing results that our clients want for their businesses. We're based in Torbay, North Shore, Auckland, and are here to help everyone in New Zealand.",
     fb: 'https://www.facebook.com/theoddwave',
     instagram: 'https://www.instagram.com/theoddwavenz/',
     linkedin: 'https://www.linkedin.com/company/the-odd-wave-ltd/',
@@ -157,5 +170,8 @@ export const getters = {
   getClient: (state) => {
     const client = state.client
     return client
+  },
+  getClientFeatures: (state) => {
+    return state.client.features
   }
 }

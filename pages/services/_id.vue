@@ -1,60 +1,48 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
-  <div id="servicesMainContainer">
-    <b-container id="servicesBackground">
+  <div id="servicesMainContainer" class="bg-white">
+    <Nav id="navbar" class="container-fluid" :ptheme="theme" />
+    <!-- <Nav class="container-fluid bg-secondary text-primary" /> -->
+    <!-- <b-container id="servicesBackground">
       <b-container id="servicesTextBackground">
         <p class="watermark">
           {{ service.title }}
         </p>
       </b-container>
-    </b-container>
+    </b-container>-->
 
     <div id="servicesContainer" class="text-center w-100">
-      <AnimeBannerWordsHeaderComponent
-        :pheader="service.subheader"
-        :pbgimage="service.backgroundImage"
-        :variant="service.variant"
-        :pid="service.id"
-        :panimation="service.animate"
-      />
-
-      <HeaderComponent :pheader="service.header" :pstyle="service.headerStyle" />
-
-      <span v-if="service.features">
-        <PromoComponent :features="service.features" variant="primary" />
-        <!-- <ButtonComponent btext="Chat about this" blink="/contact/" :pvariant="`outline-black`" /> -->
-      </span>
+      <HeaderComponent :pheader="service.header" pcontainerclass="mt-7 mb-5 borderLeft" />
 
       <TextImageComponent
         v-for="(item,i) in service.content"
         :key="i"
         :pcontent="{header: item.header, text: item.text, list: item.list, bgImage: item.bgImage, inlineImage: item.inlineImage, inlineImageText: item.inlineImageText, inlineImageRight: item.inlineImageRight }"
-        :pstyle="(item.dark) ? { bgStyle: 'parralaxNormal w-100 text-secondary text-left  px-3 p-2', inlineImageStyle: item.inlineImageStyle} : { bgStyle: 'parralaxNormal w-100 text-primary text-left  px-3  p-2', inlineImageStyle: item.inlineImageStyle}"
+        :pstyle="(item.dark) ? { bgStyle: 'parralaxNormal w-100 text-secondary text-left  px-3 p-2', inlineImageStyle: item.inlineImageStyle} : { bgStyle: 'parralaxNormal w-100 text-black text-left  px-3  p-2', inlineImageStyle: item.inlineImageStyle}"
       />
+
       <HeaderComponent
-        v-if="featuredProducts.length > 0"
-        psubheader="Featured Packages"
-        psubtitle="Flexi payment plans available. Charges for travel outside of Auckland may be applicable following initial consultation."
+        v-if="service.features && service.features.length > 0"
+        :psubheader="service.subheader"
+        psubheaderclass="sectionHeaderPrimary"
         pclass="text-center"
       />
-      <span v-for="item in featuredProducts" :key="item.id">
-        <ProductComponent :product="item" :summary="true" />
-        <hr fluid class="hrprimary">
+
+      <span v-if="service.features">
+        <FeaturesComponent :features="service.features" variant="black" />
+        <!-- <ButtonComponent btext="Chat about this" blink="/contact/" :pvariant="`outline-black`" /> -->
       </span>
 
-      <!-- <div
-        v-if="service.slides"
-        id="carousel"
-        class="lax w-75"
-        data-lax-preset="zoomInOut"
-      >
-        <CarouselComponent :carousel-id="carouselId" :pslides="service.slides" />
-      </div>-->
+      <!-- <span v-for="item in featuredProducts" :key="item.id">
+        <ProductComponent :product="item" :summary="true" />
+        <hr fluid class="hrprimary">
+      </span>-->
+      <SliderComponent :products="featuredProducts" pheaderclass="sectionHeaderPrimary" />
 
       <b-container v-if="service.slides" fluid class="w-100">
         <b-row>
           <b-col sm="12" md="12" lg="12" xl="12">
-            <HeaderComponent psubheader="Featured Instagram Photos" />
+            <HeaderComponent psubheader="Portfolio" pclass="sectionHeaderPrimary" />
           </b-col>
         </b-row>
         <b-row no-gutters>
@@ -94,21 +82,37 @@
     </div></span>
       </b-container>-->
 
-      <HeaderComponent
+      <!-- <HeaderComponent
         :psubheader="service.marketing.header + ' TO ' + service.marketing.subheader"
         :pstyle="service.subheaderStyle"
-      />
+      />-->
 
-      <ButtonComponent
+      <!-- <ButtonComponent
         btext="Get started"
         blink="/contact/"
         :pvariant="`outline-black`"
         class="text-center"
+      />-->
+
+      <!-- <ServicesRelatedComponent v-if="otherServices" :services="otherServices" /> -->
+
+      <SectionContactComponent
+        pheader="What can we do for you?"
+        :pcontent="service.businessvalue"
+        class="align-self-center services"
       />
-
-      <ServicesRelatedComponent v-if="otherServices" :services="otherServices" />
-
-      <!--  <D3Cloud :pwordcloud="service.cloud" />-->
+      <div class="m-0 pb-5 bgsteelblue">
+        <HeaderComponent
+          psubheader="Related Services"
+          pclass="sectionHeaderPrimary"
+          pcontainerclass="m-0 p-0"
+        />
+        <ServicesLinksComponent :services="otherServices" />
+      </div>
+      <div class="m-0 pb-5 bg-white">
+        <p id="whyussection" class="p-3" />
+        <WhyUsComponent pheader="Why Us?" class="align-self-center" :pfeatures="features" pheaderclass="sectionHeaderPrimary" />
+      </div>
     </div>
   </div>
 </template>
@@ -116,25 +120,37 @@
 <script>
 import lax from 'lax.js'
 import { mapGetters } from 'vuex'
+import Nav from '@/components/Nav'
 import HeaderComponent from '@/components/HeaderComponent'
-import ButtonComponent from '@/components/ButtonComponent'
 import TextImageComponent from '@/components/TextImageComponent'
-import AnimeBannerWordsHeaderComponent from '@/components/AnimeBannerWordsHeaderComponent'
+// import ButtonComponent from '@/components/ButtonComponent'
+// import AnimeBannerWordsHeaderComponent from '@/components/AnimeBannerWordsHeaderComponent'
 // import CarouselComponent from '@/components/CarouselComponent'
-import PromoComponent from '@/components/PromoComponent'
-import ProductComponent from '@/components/ProductComponent'
-import ServicesRelatedComponent from '@/components/ServicesRelatedComponent'
+// import PromoComponent from '@/components/PromoComponent'
+// import ProductComponent from '@/components/ProductComponent'
+// import ServicesRelatedComponent from '@/components/ServicesRelatedComponent'
+import SliderComponent from '@/components/SliderComponent'
+import ServicesLinksComponent from '@/components/ServicesLinksComponent'
+import SectionContactComponent from '@/components/SectionContactComponent'
+import FeaturesComponent from '@/components/FeaturesComponent'
+import WhyUsComponent from '@/components/WhyUsComponent'
 
 export default {
   components: {
+    Nav,
     HeaderComponent,
-    ButtonComponent,
     TextImageComponent,
-    AnimeBannerWordsHeaderComponent,
+    // ButtonComponent,
+    // AnimeBannerWordsHeaderComponent,
     // CarouselComponent,
-    PromoComponent,
-    ProductComponent,
-    ServicesRelatedComponent
+    // PromoComponent,
+    // ProductComponent,
+    // ServicesRelatedComponent,
+    SliderComponent,
+    ServicesLinksComponent,
+    SectionContactComponent,
+    FeaturesComponent,
+    WhyUsComponent
   },
   head () {
     let content = `${process.env.baseUrl}${this.$route.path}`
@@ -148,6 +164,11 @@ export default {
           content
         },
         {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.service.title
+        },
+        {
           hid: 'og:description',
           name: 'og:description',
           content: this.service.description
@@ -156,11 +177,6 @@ export default {
           hid: 'description',
           name: 'description',
           content: this.service.description
-        },
-        {
-          hid: 'keywords',
-          name: 'keywords',
-          content: this.service.keywords.join()
         }
       ]
     }
@@ -168,12 +184,18 @@ export default {
   data () {
     return {
       id: this.$route.params.id,
-      panimheader: 'be where the world is going'
+      panimheader: 'be where the world is going',
+      theme: 'default'
     }
   },
   computed: {
-    ...mapGetters('services', ['getRelatedSummaries', 'getServiceById']),
+    ...mapGetters('services', [
+      'getRelatedSummaries',
+      'getServiceById',
+      'getServiceFeatures'
+    ]),
     ...mapGetters('products', ['getProductById', 'getProductsById']),
+    ...mapGetters('client', ['getClientFeatures']),
     service () {
       const service = this.getServiceById(this.id)
       service.enquire = 'Get in touch'
@@ -189,10 +211,16 @@ export default {
     },
     carouselId () {
       return `${this.id}`
+    },
+    features () {
+      // return this.getServiceFeatures(this.id) || this.getClientFeatures
+      return this.getClientFeatures
     }
   },
   mounted () {
-    lax.setup() // init
+    lax.setup({
+      breakpoints: { small: 0, large: 768 }
+    })
     window.addEventListener('resize', function () {
       lax.updateElements()
     })

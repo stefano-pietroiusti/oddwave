@@ -85,16 +85,16 @@ export default {
   data (context) {
     const commonKeywords = [
       'help with website design',
-      'help with custom web design',
+      'help with custom Website Design',
       'help with web application development',
-      'help with online marketing',
+      'help with Digital Marketing',
       'help with SEO',
       'help with photography'
     ]
     return {
       title: 'Contact the Odd Wave Ltd Digital Solutions, North Shore, Torbay, Auckland, NZ',
       description:
-        'Contact the Odd Wave Ltd Digital Solutions - connect with us for your next website, SEO, online marketing and consulting needs',
+        'Contact the Odd Wave Ltd Digital Solutions - connect with us for your next website, SEO, Digital Marketing and consulting needs',
       animeheader: "LET'S CREATE SOMETHING GREAT",
       header: 'Contact the Odd Wave Ltd for your vNext',
       subheader: 'by the Odd Wave of people, technologies and services',

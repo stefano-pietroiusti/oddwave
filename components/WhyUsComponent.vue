@@ -60,16 +60,16 @@ export default {
         return [
           {
             header:
-              'Web design with A+ Google audit score in Performance, Accessibility, Best Practices & SEO',
+              'Website Design with A+ Google audit score in Performance, Accessibility, Best Practices & SEO',
             text:
               'Our websites are continuously tested and audited using Google’s recommended open source tools to achieve an A+ score in performance, accessibility, best practices & SEO.',
             icon: ['fas', 'users'],
             image: '/imgs/best-web-design.svg'
           },
           {
-            header: 'Web Design that puts Users, Content & Mobile First',
+            header: 'Website Design that puts Users, Content & Mobile First',
             text:
-              'We follow a user-oriented web design approach that makes our websites, web applications and content usable by anyone on any device.',
+              'We follow a user-oriented Website Design approach that makes our websites, web applications and content usable by anyone on any device.',
             icon: ['fas', 'users'],
             image: '/imgs/best-web-design.svg'
           }

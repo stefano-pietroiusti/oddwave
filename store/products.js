@@ -180,7 +180,7 @@ export const state = () => ({
       ],
       samples: [
         {
-          testimonial: 'The Odd Wave Digital SEO services are professional, flexible and we look forward to building a trustworthy relationship with them for our online marketing.',
+          testimonial: 'The Odd Wave Digital SEO services are professional, flexible and we established a trustworthy relationship with them for our digital marketing requirements.',
           author: 'Cameron, Owner, Create Renovations',
           link: 'https://www.createrenovations.co.nz/'
         }
@@ -317,7 +317,7 @@ export const state = () => ({
           header: 'Custom design, development & engineering from your ideas, designs, POCs, APIs',
           icon: ['fas', 'check']
         }, {
-          header: 'Web design, Web development, Cloud development',
+          header: 'Website Design, Web development, Cloud development',
           icon: ['fas', 'check']
         }, {
           header: 'Integration, Data Engineering',

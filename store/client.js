@@ -1,13 +1,14 @@
 const commonKeywords = [
-  'consulting auckland',
-  'website design auckland',
-  'Web Development auckland',
-  'Digital Marketing auckland',
-  'Online Marketing auckland',
-  'seo packages auckland',
-  'seo auckland',
-  'best website company auckland',
-  'google adwords auckland', 'online ads auckland', 'search engine optimisation auckland', 'seo company auckland', 'domain name']
+  'NZ website design',
+  'new zealand website design',
+  'website design',
+  'online business',
+  'website design company',
+  'digital maketing',
+  'digital maketing company',
+  'NZ',
+  'North Shore',
+  'Auckland', 'online ads', 'search engine optimisation', 'seo company', 'domain name']
 
 export const state = () => ({
   client: {
@@ -19,13 +20,13 @@ export const state = () => ({
       'longitude': 174.734479
     },
     title:
-      'Web Design & Digital Marketing company North Shore Auckland NZ',
+      'NZ Website Design Company - North Shore Auckland Digital Marketing (Online)',
     description:
-      'Web design and digital marketing company to help you grow your online business using modern web technology, data engineering and automation.',
-    header: 'WEB DESIGN, DATA & DIGITAL MARKETING',
-    subheader: 'CUSTOM WEB DESIGN & DIGITAL MARKETING',
+      'New Zealand website design company; providing digital marketing services to grow your business. Based in North Shore, Auckland NZ we build your website and promote it online.',
+    header: 'Website Design, DATA & DIGITAL MARKETING',
+    subheader: 'CUSTOM WEBSITE DESIGN & DIGITAL MARKETING',
     subtitle:
-      "We provide custom web design and digital marketing services from North Shore, Auckland, New Zealand. We market our clients' businesses as if they were our own.",
+      "We provide custom Website Design and digital marketing services from North Shore, Auckland, New Zealand. We market our clients' businesses as if they were our own.",
     featuresHeader: 'Why us?',
     features: [
       {
@@ -36,9 +37,9 @@ export const state = () => ({
         image: '/imgs/best-web-design.svg'
       },
       {
-        header: 'Web Design that puts Users First',
+        header: 'Website Design that puts Users First',
         text:
-          'We follow a user-oriented web design approach that makes our websites, web applications and content usable by anyone on any device.',
+          'We follow a user-oriented website design approach that makes our websites, web applications and content usable by anyone on any device.',
         icon: ['fas', 'mobile-alt'],
         image: '/imgs/mobile-first.svg'
       },
@@ -51,7 +52,7 @@ export const state = () => ({
       },
 
       {
-        header: 'Web design and Content for Users and Search',
+        header: 'Website Design and Content for Users and Search',
         text:
           'We write structured online content to be friendly to users, mobiles & search engines. We can also help you optimize your return on investment (ROI) from our search engine optimization (SEO) services, managed conversion tracking and reporting.',
         icon: ['fas', 'chart-line'],
@@ -66,7 +67,7 @@ export const state = () => ({
         text:
           'The Odd Wave offers a range of services to support your online business venture:',
         list: [
-          'Web design and web development ',
+          'Website Design and web development ',
           'Digital marketing with managed google ads, facebook ads and other social media channels',
           'Photography to bring out the best of your users, brand, products & services',
           'Web logs data analysis for online ads quality assurance',
@@ -153,7 +154,7 @@ export const state = () => ({
     copyright: '© 2019 Copyright The Odd Wave',
     poweredBy: 'powered by The Odd Wave suite of web technologies',
     about: "The Odd Wave offers a range of services to support your online business venture. Everything we do is aimed at producing results that our clients want for their businesses. We're based in Torbay, North Shore, Auckland, and are here to help everyone in New Zealand.",
-    services: 'Solid and flexible web design, developer, SEO, Digital marketing and data analysis to <b>drive the right traffic</b> to your online business and <b>help your business grow</b> online.<br/><u>We do websites for ROI.</u>',
+    services: 'Solid and flexible webite design, developer, SEO, Digital marketing and data analysis to <b>drive the right traffic</b> to your online business and <b>help your business grow</b> online.<br/><u>We do websites for ROI.</u>',
     businessvalue: "Everything we do is aimed at producing results that our clients want for their businesses. We're based in Torbay, North Shore, Auckland, and are here to help everyone in New Zealand.",
     fb: 'https://www.facebook.com/theoddwave',
     instagram: 'https://www.instagram.com/theoddwavenz/',

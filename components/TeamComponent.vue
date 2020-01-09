@@ -59,7 +59,7 @@ export default {
             sameAs: ['https://www.linkedin.com/in/jaline-pietroiusti-ab354b56'],
             jobTitle: 'Owner and Director of Digital Marketing',
             description:
-              '15+ years experience in business management and online marketing.',
+              '15+ years experience in business management and Digital Marketing.',
             image: '/imgs/stefano-pietroiusti.jpg'
           },
           {

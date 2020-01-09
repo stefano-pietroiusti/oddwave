@@ -65,9 +65,9 @@ export default {
   data (context) {
     const commonKeywords = [
       'help with website design',
-      'help with custom web design',
+      'help with custom Website Design',
       'help with web application development',
-      'help with online marketing',
+      'help with Digital Marketing',
       'help with SEO',
       'help with photography'
     ]

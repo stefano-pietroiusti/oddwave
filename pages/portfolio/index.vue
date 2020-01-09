@@ -9,7 +9,9 @@
       <p class="watermark" />
     </b-container>
     <HeaderComponent
-      pheader="Testimonials & sample custom design & development"
+      pheader="Portfolio"
+      psubheader="Because First impressions matter. "
+      psubtitle="We work with you to create a beautiful websites whether you're selling products, services, software or expertise. Watch this space :)"
       pcontainerclass="mt-7 mb-5 borderLeft"
     />
 

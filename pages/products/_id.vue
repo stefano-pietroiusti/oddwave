@@ -24,7 +24,7 @@
         psubheaderclass="sectionHeaderPrimary"
       />
       <!-- <span v-if="product.features.length > 0"> -->
-      <b-card no-body class="text-white bg-primary h-100 cardMedium w-50">
+      <b-card no-body class="text-white bg-primary h-auto w-auto w-100-xs w-100-sm w-75-md w-50-lg w-50-xl">
         <b-card-body>
           <h2 v-if="product.price">
             <span class="text-large price">${{ product.price }}</span>

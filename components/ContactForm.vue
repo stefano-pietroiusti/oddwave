@@ -110,13 +110,13 @@
         </b-form>
       </b-col>
       <b-col class="p-3 pl-5 text-left text-black">
-        <span class="text-mediumLarge text-bold" v-html="company" />
+        <span class="text-medium text-bold" v-html="company" />
         <br>
-        <span class="text-medium" v-html="companyphone1" />
+        <span class="text-small" v-html="companyphone1" />
         <br>
-        <span class="text-medium" v-html="companyphone2" />
+        <span class="text-small" v-html="companyphone2" />
         <br>
-        <span class="text-medium" v-html="companyemail" />
+        <span class="text-small" v-html="companyemail" />
       </b-col>
     </b-row>
   </b-container>

@@ -13,8 +13,8 @@ export const state = () => ({
       image: 'websitedesign.jpg',
       features: [
         {
-          header: 'Website design & development',
-          text: 'Website homepage design, content design, stock photos, animation',
+          header: 'Custom Website design & development',
+          text: 'Website homepage design, content design, stock photos, animation, security',
           icon: ['fas', 'check']
         },
         {
@@ -23,42 +23,29 @@ export const state = () => ({
           icon: ['fas', 'check']
         },
         {
-          header: 'Advanced SEO optimization with JSON-LD Structured Data Support',
-          text: 'Advanced SEO optimization with JSON-LD Structured Data Support',
+          header: 'Advanced Data/Content and SEO optimization with JSON-LD Structured Data Support',
+          text: 'Advanced Data/Content and SEO optimization with in-memory data store and JSON-LD Structured Data Support',
           icon: ['fas', 'check']
         },
         {
-          header: 'Mobile and Search-engine friendly',
+          header: 'Responsive Mobile and Search-Engine friendly',
           icon: ['fas', 'check']
         },
         {
           header: 'Web hosting & email setup',
           icon: ['fas', 'check']
         }
-        // {
-        //   header: 'Website address registration',
-        //   text: 'Domain name registration',
-        //   icon: ['fas', 'check']
-        // },
-        // {
-        //   header: 'Website security',
-        //   text: 'HTTPS web server & website hosting',
-        //   icon: ['fas', 'check']
-        // },
-        // {
-        //   header: 'Mobile and Search-engine friendly',
-        //   icon: ['fas', 'check']
-        // },
-        // {
-        //   header: 'Search-engine friendly',
-        //   icon: ['fas', 'check']
-        // },
-        // {
-        //   header: 'Unlimited email',
-        //   text:
-        //     'We will set up 1 - 5 email addresses for you initially',
-        //   icon: ['fas', 'check']
-        // }
+      ],
+      samples: [
+        {
+          image: 'catering.jpg',
+          text: 'Custom design & development for Catering companies'
+        },
+        {
+          testimonial: 'We developed a great partnership with the Odd Wave Digital and are impressed by their dedication to helping us launch online successfully. We continue to use their services for SEO and  Digital marketing management so we can focus on our core business.',
+          author: 'Jacques Pretorius, CEO, Jumalutech fencing',
+          link: 'www.jumlautech.co.za'
+        }
       ],
       isFeatured: true,
       isFeaturedOrder: 0,
@@ -146,6 +133,17 @@ export const state = () => ({
           icon: ['fas', 'check']
         }
       ],
+      samples: [
+        {
+          image: 'restaurant.jpg',
+          text: 'Custom design & development for leading NZ restaurant businesses'
+        },
+        {
+          testimonial: 'We developed a great partnership with the Odd Wave Digital and are impressed by their dedication to helping us launch online successfully. We continue to use their services for SEO and  Digital marketing management so we can focus on our core business.',
+          author: 'Jacques Pretorius, CEO, Jumalutech fencing',
+          link: 'www.jumlautech.co.za'
+        }
+      ],
       isFeatured: true,
       isFeaturedOrder: 0,
       relatedServices: ['web-design-nz'],
@@ -178,6 +176,13 @@ export const state = () => ({
         },
         {
           header: 'Following Google Webmaster Guidelines'
+        }
+      ],
+      samples: [
+        {
+          testimonial: 'The Odd Wave Digital SEO services are professional, flexible and we look forward to building a trustworthy relationship with them for our online marketing.',
+          author: 'Cameron, Owner, Create Renovations',
+          link: 'https://www.createrenovations.co.nz/'
         }
       ],
       price: { value: 130, unit: 'package', discount: 0, flexible: true },
@@ -468,5 +473,21 @@ export const getters = {
           relatedServices: item.relatedServices
         }
       ))
+  },
+  getSamples: (state, getters) => () => {
+    // return state.all.filter(product => product.isFeatured)
+    // .sort((a, b) => { return a.isFeaturedOrder - b.isFeaturedOrder || a.price.value - b.price.value })
+    // return state.all.map(item => (
+    //   {
+    //     id: item.id,
+    //     header: item.header,
+    //     description: item.description,
+    //     features: item.features,
+    //     price: getters.getPrice(item.price.value, item.price.discount),
+    //     paymentPlan: item.price.flexible ? getters.getPaymentPlan(getters.getPrice(item.price.value, item.price.discount)) : undefined,
+    //     relatedServices: item.relatedServices
+    //   }
+    // ))
+    return state.all.samples
   }
 }

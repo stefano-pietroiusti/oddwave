@@ -37,6 +37,7 @@
         <b-nav-item to="/" exact exact-active-class="underline">
           Home
         </b-nav-item>
+
         <b-nav-item-dropdown
           text="Services"
           :extra-toggle-classes="this.$route.name === 'services-id' ? 'activeClassServicesProducts' : ''"
@@ -71,6 +72,9 @@
             {{ item.title }}
           </b-dropdown-item>
         </b-nav-item-dropdown>
+        <b-nav-item to="/portfolio/" exact exact-active-class="underline">
+          Portfolio
+        </b-nav-item>
         <b-nav-item to="/contact/" exact exact-active-class="underline">
           Contact us
         </b-nav-item>
@@ -191,8 +195,8 @@ export default {
 </script>
 <style scoped>
 .navbar-toggler {
-  margin: 0 1rem 0 0rem;
-  padding: 1rem !important;
+  margin: 5px;
+  padding: 0.5rem !important;
   border: none;
 }
 .navbar-toggler:focus,
@@ -206,10 +210,10 @@ export default {
 .navbar-toggler {
   border: 1px solid #00c3ff;
   border-radius: 25%;
-  color:#00c3ff;
+  color: #00c3ff;
   background-image: none;
   align-content: center;
- /* background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(84, 200, 232, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); */
+  /* background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(84, 200, 232, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); */
 }
 
 .navbar-theoddwave .navbar-collapse.collapse.show .navbar-nav {
@@ -254,7 +258,7 @@ export default {
   transform: rotate(0);
 } */
 
-.navbar-toggler[aria-expanded="false"] span {
+.navbar-toggler[aria-expanded='false'] span {
   display: block;
   background-color: #00c3ff;
   height: 4px;
@@ -278,14 +282,13 @@ export default {
   transition: transform 0.35s ease-in-out;
 }
 
-.navbar-toggler[aria-expanded="false"] span:nth-child(1),
-.navbar-toggler[aria-expanded="false"] span:nth-child(3) {
+.navbar-toggler[aria-expanded='false'] span:nth-child(1),
+.navbar-toggler[aria-expanded='false'] span:nth-child(3) {
   width: 30px;
   margin-left: 5px;
-
 }
 
-.navbar-toggler[aria-expanded="true"] span:nth-child(1) {
+.navbar-toggler[aria-expanded='true'] span:nth-child(1) {
   /* position: absolute; */
   display: block;
   background-color: #00c3ff;
@@ -300,14 +303,14 @@ export default {
   opacity: 0.9;
 }
 
-.navbar-toggler[aria-expanded="true"] span:nth-child(2) {
+.navbar-toggler[aria-expanded='true'] span:nth-child(2) {
   height: 12px;
   visibility: hidden;
   background-color: transparent;
 }
 
-.navbar-toggler[aria-expanded="true"] span:nth-child(3) {
-    height: 12px;
+.navbar-toggler[aria-expanded='true'] span:nth-child(3) {
+  height: 12px;
   visibility: hidden;
   background-color: transparent;
   /* position:absolute;
@@ -325,5 +328,4 @@ export default {
   transform: rotate(135deg);
   opacity: 0.9; */
 }
-
 </style>

@@ -38,12 +38,14 @@ export const state = () => ({
       ],
       samples: [
         {
-          image: 'catering.jpg',
+          image: 'bakeries.jpg',
           text: 'Custom design & development for Catering companies'
         },
         {
-          testimonial: 'We developed a great partnership with the Odd Wave Digital and are impressed by their dedication to helping us launch online successfully. We continue to use their services for SEO and  Digital marketing management so we can focus on our core business.',
-          author: 'Jacques Pretorius, CEO, Jumalutech fencing',
+          image: 'jumalutech.jpg',
+          text: 'We developed a great partnership with the Odd Wave Digital and are impressed by their dedication to helping us launch online successfully. We continue to use their services for SEO and  Digital marketing management so we can focus on our core business.',
+          author: 'Jacques Pretorius, Founder',
+          company: 'Jumalutech Fencing',
           link: 'www.jumlautech.co.za'
         }
       ],
@@ -135,13 +137,8 @@ export const state = () => ({
       ],
       samples: [
         {
-          image: 'restaurant.jpg',
+          image: 'restaurants.jpg',
           text: 'Custom design & development for leading NZ restaurant businesses'
-        },
-        {
-          testimonial: 'We developed a great partnership with the Odd Wave Digital and are impressed by their dedication to helping us launch online successfully. We continue to use their services for SEO and  Digital marketing management so we can focus on our core business.',
-          author: 'Jacques Pretorius, CEO, Jumalutech fencing',
-          link: 'www.jumlautech.co.za'
         }
       ],
       isFeatured: true,
@@ -180,8 +177,10 @@ export const state = () => ({
       ],
       samples: [
         {
-          testimonial: 'The Odd Wave Digital SEO services are professional, flexible and we look forward to building a trustworthy relationship with them for our online marketing.',
-          author: 'Cameron, Owner, Create Renovations',
+          image: 'createrenovations.jpg',
+          text: 'The Odd Wave Digital SEO services are professional, flexible and we look forward to building a trustworthy relationship with them for our online marketing.',
+          author: 'Cameron, Founder',
+          company: 'Create Renovations',
           link: 'https://www.createrenovations.co.nz/'
         }
       ],
@@ -415,7 +414,6 @@ export const getters = {
   getFeaturedProducts: (state, getters) => () => {
     return state.all.filter(product => product.isFeatured)
       .sort((a, b) => { return a.isFeaturedOrder - b.isFeaturedOrder || a.price.value - b.price.value })
-      // .sort((a, b) => { return a.price.value - b.price.value })
       .map(item => (
         {
           id: item.id,
@@ -474,20 +472,7 @@ export const getters = {
         }
       ))
   },
-  getSamples: (state, getters) => () => {
-    // return state.all.filter(product => product.isFeatured)
-    // .sort((a, b) => { return a.isFeaturedOrder - b.isFeaturedOrder || a.price.value - b.price.value })
-    // return state.all.map(item => (
-    //   {
-    //     id: item.id,
-    //     header: item.header,
-    //     description: item.description,
-    //     features: item.features,
-    //     price: getters.getPrice(item.price.value, item.price.discount),
-    //     paymentPlan: item.price.flexible ? getters.getPaymentPlan(getters.getPrice(item.price.value, item.price.discount)) : undefined,
-    //     relatedServices: item.relatedServices
-    //   }
-    // ))
-    return state.all.samples
+  getPoductPortfolios: (state) => {
+    return [].concat(...state.all.map(({ samples }) => samples || []))
   }
 }

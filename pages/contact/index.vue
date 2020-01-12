@@ -8,12 +8,6 @@
     >
       <p class="watermark" />
     </b-container>
-    <!-- <AnimeBannerWordsHeaderComponent
-      pid="contact"
-      :pheader="animeheader"
-      :pbgimage="backgroundImage"
-      :pstyle="style"
-    /> -->
 
     <HeaderComponent
       pheader="Have a project or idea? Drop us a line. "
@@ -21,16 +15,6 @@
       pcontainerclass="mt-7 mb-5 borderLeft"
     />
     <ContactForm :pservices="servicesDropDown" :pbgimage="backgroundImage" :pstyle="style" />
-    <!-- <b-container fluid class="text-primary text-medium w-100 text-left m-0 p-0">
-      <AnimeBannerWordsHeaderComponent
-        pid="contact"
-        :pheader="animeheader"
-        :pbgimage="backgroundImage"
-        :pstyle="style"
-      />
-      <HeaderComponent :pheader="header" />
-      <ContactForm :pservices="servicesDropDown" :pbgimage="backgroundImage" :pstyle="style" />
-    </b-container>-->
     <div class="m-0 pb-5 bg-transparent">
       <p id="whyussection" class="p-3" />
       <WhyUsComponent pheader="Why Us?" class="align-self-center" :pfeatures="features" />
@@ -40,14 +24,12 @@
 <script>
 import { mapGetters } from 'vuex'
 import Nav from '@/components/Nav'
-// import AnimeBannerWordsHeaderComponent from '@/components/AnimeBannerWordsHeaderComponent'
 import HeaderComponent from '@/components/HeaderComponent'
 import ContactForm from '@/components/ContactForm'
 import WhyUsComponent from '@/components/WhyUsComponent'
 export default {
   components: {
     Nav,
-    // AnimeBannerWordsHeaderComponent,
     HeaderComponent,
     ContactForm,
     WhyUsComponent
@@ -187,15 +169,6 @@ p.watermark {
   font-size: 5vw;
   z-index: -1;
   opacity: 0.5;
-}
-
-.contactContainer {
-  background: transparent;
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .contactBackground {

@@ -175,15 +175,15 @@ export const state = () => ({
           header: 'Following Google Webmaster Guidelines'
         }
       ],
-      samples: [
-        {
-          image: 'createrenovations.jpg',
-          text: 'The Odd Wave Digital SEO services are professional, flexible and we look forward to building a trustworthy relationship with them for our online marketing.',
-          author: 'Cameron, Founder',
-          company: 'Create Renovations',
-          link: 'https://www.createrenovations.co.nz/'
-        }
-      ],
+      // samples: [
+      //   {
+      //     image: 'createrenovations.jpg',
+      //     text: 'The Odd Wave Digital SEO services are professional, flexible and we look forward to building a trustworthy relationship with them for our online marketing.',
+      //     author: 'Cameron, Founder',
+      //     company: 'Create Renovations',
+      //     link: 'https://www.createrenovations.co.nz/'
+      //   }
+      // ],
       price: { value: 130, unit: 'package', discount: 0, flexible: true },
       isFeatured: true,
       isFeaturedOrder: 3,
@@ -316,7 +316,7 @@ export const state = () => ({
           header: 'Custom design, development & engineering from your ideas, designs, POCs, APIs',
           icon: ['fas', 'check']
         }, {
-          header: 'Web design, Web development, Cloud development',
+          header: 'Website Design, Web development, Cloud development',
           icon: ['fas', 'check']
         }, {
           header: 'Integration, Data Engineering',

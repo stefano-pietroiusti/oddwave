@@ -37,16 +37,29 @@ export const state = () => ({
         }
       ],
       samples: [
-        {
-          image: 'bakeries.jpg',
-          text: 'Custom design & development for Catering companies'
-        },
+
         {
           image: 'jumalutech.jpg',
           text: 'We developed a great partnership with the Odd Wave Digital and are impressed by their dedication to helping us launch online successfully. We continue to use their services for SEO and  Digital marketing management so we can focus on our core business.',
           author: 'Jacques Pretorius, Founder',
           company: 'Jumalutech Fencing',
           link: 'www.jumlautech.co.za'
+        },
+        {
+          image: 'bakeries.jpg',
+          text: 'Bringing to life awesome designs for foodies, cafes, restaurants and catering companies through our professional and rapid application development'
+        },
+        {
+          image: 'custom_website_design.jpg',
+          text: 'Beautiful designs born through intelligent development'
+        },
+        {
+          image: 'gym.jpg',
+          text: 'Bringing to life awesome designs for the gym industry'
+        },
+        {
+          image: 'portfolios.jpg',
+          text: 'Enhance your online portfolio through our design and development'
         }
       ],
       isFeatured: true,
@@ -136,10 +149,7 @@ export const state = () => ({
         }
       ],
       samples: [
-        {
-          image: 'restaurants.jpg',
-          text: 'Custom design & development for leading NZ restaurant businesses'
-        }
+
       ],
       isFeatured: true,
       isFeaturedOrder: 0,

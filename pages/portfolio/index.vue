@@ -14,15 +14,15 @@
       psubtitle="We work with you to create a beautiful websites whether you're selling products, services, software or expertise. Watch this space :)"
       pcontainerclass="mt-7 mb-5 borderLeft"
     />
-    <b-container v-if="productPortfolios" fluid class="w-100">
+    <b-container v-if="productPortfolios" class="w-100">
       <b-row no-gutters>
         <b-col
           v-for="item in productPortfolios"
           :key="item.text"
           sm="12"
           md="12"
-          lg="4"
-          xl="3"
+          lg="6"
+          xl="6"
         >
           <figure class="portfolio">
             <img
@@ -39,7 +39,7 @@
                 {{ item.company }}
               </h5>
               <blockquote v-if="item.text">
-                <p>'{{ item.text }}'</p>
+                <p>{{ item.text }}</p>
               </blockquote>
             </figcaption>
             <!-- <a v-if="item.link" :href="item.link" /> -->
@@ -198,9 +198,9 @@ p.watermark {
   position: relative;
   display: inline-block;
   overflow: hidden;
-  padding: 5px;
-  min-width: 100%;
-  /* max-width: 400px; */
+  padding: 0;
+  min-width: 350px;
+  max-width: 400px;
   color: #ffffff;
   text-align: left;
   font-size: 0.8rem;
@@ -218,7 +218,7 @@ p.watermark {
 }
 .portfolio figcaption {
   position: absolute;
-  height: 20%;
+  height: 35%;
   left: 0;
   right: 0;
   bottom: 0;

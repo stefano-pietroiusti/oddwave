@@ -39,27 +39,27 @@ export const state = () => ({
       samples: [
 
         {
-          image: 'jumalutech.jpg',
+          image: 'jumalutech_seo_sem.jpg',
           text: 'We developed a great partnership with the Odd Wave Digital and are impressed by their dedication to helping us launch online successfully. We continue to use their services for SEO and  Digital marketing management so we can focus on our core business.',
           author: 'Jacques Pretorius, Founder',
           company: 'Jumalutech Fencing',
           link: 'www.jumlautech.co.za'
         },
         {
-          image: 'bakeries.jpg',
+          image: 'kiwicycles_website_design.jpg',
+          text: 'Perfecting your brand online.'
+        },
+        {
+          image: 'crossfit_website_design.jpg',
+          text: 'Superfit websites for gyms and fitness centres'
+        },
+        {
+          image: 'restaurant_website_design.jpg',
           text: 'Bringing to life awesome designs for foodies, cafes, restaurants and catering companies through our professional and rapid application development'
         },
         {
-          image: 'custom_website_design.jpg',
-          text: 'Beautiful designs born through intelligent development'
-        },
-        {
-          image: 'gym.jpg',
-          text: 'Bringing to life awesome designs for the gym industry'
-        },
-        {
-          image: 'portfolios.jpg',
-          text: 'Enhance your online portfolio through our design and development'
+          image: 'marine_website-design.jpg',
+          text: 'Bringing to life awesome designs for marine companies through our professional and rapid web development'
         }
       ],
       isFeatured: true,

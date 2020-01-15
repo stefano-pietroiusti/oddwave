@@ -14,15 +14,15 @@
       psubtitle="We work with you to create a beautiful websites whether you're selling products, services, software or expertise. Watch this space :)"
       pcontainerclass="mt-7 mb-5 borderLeft"
     />
-    <b-container v-if="productPortfolios" class="w-100">
-      <b-row no-gutters>
+    <b-container v-if="productPortfolios" fluid class="w-100">
+      <b-row>
         <b-col
           v-for="item in productPortfolios"
           :key="item.text"
           sm="12"
           md="12"
           lg="6"
-          xl="6"
+          xl="4"
         >
           <figure class="portfolio">
             <img
@@ -199,8 +199,8 @@ p.watermark {
   display: inline-block;
   overflow: hidden;
   padding: 0;
-  min-width: 350px;
-  max-width: 400px;
+  min-width: 400px;
+  max-width: 100%;
   color: #ffffff;
   text-align: left;
   font-size: 0.8rem;
@@ -218,7 +218,7 @@ p.watermark {
 }
 .portfolio figcaption {
   position: absolute;
-  height: 35%;
+  height: 20%;
   left: 0;
   right: 0;
   bottom: 0;
@@ -248,7 +248,7 @@ p.watermark {
   padding: 0;
   margin: 0;
   font-style: italic;
-  font-size: 1em;
+  font-size: 1rem;
 }
 .portfolio a {
   position: absolute;
@@ -259,7 +259,7 @@ p.watermark {
 }
 .portfolio:hover figcaption,
 .portfolio.hover figcaption {
-  height: calc(100%);
+  height: calc(40%);
 }
 
 </style>

@@ -42,7 +42,7 @@
                 <p>{{ item.text }}</p>
               </blockquote>
             </figcaption>
-            <!-- <a v-if="item.link" :href="item.link" /> -->
+            <a v-if="item.link" :href="item.link" />
           </figure>
         </b-col>
       </b-row>

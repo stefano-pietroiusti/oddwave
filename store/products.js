@@ -40,24 +40,32 @@ export const state = () => ({
 
         {
           image: 'jumalutech_seo_sem.jpg',
-          text: 'We developed a great partnership with the Odd Wave Digital and are impressed by their dedication to helping us launch online successfully. We continue to use their services for SEO and  Digital marketing management so we can focus on our core business.',
+          text: 'Our website and Google Add Campaign is still run by The Odd Wave and we are extremely satisfied with their Service. The campaign is continually evolving and growing with their guidance. Our monthly campaign cost is extremely successful as can be seen by growth rate in Turnover.',
           author: 'Jacques Pretorius, Founder',
           company: 'Jumalutech Fencing',
-          link: 'www.jumlautech.co.za'
+          link: '/docs/Jumalutech_Testimonial.pdf'
         },
         {
+          author: 'The Odd Wave',
+          company: 'KiwiCycles custom design to be born',
           image: 'kiwicycles_website_design.jpg',
           text: 'Perfecting your brand online.'
         },
         {
+          author: 'The Odd Wave',
+          company: 'Crossfit custom design to be born',
           image: 'crossfit_website_design.jpg',
           text: 'Superfit websites for gyms and fitness centres'
         },
         {
+          author: 'The Odd Wave',
+          company: 'Foodies custom design to be born',
           image: 'restaurant_website_design.jpg',
           text: 'Bringing to life awesome designs for foodies, cafes, restaurants and catering companies through our professional and rapid application development'
         },
         {
+          author: 'The Odd Wave',
+          company: 'Marine and boaties custom designs to be born',
           image: 'marine_website-design.jpg',
           text: 'Bringing to life awesome designs for marine companies through our professional and rapid web development'
         }

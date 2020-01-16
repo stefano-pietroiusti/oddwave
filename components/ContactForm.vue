@@ -112,6 +112,8 @@
       <b-col class="p-3 pl-5 text-left text-black">
         <span class="text-medium text-bold" v-html="company" />
         <br>
+        <span class="text-small" v-html="companyphone0" />
+        <br>
         <span class="text-small" v-html="companyphone1" />
         <br>
         <span class="text-small" v-html="companyphone2" />
@@ -157,6 +159,8 @@ export default {
         'The Odd Wave Ltd',
       companyemail:
         '<a class="text-black" style="word-break: break-all;" href="mailto:&#116;&#101;&#097;&#109;&#064;&#116;&#104;&#101;&#111;&#100;&#100;&#119;&#097;&#118;&#101;&#046;&#099;&#111;&#046;&#110;&#122;">&#116;&#101;&#097;&#109;&#064;&#116;&#104;&#101;&#111;&#100;&#100;&#119;&#097;&#118;&#101;&#046;&#099;&#111;&#046;&#110;&#122;</a>',
+      companyphone0:
+        '<a href="tel:0800420204" class="text-black">Sales &nbsp;0800&nbsp;4&nbsp;2020&nbsp;4</a>',
       companyphone1:
         '<a href="tel:+642108658172" class="text-black">Jaline &nbsp;+64&nbsp;210&nbsp;8658&nbsp;172</a>',
       companyphone2:

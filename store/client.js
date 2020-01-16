@@ -114,7 +114,7 @@ export const state = () => ({
       image: '/imgs/stefano-pietroiusti.jpg'
     }
     ],
-    phone: ['+64 210 8658 172', '+64 210 8823 769'],
+    phone: ['0800 4 2020 4', '+64 210 8658 172', '+64 210 8823 769'],
     address: {
       '@type': 'PostalAddress',
       streetAddress: '7 Halder Place',

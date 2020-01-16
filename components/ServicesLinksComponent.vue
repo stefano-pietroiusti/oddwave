@@ -13,15 +13,15 @@
           <b-card
             deck
             no-body
-            class="cardSmall servicesCard lax"
+            class="cardSmall servicesCard lax p-2"
             data-lax-preset="zoomIn"
             data-lax-preset_large="zoomIn"
             data-lax-preset_small="zoomIn"
           >
             <b-card-body>
               <span :text="item.landing.header" v-html="item.image" />
-              <b-card-text>
-                <span class="text-small">{{ item.landing.header }}</span>
+              <b-card-text class="text-small pt-4">
+                <span>{{ item.landing.header }}</span>
               </b-card-text>
               <div class="card-text">
                 {{ item.text }}

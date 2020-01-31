@@ -27,7 +27,7 @@
       <b-card no-body class="text-white bg-primary w-xs-100 w-sm-100 w-md-75 w-lg-50 w-xl-50">
         <b-card-body>
           <h2 v-if="product.price">
-            <span class="text-large price">${{ product.price }}</span>
+            <span class="text-medium">from</span>&nbsp;<span class="text-large price">${{ product.price }}</span><span class="text-medium">&nbsp;+ GST</span>
           </h2>
           <b-card-text>{{ product.description }}</b-card-text>
           <b-card-text>{{ product.paymentPlan }}</b-card-text>

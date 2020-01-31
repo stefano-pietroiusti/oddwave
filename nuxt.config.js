@@ -149,6 +149,9 @@ export default {
     ['@nuxtjs/google-analytics', {
       id: 'UA-148813087-1'
     }]
+    // ['@nuxtjs/google-tag-manager', {
+    //   id: 'GTM-PJ4J4WD'
+    // }]
   ],
   webfontloader: {
     // google: {

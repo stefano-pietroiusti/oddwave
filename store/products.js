@@ -6,38 +6,32 @@ export const state = () => ({
       id: 'pro-business-website-landing',
       icon: ['fab', 'dev'],
       variant: 'rwcyellow',
-      title: 'Website Landing Page with SEO',
-      linkTitle: 'Website Landing Page & SEO',
-      description: 'Custom web landing page with animations, stock photos, profiles, social media integration, SEO',
-      header: 'Website Landing Page & SEO',
+      title: 'Website Landing Page',
+      linkTitle: 'Business Promotion Website',
+      description: 'Custom business promotion landing page with animations, stock photos, team profiles, social media links, SEO & contact form',
+      header: 'Business Promotion Website',
       image: 'websitedesign.jpg',
       features: [
         {
-          header: 'Custom Website design & development',
-          text: 'Website homepage design, content design, stock photos, animation, security',
+          header: 'Custom design & development',
+          text: 'Copy writing, stock photos, animations, social media links, contact form, fb messenger chat',
           icon: ['fas', 'check']
         },
         {
-          header: 'A+ Google Website Audit score in SEO, Accessibility & Best Practices',
+          header: 'Google My Business',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'A+ Google Lighthouse Audit score in SEO, Accessibility, Best Practices, Performance',
           text: 'Error free in factors that affect user experience',
           icon: ['fas', 'check']
         },
         {
-          header: 'Advanced Data/Content and SEO optimization with JSON-LD Structured Data Support',
-          text: 'Advanced Data/Content and SEO optimization with in-memory data store and JSON-LD Structured Data Support',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Responsive Mobile and Search-Engine friendly',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Web hosting & email setup',
+          header: 'Responsive, Mobile and Search-Engine friendly',
           icon: ['fas', 'check']
         }
       ],
       samples: [
-
         {
           image: 'jumalutech_seo_sem.jpg',
           text: 'Our website and Google Add Campaign is still run by The Odd Wave and we are extremely satisfied with their Service. The campaign is continually evolving and growing with their guidance. Our monthly campaign cost is extremely successful as can be seen by growth rate in Turnover.',
@@ -73,27 +67,22 @@ export const state = () => ({
       isFeatured: true,
       isFeaturedOrder: 0,
       relatedServices: ['web-design-nz'],
-      price: { value: 648, unit: 'package', discount: 0, flexible: true },
+      price: { value: 1248, unit: 'package', discount: 0, flexible: true },
       keywords: [...commonKeywords, 'business website package', 'custom website', 'landing page', 'products website', 'services website', 'website with contact form']
     },
     {
       id: 'pro-business-website',
       icon: ['fab', 'dev'],
       variant: 'rwcyellow',
-      title: 'Business Website with SEO',
-      linkTitle: 'Business Website & SEO Package',
-      description: 'Multi-page business website',
-      header: 'Business Website & SEO Package',
+      title: 'Business Website',
+      linkTitle: 'Business Website Packages',
+      description: 'Business Website with Landing, Contact Us, Products &/ Services',
+      header: 'Business Website Packages',
       name: 'Business Website',
       image: 'websitedesign.jpg',
       features: [
         {
-          header: '5 page custom website design & development',
-          text: 'Landing, Contact Us, Products &/ Services',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Custom Contact Us page',
+          header: 'Custom design & development',
           text: 'Landing, Contact Us, Products &/ Services',
           icon: ['fas', 'check']
         },
@@ -102,57 +91,18 @@ export const state = () => ({
           text: 'Error free in factors that affect user experience',
           icon: ['fas', 'check']
         },
+        // },
+        // {
+        //   header: 'Advanced SEO optimization with JSON-LD Structured Data Support',
+        //   icon: ['fas', 'check']
+        // },
         {
-          header: 'Advanced SEO optimization with JSON-LD Structured Data Support',
-          text: 'Optimization of up to 5 Pages',
+          header: 'Responsive, Mobile and Search-Engine friendly',
           icon: ['fas', 'check']
         },
         {
-          header: 'Mobile and Search-engine friendly',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Web hosting & email setup',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'JSON-LD Structured Data Support',
-          text: 'JSON-LD Logo, Organization, LocalBusiness',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Domain registration',
-          icon: ['fas', 'check']
-        },
-        {
-          header: '1 year business hosting',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'HTTPS secure',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Social media',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Unlimited email',
-          text:
-            'We will set up 1 - 5 email addresses for you initially',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Google business listing',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Google analytics',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Scalable to optional add-ons after consultation',
-          text: 'Multilingual websites, headless CMS with GraphQL API, online shopping, online customer chat, website management, website maintenance & support, custom component development',
+          header: 'Scalable to a headless CMS and ecommerce PWA after consultation',
+          text: 'Multilingual, headless CMS, ecommerce PWA',
           icon: ['fas', 'check']
         }
       ],
@@ -162,7 +112,7 @@ export const state = () => ({
       isFeatured: true,
       isFeaturedOrder: 0,
       relatedServices: ['web-design-nz'],
-      price: { value: 1950, unit: 'package', discount: 0, flexible: true },
+      price: { value: 3120, unit: 'package', discount: 0, flexible: true },
       keywords: [...commonKeywords, 'business website package', 'custom website', 'landing page', 'products website', 'services website', 'website with contact form']
     },
     {
@@ -348,7 +298,7 @@ export const state = () => ({
           icon: ['fas', 'check']
         }
       ],
-      price: { value: 104, unit: 'hour', discount: 0 },
+      price: { value: 120, unit: 'hour', discount: 0 },
       isFeatured: true,
       isFeaturedOrder: 5,
       relatedServices: ['contracting-nz'],
@@ -385,7 +335,7 @@ export const state = () => ({
           icon: ['fas', 'check']
         }
       ],
-      price: { value: 104, unit: 'hour', discount: 0 },
+      price: { value: 120, unit: 'hour', discount: 0 },
       isFeatured: true,
       isFeaturedOrder: 5,
       relatedServices: ['contracting-nz'],
@@ -415,19 +365,20 @@ export const getters = {
     })
   },
   getPrice: state => (price, discount) => {
-    const gstRate = 0.15
+    const gstRate = 0
     const totalPrice = (Math.round(price * (1 - discount) * (1 + gstRate)) * 100) / 100
     return totalPrice
   },
   getPaymentPlan: state => (price) => {
-    const depositRate = price <= 500 ? 0.50 : 0.30
-    const interestRate = 0.02
-    const frequency = price <= 500 ? 0 : (price < 1000 ? 2 : 5)
+    const depositRate = price <= 500 ? 0.50 : 0.50
+    // const interestRate = 0.02
+    // const frequency = price <= 500 ? 0 : (price < 1000 ? 2 : 5)
     const total = price
     const depositBalance = Math.round((total * depositRate) * 100) / 100
-    const remainingBalance = total * (1 - depositRate)
-    const frequencyPayment = price <= 500 ? ((Math.round(total) * 100) / 100) : Math.round(((remainingBalance * (1 + interestRate)) / frequency) * 100) / 100
-    return price <= 500 ? '' : `Flexi payment: upfront deposit $${depositBalance} + ${frequency} weekly payments of $${frequencyPayment} (incl. ${interestRate * 100}% admin fee and GST)`
+    // const remainingBalance = total * (1 - depositRate)
+    // const frequencyPayment = price <= 500 ? ((Math.round(total) * 100) / 100) : Math.round(((remainingBalance * (1 + interestRate)) / frequency) * 100) / 100
+    // return price <= 00 ? '' : `Flexi payment: upfront deposit $${depositBalance} + ${frequency} weekly payments of $${frequencyPayment} (incl. ${interestRate * 100}% admin fee and GST)`
+    return price <= 500 ? '' : `Flexi payment: upfront deposit $${depositBalance} + progress payments`
   },
   getFeaturedProducts: (state, getters) => () => {
     return state.all.filter(product => product.isFeatured)

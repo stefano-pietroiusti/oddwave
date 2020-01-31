@@ -119,6 +119,8 @@
         <span class="text-small" v-html="companyphone2" />
         <br>
         <span class="text-small" v-html="companyemail" />
+        <br><br>
+        "Coming together is a beginning, <br>Keeping together is progress, <br>Working together is success"
       </b-col>
     </b-row>
   </b-container>

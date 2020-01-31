@@ -19,8 +19,7 @@
                   <h2 v-if="item.price" class="text-medium">
                     {{ item.header }}
                     <br>
-                    <br>
-                    <span class="text-mediumLarge">${{ item.price }}</span>
+                    <span class="text-small">from </span><span class="text-mediumLarge">${{ item.price }}</span><span class="text-small"> + GST</span>
                     <br>
                     {{ item.subheader }}
                   </h2>

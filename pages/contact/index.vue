@@ -16,7 +16,7 @@
     />
     <ContactForm :pservices="servicesDropDown" :pbgimage="backgroundImage" :pstyle="style" />
     <div class="m-0 pb-5 bg-transparent">
-      <p id="whyussection" class="p-3" />
+      <p id="whyussection" />
       <WhyUsComponent pheader="Why Us?" class="align-self-center" :pfeatures="features" />
     </div>
   </div>

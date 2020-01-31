@@ -480,8 +480,8 @@ export const state = () => ({
         {
           header: 'We specialize in:',
           list: [
-            'Development, Integration, Automation and Data Engineering (Java, Javascript, Vue.js, Nuxt.js, Node.js)',
-            'Data Management(SQL, Excel, Qlikview, PowerBI)',
+            'Development, Integration, Automation and Data Engineering (Java, Javascript, Vue.js, Node.js, GraphQL, Powerful APIs, Small Library Sizes, Great Performance)',
+            'Data Management(SQL, Excel, Qlikview, PowerBI, Headless CMS)',
             'Cloud Services (Azure, AWS, Google)',
             'Business Solutions (Xero, Office 365, Google Suite)'],
           icon: ['fab', 'servicestack']

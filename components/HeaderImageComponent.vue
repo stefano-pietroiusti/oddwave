@@ -34,7 +34,7 @@ export default {
 //     titletext: {
 //       type: String,
 //       required: false,
-//       default: '1 Digital marketing and web design services'
+//       default: '1 Digital marketing and Website Design services'
 //     }
 //   }
 // }

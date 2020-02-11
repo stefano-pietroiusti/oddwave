@@ -9,6 +9,12 @@
       </div>
     </b-container>
 
+    <SectionContactComponent
+      pheader="What can we do for you?"
+      :pcontent="client.marketing"
+      class="align-self-center"
+    />
+
     <SectionComponent pheader="About Us" :pcontent="client.about" class="align-self-center" />
 
     <TeamComponent pheader="Our team" :pteam="team" class="align-self-center" />
@@ -48,7 +54,7 @@
     <SliderComponent :products="featuredProducts" />
 
     <SectionContactComponent
-      pheader="What can we do for you?"
+      pheader=""
       :pcontent="client.businessvalue"
       class="align-self-center services bg-white"
     />
@@ -205,6 +211,7 @@ export default {
     // if (process.env.NODE_ENV !== 'production') {
     this.$ga.page(this.$route.path)
     this.$ga.event('page', '/')
+    // this.$gtm.pushEvent({ event: 'HomeLanding' })
     // this.rellax = new Rellax('.rellax', {
     //   speed: -2,
     //   center: false,

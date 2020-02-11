@@ -30,10 +30,13 @@ const routes = [
   '/services/seo-nz',
   '/services/ppc-nz',
   '/services/web-design-nz',
+  '/services/pwa-progressive-web-apps-nz',
   '/services/photographer-nz',
   '/services/contracting-nz/',
   '/products/pro-business-website-landing/',
   '/products/pro-business-website/',
+  '/products/pwa-headless-cms/',
+  '/products/pwa-eCommerce/',
   '/products/seo-website-package-1/',
   '/products/seo-website-package-5/',
   '/products/seo-website-package-10/',
@@ -149,6 +152,9 @@ export default {
     ['@nuxtjs/google-analytics', {
       id: 'UA-148813087-1'
     }]
+    // ['@nuxtjs/google-tag-manager', {
+    //   id: 'GTM-PJ4J4WD'
+    // }]
   ],
   webfontloader: {
     // google: {

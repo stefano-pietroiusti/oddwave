@@ -6,71 +6,83 @@ export const state = () => ({
       id: 'pro-business-website-landing',
       icon: ['fab', 'dev'],
       variant: 'rwcyellow',
-      title: 'Website Landing Page with SEO',
-      linkTitle: 'Website Landing Page & SEO',
-      description: 'Custom web landing page with animations, stock photos, profiles, social media integration, SEO',
-      header: 'Website Landing Page & SEO',
+      title: 'Website Landing Page',
+      linkTitle: 'Business Promotion Website',
+      description: 'Custom business promotion landing page with animations, stock photos, team profiles, social media links, SEO & contact form',
+      header: 'Business Promotion Website',
       image: 'websitedesign.jpg',
       features: [
         {
-          header: 'Custom Website design & development',
-          text: 'Website homepage design, content design, stock photos, animation, security',
+          header: 'Custom design & development',
+          text: 'Copy writing, stock photos, animations, social media links, contact form, fb messenger chat',
           icon: ['fas', 'check']
         },
         {
-          header: 'A+ Google Website Audit score in SEO, Accessibility & Best Practices',
+          header: 'Google My Business',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'A+ Google Lighthouse Audit score in SEO, Accessibility, Best Practices, Performance',
           text: 'Error free in factors that affect user experience',
           icon: ['fas', 'check']
         },
         {
-          header: 'Advanced Data/Content and SEO optimization with JSON-LD Structured Data Support',
-          text: 'Advanced Data/Content and SEO optimization with in-memory data store and JSON-LD Structured Data Support',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Responsive Mobile and Search-Engine friendly',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Web hosting & email setup',
+          header: 'Responsive, Mobile and Search-Engine friendly',
           icon: ['fas', 'check']
         }
       ],
       samples: [
         {
-          image: 'catering.jpg',
-          text: 'Custom design & development for Catering companies'
+          image: 'jumalutech_seo_sem.jpg',
+          text: 'Our website and Google Add Campaign is still run by The Odd Wave and we are extremely satisfied with their Service. The campaign is continually evolving and growing with their guidance. Our monthly campaign cost is extremely successful as can be seen by growth rate in Turnover.',
+          author: 'Jacques Pretorius, Founder',
+          company: 'Jumalutech Fencing',
+          link: '/docs/Jumalutech_Testimonial.pdf'
         },
         {
-          testimonial: 'We developed a great partnership with the Odd Wave Digital and are impressed by their dedication to helping us launch online successfully. We continue to use their services for SEO and  Digital marketing management so we can focus on our core business.',
-          author: 'Jacques Pretorius, CEO, Jumalutech fencing',
-          link: 'www.jumlautech.co.za'
+          author: 'The Odd Wave',
+          company: 'KiwiCycles custom design to be born',
+          image: 'kiwicycles_website_design.jpg',
+          text: 'Perfecting your brand online.'
+        },
+        {
+          author: 'The Odd Wave',
+          company: 'Crossfit custom design to be born',
+          image: 'crossfit_website_design.jpg',
+          text: 'Superfit websites for gyms and fitness centres'
+        },
+        {
+          author: 'The Odd Wave',
+          company: 'Foodies custom design to be born',
+          image: 'restaurant_website_design.jpg',
+          text: 'Bringing to life awesome designs for foodies, cafes, restaurants and catering companies through our professional and rapid application development'
+        },
+        {
+          author: 'The Odd Wave',
+          company: 'Marine and boaties custom designs to be born',
+          image: 'marine_website-design.jpg',
+          text: 'Bringing to life awesome designs for marine companies through our professional and rapid web development'
         }
       ],
       isFeatured: true,
       isFeaturedOrder: 0,
       relatedServices: ['web-design-nz'],
-      price: { value: 648, unit: 'package', discount: 0, flexible: true },
+      price: { value: 1248, unit: 'package', discount: 0, flexible: true },
       keywords: [...commonKeywords, 'business website package', 'custom website', 'landing page', 'products website', 'services website', 'website with contact form']
     },
     {
       id: 'pro-business-website',
       icon: ['fab', 'dev'],
       variant: 'rwcyellow',
-      title: 'Business Website with SEO',
-      linkTitle: 'Business Website & SEO Package',
-      description: 'Multi-page business website',
-      header: 'Business Website & SEO Package',
+      title: 'Business Website',
+      linkTitle: 'Business Website Packages',
+      description: 'Business Website with Landing, Contact Us, Products &/ Services',
+      header: 'Business Website Packages',
       name: 'Business Website',
       image: 'websitedesign.jpg',
       features: [
         {
-          header: '5 page custom website design & development',
-          text: 'Landing, Contact Us, Products &/ Services',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Custom Contact Us page',
+          header: 'Custom design & development',
           text: 'Landing, Contact Us, Products &/ Services',
           icon: ['fas', 'check']
         },
@@ -79,76 +91,105 @@ export const state = () => ({
           text: 'Error free in factors that affect user experience',
           icon: ['fas', 'check']
         },
+        // },
+        // {
+        //   header: 'Advanced SEO optimization with JSON-LD Structured Data Support',
+        //   icon: ['fas', 'check']
+        // },
         {
-          header: 'Advanced SEO optimization with JSON-LD Structured Data Support',
-          text: 'Optimization of up to 5 Pages',
+          header: 'Responsive, Mobile and Search-Engine friendly',
           icon: ['fas', 'check']
         },
         {
-          header: 'Mobile and Search-engine friendly',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Web hosting & email setup',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'JSON-LD Structured Data Support',
-          text: 'JSON-LD Logo, Organization, LocalBusiness',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Domain registration',
-          icon: ['fas', 'check']
-        },
-        {
-          header: '1 year business hosting',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'HTTPS secure',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Social media',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Unlimited email',
-          text:
-            'We will set up 1 - 5 email addresses for you initially',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Google business listing',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Google analytics',
-          icon: ['fas', 'check']
-        },
-        {
-          header: 'Scalable to optional add-ons after consultation',
-          text: 'Multilingual websites, headless CMS with GraphQL API, online shopping, online customer chat, website management, website maintenance & support, custom component development',
+          header: 'Scalable to a headless CMS and ecommerce PWA after consultation',
+          text: 'Multilingual, headless CMS, ecommerce PWA',
           icon: ['fas', 'check']
         }
       ],
       samples: [
-        {
-          image: 'restaurant.jpg',
-          text: 'Custom design & development for leading NZ restaurant businesses'
-        },
-        {
-          testimonial: 'We developed a great partnership with the Odd Wave Digital and are impressed by their dedication to helping us launch online successfully. We continue to use their services for SEO and  Digital marketing management so we can focus on our core business.',
-          author: 'Jacques Pretorius, CEO, Jumalutech fencing',
-          link: 'www.jumlautech.co.za'
-        }
+
       ],
       isFeatured: true,
       isFeaturedOrder: 0,
       relatedServices: ['web-design-nz'],
-      price: { value: 1950, unit: 'package', discount: 0, flexible: true },
+      price: { value: 3120, unit: 'package', discount: 0, flexible: true },
       keywords: [...commonKeywords, 'business website package', 'custom website', 'landing page', 'products website', 'services website', 'website with contact form']
+    },
+    {
+      id: 'pwa-headless-cms',
+      icon: ['fab', 'dev'],
+      variant: 'rwcyellow',
+      title: 'PWA for any headless CMS | The Odd Wave | Auckland, NZ',
+      linkTitle: 'PWA for any headless CMS',
+      description: 'Combine the power of PWA with any headless CMS. It is ultrafast, offline ready, secure and can be used with any headless CMS.',
+      header: 'PWA for any headless CMS',
+      image: 'websitedesign.jpg',
+      features: [
+        {
+          header: 'Offline-ready, secure, fast',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'Create, manage and expose your content-rich experiences to any digital device including digital signage',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'Stay-in-touch push notifications',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'Scalable and flexible',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'A+ Google Lighthouse Audit score in SEO, Accessibility, Best Practices, Performance',
+          text: 'Error free in factors that affect user experience',
+          icon: ['fas', 'check']
+        }
+      ],
+      isFeatured: true,
+      isFeaturedOrder: 0,
+      relatedServices: ['pwa-progressive-web-apps-nz'],
+      price: { value: 3900, unit: 'package', discount: 0, flexible: true },
+      keywords: [...commonKeywords, 'pwa for any headless CMS']
+    },
+    {
+      id: 'pwa-eCommerce',
+      icon: ['fab', 'dev'],
+      variant: 'rwcyellow',
+      title: 'PWA for any eCommerce | The Odd Wave | Auckland, NZ',
+      linkTitle: 'PWA for any eCommerce',
+      description: 'Combine the power of PWA with any e-commerce platform to provide the best shopping experiences, increase conversion rates, and grow sales.',
+      header: 'PWA for any eCommerce',
+      image: 'websitedesign.jpg',
+      features: [
+        {
+          header: 'Offline-ready, secure, fast, scalable, flexible',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'Create, manage and expose your content-rich experiences to any digital device including digital signage',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'Stay-in-touch push notifications',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'Any e-commerce integration (Shopware, Shopify, Magento, Custom, Stripe, Paypal etc.)',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'A+ Google Lighthouse Audit score in SEO, Accessibility, Best Practices, Performance',
+          text: 'Error free in factors that affect user experience',
+          icon: ['fas', 'check']
+        }
+      ],
+      isFeatured: true,
+      isFeaturedOrder: 0,
+      relatedServices: ['pwa-progressive-web-apps-nz'],
+      price: { value: 5900, unit: 'package', discount: 0, flexible: true },
+      keywords: [...commonKeywords, 'pwa for any headless CMS']
     },
     {
       id: 'seo-website-package-1',
@@ -178,13 +219,15 @@ export const state = () => ({
           header: 'Following Google Webmaster Guidelines'
         }
       ],
-      samples: [
-        {
-          testimonial: 'The Odd Wave Digital SEO services are professional, flexible and we look forward to building a trustworthy relationship with them for our online marketing.',
-          author: 'Cameron, Owner, Create Renovations',
-          link: 'https://www.createrenovations.co.nz/'
-        }
-      ],
+      // samples: [
+      //   {
+      //     image: 'createrenovations.jpg',
+      //     text: 'The Odd Wave Digital SEO services are professional, flexible and we look forward to building a trustworthy relationship with them for our online marketing.',
+      //     author: 'Cameron, Founder',
+      //     company: 'Create Renovations',
+      //     link: 'https://www.createrenovations.co.nz/'
+      //   }
+      // ],
       price: { value: 130, unit: 'package', discount: 0, flexible: true },
       isFeatured: true,
       isFeaturedOrder: 3,
@@ -317,7 +360,7 @@ export const state = () => ({
           header: 'Custom design, development & engineering from your ideas, designs, POCs, APIs',
           icon: ['fas', 'check']
         }, {
-          header: 'Web design, Web development, Cloud development',
+          header: 'Website Design, Web development, Cloud development',
           icon: ['fas', 'check']
         }, {
           header: 'Integration, Data Engineering',
@@ -331,7 +374,7 @@ export const state = () => ({
           icon: ['fas', 'check']
         }
       ],
-      price: { value: 104, unit: 'hour', discount: 0 },
+      price: { value: 120, unit: 'hour', discount: 0 },
       isFeatured: true,
       isFeaturedOrder: 5,
       relatedServices: ['contracting-nz'],
@@ -368,7 +411,7 @@ export const state = () => ({
           icon: ['fas', 'check']
         }
       ],
-      price: { value: 104, unit: 'hour', discount: 0 },
+      price: { value: 120, unit: 'hour', discount: 0 },
       isFeatured: true,
       isFeaturedOrder: 5,
       relatedServices: ['contracting-nz'],
@@ -398,24 +441,24 @@ export const getters = {
     })
   },
   getPrice: state => (price, discount) => {
-    const gstRate = 0.15
+    const gstRate = 0
     const totalPrice = (Math.round(price * (1 - discount) * (1 + gstRate)) * 100) / 100
     return totalPrice
   },
   getPaymentPlan: state => (price) => {
-    const depositRate = price <= 500 ? 0.50 : 0.30
-    const interestRate = 0.02
-    const frequency = price <= 500 ? 0 : (price < 1000 ? 2 : 5)
+    const depositRate = price <= 500 ? 0.50 : 0.50
+    // const interestRate = 0.02
+    // const frequency = price <= 500 ? 0 : (price < 1000 ? 2 : 5)
     const total = price
     const depositBalance = Math.round((total * depositRate) * 100) / 100
-    const remainingBalance = total * (1 - depositRate)
-    const frequencyPayment = price <= 500 ? ((Math.round(total) * 100) / 100) : Math.round(((remainingBalance * (1 + interestRate)) / frequency) * 100) / 100
-    return price <= 500 ? '' : `Flexi payment: upfront deposit $${depositBalance} + ${frequency} weekly payments of $${frequencyPayment} (incl. ${interestRate * 100}% admin fee and GST)`
+    // const remainingBalance = total * (1 - depositRate)
+    // const frequencyPayment = price <= 500 ? ((Math.round(total) * 100) / 100) : Math.round(((remainingBalance * (1 + interestRate)) / frequency) * 100) / 100
+    // return price <= 00 ? '' : `Flexi payment: upfront deposit $${depositBalance} + ${frequency} weekly payments of $${frequencyPayment} (incl. ${interestRate * 100}% admin fee and GST)`
+    return price <= 500 ? '' : `Flexi payment: upfront deposit $${depositBalance} + progress payments`
   },
   getFeaturedProducts: (state, getters) => () => {
     return state.all.filter(product => product.isFeatured)
       .sort((a, b) => { return a.isFeaturedOrder - b.isFeaturedOrder || a.price.value - b.price.value })
-      // .sort((a, b) => { return a.price.value - b.price.value })
       .map(item => (
         {
           id: item.id,
@@ -474,20 +517,7 @@ export const getters = {
         }
       ))
   },
-  getSamples: (state, getters) => () => {
-    // return state.all.filter(product => product.isFeatured)
-    // .sort((a, b) => { return a.isFeaturedOrder - b.isFeaturedOrder || a.price.value - b.price.value })
-    // return state.all.map(item => (
-    //   {
-    //     id: item.id,
-    //     header: item.header,
-    //     description: item.description,
-    //     features: item.features,
-    //     price: getters.getPrice(item.price.value, item.price.discount),
-    //     paymentPlan: item.price.flexible ? getters.getPaymentPlan(getters.getPrice(item.price.value, item.price.discount)) : undefined,
-    //     relatedServices: item.relatedServices
-    //   }
-    // ))
-    return state.all.samples
+  getPoductPortfolios: (state) => {
+    return [].concat(...state.all.map(({ samples }) => samples || []))
   }
 }

@@ -17,7 +17,7 @@
     </b-navbar-toggle>
     <b-navbar-brand
       to="/"
-      title="Web Design by The Odd Wave"
+      title="Website Design by The Odd Wave"
       exact
       exact-active-class
       class="px-4 mx-0"
@@ -26,8 +26,8 @@
         :src="logoPath"
         :srcset="logoPath.srcSet"
         fluid
-        alt="Web Design, Development & Digital Marketing by The Odd Wave"
-        text="Web Design, Development & Digital Marketing by The Odd Wave"
+        alt="Website Design, Development & Digital Marketing by The Odd Wave"
+        text="Website Design, Development & Digital Marketing by The Odd Wave"
         class="logo"
       >
     </b-navbar-brand>

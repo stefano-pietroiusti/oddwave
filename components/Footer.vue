@@ -1,7 +1,13 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
   <b-container fluid class="p-0 m-0 bg-black">
-    <b-container fluid class="w-75 pt-10 mx-auto text-light text-left bg-black footer text-medium">
+    <b-container fluid class="w-75 pt-8 mx-auto text-light text-left bg-black footer text-medium">
+      <b-row>
+        <b-col cols="12" class="text-small">
+          We are a website design and digital marketing company based in North Shore, Auckland, New Zealand. We serve businesses across NZ including Wellington, Waikato, Canterbury, Northland, Southland, Bay of Plenty, Hawkes Bay, Gisborne, Taranaki, Nelson, Tasman and Otago.
+        </b-col>
+      </b-row>
+
       <b-row>
         <b-col xs="12" sm="12" md="6" lg="6">
           <h2 class="pt-5">

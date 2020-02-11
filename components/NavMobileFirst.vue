@@ -9,13 +9,13 @@
           type="dark"
           variant="primary"
         >
-          <b-navbar-brand to="/" title="Web Design by The Odd Wave">
+          <b-navbar-brand to="/" title="Website Design by The Odd Wave">
             <img
               :src="logoPath"
               :srcset="logoPath.srcSet"
               fluid
-              alt="Web Design by The Odd Wave"
-              text="Web Design by The Odd Wave"
+              alt="Website Design by The Odd Wave"
+              text="Website Design by The Odd Wave"
               class="logo"
             >
           </b-navbar-brand>

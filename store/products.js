@@ -116,6 +116,82 @@ export const state = () => ({
       keywords: [...commonKeywords, 'business website package', 'custom website', 'landing page', 'products website', 'services website', 'website with contact form']
     },
     {
+      id: 'pwa-headless-cms',
+      icon: ['fab', 'dev'],
+      variant: 'rwcyellow',
+      title: 'PWA for any headless CMS | The Odd Wave | Auckland, NZ',
+      linkTitle: 'PWA for any headless CMS',
+      description: 'Combine the power of PWA with any headless CMS. It is ultrafast, offline ready, secure and can be used with any headless CMS.',
+      header: 'PWA for any headless CMS',
+      image: 'websitedesign.jpg',
+      features: [
+        {
+          header: 'Offline-ready, secure, fast',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'Create, manage and expose your content-rich experiences to any digital device including digital signage',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'Stay-in-touch push notifications',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'Scalable and flexible',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'A+ Google Lighthouse Audit score in SEO, Accessibility, Best Practices, Performance',
+          text: 'Error free in factors that affect user experience',
+          icon: ['fas', 'check']
+        }
+      ],
+      isFeatured: true,
+      isFeaturedOrder: 0,
+      relatedServices: ['pwa-progressive-web-apps-nz'],
+      price: { value: 3900, unit: 'package', discount: 0, flexible: true },
+      keywords: [...commonKeywords, 'pwa for any headless CMS']
+    },
+    {
+      id: 'pwa-eCommerce',
+      icon: ['fab', 'dev'],
+      variant: 'rwcyellow',
+      title: 'PWA for any eCommerce | The Odd Wave | Auckland, NZ',
+      linkTitle: 'PWA for any eCommerce',
+      description: 'Combine the power of PWA with any e-commerce platform to provide the best shopping experiences, increase conversion rates, and grow sales.',
+      header: 'PWA for any eCommerce',
+      image: 'websitedesign.jpg',
+      features: [
+        {
+          header: 'Offline-ready, secure, fast, scalable, flexible',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'Create, manage and expose your content-rich experiences to any digital device including digital signage',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'Stay-in-touch push notifications',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'Any e-commerce integration (Shopware, Shopify, Magento, Custom, Stripe, Paypal etc.)',
+          icon: ['fas', 'check']
+        },
+        {
+          header: 'A+ Google Lighthouse Audit score in SEO, Accessibility, Best Practices, Performance',
+          text: 'Error free in factors that affect user experience',
+          icon: ['fas', 'check']
+        }
+      ],
+      isFeatured: true,
+      isFeaturedOrder: 0,
+      relatedServices: ['pwa-progressive-web-apps-nz'],
+      price: { value: 5900, unit: 'package', discount: 0, flexible: true },
+      keywords: [...commonKeywords, 'pwa for any headless CMS']
+    },
+    {
       id: 'seo-website-package-1',
       icon: ['fas', 'search'],
       variant: 'rwcred',

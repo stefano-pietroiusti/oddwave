@@ -13,6 +13,7 @@ export const actions = {
   async nuxtServerInit({dispatch, commit }) {
     commit('setLoaded', true)
     await dispatch('articles/getSetPosts');
+    
     // return Promise.all([
     //   dispatch('articles/getSetPosts', context)
     // ]);

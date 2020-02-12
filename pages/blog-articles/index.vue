@@ -1,6 +1,8 @@
+<!-- eslint-disable vue/no-v-html -->
 <template>
   <div id="blogContainer">
     <Nav id="navbar" class="container-fluid" :ptheme="theme" />
+
     <b-container
       fluid
       :style="gradient"
@@ -9,59 +11,53 @@
       <p class="watermark" />
     </b-container>
     <HeaderComponent
-      pheader="Blog"
-      psubheader="Because First impressions matter. "
-      psubtitle="We work with you to create a beautiful websites whether you're selling products, services, software or expertise. Watch this space :)"
+      pheader="Knowledge Sharing Blog"
+      psubheader="Sharing insights is key to any company's success"
+      psubtitle="Add a knowledge sharing blog to provide insights into your products, services and expertise. Watch this space :)"
       pcontainerclass="mt-7 mb-5 borderLeft"
     />
-    POSTS: Index: {{ $store.state.loaded }} <br> Articles: {{ posts }}<br>
-    <!-- <h1>articles: {{ $store.state.articles }}</h1> -->
-    <!-- <p
-      v-for="item in posts.items"
-      :key="item.elements"
+    <!-- POSTS: Index: {{ $store.state.articles.posts }} <br> Articles: {{ posts }}<br> -->
+    <!-- <section
+      v-for="item in $store.state.articles.posts"
+      :key="item.elements.url.value"
     >
-      {{ item.elements }}
-    </p> -->
-    <!--
+      <h3 v-html="item.elements.title.value" />
+      <div v-html="item.elements.body.value" />
+    </section> -->
 
-    <b-container
-      fluid
-      class="w-100"
-    >
+    <b-container fluid>
       <b-row>
-        <b-col
-          v-for="item in articles"
-          :key="item.value"
-          sm="12"
-          md="12"
-          lg="6"
-          xl="4"
-        >
-          {{ item }}
-           <figure class="blog">
-            <img
-              v-if="item.image"
-              :alt="item.text"
-              :src="`/imgs/samples/${item.image}`"
-              class="w-100 h-100"
+        <b-col cols="2">
+          <p>
+&nbsp;
+          </p>
+          <b-list-group v-b-scrollspy:listgroup-ex>
+            <b-list-group-item
+              v-for="item in $store.state.articles.posts"
+              :key="item.elements.url.value"
+              :href="'#' + item.elements.url.value"
+              v-html="item.elements.url.value"
+            />
+          </b-list-group>
+        </b-col>
+
+        <b-col cols="10">
+          <div id="listgroup-ex" style="position:relative; overflow-y:auto; height:70%">
+            <section
+              v-for="item in $store.state.articles.posts"
+              :key="item.elements.url.value"
             >
-            <figcaption>
-              <h3 v-if="item.author">
-                {{ item.author }}
-              </h3>
-              <h5 v-if="item.company">
-                {{ item.company }}
-              </h5>
-              <blockquote v-if="item.text">
-                <p>{{ item.text }}</p>
-              </blockquote>
-            </figcaption>
-            <a v-if="item.link" :href="item.link" />
-          </figure>
+              <p :id="item.elements.url.value">
+&nbsp;
+              </p>
+              <h3 v-html="item.elements.title.value" />
+              <div v-html="item.elements.body.value" />
+            </section>
+          </div>
         </b-col>
       </b-row>
-    </b-container>-->
-    </p><div class="m-0 pb-5 bg-transparent">
+    </b-container>
+    <div class="m-0 pb-5 bg-transparent">
       <p id="whyussection" class="p-3" />
       <WhyUsComponent pheader="Why Us?" class="align-self-center" :pfeatures="features" />
     </div>
@@ -71,7 +67,6 @@
 import Nav from '@/components/Nav'
 import HeaderComponent from '@/components/HeaderComponent'
 import WhyUsComponent from '@/components/WhyUsComponent'
-// import axios from 'axios'
 import { mapGetters } from 'vuex'
 export default {
   components: {
@@ -175,14 +170,6 @@ export default {
   mounted () {
     this.$ga.page(this.$route.path)
   }
-  // methods: {
-  //   async getArticles () {
-  //     const articles = await this.$axios.$get('https://deliver.kontent.ai/d09c9569-7021-0070-d917-10246623ee2e/items')
-  //     // console.log(articles)
-  //     this.articles = articles
-  //     return articles
-  //   }
-  // }
 }
 </script>
 <style scoped>

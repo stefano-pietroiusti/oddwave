@@ -26,12 +26,25 @@ https://theoddwave.co.nz/products/film-photography-nz/
 https://theoddwave.co.nz/products/consulting-nz/
 https://theoddwave.co.nz/contact/
 */
+
+const dynamicRoutes = async () => {
+  const res =  await axios.get('https://deliver.kontent.ai/d09c9569-7021-0070-d917-10246623ee2e/items')
+  const routes =  [].concat(...res.data.items.map(({ elements }) => '/blog-articles/' +  elements.url.value + '/' || []))
+  console.log(routes)
+  return routes
+    // return res.data.items.map(({ elements }) => {
+    //   return '/blog-articles/' +  elements.url.value + '/'
+    // })
+}
+
 const routes = [
-  '/services/seo-nz',
-  '/services/ppc-nz',
-  '/services/web-design-nz',
-  '/services/pwa-progressive-web-apps-nz',
-  '/services/photographer-nz',
+  '/services/seo-nz/',
+  '/services/sentiment-analysis-nz/',
+  '/services/reputation-management-nz/',
+  '/services/ppc-nz/',
+  '/services/web-design-nz/',
+  '/services/pwa-progressive-web-apps-nz/',
+  '/services/photographer-nz/',
   '/services/contracting-nz/',
   '/products/pro-business-website-landing/',
   '/products/pro-business-website/',
@@ -45,8 +58,7 @@ const routes = [
   '/products/website-digital-photo-100/',
   '/products/film-photography-nz/',
   '/products/creating-solutions-nz/',
-  '/products/technical-support-nz/',
-  '/blog-articles/'
+  '/products/technical-support-nz/'
 ]
 
 const baseUrl = process.env.BASE_URL || 'http://localhost:3000'

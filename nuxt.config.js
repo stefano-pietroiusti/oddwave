@@ -45,7 +45,8 @@ const routes = [
   '/products/website-digital-photo-100/',
   '/products/film-photography-nz/',
   '/products/creating-solutions-nz/',
-  '/products/technical-support-nz/'
+  '/products/technical-support-nz/',
+  '/blog-articles/'
 ]
 
 const baseUrl = process.env.BASE_URL || 'http://localhost:3000'
@@ -53,8 +54,10 @@ const contactUrl = process.env.CONTACT_URL || '/api/contact'
 const recaptchaSiteKey = process.env.SITE_KEY || '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
 const author = process.env.AUTHOR || 'https://www.linkedin.com/in/scpietro/'
 const nodeEnv = process.env.NODE_ENV || 'development'
+// const kenticoKontentProjectId = process.env.KONTENT_PROJECTID || 'd09c9569-7021-0070-d917-10246623ee2e'
+// const kenticoKontentPreviewId = process.env.KONTENT_PREVIEWID || 'ew0KICAiYWxnIjogIkhTMjU2IiwNCiAgInR5cCI6ICJKV1QiDQp9.ew0KICAianRpIjogImQ0MjA4MGU3YzRmYTRlNDZiYzY1ZmEwMzM1MWMxNmY1IiwNCiAgImlhdCI6ICIxNTgxNDU0NTQyIiwNCiAgImV4cCI6ICIxOTI3MDU0NTQyIiwNCiAgInByb2plY3RfaWQiOiAiZDA5Yzk1Njk3MDIxMDA3MGQ5MTcxMDI0NjYyM2VlMmUiLA0KICAidmVyIjogIjEuMC4wIiwNCiAgImF1ZCI6ICJwcmV2aWV3LmRlbGl2ZXIua2VudGljb2Nsb3VkLmNvbSINCn0.XRZ_rUML9yBwnrd6qKPt0_IvSUa4TA4PuyqmSzwMfBc'
 
-export default {
+export default {  
   env: {
     baseUrl,
     contactUrl,
@@ -134,7 +137,8 @@ export default {
     { src: '~/plugins/vue-notifications', mode: 'client' },
     { src: '~/plugins/lax.js', mode: 'client' },
     { src: '~/plugins/vue-fb-customer-chat', mode: 'client' },
-    { src: '~/plugins/vue-swiper', mode: 'client' }
+    { src: '~/plugins/vue-swiper', mode: 'client' },
+    { src: '~/plugins/nuxt-init.js', mode: 'client' }
   ],
   devModules: [
     '@nuxtjs/eslint-module'
@@ -151,11 +155,21 @@ export default {
     'nuxt-webfontloader',
     ['@nuxtjs/google-analytics', {
       id: 'UA-148813087-1'
-    }]
+    }],
+    'kentico-kontent-nuxt-module'
     // ['@nuxtjs/google-tag-manager', {
     //   id: 'GTM-PJ4J4WD'
     // }]
   ],
+  kenticokontent: {
+    projectId: 'd09c9569-7021-0070-d917-10246623ee2e',
+    enableAdvancedLogging: false,
+    previewApiKey: 'ew0KICAiYWxnIjogIkhTMjU2IiwNCiAgInR5cCI6ICJKV1QiDQp9.ew0KICAianRpIjogImQ0MjA4MGU3YzRmYTRlNDZiYzY1ZmEwMzM1MWMxNmY1IiwNCiAgImlhdCI6ICIxNTgxNDU0NTQyIiwNCiAgImV4cCI6ICIxOTI3MDU0NTQyIiwNCiAgInByb2plY3RfaWQiOiAiZDA5Yzk1Njk3MDIxMDA3MGQ5MTcxMDI0NjYyM2VlMmUiLA0KICAidmVyIjogIjEuMC4wIiwNCiAgImF1ZCI6ICJwcmV2aWV3LmRlbGl2ZXIua2VudGljb2Nsb3VkLmNvbSINCn0.XRZ_rUML9yBwnrd6qKPt0_IvSUa4TA4PuyqmSzwMfBc',
+    enablePreviewMode: false,
+    baseUrl: 'https://deliver.kontent.ai/',
+    securedApiKey: 'xxx',
+    enableSecuredMode: false
+  },
   webfontloader: {
     // google: {
     //   families: [

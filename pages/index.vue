@@ -62,8 +62,6 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import lax from 'lax.js'
 // import Rellax from 'rellax'
 import Nav from '@/components/Nav'
 import HeaderComponentLanding from '@/components/HeaderComponentLanding'
@@ -73,6 +71,8 @@ import SectionContactComponent from '@/components/SectionContactComponent'
 import WhyUsComponent from '@/components/WhyUsComponent'
 import SliderComponent from '@/components/SliderComponent'
 import TeamComponent from '@/components/TeamComponent'
+import lax from 'lax.js'
+import { mapGetters } from 'vuex'
 
 export default {
   components: {

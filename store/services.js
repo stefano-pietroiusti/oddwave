@@ -1,7 +1,7 @@
 const commonKeywords = [
   'seo Website Design nz company auckland']
 export const state = () => ({
-  all: [
+  services: [
     {
       id: 'web-design-nz',
       variant: 'rwcyellow',
@@ -585,7 +585,7 @@ export const state = () => ({
 
 export const getters = {
   serviceLinks: (state) => {
-    return state.all.map((item) => {
+    return state.services.map((item) => {
       return {
         id: item.id,
         title: item.linkTitle,
@@ -596,7 +596,7 @@ export const getters = {
     })
   },
   summaries: (state) => {
-    return state.all.map((item) => {
+    return state.services.map((item) => {
       return {
         id: item.id,
         title: item.linkTitle,
@@ -611,16 +611,16 @@ export const getters = {
     })
   },
   others: state => (id) => {
-    return state.all.filter(service => service.id !== id)
+    return state.services.filter(service => service.id !== id)
   },
   getServiceById: state => (id) => {
-    return state.all.find(service => service.id === id)
+    return state.services.find(service => service.id === id)
   },
   getRelatedSummaries: state => (id) => {
-    const service = state.all.find(service => service.id === id)
+    const service = state.services.find(service => service.id === id)
     let otherSummaries
     if (service.relatedServices && service.relatedServices.length > 0) {
-      otherSummaries = state.all.filter(item => (service.relatedServices.includes(item.id))).map(item => (
+      otherSummaries = state.services.filter(item => (service.relatedServices.includes(item.id))).map(item => (
         {
           id: item.id,
           title: item.linkTitle,
@@ -635,9 +635,9 @@ export const getters = {
     return otherSummaries
   },
   total: (state) => {
-    return state.all.length
+    return state.services.length
   },
   getServiceFeatures: state => (id) => {
-    return state.all.find(service => service.id === id).features
+    return state.services.find(service => service.id === id).features
   }
 }

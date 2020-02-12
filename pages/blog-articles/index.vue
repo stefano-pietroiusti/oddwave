@@ -1,30 +1,44 @@
 <template>
-  <div id="portfoliosContainer">
+  <div id="blogContainer">
     <Nav id="navbar" class="container-fluid" :ptheme="theme" />
     <b-container
       fluid
       :style="gradient"
-      class="portfoliosBackground text-small align-items-center text-center"
+      class="blogBackground text-small align-items-center text-center"
     >
       <p class="watermark" />
     </b-container>
     <HeaderComponent
-      pheader="Portfolio"
+      pheader="Blog"
       psubheader="Because First impressions matter. "
       psubtitle="We work with you to create a beautiful websites whether you're selling products, services, software or expertise. Watch this space :)"
       pcontainerclass="mt-7 mb-5 borderLeft"
     />
-    <b-container v-if="productPortfolios" fluid class="w-100">
+    POSTS: Index: {{ $store.state.loaded }} <br> Articles: {{ posts }}<br>
+    <!-- <h1>articles: {{ $store.state.articles }}</h1> -->
+    <!-- <p
+      v-for="item in posts.items"
+      :key="item.elements"
+    >
+      {{ item.elements }}
+    </p> -->
+    <!--
+
+    <b-container
+      fluid
+      class="w-100"
+    >
       <b-row>
         <b-col
-          v-for="item in productPortfolios"
-          :key="item.text"
+          v-for="item in articles"
+          :key="item.value"
           sm="12"
           md="12"
           lg="6"
           xl="4"
         >
-          <figure class="portfolio">
+          {{ item }}
+           <figure class="blog">
             <img
               v-if="item.image"
               :alt="item.text"
@@ -46,9 +60,8 @@
           </figure>
         </b-col>
       </b-row>
-    </b-container>
-
-    <div class="m-0 pb-5 bg-transparent">
+    </b-container>-->
+    </p><div class="m-0 pb-5 bg-transparent">
       <p id="whyussection" class="p-3" />
       <WhyUsComponent pheader="Why Us?" class="align-self-center" :pfeatures="features" />
     </div>
@@ -58,6 +71,7 @@
 import Nav from '@/components/Nav'
 import HeaderComponent from '@/components/HeaderComponent'
 import WhyUsComponent from '@/components/WhyUsComponent'
+// import axios from 'axios'
 import { mapGetters } from 'vuex'
 export default {
   components: {
@@ -104,7 +118,8 @@ export default {
       'help with photography'
     ]
     return {
-      title: 'Testimonials and custom designs to be brought to life online by the Odd Wave',
+      title:
+        'Testimonials and custom designs to be brought to life online by the Odd Wave',
       description:
         'Testimonials and samples of custom designs for development by the Odd Wave Digital',
       backgroundurl: 'nz.svg',
@@ -122,8 +137,12 @@ export default {
   computed: {
     ...mapGetters('products', ['getPoductPortfolios']),
     ...mapGetters('client', ['getClientFeatures']),
+    ...mapGetters('articles', ['getPosts']),
     features () {
       return this.getClientFeatures
+    },
+    posts () {
+      return this.getPosts
     },
     productPortfolios () {
       return this.getPoductPortfolios
@@ -150,14 +169,24 @@ export default {
       }
     }
   },
+  async fetch ({ store, params }) {
+    await store.dispatch('articles/getSetPosts')
+  },
   mounted () {
     this.$ga.page(this.$route.path)
   }
-
+  // methods: {
+  //   async getArticles () {
+  //     const articles = await this.$axios.$get('https://deliver.kontent.ai/d09c9569-7021-0070-d917-10246623ee2e/items')
+  //     // console.log(articles)
+  //     this.articles = articles
+  //     return articles
+  //   }
+  // }
 }
 </script>
 <style scoped>
-#portfoliosContainer {
+#blogContainer {
   background: transparent;
   position: relative;
   top: 0;
@@ -180,7 +209,7 @@ p.watermark {
   opacity: 0.5;
 }
 
-.portfoliosBackground {
+.blogBackground {
   position: absolute;
   top: 0;
   left: 0;
@@ -193,7 +222,7 @@ p.watermark {
   opacity: 0.1;
 }
 
-.portfolio {
+.blog {
   font-family: inherit;
   position: relative;
   display: inline-block;
@@ -206,17 +235,17 @@ p.watermark {
   font-size: 0.8rem;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
-.portfolio * {
+.blog * {
   -webkit-transition: all 0.35s;
   transition: all 0.35s;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-.portfolio img {
+.blog img {
   max-width: 100%;
   vertical-align: top;
 }
-.portfolio figcaption {
+.blog figcaption {
   position: absolute;
   height: 20%;
   left: 0;
@@ -226,16 +255,16 @@ p.watermark {
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.75);
 }
-.portfolio h3 {
+.blog h3 {
   font-family: inherit;
   text-transform: uppercase;
   font-size: 0.8rem;
   font-weight: 400;
   line-height: 24px;
   margin: 3px 0;
-    letter-spacing: 1px;
+  letter-spacing: 1px;
 }
-.portfolio h5 {
+.blog h5 {
   font-family: inherit;
   font-size: 1rem;
   font-weight: 200;
@@ -244,22 +273,21 @@ p.watermark {
   color: #eee;
   letter-spacing: 1px;
 }
-.portfolio blockquote {
+.blog blockquote {
   padding: 0;
   margin: 0;
   font-style: italic;
   font-size: 1rem;
 }
-.portfolio a {
+.blog a {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
 }
-.portfolio:hover figcaption,
-.portfolio.hover figcaption {
+.blog:hover figcaption,
+.blog.hover figcaption {
   height: calc(40%);
 }
-
 </style>

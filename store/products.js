@@ -1,7 +1,7 @@
 const commonKeywords = ['developing solutions', 'creating solutions', 'north shore', 'northland', 'auckland', 'rotorua', 'new zealand', 'NZ']
 
 export const state = () => ({
-  all: [
+  products: [
     {
       id: 'pro-business-website-landing',
       icon: ['fab', 'dev'],
@@ -422,7 +422,7 @@ export const state = () => ({
 
 export const getters = {
   productLinks: (state) => {
-    return state.all.map((item) => {
+    return state.products.map((item) => {
       return {
         id: item.id,
         title: item.linkTitle,
@@ -432,7 +432,7 @@ export const getters = {
     })
   },
   summaries: (state) => {
-    return state.all.map((item) => {
+    return state.products.map((item) => {
       return {
         id: item.id,
         title: item.title,
@@ -457,7 +457,7 @@ export const getters = {
     return price <= 500 ? '' : `Flexi payment: upfront deposit $${depositBalance} + progress payments`
   },
   getFeaturedProducts: (state, getters) => () => {
-    return state.all.filter(product => product.isFeatured)
+    return state.products.filter(product => product.isFeatured)
       .sort((a, b) => { return a.isFeaturedOrder - b.isFeaturedOrder || a.price.value - b.price.value })
       .map(item => (
         {
@@ -472,7 +472,7 @@ export const getters = {
       ))
   },
   getProductById: (state, getters) => (id) => {
-    const item = state.all.find(product => product.id === id)
+    const item = state.products.find(product => product.id === id)
     return {
       // JSON ld name, image, price, and priceCurrency
       id: item.id,
@@ -503,7 +503,7 @@ export const getters = {
     }
   },
   getProductsById: (state, getters) => (serviceId) => {
-    return state.all.filter(product => (product.relatedServices.includes(serviceId)))
+    return state.products.filter(product => (product.relatedServices.includes(serviceId)))
       .sort((a, b) => { return a.price.value - b.price.value })
       .map(item => (
         {
@@ -518,6 +518,6 @@ export const getters = {
       ))
   },
   getPoductPortfolios: (state) => {
-    return [].concat(...state.all.map(({ samples }) => samples || []))
+    return [].concat(...state.products.map(({ samples }) => samples || []))
   }
 }

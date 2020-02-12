@@ -118,8 +118,6 @@
 </template>
 
 <script>
-import lax from 'lax.js'
-import { mapGetters } from 'vuex'
 import Nav from '@/components/Nav'
 import HeaderComponent from '@/components/HeaderComponent'
 import TextImageComponent from '@/components/TextImageComponent'
@@ -134,6 +132,8 @@ import ServicesLinksComponent from '@/components/ServicesLinksComponent'
 import SectionContactComponent from '@/components/SectionContactComponent'
 import FeaturesComponent from '@/components/FeaturesComponent'
 import WhyUsComponent from '@/components/WhyUsComponent'
+import { mapGetters } from 'vuex'
+import lax from 'lax.js'
 
 export default {
   components: {

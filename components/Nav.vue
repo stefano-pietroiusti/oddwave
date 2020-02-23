@@ -75,6 +75,9 @@
         <b-nav-item to="/portfolio/" exact exact-active-class="underline">
           Portfolio
         </b-nav-item>
+        <b-nav-item to="/blog-articles/" exact exact-active-class="underline">
+          Blog
+        </b-nav-item>
         <b-nav-item to="/contact/" exact exact-active-class="underline">
           Contact us
         </b-nav-item>

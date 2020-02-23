@@ -22,11 +22,11 @@
   </div>
 </template>
 <script>
-import { mapGetters } from 'vuex'
 import Nav from '@/components/Nav'
 import HeaderComponent from '@/components/HeaderComponent'
 import ContactForm from '@/components/ContactForm'
 import WhyUsComponent from '@/components/WhyUsComponent'
+import { mapGetters } from 'vuex'
 export default {
   components: {
     Nav,

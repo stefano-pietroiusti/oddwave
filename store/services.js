@@ -1,7 +1,7 @@
 const commonKeywords = [
   'seo Website Design nz company auckland']
 export const state = () => ({
-  all: [
+  services: [
     {
       id: 'web-design-nz',
       variant: 'rwcyellow',
@@ -362,6 +362,187 @@ export const state = () => ({
       keywords: ['help with Digital Marketing', 'help with google ads', 'help with bing ads', 'help with microsoft advertising']
     },
     {
+      id: 'sentiment-analysis-nz',
+      variant: 'rwcyellow',
+      animate: 'bounceInLeft',
+      title: 'Sentiment Analysis | The Odd Wave | Auckland, NZ',
+      linkTitle: 'Sentiment Analysis',
+      maori: 'pae tukutuku Aotearoa',
+      description: "Our sentiment analysis solution can help businesses understand their customers' emotions from voice and text data using natural language processing and analysis. This allows businesses to keep track of customer sentiment towards their brand, products, services, events, employees.",
+      landing: { header: 'Sentiment Analysis', content: "Our sentiment analysis solution can help businesses understand their customers' emotions from voice and text data using natural language processing and analysis. This allows businesses to keep track of customer sentiment towards their brand, products, services, events, employees." },
+      header: 'Sentiment Analysis - Continuous brand management and alerting',
+      businessvalue: 'Continuous brand management and alerting',
+      icon: ['fab', 'dev'],
+      // image: "<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='92' height='92' viewBox='0 0 92 92'><defs><style>.b{clip-path:url(#a);}</style><clipPath id='a'><rect width='92' height='92' transform='translate(1488 1485)' /></clipPath></defs><g class='b' transform='translate(-1488 -1485)'><g transform='translate(1488 1485)'><path d='M69.767,0H8.433A7.676,7.676,0,0,0,.767,7.667V56.734a7.667,7.667,0,0,0,5.752,7.424l.767-2.969a4.6,4.6,0,0,1-3.452-4.456V7.667a4.6,4.6,0,0,1,4.6-4.6H69.767a4.6,4.6,0,0,1,4.6,4.6V9.2h3.067V7.667A7.676,7.676,0,0,0,69.767,0Z' /><rect width='3.067' height='3.067' transform='translate(6.9 6.133)' /><rect width='3.067' height='3.067' transform='translate(13.033 6.133)' /><rect width='3.067' height='3.067' transform='translate(19.167 6.133)' /><path d='M90.784,84.783,76.241,70.239a21.207,21.207,0,0,0,1.822-4.306H80.5V62.867H78.722a20.66,20.66,0,0,0-1.288-10.988V36.8H74.367v9.764A21.582,21.582,0,0,0,71.3,43.381V30.667H68.234V41.238a21.325,21.325,0,0,0-3.067-1.464V24.533H62.1V38.843a21.231,21.231,0,0,0-3.067-.431V27.6H55.967V38.412a21.231,21.231,0,0,0-3.067.431V33.733H49.834v6.04a21.335,21.335,0,0,0-3.067,1.464V32.2H43.7V43.381a21.582,21.582,0,0,0-3.067,3.183v-11.3H37.567V51.879a20.66,20.66,0,0,0-1.288,10.988H16.1v3.067H36.938a21.422,21.422,0,0,0,32.881,11.42l14.2,14.2a1.533,1.533,0,0,0,2.168,0l4.6-4.6A1.533,1.533,0,0,0,90.784,84.783ZM57.5,78.2A18.4,18.4,0,1,1,75.9,59.8,18.42,18.42,0,0,1,57.5,78.2ZM85.1,88.3,72.2,75.4a21.724,21.724,0,0,0,2.308-2.556L87.532,85.867Z' /><path d='M57.5,44.467A15.333,15.333,0,1,0,72.834,59.8,15.333,15.333,0,0,0,57.5,44.467Zm0,27.6a12.267,12.267,0,0,1-10.608-6.133H68.108A12.267,12.267,0,0,1,57.5,72.067Zm-11.863-9.2a12.155,12.155,0,0,1,4.2-12.627V59.8H52.9V48.437a12.21,12.21,0,0,1,3.067-.8V59.8h3.067V47.639a12.21,12.21,0,0,1,3.067.8V59.8h3.067V50.24a12.155,12.155,0,0,1,4.2,12.627Z' /><path d='M78.967,12.267H17.633a7.676,7.676,0,0,0-7.667,7.667V69a7.676,7.676,0,0,0,7.667,7.667H37.567V73.6H17.633a4.6,4.6,0,0,1-4.6-4.6V19.933a4.6,4.6,0,0,1,4.6-4.6H78.967a4.6,4.6,0,0,1,4.6,4.6V69a4.6,4.6,0,0,1-1.15,3.042l2.3,2.029A7.657,7.657,0,0,0,86.634,69V19.933A7.676,7.676,0,0,0,78.967,12.267Z' /><rect width='3.067' height='3.067' transform='translate(16.1 18.4)' /><rect width='3.067' height='3.067' transform='translate(22.233 18.4)' /><rect width='3.067' height='3.067' transform='translate(28.367 18.4)' /><rect width='3.067' height='9.2' transform='translate(19.167 50.6)' /><rect width='3.067' height='18.4' transform='translate(25.3 41.4)' /><rect width='3.067' height='13.8' transform='translate(31.433 46)' /></g></g></svg>",
+      image: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="92" height="92" viewBox="0 0 92 92"> <defs><style>.b{clip-path:url(#a);}</style> <clipPath id="a"><rect width="92" height="92" transform="translate(1488 1485)" /></clipPath> </defs><g class="b" transform="translate(-1488 -1485)"><g transform="translate(1488 1485)"> <path d="M69.767,0H8.433A7.676,7.676,0,0,0,.767,7.667V56.734a7.667,7.667,0,0,0,5.752,7.424l.767-2.969a4.6,4.6,0,0,1-3.452-4.456V7.667a4.6,4.6,0,0,1,4.6-4.6H69.767a4.6,4.6,0,0,1,4.6,4.6V9.2h3.067V7.667A7.676,7.676,0,0,0,69.767,0Z" /> <rect width="3.067" height="3.067" transform="translate(6.9 6.133)" /><rect width="3.067" height="3.067" transform="translate(13.033 6.133)" /><rect width="3.067" height="3.067" transform="translate(19.167 6.133)" /> <path d="M90.784,84.783,76.241,70.239a21.207,21.207,0,0,0,1.822-4.306H80.5V62.867H78.722a20.66,20.66,0,0,0-1.288-10.988V36.8H74.367v9.764A21.582,21.582,0,0,0,71.3,43.381V30.667H68.234V41.238a21.325,21.325,0,0,0-3.067-1.464V24.533H62.1V38.843a21.231,21.231,0,0,0-3.067-.431V27.6H55.967V38.412a21.231,21.231,0,0,0-3.067.431V33.733H49.834v6.04a21.335,21.335,0,0,0-3.067,1.464V32.2H43.7V43.381a21.582,21.582,0,0,0-3.067,3.183v-11.3H37.567V51.879a20.66,20.66,0,0,0-1.288,10.988H16.1v3.067H36.938a21.422,21.422,0,0,0,32.881,11.42l14.2,14.2a1.533,1.533,0,0,0,2.168,0l4.6-4.6A1.533,1.533,0,0,0,90.784,84.783ZM57.5,78.2A18.4,18.4,0,1,1,75.9,59.8,18.42,18.42,0,0,1,57.5,78.2ZM85.1,88.3,72.2,75.4a21.724,21.724,0,0,0,2.308-2.556L87.532,85.867Z" /><path d="M57.5,44.467A15.333,15.333,0,1,0,72.834,59.8,15.333,15.333,0,0,0,57.5,44.467Zm0,27.6a12.267,12.267,0,0,1-10.608-6.133H68.108A12.267,12.267,0,0,1,57.5,72.067Zm-11.863-9.2a12.155,12.155,0,0,1,4.2-12.627V59.8H52.9V48.437a12.21,12.21,0,0,1,3.067-.8V59.8h3.067V47.639a12.21,12.21,0,0,1,3.067.8V59.8h3.067V50.24a12.155,12.155,0,0,1,4.2,12.627Z" /><path d="M78.967,12.267H17.633a7.676,7.676,0,0,0-7.667,7.667V69a7.676,7.676,0,0,0,7.667,7.667H37.567V73.6H17.633a4.6,4.6,0,0,1-4.6-4.6V19.933a4.6,4.6,0,0,1,4.6-4.6H78.967a4.6,4.6,0,0,1,4.6,4.6V69a4.6,4.6,0,0,1-1.15,3.042l2.3,2.029A7.657,7.657,0,0,0,86.634,69V19.933A7.676,7.676,0,0,0,78.967,12.267Z" /> <rect width="3.067" height="3.067" transform="translate(16.1 18.4)" /> <rect width="3.067" height="3.067" transform="translate(22.233 18.4)" /> <rect width="3.067" height="3.067" transform="translate(28.367 18.4)" /> <rect width="3.067" height="9.2" transform="translate(19.167 50.6)" /> <rect width="3.067" height="18.4" transform="translate(25.3 41.4)" /> <rect width="3.067" height="13.8" transform="translate(31.433 46)" /></g></g> </svg>',
+      backgroundImage: { color1: 'rgba(46, 217, 195, 1)', color2: 'rgba(46, 217, 195, 1)', url: 'webdesign.jpg', height: 'auto' },
+      headerStyle: { bgStyle: 'text-secondary text-center' },
+      subheader: 'Continuous brand management and alerting',
+      subheaderStyle: { color: 'text-primary', buttonVariant: 'info' },
+      content:
+        [
+          {
+            header: 'WHAT IS SENTIMENT ANALYSIS?',
+            text: 'Sentiment Analysis is an area of Natural Language Processing (NLP) where we gather texts related to something like a brand, product, service, event, person, idea, etc. and then determine whether the overall attitude towards that subject is positive, negative, mixed or neutral.'
+          },
+          {
+            header: 'WHAT SENTIMENTS MEAN?',
+            text: "Customers' emotions/attitudes can be:",
+            list: [
+              'Positive – wow, way beyond what I expected ',
+              'Neutral – Keep it up',
+              'Negative – Hmm, not great',
+              'Mixed – in two minds about it'
+            ]
+          },
+          {
+            text: 'Texts gathered can in the form of web pages, blogs, articles, reviews, news, social media posts, the top x search results from a search query, etc.'
+          },
+          {
+            text: 'Texts gathered are then analyzed to determine the overall attitude expressed in the text. The Sentiment represented by numerical score and magnitude values.'
+          },
+          {
+            text: 'Range thresholds are set, tested, and verified iteratively determine the best ranges to classify Sentiment as Positive, Negative, Mixed, or   Neutral.'
+          },
+          {
+            header: 'WHERE THE ODD WAVE FITS IN?',
+            text: 'The Odd Wave can continuously monitor and alert off sentiment thresholds and help you manage negative Sentiment, and maintain positive and neutral Sentiment.'
+          }
+        ],
+      features: [
+        {
+          header: 'Monthly snapshots and analysis',
+          // text: 'Solutions that load instantly',
+          icon: ['fas', 'mobile-alt'],
+          image: '/imgs/best-web-design.svg'
+        },
+        {
+          header: 'Monthly reporting',
+          // text: 'Solutions that load instantly',
+          icon: ['fas', 'mobile-alt'],
+          image: '/imgs/best-web-design.svg'
+        },
+        {
+          header: 'Monthly alerting',
+          icon: ['fas', 'mobile-alt'],
+          image: '/imgs/best-web-design.svg'
+        },
+        {
+          header: 'Increasing conversions through positive sentiment',
+          icon: ['fas', 'mobile-alt'],
+          image: '/imgs/best-web-design.svg'
+        }
+      ],
+      price: { value: 120, unit: 'package' },
+      relatedServices: ['reputation-management-nz', 'seo-nz'],
+      rate: 'hour',
+      marketing: {
+        header: 'Join us',
+        subheader: '',
+        content: 'Sentiment Analysis - Continuous brand management and alerting'
+      },
+      keywords: [...commonKeywords, 'Sentiment Analysis for continuous brand management and alerting']
+    },
+    {
+      id: 'reputation-management-nz',
+      variant: 'rwcyellow',
+      animate: 'bounceInLeft',
+      title: 'Reputation Management | The Odd Wave | Auckland, NZ',
+      linkTitle: 'Reputation Management ',
+      maori: 'pae tukutuku Aotearoa',
+      description: 'Negative Sentiment can lead to loss of confidence in one or more of your brand, services, products, business, executives and employees. Take control of your reputation by managing what people think and say about your brand online.',
+      landing: { header: 'Sentiment Analysis', content: "Our sentiment analysis solution can help businesses understand their customers' emotions from voice and text data using natural language processing and analysis. This allows businesses to keep track of customer sentiment towards their brand, products, services, events, employees." },
+      header: 'Managing your online reputation',
+      businessvalue: 'Continuous brand management and alerting',
+      icon: ['fab', 'dev'],
+      // image: "<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='92' height='92' viewBox='0 0 92 92'><defs><style>.b{clip-path:url(#a);}</style><clipPath id='a'><rect width='92' height='92' transform='translate(1488 1485)' /></clipPath></defs><g class='b' transform='translate(-1488 -1485)'><g transform='translate(1488 1485)'><path d='M69.767,0H8.433A7.676,7.676,0,0,0,.767,7.667V56.734a7.667,7.667,0,0,0,5.752,7.424l.767-2.969a4.6,4.6,0,0,1-3.452-4.456V7.667a4.6,4.6,0,0,1,4.6-4.6H69.767a4.6,4.6,0,0,1,4.6,4.6V9.2h3.067V7.667A7.676,7.676,0,0,0,69.767,0Z' /><rect width='3.067' height='3.067' transform='translate(6.9 6.133)' /><rect width='3.067' height='3.067' transform='translate(13.033 6.133)' /><rect width='3.067' height='3.067' transform='translate(19.167 6.133)' /><path d='M90.784,84.783,76.241,70.239a21.207,21.207,0,0,0,1.822-4.306H80.5V62.867H78.722a20.66,20.66,0,0,0-1.288-10.988V36.8H74.367v9.764A21.582,21.582,0,0,0,71.3,43.381V30.667H68.234V41.238a21.325,21.325,0,0,0-3.067-1.464V24.533H62.1V38.843a21.231,21.231,0,0,0-3.067-.431V27.6H55.967V38.412a21.231,21.231,0,0,0-3.067.431V33.733H49.834v6.04a21.335,21.335,0,0,0-3.067,1.464V32.2H43.7V43.381a21.582,21.582,0,0,0-3.067,3.183v-11.3H37.567V51.879a20.66,20.66,0,0,0-1.288,10.988H16.1v3.067H36.938a21.422,21.422,0,0,0,32.881,11.42l14.2,14.2a1.533,1.533,0,0,0,2.168,0l4.6-4.6A1.533,1.533,0,0,0,90.784,84.783ZM57.5,78.2A18.4,18.4,0,1,1,75.9,59.8,18.42,18.42,0,0,1,57.5,78.2ZM85.1,88.3,72.2,75.4a21.724,21.724,0,0,0,2.308-2.556L87.532,85.867Z' /><path d='M57.5,44.467A15.333,15.333,0,1,0,72.834,59.8,15.333,15.333,0,0,0,57.5,44.467Zm0,27.6a12.267,12.267,0,0,1-10.608-6.133H68.108A12.267,12.267,0,0,1,57.5,72.067Zm-11.863-9.2a12.155,12.155,0,0,1,4.2-12.627V59.8H52.9V48.437a12.21,12.21,0,0,1,3.067-.8V59.8h3.067V47.639a12.21,12.21,0,0,1,3.067.8V59.8h3.067V50.24a12.155,12.155,0,0,1,4.2,12.627Z' /><path d='M78.967,12.267H17.633a7.676,7.676,0,0,0-7.667,7.667V69a7.676,7.676,0,0,0,7.667,7.667H37.567V73.6H17.633a4.6,4.6,0,0,1-4.6-4.6V19.933a4.6,4.6,0,0,1,4.6-4.6H78.967a4.6,4.6,0,0,1,4.6,4.6V69a4.6,4.6,0,0,1-1.15,3.042l2.3,2.029A7.657,7.657,0,0,0,86.634,69V19.933A7.676,7.676,0,0,0,78.967,12.267Z' /><rect width='3.067' height='3.067' transform='translate(16.1 18.4)' /><rect width='3.067' height='3.067' transform='translate(22.233 18.4)' /><rect width='3.067' height='3.067' transform='translate(28.367 18.4)' /><rect width='3.067' height='9.2' transform='translate(19.167 50.6)' /><rect width='3.067' height='18.4' transform='translate(25.3 41.4)' /><rect width='3.067' height='13.8' transform='translate(31.433 46)' /></g></g></svg>",
+      image: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="92" height="92" viewBox="0 0 92 92"> <defs><style>.b{clip-path:url(#a);}</style> <clipPath id="a"><rect width="92" height="92" transform="translate(1488 1485)" /></clipPath> </defs><g class="b" transform="translate(-1488 -1485)"><g transform="translate(1488 1485)"> <path d="M69.767,0H8.433A7.676,7.676,0,0,0,.767,7.667V56.734a7.667,7.667,0,0,0,5.752,7.424l.767-2.969a4.6,4.6,0,0,1-3.452-4.456V7.667a4.6,4.6,0,0,1,4.6-4.6H69.767a4.6,4.6,0,0,1,4.6,4.6V9.2h3.067V7.667A7.676,7.676,0,0,0,69.767,0Z" /> <rect width="3.067" height="3.067" transform="translate(6.9 6.133)" /><rect width="3.067" height="3.067" transform="translate(13.033 6.133)" /><rect width="3.067" height="3.067" transform="translate(19.167 6.133)" /> <path d="M90.784,84.783,76.241,70.239a21.207,21.207,0,0,0,1.822-4.306H80.5V62.867H78.722a20.66,20.66,0,0,0-1.288-10.988V36.8H74.367v9.764A21.582,21.582,0,0,0,71.3,43.381V30.667H68.234V41.238a21.325,21.325,0,0,0-3.067-1.464V24.533H62.1V38.843a21.231,21.231,0,0,0-3.067-.431V27.6H55.967V38.412a21.231,21.231,0,0,0-3.067.431V33.733H49.834v6.04a21.335,21.335,0,0,0-3.067,1.464V32.2H43.7V43.381a21.582,21.582,0,0,0-3.067,3.183v-11.3H37.567V51.879a20.66,20.66,0,0,0-1.288,10.988H16.1v3.067H36.938a21.422,21.422,0,0,0,32.881,11.42l14.2,14.2a1.533,1.533,0,0,0,2.168,0l4.6-4.6A1.533,1.533,0,0,0,90.784,84.783ZM57.5,78.2A18.4,18.4,0,1,1,75.9,59.8,18.42,18.42,0,0,1,57.5,78.2ZM85.1,88.3,72.2,75.4a21.724,21.724,0,0,0,2.308-2.556L87.532,85.867Z" /><path d="M57.5,44.467A15.333,15.333,0,1,0,72.834,59.8,15.333,15.333,0,0,0,57.5,44.467Zm0,27.6a12.267,12.267,0,0,1-10.608-6.133H68.108A12.267,12.267,0,0,1,57.5,72.067Zm-11.863-9.2a12.155,12.155,0,0,1,4.2-12.627V59.8H52.9V48.437a12.21,12.21,0,0,1,3.067-.8V59.8h3.067V47.639a12.21,12.21,0,0,1,3.067.8V59.8h3.067V50.24a12.155,12.155,0,0,1,4.2,12.627Z" /><path d="M78.967,12.267H17.633a7.676,7.676,0,0,0-7.667,7.667V69a7.676,7.676,0,0,0,7.667,7.667H37.567V73.6H17.633a4.6,4.6,0,0,1-4.6-4.6V19.933a4.6,4.6,0,0,1,4.6-4.6H78.967a4.6,4.6,0,0,1,4.6,4.6V69a4.6,4.6,0,0,1-1.15,3.042l2.3,2.029A7.657,7.657,0,0,0,86.634,69V19.933A7.676,7.676,0,0,0,78.967,12.267Z" /> <rect width="3.067" height="3.067" transform="translate(16.1 18.4)" /> <rect width="3.067" height="3.067" transform="translate(22.233 18.4)" /> <rect width="3.067" height="3.067" transform="translate(28.367 18.4)" /> <rect width="3.067" height="9.2" transform="translate(19.167 50.6)" /> <rect width="3.067" height="18.4" transform="translate(25.3 41.4)" /> <rect width="3.067" height="13.8" transform="translate(31.433 46)" /></g></g> </svg>',
+      backgroundImage: { color1: 'rgba(46, 217, 195, 1)', color2: 'rgba(46, 217, 195, 1)', url: 'webdesign.jpg', height: 'auto' },
+      headerStyle: { bgStyle: 'text-secondary text-center' },
+      subheader: 'PROTECT AND DEFEND YOUR ONLINE LOOK AND FEEL',
+      subheaderStyle: { color: 'text-primary', buttonVariant: 'info' },
+      content:
+        [
+          {
+            header: 'WHY?',
+            text: '90% of consumers look at online reviews of your business and even your employees before deciding to approach your business. Negative Sentiment can lead to loss of confidence in one or more of your brand, business, services, products, executives and employees. All it takes is one of anything digital such as text, image, or video, to make a substantial impact on your sales.'
+          },
+          {
+            header: "WHAT'S NEGATIVE OUT THERE?",
+            text: 'Negative content can relate to services, products, brand, business, executives, employees, relations etc. There are various types of such negative content:',
+            list: [
+              'Negative reviews',
+              'Complaints',
+              'Mugshots',
+              'Defamatory content ',
+              'Media reports',
+              'Blog articles',
+              'Bogus competitive sites',
+              'Negative images and videos',
+              'Negative social media posts',
+              'Web pages',
+              'Mixed content'
+            ]
+          },
+          {
+            header: 'WAYS TO RAISE POSITIVE SENTIMENT?',
+            text: 'These are primary ways to raise the positive Sentiment about you, your brand:',
+            list: [
+              'Proactively following up with publishers directly and participating in online content, reviews etc.',
+              'Writing positive content to de-rank and suppress false negative results further down search indexes',
+              'Completely removing negative content and search results (i.e. text and images) relating to people and businesses who have become victims of online abuse.  '
+            ]
+          },
+          {
+            header: 'REMOVING NEGATIVE CONTENT?',
+            text: 'Negative content can be removed from some websites to help rebuild and restore your online reputation. When content is successfully removed from a website, it will no longer appear on the website or search engines (i.e., Google, Bing, and Yahoo). '
+          },
+          {
+            text: 'There are a variety of methods used to remove content successfully. The approach depends on content type, where content is hosted , and the number of links to negative text and images that have been published across the web. '
+          },
+          {
+            text: 'The content removal process takes from 2 weeks and up to 4 weeks to complete. '
+          },
+          {
+            header: 'WHERE THE ODD WAVE FITS IN?',
+            text: 'Our goal is to help legitimate individuals and businesses manage and defend their online reputation.'
+          }
+        ],
+      features: [
+        {
+          header: 'Content removal / money back guarantee',
+          // text: 'Solutions that load instantly',
+          icon: ['fas', 'mobile-alt'],
+          image: '/imgs/best-web-design.svg'
+        },
+        {
+          header: 'Continuos monitoring',
+          // text: 'Solutions that load instantly',
+          icon: ['fas', 'mobile-alt'],
+          image: '/imgs/best-web-design.svg'
+        },
+        {
+          header: 'Alerting',
+          icon: ['fas', 'mobile-alt'],
+          image: '/imgs/best-web-design.svg'
+        },
+        {
+          header: 'Increasing conversions through positive sentiment',
+          icon: ['fas', 'mobile-alt'],
+          image: '/imgs/best-web-design.svg'
+        }
+      ],
+      price: { value: 120, unit: 'package' },
+      relatedServices: ['sentiment-analysis-nz', 'seo-nz'],
+      rate: 'hour',
+      marketing: {
+        header: 'Join us',
+        subheader: '',
+        content: 'Reputation management - Continuous brand management and alerting'
+      },
+      keywords: [...commonKeywords, 'Reputation management for continuous brand management and alerting']
+    },
+    {
       id: 'photographer-nz',
       variant: 'rwcblue',
       animate: 'jackInTheBox',
@@ -585,7 +766,7 @@ export const state = () => ({
 
 export const getters = {
   serviceLinks: (state) => {
-    return state.all.map((item) => {
+    return state.services.map((item) => {
       return {
         id: item.id,
         title: item.linkTitle,
@@ -596,7 +777,7 @@ export const getters = {
     })
   },
   summaries: (state) => {
-    return state.all.map((item) => {
+    return state.services.map((item) => {
       return {
         id: item.id,
         title: item.linkTitle,
@@ -611,16 +792,16 @@ export const getters = {
     })
   },
   others: state => (id) => {
-    return state.all.filter(service => service.id !== id)
+    return state.services.filter(service => service.id !== id)
   },
   getServiceById: state => (id) => {
-    return state.all.find(service => service.id === id)
+    return state.services.find(service => service.id === id)
   },
   getRelatedSummaries: state => (id) => {
-    const service = state.all.find(service => service.id === id)
+    const service = state.services.find(service => service.id === id)
     let otherSummaries
     if (service.relatedServices && service.relatedServices.length > 0) {
-      otherSummaries = state.all.filter(item => (service.relatedServices.includes(item.id))).map(item => (
+      otherSummaries = state.services.filter(item => (service.relatedServices.includes(item.id))).map(item => (
         {
           id: item.id,
           title: item.linkTitle,
@@ -635,9 +816,9 @@ export const getters = {
     return otherSummaries
   },
   total: (state) => {
-    return state.all.length
+    return state.services.length
   },
   getServiceFeatures: state => (id) => {
-    return state.all.find(service => service.id === id).features
+    return state.services.find(service => service.id === id).features
   }
 }

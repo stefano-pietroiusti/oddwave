@@ -55,7 +55,7 @@
             <!-- <b-dropdown-divider /> -->
           </b-dropdown-item>
         </b-nav-item-dropdown>
-        <b-nav-item-dropdown
+        <!-- <b-nav-item-dropdown
           text="Pricing"
           exact
           :extra-toggle-classes="this.$route.name === 'products-id' ? 'activeClassServicesProducts' : ''"
@@ -71,7 +71,7 @@
           >
             {{ item.title }}
           </b-dropdown-item>
-        </b-nav-item-dropdown>
+        </b-nav-item-dropdown> -->
         <b-nav-item to="/portfolio/" exact exact-active-class="underline">
           Portfolio
         </b-nav-item>
@@ -140,7 +140,7 @@ export default {
   },
   computed: {
     ...mapGetters('services', ['serviceLinks']),
-    ...mapGetters('products', ['productLinks']),
+    // ...mapGetters('products', ['productLinks']),
     ...mapGetters('client', ['getClient']),
     callAction () {
       return {
@@ -152,10 +152,10 @@ export default {
       const services = this.serviceLinks
       return services
     },
-    products () {
-      const products = this.productLinks
-      return products
-    },
+    // products () {
+    //   const products = this.productLinks
+    //   return products
+    // },
     logoPath () {
       return this.ptheme === 'theoddwave'
         ? require(`~/assets/logos/oddwave-dark.png`)

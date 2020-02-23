@@ -185,7 +185,7 @@ export default {
     return {
       id: this.$route.params.id,
       panimheader: 'be where the world is going',
-      theme: 'default'
+      theme: 'contact'
     }
   },
   computed: {

@@ -26,7 +26,7 @@ export const state = () => ({
     header: 'WEBSITE DESIGN, DATA & DIGITAL MARKETING',
     subheader: 'CUSTOM WEBSITE DESIGN & DIGITAL MARKETING',
     subtitle:
-      'We provide custom website design and digital marketing services to grow your business. Based in North Shore, Auckland NZ we build your website and promote it online.',
+      "We provide custom <a href='/services/web-design-nz/' title='Website design'>website design</a> and digital marketing services to grow your business. Based in North Shore, Auckland NZ we build your website and promote it online.",
     featuresHeader: 'Why us?',
     features: [
       {
@@ -154,10 +154,11 @@ export const state = () => ({
     priceRange: '$$',
     copyright: '© 2019 Copyright The Odd Wave',
     poweredBy: 'powered by The Odd Wave suite of web technologies',
-    marketing: 'Are you an NZ business looking to increase profits via online services? Are you wondering if creating or improving your website is worth the investment? <br><br>Every business should not only have a website, but they should be thoughtful and careful to have a quality, user-friendly website with positive ROI. Ultimately, you want your website to offer a positive experience for your customer and have it help to drive your business forward.<br><br>Working with a professional website design team can help your business not only look at the big picture for website design but also all the details that are a part of a quality site.<br><br>Contact us today about building your business website. We would love to help you create a quality website to meet your business needs.',
+    marketing: 'Mobile devices are being used every day to perform simple tasks on the go, and this includes searching for products, services and shopping online. Customers today are looking to snappy websites that beautifully display the information they want, look great on mobile and display what they are looking for with minimal effort. <br><br> We’re passionate about growing your business, and we make complex simple so you can put your time and effort into what matters most in your business. <br><br>Many solutions/packages out there are too expensive. Our goal is to do things the right way using the best solutions to keep your business growing, every cent spent with us is not wasted because anything we develop can scale affordably. We combine custom development with API services and proven open source technologies to fast track solutions to your problems. <br><br>Contact us today about building your business website. We would love to help you create a quality website to meet your business needs.',
     about: 'The Odd Wave is a creative Digital Marketing and Website Design company, passionate about modern technology that we use to propel small to medium size businesses to success. Our Mission is to assist local businesses with digital transformation by delivering an impactful online presence backed by our digital marketing expertise with round the clock support.',
+    history: 'Odd - Meaning we’re “different to what is usual or expected” <br> Wave - Meaning we’re “the sudden occurrence or increase in a positive phenomenon, feeling or emotion” from using the right modern technologies .',
     services: 'We offer a range of web solutions and services to help your business thrive in this rapidly changing digital world. Website Design, Web Development, Software Engineering, SEO, Online Reputation Management ,Digital Marketing and Data Analysis to <b>drive the right traffic</b> to your online business,<br/>backed by our round the clock support on all our solutions',
-    businessvalue: 'A strong online presence is a necessity in todays competitive world. Take Advantantage of our service offering of result driven Website Development and IT Business solutions and support that our clients want for their NZ businesses.',
+    businessvalue: 'Take Advantantage of our service offering of result driven Website Development and IT Business solutions and support that our clients want for their NZ businesses.',
     fb: 'https://www.facebook.com/theoddwave',
     instagram: 'https://www.instagram.com/theoddwavenz/',
     linkedin: 'https://www.linkedin.com/company/the-odd-wave-ltd/',

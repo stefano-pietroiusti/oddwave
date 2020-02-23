@@ -10,11 +10,11 @@
     </b-container>
 
     <SectionContactComponent
-      pheader="What can we do for you?"
+      pheader="Let our creative solutions build a path to success for your business"
       :pcontent="client.marketing"
       class="align-self-center"
     />
-
+    <SectionComponent pheader="What's In the Name?" :pcontent="client.history" class="align-self-center" />
     <SectionComponent pheader="About Us" :pcontent="client.about" class="align-self-center" />
 
     <TeamComponent pheader="Our team" :pteam="team" class="align-self-center" />
@@ -54,7 +54,7 @@
     <SliderComponent :products="featuredProducts" />
 
     <SectionContactComponent
-      pheader=""
+      pheader="Partner with us"
       :pcontent="client.businessvalue"
       class="align-self-center services bg-white"
     />

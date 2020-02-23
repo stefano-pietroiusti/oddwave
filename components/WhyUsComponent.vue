@@ -5,7 +5,7 @@
       <b-col cols="12">
         <p id="whyussection" class="pt-5" />
       </b-col>
-      <b-col cols="12" class="p-5 align-items-center text-larger">
+      <b-col cols="12" class="p-5 align-items-center">
         <h2 :class="headerClass">
           {{ header }}
         </h2>

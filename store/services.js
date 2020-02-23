@@ -98,8 +98,8 @@ export const state = () => ({
       id: 'pwa-progressive-web-apps-nz',
       variant: 'rwcyellow',
       animate: 'bounceInLeft',
-      title: 'PWA for any backend | The Odd Wave | Auckland, NZ',
-      linkTitle: 'PWA CMS & eCommerce',
+      title: 'PWA eCommerce | The Odd Wave | Auckland, NZ',
+      linkTitle: 'PWA eCommerce',
       maori: 'pae tukutuku Aotearoa',
       description: 'Our PWA store front is ultrafast, offline ready and can be  any eCommerce and CMS platform. PWA eCommerce Has Everything You Need To Start Selling Online Today. Mobile Commerce Ready. Social Media Integration. Full Blogging Platform. Secure Shopping Cart.',
       landing: { header: 'PWA eCommerce', content: 'Ultrafast, offline ready and any platform Progressive Web App. PWA eCommerce Has Everything You Need To Start Selling Online Today. Mobile Commerce Ready. Social Media Integration. Full Blogging Platform. Secure Shopping Cart.' },
@@ -176,6 +176,54 @@ export const state = () => ({
         content: 'Using progressive web apps for any eCommerce and CMS'
       },
       keywords: [...commonKeywords, 'progressive web apps development']
+    },
+    {
+      id: 'contracting-nz',
+      variant: 'rwcgreen',
+      animate: 'bounceInLeft',
+      title: 'Software Engineering & Support North Shore Auckland',
+      linkTitle: 'Software Engineering',
+      maori: 'akoako',
+      description: 'Software Engineering & Support services to help you out with adhoc computing, design, development, automation, data engineering, cloud engineering, cloud development and data analysis.',
+      landing: { header: 'Software Engineering', content: 'Partner with us for adhoc computing, design, development, automation, data engineering, cloud engineering and data analysis.' },
+      header: 'Software Engineering',
+      icon: ['fab', 'dev'],
+      image: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="92" height="92" viewBox="0 0 92 92"><defs><style>.j{clip-path:url(#i);}</style><clipPath id="i"><rect class="j" width="92" height="92" transform="translate(336 1485)"/></clipPath></defs><g transform="translate(-336 -1485)"><g transform="translate(336 1484.96)"><path d="M10.595,33.61a1.347,1.347,0,0,0,1.9-1.9L9.229,28.436,12.5,25.168a1.347,1.347,0,1,0-1.9-1.9L6.373,27.485a1.346,1.346,0,0,0,0,1.9Zm0,0"/><path d="M23.956,28.436l-3.269,3.269a1.347,1.347,0,1,0,1.9,1.9l4.222-4.222a1.346,1.346,0,0,0,0-1.9l-4.222-4.222a1.346,1.346,0,1,0-1.9,1.9Zm0,0"/><path d="M14.586,33.911a1.346,1.346,0,0,0,1.746-.761l3.317-8.443a1.346,1.346,0,1,0-2.506-.985l-3.317,8.443a1.347,1.347,0,0,0,.761,1.746Zm0,0"/><path d="M8.087,41.9h9.071a1.347,1.347,0,0,0,0-2.693H8.087a1.347,1.347,0,0,0,0,2.693Zm0,0"/><path d="M38.05,39.211H22.1a1.347,1.347,0,0,0,0,2.693H38.05a1.347,1.347,0,1,0,0-2.693Zm0,0"/><path d="M8.087,47.583h3.864a1.347,1.347,0,0,0,0-2.693H8.087a1.347,1.347,0,0,0,0,2.693Zm0,0"/><path d="M33.124,44.89a1.347,1.347,0,0,0,0,2.693h2.353a1.347,1.347,0,1,0,0-2.693Zm0,0"/><path d="M29.58,46.236a1.347,1.347,0,0,0-1.346-1.346H16.676a1.347,1.347,0,0,0,0,2.693H28.234A1.347,1.347,0,0,0,29.58,46.236Zm0,0"/><path d="M38.4,46.236a1.347,1.347,0,0,0,1.346,1.347h4.407a1.347,1.347,0,1,0,0-2.693H39.746A1.347,1.347,0,0,0,38.4,46.236Zm0,0"/><path d="M31.067,29.517h4.649a1.347,1.347,0,1,0,0-2.693H31.067a1.347,1.347,0,1,0,0,2.693Zm0,0"/><path d="M40.923,29.517H69.287a1.347,1.347,0,0,0,0-2.693H40.923a1.347,1.347,0,1,0,0,2.693Zm0,0"/><path d="M64.979,32.748H53.489a1.347,1.347,0,0,0,0,2.693h11.49a1.347,1.347,0,0,0,0-2.693Zm0,0"/><path d="M49.181,32.748h-3.95a1.347,1.347,0,0,0,0,2.693h3.95a1.347,1.347,0,0,0,0-2.693Zm0,0"/><path d="M31.067,35.441h9.676a1.347,1.347,0,0,0,0-2.693H31.067a1.347,1.347,0,1,0,0,2.693Zm0,0"/><path d="M28.251,50.521H19.18a1.346,1.346,0,1,0,0,2.693h9.07a1.346,1.346,0,1,0,0-2.693Zm0,0"/><path d="M15.056,50.521H8.087a1.346,1.346,0,1,0,0,2.693h6.969a1.346,1.346,0,1,0,0-2.693Zm0,0"/><path d="M44.693,50.521H32.844a1.346,1.346,0,1,0,0,2.693H44.693a1.346,1.346,0,0,0,0-2.693Zm0,0"/><path d="M60.717,43.6H54.237a1.347,1.347,0,0,0,0,2.693h6.479a1.347,1.347,0,0,0,0-2.693Zm0,0"/><path d="M71.96,46.3h9.147a1.347,1.347,0,1,0,0-2.693H71.96a1.347,1.347,0,0,0,0,2.693Zm0,0"/><path d="M67.386,43.6h-2.1a1.347,1.347,0,1,0,0,2.693h2.1a1.347,1.347,0,0,0,0-2.693Zm0,0"/><path d="M54.237,60.971h6.479a1.346,1.346,0,0,0,0-2.693H54.237a1.346,1.346,0,0,0,0,2.693Zm0,0"/><path d="M71.96,60.971h9.147a1.346,1.346,0,1,0,0-2.693H71.96a1.346,1.346,0,0,0,0,2.693Zm0,0"/><path d="M65.29,60.971h2.1a1.346,1.346,0,1,0,0-2.693h-2.1a1.346,1.346,0,0,0,0,2.693Zm0,0"/><path d="M60.717,72.952H54.237a1.346,1.346,0,1,0,0,2.693h6.479a1.346,1.346,0,1,0,0-2.693Zm0,0"/><path d="M81.106,72.952H71.96a1.346,1.346,0,1,0,0,2.693h9.147a1.346,1.346,0,1,0,0-2.693Zm0,0"/><path d="M67.386,72.952h-2.1a1.346,1.346,0,1,0,0,2.693h2.1a1.346,1.346,0,1,0,0-2.693Zm0,0"/><path d="M86.075.09H5.926A5.933,5.933,0,0,0,0,6.016V71.165a5.933,5.933,0,0,0,5.926,5.926h5.067a1.346,1.346,0,1,0,0-2.693H5.926a3.236,3.236,0,0,1-3.233-3.233V66.057H51.747v2.321H50.68a2.651,2.651,0,0,0-2.648,2.648V74.4H19.18a1.346,1.346,0,1,0,0,2.693H32.126V81.92H28.06a4.924,4.924,0,0,0-4.918,4.918v2.909a2.246,2.246,0,0,0,2.244,2.244H66.512a2.246,2.246,0,0,0,2.244-2.244V86.838a4.924,4.924,0,0,0-4.918-4.918H59.772v-1.7H84.664a2.651,2.651,0,0,0,2.648-2.648v-.634a5.934,5.934,0,0,0,4.586-5.77L92,6.015A5.931,5.931,0,0,0,86.075.09ZM50.725,62.852V56.4H84.619v6.454ZM54.44,53.7V50.872H80.9V53.7ZM80.9,65.544v2.834H54.44V65.544ZM34.818,77.091H48.032v.479a2.651,2.651,0,0,0,2.648,2.648h6.4v1.7H34.818Zm29.02,7.522a2.228,2.228,0,0,1,2.225,2.225V89.3H25.834v-2.46a2.228,2.228,0,0,1,2.226-2.225Zm20.781-7.089H50.725V71.071H84.619Zm4.586-6.359A3.234,3.234,0,0,1,87.312,74.1V71.025a2.651,2.651,0,0,0-2.648-2.648H83.6V66.057h5.609Zm0-7.8H87.268c.027-.152.044-7.012.044-7.012A2.651,2.651,0,0,0,84.664,53.7H83.6V50.872h1.068a2.652,2.652,0,0,0,2.648-2.648V41.679a2.652,2.652,0,0,0-2.648-2.648H77.059a1.347,1.347,0,0,0,0,2.693h7.56v6.454H50.725V41.724H68.681a1.347,1.347,0,0,0,0-2.693h-18a2.651,2.651,0,0,0-2.648,2.648v6.544a2.651,2.651,0,0,0,2.648,2.648h1.068V53.7H50.68a2.651,2.651,0,0,0-2.648,2.648s.017,6.86.044,7.012H2.693V18.405H89.205Zm0-47.653H2.792v-9.7A3.236,3.236,0,0,1,6.025,2.783H85.973a3.236,3.236,0,0,1,3.233,3.233Zm0,0"/><path d="M9.93,5.258a3.951,3.951,0,1,0,3.952,3.951A3.955,3.955,0,0,0,9.93,5.258Zm0,5.21a1.259,1.259,0,1,1,1.259-1.259A1.26,1.26,0,0,1,9.93,10.468Zm0,0"/><path d="M19.99,5.258a3.951,3.951,0,1,0,3.951,3.951A3.956,3.956,0,0,0,19.99,5.258Zm0,5.21a1.259,1.259,0,1,1,1.259-1.259A1.26,1.26,0,0,1,19.99,10.468Zm0,0"/><path d="M30.05,5.258A3.951,3.951,0,1,0,34,9.209,3.955,3.955,0,0,0,30.05,5.258Zm0,5.21a1.259,1.259,0,1,1,1.259-1.259A1.26,1.26,0,0,1,30.05,10.468Zm0,0"/></g></g></svg>',
+      backgroundImage: { color1: 'rgba(46, 217, 195, 1)', color2: 'rgba(46, 217, 195, 1)', url: 'webdesign.jpg', height: 'auto' },
+      headerStyle: { bgStyle: 'text-secondary text-center' },
+      subheader: 'Reliable support from solid work experiences to help your business grow',
+      subheaderStyle: { color: 'text-primary', buttonVariant: 'info' },
+      content:
+        [{
+          header: "We're experienced technology generalists who abide by",
+          list: [
+            'Best practices & standards',
+            'Research & experimentation',
+            'Performance',
+            'Creativeness',
+            'Usability',
+            'Transparency', 'Continuous Improvement'],
+          icon: ['fab', 'servicestack']
+        },
+        {
+          header: 'We specialize in:',
+          list: [
+            'Modern, Development, Integration, Automation and Data Engineering (Java, Javascript, Vue.js, Node.js, Headless CMSes with GraphQL API, Powerful APIs, PWA Ecommerce, Azure Web Apps, Small Library Sizes, Great Performance)',
+            'Data (SQLite, SQL, PosgresSQL, MySQL, MongoDB,  CosmosDB, Excel, Qlikview, PowerBI, Headless CMSes)',
+            'Cloud Services (Azure, AWS, Google)',
+            'Business Solutions (Xero, Office 365, Google Suite)'],
+          icon: ['fab', 'servicestack']
+        }
+        ],
+      price: { value: 110, unit: 'hour' },
+      relatedServices: ['seo-nz', 'ppc-nz', 'web-design-nz'],
+      rate: 'hour',
+      marketing: {
+        header: 'Partner with us',
+        subheader: 'Grow your business',
+        content: 'Using proven vanilla super-fast web technologies for website development'
+      },
+      keywords: [...commonKeywords, 'contracting nz', 'website contracting', 'technical writing']
     },
     {
       id: 'seo-nz',
@@ -451,7 +499,7 @@ export const state = () => ({
       linkTitle: 'Reputation Management ',
       maori: 'pae tukutuku Aotearoa',
       description: 'Negative Sentiment can lead to loss of confidence in one or more of your brand, services, products, business, executives and employees. Take control of your reputation by managing what people think and say about your brand online.',
-      landing: { header: 'Sentiment Analysis', content: "Our sentiment analysis solution can help businesses understand their customers' emotions from voice and text data using natural language processing and analysis. This allows businesses to keep track of customer sentiment towards their brand, products, services, events, employees." },
+      landing: { header: 'Reputation Management', content: "Our sentiment analysis solution can help businesses understand their customers' emotions from voice and text data using natural language processing and analysis. This allows businesses to keep track of customer sentiment towards their brand, products, services, events, employees." },
       header: 'Managing your online reputation',
       businessvalue: 'Continuous brand management and alerting',
       icon: ['fab', 'dev'],
@@ -712,54 +760,6 @@ export const state = () => ({
       keywords: [...commonKeywords, 'photographer auckland', 'website photography', 'product photography'],
       tags: ['family photographer', 'product photographer', 'events photographer', 'functions photographer', 'real estate photographer', 'architecture photographer', 'black and white photographer', 'digital photography', 'film photography'],
       hashtags: ['family photographer', 'product photographer', 'events photographer', 'functions photographer', 'real estate photographer', 'architecture photographer', 'black and white photographer', 'digital photography', 'film photography']
-    },
-    {
-      id: 'contracting-nz',
-      variant: 'rwcgreen',
-      animate: 'bounceInLeft',
-      title: 'Software Engineering & Support North Shore Auckland',
-      linkTitle: 'Software Engineering',
-      maori: 'akoako',
-      description: 'Software Engineering & Support services to help you out with adhoc computing, design, development, automation, data engineering, cloud engineering, cloud development and data analysis.',
-      landing: { header: 'Software Engineering', content: 'Partner with us for adhoc computing, design, development, automation, data engineering, cloud engineering and data analysis.' },
-      header: 'Software Engineering',
-      icon: ['fab', 'dev'],
-      image: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="92" height="92" viewBox="0 0 92 92"><defs><style>.j{clip-path:url(#i);}</style><clipPath id="i"><rect class="j" width="92" height="92" transform="translate(336 1485)"/></clipPath></defs><g transform="translate(-336 -1485)"><g transform="translate(336 1484.96)"><path d="M10.595,33.61a1.347,1.347,0,0,0,1.9-1.9L9.229,28.436,12.5,25.168a1.347,1.347,0,1,0-1.9-1.9L6.373,27.485a1.346,1.346,0,0,0,0,1.9Zm0,0"/><path d="M23.956,28.436l-3.269,3.269a1.347,1.347,0,1,0,1.9,1.9l4.222-4.222a1.346,1.346,0,0,0,0-1.9l-4.222-4.222a1.346,1.346,0,1,0-1.9,1.9Zm0,0"/><path d="M14.586,33.911a1.346,1.346,0,0,0,1.746-.761l3.317-8.443a1.346,1.346,0,1,0-2.506-.985l-3.317,8.443a1.347,1.347,0,0,0,.761,1.746Zm0,0"/><path d="M8.087,41.9h9.071a1.347,1.347,0,0,0,0-2.693H8.087a1.347,1.347,0,0,0,0,2.693Zm0,0"/><path d="M38.05,39.211H22.1a1.347,1.347,0,0,0,0,2.693H38.05a1.347,1.347,0,1,0,0-2.693Zm0,0"/><path d="M8.087,47.583h3.864a1.347,1.347,0,0,0,0-2.693H8.087a1.347,1.347,0,0,0,0,2.693Zm0,0"/><path d="M33.124,44.89a1.347,1.347,0,0,0,0,2.693h2.353a1.347,1.347,0,1,0,0-2.693Zm0,0"/><path d="M29.58,46.236a1.347,1.347,0,0,0-1.346-1.346H16.676a1.347,1.347,0,0,0,0,2.693H28.234A1.347,1.347,0,0,0,29.58,46.236Zm0,0"/><path d="M38.4,46.236a1.347,1.347,0,0,0,1.346,1.347h4.407a1.347,1.347,0,1,0,0-2.693H39.746A1.347,1.347,0,0,0,38.4,46.236Zm0,0"/><path d="M31.067,29.517h4.649a1.347,1.347,0,1,0,0-2.693H31.067a1.347,1.347,0,1,0,0,2.693Zm0,0"/><path d="M40.923,29.517H69.287a1.347,1.347,0,0,0,0-2.693H40.923a1.347,1.347,0,1,0,0,2.693Zm0,0"/><path d="M64.979,32.748H53.489a1.347,1.347,0,0,0,0,2.693h11.49a1.347,1.347,0,0,0,0-2.693Zm0,0"/><path d="M49.181,32.748h-3.95a1.347,1.347,0,0,0,0,2.693h3.95a1.347,1.347,0,0,0,0-2.693Zm0,0"/><path d="M31.067,35.441h9.676a1.347,1.347,0,0,0,0-2.693H31.067a1.347,1.347,0,1,0,0,2.693Zm0,0"/><path d="M28.251,50.521H19.18a1.346,1.346,0,1,0,0,2.693h9.07a1.346,1.346,0,1,0,0-2.693Zm0,0"/><path d="M15.056,50.521H8.087a1.346,1.346,0,1,0,0,2.693h6.969a1.346,1.346,0,1,0,0-2.693Zm0,0"/><path d="M44.693,50.521H32.844a1.346,1.346,0,1,0,0,2.693H44.693a1.346,1.346,0,0,0,0-2.693Zm0,0"/><path d="M60.717,43.6H54.237a1.347,1.347,0,0,0,0,2.693h6.479a1.347,1.347,0,0,0,0-2.693Zm0,0"/><path d="M71.96,46.3h9.147a1.347,1.347,0,1,0,0-2.693H71.96a1.347,1.347,0,0,0,0,2.693Zm0,0"/><path d="M67.386,43.6h-2.1a1.347,1.347,0,1,0,0,2.693h2.1a1.347,1.347,0,0,0,0-2.693Zm0,0"/><path d="M54.237,60.971h6.479a1.346,1.346,0,0,0,0-2.693H54.237a1.346,1.346,0,0,0,0,2.693Zm0,0"/><path d="M71.96,60.971h9.147a1.346,1.346,0,1,0,0-2.693H71.96a1.346,1.346,0,0,0,0,2.693Zm0,0"/><path d="M65.29,60.971h2.1a1.346,1.346,0,1,0,0-2.693h-2.1a1.346,1.346,0,0,0,0,2.693Zm0,0"/><path d="M60.717,72.952H54.237a1.346,1.346,0,1,0,0,2.693h6.479a1.346,1.346,0,1,0,0-2.693Zm0,0"/><path d="M81.106,72.952H71.96a1.346,1.346,0,1,0,0,2.693h9.147a1.346,1.346,0,1,0,0-2.693Zm0,0"/><path d="M67.386,72.952h-2.1a1.346,1.346,0,1,0,0,2.693h2.1a1.346,1.346,0,1,0,0-2.693Zm0,0"/><path d="M86.075.09H5.926A5.933,5.933,0,0,0,0,6.016V71.165a5.933,5.933,0,0,0,5.926,5.926h5.067a1.346,1.346,0,1,0,0-2.693H5.926a3.236,3.236,0,0,1-3.233-3.233V66.057H51.747v2.321H50.68a2.651,2.651,0,0,0-2.648,2.648V74.4H19.18a1.346,1.346,0,1,0,0,2.693H32.126V81.92H28.06a4.924,4.924,0,0,0-4.918,4.918v2.909a2.246,2.246,0,0,0,2.244,2.244H66.512a2.246,2.246,0,0,0,2.244-2.244V86.838a4.924,4.924,0,0,0-4.918-4.918H59.772v-1.7H84.664a2.651,2.651,0,0,0,2.648-2.648v-.634a5.934,5.934,0,0,0,4.586-5.77L92,6.015A5.931,5.931,0,0,0,86.075.09ZM50.725,62.852V56.4H84.619v6.454ZM54.44,53.7V50.872H80.9V53.7ZM80.9,65.544v2.834H54.44V65.544ZM34.818,77.091H48.032v.479a2.651,2.651,0,0,0,2.648,2.648h6.4v1.7H34.818Zm29.02,7.522a2.228,2.228,0,0,1,2.225,2.225V89.3H25.834v-2.46a2.228,2.228,0,0,1,2.226-2.225Zm20.781-7.089H50.725V71.071H84.619Zm4.586-6.359A3.234,3.234,0,0,1,87.312,74.1V71.025a2.651,2.651,0,0,0-2.648-2.648H83.6V66.057h5.609Zm0-7.8H87.268c.027-.152.044-7.012.044-7.012A2.651,2.651,0,0,0,84.664,53.7H83.6V50.872h1.068a2.652,2.652,0,0,0,2.648-2.648V41.679a2.652,2.652,0,0,0-2.648-2.648H77.059a1.347,1.347,0,0,0,0,2.693h7.56v6.454H50.725V41.724H68.681a1.347,1.347,0,0,0,0-2.693h-18a2.651,2.651,0,0,0-2.648,2.648v6.544a2.651,2.651,0,0,0,2.648,2.648h1.068V53.7H50.68a2.651,2.651,0,0,0-2.648,2.648s.017,6.86.044,7.012H2.693V18.405H89.205Zm0-47.653H2.792v-9.7A3.236,3.236,0,0,1,6.025,2.783H85.973a3.236,3.236,0,0,1,3.233,3.233Zm0,0"/><path d="M9.93,5.258a3.951,3.951,0,1,0,3.952,3.951A3.955,3.955,0,0,0,9.93,5.258Zm0,5.21a1.259,1.259,0,1,1,1.259-1.259A1.26,1.26,0,0,1,9.93,10.468Zm0,0"/><path d="M19.99,5.258a3.951,3.951,0,1,0,3.951,3.951A3.956,3.956,0,0,0,19.99,5.258Zm0,5.21a1.259,1.259,0,1,1,1.259-1.259A1.26,1.26,0,0,1,19.99,10.468Zm0,0"/><path d="M30.05,5.258A3.951,3.951,0,1,0,34,9.209,3.955,3.955,0,0,0,30.05,5.258Zm0,5.21a1.259,1.259,0,1,1,1.259-1.259A1.26,1.26,0,0,1,30.05,10.468Zm0,0"/></g></g></svg>',
-      backgroundImage: { color1: 'rgba(46, 217, 195, 1)', color2: 'rgba(46, 217, 195, 1)', url: 'webdesign.jpg', height: 'auto' },
-      headerStyle: { bgStyle: 'text-secondary text-center' },
-      subheader: 'Reliable support from solid work experiences to help your business grow',
-      subheaderStyle: { color: 'text-primary', buttonVariant: 'info' },
-      content:
-        [{
-          header: "We're experienced technology generalists who abide by",
-          list: [
-            'Best practices & standards',
-            'Research & experimentation',
-            'Performance',
-            'Creativeness',
-            'Usability',
-            'Transparency', 'Continuous Improvement'],
-          icon: ['fab', 'servicestack']
-        },
-        {
-          header: 'We specialize in:',
-          list: [
-            'Modern, Development, Integration, Automation and Data Engineering (Java, Javascript, Vue.js, Node.js, Headless CMSes with GraphQL API, Powerful APIs, PWA Ecommerce, Azure Web Apps, Small Library Sizes, Great Performance)',
-            'Data (SQLite, SQL, PosgresSQL, MySQL, MongoDB,  CosmosDB, Excel, Qlikview, PowerBI, Headless CMSes)',
-            'Cloud Services (Azure, AWS, Google)',
-            'Business Solutions (Xero, Office 365, Google Suite)'],
-          icon: ['fab', 'servicestack']
-        }
-        ],
-      price: { value: 110, unit: 'hour' },
-      relatedServices: ['seo-nz', 'ppc-nz', 'web-design-nz'],
-      rate: 'hour',
-      marketing: {
-        header: 'Partner with us',
-        subheader: 'Grow your business',
-        content: 'Using proven vanilla super-fast web technologies for website development'
-      },
-      keywords: [...commonKeywords, 'contracting nz', 'website contracting', 'technical writing']
     }
   ]
 })

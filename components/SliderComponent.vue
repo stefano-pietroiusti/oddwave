@@ -225,20 +225,5 @@ export default {
 .swiper-button-next:hover {
   opacity: 1;
 }
-// .swiper-pagination-bullet {
-//  display: inline-block;
-//   width: 20px;
-//   height: 20px;
-//   text-align: center;
-//   line-height: 20px;
-//   font-size: 10px;
-//   color: #000;
-//   opacity: 1;
-//   background: rgba(0, 0, 0, 1);
-// }
 
-// .swiper-pagination-bullet-active {
-//   color: #fff;
-//   background: #007aff;
-// }
 </style>

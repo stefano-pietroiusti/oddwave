@@ -1,13 +1,13 @@
 <template>
   <div id="contactMainContainer">
     <Nav id="navbar" class="container-fluid" :ptheme="theme" />
-    <b-container
+    <!-- <b-container
       fluid
       :style="gradient"
-      class="contactBackground text-medium align-items-center text-center"
+      class="contactBackground text-small align-items-center text-center"
     >
       <p class="watermark" />
-    </b-container>
+    </b-container> -->
 
     <HeaderComponent
       pheader="Have a project or idea? Drop us a line. "

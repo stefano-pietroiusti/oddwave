@@ -2,7 +2,6 @@
 <template>
   <div id="blogContainer">
     <Nav id="navbar" class="container-fluid" :ptheme="theme" />
-
     <b-container
       fluid
       :style="gradient"

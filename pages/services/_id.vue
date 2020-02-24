@@ -30,7 +30,7 @@
 
       <span v-if="service.features">
         <FeaturesComponent :features="service.features" variant="black" />
-        <!-- <ButtonComponent btext="Chat about this" blink="/contact/" :pvariant="`outline-black`" /> -->
+        <!-- <ButtonComponent btext="Chat about this" blink="/contact-theoddwave-nz/" :pvariant="`outline-black`" /> -->
       </span>
 
       <!-- <span v-for="item in featuredProducts" :key="item.id">
@@ -89,7 +89,7 @@
 
       <!-- <ButtonComponent
         btext="Get started"
-        blink="/contact/"
+        blink="/contact-theoddwave-nz/"
         :pvariant="`outline-black`"
         class="text-center"
       />-->

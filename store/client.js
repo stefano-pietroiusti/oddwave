@@ -20,43 +20,42 @@ export const state = () => ({
       'longitude': 174.734479
     },
     title:
-      'NZ Website Design Company - North Shore Auckland Digital Marketing (Online)',
+      'Custom Websites, PWA eCommerce and Online Marketing | The Odd Wave, North Shore, Auckland, NZ',
     description:
       'New Zealand website design company; providing digital marketing services to grow your business. Based in North Shore, Auckland NZ we build your website and promote it online.',
     header: 'WEBSITE DESIGN, DATA & DIGITAL MARKETING',
     subheader: 'CUSTOM WEBSITE DESIGN & DIGITAL MARKETING',
     subtitle:
-      "We provide custom <a href='/services/web-design-nz/' title='Website design'>website design</a> and digital marketing services to grow your business. Based in North Shore, Auckland NZ we build your website and promote it online.",
+      "We provide custom <a href='/services/website-design-nz/' title='Website design'>website design</a>, <a href='/services/pwa-ecommerce-nz/' title='PWA eCommerce'>PWA eCommerce</a> and <a href='/services/digital-marketing-nz/' title='Digital marketing'>digital marketing</a> services to grow your business. Based in North Shore, Auckland NZ we build your website and promote it online.",
     featuresHeader: 'Why us?',
     features: [
       {
-        header: 'Responsive User First Website Design',
+        header: 'Continuous Quality Assurance',
         text:
-          'We follow a purpose driven user-oriented website design approach that makes our websites and web applications eye cathcing , creative and usable by anyone on any device.',
+          "We don't just develop, deliver and leave you to it. We take projects from beginning to end and then stay with you to help grow your business with our solution.",
+        icon: ['fab', 'servicestack'],
+        image: '/imgs/web-dev.svg'
+      },
+      {
+        header: 'Simplifying complexity',
+        text:
+          'We combine our services and custom development and integration with proven open source technologies, microservices, APIs and platforms to make the complex simple and to maximise return on investment.',
+        icon: ['fas', 'chart-line'],
+        image: '/imgs/web-content-search.svg'
+      },
+      {
+        header: 'User First Design',
+        text:
+          'First impressions count which is why we follow goal-driven user-oriented design principles that make our solutions, websites and web applications quick, responsive, eye catching, usable by anyone on any device and worth the investment.',
         icon: ['fas', 'mobile-alt'],
         image: '/imgs/mobile-first.svg'
       },
       {
-        header: 'Websites with A+ Google audit score',
+        header: 'A+ Google audit score',
         text:
-          "We continuously test and audit our websites using Google's recommended open source tools to achieve an A+ scores in performance, accessibility, best practices & SEO. ",
+          'We continuously test and audit our websites to ensure A+ Google Lighthouse scores in performance, accessibility, best practices & SEO. All content is SEO Optimised with the right keywords for your business, products and market.',
         icon: ['fas', 'users'],
         image: '/imgs/best-web-design.svg'
-      },
-      {
-        header: 'SEO Friendly Content Writing',
-        text:
-          'We assist with SEO friendly content writing for websites and blog writing to boost rankings. All writing is SEO Optimised with keywords required for your website.',
-        icon: ['fas', 'chart-line'],
-        image: '/imgs/web-content-search.svg'
-      },
-
-      {
-        header: 'Custom Web Development',
-        text:
-          'No templated websites just custom web development using established open source frameworks with our HTML, CSS & javascript expertise developing websites that are quick, responsive and user friendly.',
-        icon: ['fab', 'servicestack'],
-        image: '/imgs/web-dev.svg'
       }
     ],
     content: [
@@ -158,7 +157,7 @@ export const state = () => ({
     about: 'The Odd Wave is a creative Digital Marketing and Website Design company, passionate about modern technology that we use to propel small to medium size businesses to success. Our Mission is to assist local businesses with digital transformation by delivering an impactful online presence backed by our digital marketing expertise with round the clock support.',
     history: 'Odd - Meaning we’re “different to what is usual or expected” <br> Wave - Meaning we’re “the sudden occurrence or increase in a positive phenomenon, feeling or emotion” from working with us and using the right modern technologies.',
     services: 'We offer a range of web solutions and services to help your business thrive in this rapidly changing digital world. Website Design, Web Development, Software Engineering, SEO, Online Reputation Management ,Digital Marketing and Data Analysis to <b>drive the right traffic</b> to your online business,<br/>backed by our round the clock support on all our solutions',
-    businessvalue: 'Take Advantantage of our service offering of result driven Website Development and IT Business solutions and support that our clients want for their NZ businesses.',
+    businessvalue: 'Get in touch to learn more about how we can help you grow your business with us.',
     fb: 'https://www.facebook.com/theoddwave',
     instagram: 'https://www.instagram.com/theoddwavenz/',
     linkedin: 'https://www.linkedin.com/company/the-odd-wave-ltd/',

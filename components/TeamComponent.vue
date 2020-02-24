@@ -2,12 +2,41 @@
 <template>
   <b-container fluid class="text-center m-0 mb-5 text-center">
     <!-- <b-row>
-      <b-col cols="12" class="p-5">
-        <h2 class="sectionHeader">
-          {{ header }}
-        </h2>
+      <b-col xs="12" sm="12" md="12" lg="6" class="p-5 text-nowrap align-items-center">
+        <h2>{{ header }}</h2>
       </b-col>
-    </b-row>-->
+      <b-col xs="12" sm="12" md="12" lg="6" class="p-0 text-center">
+        <div v-for="(item, i) in team" :key="i" class="col flip-container text-center my-4">
+          <div class="flipper pb-5">
+            <div class="text-center text-white rounded-circle front">
+              <a :href="`${item.sameAs[0]}`" :title="item.name" class="text-white text-small profileLink">
+                <img :src="`${ item.image }`" :alt="item.name" class="teamImg rounded-circle">
+                <div class="img-overlay-bottom text-small text-center p-3">
+
+                  <b>{{ item.name }}</b>
+                  <br>
+                  {{ item.jobTitle }}
+                </div>
+              </a>
+            </div>
+            <div
+              class="lax text-center text-white rounded-circle back"
+              data-lax-rotate-y_large="(vh*1.2) 90, (vh) 90, (vh*0.9) 180, (vh*0.8) 360, (vh*0.2) 360, (vh*0.1) 180, 0 90, (-100) 90"
+              data-lax-rotate-y_small="(vh*1.2) 90, (vh) 90, (vh*0.6) 360, (vh*0.1) 360"
+              data-lax-anchor="self"
+            >
+              <a :href="`${item.sameAs[0]}`" :title="item.name" class="text-white text-small profileLink">
+                <div class="img-overlay-bottom text-small text-center p-5 w-100 h-100">
+                  {{ item.description }}<br>Read more &#43;
+                </div>
+              </a>
+            </div>
+          </div>
+          </a>
+        </div>
+      </b-col>
+    </b-row> -->
+
     <b-row no-gutters>
       <div v-for="(item, i) in team" :key="i" class="col flip-container text-center my-4">
         <div class="flipper pb-5">
@@ -29,7 +58,6 @@
             data-lax-rotate-y_small="(vh*1.2) 90, (vh) 90, (vh*0.6) 360, (vh*0.1) 360"
             data-lax-anchor="self"
           >
-            <!-- data-lax-rotate-y="(vh*1.2) 90, (vh) 90, (vh*0.9) 180, (vh*0.8) 360, (vh*0.2) 360, (vh*0.1) 180, 0 90, (-100) 90" -->
             <a :href="`${item.sameAs[0]}`" :title="item.name" class="text-white text-small profileLink">
               <div class="img-overlay-bottom text-small text-center p-5 w-100 h-100">
                 {{ item.description }}<br>Read more &#43;
@@ -85,6 +113,22 @@ export default {
 }
 </script>
 <style scoped>
+h2 {
+  font-weight: 600;
+  display: inline-block;
+  padding-bottom: 5px;
+  position: relative;
+  color: #00c3ff;
+}
+h2:before {
+  content: '';
+  position: absolute;
+  width: 30%;
+  height: 5px;
+  bottom: 0;
+  left: 25%;
+  border-bottom: 5px solid #00c3ff;
+}
 
 .img-overlay-bottom {
     position: absolute;

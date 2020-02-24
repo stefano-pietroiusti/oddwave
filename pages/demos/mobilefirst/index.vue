@@ -100,7 +100,7 @@ export default {
         height: '20vh'
       },
       linkText: 'GET STARTED',
-      link: '/contact/'
+      link: '/contact-theoddwave-nz/'
     }
   },
   computed: {

@@ -95,7 +95,7 @@ export default {
     return {
       standardNav: [
         { value: '/', text: 'Home' },
-        { value: '/contact/', text: 'Contact us' }
+        { value: '/contact-theoddwave-nz/', text: 'Contact us' }
       ]
     }
   },

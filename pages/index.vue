@@ -14,10 +14,6 @@
       :pcontent="client.marketing"
       class="align-self-center"
     />
-    <SectionComponent pheader="What's In the Name?" :pcontent="client.history" class="align-self-center" />
-    <SectionComponent pheader="About Us" :pcontent="client.about" class="align-self-center" />
-
-    <TeamComponent pheader="Our team" :pteam="team" class="align-self-center" />
 
     <SectionComponent
       pheader="Services"
@@ -70,7 +66,7 @@ import SectionComponent from '@/components/SectionComponent'
 import SectionContactComponent from '@/components/SectionContactComponent'
 import WhyUsComponent from '@/components/WhyUsComponent'
 import SliderComponent from '@/components/SliderComponent'
-import TeamComponent from '@/components/TeamComponent'
+// import TeamComponent from '@/components/TeamComponent'
 import lax from 'lax.js'
 import { mapGetters } from 'vuex'
 
@@ -82,8 +78,8 @@ export default {
     SectionComponent,
     SectionContactComponent,
     WhyUsComponent,
-    SliderComponent,
-    TeamComponent
+    SliderComponent
+    // TeamComponent
   },
   head () {
     let content = `${process.env.baseUrl}${this.$route.path}`

@@ -18,7 +18,7 @@
             <h3 v-if="psubtitle" class="p-2" v-html="psubtitle" />
             <b-button
               pill
-              to="/contact/"
+              to="/contact-theoddwave-nz/"
               class="buttonComponent letter-spacing  m-2 animated pulse delay-1s"
             >
               free consultation

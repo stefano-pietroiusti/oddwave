@@ -19,7 +19,7 @@
         <b-button
           pill
           variant="red"
-          to="/contact/"
+          to="/contact-theoddwave-nz/"
           class="px-3 whyusbutton justify-content-center animated pulse delay-1s text-white text-medium"
         >
           Get in Touch

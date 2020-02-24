@@ -37,7 +37,9 @@
         <b-nav-item to="/" exact exact-active-class="underline">
           Home
         </b-nav-item>
-
+        <b-nav-item to="/about-theoddwave-nz/" exact exact-active-class="underline">
+          About us
+        </b-nav-item>
         <b-nav-item-dropdown
           text="Services"
           :extra-toggle-classes="this.$route.name === 'services-id' ? 'activeClassServicesProducts' : ''"
@@ -72,13 +74,14 @@
             {{ item.title }}
           </b-dropdown-item>
         </b-nav-item-dropdown> -->
+
         <b-nav-item to="/portfolio/" exact exact-active-class="underline">
           Portfolio
         </b-nav-item>
         <b-nav-item to="/blog-articles/" exact exact-active-class="underline">
           Blog
         </b-nav-item>
-        <b-nav-item to="/contact/" exact exact-active-class="underline">
+        <b-nav-item to="/contact-theoddwave-nz/" exact exact-active-class="underline">
           Contact us
         </b-nav-item>
         <div id="content-desktop" class="pl-5">

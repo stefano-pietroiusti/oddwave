@@ -3,7 +3,7 @@ const commonKeywords = [
 export const state = () => ({
   services: [
     {
-      id: 'web-design-nz',
+      id: 'website-design-nz',
       variant: 'rwcyellow',
       animate: 'bounceInLeft',
       title: 'Website Design & Web Development Auckland, NZ',
@@ -95,7 +95,7 @@ export const state = () => ({
       keywords: [...commonKeywords, 'website design', 'website design', 'web development', 'custom websites', 'pwa web apps development', 'progressive web apps development']
     },
     {
-      id: 'pwa-progressive-web-apps-nz',
+      id: 'pwa-ecommerce-nz',
       variant: 'rwcyellow',
       animate: 'bounceInLeft',
       title: 'PWA eCommerce | The Odd Wave | Auckland, NZ',
@@ -178,7 +178,7 @@ export const state = () => ({
       keywords: [...commonKeywords, 'progressive web apps development']
     },
     {
-      id: 'contracting-nz',
+      id: 'software-engineering-nz',
       variant: 'rwcgreen',
       animate: 'bounceInLeft',
       title: 'Software Engineering & Support North Shore Auckland',
@@ -234,7 +234,7 @@ export const state = () => ({
       maori: 'kūkara Aotearoa',
       description: 'High quality SEO - Search Engine Optimization to raise your Google ranking and drive organic traffic to your website for ROI.',
       landing: { header: 'SEO', content: 'Be found by local New Zealand customers searching for your products and services. The Odd Wave will help you get your business ranking higher on web search engines such as Google, Bing, DuckDuckGo.' },
-      header: 'SEO Search Engine Optimization NZ',
+      header: 'SEO Search Engine Optimization',
       icon: ['fas', 'search'],
       image: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="92" height="92" viewBox="0 0 92 92"> <defs><style>.d{clip-path:url(#c);}</style><clipPath id="c"><rect width="92" height="92" transform="translate(624 1485)" /></clipPath> </defs><g class="d" transform="translate(-624 -1485)"><g transform="translate(624 1485)"><path d="M38.354,6.151A32.188,32.188,0,1,0,70.542,38.339,32.188,32.188,0,0,0,38.354,6.151Zm0,3.066A29.091,29.091,0,0,1,62.136,21.586L58.3,25.418a6.049,6.049,0,0,0-3.09-.874,6.131,6.131,0,0,0-6.131,6.131,6.049,6.049,0,0,0,.869,3.095L39.916,43.806a5.944,5.944,0,0,0-6.189,0l-6.971-6.971a6.049,6.049,0,0,0,.869-3.095A6.119,6.119,0,0,0,15.58,32.208H9.894A29.164,29.164,0,0,1,38.354,9.217ZM58.279,30.675a3.066,3.066,0,1,1-3.066-3.066A3.065,3.065,0,0,1,58.279,30.675ZM39.886,49.068A3.066,3.066,0,1,1,36.821,46,3.065,3.065,0,0,1,39.886,49.068ZM24.559,33.741a3.066,3.066,0,1,1-3.066-3.066A3.065,3.065,0,0,1,24.559,33.741ZM52.5,63.8A29.116,29.116,0,0,1,9.4,35.273H15.58a6.131,6.131,0,0,0,5.913,4.6A6.049,6.049,0,0,0,24.588,39l6.971,6.971a6.049,6.049,0,0,0-.869,3.095,6.131,6.131,0,0,0,12.262,0,6.049,6.049,0,0,0-.869-3.095L52.119,35.937a6.049,6.049,0,0,0,3.095.869,6.131,6.131,0,0,0,6.131-6.131,6.049,6.049,0,0,0-.869-3.095l3.341-3.34A29.1,29.1,0,0,1,52.5,63.8Z" /><path d="M76.673,15.348a6.131,6.131,0,0,0,5.913-4.6H92V7.684H82.586A6.118,6.118,0,0,0,70.542,9.217a6.049,6.049,0,0,0,.869,3.095L68.718,15A38.319,38.319,0,1,0,59.15,70.5l4.626,4.626,2.167,2.167L78.282,89.631A8.035,8.035,0,0,0,89.646,78.267L77.307,65.929,75.14,63.761l-4.626-4.626a38.192,38.192,0,0,0,0-41.593l3.066-3.066A6.051,6.051,0,0,0,76.673,15.348Zm0-9.2a3.066,3.066,0,1,1-3.066,3.066A3.065,3.065,0,0,1,76.673,6.151ZM87.478,80.435a4.971,4.971,0,1,1-6.949,7.109l-.08-.08L68.111,75.125,75.14,68.1ZM72.972,65.929l-7.029,7.029L61.7,68.715c.216-.166.418-.348.631-.518s.46-.374.688-.566c.336-.282.667-.567.992-.86.167-.153.326-.307.49-.46q.943-.883,1.826-1.826c.153-.164.307-.323.46-.49.293-.325.578-.656.86-.992q.288-.34.566-.688c.169-.212.351-.414.517-.63Zm-5.944-7.12c-.483.674-.981,1.335-1.507,1.971-.153.185-.317.365-.475.547q-.7.818-1.453,1.588-.326.337-.664.664-.766.75-1.588,1.453c-.182.153-.362.32-.547.475-.636.526-1.3,1.024-1.971,1.507a35.308,35.308,0,1,1,8.2-8.2Z" /></g></g></svg>',
       backgroundImage: { color1: 'rgba(84, 200, 232, 1)', color2: 'rgba(84, 200, 232, 1)', url: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpath fill='%23ffb100' d='M486 705.8c-109.3-21.8-223.4-32.2-335.3-19.4C99.5 692.1 49 703 0 719.8V800h843.8c-115.9-33.2-230.8-68.1-347.6-92.2C492.8 707.1 489.4 706.5 486 705.8z'/%3E%3Cpath fill='%23ffb800' d='M1600 0H0v719.8c49-16.8 99.5-27.8 150.7-33.5c111.9-12.7 226-2.4 335.3 19.4c3.4 0.7 6.8 1.4 10.2 2c116.8 24 231.7 59 347.6 92.2H1600V0z'/%3E%3Cpath fill='%23ffbf00' d='M478.4 581c3.2 0.8 6.4 1.7 9.5 2.5c196.2 52.5 388.7 133.5 593.5 176.6c174.2 36.6 349.5 29.2 518.6-10.2V0H0v574.9c52.3-17.6 106.5-27.7 161.1-30.9C268.4 537.4 375.7 554.2 478.4 581z'/%3E%3Cpath fill='%23ffc500' d='M0 0v429.4c55.6-18.4 113.5-27.3 171.4-27.7c102.8-0.8 203.2 22.7 299.3 54.5c3 1 5.9 2 8.9 3c183.6 62 365.7 146.1 562.4 192.1c186.7 43.7 376.3 34.4 557.9-12.6V0H0z'/%3E%3Cpath fill='%23ffcc00' d='M181.8 259.4c98.2 6 191.9 35.2 281.3 72.1c2.8 1.1 5.5 2.3 8.3 3.4c171 71.6 342.7 158.5 531.3 207.7c198.8 51.8 403.4 40.8 597.3-14.8V0H0v283.2C59 263.6 120.6 255.7 181.8 259.4z'/%3E%3Cpath fill='%23ffd624' d='M1600 0H0v136.3c62.3-20.9 127.7-27.5 192.2-19.2c93.6 12.1 180.5 47.7 263.3 89.6c2.6 1.3 5.1 2.6 7.7 3.9c158.4 81.1 319.7 170.9 500.3 223.2c210.5 61 430.8 49 636.6-16.6V0z'/%3E%3Cpath fill='%23ffe038' d='M454.9 86.3C600.7 177 751.6 269.3 924.1 325c208.6 67.4 431.3 60.8 637.9-5.3c12.8-4.1 25.4-8.4 38.1-12.9V0H288.1c56 21.3 108.7 50.6 159.7 82C450.2 83.4 452.5 84.9 454.9 86.3z'/%3E%3Cpath fill='%23ffeb49' d='M1600 0H498c118.1 85.8 243.5 164.5 386.8 216.2c191.8 69.2 400 74.7 595 21.1c40.8-11.2 81.1-25.2 120.3-41.7V0z'/%3E%3Cpath fill='%23fff558' d='M1397.5 154.8c47.2-10.6 93.6-25.3 138.6-43.8c21.7-8.9 43-18.8 63.9-29.5V0H643.4c62.9 41.7 129.7 78.2 202.1 107.4C1020.4 178.1 1214.2 196.1 1397.5 154.8z'/%3E%3Cpath fill='%23ffff66' d='M1315.3 72.4c75.3-12.6 148.9-37.1 216.8-72.4h-723C966.8 71 1144.7 101 1315.3 72.4z'/%3E%3C/g%3E%3C/svg%3E", height: 'auto' },
@@ -322,15 +322,15 @@ export const state = () => ({
       keywords: [...commonKeywords, 'seo nz', 'seo auckland nz', 'organic search engine marketing', 'search engine optimization nz', 'improve your search engine ranking']
     },
     {
-      id: 'ppc-nz',
+      id: 'digital-marketing-nz',
       variant: 'rwcpurple',
       animate: 'zoomInLeft',
-      title: 'Digital Marketing Agency Auckland | help with google ads and ppc nz',
+      title: 'Digital Marketing | The Odd Wave, Auckland, NZ',
       linkTitle: 'Digital Marketing',
       maori: 'pānui Aotearoa',
-      description: 'Digital Marketing Agency Auckland is helping NZ with google ads manager, PPC and ad testing services for immediate ROI.',
+      description: 'Digital Marketing services to help you with google ads manager, PPC and ad testing services for immediate ROI.',
       landing: { header: 'Digital Marketing', content: 'The Odd Wave provides professionally managed google ads manager, PPC, adwords keyword planner and social media services for immediate ROI. Stay ahead of your competition with our Digital Marketing services.' },
-      header: 'Digital Marketing - PPC NZ',
+      header: 'Digital Marketing',
       icon: ['fas', 'search-dollar'],
       image: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="92" height="92" viewBox="0 0 92 92"><defs><style>.f{clip-path:url(#e);}</style><clipPath id="e"><rect class="f" width="92" height="92" transform="translate(912 1485)"/></clipPath></defs><g transform="translate(-912 -1485)"><g transform="translate(912 1485)"><path d="M8.9,83.1h2.968v2.968H8.9Zm0,0"/><path d="M14.839,83.1h2.968v2.968H14.839Zm0,0"/><path d="M20.774,83.1h2.968v2.968H20.774Zm0,0"/><path d="M71.226,83.1H83.1v2.968H71.226Zm0,0"/><path d="M89.032,77.161V28.194a7.428,7.428,0,0,0-7.419-7.419H77.161a20.774,20.774,0,0,0-41.548,0H10.387a7.428,7.428,0,0,0-7.419,7.419V77.161H0v7.419A7.428,7.428,0,0,0,7.419,92H84.581A7.428,7.428,0,0,0,92,84.581V77.161ZM81.613,23.742a4.457,4.457,0,0,1,4.452,4.452V77.161H83.1V29.677a2.971,2.971,0,0,0-2.968-2.968H76.286a20.629,20.629,0,0,0,.638-2.968Zm-42.17-8.421,15.749,6.563L60.585,38.06A17.779,17.779,0,0,1,39.443,15.321ZM63.4,37.134l-5.32-15.959L69.97,9.289A17.773,17.773,0,0,1,63.4,37.134ZM56.387,2.968A17.724,17.724,0,0,1,67.874,7.19L56.041,19.022,40.593,12.586A17.81,17.81,0,0,1,56.387,2.968ZM5.935,28.194a4.457,4.457,0,0,1,4.452-4.452H35.851a20.434,20.434,0,0,0,.638,2.968H11.871A2.971,2.971,0,0,0,8.9,29.678V77.161H5.935Zm83.1,56.387a4.457,4.457,0,0,1-4.452,4.452H7.419a4.457,4.457,0,0,1-4.452-4.452V80.129H33.538A11.53,11.53,0,0,0,41.295,83.1h9.412a11.53,11.53,0,0,0,7.756-2.968h18.7V77.161h-19.9l-.435.435a8.59,8.59,0,0,1-6.117,2.533H41.293A8.593,8.593,0,0,1,35.177,77.6l-.433-.435H11.871V29.678H37.646a20.729,20.729,0,0,0,37.482,0h5V80.129h8.9Zm0,0"/><path d="M72.71,62.323a4.426,4.426,0,0,0-2.465.749L65.068,59.19a4.384,4.384,0,0,0,.222-1.319,4.452,4.452,0,0,0-8.9,0,4.406,4.406,0,0,0,.262,1.451l-8.311,6.649a4.363,4.363,0,0,0-4.994.218l-6.4-4.266a4.354,4.354,0,0,0,.15-1.085,4.452,4.452,0,1,0-8.9,0,4.354,4.354,0,0,0,.15,1.085l-6.4,4.266a4.4,4.4,0,0,0-2.655-.9,4.452,4.452,0,1,0,4.452,4.452,4.354,4.354,0,0,0-.15-1.085l6.4-4.266a4.369,4.369,0,0,0,5.309,0l6.4,4.266a4.363,4.363,0,0,0-.15,1.085,4.452,4.452,0,1,0,8.9,0,4.406,4.406,0,0,0-.262-1.451L58.5,61.642a4.394,4.394,0,0,0,4.8-.068l5.177,3.881a4.384,4.384,0,0,0-.222,1.319,4.452,4.452,0,1,0,4.452-4.452Zm-53.419,8.9a1.484,1.484,0,1,1,1.484-1.484A1.487,1.487,0,0,1,19.29,71.226Zm13.355-8.9a1.484,1.484,0,1,1,1.484-1.484A1.487,1.487,0,0,1,32.645,62.323ZM46,71.226a1.484,1.484,0,1,1,1.484-1.484A1.487,1.487,0,0,1,46,71.226ZM60.839,59.355a1.484,1.484,0,1,1,1.484-1.484A1.487,1.487,0,0,1,60.839,59.355Zm11.871,8.9a1.484,1.484,0,1,1,1.484-1.484A1.487,1.487,0,0,1,72.71,68.258Zm0,0"/><path d="M38.581,32.645H14.839V53.419H38.581ZM35.613,50.452H17.806V35.613H35.613Zm0,0"/><path d="M20.774,38.581H32.645v2.968H20.774Zm0,0"/><path d="M20.774,44.516H32.645v2.968H20.774Zm0,0"/><path d="M41.548,47.484h2.968v2.968H41.548Zm0,0"/><path d="M47.484,47.484H77.161v2.968H47.484Zm0,0"/></g></g></svg>',
       backgroundImage: { color1: 'rgba(153, 61, 187, 1)', color2: 'rgba(153, 61, 187, 1)', url: 'ppc.jpg', height: 'auto' },
@@ -591,15 +591,15 @@ export const state = () => ({
       keywords: [...commonKeywords, 'Reputation management for continuous brand management and alerting']
     },
     {
-      id: 'photographer-nz',
+      id: 'photography-nz',
       variant: 'rwcblue',
       animate: 'jackInTheBox',
-      title: 'Photography NZ | professional photographer Auckland',
+      title: 'Photography | The Odd Wave, Auckland, NZ',
       linkTitle: 'Photography',
       maori: 'hopu whakaahua Aotearoa',
-      description: 'Photography NZ by our professional photographer for the best photos of your products, architecture, real estate, family, events & candid moments.',
+      description: 'Photography by our professional photographer for the best photos of your products, architecture, real estate, family, events & candid moments.',
       landing: { header: 'Photography', content: 'Compliment your products, services, websites and digital signage with our professional and creative photography.' },
-      header: 'Photography NZ for websites and more',
+      header: 'Photography for websites and more',
       icon: ['fas', 'camera-retro'],
       image: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="92" height="92" viewBox="0 0 92 92"><defs><style>.h{clip-path:url(#g);}</style><clipPath id="g"><rect class="h" width="92" height="92" transform="translate(1200 1485)"/></clipPath></defs><g transform="translate(-1200 -1485)"><g transform="translate(1200 1485)"><path d="M72.234,29.828a1.8,1.8,0,1,0,1.8,1.8A1.8,1.8,0,0,0,72.234,29.828Z"/><path d="M86.609,22.641H66.876l-5.7-11.395a5.362,5.362,0,0,0-4.822-2.98H35.643a5.361,5.361,0,0,0-4.822,2.981l-5.7,11.394H21.563v-1.8a5.4,5.4,0,0,0-5.391-5.391H12.578a5.4,5.4,0,0,0-5.391,5.391v1.8h-1.8A5.4,5.4,0,0,0,0,28.031V78.344a5.4,5.4,0,0,0,5.391,5.391H86.609A5.4,5.4,0,0,0,92,78.344V28.031A5.4,5.4,0,0,0,86.609,22.641ZM34.036,12.853a1.787,1.787,0,0,1,1.607-.994H56.357a1.788,1.788,0,0,1,1.607.994l4.894,9.787H29.142Zm-23.254,7.99a1.8,1.8,0,0,1,1.8-1.8h3.594a1.8,1.8,0,0,1,1.8,1.8v1.8H10.781ZM3.594,40.591H26.315a23.395,23.395,0,0,0,0,25.174H3.594ZM46,33.422A19.766,19.766,0,1,1,26.234,53.188,19.776,19.776,0,0,1,46,33.422ZM88.406,78.344a1.8,1.8,0,0,1-1.8,1.8H5.391a1.8,1.8,0,0,1-1.8-1.8V69.359H29.15a23.345,23.345,0,0,0,33.7,0H88.406Zm0-12.578H65.685a23.364,23.364,0,0,0,0-25.156H88.406Zm0-28.75H62.85a23.345,23.345,0,0,0-33.7,0H3.594V28.031a1.8,1.8,0,0,1,1.8-1.8H86.609a1.8,1.8,0,0,1,1.8,1.8Z"/><path d="M51.391,15.453H40.609a1.8,1.8,0,0,0,0,3.594H51.391a1.8,1.8,0,0,0,0-3.594Z"/><path d="M46,37.016A16.172,16.172,0,1,0,62.172,53.188,16.19,16.19,0,0,0,46,37.016Zm0,28.75A12.578,12.578,0,1,1,58.578,53.188,12.592,12.592,0,0,1,46,65.766Z"/><path d="M46,44.2a8.995,8.995,0,0,0-8.984,8.984,1.8,1.8,0,0,0,3.594,0A5.4,5.4,0,0,1,46,47.8,1.8,1.8,0,0,0,46,44.2Z"/><path d="M83.016,29.828H79.422a1.8,1.8,0,0,0,0,3.594h3.594a1.8,1.8,0,0,0,0-3.594Z"/></g></g></svg>',
       backgroundImage: { color1: 'rgba(244, 67, 108, 1)', color2: 'rgba(244, 67, 108, 1)', url: 'photography.jpg', height: 'auto' },

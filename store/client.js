@@ -100,7 +100,7 @@ export const state = () => ({
       name: 'Jaline Van Dyk',
       jobTitle: 'Owner',
       description: '15+ years experience software development, digital marketing & management.',
-      image: '/imgs/stefano-pietroiusti.jpg',
+      image: '/imgs/jaline-vandyk.jpg',
       sameAs: [
         'https://www.linkedin.com/in/jaline-pietroiusti-ab354b56'
       ]
@@ -111,7 +111,7 @@ export const state = () => ({
         `${process.env.author}`
       ],
       jobTitle: 'Technical Lead',
-      description: 'Experienced IT generalist and tech enthusiast with 20+ years experience across web, data, cloud, search & mentoring.',
+      description: 'Experienced IT generalist and tech enthusiast with 20+ years IT experience across web, data, cloud, search & mentoring.',
       image: '/imgs/stefano-pietroiusti.jpg'
     }
     ],
@@ -156,7 +156,7 @@ export const state = () => ({
     poweredBy: 'powered by The Odd Wave suite of web technologies',
     marketing: 'Mobile devices are being used every day to perform simple tasks on the go, and this includes searching for products, services and shopping online. Customers today are looking to snappy websites that beautifully display the information they want, look great on mobile and display what they are looking for with minimal effort. <br><br> We’re passionate about growing your business, and we make complex simple so you can put your time and effort into what matters most in your business. <br><br>Many solutions/packages out there are too expensive. Our goal is to do things the right way using the best solutions to keep your business growing, every cent spent with us is not wasted because anything we develop can scale affordably. We combine custom development with API services and proven open source technologies to fast track solutions to your problems. <br><br>Contact us today about building your business website. We would love to help you create a quality website to meet your business needs.',
     about: 'The Odd Wave is a creative Digital Marketing and Website Design company, passionate about modern technology that we use to propel small to medium size businesses to success. Our Mission is to assist local businesses with digital transformation by delivering an impactful online presence backed by our digital marketing expertise with round the clock support.',
-    history: 'Odd - Meaning we’re “different to what is usual or expected” <br> Wave - Meaning we’re “the sudden occurrence or increase in a positive phenomenon, feeling or emotion” from using the right modern technologies .',
+    history: 'Odd - Meaning we’re “different to what is usual or expected” <br> Wave - Meaning we’re “the sudden occurrence or increase in a positive phenomenon, feeling or emotion” from working with us and using the right modern technologies.',
     services: 'We offer a range of web solutions and services to help your business thrive in this rapidly changing digital world. Website Design, Web Development, Software Engineering, SEO, Online Reputation Management ,Digital Marketing and Data Analysis to <b>drive the right traffic</b> to your online business,<br/>backed by our round the clock support on all our solutions',
     businessvalue: 'Take Advantantage of our service offering of result driven Website Development and IT Business solutions and support that our clients want for their NZ businesses.',
     fb: 'https://www.facebook.com/theoddwave',

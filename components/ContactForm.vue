@@ -288,6 +288,7 @@ export default {
           this.showSubmitError()
         } else {
           this.$ga.event('form', 'submit', 'contact')
+          this.$gtag('event', 'conversion', { 'send_to': 'AW-706272574/3sLuCKXj1qwBEL6649AC' })
         }
       } catch (error) {
         this.$ga.event('form', 'submit', 'contactServiceError')

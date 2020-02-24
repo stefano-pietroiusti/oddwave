@@ -1399,3 +1399,11 @@ fa-contact-dark:hover {
     height: auto !important;
   }
 }
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 2px;
+  padding: 10px;
+  font-size: 9px;
+  display: inline;
+  color: #fff;
+}

@@ -168,11 +168,30 @@ export default {
     ['@nuxtjs/google-analytics', {
       id: 'UA-148813087-1'
     }],
+    '@nuxtjs/google-gtag',
     'kentico-kontent-nuxt-module'
     // ['@nuxtjs/google-tag-manager', {
     //   id: 'GTM-PJ4J4WD'
     // }]
   ],
+  'google-gtag': {
+    id: 'UA-148813087-1',
+    config: {
+      anonymize_ip: true, // anonymize IP 
+      send_page_view: false, // might be necessary to avoid duplicated page track on page reload
+      linker: {
+        domains: ['theoddwave.co.nz','theoddwave.nz']
+      }
+    },
+    debug: false, // enable to track in dev mode
+    disableAutoPageTrack: true, // disable if you don't want to track each page route with router.afterEach(...).
+    additionalAccounts: [{
+      id: 'AW-706272574', // required if you are adding additional accounts
+      config: {
+        send_page_view: true // optional configurations
+      }
+    }]
+  },
   kenticokontent: {
     projectId: 'd09c9569-7021-0070-d917-10246623ee2e',
     enableAdvancedLogging: false,

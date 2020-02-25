@@ -3,8 +3,8 @@
     <Nav id="navbar" class="container-fluid" :ptheme="theme" />
     <HeaderComponent
       pheader="About us"
-      psubheader="Making the complex simple"
-      psubtitle="We’re specialists at finding and using the right technology to help your grow your business"
+      psubheader="We make the complex simple."
+      psubtitle="We’re specialists at finding and using the right technology to help you grow your business."
       pcontainerclass="mt-7 mb-5 borderLeft"
     />
 
@@ -51,7 +51,7 @@ export default {
     let content = `${process.env.baseUrl}${this.$route.path}`
     content = content.slice(-1) !== '/' ? content + '/' : content
     return {
-      title: 'About the Odd Wave | ' + this.client.title,
+      title: 'About ' + this.client.title,
       meta: [
         {
           hid: 'og:url',
@@ -66,7 +66,7 @@ export default {
         {
           hid: 'og:description',
           name: 'og:description',
-          content: this.client.description
+          content: 'Learn more about us, our backgrounds and mission.' + this.client.description
         },
         {
           hid: 'description',

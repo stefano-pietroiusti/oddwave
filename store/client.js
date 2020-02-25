@@ -20,19 +20,19 @@ export const state = () => ({
       'longitude': 174.734479
     },
     title:
-      'Custom Websites, PWA eCommerce and Online Marketing | The Odd Wave, North Shore, Auckland, NZ',
+      'Custom Website Design, PWA eCommerce and Digital Marketing | The Odd Wave, North Shore, Auckland, NZ',
     description:
-      'New Zealand website design company; providing digital marketing services to grow your business. Based in North Shore, Auckland NZ we build your website and promote it online.',
-    header: 'WEBSITE DESIGN, DATA & DIGITAL MARKETING',
-    subheader: 'CUSTOM WEBSITE DESIGN & DIGITAL MARKETING',
+      'The Odd Wave Ltd is a New Zealand technology company that provides custom Website Design, PWA eCommerce and Digital Marketing solutions to increase sales and grow your business online. Partner with us today for you vNext website.',
+    header: 'Custom Website Design, PWA eCommerce & Digital Marketing',
+    subheader: 'CUSTOM WEBSITE DESIGN, PWA eCOMMERCE & DIGITAL MARKETING',
     subtitle:
-      "We provide custom <a href='/services/website-design-nz/' title='Website design'>website design</a>, <a href='/services/pwa-ecommerce-nz/' title='PWA eCommerce'>PWA eCommerce</a> and <a href='/services/digital-marketing-nz/' title='Digital marketing'>digital marketing</a> services to grow your business. Based in North Shore, Auckland NZ we build your website and promote it online.",
+      "We provide custom <a href='/services/website-design-nz/' title='Website design'>website design</a>, <a href='/services/pwa-ecommerce-nz/' title='PWA eCommerce'>PWA eCommerce</a> and <a href='/services/digital-marketing-nz/' title='Digital marketing'>digital marketing</a> services to grow your business. Based on the North Shore, Auckland, NZ, we can build your website and promote it online.",
     featuresHeader: 'Why us?',
     features: [
       {
         header: 'Continuous Quality Assurance',
         text:
-          "We don't just develop, deliver and leave you to it. We take projects from beginning to end and then stay with you to help grow your business with our solution.",
+          "We don't just develop, deliver and leave you to it. We take projects from beginning to end and then stay with you to help grow your business with our solutions.",
         icon: ['fab', 'servicestack'],
         image: '/imgs/web-dev.svg'
       },
@@ -153,10 +153,11 @@ export const state = () => ({
     priceRange: '$$',
     copyright: '© 2019 Copyright The Odd Wave',
     poweredBy: 'powered by The Odd Wave suite of web technologies',
-    marketing: 'Mobile devices are being used every day to perform simple tasks on the go, and this includes searching for products, services and shopping online. Customers today are looking to snappy websites that beautifully display the information they want, look great on mobile and display what they are looking for with minimal effort. <br><br> We’re passionate about growing your business, and we make complex simple so you can put your time and effort into what matters most in your business. <br><br>Many solutions/packages out there are too expensive. Our goal is to do things the right way using the best solutions to keep your business growing, every cent spent with us is not wasted because anything we develop can scale affordably. We combine custom development with API services and proven open source technologies to fast track solutions to your problems. <br><br>Contact us today about building your business website. We would love to help you create a quality website to meet your business needs.',
+    marketing: 'Mobile devices are being used every day to perform simple tasks on the go, and this includes searching for products, services and shopping online. Customers today are looking to snappy websites that beautifully display the information they want, look great on mobile and display what they are looking for with minimal effort. <br><br> We’re passionate about growing your business with the right modern technologies, and we make the complex simple so that you can spend your time and effort into what matters most in your business. <br><br>Many solutions/packages out there are too expensive. Our goal is to do things the right way using the best solutions to keep your business growing, every cent spent with us is not wasted because anything we develop can scale affordably. We combine custom development with proven open source technologies, frameworks, microservices, APIs and platforms to fast track solutions to your problems and maximise return on investment. <br><br>Contact us today about building your business website. We would love to help you create a quality website to meet your business needs.',
     about: 'The Odd Wave is a creative Digital Marketing and Website Design company, passionate about modern technology that we use to propel small to medium size businesses to success. Our Mission is to assist local businesses with digital transformation by delivering an impactful online presence backed by our digital marketing expertise with round the clock support.',
     history: 'Odd - Meaning we’re “different to what is usual or expected” <br> Wave - Meaning we’re “the sudden occurrence or increase in a positive phenomenon, feeling or emotion” from working with us and using the right modern technologies.',
-    services: 'We offer a range of web solutions and services to help your business thrive in this rapidly changing digital world. Website Design, Web Development, Software Engineering, SEO, Online Reputation Management ,Digital Marketing and Data Analysis to <b>drive the right traffic</b> to your online business,<br/>backed by our round the clock support on all our solutions',
+    services: 'Our domain knowledge, skills and experiences <b>cover the full spectrum of online business from backend to frontend</b> and what customers interact with on the internet.',
+    // "Leverage exceptional benefits of <b>PWA for any eCommerce and headless CMS</b>. <b>Update, manage and distribute your website content from anywhere to anywhere</b>. Our eCommerce solution is an awesome ecommerce app that <b>works on all devices, platforms, online and offline</b>, and it empowers retailers both large and small with an <b>easy-to-use, easy-to-manage</b>, customizable online store and secure checkout. We give you control to add products, manage your inventory, manage your shop content and more. It’s <b>hassle-free ecommerce</b>, letting you focus on improving other parts of your business.',
     businessvalue: 'Get in touch to learn more about how we can help you grow your business with us.',
     fb: 'https://www.facebook.com/theoddwave',
     instagram: 'https://www.instagram.com/theoddwavenz/',

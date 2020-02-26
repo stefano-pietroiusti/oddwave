@@ -27,15 +27,15 @@ https://theoddwave.co.nz/products/consulting-nz/
 https://theoddwave.co.nz/contact-theoddwave-nz/
 */
 
-const dynamicRoutes = async () => {
-  const res =  await axios.get('https://deliver.kontent.ai/d09c9569-7021-0070-d917-10246623ee2e/items')
-  const routes =  [].concat(...res.data.items.map(({ elements }) => '/blog-articles/' +  elements.url.value + '/' || []))
-  console.log(routes)
-  return routes
-    // return res.data.items.map(({ elements }) => {
-    //   return '/blog-articles/' +  elements.url.value + '/'
-    // })
-}
+// const dynamicRoutes = async () => {
+//   const res =  await axios.get('https://deliver.kontent.ai/d09c9569-7021-0070-d917-10246623ee2e/items')
+//   const routes =  [].concat(...res.data.items.map(({ elements }) => '/blog-articles/' +  elements.url.value + '/' || []))
+//   console.log(routes)
+//   return routes
+//     // return res.data.items.map(({ elements }) => {
+//     //   return '/blog-articles/' +  elements.url.value + '/'
+//     // })
+// }
 
 const routes = [
   '/services/website-design-nz/',

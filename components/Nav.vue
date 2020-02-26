@@ -100,10 +100,11 @@
           <b-button
             pill
             variant="rwcblue"
-            href="#whyussection"
-            class="px-3 whyusbutton justify-content-center animated pulse delay-1s text-white text-medium"
+            class="px-3 whyusbutton justify-content-center animated pulse delay-1s text-white"
           >
-            Why Us?
+            <nuxt-link :to="{ path: '/',hash:'#whyussection'}" class="text-white text-medium">
+              Why Us?
+            </nuxt-link>
           </b-button>
         </div>
       </b-navbar-nav>

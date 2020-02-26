@@ -13,11 +13,11 @@
 
     <SectionComponent pheader="What's In The Name?" :pcontent="client.history" class="align-self-center" />
 
-    <WhyUsComponent
+    <!-- <WhyUsComponent
       pheader="What makes us different?"
       class="align-self-center section"
       :pfeatures="client.features"
-    />
+    /> -->
 
     <SectionContactComponent
       pheader="Partner with us"
@@ -33,7 +33,7 @@ import Nav from '@/components/Nav'
 import HeaderComponent from '@/components/HeaderComponent'
 import SectionComponent from '@/components/SectionComponent'
 import SectionContactComponent from '@/components/SectionContactComponent'
-import WhyUsComponent from '@/components/WhyUsComponent'
+// import WhyUsComponent from '@/components/WhyUsComponent'
 import TeamComponent from '@/components/TeamComponent'
 import lax from 'lax.js'
 import { mapGetters } from 'vuex'
@@ -44,14 +44,14 @@ export default {
     HeaderComponent,
     SectionComponent,
     SectionContactComponent,
-    WhyUsComponent,
+    // WhyUsComponent,
     TeamComponent
   },
   head () {
     let content = `${process.env.baseUrl}${this.$route.path}`
     content = content.slice(-1) !== '/' ? content + '/' : content
     return {
-      title: 'About ' + this.client.title,
+      title: 'About ' + this.client.name,
       meta: [
         {
           hid: 'og:url',
@@ -61,17 +61,17 @@ export default {
         {
           hid: 'og:title',
           name: 'og:title',
-          content: this.client.title
+          content: 'About ' + this.client.name
         },
         {
           hid: 'og:description',
           name: 'og:description',
-          content: 'Learn more about us, our backgrounds and mission.' + this.client.description
+          content: 'Learn more about  ' + this.client.name + ', our backgrounds and mission.' + this.client.description
         },
         {
           hid: 'description',
           name: 'description',
-          content: this.client.description
+          content: 'Learn more about ' + this.client.name + ', our backgrounds and mission.' + this.client.description
         }
         // {
         //   hid: 'keywords',

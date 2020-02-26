@@ -66,7 +66,7 @@ export const state = () => ({
       ],
       isFeatured: true,
       isFeaturedOrder: 0,
-      relatedServices: ['web-design-nz'],
+      relatedServices: ['website-design-nz'],
       price: { value: 1248, unit: 'package', discount: 0, flexible: true },
       keywords: [...commonKeywords, 'business website package', 'custom website', 'landing page', 'products website', 'services website', 'website with contact form']
     },
@@ -111,7 +111,7 @@ export const state = () => ({
       ],
       isFeatured: true,
       isFeaturedOrder: 0,
-      relatedServices: ['web-design-nz'],
+      relatedServices: ['website-design-nz'],
       price: { value: 3120, unit: 'package', discount: 0, flexible: true },
       keywords: [...commonKeywords, 'business website package', 'custom website', 'landing page', 'products website', 'services website', 'website with contact form']
     },
@@ -149,7 +149,7 @@ export const state = () => ({
       ],
       isFeatured: true,
       isFeaturedOrder: 0,
-      relatedServices: ['pwa-progressive-web-apps-nz'],
+      relatedServices: ['pwa-ecommerce-nz'],
       price: { value: 3900, unit: 'package', discount: 0, flexible: true },
       keywords: [...commonKeywords, 'pwa for any headless CMS']
     },
@@ -187,7 +187,7 @@ export const state = () => ({
       ],
       isFeatured: true,
       isFeaturedOrder: 0,
-      relatedServices: ['pwa-progressive-web-apps-nz'],
+      relatedServices: ['pwa-ecommerce-nz'],
       price: { value: 5900, unit: 'package', discount: 0, flexible: true },
       keywords: [...commonKeywords, 'pwa for any headless CMS']
     },
@@ -302,7 +302,7 @@ export const state = () => ({
       isFeatured: true,
       isFeaturedOrder: 5,
       price: { value: 270, unit: 'package', discount: 0.0 },
-      relatedServices: ['photographer-nz'],
+      relatedServices: ['photography-nz'],
       keywords: [...commonKeywords, 'photography package']
     },
     {
@@ -318,7 +318,7 @@ export const state = () => ({
       features: [
       ],
       price: { value: 680, unit: 'package', discount: 0.0 },
-      relatedServices: ['photographer-nz'],
+      relatedServices: ['photography-nz'],
       keywords: [...commonKeywords, 'photography maxi package']
     },
     {
@@ -343,7 +343,7 @@ export const state = () => ({
       price: { value: 350, unit: 'package', discount: 0.2 },
       isFeatured: false,
       isFeaturedOrder: 5,
-      relatedServices: ['photographer-nz'],
+      relatedServices: ['photography-nz'],
       keywords: [...commonKeywords, 'film photography package']
     },
     {
@@ -377,7 +377,7 @@ export const state = () => ({
       price: { value: 120, unit: 'hour', discount: 0 },
       isFeatured: true,
       isFeaturedOrder: 5,
-      relatedServices: ['contracting-nz'],
+      relatedServices: ['software-engineering-nz'],
       keywords: [...commonKeywords, 'hourly consulting services']
     },
     {
@@ -414,7 +414,7 @@ export const state = () => ({
       price: { value: 120, unit: 'hour', discount: 0 },
       isFeatured: true,
       isFeaturedOrder: 5,
-      relatedServices: ['contracting-nz'],
+      relatedServices: ['software-engineering-nz'],
       keywords: [...commonKeywords, 'hourly consulting services']
     }
   ]

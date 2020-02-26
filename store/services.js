@@ -85,7 +85,7 @@ export const state = () => ({
         }
       ],
       price: { value: 2400, unit: 'package' },
-      relatedServices: ['pwa-progressive-web-apps-nz', 'seo-nz', 'photographer-nz'],
+      relatedServices: ['pwa-ecommerce-nz', 'seo-nz', 'photography-nz'],
       rate: 'hour',
       marketing: {
         header: 'Join us',
@@ -168,7 +168,7 @@ export const state = () => ({
         }
       ],
       price: { value: 5900, unit: 'package' },
-      relatedServices: ['seo-nz', 'web-design-nz'],
+      relatedServices: ['seo-nz', 'website-design-nz'],
       rate: 'hour',
       marketing: {
         header: 'Join us',
@@ -216,7 +216,7 @@ export const state = () => ({
         }
         ],
       price: { value: 110, unit: 'hour' },
-      relatedServices: ['seo-nz', 'ppc-nz', 'web-design-nz'],
+      relatedServices: ['website-design-nz', 'pwa-ecommerce-nz', 'sentiment-analysis-nz', 'reputation-management-nz'],
       rate: 'hour',
       marketing: {
         header: 'Partner with us',
@@ -288,7 +288,7 @@ export const state = () => ({
         }
       ],
       price: { value: 600, unit: 'month' },
-      relatedServices: ['ppc-nz', 'web-design-nz'],
+      relatedServices: ['digital-marketing-nz', 'website-design-nz'],
       marketing: {
         header: 'SEO NZ',
         subheader: 'Drive traffic to your website with latest SEO practices',
@@ -377,7 +377,7 @@ export const state = () => ({
           { text: 'In 2019, the average number of Google searches is over 191 billion per month. Paid search can raise brand awareness by up to 80%.62% of marketers plan to increase their PPC budgets in 2019. <br/>CTR (Click Through Rate) represents the percentage of people who click on your ad and visit the landing page on your website. So, if 100 people see your advertisement and 10 of them click on it, the CTR is 10 percent. It is essential to have as many of the right customer type clicking on your ad as possible, which means having a good CTR. A high CTR means users are visiting your website. More visits to your site mean more customers. The reward from Google is a lower cost per click for your Ad\'s campaign' }
         ],
       price: { value: 240, unit: 'per month' },
-      relatedServices: ['seo-nz', 'photographer-nz'],
+      relatedServices: ['seo-nz', 'photography-nz'],
       marketing: {
         header: 'Digital Marketing',
         subheader: 'Generate more visits to your site',
@@ -652,7 +652,7 @@ export const state = () => ({
           image: '/imgs/professional-services.svg'
         }
       ],
-      relatedServices: ['web-design-nz'],
+      relatedServices: ['website-design-nz'],
       marketing: {
         header: 'Let us produce cool photos for you',
         subheader: 'Compliment your website',

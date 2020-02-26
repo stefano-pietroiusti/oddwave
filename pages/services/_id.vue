@@ -109,10 +109,10 @@
         />
         <ServicesLinksComponent :services="otherServices" />
       </div>
-      <div class="m-0 pb-5 bg-white">
+      <!-- <div class="m-0 pb-5 bg-white">
         <p id="whyussection" class="p-3" />
         <WhyUsComponent pheader="Why Us?" class="align-self-center" :pfeatures="features" pheaderclass="sectionHeaderPrimary" />
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -131,7 +131,7 @@ import SliderComponent from '@/components/SliderComponent'
 import ServicesLinksComponent from '@/components/ServicesLinksComponent'
 import SectionContactComponent from '@/components/SectionContactComponent'
 import FeaturesComponent from '@/components/FeaturesComponent'
-import WhyUsComponent from '@/components/WhyUsComponent'
+// import WhyUsComponent from '@/components/WhyUsComponent'
 import { mapGetters } from 'vuex'
 import lax from 'lax.js'
 
@@ -149,8 +149,8 @@ export default {
     SliderComponent,
     ServicesLinksComponent,
     SectionContactComponent,
-    FeaturesComponent,
-    WhyUsComponent
+    FeaturesComponent
+    // WhyUsComponent
   },
   head () {
     let content = `${process.env.baseUrl}${this.$route.path}`
@@ -195,7 +195,7 @@ export default {
       'getServiceFeatures'
     ]),
     ...mapGetters('products', ['getProductById', 'getProductsById']),
-    ...mapGetters('client', ['getClientFeatures']),
+    // ...mapGetters('client', ['getClientFeatures']),
     service () {
       const service = this.getServiceById(this.id)
       service.enquire = 'Get in touch'
@@ -211,11 +211,10 @@ export default {
     },
     carouselId () {
       return `${this.id}`
-    },
-    features () {
-      // return this.getServiceFeatures(this.id) || this.getClientFeatures
-      return this.getClientFeatures
     }
+    // features () {
+    //   return this.getClientFeatures
+    // }
   },
   mounted () {
     lax.setup({

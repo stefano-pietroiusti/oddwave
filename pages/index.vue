@@ -27,6 +27,11 @@
       class="align-self-center section"
       :pfeatures="client.features"
     />
+    <SectionImageComponent
+      pheader="How we work"
+      :pcontent="client.clientprocess"
+      class="align-self-center bg-white"
+    />
 
     <!-- <b-container
       fluid
@@ -64,6 +69,7 @@ import HeaderComponentLanding from '@/components/HeaderComponentLanding'
 import ServicesLinksComponent from '@/components/ServicesLinksComponent'
 import SectionComponent from '@/components/SectionComponent'
 import SectionContactComponent from '@/components/SectionContactComponent'
+import SectionImageComponent from '@/components/SectionImageComponent'
 import WhyUsComponent from '@/components/WhyUsComponent'
 import SliderComponent from '@/components/SliderComponent'
 // import TeamComponent from '@/components/TeamComponent'
@@ -77,6 +83,7 @@ export default {
     ServicesLinksComponent,
     SectionComponent,
     SectionContactComponent,
+    SectionImageComponent,
     WhyUsComponent,
     SliderComponent
     // TeamComponent

@@ -161,9 +161,10 @@ export default {
     //   return products
     // },
     logoPath () {
-      return this.ptheme === 'theoddwave'
-        ? require(`~/assets/logos/oddwave-dark.png`)
-        : require(`~/assets/logos/oddwave-light.png`)
+      return require(`~/assets/logos/theoddwave.png`)
+      // return this.ptheme === 'theoddwave'
+      //   ? require(`~/assets/logos/oddwave-dark.png`)
+      //   : require(`~/assets/logos/oddwave-light.png`)
     },
     color () {
       return this.ptheme === 'theoddwave' || this.ptheme === 'contact'

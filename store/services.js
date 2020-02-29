@@ -46,9 +46,10 @@ export const state = () => ({
             header: 'Flexible web hosting',
             text: 'A variety of web hosting solutions are available in terms of Speed, Security, Location and Affordability',
             list: [
-              'Bitbucket -> Greengeeks, A2, Heroku, GitHub',
-              'Bitbucket -> Amazon Web Services (AWS)',
-              'Bitbucket -> Azure Web'
+              'Dedicated hosts',
+              'Google Cloud',
+              'Amazon Web Services (AWS)',
+              'Azure Web'
             ]
           }
         ],
@@ -104,19 +105,31 @@ export const state = () => ({
       description: 'Our PWA store front is ultrafast, offline ready and can be  any eCommerce and CMS platform. PWA eCommerce Has Everything You Need To Start Selling Online Today. Mobile Commerce Ready. Social Media Integration. Full Blogging Platform. Secure Shopping Cart.',
       landing: { header: 'PWA eCommerce', content: 'Ultrafast, offline ready and any platform Progressive Web App. PWA eCommerce Has Everything You Need To Start Selling Online Today. Mobile Commerce Ready. Social Media Integration. Full Blogging Platform. Secure Shopping Cart.' },
       header: 'PWA Store for any backend CMS and eCommerce',
-      businessvalue: 'Goal driven eCommerce for results, quality and trust',
+      businessvalue: 'Goal driven PWA eCommerce for results, quality and trust',
       icon: ['fab', 'dev'],
       // image: "<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='92' height='92' viewBox='0 0 92 92'><defs><style>.b{clip-path:url(#a);}</style><clipPath id='a'><rect width='92' height='92' transform='translate(1488 1485)' /></clipPath></defs><g class='b' transform='translate(-1488 -1485)'><g transform='translate(1488 1485)'><path d='M69.767,0H8.433A7.676,7.676,0,0,0,.767,7.667V56.734a7.667,7.667,0,0,0,5.752,7.424l.767-2.969a4.6,4.6,0,0,1-3.452-4.456V7.667a4.6,4.6,0,0,1,4.6-4.6H69.767a4.6,4.6,0,0,1,4.6,4.6V9.2h3.067V7.667A7.676,7.676,0,0,0,69.767,0Z' /><rect width='3.067' height='3.067' transform='translate(6.9 6.133)' /><rect width='3.067' height='3.067' transform='translate(13.033 6.133)' /><rect width='3.067' height='3.067' transform='translate(19.167 6.133)' /><path d='M90.784,84.783,76.241,70.239a21.207,21.207,0,0,0,1.822-4.306H80.5V62.867H78.722a20.66,20.66,0,0,0-1.288-10.988V36.8H74.367v9.764A21.582,21.582,0,0,0,71.3,43.381V30.667H68.234V41.238a21.325,21.325,0,0,0-3.067-1.464V24.533H62.1V38.843a21.231,21.231,0,0,0-3.067-.431V27.6H55.967V38.412a21.231,21.231,0,0,0-3.067.431V33.733H49.834v6.04a21.335,21.335,0,0,0-3.067,1.464V32.2H43.7V43.381a21.582,21.582,0,0,0-3.067,3.183v-11.3H37.567V51.879a20.66,20.66,0,0,0-1.288,10.988H16.1v3.067H36.938a21.422,21.422,0,0,0,32.881,11.42l14.2,14.2a1.533,1.533,0,0,0,2.168,0l4.6-4.6A1.533,1.533,0,0,0,90.784,84.783ZM57.5,78.2A18.4,18.4,0,1,1,75.9,59.8,18.42,18.42,0,0,1,57.5,78.2ZM85.1,88.3,72.2,75.4a21.724,21.724,0,0,0,2.308-2.556L87.532,85.867Z' /><path d='M57.5,44.467A15.333,15.333,0,1,0,72.834,59.8,15.333,15.333,0,0,0,57.5,44.467Zm0,27.6a12.267,12.267,0,0,1-10.608-6.133H68.108A12.267,12.267,0,0,1,57.5,72.067Zm-11.863-9.2a12.155,12.155,0,0,1,4.2-12.627V59.8H52.9V48.437a12.21,12.21,0,0,1,3.067-.8V59.8h3.067V47.639a12.21,12.21,0,0,1,3.067.8V59.8h3.067V50.24a12.155,12.155,0,0,1,4.2,12.627Z' /><path d='M78.967,12.267H17.633a7.676,7.676,0,0,0-7.667,7.667V69a7.676,7.676,0,0,0,7.667,7.667H37.567V73.6H17.633a4.6,4.6,0,0,1-4.6-4.6V19.933a4.6,4.6,0,0,1,4.6-4.6H78.967a4.6,4.6,0,0,1,4.6,4.6V69a4.6,4.6,0,0,1-1.15,3.042l2.3,2.029A7.657,7.657,0,0,0,86.634,69V19.933A7.676,7.676,0,0,0,78.967,12.267Z' /><rect width='3.067' height='3.067' transform='translate(16.1 18.4)' /><rect width='3.067' height='3.067' transform='translate(22.233 18.4)' /><rect width='3.067' height='3.067' transform='translate(28.367 18.4)' /><rect width='3.067' height='9.2' transform='translate(19.167 50.6)' /><rect width='3.067' height='18.4' transform='translate(25.3 41.4)' /><rect width='3.067' height='13.8' transform='translate(31.433 46)' /></g></g></svg>",
       image: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="92" height="92" viewBox="0 0 92 92"> <defs><style>.b{clip-path:url(#a);}</style> <clipPath id="a"><rect width="92" height="92" transform="translate(1488 1485)" /></clipPath> </defs><g class="b" transform="translate(-1488 -1485)"><g transform="translate(1488 1485)"> <path d="M69.767,0H8.433A7.676,7.676,0,0,0,.767,7.667V56.734a7.667,7.667,0,0,0,5.752,7.424l.767-2.969a4.6,4.6,0,0,1-3.452-4.456V7.667a4.6,4.6,0,0,1,4.6-4.6H69.767a4.6,4.6,0,0,1,4.6,4.6V9.2h3.067V7.667A7.676,7.676,0,0,0,69.767,0Z" /> <rect width="3.067" height="3.067" transform="translate(6.9 6.133)" /><rect width="3.067" height="3.067" transform="translate(13.033 6.133)" /><rect width="3.067" height="3.067" transform="translate(19.167 6.133)" /> <path d="M90.784,84.783,76.241,70.239a21.207,21.207,0,0,0,1.822-4.306H80.5V62.867H78.722a20.66,20.66,0,0,0-1.288-10.988V36.8H74.367v9.764A21.582,21.582,0,0,0,71.3,43.381V30.667H68.234V41.238a21.325,21.325,0,0,0-3.067-1.464V24.533H62.1V38.843a21.231,21.231,0,0,0-3.067-.431V27.6H55.967V38.412a21.231,21.231,0,0,0-3.067.431V33.733H49.834v6.04a21.335,21.335,0,0,0-3.067,1.464V32.2H43.7V43.381a21.582,21.582,0,0,0-3.067,3.183v-11.3H37.567V51.879a20.66,20.66,0,0,0-1.288,10.988H16.1v3.067H36.938a21.422,21.422,0,0,0,32.881,11.42l14.2,14.2a1.533,1.533,0,0,0,2.168,0l4.6-4.6A1.533,1.533,0,0,0,90.784,84.783ZM57.5,78.2A18.4,18.4,0,1,1,75.9,59.8,18.42,18.42,0,0,1,57.5,78.2ZM85.1,88.3,72.2,75.4a21.724,21.724,0,0,0,2.308-2.556L87.532,85.867Z" /><path d="M57.5,44.467A15.333,15.333,0,1,0,72.834,59.8,15.333,15.333,0,0,0,57.5,44.467Zm0,27.6a12.267,12.267,0,0,1-10.608-6.133H68.108A12.267,12.267,0,0,1,57.5,72.067Zm-11.863-9.2a12.155,12.155,0,0,1,4.2-12.627V59.8H52.9V48.437a12.21,12.21,0,0,1,3.067-.8V59.8h3.067V47.639a12.21,12.21,0,0,1,3.067.8V59.8h3.067V50.24a12.155,12.155,0,0,1,4.2,12.627Z" /><path d="M78.967,12.267H17.633a7.676,7.676,0,0,0-7.667,7.667V69a7.676,7.676,0,0,0,7.667,7.667H37.567V73.6H17.633a4.6,4.6,0,0,1-4.6-4.6V19.933a4.6,4.6,0,0,1,4.6-4.6H78.967a4.6,4.6,0,0,1,4.6,4.6V69a4.6,4.6,0,0,1-1.15,3.042l2.3,2.029A7.657,7.657,0,0,0,86.634,69V19.933A7.676,7.676,0,0,0,78.967,12.267Z" /> <rect width="3.067" height="3.067" transform="translate(16.1 18.4)" /> <rect width="3.067" height="3.067" transform="translate(22.233 18.4)" /> <rect width="3.067" height="3.067" transform="translate(28.367 18.4)" /> <rect width="3.067" height="9.2" transform="translate(19.167 50.6)" /> <rect width="3.067" height="18.4" transform="translate(25.3 41.4)" /> <rect width="3.067" height="13.8" transform="translate(31.433 46)" /></g></g> </svg>',
       backgroundImage: { color1: 'rgba(46, 217, 195, 1)', color2: 'rgba(46, 217, 195, 1)', url: 'webdesign.jpg', height: 'auto' },
       headerStyle: { bgStyle: 'text-secondary text-center' },
-      subheader: 'Delight your users, grow engagement, and increase profits by reducing costs and increasing sales with PWA.',
+      subheader: 'Delight your users, grow engagement, and increase profits with PWA.',
       subheaderStyle: { color: 'text-primary', buttonVariant: 'info' },
       content:
         [
           {
-            header: 'WHAT DO YOU GET FROM PWA?',
-            text: "Progressive Web Apps (PWA) are reliable, fast, and engaging, although many things that can take a PWA from a baseline to an exceptional experience. With a PWA, you provide your client's experiences that cover the full reach of the internet and web. Imagine a web solution that is:"
+            header: 'Supercharge your eCommerce with a PWA storefront',
+            text: "It seems like the only way to really win at eCommerce these days is to become part of your customer's lives, but that's for massive retailers with huge marketing budgets and their own developers, right? Not even close! Let's take a look at how we can supercharge your eCommerce or Content Management System with an affordable PWA storefront."
+          },
+          {
+            header: "What's a PWA?",
+            text: "PWA stands for Progressive Web Application, and it's basically an app that isn't an app! It can have all the exciting features of an app such as adaptive content, slick graphics and push notifications, but your customers don't have to download it and you don't have to perform loads of expensive maintenance. The technology is web based, so it doesn't require the user to keep data on their phone and you don't have to design one for every operating system, but it can sit as an icon on their home screen like an app and it also works offline. It's the best of both worlds!"
+          },
+          {
+            header: 'What does it do?',
+            text: "A PWA can do anything that an app can do in terms of content and usability, so your users can tap, swipe and buy just like anything else that you've pushed through your CMS onto a website or traditional app. The sky really is the limit with what you can do, and thanks to our team of friendly designers and tech experts it's all easy and affordable to manage! It's a great way to do everything from increasing sales and conversions to better reviews, more eyeballs on your products and all the best in flexibility and SEO performance. "
+          },
+          {
+            header: 'What do you get from PWA?',
+            text: "PWAs are reliable, fast, and engaging, although many things that can take a PWA from a baseline to an exceptional experience. With a PWA, you provide your client's experiences that cover the full reach of the internet and web. Imagine a web solution that is:"
           },
           {
             text: 'A variety of web hosting solutions are available in terms of Speed, Security, Location and Affordability',
@@ -130,7 +143,7 @@ export const state = () => ({
             text: 'The level of quality deservedly earns a place on a client’s home screen or desktop.'
           },
           {
-            header: 'STAY WITH YOUR CLIENTS',
+            header: 'Stay with your clients',
             text: 'Think of a PWA as a web solution (website or web application) that wants to click and stick with a visitor regardless of location, device, and network connectivity. '
           },
           {
@@ -141,28 +154,33 @@ export const state = () => ({
           },
           {
             text: 'The PWA provides a continuous, meaningful experience both online and offline and will indicate whether it is offline, so users know that their interactions are not lost but will instead be remembered for when they’re next online. '
+          },
+          {
+            header: 'What can you do?',
+            text: "We're a team of technology specialists in Auckland, NZ and we're passionate about helping businesses grow quickly and sustainably. We love technology like PWAs because it can help a small business do a huge amount without breaking the bank, and backed by our expertise in software design and eCommerce we can also help you tweak and change it to get the absolute most out your solution. There are also all kinds of extra features like voice recognition and elastic search that can help you fill any niche you'd like to target, so there are no limits to your ambition!"
+          },
+          {
+            text: "If you like the sound of PWAs and you think you might be able to use them to take your business to the next level, get in touch with our friendly team and we'll take that next step together!"
           }
         ],
       features: [
         {
-          header: 'Ultra-fast',
-          // text: 'Solutions that load instantly',
+          header: 'Ultra-fast, loads instantly',
           icon: ['fas', 'mobile-alt'],
           image: '/imgs/best-web-design.svg'
         },
         {
           header: 'Offline-ready',
-          // text: 'Solutions that load instantly',
           icon: ['fas', 'mobile-alt'],
           image: '/imgs/best-web-design.svg'
         },
         {
-          header: 'Reducing Cost',
+          header: 'Reduces Cost',
           icon: ['fas', 'mobile-alt'],
           image: '/imgs/best-web-design.svg'
         },
         {
-          header: 'Increasing conversions',
+          header: 'Increases conversions',
           icon: ['fas', 'mobile-alt'],
           image: '/imgs/best-web-design.svg'
         }
@@ -208,10 +226,10 @@ export const state = () => ({
         {
           header: 'We specialize in:',
           list: [
-            'Modern, Development, Integration, Automation and Data Engineering (Java, Javascript, Vue.js, Node.js, Headless CMSes with GraphQL API, Powerful APIs, PWA Ecommerce, Azure Web Apps, Small Library Sizes, Great Performance)',
-            'Data (SQLite, SQL, PosgresSQL, MySQL, MongoDB,  CosmosDB, Excel, Qlikview, PowerBI, Headless CMSes)',
-            'Cloud Services (Azure, AWS, Google)',
-            'Business Solutions (Xero, Office 365, Google Suite)'],
+            'Modern Development, Integration, Automation and Data Engineering',
+            'Headless CMS & Content as a Service, PWA Ecommerce, REST APIs, GraphQL APIs',
+            'Data Management & Analysis',
+            'Cloud Services (Azure, AWS, Google)'],
           icon: ['fab', 'servicestack']
         }
         ],

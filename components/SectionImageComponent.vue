@@ -11,7 +11,7 @@
     </b-row>
     <b-row>
       <!-- <b-col lg="2" /> -->
-      <b-col lg="12" class="px-lg-10">
+      <b-col lg="12" class="px-lg-10 text-center">
         <span class="text-medium" v-html="content" />
       </b-col>
     </b-row>

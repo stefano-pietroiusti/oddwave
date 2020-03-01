@@ -159,7 +159,7 @@ export const state = () => ({
     services: 'Our domain knowledge, skills and experiences <b>cover the full spectrum of online business from backend to frontend</b> and what customers interact with on the internet.',
     // "Leverage exceptional benefits of <b>PWA for any eCommerce and headless CMS</b>. <b>Update, manage and distribute your website content from anywhere to anywhere</b>. Our eCommerce solution is an awesome ecommerce app that <b>works on all devices, platforms, online and offline</b>, and it empowers retailers both large and small with an <b>easy-to-use, easy-to-manage</b>, customizable online store and secure checkout. We give you control to add products, manage your inventory, manage your shop content and more. It’s <b>hassle-free ecommerce</b>, letting you focus on improving other parts of your business.',
     businessvalue: 'Get in touch to learn more about how we can help you grow your business with us.',
-    clientprocess: "<img src='/imgs/company/theoddwave-client-process.png' alt='How we deliver?' text='How we deliver?' style='width:90%' />",
+    clientprocess: "<img src='/imgs/company/theoddwave-client-process.png' alt='How we deliver?' text='How we deliver?' />",
     fb: 'https://www.facebook.com/theoddwave',
     instagram: 'https://www.instagram.com/theoddwavenz/',
     linkedin: 'https://www.linkedin.com/company/the-odd-wave-ltd/',

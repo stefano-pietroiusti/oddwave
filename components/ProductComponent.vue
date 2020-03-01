@@ -57,7 +57,7 @@
           <ButtonComponent
             btext="Free consultation"
             pvariant="outline-black"
-            blink="/contact/"
+            blink="/contact-theoddwave-nz/"
           />
         </span>
       </b-col>

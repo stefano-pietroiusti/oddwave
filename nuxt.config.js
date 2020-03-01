@@ -24,41 +24,41 @@ https://theoddwave.co.nz/products/website-digital-photo-24/
 https://theoddwave.co.nz/products/website-digital-photo-100/
 https://theoddwave.co.nz/products/film-photography-nz/
 https://theoddwave.co.nz/products/consulting-nz/
-https://theoddwave.co.nz/contact/
+https://theoddwave.co.nz/contact-theoddwave-nz/
 */
 
-const dynamicRoutes = async () => {
-  const res =  await axios.get('https://deliver.kontent.ai/d09c9569-7021-0070-d917-10246623ee2e/items')
-  const routes =  [].concat(...res.data.items.map(({ elements }) => '/blog-articles/' +  elements.url.value + '/' || []))
-  console.log(routes)
-  return routes
-    // return res.data.items.map(({ elements }) => {
-    //   return '/blog-articles/' +  elements.url.value + '/'
-    // })
-}
+// const dynamicRoutes = async () => {
+//   const res =  await axios.get('https://deliver.kontent.ai/d09c9569-7021-0070-d917-10246623ee2e/items')
+//   const routes =  [].concat(...res.data.items.map(({ elements }) => '/blog-articles/' +  elements.url.value + '/' || []))
+//   console.log(routes)
+//   return routes
+//     // return res.data.items.map(({ elements }) => {
+//     //   return '/blog-articles/' +  elements.url.value + '/'
+//     // })
+// }
 
 const routes = [
+  '/services/website-design-nz/',
+  '/services/pwa-ecommerce-nz/',
+  '/services/software-engineering-nz/',
   '/services/seo-nz/',
+  '/services/digital-marketing-nz/',
   '/services/sentiment-analysis-nz/',
   '/services/reputation-management-nz/',
-  '/services/ppc-nz/',
-  '/services/web-design-nz/',
-  '/services/pwa-progressive-web-apps-nz/',
-  '/services/photographer-nz/',
-  '/services/contracting-nz/',
-  '/products/pro-business-website-landing/',
-  '/products/pro-business-website/',
-  '/products/pwa-headless-cms/',
-  '/products/pwa-eCommerce/',
-  '/products/seo-website-package-1/',
-  '/products/seo-website-package-5/',
-  '/products/seo-website-package-10/',
-  '/products/seo-website-package-20/',
-  '/products/website-digital-photo-24/',
-  '/products/website-digital-photo-100/',
-  '/products/film-photography-nz/',
-  '/products/creating-solutions-nz/',
-  '/products/technical-support-nz/'
+  '/services/photography-nz/'
+  // '/products/pro-business-website-landing/',
+  // '/products/pro-business-website/',
+  // '/products/pwa-headless-cms/',
+  // '/products/pwa-eCommerce/',
+  // '/products/seo-website-package-1/',
+  // '/products/seo-website-package-5/',
+  // '/products/seo-website-package-10/',
+  // '/products/seo-website-package-20/',
+  // '/products/website-digital-photo-24/',
+  // '/products/website-digital-photo-100/',
+  // '/products/film-photography-nz/',
+  // '/products/creating-solutions-nz/',
+  // '/products/technical-support-nz/'
 ]
 
 const baseUrl = process.env.BASE_URL || 'http://localhost:3000'
@@ -168,11 +168,30 @@ export default {
     ['@nuxtjs/google-analytics', {
       id: 'UA-148813087-1'
     }],
+    '@nuxtjs/google-gtag',
     'kentico-kontent-nuxt-module'
     // ['@nuxtjs/google-tag-manager', {
     //   id: 'GTM-PJ4J4WD'
     // }]
   ],
+  'google-gtag': {
+    id: 'UA-148813087-1',
+    config: {
+      anonymize_ip: true, // anonymize IP 
+      send_page_view: false, // might be necessary to avoid duplicated page track on page reload
+      linker: {
+        domains: ['theoddwave.co.nz','theoddwave.nz']
+      }
+    },
+    debug: false, // enable to track in dev mode
+    disableAutoPageTrack: true, // disable if you don't want to track each page route with router.afterEach(...).
+    additionalAccounts: [{
+      id: 'AW-706272574', // required if you are adding additional accounts
+      config: {
+        send_page_view: true // optional configurations
+      }
+    }]
+  },
   kenticokontent: {
     projectId: 'd09c9569-7021-0070-d917-10246623ee2e',
     enableAdvancedLogging: false,
@@ -224,15 +243,6 @@ export default {
   },
   robots: {
     UserAgent: '*',
-    // Disallow: '',
-    // Disallow: '/services/website-design-build-auckland/',
-    // Disallow: '/services/pwa-website-design-auckland/',
-    // Disallow: '/services/photography-auckland/',
-    // Disallow: '/services/seo',
-    // Disallow: '/services/webdesign/',
-    // Disallow: '/services/ppc/',
-    // Disallow: '/services/photography/',
-    // Disallow: '/services/creative-photographer-auckland/',
     Disallow: [
       '/services/website-design-auckland/',
       '/services/website-design-build-auckland/',
@@ -244,7 +254,12 @@ export default {
       '/services/seo/',
       '/services/webdesign/',
       '/services/photography/',
-      '/services/creative-photographer-auckland/'
+      '/services/creative-photographer-auckland/',
+      '/services/ppc-nz/',
+      '/services/web-design-nz/',
+      '/services/pwa-progressive-web-apps-nz/',
+      '/services/photographer-nz/',
+      '/services/contracting-nz/'
     ],
     Sitemap: baseUrl + '/sitemap.xml'
   },

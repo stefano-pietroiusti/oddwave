@@ -1,98 +1,57 @@
 <template>
-  <b-container id="mainContainer" fluid class="text-left p-0 m-0 bgsteelblue">
+  <div id="aboutMainContainer">
     <Nav id="navbar" class="container-fluid" :ptheme="theme" />
-    <b-container fluid class="m-0 p-0 clip-wave-bottom" :style="gradient">
-      <div class="module resetFilter" style="top:20%;">
-        <div class="module-inside resetFilter" style="min-height: 80vh;">
-          <HeaderComponentLanding :pheader="client.subheader" :psubtitle="client.subtitle" />
-        </div>
-      </div>
-    </b-container>
-
-    <SectionContactComponent
-      pheader="Let our creative solutions build a path to success for your business"
-      :pcontent="client.marketing"
-      class="align-self-center"
+    <HeaderComponent
+      pheader="About us"
+      psubheader="We make the complex simple."
+      psubtitle="We’re specialists at finding and using the right technology to help you grow your business."
+      pcontainerclass="mt-7 mb-5 borderLeft"
     />
 
-    <SectionComponent
-      pheader="Services"
-      :pcontent="client.services"
-      class="align-self-center section bg-white"
-    />
+    <SectionComponent pheader="About Us" :pcontent="client.about" class="align-self-center" />
+    <TeamComponent pheader="Led by" :pteam="team" class="align-self-center" />
 
-    <ServicesLinksComponent class="bg-white pb-5 text-center" :services="summaries" />
-    <WhyUsComponent
-      pheader="Why Us?"
+    <SectionComponent pheader="What's In The Name?" :pcontent="client.history" class="align-self-center" />
+
+    <!-- <WhyUsComponent
+      pheader="What makes us different?"
       class="align-self-center section"
       :pfeatures="client.features"
-    />
-    <SectionImageComponent
-      pheader="How we work"
-      :pcontent="client.clientprocess"
-      class="align-self-center bg-white"
-    />
-
-    <!-- <b-container
-      fluid
-      class="text-primary rellaximage rellaxwatermark rellax"
-    >
-      I’m that default chill speed of "-2"
-    </b-container>
-    <b-container fluid class="text-primary rellax" data-rellax-speed="-4">
-      I’m extra slow and smooth
-    </b-container>
-    <b-container
-      fluid
-      class="text-primary rellax"
-      data-rellax-speed="3"
-      data-rellax-zindex="10"
-    >
-      I’m super fast!!
-    </b-container>
-    -->
-
-    <SliderComponent :products="featuredProducts" />
+    /> -->
 
     <SectionContactComponent
       pheader="Partner with us"
       :pcontent="client.businessvalue"
       class="align-self-center services bg-white"
     />
-  </b-container>
+  </div>
 </template>
 
 <script>
 // import Rellax from 'rellax'
 import Nav from '@/components/Nav'
-import HeaderComponentLanding from '@/components/HeaderComponentLanding'
-import ServicesLinksComponent from '@/components/ServicesLinksComponent'
+import HeaderComponent from '@/components/HeaderComponent'
 import SectionComponent from '@/components/SectionComponent'
 import SectionContactComponent from '@/components/SectionContactComponent'
-import SectionImageComponent from '@/components/SectionImageComponent'
-import WhyUsComponent from '@/components/WhyUsComponent'
-import SliderComponent from '@/components/SliderComponent'
-// import TeamComponent from '@/components/TeamComponent'
+// import WhyUsComponent from '@/components/WhyUsComponent'
+import TeamComponent from '@/components/TeamComponent'
 import lax from 'lax.js'
 import { mapGetters } from 'vuex'
 
 export default {
   components: {
     Nav,
-    HeaderComponentLanding,
-    ServicesLinksComponent,
+    HeaderComponent,
     SectionComponent,
     SectionContactComponent,
-    SectionImageComponent,
-    WhyUsComponent,
-    SliderComponent
-    // TeamComponent
+    // WhyUsComponent,
+    TeamComponent
   },
   head () {
     let content = `${process.env.baseUrl}${this.$route.path}`
     content = content.slice(-1) !== '/' ? content + '/' : content
     return {
-      title: this.client.title,
+      title: 'About ' + this.client.name,
       meta: [
         {
           hid: 'og:url',
@@ -102,17 +61,17 @@ export default {
         {
           hid: 'og:title',
           name: 'og:title',
-          content: this.client.title
+          content: 'About ' + this.client.name
         },
         {
           hid: 'og:description',
           name: 'og:description',
-          content: this.client.description
+          content: 'Learn more about  ' + this.client.name + ', our backgrounds and mission.' + this.client.description
         },
         {
           hid: 'description',
           name: 'description',
-          content: this.client.description
+          content: 'Learn more about ' + this.client.name + ', our backgrounds and mission.' + this.client.description
         }
         // {
         //   hid: 'keywords',
@@ -135,20 +94,20 @@ export default {
         url: 'laptop.jpg',
         height: '20vh'
       },
-      theme: 'theoddwave'
+      theme: 'contact'
     }
   },
   computed: {
     ...mapGetters('services', ['summaries']),
-    ...mapGetters('products', ['getProductById', 'getFeaturedProducts']),
+    // ...mapGetters('products', ['getProductById', 'getFeaturedProducts']),
     ...mapGetters('client', ['getClient']),
     client () {
       return this.getClient
     },
-    featuredProducts () {
-      const products = this.getFeaturedProducts()
-      return products
-    },
+    // featuredProducts () {
+    //   const products = this.getFeaturedProducts()
+    //   return products
+    // },
     jsonld () {
       if (!this.client) {
         return null
@@ -271,6 +230,16 @@ export default {
 }
 </script>
 <style scoped lang="scss">
+
+#aboutMainContainer {
+  background: transparent;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .testbackground {
   background: rgba($color: black, $alpha: 0.1);
 }

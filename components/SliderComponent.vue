@@ -13,7 +13,7 @@
       <no-ssr>
         <swiper :options="swiperOption" class="swiper-container mx-auto">
           <swiper-slide v-for="(item, i) in products" :key="i" class="swiper-slide">
-            <nuxt-link :to="`/contact/`" :title="`${item.header}`" class="productLink">
+            <nuxt-link :to="`/contact-theoddwave-nz/`" :title="`${item.header}`" class="productLink">
               <b-card no-body class="text-white bg-primary h-100">
                 <b-card-body>
                   <h2 v-if="item.price" class="text-medium">
@@ -225,20 +225,5 @@ export default {
 .swiper-button-next:hover {
   opacity: 1;
 }
-// .swiper-pagination-bullet {
-//  display: inline-block;
-//   width: 20px;
-//   height: 20px;
-//   text-align: center;
-//   line-height: 20px;
-//   font-size: 10px;
-//   color: #000;
-//   opacity: 1;
-//   background: rgba(0, 0, 0, 1);
-// }
 
-// .swiper-pagination-bullet-active {
-//   color: #fff;
-//   background: #007aff;
-// }
 </style>

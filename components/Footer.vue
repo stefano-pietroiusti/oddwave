@@ -9,7 +9,7 @@
       </b-row>
 
       <b-row>
-        <b-col xs="12" sm="12" md="6" lg="6">
+        <b-col xs="12" sm="12" md="6" lg="6" class="text-small">
           <h2 class="pt-5">
             Contact Us
           </h2>
@@ -65,7 +65,7 @@
             </li>
           </ul>
         </b-col>
-        <b-col>
+        <!-- <b-col>
           <h2 class="pt-5">
             Pricing
           </h2>
@@ -76,7 +76,7 @@
               </nuxt-link>
             </li>
           </ul>
-        </b-col>
+        </b-col> -->
       </b-row>
       <b-row>
         <b-col class="clearfix" />
@@ -95,22 +95,22 @@ export default {
     return {
       standardNav: [
         { value: '/', text: 'Home' },
-        { value: '/contact/', text: 'Contact us' }
+        { value: '/contact-theoddwave-nz/', text: 'Contact us' }
       ]
     }
   },
   computed: {
     ...mapGetters('services', ['serviceLinks']),
-    ...mapGetters('products', ['productLinks']),
+    // ...mapGetters('products', ['productLinks']),
     ...mapGetters('client', ['getClient']),
     services () {
       const services = this.serviceLinks
       return services
     },
-    products () {
-      const products = this.productLinks
-      return products
-    },
+    // products () {
+    //   const products = this.productLinks
+    //   return products
+    // },
     contactInfo () {
       const client = this.getClient
       return client

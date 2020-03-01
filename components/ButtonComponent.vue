@@ -27,7 +27,7 @@ export default {
     },
     blink: {
       type: String,
-      default: '/contact/'
+      default: '/contact-theoddwave-nz/'
     },
     pvariant: {
       type: String,

@@ -2,15 +2,15 @@
 <template>
   <b-container fluid>
     <b-row>
-      <b-col xs="12" sm="12" md="12" lg="3" />
-      <b-col xs="12" sm="12" md="12" lg="1" class="p-5 text-nowrap align-items-center">
+      <!-- <b-col xs="12" sm="12" md="12" lg="3" /> -->
+      <b-col xs="12" sm="12" md="12" lg="6" class="p-5 text-nowrap align-items-center">
         <h2>{{ header }}</h2>
         <!-- <div class="underline" /> -->
       </b-col>
       <b-col xs="12" sm="12" md="12" lg="6" class="p-5 text-left ">
         <span class="text-medium" v-html="content" />
       </b-col>
-      <b-col xs="12" sm="12" md="12" lg="1" />
+      <!-- <b-col xs="12" sm="12" md="12" lg="1" /> -->
     </b-row>
   </b-container>
 </template>

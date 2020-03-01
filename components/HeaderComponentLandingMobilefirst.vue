@@ -41,7 +41,7 @@
             <b-button
               pill
               variant="secondary"
-              to="/contact/"
+              to="/contact-theoddwave-nz/"
               class="buttonComponent letter-spacing  m-2 animated pulse delay-1s"
             >
               free consultation

@@ -2,7 +2,6 @@
 <template>
   <div id="blogContainer">
     <Nav id="navbar" class="container-fluid" :ptheme="theme" />
-
     <b-container
       fluid
       :style="gradient"
@@ -25,7 +24,7 @@
       <div v-html="item.elements.body.value" />
     </section> -->
 
-    <b-container fluid>
+    <b-container>
       <b-row>
         <b-col cols="2">
           <p>
@@ -42,7 +41,7 @@
         </b-col>
 
         <b-col cols="10">
-          <div id="listgroup-ex" style="position:relative; overflow-y:auto; height:70%">
+          <div id="listgroup-ex" style="position:relative; overflow-y:auto; height:90%">
             <section
               v-for="item in $store.state.articles.posts"
               :key="item.elements.url.value"
@@ -57,22 +56,22 @@
         </b-col>
       </b-row>
     </b-container>
-    <div class="m-0 pb-5 bg-transparent">
+    <!-- <div class="m-0 pb-5 bg-transparent">
       <p id="whyussection" class="p-3" />
       <WhyUsComponent pheader="Why Us?" class="align-self-center" :pfeatures="features" />
-    </div>
+    </div> -->
   </div>
 </template>
 <script>
 import Nav from '@/components/Nav'
 import HeaderComponent from '@/components/HeaderComponent'
-import WhyUsComponent from '@/components/WhyUsComponent'
+// import WhyUsComponent from '@/components/WhyUsComponent'
 import { mapGetters } from 'vuex'
 export default {
   components: {
     Nav,
-    HeaderComponent,
-    WhyUsComponent
+    HeaderComponent
+    // WhyUsComponent
   },
   head () {
     let content = `${process.env.baseUrl}${this.$route.path}`
@@ -131,11 +130,11 @@ export default {
   },
   computed: {
     ...mapGetters('products', ['getPoductPortfolios']),
-    ...mapGetters('client', ['getClientFeatures']),
+    // ...mapGetters('client', ['getClientFeatures']),
     ...mapGetters('articles', ['getPosts']),
-    features () {
-      return this.getClientFeatures
-    },
+    // features () {
+    //   return this.getClientFeatures
+    // },
     posts () {
       return this.getPosts
     },

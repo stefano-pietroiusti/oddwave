@@ -1,13 +1,13 @@
 <template>
   <div id="contactMainContainer">
     <Nav id="navbar" class="container-fluid" :ptheme="theme" />
-    <b-container
+    <!-- <b-container
       fluid
       :style="gradient"
-      class="contactBackground text-medium align-items-center text-center"
+      class="contactBackground text-small align-items-center text-center"
     >
       <p class="watermark" />
-    </b-container>
+    </b-container> -->
 
     <HeaderComponent
       pheader="Have a project or idea? Drop us a line. "
@@ -15,24 +15,18 @@
       pcontainerclass="mt-7 mb-5 borderLeft"
     />
     <ContactForm :pservices="servicesDropDown" :pbgimage="backgroundImage" :pstyle="style" />
-    <div class="m-0 pb-5 bg-transparent">
-      <p id="whyussection" />
-      <WhyUsComponent pheader="Why Us?" class="align-self-center" :pfeatures="features" />
-    </div>
   </div>
 </template>
 <script>
 import Nav from '@/components/Nav'
 import HeaderComponent from '@/components/HeaderComponent'
 import ContactForm from '@/components/ContactForm'
-import WhyUsComponent from '@/components/WhyUsComponent'
 import { mapGetters } from 'vuex'
 export default {
   components: {
     Nav,
     HeaderComponent,
-    ContactForm,
-    WhyUsComponent
+    ContactForm
   },
   head () {
     let content = `${process.env.baseUrl}${this.$route.path}`
@@ -95,15 +89,10 @@ export default {
   },
   computed: {
     ...mapGetters('services', ['summaries']),
-    ...mapGetters('client', ['getClientFeatures']),
     servicesDropDown () {
       return this.summaries.map((item) => {
         return { value: item.id, text: item.title, selected: true }
       })
-    },
-    features () {
-      // return this.getServiceFeatures(this.id) || this.getClientFeatures
-      return this.getClientFeatures
     },
     bannerImagePath () {
       if (!this.backgroundurl) {
@@ -128,23 +117,8 @@ export default {
     }
   },
   mounted () {
-    // console.log('route: ', this.$route.name)
-    // console.log('theme: ', this.theme)
     this.$ga.page(this.$route.path)
-    // window.addEventListener('scroll', function () {
-    //   const navbar = document.getElementById('navbar')
-    //   const navClasses = navbar.classList
-    //   console.log('navClasses: ', navClasses)
-    //   if (window.documentElement.scrollTop >= 150) {
-    //     if (navClasses.contains(this.theme) === false) {
-    //       navClasses.toggle(this.theme)
-    //     }
-    //   } else if (navClasses.contains(this.theme) === true) {
-    //     navClasses.toggle(this.theme)
-    //   }
-    // })
   }
-
 }
 </script>
 <style scoped>

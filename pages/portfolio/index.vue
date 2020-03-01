@@ -11,7 +11,7 @@
     <HeaderComponent
       pheader="Portfolio"
       psubheader="Because First impressions matter. "
-      psubtitle="We work with you to create a beautiful websites whether you're selling products, services, software or expertise. Watch this space :)"
+      psubtitle="We work with you to create beautiful websites whether you're selling products, services, software or expertise. Watch this space :)"
       pcontainerclass="mt-7 mb-5 borderLeft"
     />
     <b-container v-if="productPortfolios" fluid class="w-100">
@@ -47,23 +47,16 @@
         </b-col>
       </b-row>
     </b-container>
-
-    <div class="m-0 pb-5 bg-transparent">
-      <p id="whyussection" class="p-3" />
-      <WhyUsComponent pheader="Why Us?" class="align-self-center" :pfeatures="features" />
-    </div>
   </div>
 </template>
 <script>
 import Nav from '@/components/Nav'
 import HeaderComponent from '@/components/HeaderComponent'
-import WhyUsComponent from '@/components/WhyUsComponent'
 import { mapGetters } from 'vuex'
 export default {
   components: {
     Nav,
-    HeaderComponent,
-    WhyUsComponent
+    HeaderComponent
   },
   head () {
     let content = `${process.env.baseUrl}${this.$route.path}`
@@ -121,10 +114,10 @@ export default {
   },
   computed: {
     ...mapGetters('products', ['getPoductPortfolios']),
-    ...mapGetters('client', ['getClientFeatures']),
-    features () {
-      return this.getClientFeatures
-    },
+    // ...mapGetters('client', ['getClientFeatures']),
+    // features () {
+    //   return this.getClientFeatures
+    // },
     productPortfolios () {
       return this.getPoductPortfolios
     },

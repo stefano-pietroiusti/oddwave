@@ -37,7 +37,9 @@
         <b-nav-item to="/" exact exact-active-class="underline">
           Home
         </b-nav-item>
-
+        <b-nav-item to="/about-theoddwave-nz/" exact exact-active-class="underline">
+          About us
+        </b-nav-item>
         <b-nav-item-dropdown
           text="Services"
           :extra-toggle-classes="this.$route.name === 'services-id' ? 'activeClassServicesProducts' : ''"
@@ -55,7 +57,7 @@
             <!-- <b-dropdown-divider /> -->
           </b-dropdown-item>
         </b-nav-item-dropdown>
-        <b-nav-item-dropdown
+        <!-- <b-nav-item-dropdown
           text="Pricing"
           exact
           :extra-toggle-classes="this.$route.name === 'products-id' ? 'activeClassServicesProducts' : ''"
@@ -71,14 +73,15 @@
           >
             {{ item.title }}
           </b-dropdown-item>
-        </b-nav-item-dropdown>
+        </b-nav-item-dropdown> -->
+
         <b-nav-item to="/portfolio/" exact exact-active-class="underline">
           Portfolio
         </b-nav-item>
         <b-nav-item to="/blog-articles/" exact exact-active-class="underline">
           Blog
         </b-nav-item>
-        <b-nav-item to="/contact/" exact exact-active-class="underline">
+        <b-nav-item to="/contact-theoddwave-nz/" exact exact-active-class="underline">
           Contact us
         </b-nav-item>
         <div id="content-desktop" class="pl-5">
@@ -97,10 +100,11 @@
           <b-button
             pill
             variant="rwcblue"
-            href="#whyussection"
-            class="px-3 whyusbutton justify-content-center animated pulse delay-1s text-white text-medium"
+            class="px-3 whyusbutton justify-content-center animated pulse delay-1s text-white"
           >
-            Why Us?
+            <nuxt-link :to="{ path: '/',hash:'#whyussection'}" class="text-white text-medium">
+              Why Us?
+            </nuxt-link>
           </b-button>
         </div>
       </b-navbar-nav>
@@ -140,7 +144,7 @@ export default {
   },
   computed: {
     ...mapGetters('services', ['serviceLinks']),
-    ...mapGetters('products', ['productLinks']),
+    // ...mapGetters('products', ['productLinks']),
     ...mapGetters('client', ['getClient']),
     callAction () {
       return {
@@ -152,14 +156,15 @@ export default {
       const services = this.serviceLinks
       return services
     },
-    products () {
-      const products = this.productLinks
-      return products
-    },
+    // products () {
+    //   const products = this.productLinks
+    //   return products
+    // },
     logoPath () {
-      return this.ptheme === 'theoddwave'
-        ? require(`~/assets/logos/oddwave-dark.png`)
-        : require(`~/assets/logos/oddwave-light.png`)
+      return require(`~/assets/logos/theoddwave.png`)
+      // return this.ptheme === 'theoddwave'
+      //   ? require(`~/assets/logos/oddwave-dark.png`)
+      //   : require(`~/assets/logos/oddwave-light.png`)
     },
     color () {
       return this.ptheme === 'theoddwave' || this.ptheme === 'contact'

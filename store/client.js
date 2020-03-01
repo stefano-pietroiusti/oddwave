@@ -20,43 +20,42 @@ export const state = () => ({
       'longitude': 174.734479
     },
     title:
-      'NZ Website Design Company - North Shore Auckland Digital Marketing (Online)',
+      'Custom Website Design, PWA eCommerce, Digital Marketing | The Odd Wave, North Shore, Auckland, NZ',
     description:
-      'New Zealand website design company; providing digital marketing services to grow your business. Based in North Shore, Auckland NZ we build your website and promote it online.',
-    header: 'WEBSITE DESIGN, DATA & DIGITAL MARKETING',
-    subheader: 'CUSTOM WEBSITE DESIGN & DIGITAL MARKETING',
+      "The Odd Wave Ltd is New Zealand's modern technology company that provides custom Website Design, PWA eCommerce and Digital Marketing solutions to increase sales and grow your business online. Partner with us today for you vNext website.",
+    header: 'Custom Website Design, PWA eCommerce & Digital Marketing',
+    subheader: 'CUSTOM WEBSITE DESIGN, PWA eCOMMERCE & DIGITAL MARKETING',
     subtitle:
-      'We provide custom website design and digital marketing services to grow your business. Based in North Shore, Auckland NZ we build your website and promote it online.',
+      "We provide custom <a href='/services/website-design-nz/' title='Website design'>website design</a>, <a href='/services/pwa-ecommerce-nz/' title='PWA eCommerce'>PWA eCommerce</a> and <a href='/services/digital-marketing-nz/' title='Digital marketing'>digital marketing</a> services to grow your business. Based on the North Shore, Auckland, NZ, we can build your website and promote it online.",
     featuresHeader: 'Why us?',
     features: [
       {
-        header: 'Responsive User First Website Design',
+        header: 'Continuous Quality Assurance',
         text:
-          'We follow a purpose driven user-oriented website design approach that makes our websites and web applications eye cathcing , creative and usable by anyone on any device.',
+          "We don't just develop, deliver and leave you to it. We take projects from beginning to end and then stay with you to help grow your business with our solutions.",
+        icon: ['fab', 'servicestack'],
+        image: '/imgs/web-dev.svg'
+      },
+      {
+        header: 'Simplifying complexity',
+        text:
+          'We combine our services and custom development and integration with proven open source technologies, microservices, APIs and platforms to make the complex simple and to maximise return on investment.',
+        icon: ['fas', 'chart-line'],
+        image: '/imgs/web-content-search.svg'
+      },
+      {
+        header: 'User First Design',
+        text:
+          'First impressions count which is why we follow goal-driven user-oriented design principles that make our solutions, websites and web applications quick, responsive, eye catching, usable by anyone on any device and worth the investment.',
         icon: ['fas', 'mobile-alt'],
         image: '/imgs/mobile-first.svg'
       },
       {
-        header: 'Websites with A+ Google audit score',
+        header: 'A+ Google audit score',
         text:
-          "We continuously test and audit our websites using Google's recommended open source tools to achieve an A+ scores in performance, accessibility, best practices & SEO. ",
+          'We continuously test and audit our websites to ensure A+ Google Lighthouse scores in performance, accessibility, best practices & SEO. All content is SEO Optimised with the right keywords for your business, products and market.',
         icon: ['fas', 'users'],
         image: '/imgs/best-web-design.svg'
-      },
-      {
-        header: 'SEO Friendly Content Writing',
-        text:
-          'We assist with SEO friendly content writing for websites and blog writing to boost rankings. All writing is SEO Optimised with keywords required for your website.',
-        icon: ['fas', 'chart-line'],
-        image: '/imgs/web-content-search.svg'
-      },
-
-      {
-        header: 'Custom Web Development',
-        text:
-          'No templated websites just custom web development using established open source frameworks with our HTML, CSS & javascript expertise developing websites that are quick, responsive and user friendly.',
-        icon: ['fab', 'servicestack'],
-        image: '/imgs/web-dev.svg'
       }
     ],
     content: [
@@ -83,7 +82,7 @@ export const state = () => ({
           "We're based in Torbay, North Shore, Auckland, and are here to help everyone in New Zealand."
       }
     ],
-    name: 'The Odd Wave Digital - Websites & Digital Marketing',
+    name: 'The Odd Wave - Custom Website Design, PWA eCommerce, Digital Marketing',
     legalName: 'The Odd Wave Ltd',
     category: ['Internet Marketing', 'Website Designer'],
     email: 'team@theoddwave.co.nz',
@@ -100,7 +99,7 @@ export const state = () => ({
       name: 'Jaline Van Dyk',
       jobTitle: 'Owner',
       description: '15+ years experience software development, digital marketing & management.',
-      image: '/imgs/stefano-pietroiusti.jpg',
+      image: '/imgs/jaline-vandyk.jpg',
       sameAs: [
         'https://www.linkedin.com/in/jaline-pietroiusti-ab354b56'
       ]
@@ -111,7 +110,7 @@ export const state = () => ({
         `${process.env.author}`
       ],
       jobTitle: 'Technical Lead',
-      description: 'Experienced IT generalist and tech enthusiast with 20+ years experience across web, data, cloud, search & mentoring.',
+      description: 'Experienced IT generalist and tech enthusiast with 20+ years IT experience across web, data, cloud, search & mentoring.',
       image: '/imgs/stefano-pietroiusti.jpg'
     }
     ],
@@ -154,10 +153,13 @@ export const state = () => ({
     priceRange: '$$',
     copyright: '© 2019 Copyright The Odd Wave',
     poweredBy: 'powered by The Odd Wave suite of web technologies',
-    marketing: 'Are you an NZ business looking to increase profits via online services? Are you wondering if creating or improving your website is worth the investment? <br><br>Every business should not only have a website, but they should be thoughtful and careful to have a quality, user-friendly website with positive ROI. Ultimately, you want your website to offer a positive experience for your customer and have it help to drive your business forward.<br><br>Working with a professional website design team can help your business not only look at the big picture for website design but also all the details that are a part of a quality site.<br><br>Contact us today about building your business website. We would love to help you create a quality website to meet your business needs.',
-    about: 'The Odd Wave is a creative Digital Marketing and Website Design company, passionate about modern technology that we use to propel small to medium size businesses to success. Our Mission is to assist local businesses with digital transformation by delivering an impactful online presence backed by our digital marketing expertise with round the clock support.',
-    services: 'We offer a range of web solutions and services to help your business thrive in this rapidly changing digital world. Website Design, Web Development, Software Engineering, SEO, Online Reputation Management ,Digital Marketing and Data Analysis to <b>drive the right traffic</b> to your online business,<br/>backed by our round the clock support on all our solutions',
-    businessvalue: 'A strong online presence is a necessity in todays competitive world. Take Advantantage of our service offering of result driven Website Development and IT Business solutions and support that our clients want for their NZ businesses.',
+    marketing: 'Mobile devices are being used every day to perform simple tasks on the go, and this includes searching for products, services and shopping online. Customers today are looking to snappy websites that beautifully display the information they want, look great on mobile and display what they are looking for with minimal effort. <br><br> We’re passionate about growing your business with the right modern technologies, and we make the complex simple so that you can spend your time and effort into what matters most in your business. <br><br>Many solutions/packages out there are too expensive. Our goal is to do things the right way using the best solutions to keep your business growing, every cent spent with us is not wasted because anything we develop can scale affordably. We combine custom development with proven open source technologies, frameworks, microservices, APIs and platforms to fast track solutions to your problems and maximise return on investment. <br><br>Contact us today about building your business website. We would love to help you create a quality website to meet your business needs.',
+    about: 'The Odd Wave is a creative eCommerce, Digital Marketing and Website Design company, passionate about open source and modern technology that we use to propel small to medium size businesses to success. Our Mission is to assist local businesses with digital transformation by delivering an impactful online presence backed by our digital marketing expertise with round the clock support.',
+    history: 'Odd - Meaning we’re “different to what is usual or expected” <br> Wave - Meaning we’re “the sudden occurrence or increase in a positive phenomenon, feeling or emotion” from working with us and using the right modern technologies.',
+    services: 'Our domain knowledge, skills and experiences <b>cover the full spectrum of online business from backend to frontend</b> and what customers interact with on the internet.',
+    // "Leverage exceptional benefits of <b>PWA for any eCommerce and headless CMS</b>. <b>Update, manage and distribute your website content from anywhere to anywhere</b>. Our eCommerce solution is an awesome ecommerce app that <b>works on all devices, platforms, online and offline</b>, and it empowers retailers both large and small with an <b>easy-to-use, easy-to-manage</b>, customizable online store and secure checkout. We give you control to add products, manage your inventory, manage your shop content and more. It’s <b>hassle-free ecommerce</b>, letting you focus on improving other parts of your business.',
+    businessvalue: 'Get in touch to learn more about how we can help you grow your business with us.',
+    clientprocess: "<img src='/imgs/company/theoddwave-client-process.png' alt='How we deliver?' text='How we deliver?' />",
     fb: 'https://www.facebook.com/theoddwave',
     instagram: 'https://www.instagram.com/theoddwavenz/',
     linkedin: 'https://www.linkedin.com/company/the-odd-wave-ltd/',

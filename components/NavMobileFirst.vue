@@ -62,7 +62,7 @@
                   {{ item.title }}
                 </b-dropdown-item>
               </b-nav-item-dropdown>
-              <b-nav-item to="/contact/">
+              <b-nav-item to="/contact-theoddwave-nz/">
                 Contact us
               </b-nav-item>
             </b-navbar-nav>

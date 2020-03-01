@@ -5,6 +5,10 @@
       <b-col
         v-for="(item, i) in services"
         :key="i"
+        sm="12"
+        md="6"
+        lg="3"
+        class="p-5"
       >
         <nuxt-link
           :to="`/services/${item.id}/`"

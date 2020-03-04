@@ -5,7 +5,7 @@
       pheader="About us"
       psubheader="We make the complex simple."
       psubtitle="We’re specialists at finding and using the right technology to help you grow your business."
-      pcontainerclass="mt-7 mb-5 borderLeft"
+      pcontainerclass="borderLeft"
     />
 
     <SectionComponent pheader="About Us" :pcontent="client.about" class="align-self-center" />

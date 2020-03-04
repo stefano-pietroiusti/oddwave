@@ -18,32 +18,54 @@ export const state = () => ({
       image: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="92" height="92" viewBox="0 0 92 92"> <defs><style>.b{clip-path:url(#a);}</style> <clipPath id="a"><rect width="92" height="92" transform="translate(1488 1485)" /></clipPath> </defs><g class="b" transform="translate(-1488 -1485)"><g transform="translate(1488 1485)"> <path d="M69.767,0H8.433A7.676,7.676,0,0,0,.767,7.667V56.734a7.667,7.667,0,0,0,5.752,7.424l.767-2.969a4.6,4.6,0,0,1-3.452-4.456V7.667a4.6,4.6,0,0,1,4.6-4.6H69.767a4.6,4.6,0,0,1,4.6,4.6V9.2h3.067V7.667A7.676,7.676,0,0,0,69.767,0Z" /> <rect width="3.067" height="3.067" transform="translate(6.9 6.133)" /><rect width="3.067" height="3.067" transform="translate(13.033 6.133)" /><rect width="3.067" height="3.067" transform="translate(19.167 6.133)" /> <path d="M90.784,84.783,76.241,70.239a21.207,21.207,0,0,0,1.822-4.306H80.5V62.867H78.722a20.66,20.66,0,0,0-1.288-10.988V36.8H74.367v9.764A21.582,21.582,0,0,0,71.3,43.381V30.667H68.234V41.238a21.325,21.325,0,0,0-3.067-1.464V24.533H62.1V38.843a21.231,21.231,0,0,0-3.067-.431V27.6H55.967V38.412a21.231,21.231,0,0,0-3.067.431V33.733H49.834v6.04a21.335,21.335,0,0,0-3.067,1.464V32.2H43.7V43.381a21.582,21.582,0,0,0-3.067,3.183v-11.3H37.567V51.879a20.66,20.66,0,0,0-1.288,10.988H16.1v3.067H36.938a21.422,21.422,0,0,0,32.881,11.42l14.2,14.2a1.533,1.533,0,0,0,2.168,0l4.6-4.6A1.533,1.533,0,0,0,90.784,84.783ZM57.5,78.2A18.4,18.4,0,1,1,75.9,59.8,18.42,18.42,0,0,1,57.5,78.2ZM85.1,88.3,72.2,75.4a21.724,21.724,0,0,0,2.308-2.556L87.532,85.867Z" /><path d="M57.5,44.467A15.333,15.333,0,1,0,72.834,59.8,15.333,15.333,0,0,0,57.5,44.467Zm0,27.6a12.267,12.267,0,0,1-10.608-6.133H68.108A12.267,12.267,0,0,1,57.5,72.067Zm-11.863-9.2a12.155,12.155,0,0,1,4.2-12.627V59.8H52.9V48.437a12.21,12.21,0,0,1,3.067-.8V59.8h3.067V47.639a12.21,12.21,0,0,1,3.067.8V59.8h3.067V50.24a12.155,12.155,0,0,1,4.2,12.627Z" /><path d="M78.967,12.267H17.633a7.676,7.676,0,0,0-7.667,7.667V69a7.676,7.676,0,0,0,7.667,7.667H37.567V73.6H17.633a4.6,4.6,0,0,1-4.6-4.6V19.933a4.6,4.6,0,0,1,4.6-4.6H78.967a4.6,4.6,0,0,1,4.6,4.6V69a4.6,4.6,0,0,1-1.15,3.042l2.3,2.029A7.657,7.657,0,0,0,86.634,69V19.933A7.676,7.676,0,0,0,78.967,12.267Z" /> <rect width="3.067" height="3.067" transform="translate(16.1 18.4)" /> <rect width="3.067" height="3.067" transform="translate(22.233 18.4)" /> <rect width="3.067" height="3.067" transform="translate(28.367 18.4)" /> <rect width="3.067" height="9.2" transform="translate(19.167 50.6)" /> <rect width="3.067" height="18.4" transform="translate(25.3 41.4)" /> <rect width="3.067" height="13.8" transform="translate(31.433 46)" /></g></g> </svg>',
       backgroundImage: { color1: 'rgba(46, 217, 195, 1)', color2: 'rgba(46, 217, 195, 1)', url: 'webdesign.jpg', height: 'auto' },
       headerStyle: { bgStyle: 'text-secondary text-center' },
-      subheader: 'Goal driven Website Design and development for results, quality and trust',
+      subheader: 'Next Generation Goal driven Website Design and Development',
       subheaderStyle: { color: 'text-primary', buttonVariant: 'info' },
       content:
         [
           {
-            header: 'Open source',
+            inlineImage: 'website-development.png',
+            inlineImageText: 'Next Generation Goal driven Website Design and Development',
+            inlineImageStyle: 'inlineImage50',
+            inlineImageCenterFull: true
+          },
+          {
+            header: 'WEBSITE DESIGN',
+            text: "At The Odd Wave, it's our mission to create user-friendly, design-led websites that stand out from the crowd, helping to catapult your business on the path to success. <br> Our tried-and-trusted formula for creating websites that are both functional and visually-pleasing ensures we've earned a respected reputation in the industry."
+          },
+          {
+            header: 'CUSTOM DESIGNED',
+            text: "We prioritise custom website design at The Odd Wave, always putting your business at the heart of every project we undertake. Whether you're a start-up or established New Zealand brand, by getting to know what makes your business tick first, we can design websites that get to the core of what you're about and what you want to achieve."
+          },
+          {
+            header: 'USER-FIRST DESIGN',
+            text: 'With every website design we create, the user is always at the forefront of our mind. Knowing how pivotal it is to attract users to a site, and keep them there, we ensure that websites are designed to be user-friendly, easy to navigate, logical as well as pleasing on the eye.'
+          },
+          {
+            header: 'CUTTING-EDGE TECHNOLOGY',
+            text: "As a forward-thinking web design company, we prioritise the use of the latest open source technologies to produce speedy, efficient and highly effective web applications. Utilising respected technologies such as JavaScript, HTML, SCSS, Vue.js, Nuxt.js and Node.js, we create robust, reliable and secure frameworks that are highly flexible, adapting to the needs of your site as your business grows and changes. <br><br> Crucially, by focusing on technologies that we trust to get the job done properly, it's our goal to keep things as simple and as lean as possible, reducing the need for complexity, clutter and confusion."
+          },
+          {
+            header: 'MOBILE-FIRST DESIGN',
+            text: 'We design websites that follow the trends and needs of your users, both now and in the future. With this in mind, we adopt a mobile-first design approach, which means that we create websites that not only look great on a smartphone screen, but can be easily scaled up for use on any size of device. This gives your site versatility and flexibility, but also ensures your content is optimised for users and search engines.'
+          },
+          {
+            header: 'FOCUS ON GOOGLE',
+            text: 'Our website design principles adhere to the latest Google standards and best practices. This ensures your site is accessible to a wide range of users, is easier to find on search listings and conforms to SEO guidelines and strategies.'
+          },
+          {
+            header: 'STRINGENT TESTING',
+            text: "Quality is the name of the game at The Odd Wave. We design websites that don't just do what they're supposed to, but look great and enhance the user-experience. In order to achieve these vital goals, we never skimp on the testing processes. Our rigorous, multi-faceted testing procedures enable us to deliver quality websites and applications that can help your business to achieve its desired goals. <br><br> Whether you need a website building for the first time, or would like a free website audit for your existing site, get in touch for a no-obligation quote."
+          },
+          {
+            header: 'OPEN SOURCE',
             text: 'With open source technology, we achieve rapid website design and web application development. Open-source tools, frameworks and plugins help us keep things lean, flexible, secure and reliable and allow us to create with the highest quality.'
           },
           {
-            header: 'Kanban Agile',
+            header: 'KANBAN AGILE',
             text: 'We take the time to understand your business and requirements so we can develop a website to help you stand out and grow your business further. Kanban allows us maximise our efficiency, continuously improve our workflow and reduce the time it takes to take a website from start to finish. Using Kanban Agile, we will design and develop a website with you, one that performs, looks great and continuously conforms to requirements, standards and best practices.'
           },
           {
-            header: 'User-content-mobile first design',
-            text: 'User-first design principles are used to structure our websites in a way to guide users to achieve their goals as quickly as possible. Fit for purpose mobile-first design principles are followed so whatever we create looks good and performs well on the smallest mobile screen first and then naturally translates well to bigger screens. Content is optimized for both users and search engines.'
-          },
-          {
-            header: 'Continuous research and improvement',
-            text: "We avoid clunk and overkill and love keeping things lean even when developing to solve the most complex problems. We currently design and develop web pages and websites using Vanilla JS, HTML, SCSS, Vue.js, Nuxt.js and Node.js. We believe these are robust, cutting edge frameworks and technologies that are stable, lightweight and built to last. We continuously test and audit code and content for top notch performance, accessibility, best practices and SEO to give you excellent quality and ROI. We're passionate about researching and using the right technology to solve problems. We research, test and apply continuously."
-          },
-          {
-            header: 'Websites for everyone',
-            text: 'A wide range of tools and services are used to make sure we adhere to guidelines and recommendations for making websites and web content accessible and useful to everyone. Our websites are continuously tested for accessibility and adhere to good practices and standards so as to include people with disabilities or special needs and people who rely on assistive technologies.'
-          },
-          {
-            header: 'Flexible web hosting',
+            header: 'FLEXIBLE WEB HOSTING',
             text: 'A variety of web hosting solutions are available in terms of Speed, Security, Location and Affordability',
             list: [
               'Dedicated hosts',
@@ -104,7 +126,7 @@ export const state = () => ({
       maori: 'pae tukutuku Aotearoa',
       description: 'Our PWA store front is ultrafast, offline ready and can be  any eCommerce and CMS platform. PWA eCommerce Has Everything You Need To Start Selling Online Today. Mobile Commerce Ready. Social Media Integration. Full Blogging Platform. Secure Shopping Cart.',
       landing: { header: 'PWA eCommerce', content: 'Ultrafast, offline ready and any platform Progressive Web App. PWA eCommerce Has Everything You Need To Start Selling Online Today. Mobile Commerce Ready. Social Media Integration. Full Blogging Platform. Secure Shopping Cart.' },
-      header: 'PWA Store for any backend CMS and eCommerce',
+      header: 'PWA for any CMS and eCommerce',
       businessvalue: 'Goal driven PWA eCommerce for results, quality and trust',
       icon: ['fab', 'dev'],
       // image: "<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='92' height='92' viewBox='0 0 92 92'><defs><style>.b{clip-path:url(#a);}</style><clipPath id='a'><rect width='92' height='92' transform='translate(1488 1485)' /></clipPath></defs><g class='b' transform='translate(-1488 -1485)'><g transform='translate(1488 1485)'><path d='M69.767,0H8.433A7.676,7.676,0,0,0,.767,7.667V56.734a7.667,7.667,0,0,0,5.752,7.424l.767-2.969a4.6,4.6,0,0,1-3.452-4.456V7.667a4.6,4.6,0,0,1,4.6-4.6H69.767a4.6,4.6,0,0,1,4.6,4.6V9.2h3.067V7.667A7.676,7.676,0,0,0,69.767,0Z' /><rect width='3.067' height='3.067' transform='translate(6.9 6.133)' /><rect width='3.067' height='3.067' transform='translate(13.033 6.133)' /><rect width='3.067' height='3.067' transform='translate(19.167 6.133)' /><path d='M90.784,84.783,76.241,70.239a21.207,21.207,0,0,0,1.822-4.306H80.5V62.867H78.722a20.66,20.66,0,0,0-1.288-10.988V36.8H74.367v9.764A21.582,21.582,0,0,0,71.3,43.381V30.667H68.234V41.238a21.325,21.325,0,0,0-3.067-1.464V24.533H62.1V38.843a21.231,21.231,0,0,0-3.067-.431V27.6H55.967V38.412a21.231,21.231,0,0,0-3.067.431V33.733H49.834v6.04a21.335,21.335,0,0,0-3.067,1.464V32.2H43.7V43.381a21.582,21.582,0,0,0-3.067,3.183v-11.3H37.567V51.879a20.66,20.66,0,0,0-1.288,10.988H16.1v3.067H36.938a21.422,21.422,0,0,0,32.881,11.42l14.2,14.2a1.533,1.533,0,0,0,2.168,0l4.6-4.6A1.533,1.533,0,0,0,90.784,84.783ZM57.5,78.2A18.4,18.4,0,1,1,75.9,59.8,18.42,18.42,0,0,1,57.5,78.2ZM85.1,88.3,72.2,75.4a21.724,21.724,0,0,0,2.308-2.556L87.532,85.867Z' /><path d='M57.5,44.467A15.333,15.333,0,1,0,72.834,59.8,15.333,15.333,0,0,0,57.5,44.467Zm0,27.6a12.267,12.267,0,0,1-10.608-6.133H68.108A12.267,12.267,0,0,1,57.5,72.067Zm-11.863-9.2a12.155,12.155,0,0,1,4.2-12.627V59.8H52.9V48.437a12.21,12.21,0,0,1,3.067-.8V59.8h3.067V47.639a12.21,12.21,0,0,1,3.067.8V59.8h3.067V50.24a12.155,12.155,0,0,1,4.2,12.627Z' /><path d='M78.967,12.267H17.633a7.676,7.676,0,0,0-7.667,7.667V69a7.676,7.676,0,0,0,7.667,7.667H37.567V73.6H17.633a4.6,4.6,0,0,1-4.6-4.6V19.933a4.6,4.6,0,0,1,4.6-4.6H78.967a4.6,4.6,0,0,1,4.6,4.6V69a4.6,4.6,0,0,1-1.15,3.042l2.3,2.029A7.657,7.657,0,0,0,86.634,69V19.933A7.676,7.676,0,0,0,78.967,12.267Z' /><rect width='3.067' height='3.067' transform='translate(16.1 18.4)' /><rect width='3.067' height='3.067' transform='translate(22.233 18.4)' /><rect width='3.067' height='3.067' transform='translate(28.367 18.4)' /><rect width='3.067' height='9.2' transform='translate(19.167 50.6)' /><rect width='3.067' height='18.4' transform='translate(25.3 41.4)' /><rect width='3.067' height='13.8' transform='translate(31.433 46)' /></g></g></svg>",
@@ -116,19 +138,25 @@ export const state = () => ({
       content:
         [
           {
-            header: 'Supercharge your eCommerce with a PWA storefront',
+            inlineImage: 'pwa-info.png',
+            inlineImageText: 'Leverage the benefits of PWA - Progressive Web Apps ',
+            inlineImageStyle: 'inlineImage50',
+            inlineImageCenterFull: true
+          },
+          {
+            header: 'SUPERCHARGE YOUR ECOMMERCE WITH A PWA STOREFRONT',
             text: "It seems like the only way to really win at eCommerce these days is to become part of your customer's lives, but that's for massive retailers with huge marketing budgets and their own developers, right? Not even close! Let's take a look at how we can supercharge your eCommerce or Content Management System with an affordable PWA storefront."
           },
           {
-            header: "What's a PWA?",
+            header: "WHAT'S A PWA?",
             text: "PWA stands for Progressive Web Application, and it's basically an app that isn't an app! It can have all the exciting features of an app such as adaptive content, slick graphics and push notifications, but your customers don't have to download it and you don't have to perform loads of expensive maintenance. The technology is web based, so it doesn't require the user to keep data on their phone and you don't have to design one for every operating system, but it can sit as an icon on their home screen like an app and it also works offline. It's the best of both worlds!"
           },
           {
-            header: 'What does it do?',
+            header: 'WHAT DOES IT DO?',
             text: "A PWA can do anything that an app can do in terms of content and usability, so your users can tap, swipe and buy just like anything else that you've pushed through your CMS onto a website or traditional app. The sky really is the limit with what you can do, and thanks to our team of friendly designers and tech experts it's all easy and affordable to manage! It's a great way to do everything from increasing sales and conversions to better reviews, more eyeballs on your products and all the best in flexibility and SEO performance. "
           },
           {
-            header: 'What do you get from PWA?',
+            header: 'WHAT DO YOU GET FROM PWA?',
             text: "PWAs are reliable, fast, and engaging, although many things that can take a PWA from a baseline to an exceptional experience. With a PWA, you provide your client's experiences that cover the full reach of the internet and web. Imagine a web solution that is:"
           },
           {
@@ -143,7 +171,7 @@ export const state = () => ({
             text: 'The level of quality deservedly earns a place on a client’s home screen or desktop.'
           },
           {
-            header: 'Stay with your clients',
+            header: 'STAY WITH YOUR CLIENTS',
             text: 'Think of a PWA as a web solution (website or web application) that wants to click and stick with a visitor regardless of location, device, and network connectivity. '
           },
           {
@@ -156,7 +184,7 @@ export const state = () => ({
             text: 'The PWA provides a continuous, meaningful experience both online and offline and will indicate whether it is offline, so users know that their interactions are not lost but will instead be remembered for when they’re next online. '
           },
           {
-            header: 'What can you do?',
+            header: 'WHAT CAN YOU DO?',
             text: "We're a team of technology specialists in Auckland, NZ and we're passionate about helping businesses grow quickly and sustainably. We love technology like PWAs because it can help a small business do a huge amount without breaking the bank, and backed by our expertise in software design and eCommerce we can also help you tweak and change it to get the absolute most out your solution. There are also all kinds of extra features like voice recognition and elastic search that can help you fill any niche you'd like to target, so there are no limits to your ambition!"
           },
           {
@@ -209,29 +237,36 @@ export const state = () => ({
       image: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="92" height="92" viewBox="0 0 92 92"><defs><style>.j{clip-path:url(#i);}</style><clipPath id="i"><rect class="j" width="92" height="92" transform="translate(336 1485)"/></clipPath></defs><g transform="translate(-336 -1485)"><g transform="translate(336 1484.96)"><path d="M10.595,33.61a1.347,1.347,0,0,0,1.9-1.9L9.229,28.436,12.5,25.168a1.347,1.347,0,1,0-1.9-1.9L6.373,27.485a1.346,1.346,0,0,0,0,1.9Zm0,0"/><path d="M23.956,28.436l-3.269,3.269a1.347,1.347,0,1,0,1.9,1.9l4.222-4.222a1.346,1.346,0,0,0,0-1.9l-4.222-4.222a1.346,1.346,0,1,0-1.9,1.9Zm0,0"/><path d="M14.586,33.911a1.346,1.346,0,0,0,1.746-.761l3.317-8.443a1.346,1.346,0,1,0-2.506-.985l-3.317,8.443a1.347,1.347,0,0,0,.761,1.746Zm0,0"/><path d="M8.087,41.9h9.071a1.347,1.347,0,0,0,0-2.693H8.087a1.347,1.347,0,0,0,0,2.693Zm0,0"/><path d="M38.05,39.211H22.1a1.347,1.347,0,0,0,0,2.693H38.05a1.347,1.347,0,1,0,0-2.693Zm0,0"/><path d="M8.087,47.583h3.864a1.347,1.347,0,0,0,0-2.693H8.087a1.347,1.347,0,0,0,0,2.693Zm0,0"/><path d="M33.124,44.89a1.347,1.347,0,0,0,0,2.693h2.353a1.347,1.347,0,1,0,0-2.693Zm0,0"/><path d="M29.58,46.236a1.347,1.347,0,0,0-1.346-1.346H16.676a1.347,1.347,0,0,0,0,2.693H28.234A1.347,1.347,0,0,0,29.58,46.236Zm0,0"/><path d="M38.4,46.236a1.347,1.347,0,0,0,1.346,1.347h4.407a1.347,1.347,0,1,0,0-2.693H39.746A1.347,1.347,0,0,0,38.4,46.236Zm0,0"/><path d="M31.067,29.517h4.649a1.347,1.347,0,1,0,0-2.693H31.067a1.347,1.347,0,1,0,0,2.693Zm0,0"/><path d="M40.923,29.517H69.287a1.347,1.347,0,0,0,0-2.693H40.923a1.347,1.347,0,1,0,0,2.693Zm0,0"/><path d="M64.979,32.748H53.489a1.347,1.347,0,0,0,0,2.693h11.49a1.347,1.347,0,0,0,0-2.693Zm0,0"/><path d="M49.181,32.748h-3.95a1.347,1.347,0,0,0,0,2.693h3.95a1.347,1.347,0,0,0,0-2.693Zm0,0"/><path d="M31.067,35.441h9.676a1.347,1.347,0,0,0,0-2.693H31.067a1.347,1.347,0,1,0,0,2.693Zm0,0"/><path d="M28.251,50.521H19.18a1.346,1.346,0,1,0,0,2.693h9.07a1.346,1.346,0,1,0,0-2.693Zm0,0"/><path d="M15.056,50.521H8.087a1.346,1.346,0,1,0,0,2.693h6.969a1.346,1.346,0,1,0,0-2.693Zm0,0"/><path d="M44.693,50.521H32.844a1.346,1.346,0,1,0,0,2.693H44.693a1.346,1.346,0,0,0,0-2.693Zm0,0"/><path d="M60.717,43.6H54.237a1.347,1.347,0,0,0,0,2.693h6.479a1.347,1.347,0,0,0,0-2.693Zm0,0"/><path d="M71.96,46.3h9.147a1.347,1.347,0,1,0,0-2.693H71.96a1.347,1.347,0,0,0,0,2.693Zm0,0"/><path d="M67.386,43.6h-2.1a1.347,1.347,0,1,0,0,2.693h2.1a1.347,1.347,0,0,0,0-2.693Zm0,0"/><path d="M54.237,60.971h6.479a1.346,1.346,0,0,0,0-2.693H54.237a1.346,1.346,0,0,0,0,2.693Zm0,0"/><path d="M71.96,60.971h9.147a1.346,1.346,0,1,0,0-2.693H71.96a1.346,1.346,0,0,0,0,2.693Zm0,0"/><path d="M65.29,60.971h2.1a1.346,1.346,0,1,0,0-2.693h-2.1a1.346,1.346,0,0,0,0,2.693Zm0,0"/><path d="M60.717,72.952H54.237a1.346,1.346,0,1,0,0,2.693h6.479a1.346,1.346,0,1,0,0-2.693Zm0,0"/><path d="M81.106,72.952H71.96a1.346,1.346,0,1,0,0,2.693h9.147a1.346,1.346,0,1,0,0-2.693Zm0,0"/><path d="M67.386,72.952h-2.1a1.346,1.346,0,1,0,0,2.693h2.1a1.346,1.346,0,1,0,0-2.693Zm0,0"/><path d="M86.075.09H5.926A5.933,5.933,0,0,0,0,6.016V71.165a5.933,5.933,0,0,0,5.926,5.926h5.067a1.346,1.346,0,1,0,0-2.693H5.926a3.236,3.236,0,0,1-3.233-3.233V66.057H51.747v2.321H50.68a2.651,2.651,0,0,0-2.648,2.648V74.4H19.18a1.346,1.346,0,1,0,0,2.693H32.126V81.92H28.06a4.924,4.924,0,0,0-4.918,4.918v2.909a2.246,2.246,0,0,0,2.244,2.244H66.512a2.246,2.246,0,0,0,2.244-2.244V86.838a4.924,4.924,0,0,0-4.918-4.918H59.772v-1.7H84.664a2.651,2.651,0,0,0,2.648-2.648v-.634a5.934,5.934,0,0,0,4.586-5.77L92,6.015A5.931,5.931,0,0,0,86.075.09ZM50.725,62.852V56.4H84.619v6.454ZM54.44,53.7V50.872H80.9V53.7ZM80.9,65.544v2.834H54.44V65.544ZM34.818,77.091H48.032v.479a2.651,2.651,0,0,0,2.648,2.648h6.4v1.7H34.818Zm29.02,7.522a2.228,2.228,0,0,1,2.225,2.225V89.3H25.834v-2.46a2.228,2.228,0,0,1,2.226-2.225Zm20.781-7.089H50.725V71.071H84.619Zm4.586-6.359A3.234,3.234,0,0,1,87.312,74.1V71.025a2.651,2.651,0,0,0-2.648-2.648H83.6V66.057h5.609Zm0-7.8H87.268c.027-.152.044-7.012.044-7.012A2.651,2.651,0,0,0,84.664,53.7H83.6V50.872h1.068a2.652,2.652,0,0,0,2.648-2.648V41.679a2.652,2.652,0,0,0-2.648-2.648H77.059a1.347,1.347,0,0,0,0,2.693h7.56v6.454H50.725V41.724H68.681a1.347,1.347,0,0,0,0-2.693h-18a2.651,2.651,0,0,0-2.648,2.648v6.544a2.651,2.651,0,0,0,2.648,2.648h1.068V53.7H50.68a2.651,2.651,0,0,0-2.648,2.648s.017,6.86.044,7.012H2.693V18.405H89.205Zm0-47.653H2.792v-9.7A3.236,3.236,0,0,1,6.025,2.783H85.973a3.236,3.236,0,0,1,3.233,3.233Zm0,0"/><path d="M9.93,5.258a3.951,3.951,0,1,0,3.952,3.951A3.955,3.955,0,0,0,9.93,5.258Zm0,5.21a1.259,1.259,0,1,1,1.259-1.259A1.26,1.26,0,0,1,9.93,10.468Zm0,0"/><path d="M19.99,5.258a3.951,3.951,0,1,0,3.951,3.951A3.956,3.956,0,0,0,19.99,5.258Zm0,5.21a1.259,1.259,0,1,1,1.259-1.259A1.26,1.26,0,0,1,19.99,10.468Zm0,0"/><path d="M30.05,5.258A3.951,3.951,0,1,0,34,9.209,3.955,3.955,0,0,0,30.05,5.258Zm0,5.21a1.259,1.259,0,1,1,1.259-1.259A1.26,1.26,0,0,1,30.05,10.468Zm0,0"/></g></g></svg>',
       backgroundImage: { color1: 'rgba(46, 217, 195, 1)', color2: 'rgba(46, 217, 195, 1)', url: 'webdesign.jpg', height: 'auto' },
       headerStyle: { bgStyle: 'text-secondary text-center' },
-      subheader: 'Reliable support from solid work experiences to help your business grow',
+      subheader: 'Reliable engineering from solid work experiences to help your business grow',
       subheaderStyle: { color: 'text-primary', buttonVariant: 'info' },
       content:
-        [{
-          header: "We're experienced technology generalists who abide by",
-          list: [
-            'Best practices & standards',
-            'Research & experimentation',
-            'Performance',
-            'Creativeness',
-            'Usability',
-            'Transparency', 'Continuous Improvement'],
-          icon: ['fab', 'servicestack']
-        },
-        {
-          header: 'We specialize in:',
-          list: [
-            'Modern Development, Integration, Automation and Data Engineering',
-            'Headless CMS & Content as a Service, PWA Ecommerce, REST APIs, GraphQL APIs',
-            'Data Management & Analysis',
-            'Cloud Services (Azure, AWS, Google)'],
-          icon: ['fab', 'servicestack']
-        }
+        [
+          {
+            inlineImage: 'software-engineering.png',
+            inlineImageText: 'Software engineering from solid work experiences',
+            inlineImageStyle: 'inlineImage50',
+            inlineImageCenterFull: true
+          },
+          {
+            header: "We're experienced technology generalists who abide by",
+            list: [
+              'Best practices & standards',
+              'Research & experimentation',
+              'Performance',
+              'Creativeness',
+              'Usability',
+              'Transparency', 'Continuous Improvement'],
+            icon: ['fab', 'servicestack']
+          },
+          {
+            header: 'We specialize in:',
+            list: [
+              'Modern Development, Integration, Automation and Data Engineering',
+              'Headless CMS & Content as a Service, PWA Ecommerce, REST APIs, GraphQL APIs',
+              'Data Management & Analysis',
+              'Cloud Services (Azure, AWS, Google)'],
+            icon: ['fab', 'servicestack']
+          }
         ],
       price: { value: 110, unit: 'hour' },
       relatedServices: ['website-design-nz', 'pwa-ecommerce-nz', 'sentiment-analysis-nz', 'reputation-management-nz'],
@@ -261,40 +296,49 @@ export const state = () => ({
       subheaderStyle: { color: 'text-primary', buttonVariant: 'info' },
       content: [
         {
-          inlineImage: 'seoinline.jpg',
-          inlineImageText: 'Be found by more Auckland, NZ customers searching services you offer.The Odd Wave will get your business ranking on Google and Bing by increasing your website visibility on search engines. ',
-          inlineImageStyle: 'inlineImage100',
+          inlineImage: 'seo-info.png',
+          inlineImageText: 'Best SEO to drive organic traffic to your website',
+          inlineImageStyle: 'inlineImage50',
+          inlineImageCenterFull: true
+        },
+        {
           text: 'Be found by more New Zealand customers searching services you offer.The Odd Wave will get your business ranking on Google by increasing your website visibility on search engines. <br/><br/>If you want long term, increased visibility in the organic search results, you\'ve come to the right place. We can cost-effectively increase your ranking and drive organic traffic to your site. If your New Zealand business isn\'t ranking, you might as well not exist. '
         },
         {
           text: 'We make it easy for your customers to find you and outrank your competition.We target the right searches that will convert into leads and more revenue for your business. SEO leads have a 14.6% close rate compared to outbound leads which have a 1.4% close rate.'
         },
         {
-          header: 'What is SEO?',
+          header: 'WHAT IS SEO?',
           text: 'SEO or Search Engine Optimization is an essential part of a digital marketing strategy . SEO assists in driving customers to your small business via online platforms.SEO assists in making the website rank higher in the SERP (search engine result page) so that your business website is found by customers searching for your product and services online. Advertising your business is of utmost importance. When any company goes online, pay per click advertising (PPC) works best to generate a considerable amount of web traffic. SEO allows a great deal of free advertising. '
         },
         {
-          header: 'SEO Strategy',
+          header: 'SEO STRATEGY',
           text: 'Everything we do is with a custom strategy for your business to help you achieve your Auckland business goals delivering the best possible result. We report on the things that really matter to your business like leads and sales. You can quickly see how the SEO is performing and the return you are generating on every dollar invested. '
         },
         {
-          header: 'Optimization',
+          header: 'OPTIMIZATION',
           text: 'Proper optimization makes a website rank on the first page of SERP. The common belief is that people generally check the first two pages of search engine results. Approximately 74% of online users use search engines to find products and services. Keyword research and the proper use of keywords (including avoiding keyword stuffing) directly influence the complexity and readability of the content. Keyword-rich page content makes a substantial difference in your Google rankings and search engine results. '
         },
         {
-          header: 'Organic Traffic',
+          header: 'ORGANIC TRAFFIC',
           text: 'Optimized content increases organic traffic to your website resulting in lead generation, increased sales, and improve ROI.Some search engine optimization practices are Technical SEO and On-Page SEO. Technical SEO determines the quality of a website based on factors like speed and code. Optimizing the technical aspects of the website enables search engines to crawl and index the site, which is beneficial to obtain a higher search engine rank in Google.Some steps to take in the direction of technical search engine optimization include fixing broken links. , removing duplicate pages, testing, and improving website speed. also, ensuring the website is mobile-friendly.'
+        },
+        {
+          inlineImage: 'SEOProcess.png',
+          inlineImageText: 'Best SEO to drive organic traffic to your website',
+          inlineImageStyle: 'inlineImage50',
+          inlineImageCenterFull: true
         },
         // {
         //   header: 'Are there any guarantees?',
         //   text: 'No SEO consultant can guarantee a number #1 position or specific ranking for your site for a given keyword phrase, there are simply too many variables involved. '
         // },
         {
-          header: 'How long does the SEO process take?',
+          header: 'HOW LONG DOES THE SEO PROCESS TAKE?',
           text: 'This depends on the site we are given to work with. A 5-page site in a low competition area will obviously take less time than a 75-page site competing for highly competitive terms. Generally speaking, however, an average promotion (20-page website with moderate competition) would take approximately 2 weeks for site-optimization, and up to 3 months or so to attain rankings.'
         },
         {
-          header: 'SEO marketing packages',
+          header: 'SEO MARKETING PACKAGES',
           text: 'We have various SEO marketing packages to choose from, payable upfront with no fixed contract, and you can cancel anytime.<br/>All Packages include the following:',
           list: [
             'SEO Website Audit',
@@ -353,14 +397,17 @@ export const state = () => ({
       image: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="92" height="92" viewBox="0 0 92 92"><defs><style>.f{clip-path:url(#e);}</style><clipPath id="e"><rect class="f" width="92" height="92" transform="translate(912 1485)"/></clipPath></defs><g transform="translate(-912 -1485)"><g transform="translate(912 1485)"><path d="M8.9,83.1h2.968v2.968H8.9Zm0,0"/><path d="M14.839,83.1h2.968v2.968H14.839Zm0,0"/><path d="M20.774,83.1h2.968v2.968H20.774Zm0,0"/><path d="M71.226,83.1H83.1v2.968H71.226Zm0,0"/><path d="M89.032,77.161V28.194a7.428,7.428,0,0,0-7.419-7.419H77.161a20.774,20.774,0,0,0-41.548,0H10.387a7.428,7.428,0,0,0-7.419,7.419V77.161H0v7.419A7.428,7.428,0,0,0,7.419,92H84.581A7.428,7.428,0,0,0,92,84.581V77.161ZM81.613,23.742a4.457,4.457,0,0,1,4.452,4.452V77.161H83.1V29.677a2.971,2.971,0,0,0-2.968-2.968H76.286a20.629,20.629,0,0,0,.638-2.968Zm-42.17-8.421,15.749,6.563L60.585,38.06A17.779,17.779,0,0,1,39.443,15.321ZM63.4,37.134l-5.32-15.959L69.97,9.289A17.773,17.773,0,0,1,63.4,37.134ZM56.387,2.968A17.724,17.724,0,0,1,67.874,7.19L56.041,19.022,40.593,12.586A17.81,17.81,0,0,1,56.387,2.968ZM5.935,28.194a4.457,4.457,0,0,1,4.452-4.452H35.851a20.434,20.434,0,0,0,.638,2.968H11.871A2.971,2.971,0,0,0,8.9,29.678V77.161H5.935Zm83.1,56.387a4.457,4.457,0,0,1-4.452,4.452H7.419a4.457,4.457,0,0,1-4.452-4.452V80.129H33.538A11.53,11.53,0,0,0,41.295,83.1h9.412a11.53,11.53,0,0,0,7.756-2.968h18.7V77.161h-19.9l-.435.435a8.59,8.59,0,0,1-6.117,2.533H41.293A8.593,8.593,0,0,1,35.177,77.6l-.433-.435H11.871V29.678H37.646a20.729,20.729,0,0,0,37.482,0h5V80.129h8.9Zm0,0"/><path d="M72.71,62.323a4.426,4.426,0,0,0-2.465.749L65.068,59.19a4.384,4.384,0,0,0,.222-1.319,4.452,4.452,0,0,0-8.9,0,4.406,4.406,0,0,0,.262,1.451l-8.311,6.649a4.363,4.363,0,0,0-4.994.218l-6.4-4.266a4.354,4.354,0,0,0,.15-1.085,4.452,4.452,0,1,0-8.9,0,4.354,4.354,0,0,0,.15,1.085l-6.4,4.266a4.4,4.4,0,0,0-2.655-.9,4.452,4.452,0,1,0,4.452,4.452,4.354,4.354,0,0,0-.15-1.085l6.4-4.266a4.369,4.369,0,0,0,5.309,0l6.4,4.266a4.363,4.363,0,0,0-.15,1.085,4.452,4.452,0,1,0,8.9,0,4.406,4.406,0,0,0-.262-1.451L58.5,61.642a4.394,4.394,0,0,0,4.8-.068l5.177,3.881a4.384,4.384,0,0,0-.222,1.319,4.452,4.452,0,1,0,4.452-4.452Zm-53.419,8.9a1.484,1.484,0,1,1,1.484-1.484A1.487,1.487,0,0,1,19.29,71.226Zm13.355-8.9a1.484,1.484,0,1,1,1.484-1.484A1.487,1.487,0,0,1,32.645,62.323ZM46,71.226a1.484,1.484,0,1,1,1.484-1.484A1.487,1.487,0,0,1,46,71.226ZM60.839,59.355a1.484,1.484,0,1,1,1.484-1.484A1.487,1.487,0,0,1,60.839,59.355Zm11.871,8.9a1.484,1.484,0,1,1,1.484-1.484A1.487,1.487,0,0,1,72.71,68.258Zm0,0"/><path d="M38.581,32.645H14.839V53.419H38.581ZM35.613,50.452H17.806V35.613H35.613Zm0,0"/><path d="M20.774,38.581H32.645v2.968H20.774Zm0,0"/><path d="M20.774,44.516H32.645v2.968H20.774Zm0,0"/><path d="M41.548,47.484h2.968v2.968H41.548Zm0,0"/><path d="M47.484,47.484H77.161v2.968H47.484Zm0,0"/></g></g></svg>',
       backgroundImage: { color1: 'rgba(153, 61, 187, 1)', color2: 'rgba(153, 61, 187, 1)', url: 'ppc.jpg', height: 'auto' },
       headerStyle: { bgStyle: 'text-secondary text-center' },
-      subheader: 'Accelerate market penetration and ROI with our Digital Marketing',
+      subheader: 'Accelerate market penetration with our Digital Marketing',
       subheaderStyle: { color: 'text-primary', buttonVariant: 'info' },
       content:
         [
           {
-            inlineImage: 'bargraph.jpg',
-            inlineImageText: 'We manage Digital Marketing campaigns to generate valid clicks to your website',
-            inlineImageStyle: 'inlineImage100',
+            inlineImage: 'digitalmarketing.png',
+            inlineImageText: 'Generate leads with Google Ads',
+            inlineImageStyle: 'inlineImage50',
+            inlineImageCenterFull: true
+          },
+          {
             text: 'Advertising your business is of utmost importance. When any company goes online, Digital Marketing i.e. pay per click advertising (PPC) works best to generate a considerable amount of web traffic and sales leads. PPC Advertising is paid advertising generating leads to your site, rather than earning visits organically and is one of the most popular forms of PPC. <br/> <br/>The Odd Wave provides professionally managed Search Engine Marketing services for small to medium-sized businesses throughout NZ from our North Shore, Auckland office. '
           },
           { text: 'Digital Marketing and Pay per Click is one of the most potent advertising channels available, to businesses of every size. PPC ads can be in any form of text, a photo, a video, and slides.  The largest online advertising platform is Google Ads targeted at users using Google Search Engine. Google drives 95% of all paid search on mobile phones, the second-largest platform used for PPC advertising is Bing Ads. ' },
@@ -436,7 +483,7 @@ export const state = () => ({
       maori: 'pae tukutuku Aotearoa',
       description: "Our sentiment analysis solution can help businesses understand their customers' emotions from voice and text data using natural language processing and analysis. This allows businesses to keep track of customer sentiment towards their brand, products, services, events, employees.",
       landing: { header: 'Sentiment Analysis', content: "Our sentiment analysis solution can help businesses understand their customers' emotions from voice and text data using natural language processing and analysis. This allows businesses to keep track of customer sentiment towards their brand, products, services, events, employees." },
-      header: 'Sentiment Analysis - Continuous brand management and alerting',
+      header: 'Sentiment Analysis',
       businessvalue: 'Continuous brand management and alerting',
       icon: ['fab', 'dev'],
       // image: "<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='92' height='92' viewBox='0 0 92 92'><defs><style>.b{clip-path:url(#a);}</style><clipPath id='a'><rect width='92' height='92' transform='translate(1488 1485)' /></clipPath></defs><g class='b' transform='translate(-1488 -1485)'><g transform='translate(1488 1485)'><path d='M69.767,0H8.433A7.676,7.676,0,0,0,.767,7.667V56.734a7.667,7.667,0,0,0,5.752,7.424l.767-2.969a4.6,4.6,0,0,1-3.452-4.456V7.667a4.6,4.6,0,0,1,4.6-4.6H69.767a4.6,4.6,0,0,1,4.6,4.6V9.2h3.067V7.667A7.676,7.676,0,0,0,69.767,0Z' /><rect width='3.067' height='3.067' transform='translate(6.9 6.133)' /><rect width='3.067' height='3.067' transform='translate(13.033 6.133)' /><rect width='3.067' height='3.067' transform='translate(19.167 6.133)' /><path d='M90.784,84.783,76.241,70.239a21.207,21.207,0,0,0,1.822-4.306H80.5V62.867H78.722a20.66,20.66,0,0,0-1.288-10.988V36.8H74.367v9.764A21.582,21.582,0,0,0,71.3,43.381V30.667H68.234V41.238a21.325,21.325,0,0,0-3.067-1.464V24.533H62.1V38.843a21.231,21.231,0,0,0-3.067-.431V27.6H55.967V38.412a21.231,21.231,0,0,0-3.067.431V33.733H49.834v6.04a21.335,21.335,0,0,0-3.067,1.464V32.2H43.7V43.381a21.582,21.582,0,0,0-3.067,3.183v-11.3H37.567V51.879a20.66,20.66,0,0,0-1.288,10.988H16.1v3.067H36.938a21.422,21.422,0,0,0,32.881,11.42l14.2,14.2a1.533,1.533,0,0,0,2.168,0l4.6-4.6A1.533,1.533,0,0,0,90.784,84.783ZM57.5,78.2A18.4,18.4,0,1,1,75.9,59.8,18.42,18.42,0,0,1,57.5,78.2ZM85.1,88.3,72.2,75.4a21.724,21.724,0,0,0,2.308-2.556L87.532,85.867Z' /><path d='M57.5,44.467A15.333,15.333,0,1,0,72.834,59.8,15.333,15.333,0,0,0,57.5,44.467Zm0,27.6a12.267,12.267,0,0,1-10.608-6.133H68.108A12.267,12.267,0,0,1,57.5,72.067Zm-11.863-9.2a12.155,12.155,0,0,1,4.2-12.627V59.8H52.9V48.437a12.21,12.21,0,0,1,3.067-.8V59.8h3.067V47.639a12.21,12.21,0,0,1,3.067.8V59.8h3.067V50.24a12.155,12.155,0,0,1,4.2,12.627Z' /><path d='M78.967,12.267H17.633a7.676,7.676,0,0,0-7.667,7.667V69a7.676,7.676,0,0,0,7.667,7.667H37.567V73.6H17.633a4.6,4.6,0,0,1-4.6-4.6V19.933a4.6,4.6,0,0,1,4.6-4.6H78.967a4.6,4.6,0,0,1,4.6,4.6V69a4.6,4.6,0,0,1-1.15,3.042l2.3,2.029A7.657,7.657,0,0,0,86.634,69V19.933A7.676,7.676,0,0,0,78.967,12.267Z' /><rect width='3.067' height='3.067' transform='translate(16.1 18.4)' /><rect width='3.067' height='3.067' transform='translate(22.233 18.4)' /><rect width='3.067' height='3.067' transform='translate(28.367 18.4)' /><rect width='3.067' height='9.2' transform='translate(19.167 50.6)' /><rect width='3.067' height='18.4' transform='translate(25.3 41.4)' /><rect width='3.067' height='13.8' transform='translate(31.433 46)' /></g></g></svg>",
@@ -525,7 +572,7 @@ export const state = () => ({
       image: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="92" height="92" viewBox="0 0 92 92"> <defs><style>.b{clip-path:url(#a);}</style> <clipPath id="a"><rect width="92" height="92" transform="translate(1488 1485)" /></clipPath> </defs><g class="b" transform="translate(-1488 -1485)"><g transform="translate(1488 1485)"> <path d="M69.767,0H8.433A7.676,7.676,0,0,0,.767,7.667V56.734a7.667,7.667,0,0,0,5.752,7.424l.767-2.969a4.6,4.6,0,0,1-3.452-4.456V7.667a4.6,4.6,0,0,1,4.6-4.6H69.767a4.6,4.6,0,0,1,4.6,4.6V9.2h3.067V7.667A7.676,7.676,0,0,0,69.767,0Z" /> <rect width="3.067" height="3.067" transform="translate(6.9 6.133)" /><rect width="3.067" height="3.067" transform="translate(13.033 6.133)" /><rect width="3.067" height="3.067" transform="translate(19.167 6.133)" /> <path d="M90.784,84.783,76.241,70.239a21.207,21.207,0,0,0,1.822-4.306H80.5V62.867H78.722a20.66,20.66,0,0,0-1.288-10.988V36.8H74.367v9.764A21.582,21.582,0,0,0,71.3,43.381V30.667H68.234V41.238a21.325,21.325,0,0,0-3.067-1.464V24.533H62.1V38.843a21.231,21.231,0,0,0-3.067-.431V27.6H55.967V38.412a21.231,21.231,0,0,0-3.067.431V33.733H49.834v6.04a21.335,21.335,0,0,0-3.067,1.464V32.2H43.7V43.381a21.582,21.582,0,0,0-3.067,3.183v-11.3H37.567V51.879a20.66,20.66,0,0,0-1.288,10.988H16.1v3.067H36.938a21.422,21.422,0,0,0,32.881,11.42l14.2,14.2a1.533,1.533,0,0,0,2.168,0l4.6-4.6A1.533,1.533,0,0,0,90.784,84.783ZM57.5,78.2A18.4,18.4,0,1,1,75.9,59.8,18.42,18.42,0,0,1,57.5,78.2ZM85.1,88.3,72.2,75.4a21.724,21.724,0,0,0,2.308-2.556L87.532,85.867Z" /><path d="M57.5,44.467A15.333,15.333,0,1,0,72.834,59.8,15.333,15.333,0,0,0,57.5,44.467Zm0,27.6a12.267,12.267,0,0,1-10.608-6.133H68.108A12.267,12.267,0,0,1,57.5,72.067Zm-11.863-9.2a12.155,12.155,0,0,1,4.2-12.627V59.8H52.9V48.437a12.21,12.21,0,0,1,3.067-.8V59.8h3.067V47.639a12.21,12.21,0,0,1,3.067.8V59.8h3.067V50.24a12.155,12.155,0,0,1,4.2,12.627Z" /><path d="M78.967,12.267H17.633a7.676,7.676,0,0,0-7.667,7.667V69a7.676,7.676,0,0,0,7.667,7.667H37.567V73.6H17.633a4.6,4.6,0,0,1-4.6-4.6V19.933a4.6,4.6,0,0,1,4.6-4.6H78.967a4.6,4.6,0,0,1,4.6,4.6V69a4.6,4.6,0,0,1-1.15,3.042l2.3,2.029A7.657,7.657,0,0,0,86.634,69V19.933A7.676,7.676,0,0,0,78.967,12.267Z" /> <rect width="3.067" height="3.067" transform="translate(16.1 18.4)" /> <rect width="3.067" height="3.067" transform="translate(22.233 18.4)" /> <rect width="3.067" height="3.067" transform="translate(28.367 18.4)" /> <rect width="3.067" height="9.2" transform="translate(19.167 50.6)" /> <rect width="3.067" height="18.4" transform="translate(25.3 41.4)" /> <rect width="3.067" height="13.8" transform="translate(31.433 46)" /></g></g> </svg>',
       backgroundImage: { color1: 'rgba(46, 217, 195, 1)', color2: 'rgba(46, 217, 195, 1)', url: 'webdesign.jpg', height: 'auto' },
       headerStyle: { bgStyle: 'text-secondary text-center' },
-      subheader: 'PROTECT AND DEFEND YOUR ONLINE LOOK AND FEEL',
+      subheader: 'PROTECT AND DEFEND YOUR ONLINE REPUTATION',
       subheaderStyle: { color: 'text-primary', buttonVariant: 'info' },
       content:
         [

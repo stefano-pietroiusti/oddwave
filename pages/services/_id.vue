@@ -12,12 +12,12 @@
     </b-container>-->
 
     <div id="servicesContainer" class="text-center w-100">
-      <HeaderComponent :pheader="service.header" pcontainerclass="mt-7 mb-5 borderLeft" />
+      <HeaderComponent :pheader="service.header" :psubheader="service.subheader" pcontainerclass="borderLeft" />
 
       <TextImageComponent
         v-for="(item,i) in service.content"
         :key="i"
-        :pcontent="{header: item.header, text: item.text, list: item.list, bgImage: item.bgImage, inlineImage: item.inlineImage, inlineImageText: item.inlineImageText, inlineImageRight: item.inlineImageRight }"
+        :pcontent="{header: item.header, text: item.text, list: item.list, bgImage: item.bgImage, inlineImage: item.inlineImage, inlineImageText: item.inlineImageText, inlineImageRight: item.inlineImageRight , inlineImageCenterFull: item.inlineImageCenterFull}"
         :pstyle="(item.dark) ? { bgStyle: 'parralaxNormal w-100 text-secondary text-left  px-3 p-2', inlineImageStyle: item.inlineImageStyle} : { bgStyle: 'parralaxNormal w-100 text-black text-left  px-3  p-2', inlineImageStyle: item.inlineImageStyle}"
       />
 

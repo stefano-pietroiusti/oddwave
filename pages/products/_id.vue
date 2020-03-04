@@ -20,7 +20,7 @@
       />-->
       <HeaderComponent
         :pheader="product.name"
-        pcontainerclass="mt-7 mb-5 borderLeft"
+        pcontainerclass="borderLeft"
         psubheaderclass="sectionHeaderPrimary"
       />
       <!-- <span v-if="product.features.length > 0"> -->

@@ -1,10 +1,20 @@
 <!-- eslint-disable vue/no-v-html vue/require-v-for-key -->
 <template>
   <b-container fluid :class="pstyle.bgStyle" :style="background">
-    <b-row v-if="pcontent.inlineImage && !pcontent.inlineImageRight">
+    <b-row v-if="pcontent.inlineImage && pcontent.inlineImageCenterFull && !pcontent.inlineImageRight">
+      <b-col md="12" lg="12" class="text-center">
+        <img
+          :src="`${inlineImage}`"
+          :srcset="inlineImage.srcSet"
+          :alt="inlineImageText"
+          :class="pstyle.inlineImageStyle"
+        >
+      </b-col>
+    </b-row>
+    <b-row v-else-if="pcontent.inlineImage && !pcontent.inlineImageCenterFull && !pcontent.inlineImageRight">
       <b-col md="12" lg="4" class="text-center">
         <img
-          :src="`${inlineImage}?size=100`"
+          :src="`${inlineImage}?size=717`"
           :srcset="inlineImage.srcSet"
           :class="pstyle.inlineImageStyle"
           :alt="inlineImageText"
@@ -20,7 +30,7 @@
         </ul>
       </b-col>
     </b-row>
-    <b-row v-else-if="pcontent.inlineImage && pcontent.inlineImageRight">
+    <b-row v-else-if="pcontent.inlineImage && pcontent.inlineImageRight && !pcontent.inlineImageCenterFull">
       <b-col md="12" lg="8">
         <h3 v-if="pcontent.header" class="contentHeader" v-html="pcontent.header" />
         <p v-html="pcontent.text" />

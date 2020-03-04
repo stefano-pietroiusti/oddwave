@@ -13,7 +13,7 @@
       pheader="Knowledge Sharing Blog"
       psubheader="Sharing insights is key to any company's success"
       psubtitle="Add a knowledge sharing blog to provide insights into your products, services and expertise. Watch this space :)"
-      pcontainerclass="mt-7 mb-5 borderLeft"
+      pcontainerclass="borderLeft"
     />
     <!-- POSTS: Index: {{ $store.state.articles.posts }} <br> Articles: {{ posts }}<br> -->
     <!-- <section

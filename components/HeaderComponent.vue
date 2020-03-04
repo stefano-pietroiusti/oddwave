@@ -1,5 +1,5 @@
 <template>
-  <b-container fluid :class="`pr-lg-3 pr-xl-3 ml-lg-3 ml-xl-3 ml-3 pr-3 pt-5 pb-5 ${pcontainerclass}`">
+  <b-container fluid :class="`pr-lg-3 pr-xl-3 ml-lg-3 ml-xl-3 ml-3 pr-3 pt-4 pb-4 mt-6 mb-0 ${pcontainerclass}`">
     <h1 v-if="pheader" :class="`${pclass} ${pheaderclass} text-left`">
       {{ pheader }}
     </h1>

@@ -12,7 +12,7 @@
       pheader="Portfolio"
       psubheader="Because First impressions matter. "
       psubtitle="We work with you to create beautiful websites whether you're selling products, services, software or expertise. Watch this space :)"
-      pcontainerclass="mt-7 mb-5 borderLeft"
+      pcontainerclass="borderLeft"
     />
     <b-container v-if="productPortfolios" fluid class="w-100">
       <b-row>

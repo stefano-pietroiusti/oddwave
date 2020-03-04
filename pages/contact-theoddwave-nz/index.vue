@@ -12,7 +12,7 @@
     <HeaderComponent
       pheader="Have a project or idea? Drop us a line. "
       psubheader="We're based in Torbay, North Shore, NZ, but work with companies across NZ and worldwide."
-      pcontainerclass="mt-7 mb-5 borderLeft"
+      pcontainerclass="borderLeft"
     />
     <ContactForm :pservices="servicesDropDown" :pbgimage="backgroundImage" :pstyle="style" />
   </div>

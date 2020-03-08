@@ -318,6 +318,11 @@ h6 {
   float: right;
 }
 
+.responsiveImage {
+  max-width: 100vw;
+  height: auto;
+
+} 
 .parralaxEffect {
   background-attachment: fixed;
   background-position: center;

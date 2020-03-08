@@ -4,10 +4,10 @@
     <b-row v-if="pcontent.inlineImage && pcontent.inlineImageCenterFull && !pcontent.inlineImageRight">
       <b-col md="12" lg="12" class="text-center">
         <img
+          sizes="(max-width: 800px) 100vw, (max-width: 1200px) 60vw, 50vw"
           :src="`${inlineImage}`"
           :srcset="inlineImage.srcSet"
           :alt="inlineImageText"
-          :class="pstyle.inlineImageStyle"
         >
       </b-col>
     </b-row>

@@ -9,10 +9,21 @@
         </h2>
       </b-col>
     </b-row>
-    <b-row>
+    <b-row v-if="content">
       <!-- <b-col lg="2" /> -->
       <b-col lg="12" class="px-lg-10 text-center">
         <span class="text-medium" v-html="content" />
+      </b-col>
+    </b-row>
+    <b-row>
+      <!-- <b-col lg="2" /> -->
+      <b-col lg="12" class="px-lg-10 text-center">
+        <img
+          sizes="(max-width: 800px) 100vw, (max-width: 1200px) 60vw, 50vw"
+          :src="`${inlineImage}`"
+          :srcset="inlineImage.srcSet"
+          alt="The Odd Wave's simple and flexible results-driven framework."
+        >
       </b-col>
     </b-row>
   </b-container>
@@ -26,8 +37,11 @@ export default {
       default: 'What can we do for you?'
     },
     pcontent: {
+      type: String
+    },
+    pimage: {
       type: String,
-      default: 'Everything we do is aimed at producing results that our clients want for their businesses.'
+      default: 'theoddwave-client-process.png'
     }
   },
   computed: {
@@ -35,8 +49,14 @@ export default {
       return this.pheader || 'Section'
     },
     content: function() {
-      return this.pcontent || 'Section content'
-    }
+      return this.pcontent || undefined
+    },inlineImage () {
+      if (!this.pimage) {
+        return
+      }
+      const fileName = this.pimage
+      return require(`~/assets/imgs/inline/${fileName}`)
+    },
   }
 }
 </script>

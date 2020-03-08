@@ -25,7 +25,7 @@ export const state = () => ({
           {
             inlineImage: 'website-development.png',
             inlineImageText: 'Next Generation Goal driven Website Design and Development',
-            inlineImageStyle: 'inlineImage50',
+            inlineImageStyle: 'inlineImage100',
             inlineImageCenterFull: true
           },
           {

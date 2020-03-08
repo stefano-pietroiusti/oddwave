@@ -69,7 +69,7 @@ const nodeEnv = process.env.NODE_ENV || 'development'
 // const kenticoKontentProjectId = process.env.KONTENT_PROJECTID || 'd09c9569-7021-0070-d917-10246623ee2e'
 // const kenticoKontentPreviewId = process.env.KONTENT_PREVIEWID || 'ew0KICAiYWxnIjogIkhTMjU2IiwNCiAgInR5cCI6ICJKV1QiDQp9.ew0KICAianRpIjogImQ0MjA4MGU3YzRmYTRlNDZiYzY1ZmEwMzM1MWMxNmY1IiwNCiAgImlhdCI6ICIxNTgxNDU0NTQyIiwNCiAgImV4cCI6ICIxOTI3MDU0NTQyIiwNCiAgInByb2plY3RfaWQiOiAiZDA5Yzk1Njk3MDIxMDA3MGQ5MTcxMDI0NjYyM2VlMmUiLA0KICAidmVyIjogIjEuMC4wIiwNCiAgImF1ZCI6ICJwcmV2aWV3LmRlbGl2ZXIua2VudGljb2Nsb3VkLmNvbSINCn0.XRZ_rUML9yBwnrd6qKPt0_IvSUa4TA4PuyqmSzwMfBc'
 
-export default {  
+export default {
   env: {
     baseUrl,
     contactUrl,
@@ -180,7 +180,7 @@ export default {
       anonymize_ip: true, // anonymize IP 
       send_page_view: false, // might be necessary to avoid duplicated page track on page reload
       linker: {
-        domains: ['theoddwave.co.nz','theoddwave.nz']
+        domains: ['theoddwave.co.nz', 'theoddwave.nz']
       }
     },
     debug: false, // enable to track in dev mode
@@ -259,7 +259,20 @@ export default {
       '/services/web-design-nz/',
       '/services/pwa-progressive-web-apps-nz/',
       '/services/photographer-nz/',
-      '/services/contracting-nz/'
+      '/services/contracting-nz/',
+      '/products/pro-business-website-landing/',
+      '/products/pro-business-website/',
+      '/products/pwa-headless-cms/',
+      '/products/pwa-eCommerce/',
+      '/products/seo-website-package-1/',
+      '/products/seo-website-package-5/',
+      '/products/seo-website-package-10/',
+      '/products/seo-website-package-20/',
+      '/products/website-digital-photo-24/',
+      '/products/website-digital-photo-100/',
+      '/products/film-photography-nz/',
+      '/products/creating-solutions-nz/',
+      '/products/technical-support-nz/'
     ],
     Sitemap: baseUrl + '/sitemap.xml'
   },

@@ -119,10 +119,10 @@ export const state = () => ({
       id: 'pwa-headless-cms',
       icon: ['fab', 'dev'],
       variant: 'rwcyellow',
-      title: 'PWA for any headless CMS | The Odd Wave | Auckland, NZ',
-      linkTitle: 'PWA for any headless CMS',
+      title: 'PWA with any headless CMS | The Odd Wave | Auckland, NZ',
+      linkTitle: 'PWA with any headless CMS',
       description: 'Combine the power of PWA with any headless CMS. It is ultrafast, offline ready, secure and can be used with any headless CMS.',
-      header: 'PWA for any headless CMS',
+      header: 'PWA with any headless CMS',
       image: 'websitedesign.jpg',
       features: [
         {
@@ -151,16 +151,16 @@ export const state = () => ({
       isFeaturedOrder: 0,
       relatedServices: ['pwa-ecommerce-nz'],
       price: { value: 3900, unit: 'package', discount: 0, flexible: true },
-      keywords: [...commonKeywords, 'pwa for any headless CMS']
+      keywords: [...commonKeywords, 'PWA with any headless CMS']
     },
     {
       id: 'pwa-eCommerce',
       icon: ['fab', 'dev'],
       variant: 'rwcyellow',
-      title: 'PWA for any eCommerce | The Odd Wave | Auckland, NZ',
-      linkTitle: 'PWA for any eCommerce',
+      title: 'PWA with any eCommerce | The Odd Wave | Auckland, NZ',
+      linkTitle: 'PWA with any eCommerce',
       description: 'Combine the power of PWA with any e-commerce platform to provide the best shopping experiences, increase conversion rates, and grow sales.',
-      header: 'PWA for any eCommerce',
+      header: 'PWA with any eCommerce',
       image: 'websitedesign.jpg',
       features: [
         {
@@ -189,7 +189,7 @@ export const state = () => ({
       isFeaturedOrder: 0,
       relatedServices: ['pwa-ecommerce-nz'],
       price: { value: 5900, unit: 'package', discount: 0, flexible: true },
-      keywords: [...commonKeywords, 'pwa for any headless CMS']
+      keywords: [...commonKeywords, 'PWA with any headless CMS']
     },
     {
       id: 'seo-website-package-1',

@@ -29,7 +29,7 @@
     />
     <SectionImageComponent
       pheader="How we work"
-      :pcontent="client.clientprocess"
+      :pimage="client.clientprocessImage"
       class="align-self-center bg-white"
     />
 

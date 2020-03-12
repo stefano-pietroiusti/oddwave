@@ -15,21 +15,24 @@
       psubtitle="Add a knowledge sharing blog to provide insights into your products, services and expertise. Watch this space :)"
       pcontainerclass="borderLeft"
     />
-    <!-- POSTS: Index: {{ $store.state.articles.posts }} <br> Articles: {{ posts }}<br> -->
-    <!-- <section
-      v-for="item in $store.state.articles.posts"
-      :key="item.elements.url.value"
-    >
-      <h3 v-html="item.elements.title.value" />
-      <div v-html="item.elements.body.value" />
-    </section> -->
+    POSTS: Index: {{ $store.state.strapi.articles }}
+    <b-card-group deck>
+      <b-card v-for="(item, i) in $store.state.strapi.articles" :key="item._id" no-body class="card">
+        <b-card-body>
+          <!-- <img v-if="item.image" :alt="item.header" :src="item.image" /> -->
+          <b-card-text>
+            <span class="text-medium">{{ item.Title }}</span>
+          </b-card-text>
+          <div class="text-small">
+            {{ i }}
+          </div>
+        </b-card-body>
+      </b-card>
+    </b-card-group>
 
-    <b-container>
+    <!-- <b-container>
       <b-row>
         <b-col cols="2">
-          <p>
-&nbsp;
-          </p>
           <b-list-group v-b-scrollspy:listgroup-ex>
             <b-list-group-item
               v-for="item in $store.state.articles.posts"
@@ -42,24 +45,19 @@
 
         <b-col cols="10">
           <div id="listgroup-ex" style="position:relative; overflow-y:auto; height:90%">
-            <section
-              v-for="item in $store.state.articles.posts"
-              :key="item.elements.url.value"
-            >
-              <p :id="item.elements.url.value">
-&nbsp;
-              </p>
+            <section v-for="item in $store.state.articles.posts" :key="item.elements.url.value">
+              <p :id="item.elements.url.value">&nbsp;</p>
               <h3 v-html="item.elements.title.value" />
               <div v-html="item.elements.body.value" />
             </section>
           </div>
         </b-col>
       </b-row>
-    </b-container>
+    </b-container> -->
     <!-- <div class="m-0 pb-5 bg-transparent">
       <p id="whyussection" class="p-3" />
       <WhyUsComponent pheader="Why Us?" class="align-self-center" :pfeatures="features" />
-    </div> -->
+    </div>-->
   </div>
 </template>
 <script>
@@ -131,12 +129,12 @@ export default {
   computed: {
     ...mapGetters('products', ['getPoductPortfolios']),
     // ...mapGetters('client', ['getClientFeatures']),
-    ...mapGetters('articles', ['getPosts']),
+    ...mapGetters('strapi', ['getArticles']),
     // features () {
     //   return this.getClientFeatures
     // },
-    posts () {
-      return this.getPosts
+    articles () {
+      return this.getArticles
     },
     productPortfolios () {
       return this.getPoductPortfolios
@@ -164,7 +162,7 @@ export default {
     }
   },
   async fetch ({ store, params }) {
-    await store.dispatch('articles/getSetPosts')
+    await store.dispatch('strapi/getSetArticles')
   },
   mounted () {
     this.$ga.page(this.$route.path)

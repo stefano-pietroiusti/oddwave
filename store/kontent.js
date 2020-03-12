@@ -13,8 +13,11 @@ export const mutations = {
 
 export const actions = {
   async getSetPosts ({ commit }) {
-    const res = await axios.get('https://deliver.kontent.ai/d09c9569-7021-0070-d917-10246623ee2e/items')
-    commit('setPosts', res.data.items)
+    // const res = await axios.get('https://deliver.kontent.ai/d09c9569-7021-0070-d917-10246623ee2e/items')
+    // commit('setPosts', res.data.items)
+
+    const res = await axios.get('https://oddwavestrapi.herokuapp.com/articles')
+    commit('setPosts', res.data)
   }
   // getSetPostsPromise ({ commit }) {
   //   this.$deliveryClient.items()

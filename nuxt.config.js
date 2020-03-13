@@ -62,6 +62,7 @@ const routes = [
 ]
 
 const baseUrl = process.env.BASE_URL || 'http://localhost:3000'
+const cmsBaseUrl = process.env.CMS_BASE_URL || 'http://localhost:1337'
 const contactUrl = process.env.CONTACT_URL || '/api/contact'
 const recaptchaSiteKey = process.env.SITE_KEY || '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
 const author = process.env.AUTHOR || 'https://www.linkedin.com/in/scpietro/'
@@ -72,6 +73,7 @@ const nodeEnv = process.env.NODE_ENV || 'development'
 export default {
   env: {
     baseUrl,
+    cmsBaseUrl,
     contactUrl,
     recaptchaSiteKey,
     author,

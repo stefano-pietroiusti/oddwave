@@ -28,15 +28,13 @@
           lg="6"
           class="p-5"
         >
-          <NuxtLink :to="item.category">
-            <b-card-group deck class="align-items-center">
-              <b-card class="categoryCard">
-                <b-card-body class="align-items-center">
-                  <span class="text-mediumLarge">{{ item.category }}</span>&nbsp;&nbsp;<img v-if="item.imageUrl" :alt="item.category" :src="item.imageUrl" class="categoryImage">
-                </b-card-body>
-              </b-card>
-            </b-card-group>
-          </NuxtLink>
+          <b-card-group deck class="align-items-center">
+            <b-card class="categoryCard">
+              <b-card-body class="align-items-center">
+                <span class="text-mediumLarge">{{ item.category }}</span>&nbsp;&nbsp;<img v-if="item.imageUrl" :alt="item.category" :src="item.imageUrl" class="categoryImage">
+              </b-card-body>
+            </b-card>
+          </b-card-group>
         </b-col>
       </b-row>
     </b-container>

@@ -15,6 +15,7 @@
       psubtitle="Add a knowledge sharing blog to provide insights into your products, services and expertise. Watch this space :)"
       pcontainerclass="borderLeft"
     />
+    <!-- POSTS: categories: {{ categories }} -->
     <!--
     POSTS: Index: {{ categories }}
     POSTS: Index: {{ $store.state.strapi.categories }}
@@ -28,12 +29,15 @@
           lg="6"
           class="p-5"
         >
-          <NuxtLink :to="item.category">
+          <NuxtLink :to="`${item.category}/`">
             <b-card-group deck class="align-items-center">
               <b-card class="categoryCard">
                 <b-card-body class="align-items-center">
                   <span class="text-mediumLarge">{{ item.category }}</span>&nbsp;&nbsp;<img v-if="item.imageUrl" :alt="item.category" :src="item.imageUrl" class="categoryImage">
                 </b-card-body>
+                <b-card-text class="align-items-center">
+                  {{ item.articlesCount }}
+                </b-card-text>
               </b-card>
             </b-card-group>
           </NuxtLink>
@@ -107,15 +111,15 @@ export default {
     }
   },
   computed: {
-    ...mapGetters('strapi', ['getArticles', 'getCategories']),
-    articles () {
-      return this.getArticles
-    },
+    ...mapGetters('strapi', ['getCategories']),
+    // articles () {
+    //   return this.getArticles
+    // },
     categories () {
       return this.getCategories
     },
-    productPortfolios () {
-      return this.getPoductPortfolios
+    articlesByCategory () {
+      return this.categories
     },
     bannerImagePath () {
       if (!this.backgroundurl) {

@@ -15,28 +15,35 @@
       psubtitle="Add a knowledge sharing blog to provide insights into your products, services and expertise. Watch this space :)"
       pcontainerclass="borderLeft"
     />
+    this is _category.vue {{ this.$route.params }}
     <!--
-    POSTS: Index: {{ categories }}
-    POSTS: Index: {{ $store.state.strapi.categories }}
-    POSTS: Index: {{ $store.state.strapi.articlesLoaded }} -->
+        this is _category.vue: {{ this.$route.params.category }} {{ articles }}
+        -->
     <b-container>
       <b-row>
         <b-col
-          v-for="(item) in categories"
-          :key="item.category"
+          v-for="(item) in articles"
+          :key="item.id"
           sm="12"
           lg="6"
           class="p-5"
         >
-          <b-card-group deck class="align-items-center">
-            <b-card class="categoryCard">
-              <b-card-body class="align-items-center">
-                <span class="text-mediumLarge">{{ item.category }}</span>&nbsp;&nbsp;<img v-if="item.imageUrl" :alt="item.category" :src="item.imageUrl" class="categoryImage">
-              </b-card-body>
-            </b-card>
-          </b-card-group>
+          <NuxtLink :to="item.Url">
+            <span class="text-mediumLarge">{{ item.Title }}</span>
+          </NuxtLink>
         </b-col>
       </b-row>
+      {{ article }}
+      <!-- <b-row>
+        <b-col
+
+          sm="12"
+
+          class="p-5"
+        >
+          <NuxtChild :key="$route.params.id" />
+        </b-col>
+      </b-row> -->
     </b-container>
   </div>
 </template>
@@ -105,15 +112,17 @@ export default {
     }
   },
   computed: {
-    ...mapGetters('strapi', ['getArticles', 'getCategories']),
-    articles () {
-      return this.getArticles
-    },
+    ...mapGetters('strapi', ['getCategories', 'getArticlesByCategory']),
     categories () {
       return this.getCategories
     },
-    productPortfolios () {
-      return this.getPoductPortfolios
+    articles () {
+      return this.getArticlesByCategory(String(this.$route.params.category))
+      // return this.getArticlesByCategory(this.$route.params.category)
+    },
+    article () {
+      return this.articles.find(item => item.Url === this.$route.params.id)
+      // return this.getArticlesByCategory(this.$route.params.category)
     },
     bannerImagePath () {
       if (!this.backgroundurl) {
@@ -137,10 +146,10 @@ export default {
       }
     }
   },
-  async fetch ({ store, params }) {
-    await store.dispatch('strapi/getSetArticles')
-    await store.dispatch('strapi/getSetCategories')
-  },
+  // async fetch ({ store, params }) {
+  //   await store.dispatch('strapi/getSetArticles')
+  //   await store.dispatch('strapi/getSetCategories')
+  // },
   mounted () {
     this.$ga.page(this.$route.path)
   }
@@ -157,11 +166,12 @@ export default {
 }
 
 .categoryImage {
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 80px;
+  max-height: 80px;
 }
 .categoryCard {
-  max-width: 500px;
+  /* min-width: 300px;
+  min-height: 100px; */
 }
 
 p.watermark {

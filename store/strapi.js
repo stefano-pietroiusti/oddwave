@@ -33,19 +33,31 @@ export const actions = {
 }
 
 export const getters = {
+  getArticlesCountByCategory: state => (id) => {
+    return state.articles.filter(article => article.categories.find(category => String(category.Category) === id)).length
+    // return state.articles.find(item => item.categories.some(item => item.Category === category)).length
+  },
+  getCategoriesCount: (state) => {
+    return state.categories.length
+  },
   getArticles: (state) => {
     return state
   },
-  getCategories: (state) => {
+  getCategories: (state, getters) => {
     // return [].concat(...state.articles.map(({ categories }) => categories.Category || []))
     return state.categories.map(item => (
       {
         category: item.Category,
-        imageUrl: `${process.env.cmsBaseUrl}` + item.Image[0].url
+        imageUrl: `${process.env.cmsBaseUrl}` + item.Image[0].url,
+        articlesCount: getters.getArticlesCountByCategory(item.Category) || 0,
+        articles: item.articles
       }
     ))
   },
+  getArticlesByCategory: state => (id) => {
+    return state.articles.filter(article => article.categories.find(category => String(category.Category) === id))
+  },
   getArticleById: state => (id) => {
-    return state.articles.find(item => item._id === id)
+    return state.articles.find(item => item.Url + '_' + item.id === id)
   }
 }

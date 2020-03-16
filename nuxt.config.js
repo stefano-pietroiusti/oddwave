@@ -153,7 +153,8 @@ export default {
     { src: '~/plugins/vue-fb-customer-chat', mode: 'client' },
     { src: '~/plugins/vue-swiper', mode: 'client' },
     { src: '~/plugins/nuxt-init.js', mode: 'client' },
-    { src: '~/plugins/sal.js', mode: 'client' }
+    { src: '~/plugins/sal.js', mode: 'client' },
+    { src: '~/plugins/showdown.js', mode: 'client' }
   ],
   devModules: [
     '@nuxtjs/eslint-module'

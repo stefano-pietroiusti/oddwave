@@ -15,11 +15,6 @@
       psubtitle="Add a knowledge sharing blog to provide insights into your products, services and expertise. Watch this space :)"
       pcontainerclass="borderLeft"
     />
-    <!-- POSTS: categories: {{ categories }} -->
-    <!--
-    POSTS: Index: {{ categories }}
-    POSTS: Index: {{ $store.state.strapi.categories }}
-    POSTS: Index: {{ $store.state.strapi.articlesLoaded }} -->
     <b-container>
       <b-row>
         <b-col
@@ -29,18 +24,30 @@
           lg="6"
           class="p-5"
         >
-          <NuxtLink :to="`${item.category}/`">
-            <b-card-group deck class="align-items-center">
-              <b-card class="categoryCard">
+          <b-card-group deck class="align-items-center">
+            <b-card class="categoryCard">
+              <NuxtLink :to="`/blog-articles/${item.category}/`">
                 <b-card-body class="align-items-center">
-                  <span class="text-mediumLarge">{{ item.category }}</span>&nbsp;&nbsp;<img v-if="item.imageUrl" :alt="item.category" :src="item.imageUrl" class="categoryImage">
+                  <span class="text-mediumLarge">{{ item.category }}</span>
+                  <img v-if="item.imageUrl" :alt="item.category" :src="item.imageUrl" class="categoryImage">
                 </b-card-body>
-                <b-card-text class="align-items-center">
-                  {{ item.articlesCount }}
-                </b-card-text>
-              </b-card>
-            </b-card-group>
-          </NuxtLink>
+              </NuxtLink>
+              <b-card-text class="align-items-center">
+                <b-list-group flush>
+                  <b-badge variant="primary" pill flush>
+                    {{ item.articlesCount }}
+                  </b-badge>
+                  <b-list-group-item
+                    v-for="(a) in item.articles"
+                    :key="a.title"
+                    :href="a.url"
+                  >
+                    {{ a.title }}
+                  </b-list-group-item>
+                </b-list-group>
+              </b-card-text>
+            </b-card>
+          </b-card-group>
         </b-col>
       </b-row>
     </b-container>
@@ -112,9 +119,6 @@ export default {
   },
   computed: {
     ...mapGetters('strapi', ['getCategories']),
-    // articles () {
-    //   return this.getArticles
-    // },
     categories () {
       return this.getCategories
     },
@@ -163,8 +167,8 @@ export default {
 }
 
 .categoryImage {
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 100px;
+  max-height: 100px;
 }
 .categoryCard {
   max-width: 500px;

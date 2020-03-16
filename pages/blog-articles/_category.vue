@@ -15,36 +15,44 @@
       psubtitle="Add a knowledge sharing blog to provide insights into your products, services and expertise. Watch this space :)"
       pcontainerclass="borderLeft"
     />
-    this is _category.vue {{ this.$route.params }}
-    <!--
-        this is _category.vue: {{ this.$route.params.category }} {{ articles }}
-        -->
+    <!-- _category.vue: {{ this.$route.params }} -->
     <b-container>
       <b-row>
         <b-col
-          v-for="(item) in articles"
-          :key="item.id"
+          v-for="(item) in categories"
+          :key="item.category"
           sm="12"
           lg="6"
           class="p-5"
         >
-          <NuxtLink :to="item.Url">
-            <span class="text-mediumLarge">{{ item.Title }}</span>
-          </NuxtLink>
+          <b-card-group deck class="align-items-center">
+            <b-card class="categoryCard">
+              <NuxtLink :to="`/blog-articles/${item.category}/`">
+                <b-card-body class="align-items-center">
+                  <span class="text-mediumLarge">{{ item.category }}</span>
+                  <img v-if="item.imageUrl" :alt="item.category" :src="item.imageUrl" class="categoryImage">
+                </b-card-body>
+              </NuxtLink>
+              <b-card-text class="align-items-center">
+                <b-list-group flush>
+                  <b-badge variant="primary" pill flush>
+                    {{ item.articlesCount }}
+                  </b-badge>
+                  <b-list-group-item
+                    v-for="(a) in item.articles"
+                    :key="a.title"
+                    :to="a.url"
+                  >
+                    {{ a.title }}
+                  </b-list-group-item>
+                </b-list-group>
+              </b-card-text>
+            </b-card>
+          </b-card-group>
         </b-col>
       </b-row>
-      {{ article }}
-      <!-- <b-row>
-        <b-col
-
-          sm="12"
-
-          class="p-5"
-        >
-          <NuxtChild :key="$route.params.id" />
-        </b-col>
-      </b-row> -->
     </b-container>
+    <NuxtChild />
   </div>
 </template>
 <script>
@@ -117,12 +125,7 @@ export default {
       return this.getCategories
     },
     articles () {
-      return this.getArticlesByCategory(String(this.$route.params.category))
-      // return this.getArticlesByCategory(this.$route.params.category)
-    },
-    article () {
-      return this.articles.find(item => item.Url === this.$route.params.id)
-      // return this.getArticlesByCategory(this.$route.params.category)
+      return this.getArticlesByCategory(this.$route.params.category)
     },
     bannerImagePath () {
       if (!this.backgroundurl) {
@@ -166,12 +169,11 @@ export default {
 }
 
 .categoryImage {
-  max-width: 80px;
-  max-height: 80px;
+  max-width: 100px;
+  max-height: 100px;
 }
 .categoryCard {
-  /* min-width: 300px;
-  min-height: 100px; */
+  max-width: 500px;
 }
 
 p.watermark {

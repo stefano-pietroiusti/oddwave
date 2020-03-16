@@ -50,14 +50,22 @@ export const getters = {
         category: item.Category,
         imageUrl: `${process.env.cmsBaseUrl}` + item.Image[0].url,
         articlesCount: getters.getArticlesCountByCategory(item.Category) || 0,
-        articles: item.articles
+        articles: item.articles.map(a => ({
+          title: a.Title,
+          url: '/blog-articles/' + item.Category + '/' + a.Url + '-' + a.id + '/',
+          description: a.Metadata.MetaDescription
+        }
+        ))
       }
     ))
   },
   getArticlesByCategory: state => (id) => {
+    // console.log(state.articles.filter(article => article.categories.find(category => String(category.Category) === id)))
     return state.articles.filter(article => article.categories.find(category => String(category.Category) === id))
   },
   getArticleById: state => (id) => {
-    return state.articles.find(item => item.Url + '_' + item.id === id)
+    // console.log(id)
+    // console.log([].concat(state.articles.find(item => item.Url + '-' + item.id === id)))
+    return state.articles.find(item => item.Url + '-' + item.id === id)
   }
 }

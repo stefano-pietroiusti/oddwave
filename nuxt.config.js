@@ -1,4 +1,5 @@
 require('dotenv').config()
+import axios from 'axios'
 
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   router: {
@@ -26,16 +27,6 @@ https://theoddwave.co.nz/products/film-photography-nz/
 https://theoddwave.co.nz/products/consulting-nz/
 https://theoddwave.co.nz/contact-theoddwave-nz/
 */
-
-// const dynamicRoutes = async () => {
-//   const res =  await axios.get('https://deliver.kontent.ai/d09c9569-7021-0070-d917-10246623ee2e/items')
-//   const routes =  [].concat(...res.data.items.map(({ elements }) => '/blog-articles/' +  elements.url.value + '/' || []))
-//   console.log(routes)
-//   return routes
-//     // return res.data.items.map(({ elements }) => {
-//     //   return '/blog-articles/' +  elements.url.value + '/'
-//     // })
-// }
 
 const routes = [
   '/services/website-design-nz/',
@@ -96,7 +87,17 @@ export default {
   },
   mode: 'universal',
   generate: {
-    routes,
+    async routes() {
+        // const articles = await axios.get(`${process.env.cmsBaseUrl}/articles`)
+        const articles = await axios.get('http://localhost:1337/articles')
+        console.log('articles:', articles)
+        dynamicRoutes = articles.map(a => ({
+          url: '/blog-articles/' + item.Category + '/' + a.Url + '-' + a.id + '/'}))
+        // console.log('dynamicRoutes:', dynamicRoutes)
+        // console.log('routes:', routes)
+        // console.log('ALL routes:', [...routes, ...dynamicRoutes])
+        return [...routes, ...dynamicRoutes]
+    },
     fallback: true
   },
   ...routerBase,

@@ -10,17 +10,8 @@ export const mutations = {
 }
 
 export const actions = {
-  async nuxtServerInit({dispatch, commit }) {
-    commit('setLoaded', true)
-    await dispatch('articles/getSetPosts');
-    
-    // return Promise.all([
-    //   dispatch('articles/getSetPosts', context)
-    // ]);
-
-    // return axios.get('https://deliver.kontent.ai/d09c9569-7021-0070-d917-10246623ee2e/items').then((res) => {
-    //     commit('articles/setPosts', res.data)
-    //   })
-
+  async nuxtServerInit({dispatch }) {
+    await dispatch('strapi/getSetArticles')
+    await dispatch('strapi/getSetCategories')
   }
 }

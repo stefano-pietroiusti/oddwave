@@ -17,19 +17,18 @@
     />
     <b-container>
       <b-row>
-        <b-col
-          v-for="(item) in categories"
-          :key="item.category"
-          sm="12"
-          lg="6"
-          class="p-5"
-        >
+        <b-col v-for="(item) in categories" :key="item.category" sm="12" lg="6" class="p-5">
           <b-card-group deck class="align-items-center">
             <b-card class="categoryCard">
               <NuxtLink :to="`/blog-articles/${item.category}/`">
                 <b-card-body class="align-items-center">
                   <span class="text-mediumLarge">{{ item.category }}</span>
-                  <img v-if="item.imageUrl" :alt="item.category" :src="item.imageUrl" class="categoryImage">
+                  <img
+                    v-if="item.imageUrl"
+                    :alt="item.category"
+                    :src="item.imageUrl"
+                    class="categoryImage"
+                  >
                 </b-card-body>
               </NuxtLink>
               <b-card-text class="align-items-center">
@@ -118,12 +117,15 @@ export default {
     }
   },
   computed: {
-    ...mapGetters('strapi', ['getCategories']),
+    ...mapGetters('strapi', ['getCategories', 'getArticlesCount']),
     categories () {
       return this.getCategories
     },
     articlesByCategory () {
       return this.categories
+    },
+    articlesCount () {
+      return this.getArticlesCount
     },
     bannerImagePath () {
       if (!this.backgroundurl) {

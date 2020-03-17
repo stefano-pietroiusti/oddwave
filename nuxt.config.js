@@ -88,14 +88,11 @@ export default {
   mode: 'universal',
   generate: {
     async routes() {
-        // const articles = await axios.get(`${process.env.cmsBaseUrl}/articles`)
-        const articles = await axios.get('http://localhost:1337/articles')
-        console.log('articles:', articles)
-        dynamicRoutes = articles.map(a => ({
-          url: '/blog-articles/' + item.Category + '/' + a.Url + '-' + a.id + '/'}))
-        // console.log('dynamicRoutes:', dynamicRoutes)
-        // console.log('routes:', routes)
-        // console.log('ALL routes:', [...routes, ...dynamicRoutes])
+        const categories = await axios.get(`${cmsBaseUrl}/categories`)
+        console.log('getting dynamic routes from: ', cmsBaseUrl)
+        const dynamicRoutes = categories.data.map(item => (
+          item.articles.map(a => ('/blog-articles/' + item.Category + '/' + a.Url + '-' + a.id + '/'))
+        )).flat()
         return [...routes, ...dynamicRoutes]
     },
     fallback: true
@@ -180,7 +177,7 @@ export default {
     // }]
   ],
   'google-gtag': {
-    id: 'UA-148813087-1',
+    id: 'UA-148813087-1', //GTM-TF58Q52 / UA-148813087-1 with AW-706272574???
     config: {
       anonymize_ip: true, // anonymize IP 
       send_page_view: false, // might be necessary to avoid duplicated page track on page reload

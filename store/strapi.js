@@ -23,16 +23,12 @@ export const mutations = {
 
 export const actions = {
   async getSetArticles ({ commit }) {
-    if (this.getArticlesCount === 0) {
-      const res = await axios.get(`${process.env.cmsBaseUrl}/articles`)
-      commit('setPosts', res.data)
-    }
+    const res = await axios.get(`${process.env.cmsBaseUrl}/articles`)
+    commit('setPosts', res.data)
   },
   async getSetCategories ({ commit }) {
-    if (this.getCategoriesCount === 0) {
-      const res = await axios.get(`${process.env.cmsBaseUrl}/categories`)
-      commit('setCategories', res.data)
-    }
+    const res = await axios.get(`${process.env.cmsBaseUrl}/categories`)
+    commit('setCategories', res.data)
   }
 }
 

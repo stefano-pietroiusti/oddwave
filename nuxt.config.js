@@ -1,4 +1,5 @@
 require('dotenv').config()
+import axios from 'axios'
 
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   router: {
@@ -27,16 +28,6 @@ https://theoddwave.co.nz/products/consulting-nz/
 https://theoddwave.co.nz/contact-theoddwave-nz/
 */
 
-// const dynamicRoutes = async () => {
-//   const res =  await axios.get('https://deliver.kontent.ai/d09c9569-7021-0070-d917-10246623ee2e/items')
-//   const routes =  [].concat(...res.data.items.map(({ elements }) => '/blog-articles/' +  elements.url.value + '/' || []))
-//   console.log(routes)
-//   return routes
-//     // return res.data.items.map(({ elements }) => {
-//     //   return '/blog-articles/' +  elements.url.value + '/'
-//     // })
-// }
-
 const routes = [
   '/services/website-design-nz/',
   '/services/pwa-ecommerce-nz/',
@@ -62,6 +53,7 @@ const routes = [
 ]
 
 const baseUrl = process.env.BASE_URL || 'http://localhost:3000'
+const cmsBaseUrl = process.env.CMS_BASE_URL || 'http://localhost:1337'
 const contactUrl = process.env.CONTACT_URL || '/api/contact'
 const recaptchaSiteKey = process.env.SITE_KEY || '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
 const author = process.env.AUTHOR || 'https://www.linkedin.com/in/scpietro/'
@@ -72,6 +64,7 @@ const nodeEnv = process.env.NODE_ENV || 'development'
 export default {
   env: {
     baseUrl,
+    cmsBaseUrl,
     contactUrl,
     recaptchaSiteKey,
     author,
@@ -94,7 +87,14 @@ export default {
   },
   mode: 'universal',
   generate: {
-    routes,
+    async routes() {
+        const categories = await axios.get(`${cmsBaseUrl}/categories`)
+        console.log('getting dynamic routes from: ', cmsBaseUrl)
+        const dynamicRoutes = categories.data.map(item => (
+          item.articles.map(a => ('/blog-articles/' + item.Category + '/' + a.Url + '-' + a.id + '/'))
+        )).flat()
+        return [...routes, ...dynamicRoutes]
+    },
     fallback: true
   },
   ...routerBase,
@@ -150,7 +150,9 @@ export default {
     { src: '~/plugins/lax.js', mode: 'client' },
     { src: '~/plugins/vue-fb-customer-chat', mode: 'client' },
     { src: '~/plugins/vue-swiper', mode: 'client' },
-    { src: '~/plugins/nuxt-init.js', mode: 'client' }
+    { src: '~/plugins/nuxt-init.js', mode: 'client' },
+    { src: '~/plugins/sal.js', mode: 'client' },
+    { src: '~/plugins/showdown.js', mode: 'client' }
   ],
   devModules: [
     '@nuxtjs/eslint-module'
@@ -175,7 +177,7 @@ export default {
     // }]
   ],
   'google-gtag': {
-    id: 'UA-148813087-1',
+    id: 'UA-148813087-1', //GTM-TF58Q52 / UA-148813087-1 with AW-706272574???
     config: {
       anonymize_ip: true, // anonymize IP 
       send_page_view: false, // might be necessary to avoid duplicated page track on page reload

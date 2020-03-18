@@ -53,7 +53,7 @@
             </li>
           </ul>
         </b-col>
-        <b-col>
+        <b-col xs="12" sm="12" md="6" lg="6">
           <h2 class="pt-5">
             Services
           </h2>
@@ -65,18 +65,11 @@
             </li>
           </ul>
         </b-col>
-        <!-- <b-col>
-          <h2 class="pt-5">
-            Pricing
-          </h2>
-          <ul class="pl-2">
-            <li v-for="item in products" :key="item.id">
-              <nuxt-link :to="'/products/' + item.id + '/'">
-                {{ item.title }}
-              </nuxt-link>
-            </li>
-          </ul>
-        </b-col> -->
+        <b-col xs="12" sm="12" md="5" lg="5">
+          <a href="https://www.aucklandchamber.co.nz/events-training/events/" alt="Auckland Business Chamber is New Zealand’s largest business organisation and part of the New Zealand Chambers of Commerce network. Successful business ensures strong and successful communities, and the Chamber contributes to this through support and advocacy to deliver the best platform for business to operate from.">
+            <img style="width: 100%" src="/imgs/company/auckland-chamber-business-member.png" alt="Auckland Business Chamber is New Zealand’s largest business organisation and part of the New Zealand Chambers of Commerce network. Successful business ensures strong and successful communities, and the Chamber contributes to this through support and advocacy to deliver the best platform for business to operate from.">
+          </a>
+        </b-col>
       </b-row>
       <b-row>
         <b-col class="clearfix" />

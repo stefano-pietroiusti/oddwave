@@ -73,13 +73,16 @@
           >
             {{ item.title }}
           </b-dropdown-item>
-        </b-nav-item-dropdown> -->
+        </b-nav-item-dropdown>-->
 
         <b-nav-item to="/portfolio/" exact exact-active-class="underline">
           Portfolio
         </b-nav-item>
         <b-nav-item to="/blog-articles/" exact exact-active-class="underline">
           Blog
+          <b-badge variant="primary" pill flush>
+            {{ articlesCount }}
+          </b-badge>
         </b-nav-item>
         <b-nav-item to="/contact-theoddwave-nz/" exact exact-active-class="underline">
           Contact us
@@ -102,7 +105,10 @@
             variant="rwcblue"
             class="px-3 whyusbutton justify-content-center animated pulse delay-1s text-white"
           >
-            <nuxt-link :to="{ path: '/',hash:'#whyussection'}" class="text-white text-medium">
+            <nuxt-link
+              :to="{ path: '/',hash:'#whyussection'}"
+              class="text-white text-medium"
+            >
               Why Us?
             </nuxt-link>
           </b-button>
@@ -146,6 +152,7 @@ export default {
     ...mapGetters('services', ['serviceLinks']),
     // ...mapGetters('products', ['productLinks']),
     ...mapGetters('client', ['getClient']),
+    ...mapGetters('strapi', ['getArticlesCount']),
     callAction () {
       return {
         telephone: this.getClient.telephone,
@@ -155,6 +162,9 @@ export default {
     services () {
       const services = this.serviceLinks
       return services
+    },
+    articlesCount () {
+      return this.getArticlesCount
     },
     // products () {
     //   const products = this.productLinks

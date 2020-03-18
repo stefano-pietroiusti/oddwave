@@ -109,8 +109,8 @@ export const state = () => ({
       sameAs: [
         `${process.env.author}`
       ],
-      jobTitle: 'Technical Lead',
-      description: 'Experienced IT generalist and tech enthusiast with 20+ years IT experience across web, data, cloud, search & mentoring.',
+      jobTitle: 'Principal Engineer',
+      description: 'Experienced business tech enthusiast with 20+ years bringing together the best of web, data, cloud & search.',
       image: '/imgs/stefano-pietroiusti.jpg'
     }
     ],

@@ -269,15 +269,6 @@ export default {
         this.showSubmitError()
       }
     },
-    // async onError (error) {
-    //   console.log(error)
-    //   this.showRecaptchaError()
-    //   await this.$recaptcha.init()
-    // },
-    // onSuccess (token) {},
-    // onExpired () {
-    //   this.showRecaptchaError()
-    // },
     async submitForm (isHuman) {
       try {
         const response = await this.$axios.$post(this.getBase, {
@@ -287,8 +278,9 @@ export default {
           this.$ga.event('form', 'submit', 'contactServiceError')
           this.showSubmitError()
         } else {
-          this.$ga.event('form', 'submit', 'contact')
-          this.$gtag('event', 'conversion', { 'send_to': 'AW-706272574/3sLuCKXj1qwBEL6649AC' })
+          this.$ga.event('form', 'submit', 'contact') // GOOGLE ANALYTICS TRACKING
+          // this.$gtag('event', 'conversion', { 'send_to': 'AW-706272574/3sLuCKXj1qwBEL6649AC' }) //GOOGLE ADS TRACKING
+          this.$gtm.push({ event: 'contactsubmit', ...this.form }) // GOOGLE TAG MANAGER TRACKING
         }
       } catch (error) {
         this.$ga.event('form', 'submit', 'contactServiceError')

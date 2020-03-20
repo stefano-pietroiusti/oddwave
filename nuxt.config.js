@@ -190,6 +190,7 @@ export default {
       // start_url: 'https://theoddwave.herokuapp.com/',
     },
     // meta: { theme_color: '#000000', lang: 'en', ogHost: `${baseUrl}`, nativeUI: true },
+    meta: { theme_color: '#000000', lang: 'en', nativeUI: true },
     workbox: {
       runtimeCaching: [
         {

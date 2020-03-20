@@ -187,20 +187,16 @@ export default {
       lang: 'en',
       display: 'standalone'
     },
+    meta: { theme_color: '#000000', lang: 'en', ogHost: `${baseUrl}`, nativeUI: true },
     workbox: {
-      runtimeCaching: [
-        {
-          urlPattern: 'https://fonts.googleapis.com/.*',
-          handler: 'cacheFirst',
-          method: 'GET',
-          strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
-        }
-        // {
-        //   urlPattern: 'https://cdn.snipcart.com/.*',
-        //   method: 'GET',
-        //   strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
-        // }
-      ]
+      // runtimeCaching: [
+      //   {en
+      //     urlPattern: 'https://fonts.googleapis.com/.*',
+      //     handler: 'cacheFirst',
+      //     method: 'GET',
+      //     strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
+      //   }
+      // ]
     }
   },
   gtm: {

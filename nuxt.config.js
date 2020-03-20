@@ -148,7 +148,7 @@ export default {
     '~/plugins/jsonld',
     { src: '~/plugins/vue-notifications', mode: 'client' },
     { src: '~/plugins/lax.js', mode: 'client' },
-    { src: '~/plugins/vue-fb-customer-chat', mode: 'client' },
+    // { src: '~/plugins/vue-fb-customer-chat', mode: 'client' },
     { src: '~/plugins/vue-swiper', mode: 'client' },
     { src: '~/plugins/nuxt-init.js', mode: 'client' },
     { src: '~/plugins/sal.js', mode: 'client' },
@@ -185,21 +185,21 @@ export default {
       name: 'The Odd Wave PWA StoreFront',
       short_name: 'The Odd Wave PWA',
       lang: 'en',
-      display: 'standalone',
-      theme_color: '#000000',
-      start_url: 'https://theoddwave.herokuapp.com/',
+      display: 'standalone'
+      // theme_color: '#000000',
+      // start_url: 'https://theoddwave.herokuapp.com/',
     },
     // meta: { theme_color: '#000000', lang: 'en', ogHost: `${baseUrl}`, nativeUI: true },
-    // workbox: {
-    //   // runtimeCaching: [
-    //   //   {en
-    //   //     urlPattern: 'https://fonts.googleapis.com/.*',
-    //   //     handler: 'cacheFirst',
-    //   //     method: 'GET',
-    //   //     strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
-    //   //   }
-    //   // ]
-    // }
+    workbox: {
+      runtimeCaching: [
+        {
+          urlPattern: 'https://fonts.googleapis.com/.*',
+          handler: 'cacheFirst',
+          method: 'GET',
+          strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
+        }
+      ]
+    }
   },
   gtm: {
     id: 'GTM-TF58Q52'
@@ -327,6 +327,15 @@ export default {
       //   'b-carousel-slide': 'img-src',
       //   'b-embed': 'src'
       // }
+    }
+  },
+  /*
+  ** Allow dev tools in production
+  */
+  vue: {
+    config: {
+      productionTip: false,
+      devtools: true
     }
   }
 }

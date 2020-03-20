@@ -163,7 +163,7 @@ export default {
   // ],
   modules: [
     'bootstrap-vue/nuxt',
-    '@nuxtjs/pwa',
+
     '@nuxtjs/axios',
     'nuxt-responsive-loader',
     '@nuxtjs/dotenv',
@@ -179,6 +179,7 @@ export default {
     // ['@nuxtjs/google-tag-manager', {
     //   id: 'GTM-PJ4J4WD'
     // }]
+    '@nuxtjs/pwa'
   ], pwa: {
     manifest: {
       name: 'The Odd Wave PWA StoreFront Base',

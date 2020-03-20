@@ -182,10 +182,11 @@ export default {
     '@nuxtjs/pwa'
   ], pwa: {
     manifest: {
-      name: 'The Odd Wave PWA StoreFront Base',
+      name: 'The Odd Wave PWA StoreFront',
       short_name: 'The Odd Wave PWA',
       lang: 'en',
       display: 'standalone'
+
     },
     meta: { theme_color: '#000000', lang: 'en', ogHost: `${baseUrl}`, nativeUI: true },
     workbox: {

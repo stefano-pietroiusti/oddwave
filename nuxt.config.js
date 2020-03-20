@@ -53,7 +53,7 @@ const routes = [
 ]
 
 const baseUrl = process.env.BASE_URL || 'http://localhost:3000'
-const cmsBaseUrl = process.env.CMS_BASE_URL || 'http://localhost:1337'
+const cmsBaseUrl = process.env.CMS_BASE_URL || 'https://cms.theoddwave.co.nz' || 'http://localhost:1337'
 const contactUrl = process.env.CONTACT_URL || '/api/contact'
 const recaptchaSiteKey = process.env.SITE_KEY || '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
 const author = process.env.AUTHOR || 'https://www.linkedin.com/in/scpietro/'
@@ -88,12 +88,12 @@ export default {
   mode: 'universal',
   generate: {
     async routes() {
-        const categories = await axios.get(`${cmsBaseUrl}/categories`)
-        console.log('getting dynamic routes from: ', cmsBaseUrl)
-        const dynamicRoutes = categories.data.map(item => (
-          item.articles.map(a => ('/blog-articles/' + item.Category + '/' + a.Url + '-' + a.id + '/'))
-        )).flat()
-        return [...routes, ...dynamicRoutes]
+      const categories = await axios.get(`${cmsBaseUrl}/categories`)
+      console.log('getting dynamic routes from: ', cmsBaseUrl)
+      const dynamicRoutes = categories.data.map(item => (
+        item.articles.map(a => ('/blog-articles/' + item.Category + '/' + a.Url + '-' + a.id + '/'))
+      )).flat()
+      return [...routes, ...dynamicRoutes]
     },
     fallback: true
   },
@@ -155,15 +155,16 @@ export default {
     { src: '~/plugins/showdown.js', mode: 'client' }
   ],
   devModules: [
-    '@nuxtjs/eslint-module'
-  ],
-  buildModules: [
+    '@nuxtjs/eslint-module',
     '@nuxtjs/gtm'
   ],
+  // buildModules: [
+  //   '@nuxtjs/gtm'
+  // ],
   modules: [
     'bootstrap-vue/nuxt',
+    '@nuxtjs/pwa',
     '@nuxtjs/axios',
-    // 'nuxt-svg-loader',
     'nuxt-responsive-loader',
     '@nuxtjs/dotenv',
     '@nuxtjs/robots',
@@ -173,52 +174,47 @@ export default {
     ['@nuxtjs/google-analytics', {
       id: 'UA-148813087-1'
     }],
+    // 'kentico-kontent-nuxt-module'
     // '@nuxtjs/google-gtag',
-    'kentico-kontent-nuxt-module'
     // ['@nuxtjs/google-tag-manager', {
     //   id: 'GTM-PJ4J4WD'
     // }]
-  ],
+  ], pwa: {
+    manifest: {
+      name: 'The Odd Wave PWA StoreFront Base',
+      short_name: 'The Odd Wave PWA',
+      lang: 'en',
+      display: 'standalone'
+    },
+    workbox: {
+      runtimeCaching: [
+        {
+          urlPattern: 'https://fonts.googleapis.com/.*',
+          handler: 'cacheFirst',
+          method: 'GET',
+          strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
+        }
+        // {
+        //   urlPattern: 'https://cdn.snipcart.com/.*',
+        //   method: 'GET',
+        //   strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
+        // }
+      ]
+    }
+  },
   gtm: {
     id: 'GTM-TF58Q52'
   },
-  // 'google-gtag': {
-  //   id: 'UA-148813087-1', //GTM-TF58Q52 / UA-148813087-1 with AW-706272574???
-  //   config: {
-  //     anonymize_ip: true, // anonymize IP 
-  //     send_page_view: false, // might be necessary to avoid duplicated page track on page reload
-  //     linker: {
-  //       domains: ['theoddwave.co.nz']
-  //     }
-  //   },
-  //   debug: false, // enable to track in dev mode
-  //   disableAutoPageTrack: true, // disable if you don't want to track each page route with router.afterEach(...).
-  //   additionalAccounts: [{
-  //     id: 'AW-706272574', // required if you are adding additional accounts
-  //     config: {
-  //       send_page_view: true // optional configurations
-  //     }
-  //   }]
+  // kenticokontent: {
+  //   projectId: 'd09c9569-7021-0070-d917-10246623ee2e',
+  //   enableAdvancedLogging: false,
+  //   previewApiKey: 'ew0KICAiYWxnIjogIkhTMjU2IiwNCiAgInR5cCI6ICJKV1QiDQp9.ew0KICAianRpIjogImQ0MjA4MGU3YzRmYTRlNDZiYzY1ZmEwMzM1MWMxNmY1IiwNCiAgImlhdCI6ICIxNTgxNDU0NTQyIiwNCiAgImV4cCI6ICIxOTI3MDU0NTQyIiwNCiAgInByb2plY3RfaWQiOiAiZDA5Yzk1Njk3MDIxMDA3MGQ5MTcxMDI0NjYyM2VlMmUiLA0KICAidmVyIjogIjEuMC4wIiwNCiAgImF1ZCI6ICJwcmV2aWV3LmRlbGl2ZXIua2VudGljb2Nsb3VkLmNvbSINCn0.XRZ_rUML9yBwnrd6qKPt0_IvSUa4TA4PuyqmSzwMfBc',
+  //   enablePreviewMode: false,
+  //   baseUrl: 'https://deliver.kontent.ai/',
+  //   securedApiKey: 'xxx',
+  //   enableSecuredMode: false
   // },
-  kenticokontent: {
-    projectId: 'd09c9569-7021-0070-d917-10246623ee2e',
-    enableAdvancedLogging: false,
-    previewApiKey: 'ew0KICAiYWxnIjogIkhTMjU2IiwNCiAgInR5cCI6ICJKV1QiDQp9.ew0KICAianRpIjogImQ0MjA4MGU3YzRmYTRlNDZiYzY1ZmEwMzM1MWMxNmY1IiwNCiAgImlhdCI6ICIxNTgxNDU0NTQyIiwNCiAgImV4cCI6ICIxOTI3MDU0NTQyIiwNCiAgInByb2plY3RfaWQiOiAiZDA5Yzk1Njk3MDIxMDA3MGQ5MTcxMDI0NjYyM2VlMmUiLA0KICAidmVyIjogIjEuMC4wIiwNCiAgImF1ZCI6ICJwcmV2aWV3LmRlbGl2ZXIua2VudGljb2Nsb3VkLmNvbSINCn0.XRZ_rUML9yBwnrd6qKPt0_IvSUa4TA4PuyqmSzwMfBc',
-    enablePreviewMode: false,
-    baseUrl: 'https://deliver.kontent.ai/',
-    securedApiKey: 'xxx',
-    enableSecuredMode: false
-  },
   webfontloader: {
-    // google: {
-    //   families: [
-    //     'Montserrat:400,700',
-    //     'Lato'
-    //   ],
-    //   urls: [
-    //     'https://fonts.googleapis.com/css?family=Montserrat:400,700|Lato&display=swap'
-    //   ]
-    // },
     custom: {
       families: [
         'Montserrat:100, 400,700',

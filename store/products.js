@@ -377,7 +377,7 @@ export const state = () => ({
       price: { value: 120, unit: 'hour', discount: 0 },
       isFeatured: true,
       isFeaturedOrder: 5,
-      relatedServices: ['software-engineering-nz'],
+      relatedServices: ['integration-specialists-nz'],
       keywords: [...commonKeywords, 'hourly consulting services']
     },
     {
@@ -414,7 +414,7 @@ export const state = () => ({
       price: { value: 120, unit: 'hour', discount: 0 },
       isFeatured: true,
       isFeaturedOrder: 5,
-      relatedServices: ['software-engineering-nz'],
+      relatedServices: ['integration-specialists-nz'],
       keywords: [...commonKeywords, 'hourly consulting services']
     }
   ]

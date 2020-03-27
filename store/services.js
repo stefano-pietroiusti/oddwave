@@ -3,6 +3,286 @@ const commonKeywords = [
 export const state = () => ({
   services: [
     {
+      id: 'integration-specialists-nz',
+      variant: 'rwcgreen',
+      animate: 'bounceInLeft',
+      title: 'Integration Specialists & Software Engineering North Shore Auckland',
+      linkTitle: 'System Integration Services',
+      maori: 'akoako',
+      description: 'System Integration services to help you out with adhoc computing, design, development, automation, data engineering, cloud engineering, cloud development and data analysis.',
+      landing: { header: 'System Integration', content: 'Partner with us for adhoc computing, design, development, automation, data engineering, cloud engineering and data analysis.' },
+      header: 'System Integration Services',
+      icon: ['fab', 'dev'],
+      image: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="92" height="92" viewBox="0 0 92 92"><defs><style>.j{clip-path:url(#i);}</style><clipPath id="i"><rect class="j" width="92" height="92" transform="translate(336 1485)"/></clipPath></defs><g transform="translate(-336 -1485)"><g transform="translate(336 1484.96)"><path d="M10.595,33.61a1.347,1.347,0,0,0,1.9-1.9L9.229,28.436,12.5,25.168a1.347,1.347,0,1,0-1.9-1.9L6.373,27.485a1.346,1.346,0,0,0,0,1.9Zm0,0"/><path d="M23.956,28.436l-3.269,3.269a1.347,1.347,0,1,0,1.9,1.9l4.222-4.222a1.346,1.346,0,0,0,0-1.9l-4.222-4.222a1.346,1.346,0,1,0-1.9,1.9Zm0,0"/><path d="M14.586,33.911a1.346,1.346,0,0,0,1.746-.761l3.317-8.443a1.346,1.346,0,1,0-2.506-.985l-3.317,8.443a1.347,1.347,0,0,0,.761,1.746Zm0,0"/><path d="M8.087,41.9h9.071a1.347,1.347,0,0,0,0-2.693H8.087a1.347,1.347,0,0,0,0,2.693Zm0,0"/><path d="M38.05,39.211H22.1a1.347,1.347,0,0,0,0,2.693H38.05a1.347,1.347,0,1,0,0-2.693Zm0,0"/><path d="M8.087,47.583h3.864a1.347,1.347,0,0,0,0-2.693H8.087a1.347,1.347,0,0,0,0,2.693Zm0,0"/><path d="M33.124,44.89a1.347,1.347,0,0,0,0,2.693h2.353a1.347,1.347,0,1,0,0-2.693Zm0,0"/><path d="M29.58,46.236a1.347,1.347,0,0,0-1.346-1.346H16.676a1.347,1.347,0,0,0,0,2.693H28.234A1.347,1.347,0,0,0,29.58,46.236Zm0,0"/><path d="M38.4,46.236a1.347,1.347,0,0,0,1.346,1.347h4.407a1.347,1.347,0,1,0,0-2.693H39.746A1.347,1.347,0,0,0,38.4,46.236Zm0,0"/><path d="M31.067,29.517h4.649a1.347,1.347,0,1,0,0-2.693H31.067a1.347,1.347,0,1,0,0,2.693Zm0,0"/><path d="M40.923,29.517H69.287a1.347,1.347,0,0,0,0-2.693H40.923a1.347,1.347,0,1,0,0,2.693Zm0,0"/><path d="M64.979,32.748H53.489a1.347,1.347,0,0,0,0,2.693h11.49a1.347,1.347,0,0,0,0-2.693Zm0,0"/><path d="M49.181,32.748h-3.95a1.347,1.347,0,0,0,0,2.693h3.95a1.347,1.347,0,0,0,0-2.693Zm0,0"/><path d="M31.067,35.441h9.676a1.347,1.347,0,0,0,0-2.693H31.067a1.347,1.347,0,1,0,0,2.693Zm0,0"/><path d="M28.251,50.521H19.18a1.346,1.346,0,1,0,0,2.693h9.07a1.346,1.346,0,1,0,0-2.693Zm0,0"/><path d="M15.056,50.521H8.087a1.346,1.346,0,1,0,0,2.693h6.969a1.346,1.346,0,1,0,0-2.693Zm0,0"/><path d="M44.693,50.521H32.844a1.346,1.346,0,1,0,0,2.693H44.693a1.346,1.346,0,0,0,0-2.693Zm0,0"/><path d="M60.717,43.6H54.237a1.347,1.347,0,0,0,0,2.693h6.479a1.347,1.347,0,0,0,0-2.693Zm0,0"/><path d="M71.96,46.3h9.147a1.347,1.347,0,1,0,0-2.693H71.96a1.347,1.347,0,0,0,0,2.693Zm0,0"/><path d="M67.386,43.6h-2.1a1.347,1.347,0,1,0,0,2.693h2.1a1.347,1.347,0,0,0,0-2.693Zm0,0"/><path d="M54.237,60.971h6.479a1.346,1.346,0,0,0,0-2.693H54.237a1.346,1.346,0,0,0,0,2.693Zm0,0"/><path d="M71.96,60.971h9.147a1.346,1.346,0,1,0,0-2.693H71.96a1.346,1.346,0,0,0,0,2.693Zm0,0"/><path d="M65.29,60.971h2.1a1.346,1.346,0,1,0,0-2.693h-2.1a1.346,1.346,0,0,0,0,2.693Zm0,0"/><path d="M60.717,72.952H54.237a1.346,1.346,0,1,0,0,2.693h6.479a1.346,1.346,0,1,0,0-2.693Zm0,0"/><path d="M81.106,72.952H71.96a1.346,1.346,0,1,0,0,2.693h9.147a1.346,1.346,0,1,0,0-2.693Zm0,0"/><path d="M67.386,72.952h-2.1a1.346,1.346,0,1,0,0,2.693h2.1a1.346,1.346,0,1,0,0-2.693Zm0,0"/><path d="M86.075.09H5.926A5.933,5.933,0,0,0,0,6.016V71.165a5.933,5.933,0,0,0,5.926,5.926h5.067a1.346,1.346,0,1,0,0-2.693H5.926a3.236,3.236,0,0,1-3.233-3.233V66.057H51.747v2.321H50.68a2.651,2.651,0,0,0-2.648,2.648V74.4H19.18a1.346,1.346,0,1,0,0,2.693H32.126V81.92H28.06a4.924,4.924,0,0,0-4.918,4.918v2.909a2.246,2.246,0,0,0,2.244,2.244H66.512a2.246,2.246,0,0,0,2.244-2.244V86.838a4.924,4.924,0,0,0-4.918-4.918H59.772v-1.7H84.664a2.651,2.651,0,0,0,2.648-2.648v-.634a5.934,5.934,0,0,0,4.586-5.77L92,6.015A5.931,5.931,0,0,0,86.075.09ZM50.725,62.852V56.4H84.619v6.454ZM54.44,53.7V50.872H80.9V53.7ZM80.9,65.544v2.834H54.44V65.544ZM34.818,77.091H48.032v.479a2.651,2.651,0,0,0,2.648,2.648h6.4v1.7H34.818Zm29.02,7.522a2.228,2.228,0,0,1,2.225,2.225V89.3H25.834v-2.46a2.228,2.228,0,0,1,2.226-2.225Zm20.781-7.089H50.725V71.071H84.619Zm4.586-6.359A3.234,3.234,0,0,1,87.312,74.1V71.025a2.651,2.651,0,0,0-2.648-2.648H83.6V66.057h5.609Zm0-7.8H87.268c.027-.152.044-7.012.044-7.012A2.651,2.651,0,0,0,84.664,53.7H83.6V50.872h1.068a2.652,2.652,0,0,0,2.648-2.648V41.679a2.652,2.652,0,0,0-2.648-2.648H77.059a1.347,1.347,0,0,0,0,2.693h7.56v6.454H50.725V41.724H68.681a1.347,1.347,0,0,0,0-2.693h-18a2.651,2.651,0,0,0-2.648,2.648v6.544a2.651,2.651,0,0,0,2.648,2.648h1.068V53.7H50.68a2.651,2.651,0,0,0-2.648,2.648s.017,6.86.044,7.012H2.693V18.405H89.205Zm0-47.653H2.792v-9.7A3.236,3.236,0,0,1,6.025,2.783H85.973a3.236,3.236,0,0,1,3.233,3.233Zm0,0"/><path d="M9.93,5.258a3.951,3.951,0,1,0,3.952,3.951A3.955,3.955,0,0,0,9.93,5.258Zm0,5.21a1.259,1.259,0,1,1,1.259-1.259A1.26,1.26,0,0,1,9.93,10.468Zm0,0"/><path d="M19.99,5.258a3.951,3.951,0,1,0,3.951,3.951A3.956,3.956,0,0,0,19.99,5.258Zm0,5.21a1.259,1.259,0,1,1,1.259-1.259A1.26,1.26,0,0,1,19.99,10.468Zm0,0"/><path d="M30.05,5.258A3.951,3.951,0,1,0,34,9.209,3.955,3.955,0,0,0,30.05,5.258Zm0,5.21a1.259,1.259,0,1,1,1.259-1.259A1.26,1.26,0,0,1,30.05,10.468Zm0,0"/></g></g></svg>',
+      backgroundImage: { color1: 'rgba(46, 217, 195, 1)', color2: 'rgba(46, 217, 195, 1)', url: 'webdesign.jpg', height: 'auto' },
+      headerStyle: { bgStyle: 'text-secondary text-center' },
+      subheader: 'Reliable engineering from solid work experiences to help your business grow',
+      subheaderStyle: { color: 'text-primary', buttonVariant: 'info' },
+      content:
+        [
+          {
+            inlineImage: 'system-integration.png',
+            inlineImageText: 'System Integration solving problems',
+            inlineImageStyle: 'inlineImage50',
+            inlineImageCenterFull: true
+          },
+          {
+            header: "WE'RE EXPERIENCED TECHNOLOGY GENERALISTS WHO ABIDE BY",
+            list: [
+              'Best practices & standards',
+              'Research & experimentation',
+              'Performance',
+              'Creativeness',
+              'Usability',
+              'Transparency', 'Continuous Improvement'],
+            icon: ['fab', 'servicestack']
+          },
+          {
+            header: 'WE SPECIALIZE IN:',
+            list: [
+              'Modern Development, Integration, Automation and Data Engineering',
+              'Headless CMS & Content as a Service, PWA Ecommerce, REST APIs, GraphQL APIs',
+              'Data Management & Analysis',
+              'Cloud Services (Azure, AWS, Google)'],
+            icon: ['fab', 'servicestack']
+          },
+          {
+            header: 'SYSTEM INTEGRATION SERVICES',
+            text: 'Businesses rely on systems to keep it running no matter what the business size. Systems include accounting, Customer Relationship Management Systems( CRM), supply chain management systems, human resource systems, and so on. For businesses, systems can be simple but effective. As a business grows, so do the complexities, systems become difficult to navigate, and data sharing becomes problematic between them.'
+          },
+          {
+            header: 'WHAT IS SYSTEM INTEGRATION?',
+            text: 'System integration is the process of linking systems in an organization so data can be shared between them, creating easier access to data, reduces errors and delays, scales down on manual processes freeing up staff time to put a focus on tasks that matter in business.'
+          },
+          {
+            header: 'SO HOW CAN WE HELP?',
+            text: 'The Odd Wave can help sort out the existing system to system issues and streamline business processes as well a integrate new systems with current systems. You do not have to worry about how everything will fit, and what the right components are required, we help you with the entire process, so you only need to deal with one entity, Us.<br><br> We specialize in implementing, planning, coordinating, scheduling, testing, improving, and sometimes maintaining IT systems.<br><br> To get the best systems integration results, we bring together cost effective, preconfigured, opensource solutions, and off-the-shelf software and gear it towards the critical business goals set out at the beginning of the process.'
+          },
+          {
+            header: 'SOFTWARE ENGINEERING SERVICES',
+            text: "At The Odd Wave, our experienced technology generalists are ready to help you with your next software engineering project. From modern development and data management to cloud services and headless CMS, we're ready to provide New Zealand businesses with the websites and software they need to propel their companies forward. "
+          },
+          {
+            header: 'MODERN DEVELOPMENT',
+            text: "You can trust us to build a system that grows with you. From modern software development to integration, automation, and data engineering, we're committed to complying with best practices and standards in all our software projects. We'll carry out research and testing to guarantee your solution software performs as you would expect, and we always ensure transparency, usability, and scalability on every project we complete. "
+          },
+          {
+            header: 'DATA MANAGEMENT AND ANALYSIS',
+            text: "We're helping businesses ride the new wave of data, which has primarily been driven by its growth in both variety and volume. We know to keep your data accessible, visualized, and secure is essential, so we'll use transformative technology to improve the way you manage personal information. "
+          },
+          {
+            header: 'CLOUD SERVICES',
+            text: 'Cloud computing has helped businesses cut costs and improve their ability as more of us move away from on-premise data centers. We will host and maintain your solution infrastructure on one of the three prominent public vendors: Amazon Web Services (AWS), Google Cloud Platform and Microsoft Azure. '
+          },
+          {
+            header: 'HEADLESS CMS AND CONTENT AS A SERVICE',
+            text: 'At The Odd Wave, we offer a headless CMS that will empower your organization to support the needs of your customers without the associated content management headaches. It includes managing all your content requirements from a centralized location and delivering content to different devices or channels using Restful and GraphQL APIs.<br><br> If youre looking to simplify the online shopping experience for your customers and improve conversions, PWA eCommerce can help. We will design a website that customers can access at any time without having to download a mobile app. But that is not all, we are experienced in Vue.js too, which uses single-file components to improve code reuse and decrease development time.'
+          },
+          {
+            text: 'Get in touch with The Odd Wave <br><br>To find out more about the software engineering services available at The Odd Wave, or to request a no-obligation quote for your next project, contact us on 0800 4 2020 4 today.'
+          }
+
+        ],
+      price: { value: 110, unit: 'hour' },
+      relatedServices: ['website-design-nz', 'pwa-ecommerce-nz', 'sentiment-analysis-nz', 'reputation-management-nz'],
+      rate: 'hour',
+      marketing: {
+        header: 'Partner with us',
+        subheader: 'Grow your business',
+        content: 'Using proven vanilla super-fast web technologies for website development'
+      },
+      keywords: [...commonKeywords, 'contracting nz', 'website contracting', 'technical writing']
+    },
+    {
+      id: 'ecommerce-nz',
+      variant: 'rwcyellow',
+      animate: 'bounceInLeft',
+      title: 'eCommerce | The Odd Wave | Auckland, NZ',
+      linkTitle: 'E-COMMERCE',
+      // maori: 'pae tukutuku Aotearoa',
+      description: 'Our eCommerce is ultrafast, offline ready that can scale as your store grows. The Odd Wave eCommerce Has Everything You Need To Start Selling Online Today. Mobile Commerce Ready. Social Media Integration. Full Blogging Platform. Secure Shopping Cart.',
+      landing: { header: 'eCommerce', content: 'Ultrafast, offline ready, scales as you grow. The Odd Wave eCommerce Has Everything You Need To Start Selling Online Today. Mobile Commerce Ready. Social Media Integration. Full Blogging Platform. Secure Shopping Cart.' },
+      header: 'e-Commerce',
+      businessvalue: 'Drive sales with a future-proof eCommerce Solution',
+      icon: ['fab', 'dev'],
+      // image: "<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='92' height='92' viewBox='0 0 92 92'><defs><style>.b{clip-path:url(#a);}</style><clipPath id='a'><rect width='92' height='92' transform='translate(1488 1485)' /></clipPath></defs><g class='b' transform='translate(-1488 -1485)'><g transform='translate(1488 1485)'><path d='M69.767,0H8.433A7.676,7.676,0,0,0,.767,7.667V56.734a7.667,7.667,0,0,0,5.752,7.424l.767-2.969a4.6,4.6,0,0,1-3.452-4.456V7.667a4.6,4.6,0,0,1,4.6-4.6H69.767a4.6,4.6,0,0,1,4.6,4.6V9.2h3.067V7.667A7.676,7.676,0,0,0,69.767,0Z' /><rect width='3.067' height='3.067' transform='translate(6.9 6.133)' /><rect width='3.067' height='3.067' transform='translate(13.033 6.133)' /><rect width='3.067' height='3.067' transform='translate(19.167 6.133)' /><path d='M90.784,84.783,76.241,70.239a21.207,21.207,0,0,0,1.822-4.306H80.5V62.867H78.722a20.66,20.66,0,0,0-1.288-10.988V36.8H74.367v9.764A21.582,21.582,0,0,0,71.3,43.381V30.667H68.234V41.238a21.325,21.325,0,0,0-3.067-1.464V24.533H62.1V38.843a21.231,21.231,0,0,0-3.067-.431V27.6H55.967V38.412a21.231,21.231,0,0,0-3.067.431V33.733H49.834v6.04a21.335,21.335,0,0,0-3.067,1.464V32.2H43.7V43.381a21.582,21.582,0,0,0-3.067,3.183v-11.3H37.567V51.879a20.66,20.66,0,0,0-1.288,10.988H16.1v3.067H36.938a21.422,21.422,0,0,0,32.881,11.42l14.2,14.2a1.533,1.533,0,0,0,2.168,0l4.6-4.6A1.533,1.533,0,0,0,90.784,84.783ZM57.5,78.2A18.4,18.4,0,1,1,75.9,59.8,18.42,18.42,0,0,1,57.5,78.2ZM85.1,88.3,72.2,75.4a21.724,21.724,0,0,0,2.308-2.556L87.532,85.867Z' /><path d='M57.5,44.467A15.333,15.333,0,1,0,72.834,59.8,15.333,15.333,0,0,0,57.5,44.467Zm0,27.6a12.267,12.267,0,0,1-10.608-6.133H68.108A12.267,12.267,0,0,1,57.5,72.067Zm-11.863-9.2a12.155,12.155,0,0,1,4.2-12.627V59.8H52.9V48.437a12.21,12.21,0,0,1,3.067-.8V59.8h3.067V47.639a12.21,12.21,0,0,1,3.067.8V59.8h3.067V50.24a12.155,12.155,0,0,1,4.2,12.627Z' /><path d='M78.967,12.267H17.633a7.676,7.676,0,0,0-7.667,7.667V69a7.676,7.676,0,0,0,7.667,7.667H37.567V73.6H17.633a4.6,4.6,0,0,1-4.6-4.6V19.933a4.6,4.6,0,0,1,4.6-4.6H78.967a4.6,4.6,0,0,1,4.6,4.6V69a4.6,4.6,0,0,1-1.15,3.042l2.3,2.029A7.657,7.657,0,0,0,86.634,69V19.933A7.676,7.676,0,0,0,78.967,12.267Z' /><rect width='3.067' height='3.067' transform='translate(16.1 18.4)' /><rect width='3.067' height='3.067' transform='translate(22.233 18.4)' /><rect width='3.067' height='3.067' transform='translate(28.367 18.4)' /><rect width='3.067' height='9.2' transform='translate(19.167 50.6)' /><rect width='3.067' height='18.4' transform='translate(25.3 41.4)' /><rect width='3.067' height='13.8' transform='translate(31.433 46)' /></g></g></svg>",
+      image: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="92" height="92" viewBox="0 0 92 92"> <defs><style>.b{clip-path:url(#a);}</style> <clipPath id="a"><rect width="92" height="92" transform="translate(1488 1485)" /></clipPath> </defs><g class="b" transform="translate(-1488 -1485)"><g transform="translate(1488 1485)"> <path d="M69.767,0H8.433A7.676,7.676,0,0,0,.767,7.667V56.734a7.667,7.667,0,0,0,5.752,7.424l.767-2.969a4.6,4.6,0,0,1-3.452-4.456V7.667a4.6,4.6,0,0,1,4.6-4.6H69.767a4.6,4.6,0,0,1,4.6,4.6V9.2h3.067V7.667A7.676,7.676,0,0,0,69.767,0Z" /> <rect width="3.067" height="3.067" transform="translate(6.9 6.133)" /><rect width="3.067" height="3.067" transform="translate(13.033 6.133)" /><rect width="3.067" height="3.067" transform="translate(19.167 6.133)" /> <path d="M90.784,84.783,76.241,70.239a21.207,21.207,0,0,0,1.822-4.306H80.5V62.867H78.722a20.66,20.66,0,0,0-1.288-10.988V36.8H74.367v9.764A21.582,21.582,0,0,0,71.3,43.381V30.667H68.234V41.238a21.325,21.325,0,0,0-3.067-1.464V24.533H62.1V38.843a21.231,21.231,0,0,0-3.067-.431V27.6H55.967V38.412a21.231,21.231,0,0,0-3.067.431V33.733H49.834v6.04a21.335,21.335,0,0,0-3.067,1.464V32.2H43.7V43.381a21.582,21.582,0,0,0-3.067,3.183v-11.3H37.567V51.879a20.66,20.66,0,0,0-1.288,10.988H16.1v3.067H36.938a21.422,21.422,0,0,0,32.881,11.42l14.2,14.2a1.533,1.533,0,0,0,2.168,0l4.6-4.6A1.533,1.533,0,0,0,90.784,84.783ZM57.5,78.2A18.4,18.4,0,1,1,75.9,59.8,18.42,18.42,0,0,1,57.5,78.2ZM85.1,88.3,72.2,75.4a21.724,21.724,0,0,0,2.308-2.556L87.532,85.867Z" /><path d="M57.5,44.467A15.333,15.333,0,1,0,72.834,59.8,15.333,15.333,0,0,0,57.5,44.467Zm0,27.6a12.267,12.267,0,0,1-10.608-6.133H68.108A12.267,12.267,0,0,1,57.5,72.067Zm-11.863-9.2a12.155,12.155,0,0,1,4.2-12.627V59.8H52.9V48.437a12.21,12.21,0,0,1,3.067-.8V59.8h3.067V47.639a12.21,12.21,0,0,1,3.067.8V59.8h3.067V50.24a12.155,12.155,0,0,1,4.2,12.627Z" /><path d="M78.967,12.267H17.633a7.676,7.676,0,0,0-7.667,7.667V69a7.676,7.676,0,0,0,7.667,7.667H37.567V73.6H17.633a4.6,4.6,0,0,1-4.6-4.6V19.933a4.6,4.6,0,0,1,4.6-4.6H78.967a4.6,4.6,0,0,1,4.6,4.6V69a4.6,4.6,0,0,1-1.15,3.042l2.3,2.029A7.657,7.657,0,0,0,86.634,69V19.933A7.676,7.676,0,0,0,78.967,12.267Z" /> <rect width="3.067" height="3.067" transform="translate(16.1 18.4)" /> <rect width="3.067" height="3.067" transform="translate(22.233 18.4)" /> <rect width="3.067" height="3.067" transform="translate(28.367 18.4)" /> <rect width="3.067" height="9.2" transform="translate(19.167 50.6)" /> <rect width="3.067" height="18.4" transform="translate(25.3 41.4)" /> <rect width="3.067" height="13.8" transform="translate(31.433 46)" /></g></g> </svg>',
+      backgroundImage: { color1: 'rgba(46, 217, 195, 1)', color2: 'rgba(46, 217, 195, 1)', url: 'webdesign.jpg', height: 'auto' },
+      headerStyle: { bgStyle: 'text-secondary text-center' },
+      subheader: 'Future-proof eCommerce designed to scale.',
+      subheaderStyle: { color: 'text-primary', buttonVariant: 'info' },
+      content:
+        [
+          {
+            inlineImage: 'ecommerce.png',
+            inlineImageText: 'Leverage the benefits eCommerce to grow your online store ',
+            inlineImageStyle: 'inlineImage100',
+            inlineImageCenterFull: true
+          },
+          {
+            header: 'FUTURE-PROOF ECOMMERCE',
+            text: 'Are you looking for an ecommerce solution that will grow and evolve as your business does? We can help. We understand that to be of lasting value; ecommerce services need to have sufficient capacity to accommodate your changing needs. Our company uses a combination of advanced open source technologies like Magento and Google cloud hosting to create cutting-edge eCommerce solutions developed to meet the needs of many different businesses. Our holistic suite of eCommerce options provides a complete retail solution: from eCommerce website design through to a comprehensive online shopping platform. We offer cost-effective options that will revolutionize the way you do business.'
+          },
+          {
+            header: 'INNOVATIVE STOREFRONT USING VUE STOREFRONT',
+            text: "One of the leading software solutions for eCommerce,  Vue Storefront, has an excellent reputation for both functionality and aesthetics. Alongside Strappi Headless CMS and the Magento commerce platform, Vue Storefront technology is the most scalable and cost-effective option eCommerce. Ultrafast and offline-ready with built-in PWA technology, you don't need to develop a separate mobile app, this technology works on any platform.  Proven reduction in bounce rates and improved conversion rates for organic traffic driving the right customers to your store. Vue Storefront takes care of the complex eCommerce tasks to help you achieve your business goals."
+          },
+          {
+            header: 'PLATFORM AGNOSTIC',
+            text: "Finding options that will work well across different platforms can be problematic. What we offer is adapted to work on any platform, so you do not need to develop separate mobile apps for iOs and Android. You can read more about the technology here <a href='/services/pwa-ecommerce-nz/' title='PWA eCommerce'>PWA for eCommerce</a>"
+          },
+          {
+            header: 'WHAT ARE THE BENEFITS OF OUR ECOMMERCE SOLUTIONS?',
+            text: 'Our eCommerce platform covers every aspect of eCommerce for your business. From driving sales to order fulfillment, generating reports, managing your stock inventory, and integration with your existing software. Extra benefits <br>-Lightning-fast storefront <br>-Works on any platform <br>-Our solution scales as your business grows <br>-Developed using modern open source technologies'
+          },
+          {
+            header: 'TALENTED CREATIVES AT YOUR SERVICE',
+            text: 'Our talented software development and integration team combine years of experience and technical knowledge with creative flair helping your business succeed in the competitive eCommerce arena. Particularly if you have unique challenges that your operation faces, or have a desire to drive increased revenue on an on-going basis, we develop the right solution for your business. We set you up for the future, enabling you to gain a competitive edge in the market for many years to come.'
+          },
+          {
+            header: 'WE MAKE COMPLEX INTEGRATIONS SIMPLE',
+            text: "We don't like handling duplicate data, so we build complex integrations between our client's eCommerce solution and third party inventory, POS, CRM, and accounting software. Enhanced integration allows more of your transactions to be processed automatically, reducing administration time and costs. <br><br>We are committed to providing businesses with solutions that work, both now and in the future, with an emphasis on future-proofing your investment and facilitating fast, sustainable growth, we deliver software with quantifiable retail benefits."
+          }
+        ],
+      features: [
+        {
+          header: 'Ultra-fast, loads instantly',
+          icon: ['fas', 'mobile-alt'],
+          image: '/imgs/best-web-design.svg'
+        },
+        {
+          header: 'Offline-ready',
+          icon: ['fas', 'mobile-alt'],
+          image: '/imgs/best-web-design.svg'
+        },
+        {
+          header: 'Reduces Cost',
+          icon: ['fas', 'mobile-alt'],
+          image: '/imgs/best-web-design.svg'
+        },
+        {
+          header: 'Increases conversions',
+          icon: ['fas', 'mobile-alt'],
+          image: '/imgs/best-web-design.svg'
+        }
+      ],
+      price: { value: 5900, unit: 'package' },
+      relatedServices: ['seo-nz', 'website-design-nz', 'pwa-ecommerce-nz'],
+      rate: 'hour',
+      marketing: {
+        header: 'Join us',
+        subheader: '',
+        content: 'Scale as you grow eCommerce'
+      },
+      keywords: [...commonKeywords, 'eCommerce website development, ecommerce']
+    },
+    {
+      id: 'pwa-ecommerce-nz',
+      variant: 'rwcyellow',
+      animate: 'bounceInLeft',
+      title: 'PWA eCommerce | The Odd Wave | Auckland, NZ',
+      linkTitle: 'PWA eCommerce',
+      maori: 'pae tukutuku Aotearoa',
+      description: 'Our PWA store front is ultrafast, offline ready and can be  any eCommerce and CMS platform. PWA eCommerce Has Everything You Need To Start Selling Online Today. Mobile Commerce Ready. Social Media Integration. Full Blogging Platform. Secure Shopping Cart.',
+      landing: { header: 'PWA eCommerce', content: 'Ultrafast, offline ready and any platform Progressive Web App. PWA eCommerce Has Everything You Need To Start Selling Online Today. Mobile Commerce Ready. Social Media Integration. Full Blogging Platform. Secure Shopping Cart.' },
+      header: 'PWA for any CMS and eCommerce',
+      businessvalue: 'Goal driven PWA eCommerce for results, quality and trust',
+      icon: ['fab', 'dev'],
+      // image: "<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='92' height='92' viewBox='0 0 92 92'><defs><style>.b{clip-path:url(#a);}</style><clipPath id='a'><rect width='92' height='92' transform='translate(1488 1485)' /></clipPath></defs><g class='b' transform='translate(-1488 -1485)'><g transform='translate(1488 1485)'><path d='M69.767,0H8.433A7.676,7.676,0,0,0,.767,7.667V56.734a7.667,7.667,0,0,0,5.752,7.424l.767-2.969a4.6,4.6,0,0,1-3.452-4.456V7.667a4.6,4.6,0,0,1,4.6-4.6H69.767a4.6,4.6,0,0,1,4.6,4.6V9.2h3.067V7.667A7.676,7.676,0,0,0,69.767,0Z' /><rect width='3.067' height='3.067' transform='translate(6.9 6.133)' /><rect width='3.067' height='3.067' transform='translate(13.033 6.133)' /><rect width='3.067' height='3.067' transform='translate(19.167 6.133)' /><path d='M90.784,84.783,76.241,70.239a21.207,21.207,0,0,0,1.822-4.306H80.5V62.867H78.722a20.66,20.66,0,0,0-1.288-10.988V36.8H74.367v9.764A21.582,21.582,0,0,0,71.3,43.381V30.667H68.234V41.238a21.325,21.325,0,0,0-3.067-1.464V24.533H62.1V38.843a21.231,21.231,0,0,0-3.067-.431V27.6H55.967V38.412a21.231,21.231,0,0,0-3.067.431V33.733H49.834v6.04a21.335,21.335,0,0,0-3.067,1.464V32.2H43.7V43.381a21.582,21.582,0,0,0-3.067,3.183v-11.3H37.567V51.879a20.66,20.66,0,0,0-1.288,10.988H16.1v3.067H36.938a21.422,21.422,0,0,0,32.881,11.42l14.2,14.2a1.533,1.533,0,0,0,2.168,0l4.6-4.6A1.533,1.533,0,0,0,90.784,84.783ZM57.5,78.2A18.4,18.4,0,1,1,75.9,59.8,18.42,18.42,0,0,1,57.5,78.2ZM85.1,88.3,72.2,75.4a21.724,21.724,0,0,0,2.308-2.556L87.532,85.867Z' /><path d='M57.5,44.467A15.333,15.333,0,1,0,72.834,59.8,15.333,15.333,0,0,0,57.5,44.467Zm0,27.6a12.267,12.267,0,0,1-10.608-6.133H68.108A12.267,12.267,0,0,1,57.5,72.067Zm-11.863-9.2a12.155,12.155,0,0,1,4.2-12.627V59.8H52.9V48.437a12.21,12.21,0,0,1,3.067-.8V59.8h3.067V47.639a12.21,12.21,0,0,1,3.067.8V59.8h3.067V50.24a12.155,12.155,0,0,1,4.2,12.627Z' /><path d='M78.967,12.267H17.633a7.676,7.676,0,0,0-7.667,7.667V69a7.676,7.676,0,0,0,7.667,7.667H37.567V73.6H17.633a4.6,4.6,0,0,1-4.6-4.6V19.933a4.6,4.6,0,0,1,4.6-4.6H78.967a4.6,4.6,0,0,1,4.6,4.6V69a4.6,4.6,0,0,1-1.15,3.042l2.3,2.029A7.657,7.657,0,0,0,86.634,69V19.933A7.676,7.676,0,0,0,78.967,12.267Z' /><rect width='3.067' height='3.067' transform='translate(16.1 18.4)' /><rect width='3.067' height='3.067' transform='translate(22.233 18.4)' /><rect width='3.067' height='3.067' transform='translate(28.367 18.4)' /><rect width='3.067' height='9.2' transform='translate(19.167 50.6)' /><rect width='3.067' height='18.4' transform='translate(25.3 41.4)' /><rect width='3.067' height='13.8' transform='translate(31.433 46)' /></g></g></svg>",
+      image: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="92" height="92" viewBox="0 0 92 92"> <defs><style>.b{clip-path:url(#a);}</style> <clipPath id="a"><rect width="92" height="92" transform="translate(1488 1485)" /></clipPath> </defs><g class="b" transform="translate(-1488 -1485)"><g transform="translate(1488 1485)"> <path d="M69.767,0H8.433A7.676,7.676,0,0,0,.767,7.667V56.734a7.667,7.667,0,0,0,5.752,7.424l.767-2.969a4.6,4.6,0,0,1-3.452-4.456V7.667a4.6,4.6,0,0,1,4.6-4.6H69.767a4.6,4.6,0,0,1,4.6,4.6V9.2h3.067V7.667A7.676,7.676,0,0,0,69.767,0Z" /> <rect width="3.067" height="3.067" transform="translate(6.9 6.133)" /><rect width="3.067" height="3.067" transform="translate(13.033 6.133)" /><rect width="3.067" height="3.067" transform="translate(19.167 6.133)" /> <path d="M90.784,84.783,76.241,70.239a21.207,21.207,0,0,0,1.822-4.306H80.5V62.867H78.722a20.66,20.66,0,0,0-1.288-10.988V36.8H74.367v9.764A21.582,21.582,0,0,0,71.3,43.381V30.667H68.234V41.238a21.325,21.325,0,0,0-3.067-1.464V24.533H62.1V38.843a21.231,21.231,0,0,0-3.067-.431V27.6H55.967V38.412a21.231,21.231,0,0,0-3.067.431V33.733H49.834v6.04a21.335,21.335,0,0,0-3.067,1.464V32.2H43.7V43.381a21.582,21.582,0,0,0-3.067,3.183v-11.3H37.567V51.879a20.66,20.66,0,0,0-1.288,10.988H16.1v3.067H36.938a21.422,21.422,0,0,0,32.881,11.42l14.2,14.2a1.533,1.533,0,0,0,2.168,0l4.6-4.6A1.533,1.533,0,0,0,90.784,84.783ZM57.5,78.2A18.4,18.4,0,1,1,75.9,59.8,18.42,18.42,0,0,1,57.5,78.2ZM85.1,88.3,72.2,75.4a21.724,21.724,0,0,0,2.308-2.556L87.532,85.867Z" /><path d="M57.5,44.467A15.333,15.333,0,1,0,72.834,59.8,15.333,15.333,0,0,0,57.5,44.467Zm0,27.6a12.267,12.267,0,0,1-10.608-6.133H68.108A12.267,12.267,0,0,1,57.5,72.067Zm-11.863-9.2a12.155,12.155,0,0,1,4.2-12.627V59.8H52.9V48.437a12.21,12.21,0,0,1,3.067-.8V59.8h3.067V47.639a12.21,12.21,0,0,1,3.067.8V59.8h3.067V50.24a12.155,12.155,0,0,1,4.2,12.627Z" /><path d="M78.967,12.267H17.633a7.676,7.676,0,0,0-7.667,7.667V69a7.676,7.676,0,0,0,7.667,7.667H37.567V73.6H17.633a4.6,4.6,0,0,1-4.6-4.6V19.933a4.6,4.6,0,0,1,4.6-4.6H78.967a4.6,4.6,0,0,1,4.6,4.6V69a4.6,4.6,0,0,1-1.15,3.042l2.3,2.029A7.657,7.657,0,0,0,86.634,69V19.933A7.676,7.676,0,0,0,78.967,12.267Z" /> <rect width="3.067" height="3.067" transform="translate(16.1 18.4)" /> <rect width="3.067" height="3.067" transform="translate(22.233 18.4)" /> <rect width="3.067" height="3.067" transform="translate(28.367 18.4)" /> <rect width="3.067" height="9.2" transform="translate(19.167 50.6)" /> <rect width="3.067" height="18.4" transform="translate(25.3 41.4)" /> <rect width="3.067" height="13.8" transform="translate(31.433 46)" /></g></g> </svg>',
+      backgroundImage: { color1: 'rgba(46, 217, 195, 1)', color2: 'rgba(46, 217, 195, 1)', url: 'webdesign.jpg', height: 'auto' },
+      headerStyle: { bgStyle: 'text-secondary text-center' },
+      subheader: 'Delight your users, grow engagement, and increase profits with PWA.',
+      subheaderStyle: { color: 'text-primary', buttonVariant: 'info' },
+      content:
+        [
+          {
+            inlineImage: 'pwa-info.png',
+            inlineImageText: 'Leverage the benefits of PWA - Progressive Web Apps ',
+            inlineImageStyle: 'inlineImage100',
+            inlineImageCenterFull: true
+          },
+          {
+            header: 'SUPERCHARGE YOUR ECOMMERCE WITH A PWA STOREFRONT',
+            text: "It seems like the only way to really win at eCommerce these days is to become part of your customer's lives, but that's for massive retailers with huge marketing budgets and their own developers, right? Not even close! Let's take a look at how we can supercharge your eCommerce or Content Management System with an affordable PWA storefront."
+          },
+          {
+            header: "WHAT'S A PWA?",
+            text: "PWA stands for Progressive Web Application, and it's basically an app that isn't an app! It can have all the exciting features of an app such as adaptive content, slick graphics and push notifications, but your customers don't have to download it and you don't have to perform loads of expensive maintenance. The technology is web based, so it doesn't require the user to keep data on their phone and you don't have to design one for every operating system, but it can sit as an icon on their home screen like an app and it also works offline. It's the best of both worlds!"
+          },
+          {
+            header: 'WHAT DOES IT DO?',
+            text: "A PWA can do anything that an app can do in terms of content and usability, so your users can tap, swipe and buy just like anything else that you've pushed through your CMS onto a website or traditional app. The sky really is the limit with what you can do, and thanks to our team of friendly designers and tech experts it's all easy and affordable to manage! It's a great way to do everything from increasing sales and conversions to better reviews, more eyeballs on your products and all the best in flexibility and SEO performance. "
+          },
+          {
+            header: 'WHAT DO YOU GET FROM PWA?',
+            text: "PWAs are reliable, fast, and engaging, although many things that can take a PWA from a baseline to an exceptional experience. With a PWA, you provide your client's experiences that cover the full reach of the internet and web. Imagine a web solution that is:"
+          },
+          {
+            text: 'A variety of web hosting solutions are available in terms of Speed, Security, Location and Affordability',
+            list: [
+              'Reliable - Loads in an instant and never stutters even in uncertain network conditions and when switching between the xGs and wifi.',
+              'Super quick – response instantly to clicks and swipes with confident looking, smooth animations and scrolling instead of those nervous-looking jitters, shakes, and hesitations.',
+              'Naturally Engaging – offers an immersive experience regardless of the device in context (i.e., phone, desktop, tablet, TV) and looks naturally attractive everywhere.'
+            ]
+          },
+          {
+            text: 'The level of quality deservedly earns a place on a client’s home screen or desktop.'
+          },
+          {
+            header: 'STAY WITH YOUR CLIENTS',
+            text: 'Think of a PWA as a web solution (website or web application) that wants to click and stick with a visitor regardless of location, device, and network connectivity. '
+          },
+          {
+            text: 'PWA comes with 100% responsiveness and smooth usability experience without the need for developing separate apps for each respective web and mobile platform (i.e. desktop browser, iOS, Android etc.)'
+          },
+          {
+            text: 'When someone visits your PWA, it prompts them to add it to their home screen because that is where it belongs and deserves to be. There’s no need for a separate mobile app in an App Store. '
+          },
+          {
+            text: 'The PWA provides a continuous, meaningful experience both online and offline and will indicate whether it is offline, so users know that their interactions are not lost but will instead be remembered for when they’re next online. '
+          },
+          {
+            header: 'WHAT CAN YOU DO?',
+            text: "We're a team of technology specialists in Auckland, NZ and we're passionate about helping businesses grow quickly and sustainably. We love technology like PWAs because it can help a small business do a huge amount without breaking the bank, and backed by our expertise in software design and eCommerce we can also help you tweak and change it to get the absolute most out your solution. There are also all kinds of extra features like voice recognition and elastic search that can help you fill any niche you'd like to target, so there are no limits to your ambition!"
+          },
+          {
+            text: "If you like the sound of PWAs and you think you might be able to use them to take your business to the next level, get in touch with our friendly team and we'll take that next step together!"
+          }
+        ],
+      features: [
+        {
+          header: 'Ultra-fast, loads instantly',
+          icon: ['fas', 'mobile-alt'],
+          image: '/imgs/best-web-design.svg'
+        },
+        {
+          header: 'Offline-ready',
+          icon: ['fas', 'mobile-alt'],
+          image: '/imgs/best-web-design.svg'
+        },
+        {
+          header: 'Reduces Cost',
+          icon: ['fas', 'mobile-alt'],
+          image: '/imgs/best-web-design.svg'
+        },
+        {
+          header: 'Increases conversions',
+          icon: ['fas', 'mobile-alt'],
+          image: '/imgs/best-web-design.svg'
+        }
+      ],
+      price: { value: 5900, unit: 'package' },
+      relatedServices: ['seo-nz', 'website-design-nz'],
+      rate: 'hour',
+      marketing: {
+        header: 'Join us',
+        subheader: '',
+        content: 'Using progressive web apps for any eCommerce and CMS'
+      },
+      keywords: [...commonKeywords, 'progressive web apps development']
+    },
+    {
       id: 'website-design-nz',
       variant: 'rwcyellow',
       animate: 'bounceInLeft',
@@ -116,167 +396,6 @@ export const state = () => ({
         content: 'Using proven vanilla super-fast web technologies for website development'
       },
       keywords: [...commonKeywords, 'website design', 'website design', 'web development', 'custom websites', 'pwa web apps development', 'progressive web apps development']
-    },
-    {
-      id: 'pwa-ecommerce-nz',
-      variant: 'rwcyellow',
-      animate: 'bounceInLeft',
-      title: 'PWA eCommerce | The Odd Wave | Auckland, NZ',
-      linkTitle: 'PWA eCommerce',
-      maori: 'pae tukutuku Aotearoa',
-      description: 'Our PWA store front is ultrafast, offline ready and can be  any eCommerce and CMS platform. PWA eCommerce Has Everything You Need To Start Selling Online Today. Mobile Commerce Ready. Social Media Integration. Full Blogging Platform. Secure Shopping Cart.',
-      landing: { header: 'PWA eCommerce', content: 'Ultrafast, offline ready and any platform Progressive Web App. PWA eCommerce Has Everything You Need To Start Selling Online Today. Mobile Commerce Ready. Social Media Integration. Full Blogging Platform. Secure Shopping Cart.' },
-      header: 'PWA for any CMS and eCommerce',
-      businessvalue: 'Goal driven PWA eCommerce for results, quality and trust',
-      icon: ['fab', 'dev'],
-      // image: "<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='92' height='92' viewBox='0 0 92 92'><defs><style>.b{clip-path:url(#a);}</style><clipPath id='a'><rect width='92' height='92' transform='translate(1488 1485)' /></clipPath></defs><g class='b' transform='translate(-1488 -1485)'><g transform='translate(1488 1485)'><path d='M69.767,0H8.433A7.676,7.676,0,0,0,.767,7.667V56.734a7.667,7.667,0,0,0,5.752,7.424l.767-2.969a4.6,4.6,0,0,1-3.452-4.456V7.667a4.6,4.6,0,0,1,4.6-4.6H69.767a4.6,4.6,0,0,1,4.6,4.6V9.2h3.067V7.667A7.676,7.676,0,0,0,69.767,0Z' /><rect width='3.067' height='3.067' transform='translate(6.9 6.133)' /><rect width='3.067' height='3.067' transform='translate(13.033 6.133)' /><rect width='3.067' height='3.067' transform='translate(19.167 6.133)' /><path d='M90.784,84.783,76.241,70.239a21.207,21.207,0,0,0,1.822-4.306H80.5V62.867H78.722a20.66,20.66,0,0,0-1.288-10.988V36.8H74.367v9.764A21.582,21.582,0,0,0,71.3,43.381V30.667H68.234V41.238a21.325,21.325,0,0,0-3.067-1.464V24.533H62.1V38.843a21.231,21.231,0,0,0-3.067-.431V27.6H55.967V38.412a21.231,21.231,0,0,0-3.067.431V33.733H49.834v6.04a21.335,21.335,0,0,0-3.067,1.464V32.2H43.7V43.381a21.582,21.582,0,0,0-3.067,3.183v-11.3H37.567V51.879a20.66,20.66,0,0,0-1.288,10.988H16.1v3.067H36.938a21.422,21.422,0,0,0,32.881,11.42l14.2,14.2a1.533,1.533,0,0,0,2.168,0l4.6-4.6A1.533,1.533,0,0,0,90.784,84.783ZM57.5,78.2A18.4,18.4,0,1,1,75.9,59.8,18.42,18.42,0,0,1,57.5,78.2ZM85.1,88.3,72.2,75.4a21.724,21.724,0,0,0,2.308-2.556L87.532,85.867Z' /><path d='M57.5,44.467A15.333,15.333,0,1,0,72.834,59.8,15.333,15.333,0,0,0,57.5,44.467Zm0,27.6a12.267,12.267,0,0,1-10.608-6.133H68.108A12.267,12.267,0,0,1,57.5,72.067Zm-11.863-9.2a12.155,12.155,0,0,1,4.2-12.627V59.8H52.9V48.437a12.21,12.21,0,0,1,3.067-.8V59.8h3.067V47.639a12.21,12.21,0,0,1,3.067.8V59.8h3.067V50.24a12.155,12.155,0,0,1,4.2,12.627Z' /><path d='M78.967,12.267H17.633a7.676,7.676,0,0,0-7.667,7.667V69a7.676,7.676,0,0,0,7.667,7.667H37.567V73.6H17.633a4.6,4.6,0,0,1-4.6-4.6V19.933a4.6,4.6,0,0,1,4.6-4.6H78.967a4.6,4.6,0,0,1,4.6,4.6V69a4.6,4.6,0,0,1-1.15,3.042l2.3,2.029A7.657,7.657,0,0,0,86.634,69V19.933A7.676,7.676,0,0,0,78.967,12.267Z' /><rect width='3.067' height='3.067' transform='translate(16.1 18.4)' /><rect width='3.067' height='3.067' transform='translate(22.233 18.4)' /><rect width='3.067' height='3.067' transform='translate(28.367 18.4)' /><rect width='3.067' height='9.2' transform='translate(19.167 50.6)' /><rect width='3.067' height='18.4' transform='translate(25.3 41.4)' /><rect width='3.067' height='13.8' transform='translate(31.433 46)' /></g></g></svg>",
-      image: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="92" height="92" viewBox="0 0 92 92"> <defs><style>.b{clip-path:url(#a);}</style> <clipPath id="a"><rect width="92" height="92" transform="translate(1488 1485)" /></clipPath> </defs><g class="b" transform="translate(-1488 -1485)"><g transform="translate(1488 1485)"> <path d="M69.767,0H8.433A7.676,7.676,0,0,0,.767,7.667V56.734a7.667,7.667,0,0,0,5.752,7.424l.767-2.969a4.6,4.6,0,0,1-3.452-4.456V7.667a4.6,4.6,0,0,1,4.6-4.6H69.767a4.6,4.6,0,0,1,4.6,4.6V9.2h3.067V7.667A7.676,7.676,0,0,0,69.767,0Z" /> <rect width="3.067" height="3.067" transform="translate(6.9 6.133)" /><rect width="3.067" height="3.067" transform="translate(13.033 6.133)" /><rect width="3.067" height="3.067" transform="translate(19.167 6.133)" /> <path d="M90.784,84.783,76.241,70.239a21.207,21.207,0,0,0,1.822-4.306H80.5V62.867H78.722a20.66,20.66,0,0,0-1.288-10.988V36.8H74.367v9.764A21.582,21.582,0,0,0,71.3,43.381V30.667H68.234V41.238a21.325,21.325,0,0,0-3.067-1.464V24.533H62.1V38.843a21.231,21.231,0,0,0-3.067-.431V27.6H55.967V38.412a21.231,21.231,0,0,0-3.067.431V33.733H49.834v6.04a21.335,21.335,0,0,0-3.067,1.464V32.2H43.7V43.381a21.582,21.582,0,0,0-3.067,3.183v-11.3H37.567V51.879a20.66,20.66,0,0,0-1.288,10.988H16.1v3.067H36.938a21.422,21.422,0,0,0,32.881,11.42l14.2,14.2a1.533,1.533,0,0,0,2.168,0l4.6-4.6A1.533,1.533,0,0,0,90.784,84.783ZM57.5,78.2A18.4,18.4,0,1,1,75.9,59.8,18.42,18.42,0,0,1,57.5,78.2ZM85.1,88.3,72.2,75.4a21.724,21.724,0,0,0,2.308-2.556L87.532,85.867Z" /><path d="M57.5,44.467A15.333,15.333,0,1,0,72.834,59.8,15.333,15.333,0,0,0,57.5,44.467Zm0,27.6a12.267,12.267,0,0,1-10.608-6.133H68.108A12.267,12.267,0,0,1,57.5,72.067Zm-11.863-9.2a12.155,12.155,0,0,1,4.2-12.627V59.8H52.9V48.437a12.21,12.21,0,0,1,3.067-.8V59.8h3.067V47.639a12.21,12.21,0,0,1,3.067.8V59.8h3.067V50.24a12.155,12.155,0,0,1,4.2,12.627Z" /><path d="M78.967,12.267H17.633a7.676,7.676,0,0,0-7.667,7.667V69a7.676,7.676,0,0,0,7.667,7.667H37.567V73.6H17.633a4.6,4.6,0,0,1-4.6-4.6V19.933a4.6,4.6,0,0,1,4.6-4.6H78.967a4.6,4.6,0,0,1,4.6,4.6V69a4.6,4.6,0,0,1-1.15,3.042l2.3,2.029A7.657,7.657,0,0,0,86.634,69V19.933A7.676,7.676,0,0,0,78.967,12.267Z" /> <rect width="3.067" height="3.067" transform="translate(16.1 18.4)" /> <rect width="3.067" height="3.067" transform="translate(22.233 18.4)" /> <rect width="3.067" height="3.067" transform="translate(28.367 18.4)" /> <rect width="3.067" height="9.2" transform="translate(19.167 50.6)" /> <rect width="3.067" height="18.4" transform="translate(25.3 41.4)" /> <rect width="3.067" height="13.8" transform="translate(31.433 46)" /></g></g> </svg>',
-      backgroundImage: { color1: 'rgba(46, 217, 195, 1)', color2: 'rgba(46, 217, 195, 1)', url: 'webdesign.jpg', height: 'auto' },
-      headerStyle: { bgStyle: 'text-secondary text-center' },
-      subheader: 'Delight your users, grow engagement, and increase profits with PWA.',
-      subheaderStyle: { color: 'text-primary', buttonVariant: 'info' },
-      content:
-        [
-          {
-            inlineImage: 'pwa-info.png',
-            inlineImageText: 'Leverage the benefits of PWA - Progressive Web Apps ',
-            inlineImageStyle: 'inlineImage50',
-            inlineImageCenterFull: true
-          },
-          {
-            header: 'SUPERCHARGE YOUR ECOMMERCE WITH A PWA STOREFRONT',
-            text: "It seems like the only way to really win at eCommerce these days is to become part of your customer's lives, but that's for massive retailers with huge marketing budgets and their own developers, right? Not even close! Let's take a look at how we can supercharge your eCommerce or Content Management System with an affordable PWA storefront."
-          },
-          {
-            header: "WHAT'S A PWA?",
-            text: "PWA stands for Progressive Web Application, and it's basically an app that isn't an app! It can have all the exciting features of an app such as adaptive content, slick graphics and push notifications, but your customers don't have to download it and you don't have to perform loads of expensive maintenance. The technology is web based, so it doesn't require the user to keep data on their phone and you don't have to design one for every operating system, but it can sit as an icon on their home screen like an app and it also works offline. It's the best of both worlds!"
-          },
-          {
-            header: 'WHAT DOES IT DO?',
-            text: "A PWA can do anything that an app can do in terms of content and usability, so your users can tap, swipe and buy just like anything else that you've pushed through your CMS onto a website or traditional app. The sky really is the limit with what you can do, and thanks to our team of friendly designers and tech experts it's all easy and affordable to manage! It's a great way to do everything from increasing sales and conversions to better reviews, more eyeballs on your products and all the best in flexibility and SEO performance. "
-          },
-          {
-            header: 'WHAT DO YOU GET FROM PWA?',
-            text: "PWAs are reliable, fast, and engaging, although many things that can take a PWA from a baseline to an exceptional experience. With a PWA, you provide your client's experiences that cover the full reach of the internet and web. Imagine a web solution that is:"
-          },
-          {
-            text: 'A variety of web hosting solutions are available in terms of Speed, Security, Location and Affordability',
-            list: [
-              'Reliable - Loads in an instant and never stutters even in uncertain network conditions and when switching between the xGs and wifi.',
-              'Super quick – response instantly to clicks and swipes with confident looking, smooth animations and scrolling instead of those nervous-looking jitters, shakes, and hesitations.',
-              'Naturally Engaging – offers an immersive experience regardless of the device in context (i.e., phone, desktop, tablet, TV) and looks naturally attractive everywhere.'
-            ]
-          },
-          {
-            text: 'The level of quality deservedly earns a place on a client’s home screen or desktop.'
-          },
-          {
-            header: 'STAY WITH YOUR CLIENTS',
-            text: 'Think of a PWA as a web solution (website or web application) that wants to click and stick with a visitor regardless of location, device, and network connectivity. '
-          },
-          {
-            text: 'PWA comes with 100% responsiveness and smooth usability experience without the need for developing separate apps for each respective web and mobile platform (i.e. desktop browser, iOS, Android etc.)'
-          },
-          {
-            text: 'When someone visits your PWA, it prompts them to add it to their home screen because that is where it belongs and deserves to be. There’s no need for a separate mobile app in an App Store. '
-          },
-          {
-            text: 'The PWA provides a continuous, meaningful experience both online and offline and will indicate whether it is offline, so users know that their interactions are not lost but will instead be remembered for when they’re next online. '
-          },
-          {
-            header: 'WHAT CAN YOU DO?',
-            text: "We're a team of technology specialists in Auckland, NZ and we're passionate about helping businesses grow quickly and sustainably. We love technology like PWAs because it can help a small business do a huge amount without breaking the bank, and backed by our expertise in software design and eCommerce we can also help you tweak and change it to get the absolute most out your solution. There are also all kinds of extra features like voice recognition and elastic search that can help you fill any niche you'd like to target, so there are no limits to your ambition!"
-          },
-          {
-            text: "If you like the sound of PWAs and you think you might be able to use them to take your business to the next level, get in touch with our friendly team and we'll take that next step together!"
-          }
-        ],
-      features: [
-        {
-          header: 'Ultra-fast, loads instantly',
-          icon: ['fas', 'mobile-alt'],
-          image: '/imgs/best-web-design.svg'
-        },
-        {
-          header: 'Offline-ready',
-          icon: ['fas', 'mobile-alt'],
-          image: '/imgs/best-web-design.svg'
-        },
-        {
-          header: 'Reduces Cost',
-          icon: ['fas', 'mobile-alt'],
-          image: '/imgs/best-web-design.svg'
-        },
-        {
-          header: 'Increases conversions',
-          icon: ['fas', 'mobile-alt'],
-          image: '/imgs/best-web-design.svg'
-        }
-      ],
-      price: { value: 5900, unit: 'package' },
-      relatedServices: ['seo-nz', 'website-design-nz'],
-      rate: 'hour',
-      marketing: {
-        header: 'Join us',
-        subheader: '',
-        content: 'Using progressive web apps for any eCommerce and CMS'
-      },
-      keywords: [...commonKeywords, 'progressive web apps development']
-    },
-    {
-      id: 'software-engineering-nz',
-      variant: 'rwcgreen',
-      animate: 'bounceInLeft',
-      title: 'Software Engineering & Support North Shore Auckland',
-      linkTitle: 'Software Engineering',
-      maori: 'akoako',
-      description: 'Software Engineering & Support services to help you out with adhoc computing, design, development, automation, data engineering, cloud engineering, cloud development and data analysis.',
-      landing: { header: 'Software Engineering', content: 'Partner with us for adhoc computing, design, development, automation, data engineering, cloud engineering and data analysis.' },
-      header: 'Software Engineering',
-      icon: ['fab', 'dev'],
-      image: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="92" height="92" viewBox="0 0 92 92"><defs><style>.j{clip-path:url(#i);}</style><clipPath id="i"><rect class="j" width="92" height="92" transform="translate(336 1485)"/></clipPath></defs><g transform="translate(-336 -1485)"><g transform="translate(336 1484.96)"><path d="M10.595,33.61a1.347,1.347,0,0,0,1.9-1.9L9.229,28.436,12.5,25.168a1.347,1.347,0,1,0-1.9-1.9L6.373,27.485a1.346,1.346,0,0,0,0,1.9Zm0,0"/><path d="M23.956,28.436l-3.269,3.269a1.347,1.347,0,1,0,1.9,1.9l4.222-4.222a1.346,1.346,0,0,0,0-1.9l-4.222-4.222a1.346,1.346,0,1,0-1.9,1.9Zm0,0"/><path d="M14.586,33.911a1.346,1.346,0,0,0,1.746-.761l3.317-8.443a1.346,1.346,0,1,0-2.506-.985l-3.317,8.443a1.347,1.347,0,0,0,.761,1.746Zm0,0"/><path d="M8.087,41.9h9.071a1.347,1.347,0,0,0,0-2.693H8.087a1.347,1.347,0,0,0,0,2.693Zm0,0"/><path d="M38.05,39.211H22.1a1.347,1.347,0,0,0,0,2.693H38.05a1.347,1.347,0,1,0,0-2.693Zm0,0"/><path d="M8.087,47.583h3.864a1.347,1.347,0,0,0,0-2.693H8.087a1.347,1.347,0,0,0,0,2.693Zm0,0"/><path d="M33.124,44.89a1.347,1.347,0,0,0,0,2.693h2.353a1.347,1.347,0,1,0,0-2.693Zm0,0"/><path d="M29.58,46.236a1.347,1.347,0,0,0-1.346-1.346H16.676a1.347,1.347,0,0,0,0,2.693H28.234A1.347,1.347,0,0,0,29.58,46.236Zm0,0"/><path d="M38.4,46.236a1.347,1.347,0,0,0,1.346,1.347h4.407a1.347,1.347,0,1,0,0-2.693H39.746A1.347,1.347,0,0,0,38.4,46.236Zm0,0"/><path d="M31.067,29.517h4.649a1.347,1.347,0,1,0,0-2.693H31.067a1.347,1.347,0,1,0,0,2.693Zm0,0"/><path d="M40.923,29.517H69.287a1.347,1.347,0,0,0,0-2.693H40.923a1.347,1.347,0,1,0,0,2.693Zm0,0"/><path d="M64.979,32.748H53.489a1.347,1.347,0,0,0,0,2.693h11.49a1.347,1.347,0,0,0,0-2.693Zm0,0"/><path d="M49.181,32.748h-3.95a1.347,1.347,0,0,0,0,2.693h3.95a1.347,1.347,0,0,0,0-2.693Zm0,0"/><path d="M31.067,35.441h9.676a1.347,1.347,0,0,0,0-2.693H31.067a1.347,1.347,0,1,0,0,2.693Zm0,0"/><path d="M28.251,50.521H19.18a1.346,1.346,0,1,0,0,2.693h9.07a1.346,1.346,0,1,0,0-2.693Zm0,0"/><path d="M15.056,50.521H8.087a1.346,1.346,0,1,0,0,2.693h6.969a1.346,1.346,0,1,0,0-2.693Zm0,0"/><path d="M44.693,50.521H32.844a1.346,1.346,0,1,0,0,2.693H44.693a1.346,1.346,0,0,0,0-2.693Zm0,0"/><path d="M60.717,43.6H54.237a1.347,1.347,0,0,0,0,2.693h6.479a1.347,1.347,0,0,0,0-2.693Zm0,0"/><path d="M71.96,46.3h9.147a1.347,1.347,0,1,0,0-2.693H71.96a1.347,1.347,0,0,0,0,2.693Zm0,0"/><path d="M67.386,43.6h-2.1a1.347,1.347,0,1,0,0,2.693h2.1a1.347,1.347,0,0,0,0-2.693Zm0,0"/><path d="M54.237,60.971h6.479a1.346,1.346,0,0,0,0-2.693H54.237a1.346,1.346,0,0,0,0,2.693Zm0,0"/><path d="M71.96,60.971h9.147a1.346,1.346,0,1,0,0-2.693H71.96a1.346,1.346,0,0,0,0,2.693Zm0,0"/><path d="M65.29,60.971h2.1a1.346,1.346,0,1,0,0-2.693h-2.1a1.346,1.346,0,0,0,0,2.693Zm0,0"/><path d="M60.717,72.952H54.237a1.346,1.346,0,1,0,0,2.693h6.479a1.346,1.346,0,1,0,0-2.693Zm0,0"/><path d="M81.106,72.952H71.96a1.346,1.346,0,1,0,0,2.693h9.147a1.346,1.346,0,1,0,0-2.693Zm0,0"/><path d="M67.386,72.952h-2.1a1.346,1.346,0,1,0,0,2.693h2.1a1.346,1.346,0,1,0,0-2.693Zm0,0"/><path d="M86.075.09H5.926A5.933,5.933,0,0,0,0,6.016V71.165a5.933,5.933,0,0,0,5.926,5.926h5.067a1.346,1.346,0,1,0,0-2.693H5.926a3.236,3.236,0,0,1-3.233-3.233V66.057H51.747v2.321H50.68a2.651,2.651,0,0,0-2.648,2.648V74.4H19.18a1.346,1.346,0,1,0,0,2.693H32.126V81.92H28.06a4.924,4.924,0,0,0-4.918,4.918v2.909a2.246,2.246,0,0,0,2.244,2.244H66.512a2.246,2.246,0,0,0,2.244-2.244V86.838a4.924,4.924,0,0,0-4.918-4.918H59.772v-1.7H84.664a2.651,2.651,0,0,0,2.648-2.648v-.634a5.934,5.934,0,0,0,4.586-5.77L92,6.015A5.931,5.931,0,0,0,86.075.09ZM50.725,62.852V56.4H84.619v6.454ZM54.44,53.7V50.872H80.9V53.7ZM80.9,65.544v2.834H54.44V65.544ZM34.818,77.091H48.032v.479a2.651,2.651,0,0,0,2.648,2.648h6.4v1.7H34.818Zm29.02,7.522a2.228,2.228,0,0,1,2.225,2.225V89.3H25.834v-2.46a2.228,2.228,0,0,1,2.226-2.225Zm20.781-7.089H50.725V71.071H84.619Zm4.586-6.359A3.234,3.234,0,0,1,87.312,74.1V71.025a2.651,2.651,0,0,0-2.648-2.648H83.6V66.057h5.609Zm0-7.8H87.268c.027-.152.044-7.012.044-7.012A2.651,2.651,0,0,0,84.664,53.7H83.6V50.872h1.068a2.652,2.652,0,0,0,2.648-2.648V41.679a2.652,2.652,0,0,0-2.648-2.648H77.059a1.347,1.347,0,0,0,0,2.693h7.56v6.454H50.725V41.724H68.681a1.347,1.347,0,0,0,0-2.693h-18a2.651,2.651,0,0,0-2.648,2.648v6.544a2.651,2.651,0,0,0,2.648,2.648h1.068V53.7H50.68a2.651,2.651,0,0,0-2.648,2.648s.017,6.86.044,7.012H2.693V18.405H89.205Zm0-47.653H2.792v-9.7A3.236,3.236,0,0,1,6.025,2.783H85.973a3.236,3.236,0,0,1,3.233,3.233Zm0,0"/><path d="M9.93,5.258a3.951,3.951,0,1,0,3.952,3.951A3.955,3.955,0,0,0,9.93,5.258Zm0,5.21a1.259,1.259,0,1,1,1.259-1.259A1.26,1.26,0,0,1,9.93,10.468Zm0,0"/><path d="M19.99,5.258a3.951,3.951,0,1,0,3.951,3.951A3.956,3.956,0,0,0,19.99,5.258Zm0,5.21a1.259,1.259,0,1,1,1.259-1.259A1.26,1.26,0,0,1,19.99,10.468Zm0,0"/><path d="M30.05,5.258A3.951,3.951,0,1,0,34,9.209,3.955,3.955,0,0,0,30.05,5.258Zm0,5.21a1.259,1.259,0,1,1,1.259-1.259A1.26,1.26,0,0,1,30.05,10.468Zm0,0"/></g></g></svg>',
-      backgroundImage: { color1: 'rgba(46, 217, 195, 1)', color2: 'rgba(46, 217, 195, 1)', url: 'webdesign.jpg', height: 'auto' },
-      headerStyle: { bgStyle: 'text-secondary text-center' },
-      subheader: 'Reliable engineering from solid work experiences to help your business grow',
-      subheaderStyle: { color: 'text-primary', buttonVariant: 'info' },
-      content:
-        [
-          {
-            inlineImage: 'software-engineering.png',
-            inlineImageText: 'Software engineering from solid work experiences',
-            inlineImageStyle: 'inlineImage50',
-            inlineImageCenterFull: true
-          },
-          {
-            header: "We're experienced technology generalists who abide by",
-            list: [
-              'Best practices & standards',
-              'Research & experimentation',
-              'Performance',
-              'Creativeness',
-              'Usability',
-              'Transparency', 'Continuous Improvement'],
-            icon: ['fab', 'servicestack']
-          },
-          {
-            header: 'We specialize in:',
-            list: [
-              'Modern Development, Integration, Automation and Data Engineering',
-              'Headless CMS & Content as a Service, PWA Ecommerce, REST APIs, GraphQL APIs',
-              'Data Management & Analysis',
-              'Cloud Services (Azure, AWS, Google)'],
-            icon: ['fab', 'servicestack']
-          }
-        ],
-      price: { value: 110, unit: 'hour' },
-      relatedServices: ['website-design-nz', 'pwa-ecommerce-nz', 'sentiment-analysis-nz', 'reputation-management-nz'],
-      rate: 'hour',
-      marketing: {
-        header: 'Partner with us',
-        subheader: 'Grow your business',
-        content: 'Using proven vanilla super-fast web technologies for website development'
-      },
-      keywords: [...commonKeywords, 'contracting nz', 'website contracting', 'technical writing']
     },
     {
       id: 'seo-nz',

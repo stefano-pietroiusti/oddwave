@@ -186,6 +186,7 @@ export default {
       short_name: 'The Odd Wave PWA',
       lang: 'en',
       display: 'standalone'
+      // fileHash: false
       // theme_color: '#000000',
       // start_url: 'https://theoddwave.herokuapp.com/',
     },

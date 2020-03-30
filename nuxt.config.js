@@ -29,8 +29,10 @@ https://theoddwave.co.nz/contact-theoddwave-nz/
 */
 
 const routes = [
-  '/services/website-design-nz/',
+  '/services/integration-specialists-nz/',
+  '/services/ecommerce-nz/',
   '/services/pwa-ecommerce-nz/',
+  '/services/website-design-nz/',
   '/services/software-engineering-nz/',
   '/services/seo-nz/',
   '/services/digital-marketing-nz/',
@@ -252,6 +254,7 @@ export default {
   robots: {
     UserAgent: '*',
     Disallow: [
+      '/services/software-engineering-nz/',
       '/services/website-design-auckland/',
       '/services/website-design-build-auckland/',
       '/services/ppc-auckland/',

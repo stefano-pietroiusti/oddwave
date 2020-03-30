@@ -20,7 +20,7 @@ export const state = () => ({
     header: 'Custom Website Design, eCommerce & Integration Specialists',
     subheader: 'INTEGRATION, eCOMMERCE & CUSTOM WEB DESIGN SPECIALISTS',
     subtitle:
-      "We provide <a href='/services/integration-specialists-nz/' title='System Integration'>System Integration</a> ,<a href='/services/pwa-ecommerce-nz/' title='eCommerce'>eCommerce</a> and <a href='/services/website-design-nz/' title='Website Design'> Custom Website Design</a> services to grow your business. Based on the North Shore, Auckland, NZ, Unlocking potential. Delivering results. ",
+      "We provide <a href='/services/integration-specialists-nz/' title='System Integration'>System Integration</a> ,<a href='/services/ecommerce-nz/' title='eCommerce'>eCommerce</a> and <a href='/services/website-design-nz/' title='Website Design'> Custom Website Design</a> services to grow your business. Based on the North Shore, Auckland, NZ, Unlocking potential. Delivering results. ",
     featuresHeader: 'Why us?',
     features: [
       {

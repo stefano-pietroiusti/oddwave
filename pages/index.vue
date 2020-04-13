@@ -16,7 +16,7 @@
     />
 
     <SectionContactComponent
-      pheader="Let our creative solutions build a path to success for your business"
+      pheader="Let our creative web solutions build a path to success for your business"
       :pcontent="client.marketing"
       class="align-self-center p-5"
     />

@@ -23,7 +23,7 @@ export default {
   props: {
     btext: {
       type: String,
-      default: 'free consultation'
+      default: 'Buy Now'
     },
     blink: {
       type: String,

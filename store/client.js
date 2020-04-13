@@ -1,5 +1,9 @@
 const commonKeywords = [
-  'NZ website design',
+  'eCommerce Website',
+  'Shopify Website',
+  'Magento eCommerce',
+  'Website design',
+  'Website Development',
   'new zealand website design',
   'website design',
   'online business']
@@ -14,40 +18,40 @@ export const state = () => ({
       'longitude': 174.734479
     },
     title:
-      'System Integration, eCommerce, Website Design, eCommerce, Systems Integration | The Odd Wave, North Shore, Auckland, NZ',
+      'eCommerce, Integration, Website Design & SEO Services NZ',
     description:
-      "The Odd Wave Ltd is New Zealand's modern technology company that provides custom Website Design, PWA eCommerce and System Integration solutions to increase sales and grow your business online. Partner with us today for you vNext website.",
-    header: 'Custom Website Design, eCommerce & Integration Specialists',
-    subheader: 'INTEGRATION, eCOMMERCE & CUSTOM WEB DESIGN SPECIALISTS',
+      'The Odd Wave NZ provides eCommerce, Website Design, PWA for eCommerce and System Integration solutions to increase sales and grow your business online.',
+    header: 'eCommerce ,Website Design & Integration Specialists',
+    subheader: 'eCOMMERCE, SYSTEM INTEGRATION & CUSTOM WEB DESIGN SPECIALISTS',
     subtitle:
-      "We provide <a href='/services/integration-specialists-nz/' title='System Integration'>System Integration</a> ,<a href='/services/ecommerce-nz/' title='eCommerce'>eCommerce</a> and <a href='/services/website-design-nz/' title='Website Design'> Custom Website Design</a> services to grow your business. Based on the North Shore, Auckland, NZ, Unlocking potential. Delivering results. ",
+      "We provide <a href='/services/ecommerce-nz/' title='eCommerce'>eCommerce</a> ,<a href='/services/integration-specialists-nz/' title='System Integration'>System Integration</a> and <a href='/services/website-design-nz/' title='Website Design'> Custom Website Design</a> services to grow your business. Based on the North Shore, Auckland, NZ, Unlocking potential. Delivering results. ",
     featuresHeader: 'Why us?',
     features: [
       {
         header: 'Continuous Quality Assurance',
         text:
-          "We don't just develop, deliver and leave you to it. We take projects from beginning to end and then stay with you to help grow your business with our solutions.",
+          "We don't just develop eCommerce stores and business websites, deliver and leave you to it. We take projects from beginning to end and then stay with you to help grow your business with improvements, 3rd party integrations and 24/7 support.",
         icon: ['fab', 'servicestack'],
         image: '/imgs/web-dev.svg'
       },
       {
         header: 'Simplifying complexity',
         text:
-          'We combine our services and custom development and integration with proven open source technologies, microservices, APIs and platforms to make the complex simple and to maximise return on investment.',
+          'We combine our custom website and eCommerce development and integration services with proven open source technologies, microservices, APIs and platforms to make the complex simple and to maximise return on investment.',
         icon: ['fas', 'chart-line'],
         image: '/imgs/web-content-search.svg'
       },
       {
         header: 'User First Design',
         text:
-          'First impressions count which is why we follow goal-driven user-oriented design principles that make our solutions, websites and web applications quick, responsive, eye catching, usable by anyone on any device and worth the investment.',
+          'First impressions count which is why we follow user-oriented eCommerce and website design principles that make our solutions, websites and web applications quick, responsive, eye catching, usable by anyone on any device and worth the investment.',
         icon: ['fas', 'mobile-alt'],
         image: '/imgs/mobile-first.svg'
       },
       {
         header: 'A+ Google audit score',
         text:
-          'We continuously test and audit our websites to ensure A+ Google Lighthouse scores in performance, accessibility, best practices & SEO. All content is SEO Optimised with the right keywords for your business, products and market.',
+          'We continuously test and audit our eCommerce and business websites to ensure A+ Google Lighthouse scores in performance, accessibility, best practices & SEO. All content is SEO Optimised with the right keywords for your business, products and market.',
         icon: ['fas', 'users'],
         image: '/imgs/best-web-design.svg'
       }
@@ -59,17 +63,16 @@ export const state = () => ({
     content: [
       // { header: 'Our approach is simple and flexible', text: 'We manage data and content so it can be distributed anywhere, we make content accessible for display on any device. We revise and optimize content in response to trending keyword searches to make it search engine friendly and increase your Google rankings' },
       // { text: 'We design and develop awesome mobile-first websites to present your content - web apps that are fast, responsive and look great anywhere.<br/>Choose between static, periodic publishing and real-time, universal mobile web apps. A range of fit-for-purpose services and hosting packages are also available to keep carbon footprints and running costs low.' },
-      { text: 'The Odd Wave is a modern tech driven web development company with solutions and services to help local businesses thrive. We create websites that are search and mobile friendly and score A+ in Google’s audit of web performance, accessibility, SEO, best practices & standards.' },
+      { text: 'The Odd Wave is a modern technology driven web development company with solutions help local businesses thrive. We create eCommerce and business websites that are search and mobile friendly and score A+ in Google’s audit of web performance, accessibility, SEO, best practices & standards.' },
       {
         text:
-          'The Odd Wave offers a range of services to support your online business venture:',
+          'The Odd Wave offers a range of eCommerce ,Website Development and Integration services to support your online business venture:',
         list: [
-          'System Integration ',
           'eCommerce Website Design and Development ',
+          'System Integration ',
           'Website Design and Web Development ',
           'Digital Marketing with managed Google ads, Facebook Ads and other Social Media channels',
           'IT Business solutions and support',
-          'Photography to bring out the best of your users, brand, products & services',
           'Web logs data analysis for online ads quality assurance',
           'Managing data and content for your users & internet search engines',
           'Managing your online presence so you can focus more on your business',
@@ -82,9 +85,9 @@ export const state = () => ({
           "We're based in Torbay, North Shore, Auckland, serving the World."
       }
     ],
-    name: 'The Odd Wave - System Integration, eCommerce, Custom Website Design',
+    name: 'The Odd Wave - eCommerce, Custom Website Design, System Integration,',
     legalName: 'The Odd Wave Ltd',
-    category: ['Integration Specialist', 'Website Designer', 'eCommerce'],
+    category: ['eCommerce Website Developer', 'Website Designer', 'System Integration'],
     email: 'team@theoddwave.co.nz',
     url: process.env.baseUrl,
     image: [

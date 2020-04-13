@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
-  <b-container fluid class="pt-7">
+  <b-container fluid>
     <b-row>
       <!-- <b-col xs="12" sm="12" md="12" lg="2" /> -->
       <b-col xs="12" sm="12" md="12" lg="12" class="px-5 align-items-center text-larger">

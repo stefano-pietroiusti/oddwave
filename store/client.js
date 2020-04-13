@@ -52,6 +52,10 @@ export const state = () => ({
         image: '/imgs/best-web-design.svg'
       }
     ],
+    testimonial: {
+      blockquote: 'Our website, SEO and Google Ad campaigns are continually evolving under the guidance of the Odd Wave and as a result, turnover increased from $1 Million in 2015 to  $ 1.5 Million in 2016, to $1.8 Million in 2017, to $2.6 Million in 2018 and to $3 Million 2019. We are extremely satisfied with the level of service and professionalism provided by the Odd Wave. ',
+      footer: 'Mr. Pretorius, Founder, Jumalutech Fencing'
+    },
     content: [
       // { header: 'Our approach is simple and flexible', text: 'We manage data and content so it can be distributed anywhere, we make content accessible for display on any device. We revise and optimize content in response to trending keyword searches to make it search engine friendly and increase your Google rankings' },
       // { text: 'We design and develop awesome mobile-first websites to present your content - web apps that are fast, responsive and look great anywhere.<br/>Choose between static, periodic publishing and real-time, universal mobile web apps. A range of fit-for-purpose services and hosting packages are also available to keep carbon footprints and running costs low.' },

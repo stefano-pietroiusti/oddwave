@@ -101,9 +101,9 @@ export default {
     ]
     return {
       title:
-        'Testimonials and custom designs to be brought to life online by the Odd Wave',
+        'Knowledge Sharing Blog | The Odd Wave',
       description:
-        'Testimonials and samples of custom designs for development by the Odd Wave Digital',
+        "SHARING INSIGHTS IS KEY TO ANY COMPANY'S SUCCESS. Add a knowledge sharing blog to provide insights into your products, services and expertise. ",
       backgroundurl: 'nz.svg',
       backgroundImage: {
         color1: 'rgba(102, 126, 234, 1)',

@@ -9,10 +9,16 @@
       </div>
     </b-container>
 
+    <TestimonialComponent
+      pheader="Better service starts here"
+      :pcontent="client.testimonial"
+      class="align-self-center p-5"
+    />
+
     <SectionContactComponent
       pheader="Let our creative solutions build a path to success for your business"
       :pcontent="client.marketing"
-      class="align-self-center"
+      class="align-self-center p-5"
     />
 
     <SectionComponent
@@ -72,6 +78,8 @@ import SectionContactComponent from '@/components/SectionContactComponent'
 import SectionImageComponent from '@/components/SectionImageComponent'
 import WhyUsComponent from '@/components/WhyUsComponent'
 import SliderComponent from '@/components/SliderComponent'
+import TestimonialComponent from '@/components/TestimonialComponent'
+
 // import TeamComponent from '@/components/TeamComponent'
 import lax from 'lax.js'
 import { mapGetters } from 'vuex'
@@ -85,7 +93,8 @@ export default {
     SectionContactComponent,
     SectionImageComponent,
     WhyUsComponent,
-    SliderComponent
+    SliderComponent,
+    TestimonialComponent
     // TeamComponent
   },
   head () {

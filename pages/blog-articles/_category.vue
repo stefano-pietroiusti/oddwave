@@ -103,10 +103,6 @@ export default {
       'help with photography'
     ]
     return {
-      title:
-        'Testimonials and custom designs to be brought to life online by the Odd Wave',
-      description:
-        'Testimonials and samples of custom designs for development by the Odd Wave Digital',
       backgroundurl: 'nz.svg',
       backgroundImage: {
         color1: 'rgba(102, 126, 234, 1)',
@@ -126,6 +122,13 @@ export default {
     },
     articles () {
       return this.getArticlesByCategory(this.$route.params.category)
+    },
+    title () {
+      const title = this.$route.params.id || this.$route.params.category
+      return title + ' articles'
+    },
+    description () {
+      return 'Articles by The Odd Wave - ' + this.$route.params.id || this.$route.params.category
     },
     bannerImagePath () {
       if (!this.backgroundurl) {

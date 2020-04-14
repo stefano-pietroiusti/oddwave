@@ -149,10 +149,10 @@ export default {
       }
     }
   },
-  async fetch ({ store, params }) {
-    await store.dispatch('strapi/getSetArticles')
-    await store.dispatch('strapi/getSetCategories')
-  },
+  // async fetch ({ store, params }) {
+  //   await store.dispatch('strapi/getSetArticles')
+  //   await store.dispatch('strapi/getSetCategories')
+  // },
   mounted () {
     this.$ga.page(this.$route.path)
   }

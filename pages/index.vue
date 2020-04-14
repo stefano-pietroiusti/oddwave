@@ -15,6 +15,11 @@
       class="align-self-center p-5"
     />
 
+    <TableComponent
+      pheader="Our eCommerce play ground"
+      class="align-self-center p-5"
+    />
+
     <SectionContactComponent
       pheader="Let our creative web solutions build a path to success for your business"
       :pcontent="client.marketing"
@@ -79,7 +84,7 @@ import SectionImageComponent from '@/components/SectionImageComponent'
 import WhyUsComponent from '@/components/WhyUsComponent'
 import SliderComponent from '@/components/SliderComponent'
 import TestimonialComponent from '@/components/TestimonialComponent'
-
+import TableComponent from '@/components/TableComponent'
 // import TeamComponent from '@/components/TeamComponent'
 import lax from 'lax.js'
 import { mapGetters } from 'vuex'
@@ -94,8 +99,8 @@ export default {
     SectionImageComponent,
     WhyUsComponent,
     SliderComponent,
-    TestimonialComponent
-    // TeamComponent
+    TestimonialComponent,
+    TableComponent
   },
   head () {
     let content = `${process.env.baseUrl}${this.$route.path}`

@@ -1,12 +1,12 @@
 <template>
   <b-container fluid class="p-5">
     <b-row>
-      <b-col xs="12" sm="12" md="12" lg="12" class="px-5 align-items-center text-larger">
+      <b-col xs="12" sm="12" md="12" lg="12" class="px-5 text-larger">
         <h2>{{ header }}</h2>
       </b-col>
     </b-row>
     <b-row>
-      <b-col xs="12" sm="12" md="12" lg="12" class="pt-5 px-5 align-items-center text-larger">
+      <b-col xs="12" sm="12" md="12" lg="12" class="pt-5 px-5 text-larger">
         <b-table
           small
           caption-top
@@ -35,19 +35,19 @@
           </template>
 
           <template v-slot:cell(price)="data">
-            <div align-h="center">
+            <span>
               {{ data.value }}
-            </div>
+            </span>
           </template>
 
           <template v-slot:cell(transactions)="data">
-            <div align-v="center">
+            <div>
               {{ data.value }}
             </div>
           </template>
 
           <template v-slot:cell(highlights)="data">
-            <div class="text-left align-middle">
+            <div class="text-left">
               {{ data.value }}
             </div>
           </template>
@@ -105,14 +105,14 @@ export default {
     return {
       fields: [
         // A column that needs custom formatting
-        { key: 'platform', label: 'eCommerce Platform' },
-        { key: 'price' },
-        { key: 'transactions', label: 'Transaction Costs %' },
-        { key: 'highlights' }
+        { key: 'platform', label: 'eCommerce Platform', tdClass: 'align-middle' },
+        { key: 'price', tdClass: 'align-middle' },
+        { key: 'transactions', label: 'Transaction Costs %', tdClass: 'align-middle' },
+        { key: 'highlights', tdClass: 'align-middle' }
       ],
       items: [
         {
-          logo: '/imgs/technologies/magento.png',
+          logo: '/imgs/technologies/magento-ecommerce-growth.png',
           platform: 'Magento Open Source Cloud Server',
           price: '$$ ',
           transactions: '0',
@@ -197,9 +197,5 @@ h2:before {
   left: 25%;
   background-color: black;
 }
-.align-items-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 </style>
